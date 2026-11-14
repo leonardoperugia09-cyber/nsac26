@@ -13,7 +13,7 @@ const RISKS: Record<string, PriorityRisk> = {
   C2: {
     ruleId: "kidney_stone",
     title: "Kidney stone risk is rising",
-    actTitle: "Act now: kidney stone risk is high",
+    actTitle: "Kidney stone risk is high",
     level: "watch",
     sinceDay: 55,
     short: "Less water, more salt and faster bone loss: together they form kidney stones in space.",

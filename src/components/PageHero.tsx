@@ -4,7 +4,7 @@ import s from "./PageHero.module.css";
 
 type Props = { page: string; state: RiskLevel; title: ReactNode; line?: ReactNode; aside?: ReactNode; children?: ReactNode };
 
-/** A page's one loud thing: what matters on this page right now. No colour field here: the warning lamp is the Overview's. */
+/** A page's one loud thing: what matters on this page right now. Body state shows as the coloured word, never as a background. */
 export function PageHero({ page, state, title, line, aside, children }: Props) {
   return (
     <header className={s.hero}>

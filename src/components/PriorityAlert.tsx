@@ -1,26 +1,26 @@
-import { useRef, useState } from "react";
-import { Check, PaperPlaneTilt } from "@phosphor-icons/react";
+import { useState } from "react";
+import { Check, PaperPlaneTilt, Warning, WarningOctagon } from "@phosphor-icons/react";
 import type { LinkedSeries, PriorityRisk, Task } from "../ui/viewTypes.ts";
 import { easedToday } from "../ui/overviewData.ts";
+import { joinAnd } from "../ui/text.ts";
 import { LinkedSignalsChart } from "./LinkedSignalsChart";
-import { PageField } from "./PageField";
 import s from "./PriorityAlert.module.css";
 
 type Props = { risk: PriorityRisk | null; series: LinkedSeries[]; today: number; delay: string | null; nextTask?: Task; flagged: string[]; done: string[]; onDone: (ids: string[]) => void };
 
-/** The one loud thing on the Overview: what is linked, what it shows, what to do. */
+/** The one loud thing on the Overview: what is linked, what it shows, what to do.
+ *  A solid white card; at Watch or Act a solid state strip runs across its top (the alarm-panel pattern). */
 export function PriorityAlert({ risk, series, today, delay, nextTask, flagged, done, onDone }: Props) {
   const [why, setWhy] = useState(false);
-  const hero = useRef<HTMLElement>(null);
   if (!risk) {
     const one = flagged.length === 1;
     return (
-      <section ref={hero} className={s.hero} aria-labelledby="risk-title">
+      <section className={s.hero} aria-labelledby="risk-title">
         <p className={s.status}>{flagged.length ? "No linked risks" : "All normal"}</p>
         <h1 id="risk-title" className={s.title}>Nothing needs you today</h1>
         <p className={s.why}>
           {flagged.length
-            ? `${flagged.join(" and ")} ${one ? "is" : "are"} outside your normal range, but nothing is linked to ${one ? "it" : "them"}. HALO keeps watching.`
+            ? `${joinAnd(flagged.map((n, i) => (i ? n.toLowerCase() : n)))} ${one ? "is" : "are"} outside your normal range, but nothing is linked to ${one ? "it" : "them"}. HALO keeps watching.`
             : "Every reading is inside your own normal range, and no linked risks are rising."}
         </p>
         {nextTask && <p className={s.next}>Next on your list: <b>{nextTask.label}</b>{nextTask.when ? `, ${nextTask.when.toLowerCase()}` : ""}</p>}
@@ -30,10 +30,12 @@ export function PriorityAlert({ risk, series, today, delay, nextTask, flagged, d
   // Act eases to Watch once today's drinking is done; the readings themselves update tomorrow
   const level = risk.level === "act" && easedToday(risk, done) ? "watch" : risk.level;
   return (
-    <section ref={hero} className={s.hero} aria-labelledby="risk-title">
-      <PageField state={level} edge={hero} />
-      <p className={s.status}><b className={level === "act" ? s.actWord : ""}>{level === "act" ? "Act" : "Watch"}</b>&nbsp;&nbsp;since Day {risk.sinceDay}</p>
-      <h1 id="risk-title" className={s.title}>{level === "act" ? <mark className={s.alarm}>{risk.actTitle ?? risk.title}</mark> : risk.title}</h1>
+    <section className={s.hero} aria-labelledby="risk-title">
+      <div className={`${s.strip} ${level === "act" ? s.stripAct : s.stripWatch}`}>
+        {level === "act" ? <WarningOctagon size={20} weight="fill" aria-hidden="true" /> : <Warning size={20} weight="fill" aria-hidden="true" />}
+        <b>{level === "act" ? "Act now" : "Watch"}</b><span>since Day {risk.sinceDay}</span>
+      </div>
+      <h1 id="risk-title" className={s.title}>{level === "act" ? risk.actTitle ?? risk.title : risk.title}</h1>
       <p className={s.why}>{risk.short}</p>
       <div className={s.chart}>
         <LinkedSignalsChart series={series} eventDay={risk.eventDay} eventLabel={risk.eventLabel} today={today} />

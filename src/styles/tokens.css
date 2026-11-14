@@ -1,7 +1,7 @@
 /* HALO design tokens. Every colour, font and radius comes from here.
    Design rule ("warning lamp"): if something is coloured, it is about your body, never about the interface.
    The interface is ink on neutral surfaces; Mars orange means Watch, red means Act or Urgent help.
-   Two looks: "field" (default) and "plain" (plain white, chosen in Settings). */
+   Two looks: "field" (default: white cards on a light grey page) and "plain" (white page, chosen in Settings). */
 :root {
   --page: #ECEEF2;
   --card: #FCFCFD;
@@ -34,8 +34,8 @@
   /* Chart: your normal is a neutral band; outside it the line turns Watch orange */
   --line-in: #555C6B;
   --line-out: var(--watch-ink);
-  --band: rgba(255, 255, 255, 0.55);      /* on the colour field */
-  --band-card: rgba(16, 19, 26, 0.06);    /* on white cards */
+  --band: rgba(16, 19, 26, 0.06);         /* your normal, on white cards */
+  --band-card: var(--band);
 
   --radius-panel: 36px;
   --radius-card: 28px;

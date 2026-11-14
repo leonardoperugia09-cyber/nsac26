@@ -6,13 +6,13 @@ export type Look = "field" | "plain";
 const LOOKS: { id: Look; label: string; note: string }[] = [
   {
     id: "field",
-    label: "Colour field",
-    note: "A soft colour behind the main risk. Its colour shows the risk state.",
+    label: "Grey page",
+    note: "White cards on a light grey page.",
   },
   {
     id: "plain",
-    label: "Plain white",
-    note: "White pages. Colour only where something needs attention.",
+    label: "White page",
+    note: "Light grey cards on a white page.",
   },
 ];
 
