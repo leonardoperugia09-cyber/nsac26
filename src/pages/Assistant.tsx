@@ -11,6 +11,7 @@ import { buildOverview } from "../ui/overviewData.ts";
 import { GATE_OF, worstGate } from "../ui/missionData.ts";
 import { SYSTEMS, systemStatus } from "../ui/systems.ts";
 import { EMPTY_QUICK, NOTE_TEXT, SEED_C2, haloMsg, respond, userMsg, type Block, type Message } from "../ui/assistantData.ts";
+import { askHalo, type AssistantReply } from "../api/halo.ts";
 import s from "./Assistant.module.css";
 
 type Props = { crewId: string; day: number; delay: string | null; urgent: boolean };
@@ -46,6 +47,17 @@ function NoteRow({ delay }: { delay: string | null }) {
       {open && <p className={s.notePreview}>{NOTE_TEXT}</p>}
     </div>
   );
+}
+
+// Turns a backend reply into the blocks the chat already knows how to draw
+function fromReply(r: AssistantReply): Message {
+  if (r.kind === "emergency") {
+    return haloMsg([{ kind: "emergency", title: r.redFlags[0]?.title ?? "This could be an emergency", text: r.redFlags.flatMap((f) => f.steps).join(" ") }]);
+  }
+  const blocks: Block[] = [{ kind: "text", text: r.text }];
+  if (r.evidence.length) blocks.push({ kind: "text", text: `Evidence used. ${r.evidence.map((e) => e.source).join("; ")}.` });
+  blocks.push({ kind: "action", text: r.escalate }, { kind: "note" });
+  return haloMsg(blocks);
 }
 
 export function Assistant({ crewId, day, delay, urgent }: Props) {
@@ -85,7 +97,11 @@ export function Assistant({ crewId, day, delay, urgent }: Props) {
     setMode("chat");
     setMessages((m) => [...m, userMsg(t)]);
     setText("");
-    timers.current.push(window.setTimeout(() => setMessages((m) => [...m, respond(t)]), 400));
+    // Real backend first (red flags, evidence, AI). If it is off or slow, the local mock answers instead.
+    const turns = messages.flatMap((m) => m.from === "user" ? [{ role: "user" as const, content: m.text }] : []);
+    askHalo(t, crewId, day, turns).then((r) => {
+      setMessages((m) => [...m, r ? fromReply(r) : respond(t)]);
+    });
   };
   const onKey = (e: KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); send(text); }

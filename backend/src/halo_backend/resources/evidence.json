@@ -1,0 +1,220 @@
+[
+ {
+  "id": "bone",
+  "topic": "Bone loss",
+  "keywords": [
+   "bone",
+   "density",
+   "fracture",
+   "calcium",
+   "osteoporosis"
+  ],
+  "note": "Weight-bearing bones lose about 1 to 1.5% of density per month in flight. Resistance exercise is the main countermeasure.",
+  "source": "NASA Human Research Program",
+  "url": "https://www.nasa.gov/?p=746260"
+ },
+ {
+  "id": "muscle",
+  "topic": "Muscle loss",
+  "keywords": [
+   "muscle",
+   "calf",
+   "strength",
+   "weak",
+   "exercise",
+   "atrophy"
+  ],
+  "note": "Calf muscle volume fell about 13% and peak power about 32% after six months on the ISS despite exercise. Higher load matters more than more minutes.",
+  "source": "Trappe et al. 2009",
+  "url": "https://doi.org/10.1152/japplphysiol.91578.2008"
+ },
+ {
+  "id": "kidney",
+  "topic": "Kidney stones",
+  "keywords": [
+   "kidney",
+   "stone",
+   "urine",
+   "flank",
+   "fluid",
+   "dehydrat",
+   "drink",
+   "sodium",
+   "salt"
+  ],
+  "note": "Astronauts form kidney stones more often than before flight. Spaceflight changes how the kidney handles salts, on top of calcium released from bone. Good fluid intake lowers the risk.",
+  "source": "Siew et al. 2024, Nature Communications",
+  "url": "https://doi.org/10.1038/s41467-024-49212-1"
+ },
+ {
+  "id": "fluid",
+  "topic": "Fluid shift",
+  "keywords": [
+   "puffy",
+   "face",
+   "congest",
+   "plasma",
+   "thirst",
+   "headache",
+   "fluid shift"
+  ],
+  "note": "Body fluid moves toward the head in weightlessness and plasma volume drops 10 to 20% in the first two days. Thirst is a poor guide to hydration in flight.",
+  "source": "NASA NTRS",
+  "url": "https://ntrs.nasa.gov/citations/20040173136"
+ },
+ {
+  "id": "sans",
+  "topic": "Vision changes (SANS)",
+  "keywords": [
+   "vision",
+   "eye",
+   "blur",
+   "sight",
+   "sans",
+   "optic"
+  ],
+  "note": "About two thirds of long-duration astronauts show early signs of spaceflight associated neuro-ocular syndrome. Any change in vision should be reported and examined.",
+  "source": "NASA SANS brief",
+  "url": "https://ntrs.nasa.gov/citations/20220016048"
+ },
+ {
+  "id": "sleep",
+  "topic": "Sleep",
+  "keywords": [
+   "sleep",
+   "tired",
+   "fatigue",
+   "insomnia",
+   "awake",
+   "circadian",
+   "exhaust"
+  ],
+  "note": "Crews are scheduled 8.5 hours of sleep but average about 6. Sleep loss slows reaction time and attention.",
+  "source": "Barger et al. 2014, Lancet Neurology",
+  "url": "https://doi.org/10.1016/S1474-4422(14)70122-X"
+ },
+ {
+  "id": "cognition",
+  "topic": "Reaction time and memory",
+  "keywords": [
+   "reaction",
+   "memory",
+   "focus",
+   "concentrat",
+   "confus",
+   "slow",
+   "alert",
+   "eva",
+   "spacewalk"
+  ],
+  "note": "In NASA analog missions a night without sleep made crews slower and less accurate on vigilance tests. Safety-critical tasks should wait until performance recovers.",
+  "source": "Nasrini et al. 2020",
+  "url": "https://doi.org/10.3389/fphys.2020.00394"
+ },
+ {
+  "id": "radiation",
+  "topic": "Radiation",
+  "keywords": [
+   "radiation",
+   "solar",
+   "storm",
+   "dose",
+   "shelter",
+   "cosmic",
+   "flare"
+  ],
+  "note": "The dose in Mars transit is about 1.8 mSv per day. Solar particle events raise it sharply for hours to days, and a shielded shelter reduces the exposure.",
+  "source": "Zeitlin et al. 2013, Science",
+  "url": "https://doi.org/10.1126/science.1235989"
+ },
+ {
+  "id": "immune",
+  "topic": "Immune system",
+  "keywords": [
+   "immune",
+   "rash",
+   "cold sore",
+   "blister",
+   "virus",
+   "infection",
+   "sick",
+   "shingles"
+  ],
+  "note": "Stress and sleep loss weaken immunity in flight. More than half of astronauts shed reactivated herpes viruses, usually without symptoms.",
+  "source": "Rooney et al. 2019",
+  "url": "https://doi.org/10.3389/fmicb.2019.00016"
+ },
+ {
+  "id": "nutrition",
+  "topic": "Nutrition",
+  "keywords": [
+   "eat",
+   "food",
+   "appetite",
+   "weight",
+   "calorie",
+   "vitamin",
+   "nutrition",
+   "hungry"
+  ],
+  "note": "ISS crews ate about 80% of their energy needs and lost body mass. Vitamin D falls because there is no sunlight in a spacecraft, so supplements are scheduled.",
+  "source": "Smith et al. 2005, Journal of Nutrition",
+  "url": "https://doi.org/10.1093/jn/135.3.437"
+ },
+ {
+  "id": "meds",
+  "topic": "Medication potency",
+  "keywords": [
+   "medicine",
+   "medication",
+   "drug",
+   "pill",
+   "tablet",
+   "expire",
+   "potency",
+   "dose",
+   "painkiller",
+   "ibuprofen",
+   "paracetamol",
+   "antibiotic"
+  ],
+  "note": "Medicines stored in space lost potency faster than matching ones on Earth. HALO never gives doses. The flight surgeon's schedule decides medication.",
+  "source": "Du et al. 2011, AAPS Journal",
+  "url": "https://doi.org/10.1208/s12248-011-9270-0"
+ },
+ {
+  "id": "clot",
+  "topic": "Neck vein blood flow",
+  "keywords": [
+   "neck",
+   "clot",
+   "vein",
+   "jugular",
+   "swelling",
+   "thrombosis"
+  ],
+  "note": "Six of eleven ISS crew had stalled or reversed flow in the jugular vein, and one had a clot. Neck swelling or pain should be reported.",
+  "source": "Marshall-Goebel et al. 2019, JAMA Network Open",
+  "url": "https://doi.org/10.1001/jamanetworkopen.2019.15011"
+ },
+ {
+  "id": "mood",
+  "topic": "Isolation and mood",
+  "keywords": [
+   "mood",
+   "stress",
+   "lonely",
+   "isolat",
+   "anxious",
+   "anxiety",
+   "sad",
+   "depress",
+   "conflict",
+   "argument",
+   "angry"
+  ],
+  "note": "Isolation and confinement raise the risk of low mood, conflict and poor sleep, more so the longer and more cut off the mission is. Regular check-ins and private support channels help.",
+  "source": "NASA Human Research Program",
+  "url": "https://www.nasa.gov/hrp/hazards"
+ }
+]
