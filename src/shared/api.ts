@@ -4,9 +4,19 @@ export type Selection = {
   day: number;
   profile: MissionProfile;
 };
+/** Last contact with the HALO server, shown in the top bar instead of a fixed "synced" text */
+export const link: { ok: boolean | null; at: number | null } = { ok: null, at: null };
+const markLink = (ok: boolean) => {
+  link.ok = ok;
+  if (ok) link.at = Date.now();
+  window.dispatchEvent(new Event("halo-sync"));
+};
+export const pendingCheckins = () => localCheckins().filter((l) => l.pending).length;
 export async function api<T = any>(path: string, body?: unknown): Promise<T> {
   const token = sessionStorage.getItem("halo-api-token");
-  const response = await fetch("/api" + path, {
+  let response: Response;
+  try {
+    response = await fetch("/api" + path, {
     method: body === undefined ? "GET" : "POST",
     headers: {
       ...(body === undefined ? {} : { "Content-Type": "application/json" }),
@@ -15,6 +25,12 @@ export async function api<T = any>(path: string, body?: unknown): Promise<T> {
     ...(body === undefined ? {} : { body: JSON.stringify(body) }),
     signal: AbortSignal.timeout(16000),
   });
+  } catch (e) {
+    markLink(false);
+    throw e;
+  }
+  // Any reply from the server (even a validation error) means the link works; 404/5xx means no HALO server here
+  markLink(response.status < 500 && response.status !== 404);
   if (!response.ok)
     throw Error(
       response.status === 401
@@ -67,6 +83,7 @@ export async function syncCheckins() {
       : l,
   );
   localStorage.setItem("halo-checkins-v1", JSON.stringify(updated));
+  window.dispatchEvent(new Event("halo-sync"));
 }
 export async function pullCheckins(selection: Selection) {
   try {

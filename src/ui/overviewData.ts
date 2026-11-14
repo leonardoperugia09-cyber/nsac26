@@ -3,7 +3,8 @@
 // task list are MOCK; the risk level comes from the shared assessment (src/engine/assessment.ts), the same one the backend serves.
 import { bandCentreAt, computeBaselines, computeDrift } from "../engine/baseline.ts";
 import { SIGNAL_BY_KEY } from "../engine/signals.ts";
-import { MISSION_PROFILE, contextOf, historyOf, readingOn } from "../data/crew.ts";
+import { MISSION_PROFILE, contextOf, historyOf } from "../data/crew.ts";
+import { STALE_AFTER_DAYS } from "../bodymap/model.ts";
 import { assessCrew } from "../engine/assessment.ts";
 import type { BodySystem, LinkedSeries, OverviewModel, PriorityRisk, ReadingSummary, Task } from "./viewTypes.ts";
 import { SYSTEMS, systemStatus } from "./systems.ts";
@@ -87,15 +88,30 @@ export function buildOverview(crewId: string, day: number): OverviewModel {
     return { id: def.id, label: def.label, status, detail: statusText[status] };
   });
 
-  const today = readingOn(crewId, day);
-  const range = (k: string, digits = 0) => `${drift[k].bandLo.toFixed(digits)}-${drift[k].bandHi.toFixed(digits)}`;
-  const out = (k: string) => drift[k]?.status !== "inside band";
-  const readings: ReadingSummary[] = today ? [
-    { label: "Heart rate", value: String(today.heart_rate), unit: "bpm", note: `Your normal ${range("heart_rate")}`, out: out("heart_rate") },
-    { label: "Blood pressure", value: `${today.bp_sys}/${today.bp_dia}`, note: `Your normal ${range("bp_sys")} / ${range("bp_dia")}`, out: out("bp_sys") || out("bp_dia") },
-    { label: "Sleep last night", value: today.sleep_hours.toFixed(1), unit: "h", note: `Your normal ${range("sleep_hours", 1)}`, out: out("sleep_hours") },
-    { label: "Radiation today", value: today.radiation_mSv_today.toFixed(2), unit: "mSv", note: `${Math.round(today.radiation_mSv_total)} mSv this mission`, out: out("radiation_mSv_today") },
-  ] : [];
+  const range = (k: string, digits = 0) => (drift[k] ? `${drift[k].bandLo.toFixed(digits)}-${drift[k].bandHi.toFixed(digits)}` : "not set yet");
+  const out = (k: string) => !!drift[k] && drift[k].status !== "inside band";
+  // Each reading shows its most recent real measurement and how old it is, never a silent gap
+  const last = (key: string) => {
+    for (const r of [...history].filter((x) => x.day <= day).sort((a, b) => b.day - a.day)) {
+      const v = (r as Record<string, unknown>)[key];
+      if (typeof v === "number" && Number.isFinite(v)) return { v, day: r.day };
+    }
+    return null;
+  };
+  const age = (d: number) => (d === day ? "Today" : d === day - 1 ? "Yesterday" : `${day - d} days old`);
+  const reading = (label: string, keys: string[], show: (vals: number[]) => string, unit: string | undefined, note: string, isOut: boolean): ReadingSummary => {
+    const got = keys.map(last);
+    if (got.some((g) => !g)) return { label, value: "No reading", note, out: false, age: "Never measured", stale: true };
+    const oldest = Math.min(...got.map((g) => g!.day));
+    return { label, value: show(got.map((g) => g!.v)), unit, note, out: isOut, age: age(oldest), stale: day - oldest > STALE_AFTER_DAYS };
+  };
+  const totalDose = last("radiation_mSv_total");
+  const readings: ReadingSummary[] = [
+    reading("Heart rate", ["heart_rate"], ([v]) => String(Math.round(v)), "bpm", `Your normal ${range("heart_rate")}`, out("heart_rate")),
+    reading("Blood pressure", ["bp_sys", "bp_dia"], ([a, b]) => `${Math.round(a)}/${Math.round(b)}`, undefined, `Your normal ${range("bp_sys")} / ${range("bp_dia")}`, out("bp_sys") || out("bp_dia")),
+    reading("Sleep last night", ["sleep_hours"], ([v]) => v.toFixed(1), "h", `Your normal ${range("sleep_hours", 1)}`, out("sleep_hours")),
+    reading("Radiation today", ["radiation_mSv_today"], ([v]) => v.toFixed(2), "mSv", totalDose ? `${Math.round(totalDose.v)} mSv this mission` : "", out("radiation_mSv_today")),
+  ];
 
   return { risk, series, tasks: TASKS, systems, readings };
 }

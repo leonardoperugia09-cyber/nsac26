@@ -22,6 +22,21 @@ type Source = {
 
 const topicName = (t: string) => t.replace(/_/g, " ");
 
+/** Words crews use and words papers use: searching either finds both */
+const SYNONYMS: string[][] = [
+  ["kidney", "renal", "urine", "stone"],
+  ["heart", "cardiac", "cardiovascular", "blood pressure"],
+  ["bone", "skeletal", "skeleton"],
+  ["muscle", "muscular", "skeletal muscle"],
+  ["eye", "vision", "sans", "ocular"],
+  ["sleep", "insomnia", "hypnotic", "circadian"],
+  ["radiation", "dose", "msv", "radlab", "solar"],
+  ["immune", "virus", "herpes", "infection"],
+  ["medicine", "medication", "drug", "pill", "tablet", "pharmaceutical", "potency"],
+  ["fluid", "hydration", "water"],
+];
+const expand = (word: string) => (word.length < 3 ? [word] : SYNONYMS.find((g) => g.some((s) => s.startsWith(word) || word.startsWith(s))) ?? [word]);
+
 export function Evidence(_props: Props) {
   const [records, setRecords] = useState<Source[]>(bundled.records as Source[]);
   const [q, setQ] = useState("");
@@ -39,10 +54,12 @@ export function Evidence(_props: Props) {
       .catch(() => {});
     return () => { live = false; };
   }, []);
-  const needle = q.trim().toLowerCase();
-  const shown = records.filter(
-    (r) => !needle || r.title.toLowerCase().includes(needle) || r.topics.some((t) => topicName(t).includes(needle)),
-  );
+  // Every word must match somewhere in the source (title, topics, findings, population, limits), with synonyms
+  const words = q.trim().toLowerCase().split(/\s+/).filter(Boolean);
+  const shown = records.filter((r) => {
+    const text = `${JSON.stringify(r)} ${r.topics.map(topicName).join(" ")}`.toLowerCase();
+    return words.every((w) => expand(w).some((s) => text.includes(s)));
+  });
   return (
     <div>
       <h1 className={s.title}>Evidence</h1>
@@ -54,9 +71,9 @@ export function Evidence(_props: Props) {
           </div>
           <p className={s.p}>Summaries we wrote from each source. Domain review is still pending and nothing here is clinically approved.</p>
           <label className={s.search}>
-            <span className={s.vh}>Search sources by title or topic</span>
+            <span className={s.vh}>Search sources</span>
             <MagnifyingGlass size={18} aria-hidden="true" />
-            <input type="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search by title or topic" />
+            <input type="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search sources" />
           </label>
           <p className={s.count} aria-live="polite">{shown.length} of {records.length} sources</p>
           <div className={s.sources}>

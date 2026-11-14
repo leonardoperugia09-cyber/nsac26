@@ -12,7 +12,7 @@ export function LatestReadings({ readings, onAll }: { readings: ReadingSummary[]
       <div className={s.grid}>
         {readings.map((r) => (
           <div key={r.label}>
-            <div className={s.k}>{r.label}</div>
+            <div className={s.k}>{r.label}<span className={`${s.age} ${r.stale ? s.stale : ""}`}>{r.stale ? `Old data, ${r.age.toLowerCase()}` : r.age}</span></div>
             <div className={`${s.v} ${r.out ? s.out : ""}`}>{r.value}{r.unit && <small>{r.unit}</small>}</div>
             <div className={`${s.n} ${r.out ? s.out : ""}`}>{keepRanges(r.out ? `Outside your normal. ${r.note}` : r.note)}</div>
           </div>

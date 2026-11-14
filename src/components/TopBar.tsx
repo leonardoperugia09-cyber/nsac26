@@ -2,6 +2,7 @@ import type { CSSProperties } from "react";
 import { FirstAid } from "@phosphor-icons/react";
 import type { CrewMember, MissionProfile } from "../engine/types.ts";
 import { LiquidNavbar } from "./ui/liquid-glass-navbar";
+import { ago, useSyncStatus } from "../shared/useSyncStatus.ts";
 import s from "./TopBar.module.css";
 
 const MISSION: Record<MissionProfile, { name: string; delay: string | null }> = {
@@ -36,12 +37,17 @@ type Props = {
 
 export function TopBar({ profile, day, crew, selected, onSelect, onUrgentHelp }: Props) {
   const m = MISSION[profile];
+  const sync = useSyncStatus();
+  const waiting = sync.pending ? `, ${sync.pending} check-in${sync.pending > 1 ? "s" : ""} waiting` : "";
+  const linkText = sync.ok === null ? "Checking link"
+    : sync.ok && sync.at ? `Synced ${ago(sync.at, sync.now)}${waiting}`
+    : `Not synced, saved on this device${waiting}`;
 
   return (
     <header className={s.top}>
       <div className={s.info}>
         <span><span className={`mono ${s.day}`}>Day {day}</span>&nbsp;&nbsp;<span className={s.dim}>{m.name}</span></span>
-        <span className={`${s.dim} ${s.push}`}>Synced 3 min ago</span>
+        <span className={`${s.dim} ${s.push}`} role="status">{linkText}</span>
         <span className={s.dim}>
           {m.delay ? <>Houston hears you in <span className="mono">{m.delay}</span></> : "Live link to Houston"}
         </span>
