@@ -5,6 +5,8 @@ import { DEMO_DAY, MISSION_PROFILE, SIM, crewById } from "./data/crew.ts";
 import { Overview } from "./pages/Overview";
 import { RiskBanner } from "./components/RiskBanner";
 import { buildOverview, easedToday } from "./ui/overviewData.ts";
+import { pullCheckins, syncCheckins } from "./shared/api.ts";
+import { useDataRevision } from "./shared/useDataRevision.ts";
 import { Health } from "./pages/Health";
 import { DailyLog } from "./pages/DailyLog";
 import { Assistant } from "./pages/Assistant";
@@ -35,7 +37,20 @@ export default function App() {
 
   const openHealth = (id: RegionId) => { setSystem(id); setPage("health"); };
   const navigate = (p: Page) => { setUrgent(false); setPage(p); };
-  const risk = useMemo(() => buildOverview(crewId, DEMO_DAY).risk, [crewId]);
+  const revision = useDataRevision();
+  const risk = useMemo(() => buildOverview(crewId, DEMO_DAY).risk, [crewId, revision]);
+
+  // Manar's backend: send check-ins saved offline when the link is back, pull the server's copies, follow page jumps from inside pages
+  useEffect(() => {
+    syncCheckins();
+    window.addEventListener("online", syncCheckins);
+    const go = (e: Event) => setPage((e as CustomEvent<Page>).detail);
+    const urgentHelp = () => { setUrgent(true); setPage("assistant"); }; // same as the top bar's Urgent help
+    window.addEventListener("halo-navigate", go);
+    window.addEventListener("halo-urgent", urgentHelp);
+    return () => { window.removeEventListener("online", syncCheckins); window.removeEventListener("halo-navigate", go); window.removeEventListener("halo-urgent", urgentHelp); };
+  }, []);
+  useEffect(() => { pullCheckins({ crewId, day: DEMO_DAY, profile: MISSION_PROFILE }); }, [crewId]);
   const [planDone, setPlanDone] = useState<Record<string, string[]>>({});
   const done = planDone[crewId] ?? [];
   const setDone = (ids: string[]) => setPlanDone((m) => ({ ...m, [crewId]: ids }));

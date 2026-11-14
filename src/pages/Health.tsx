@@ -8,6 +8,7 @@ import { SleepCard } from "../components/SleepCard";
 import { buildBodyMapModel } from "../bodymap/model.ts";
 import { REGIONS, type RegionId } from "../bodymap/regions.ts";
 import { MISSION_PROFILE, historyOf } from "../data/crew";
+import { useDataRevision } from "../shared/useDataRevision.ts";
 import card from "../components/Card.module.css";
 import s from "./Health.module.css";
 
@@ -15,7 +16,8 @@ type Props = { crewId: string; day: number; selected: RegionId | null; onSelect:
 
 /** Each body region in detail: Leo's map on the left, the selected region's linked risks and signals on the right. */
 export function Health({ crewId, day, selected, onSelect }: Props) {
-  const model = useMemo(() => buildBodyMapModel(historyOf(crewId), day, MISSION_PROFILE), [crewId, day]);
+  const revision = useDataRevision();
+  const model = useMemo(() => buildBodyMapModel(historyOf(crewId), day, MISSION_PROFILE), [crewId, day, revision]);
   const worst = (st: string) => REGIONS.find((d) => model.regions[d.id].status === st)?.id;
   const sel: RegionId = selected ?? worst("act") ?? worst("watch") ?? "heart";
   const r = model.regions[sel];

@@ -1,6 +1,5 @@
 import { useLayoutEffect, type RefObject } from "react";
 import { createPortal } from "react-dom";
-import type { RiskLevel } from "../ui/viewTypes.ts";
 import s from "./PageField.module.css";
 
 /** Page position of an element's bottom edge, ignoring transforms (so an entrance animation doesn't skew it). */
@@ -10,9 +9,9 @@ const bottomOf = (el: HTMLElement) => {
   return y;
 };
 
-/** The soft colour field behind a page's top block: blue normal, amber watch, red act.
+/** The warning lamp behind the Overview hero, lit only at Watch or Act.
  *  It always ends 28 px below `edge`, so nothing ever sits on its border. */
-export function PageField({ state, edge }: { state: RiskLevel; edge: RefObject<HTMLElement | null> }) {
+export function PageField({ state, edge }: { state: "watch" | "act"; edge: RefObject<HTMLElement | null> }) {
   useLayoutEffect(() => {
     const el = edge.current;
     if (!el) return;

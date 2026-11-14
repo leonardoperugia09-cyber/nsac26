@@ -1,15 +1,86 @@
-import { BookOpen } from "@phosphor-icons/react";
+import { useEffect, useState } from "react";
+import { BookOpen, MagnifyingGlass } from "@phosphor-icons/react";
+import { api } from "../shared/api.ts";
+import bundled from "../../backend/resources/evidence.json";
+import { More } from "../components/More.tsx";
 import card from "../components/Card.module.css";
 import { DATA_ROWS, NASA_DATA, RULES, TESTS_TEXT, IMAGE_CREDITS } from "../ui/evidenceData.ts";
 import s from "./Evidence.module.css";
 
 type Props = Record<string, never>;
 
+type Source = {
+  id: string;
+  title: string;
+  source_url: string;
+  topics: string[];
+  studied_population: string;
+  supported_claims: string[];
+  limitations: string[];
+  review_status?: string;
+};
+
+const topicName = (t: string) => t.replace(/_/g, " ");
+
 export function Evidence(_props: Props) {
+  const [records, setRecords] = useState<Source[]>(bundled.records as Source[]);
+  const [q, setQ] = useState("");
+  const [online, setOnline] = useState(false);
+  useEffect(() => {
+    let live = true;
+    api("/evidence")
+      .then((r) => {
+        const list = Array.isArray(r) ? r : r?.records;
+        if (live && Array.isArray(list) && list.length) {
+          setRecords(list);
+          setOnline(true);
+        }
+      })
+      .catch(() => {});
+    return () => { live = false; };
+  }, []);
+  const needle = q.trim().toLowerCase();
+  const shown = records.filter(
+    (r) => !needle || r.title.toLowerCase().includes(needle) || r.topics.some((t) => topicName(t).includes(needle)),
+  );
   return (
     <div>
       <h1 className={s.title}>Evidence</h1>
       <div className={s.stack}>
+        <section className={card.card} aria-labelledby="sources-h">
+          <div className={card.head}>
+            <h2 id="sources-h">Sources</h2>
+            <span>{online ? "From the backend" : "Saved on this device"}</span>
+          </div>
+          <p className={s.p}>Summaries we wrote from each source. Domain review is still pending and nothing here is clinically approved.</p>
+          <label className={s.search}>
+            <span className={s.vh}>Search sources by title or topic</span>
+            <MagnifyingGlass size={18} aria-hidden="true" />
+            <input type="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search by title or topic" />
+          </label>
+          <p className={s.count} aria-live="polite">{shown.length} of {records.length} sources</p>
+          <div className={s.sources}>
+            {shown.map((r) => (
+              <article key={r.id} className={s.source}>
+                <h3>{r.title}</h3>
+                <p className={s.topics}>{r.topics.map(topicName).join(", ")}</p>
+                <ul className={s.claims}>
+                  {r.supported_claims.map((c) => <li key={c}>{c}</li>)}
+                </ul>
+                {(r.review_status ?? "").includes("pending") && <p className={s.pending}>Pending review</p>}
+                <More label="Population and limitations">
+                  <p className={s.p}><b>Studied population.</b> {r.studied_population}</p>
+                  <ul className={s.claims}>
+                    {r.limitations.map((c) => <li key={c}>{c}</li>)}
+                  </ul>
+                </More>
+                <a className={s.link} href={r.source_url} target="_blank" rel="noreferrer">Open original source</a>
+              </article>
+            ))}
+            {shown.length === 0 && <p className={s.muted}>No source matches that search.</p>}
+          </div>
+        </section>
+
         <section className={card.card} aria-labelledby="rules-h" id="evidence">
           <div className={card.head}><h2 id="rules-h">Coupling rules</h2></div>
           <div className={s.rules}>

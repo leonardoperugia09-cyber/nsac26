@@ -2,18 +2,43 @@ import { useEffect, useLayoutEffect, useMemo, useRef, useState, type KeyboardEve
 import { ArrowLeft, CaretRight, ChartLineUp, Check, ClockCounterClockwise, FileText, Microphone, Paperclip, X, RocketLaunch, ShieldCheck, Stethoscope } from "@phosphor-icons/react";
 import card from "../components/Card.module.css";
 import { HaloMark } from "../components/HaloMark";
+import { ACTION_MARK } from "../shared/assistantTopics.ts";
 import { PageHero } from "../components/PageHero";
 import { More } from "../components/More";
-import { LiquidGlassButton } from "../components/ui/apple-tahoe-liquid-glass-button";
 import { driftOn } from "../ui/systems.ts";
-import { crewById, readingOn } from "../data/crew.ts";
+import { MISSION_PROFILE, contextOf, crewById, historyOf, readingOn } from "../data/crew.ts";
+import type { MissionProfile } from "../engine/types.ts";
+import { assessCrew } from "../engine/assessment.ts";
+import { api } from "../shared/api.ts";
+import { answer } from "../shared/offlineAssistant.ts";
 import { buildOverview } from "../ui/overviewData.ts";
 import { GATE_OF, worstGate } from "../ui/missionData.ts";
 import { SYSTEMS, systemStatus } from "../ui/systems.ts";
-import { EMPTY_QUICK, NOTE_TEXT, SEED_C2, haloMsg, respond, userMsg, type Block, type Message } from "../ui/assistantData.ts";
+import { EMERGENCY_TEXT, EMPTY_QUICK, NOTE_TEXT, SEED_C2, haloMsg, safetyReply, userMsg, type Block, type Message } from "../ui/assistantData.ts";
 import s from "./Assistant.module.css";
 
-type Props = { crewId: string; day: number; delay: string | null; urgent: boolean };
+type Props = { crewId: string; day: number; profile?: MissionProfile; delay: string | null; urgent: boolean };
+
+// What POST /api/assistant returns (and shared/offlineAssistant.ts mirrors when the server is unreachable)
+type Reply = { mode: string; modelStatus?: string; triage: { urgent: boolean }; explanation: string; escalation: string; citations: { title: string }[] };
+
+const ON_BOARD: Block = { kind: "via", text: "Answered on board" };
+const replyBlocks = (r: Reply): Block[] => r.triage.urgent
+  ? [{ kind: "emergency", title: "This could be an emergency", text: EMERGENCY_TEXT }]
+  : [
+      ...splitAction(r.explanation),
+      ...(r.citations.length ? [{ kind: "sources", titles: r.citations.map((c) => c.title) } as const] : []),
+      { kind: "escalation", text: r.escalation },
+    ];
+/** "… What to do now: X" becomes the explanation plus a highlighted action line */
+const splitAction = (text: string): Block[] => {
+  const [said, todo] = text.split(ACTION_MARK);
+  return todo ? [{ kind: "text", text: said.trim() }, { kind: "action", text: `${ACTION_MARK} ${todo.trim()}` }] : [{ kind: "text", text }];
+};
+const serverLine = (r: Reply) =>
+  r.mode === "ai_selected_reviewed_explanation" ? "Answered by the HALO server, worded by hosted AI from reviewed sentences"
+  : r.modelStatus === "not_configured" || r.modelStatus === "failed_using_offline_fallback" ? "Answered by the HALO server. Hosted AI was not available"
+  : "Answered by the HALO server";
 
 const mono = (t: string) => <span className="mono">{t}</span>;
 
@@ -37,18 +62,16 @@ function NoteRow({ delay }: { delay: string | null }) {
     <div className={s.noteRow}>
       <div className={s.noteLine}>
         <span>Note drafted for your flight surgeon. Arrives in {mono(delay ?? "moments")}.</span>
-        <LiquidGlassButton asChild interactive material="clear">
-          <button type="button" className={s.glassBtn} aria-expanded={open} onClick={() => setOpen(!open)}>
+          <button type="button" className={s.secondary} aria-expanded={open} onClick={() => setOpen(!open)}>
             {open ? "Hide note" : "View note"}
           </button>
-        </LiquidGlassButton>
       </div>
       {open && <p className={s.notePreview}>{NOTE_TEXT}</p>}
     </div>
   );
 }
 
-export function Assistant({ crewId, day, delay, urgent }: Props) {
+export function Assistant({ crewId, day, profile = MISSION_PROFILE, delay, urgent }: Props) {
   const drift = useMemo(() => driftOn(crewId, day), [crewId, day]);
   const risk = useMemo(() => buildOverview(crewId, day).risk, [crewId, day]);
   // Start screen first: when you're fine it should be obvious what this page is for
@@ -58,6 +81,7 @@ export function Assistant({ crewId, day, delay, urgent }: Props) {
   const area = useRef<HTMLDivElement>(null);
   const input = useRef<HTMLTextAreaElement>(null);
   const [file, setFile] = useState<File | null>(null);
+  const [allowAI, setAllowAI] = useState(false);
   // The conversation card runs to the bottom of the screen: tiles at the top, the typing bar at the bottom
   const convo = useRef<HTMLElement>(null);
   const [convoH, setConvoH] = useState<number>();
@@ -71,21 +95,32 @@ export function Assistant({ crewId, day, delay, urgent }: Props) {
     window.addEventListener("resize", fit);
     return () => window.removeEventListener("resize", fit);
   }, [mode]);
-  const timers = useRef<number[]>([]);
 
   useEffect(() => { setMessages([]); setMode(urgent ? "chat" : "start"); }, [crewId, urgent]);
   useEffect(() => { if (urgent) input.current?.focus(); }, [urgent]);
-  useEffect(() => () => timers.current.forEach(clearTimeout), []);
   useEffect(() => { const el = area.current; if (el) el.scrollTop = el.scrollHeight; }, [messages]);
 
+  // The HALO server answers first; if it is down, the on-board copy gives the same answers (src/shared/assistantTopics.ts)
+  const ask = async (q: string): Promise<Block[]> => {
+    try {
+      const r = await api<Reply>("/assistant", { crewId, day, profile, question: q, symptoms: [], allowAI });
+      return [...replyBlocks(r), { kind: "via", text: serverLine(r) }];
+    } catch {
+      const local = replyBlocks(answer(q, assessCrew(historyOf(crewId), day, profile, contextOf(crewId, day))));
+      return [...local, ON_BOARD];
+    }
+  };
   const send = (raw: string) => {
     const t = [raw.trim(), file ? `Attached: ${file.name}` : ""].filter(Boolean).join("\n");
     if (!t) return;
     setFile(null);
     setMode("chat");
-    setMessages((m) => [...m, userMsg(t)]);
     setText("");
-    timers.current.push(window.setTimeout(() => setMessages((m) => [...m, respond(t)]), 400));
+    // Red flags and medicine questions are answered on board at once, before any server or AI call
+    const safety = safetyReply(t);
+    const reply = haloMsg(safety ? [...safety, ON_BOARD] : [{ kind: "pending" }]);
+    setMessages((m) => [...m, userMsg(t), reply]);
+    if (!safety) void ask(t).then((blocks) => setMessages((m) => m.map((x) => (x.id === reply.id ? { ...reply, blocks } : x))));
   };
   const onKey = (e: KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); send(text); }
@@ -113,7 +148,7 @@ export function Assistant({ crewId, day, delay, urgent }: Props) {
         </ul>
       );
       case "action": return <p key={i} className={`${s.p} ${s.action}`}>{b.text}</p>;
-      case "escalation": return (
+      case "escalation": return b.text ? <p key={i} className={s.escalation}>Next step: {b.text[0].toLowerCase() + b.text.slice(1).replace(/\.?$/, ".")}</p> : (
         <p key={i} className={s.escalation}>
           If the pain becomes severe, or you see blood in your urine, use Urgent help. {delay ? <>Houston hears you in {mono(delay)}.</> : "Houston hears you right away."}
         </p>
@@ -125,6 +160,9 @@ export function Assistant({ crewId, day, delay, urgent }: Props) {
       );
       case "note": return <NoteRow key={i} delay={delay} />;
       case "emergency": return <Emergency key={i} title={b.title} text={b.text} delay={delay} />;
+      case "sources": return <ul key={i} className={`${s.evidence} ${s.sources}`}>{b.titles.map((t) => <li key={t}>Source: {t}</li>)}</ul>;
+      case "pending": return <p key={i} className={s.pending} role="status">HALO is checking your readings</p>;
+      case "via": return <p key={i} className={s.via}>{b.text}</p>;
     }
   };
 
@@ -190,7 +228,7 @@ export function Assistant({ crewId, day, delay, urgent }: Props) {
               <div key={m.id} className={s.user}>{m.text}</div>
             ) : (
               <div key={m.id} className={s.halo}>
-                <div className={s.label}><HaloMark size={20} />HALO</div>
+                <div className={s.label}>HALO</div>
                 {m.blocks.map(renderBlock)}
               </div>
             ))}
@@ -234,6 +272,10 @@ export function Assistant({ crewId, day, delay, urgent }: Props) {
               ))}
             </ul>
             </More>
+            <label className={s.aiToggle}>
+              <input type="checkbox" checked={allowAI} onChange={(e) => setAllowAI(e.target.checked)} />
+              Let hosted AI reorder reviewed sentences (needs the HALO server)
+            </label>
           </section>
         </div>
       </div>

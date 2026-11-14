@@ -19,3 +19,9 @@ build/
 Thumbs.db
 .vscode/
 .idea/
+
+# Local prototype state and test artifacts
+backend/var/
+playwright-report/
+test-results/
+*.sqlite*

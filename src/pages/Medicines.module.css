@@ -8,11 +8,11 @@
 .what b { font-weight: 500; }
 .what span { color: var(--ink-2); font-size: 14px; }
 .state { color: var(--ink-2); }
-.due { color: var(--watch-ink); font-weight: 500; }
+.due { color: var(--ink); font-weight: 600; }
 .cta { height: 50px; padding: 0 24px; border: 0; border-radius: 16px; background: var(--ink); color: var(--card); font-size: 16px; font-weight: 500; cursor: pointer; }
 .cta:hover { background: #262B36; }
 .cta:active { transform: translateY(1px) scale(0.98); }
-.text { min-height: 44px; padding: 0; border: 0; background: none; color: var(--ink); font-weight: 500; cursor: pointer; text-decoration: underline; }
+.text { min-height: 44px; padding: 0 8px; border: 0; background: none; color: var(--ink); font-weight: 500; cursor: pointer; text-decoration: underline; }
 
 .weeks { display: flex; flex-direction: column; gap: 32px; }
 .weekHead { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px; }
@@ -23,7 +23,7 @@
 .sq { display: block; width: 20px; height: 20px; border-radius: 5px; }
 .taken { background: var(--ink); }
 .missed { border: 1.5px solid rgba(16, 19, 26, 0.35); background: transparent; }
-.pending { border: 1.5px solid var(--watch-mark); background: transparent; }
+.pending { border: 1.5px solid var(--ink-2); background: transparent; }
 .dayLabel { font-size: 12px; color: var(--ink-2); }
 
 .table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
@@ -36,3 +36,6 @@
 @media (max-width: 1279px) {
   .grid { grid-template-columns: minmax(0, 1fr); }
 }
+.warnLine { color: var(--watch-ink); }
+.msg { margin: 0 0 16px; color: var(--ink-2); font-size: 14px; animation: lift var(--enter) var(--ease-out) both; }
+.row { animation: lift var(--enter) var(--ease-out) both; }

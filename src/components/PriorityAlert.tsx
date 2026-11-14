@@ -4,7 +4,6 @@ import type { LinkedSeries, PriorityRisk, Task } from "../ui/viewTypes.ts";
 import { easedToday } from "../ui/overviewData.ts";
 import { LinkedSignalsChart } from "./LinkedSignalsChart";
 import { PageField } from "./PageField";
-import { LiquidGlassButton } from "./ui/apple-tahoe-liquid-glass-button";
 import s from "./PriorityAlert.module.css";
 
 type Props = { risk: PriorityRisk | null; series: LinkedSeries[]; today: number; delay: string | null; nextTask?: Task; flagged: string[]; done: string[]; onDone: (ids: string[]) => void };
@@ -17,7 +16,6 @@ export function PriorityAlert({ risk, series, today, delay, nextTask, flagged, d
     const one = flagged.length === 1;
     return (
       <section ref={hero} className={s.hero} aria-labelledby="risk-title">
-        <PageField state="normal" edge={hero} />
         <p className={s.status}>{flagged.length ? "No linked risks" : "All normal"}</p>
         <h1 id="risk-title" className={s.title}>Nothing needs you today</h1>
         <p className={s.why}>
@@ -65,9 +63,7 @@ export function PriorityAlert({ risk, series, today, delay, nextTask, flagged, d
             ? <button className={s.cta} onClick={() => onDone([...done, next.id])}><Check size={18} weight="bold" /><span key={next.id} className={s.ctaLabel}>{next.cta}</span></button>
             : <span className={s.allDone}><Check size={18} weight="bold" />Today's plan is done. HALO checks again tomorrow.</span>;
         })()}
-        <LiquidGlassButton asChild interactive material="clear">
-          <button type="button" className={s.glassBtn} aria-expanded={why} aria-controls="why-more" onClick={() => setWhy(!why)}>Why these are linked</button>
-        </LiquidGlassButton>
+          <button type="button" className={s.secondary} aria-expanded={why} aria-controls="why-more" onClick={() => setWhy(!why)}>Why these are linked</button>
       </div>
       {why && (
         <div id="why-more" className={s.whyMore}>

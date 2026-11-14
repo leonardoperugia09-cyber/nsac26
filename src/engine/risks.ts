@@ -18,7 +18,12 @@
 import { computeBaselines, computeDrift, type Drift } from "./baseline.ts";
 import type { Level, MissionProfile, Reading } from "./types.ts";
 import { COUPLING_RULES } from "../rules/index.ts";
-import type { Contributor, CouplingRule, RiskResult, RuleInput } from "../rules/types.ts";
+import type {
+  Contributor,
+  CouplingRule,
+  RiskResult,
+  RuleInput,
+} from "../rules/types.ts";
 
 export const DRIFTING_AT = 1.5; // DEMO: a signal counts as drifting from this drift score
 export const WATCH_AT = 2.5; // DEMO
@@ -35,13 +40,27 @@ function defaultScore(rule: CouplingRule, drift: Record<string, Drift>) {
     .sort((a, b) => b.score - a.score);
   const drifting = contributors.filter((c) => c.score >= DRIFTING_AT);
   const wsum = drifting.reduce((a, c) => a + rule.signals[c.signal], 0);
-  const avg = wsum === 0 ? 0 : drifting.reduce((a, c) => a + rule.signals[c.signal] * Math.min(c.score, MAX_SIGNAL_SCORE), 0) / wsum;
-  const coupling = drifting.length >= rule.minLinked ? 1 + 0.15 * (drifting.length - 1) : 0.6;
+  const avg =
+    wsum === 0
+      ? 0
+      : drifting.reduce(
+          (a, c) =>
+            a + rule.signals[c.signal] * Math.min(c.score, MAX_SIGNAL_SCORE),
+          0,
+        ) / wsum;
+  const coupling =
+    drifting.length >= rule.minLinked ? 1 + 0.15 * (drifting.length - 1) : 0.6;
   return { score: avg * coupling, contributors };
 }
 
-export function evaluateRule(rule: CouplingRule, inp: RuleInput, baselineDays: number): RiskResult {
-  const { score, contributors } = rule.score ? rule.score(inp) : defaultScore(rule, inp.drift);
+export function evaluateRule(
+  rule: CouplingRule,
+  inp: RuleInput,
+  baselineDays: number,
+): RiskResult {
+  const { score, contributors } = rule.score
+    ? rule.score(inp)
+    : defaultScore(rule, inp.drift);
   const linked = contributors.filter((c) => c.score >= DRIFTING_AT).length;
 
   let level: Level = "Nominal";
@@ -49,7 +68,9 @@ export function evaluateRule(rule: CouplingRule, inp: RuleInput, baselineDays: n
   else if (score >= WATCH_AT) level = "Watch";
 
   // "Why is HALO unsure?" and how wide the score range is
-  const uncertainty = ["Thresholds are demo parameters, not clinically validated."];
+  const uncertainty = [
+    "Thresholds are demo parameters, not clinically validated.",
+  ];
   let spread = 0.4;
   if (rule.needs?.length) {
     uncertainty.push(`Missing inputs: ${rule.needs.join(", ")}.`);
@@ -66,10 +87,17 @@ export function evaluateRule(rule: CouplingRule, inp: RuleInput, baselineDays: n
     level,
     score: r1(score),
     range: [r1(Math.max(0, score - spread)), r1(score + spread)],
-    contributors: contributors.slice(0, 4).map((c) => ({ ...c, score: r1(c.score) })),
+    contributors: contributors
+      .slice(0, 4)
+      .map((c) => ({ ...c, score: r1(c.score) })),
     linked,
     why: rule.why,
-    action: level === "Act" ? rule.action.act : level === "Watch" ? rule.action.watch : "No action needed.",
+    action:
+      level === "Act"
+        ? rule.action.act
+        : level === "Watch"
+          ? rule.action.watch
+          : "No action needed.",
     source: rule.source,
     uncertainty,
     bodyParts: rule.bodyParts,
@@ -80,14 +108,20 @@ export function evaluateRule(rule: CouplingRule, inp: RuleInput, baselineDays: n
  * All 7 named risks for one astronaut on one mission day, worst first.
  * `history` = that astronaut's readings (e.g. historyOf("C2")); only data up to `day` is used.
  */
-export function evaluateRisks(history: Reading[], day: number, profile: MissionProfile = "mars_transit"): RiskResult[] {
-  const upTo = history.filter((r) => r.day <= day).sort((a, b) => a.day - b.day);
+export function evaluateRisks(
+  history: Reading[],
+  day: number,
+  profile: MissionProfile = "mars_transit",
+): RiskResult[] {
+  const upTo = history
+    .filter((r) => r.day <= day)
+    .sort((a, b) => a.day - b.day);
   if (upTo.length === 0) return [];
   const today = upTo[upTo.length - 1];
-  const bands = computeBaselines(history);
+  const bands = computeBaselines(upTo, day);
   const baselineDays = Object.values(bands)[0]?.nDays ?? 0;
   const drift = computeDrift(history, bands, day);
-  return COUPLING_RULES.map((rule) => evaluateRule(rule, { day, today, drift, profile }, baselineDays)).sort(
-    (a, b) => RANK[b.level] - RANK[a.level] || b.score - a.score,
-  );
+  return COUPLING_RULES.map((rule) =>
+    evaluateRule(rule, { day, today, drift, profile }, baselineDays),
+  ).sort((a, b) => RANK[b.level] - RANK[a.level] || b.score - a.score);
 }

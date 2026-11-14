@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.0",
+  "bundle_version": "1.0.0-demo",
+  "scope": "research_prototype_source_summaries",
+  "records": [
+    {
+      "id": "nasa_human_body",
+      "title": "The Human Body in Space",
+      "source_url": "https://www.nasa.gov/humans-in-space/the-human-body-in-space/",
+      "authors": ["NASA Human Research Program"],
+      "publication_year": null,
+      "source_kind": "agency_overview",
+      "topics": [
+        "spaceflight_hazards",
+        "bone_health",
+        "muscle_health",
+        "fluid_shift",
+        "renal_health",
+        "radiation"
+      ],
+      "studied_population": "Agency overview drawing on multiple human-spaceflight research programs; it is not a single study cohort.",
+      "supported_claims": [
+        "NASA describes radiation, isolation and confinement, distance from Earth, altered gravity, and hostile or closed environments as spaceflight hazards.",
+        "Microgravity is associated with bone and muscle changes and headward fluid shifts.",
+        "NASA identifies dehydration and increased calcium excretion from bones as contributors to kidney stone concerns during spaceflight."
+      ],
+      "limitations": [
+        "An agency overview does not validate HALO thresholds, a combined risk score, or an individual probability of illness.",
+        "The summary does not establish operational EVA clearance or an approved treatment protocol.",
+        "The statements here are authored summaries, not source quotations; domain review is pending."
+      ],
+      "summary_kind": "authored_summary",
+      "review_status": "domain_review_pending",
+      "clinically_approved": false
+    },
+    {
+      "id": "siew_kidney_2024",
+      "title": "Cosmic kidney disease: an integrated pan-omic, physiological and morphological study into spaceflight-induced renal dysfunction",
+      "source_url": "https://www.nature.com/articles/s41467-024-49212-1",
+      "authors": ["Siew et al."],
+      "publication_year": 2024,
+      "source_kind": "research_article",
+      "topics": ["renal_health", "radiation", "bone_health"],
+      "studied_population": "Integrated human and mouse spaceflight datasets and ground-based simulated-radiation experiments with differing exposures and study designs.",
+      "supported_claims": [
+        "The study investigates kidney molecular and structural changes associated with spaceflight and simulated radiation exposures.",
+        "The reported renal changes support investigating kidney stone mechanisms beyond a bone-calcium explanation alone."
+      ],
+      "limitations": [
+        "Human observations, mouse spaceflight results and animal radiation experiments are distinct evidence populations and must not be treated as interchangeable.",
+        "Animal radiation findings do not establish an individual astronaut's probability of renal injury on a Mars mission.",
+        "The study does not validate HALO's arbitrary bone-marker index, coupling thresholds, or treatment recommendations."
+      ],
+      "summary_kind": "authored_summary",
+      "review_status": "domain_review_pending",
+      "clinically_approved": false
+    },
+    {
+      "id": "du_pharmaceuticals_2011",
+      "title": "Evaluation of Physical and Chemical Changes in Pharmaceuticals Flown on Space Missions",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3085701/",
+      "authors": ["Du et al."],
+      "publication_year": 2011,
+      "source_kind": "research_article",
+      "topics": ["medication_storage", "radiation"],
+      "studied_population": "Pharmaceutical formulations stored in flight and comparison ground kits; these are drug-product stability observations, not patient treatment outcomes.",
+      "supported_claims": [
+        "Physical and chemical stability changes varied across the studied formulations and storage durations.",
+        "The study discusses radiation exposure and repackaging as possible contributors to pharmaceutical stability changes."
+      ],
+      "limitations": [
+        "The study does not isolate a universal radiation effect across all medications and packaging conditions.",
+        "It does not establish a general formula converting mission duration or accumulated radiation into remaining medication potency.",
+        "These findings do not support calculating a person's dose, deciding that a particular onboard product is safe, or changing a prescribed schedule."
+      ],
+      "summary_kind": "authored_summary",
+      "review_status": "domain_review_pending",
+      "clinically_approved": false
+    },
+    {
+      "id": "sleep_2014",
+      "title": "Prevalence of sleep deficiency and use of hypnotic drugs in astronauts before, during, and after spaceflight: an observational study",
+      "source_url": "https://doi.org/10.1016/S1474-4422(14)70122-X",
+      "authors": ["Barger et al."],
+      "publication_year": 2014,
+      "source_kind": "research_article",
+      "topics": ["sleep"],
+      "studied_population": "Astronauts observed around spaceflight; observational sleep study.",
+      "supported_claims": [
+        "Documents sleep deficiency and hypnotic use in the studied astronaut cohorts."
+      ],
+      "limitations": [
+        "Does not establish a universal sleep duration, a causal cognition model, or HALO fitness-for-duty thresholds.",
+        "HALO demo rule weights and thresholds are not validated by this source.",
+        "Bibliographic metadata was checked; detailed content/domain review remains pending."
+      ],
+      "summary_kind": "authored_summary",
+      "review_status": "domain_review_pending",
+      "clinically_approved": false
+    },
+    {
+      "id": "muscle_2009",
+      "title": "Exercise in space: human skeletal muscle after 6 months aboard the International Space Station",
+      "source_url": "https://doi.org/10.1152/japplphysiol.91578.2008",
+      "authors": ["Trappe et al."],
+      "publication_year": 2009,
+      "source_kind": "research_article",
+      "topics": ["muscle"],
+      "studied_population": "Human skeletal-muscle observations after a six-month ISS mission.",
+      "supported_claims": [
+        "Investigates skeletal muscle changes after long-duration ISS flight despite exercise."
+      ],
+      "limitations": [
+        "Group findings do not validate personalized linear muscle or exercise-response predictions.",
+        "HALO demo rule weights and thresholds are not validated by this source.",
+        "Bibliographic metadata was checked; detailed content/domain review remains pending."
+      ],
+      "summary_kind": "authored_summary",
+      "review_status": "domain_review_pending",
+      "clinically_approved": false
+    },
+    {
+      "id": "immune_2019",
+      "title": "Herpes Virus Reactivation in Astronauts During Spaceflight and Its Application on Earth",
+      "source_url": "https://doi.org/10.3389/fmicb.2019.00016",
+      "authors": ["Rooney et al."],
+      "publication_year": 2019,
+      "source_kind": "research_article",
+      "topics": ["immune"],
+      "studied_population": "Astronaut spaceflight viral-reactivation research.",
+      "supported_claims": [
+        "Reviews herpesvirus reactivation in astronauts and its relevance to spaceflight health research."
+      ],
+      "limitations": [
+        "Mood, sleep and stress inputs cannot diagnose immune suppression or viral reactivation.",
+        "HALO demo rule weights and thresholds are not validated by this source.",
+        "Bibliographic metadata was checked; detailed content/domain review remains pending."
+      ],
+      "summary_kind": "authored_summary",
+      "review_status": "domain_review_pending",
+      "clinically_approved": false
+    },
+    {
+      "id": "radlab_api",
+      "title": "NASA OSDR RadLab Data API",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/gui/data-api/",
+      "authors": ["NASA OSDR"],
+      "publication_year": null,
+      "source_kind": "agency_documentation",
+      "topics": ["radlab"],
+      "studied_population": "Instrument observations from multiple spacecraft and radiation detectors.",
+      "supported_claims": [
+        "Documents absorbed dose rate in microgray/hour and dose-equivalent rate in microsievert/hour as distinct quantities."
+      ],
+      "limitations": [
+        "An instrument observation is not personal effective dose; a daily aggregate is not a real-time storm classifier.",
+        "HALO demo rule weights and thresholds are not validated by this source.",
+        "API guide and a historical response shape were checked."
+      ],
+      "summary_kind": "authored_summary",
+      "review_status": "domain_review_pending",
+      "clinically_approved": false
+    }
+  ]
+}

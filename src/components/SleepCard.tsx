@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import { historyOf } from "../data/crew";
+import { useDataRevision } from "../shared/useDataRevision.ts";
 import { driftOn } from "../ui/systems";
 import card from "./Card.module.css";
 import s from "./SleepCard.module.css";
@@ -8,10 +9,11 @@ type Props = { crewId: string; day: number; onOpen: () => void };
 
 /** Last night at a glance: hours against your own normal, the week as bars, sleep debt. All simulator fields. */
 export function SleepCard({ crewId, day, onOpen }: Props) {
+  const revision = useDataRevision();
   const m = useMemo(() => {
     const week = historyOf(crewId).filter((r) => r.day > day - 7 && r.day <= day);
     return { week, d: driftOn(crewId, day).sleep_hours };
-  }, [crewId, day]);
+  }, [crewId, day, revision]);
   const last = m.week[m.week.length - 1];
   if (!last || !m.d) return null;
 

@@ -1,10 +1,10 @@
 // Builds what the Overview shows for one astronaut on one mission day.
 // Bands and drift come from the engine (src/engine/baseline.ts). The priority risk text and the
-// task list are MOCK; the risk level comes from the coupled risk engine (src/engine/risks.ts).
+// task list are MOCK; the risk level comes from the shared assessment (src/engine/assessment.ts), the same one the backend serves.
 import { bandCentreAt, computeBaselines, computeDrift } from "../engine/baseline.ts";
 import { SIGNAL_BY_KEY } from "../engine/signals.ts";
-import { MISSION_PROFILE, historyOf, readingOn } from "../data/crew.ts";
-import { evaluateRisks } from "../engine/risks.ts";
+import { MISSION_PROFILE, contextOf, historyOf, readingOn } from "../data/crew.ts";
+import { assessCrew } from "../engine/assessment.ts";
 import type { BodySystem, LinkedSeries, OverviewModel, PriorityRisk, ReadingSummary, Task } from "./viewTypes.ts";
 import { SYSTEMS, systemStatus } from "./systems.ts";
 
@@ -56,7 +56,7 @@ export function buildOverview(crewId: string, day: number): OverviewModel {
   const drift = computeDrift(history, bands, day);
   // The engine decides the level ("far outside" can reach Act); no engine risk above Nominal means no hero risk
   const mock = RISKS[crewId];
-  const engine = mock ? evaluateRisks(history, day, MISSION_PROFILE).find((r) => r.ruleId === mock.ruleId) : undefined;
+  const engine = mock ? assessCrew(history, day, MISSION_PROFILE, contextOf(crewId, day)).risks.find((r) => r.ruleId === mock.ruleId) : undefined;
   const level = engine?.level === "Act" ? "act" : engine?.level === "Watch" ? "watch" : null;
   const risk: PriorityRisk | null = mock && level ? { ...mock, level } : null;
 

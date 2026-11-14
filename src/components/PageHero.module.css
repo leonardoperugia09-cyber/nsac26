@@ -1,5 +1,4 @@
-/* The field ends 28 px below the hero; cards start 20 px below the field */
-.hero { margin-bottom: 48px; }
+.hero { margin-bottom: 32px; }
 .top { display: flex; justify-content: space-between; align-items: center; gap: 24px; margin-bottom: 8px; }
 .eyebrow { margin: 0; font-size: 14px; color: var(--ink-on-field); }
 .watch { color: var(--watch-ink); font-weight: 500; }

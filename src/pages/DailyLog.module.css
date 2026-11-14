@@ -6,7 +6,7 @@
 .row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
 .big { font-size: 36px; line-height: 1.2; font-weight: 500; margin-bottom: 12px; }
 .hint { margin: 8px 0 0; font-size: 13px; color: var(--ink-2); }
-.amber { margin: 12px 0 0; font-size: 14px; color: var(--watch-ink); }
+.amber { margin: 12px 0 0; font-size: 14px; color: var(--watch-ink); animation: lift var(--enter) var(--ease-out) both; }
 .amberText { color: var(--watch-ink); }
 
 .outline, .sq span, .chip span {
@@ -15,7 +15,8 @@
 }
 .outline { padding: 0 16px; font-weight: 500; }
 .outline:hover { background: var(--page); border-color: var(--accent); }
-.outline:active { transform: scale(0.97); }
+.outline:active:not(:disabled) { transform: scale(0.97); }
+.outline:disabled { opacity: 0.45; cursor: default; border-color: rgba(16, 19, 26, 0.14); background: transparent; }
 .text { min-height: 44px; padding: 0 12px; border: 0; background: none; color: var(--ink-2); font-weight: 500; cursor: pointer; }
 .text:hover:not(:disabled) { color: var(--ink); text-decoration: underline; }
 .text:disabled { opacity: 0.45; cursor: default; }
@@ -44,7 +45,7 @@
 .cta { height: 50px; padding: 0 24px; border: 0; border-radius: 16px; background: var(--ink); color: var(--card); font-size: 16px; font-weight: 500; cursor: pointer; }
 .cta:hover { background: #262B36; }
 .cta:active { transform: translateY(1px) scale(0.98); }
-.saved { font-size: 14px; color: var(--ink-2); }
+.saved { margin: 0; font-size: 14px; color: var(--ink-2); animation: lift var(--enter) var(--ease-out) both; }
 
 .tests { display: flex; flex-direction: column; gap: 24px; padding: 28px 32px; }
 .testsTitle { margin: 0; font-size: 20px; font-weight: 500; }
@@ -52,8 +53,35 @@
 .testTop b { font-weight: 500; }
 .dur { margin-left: 8px; font-size: 14px; color: var(--ink-2); }
 .result { margin: 0; font-size: 15px; }
-.note { margin: 8px 0 0; font-size: 13px; color: var(--ink-2); }
-.glassBtn { position: relative; isolation: isolate; display: inline-flex; align-items: center; height: 44px; padding: 0 18px; border: 0; border-radius: 14px; background: transparent; color: var(--ink); font-weight: 500; cursor: pointer; }
+.note { margin: 8px 0 0; font-size: 13px; color: var(--ink-2); animation: lift var(--enter) var(--ease-out) both; }
+
+/* Urgent symptom ticked: red is for act only */
+.urgent { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; margin-top: 12px; animation: lift var(--enter) var(--ease-out) both; }
+.urgent p { margin: 0; font-size: 14px; font-weight: 500; color: var(--act); }
+.actBtn { height: 44px; padding: 0 16px; border-radius: var(--radius-control); border: 1px solid var(--act); background: transparent; color: var(--act); font-weight: 500; cursor: pointer; }
+.actBtn:hover { background: rgba(180, 43, 35, 0.08); }
+.actBtn:active { transform: scale(0.97); }
+
+/* Extra measurements, folded behind More */
+.extras { display: flex; flex-direction: column; gap: 20px; padding-top: 8px; }
+.extras legend { color: var(--ink); }
+.extraGrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px 16px; }
+.extraGrid label { display: flex; flex-direction: column; gap: 6px; font-size: 13px; }
+.extraGrid .num { width: 100%; }
+
+/* Inline tasks inside the Tests card, one open at a time */
+.task { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; margin-top: 16px; animation: lift var(--enter) var(--ease-out) both; }
+.taskText { margin: 0; font-size: 14px; color: var(--ink-2); }
+.pad {
+  align-self: stretch; height: 120px; border-radius: var(--radius-control); border: 1px solid rgba(16, 19, 26, 0.14);
+  background: var(--page); color: var(--ink); font-size: 16px; font-weight: 500; cursor: pointer;
+  transition: none; touch-action: manipulation; user-select: none;
+}
+.pad.ready { background: var(--accent); border-color: var(--accent); color: #fff; }
+.pad:disabled { cursor: default; color: var(--ink-2); }
+.digits { margin-bottom: 0; letter-spacing: 0.3em; }
+.secondary { display: inline-flex; align-items: center; height: 44px; padding: 0 18px; border: 1px solid rgba(16, 19, 26, 0.14); border-radius: 14px; background: var(--card); color: var(--ink); font-weight: 500; text-decoration: none; cursor: pointer; }
+.secondary:hover { border-color: rgba(16, 19, 26, 0.3); }
 
 @media (max-width: 1279px) {
   .grid { grid-template-columns: minmax(0, 1fr); }

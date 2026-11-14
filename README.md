@@ -1,58 +1,66 @@
 # HALO — Health Autonomy for Long Operations
 
-**NASA Space Apps Challenge 2026 · "Create Health Monitoring Software for Astronauts on Space Missions"**
+An integrated NASA Space Apps research demonstration: explainable coupled health
+patterns, a React interface, and a Node.js/Fastify backend sharing one TypeScript
+baseline and risk engine. **Fictional crew data. Not a medical device.**
 
-On Mars, the doctor is 20 minutes away and the crew medical officer might be the patient. HALO is an offline AI crew medical officer that links signals across body systems, spots coupled risks early, explains them in plain language, and tells the crew what to do next.
+## Run the complete prototype
 
-> ⚠️ Prototype for a hackathon. **Not a medical device.**
+Node 22.13 or newer (tested on Node 24):
 
-## What makes HALO different
-1. **Coupled Risk Engine** — links systems (e.g. bone loss + low fluid + kidney remodelling → kidney stone risk)
-2. **Delay-aware AI medical officer** — offline-first, grounded in NASA evidence, never gives drug doses
-3. **Personal baseline drift** — compares each astronaut to their own pre-flight baseline
-4. **Mission readiness gate** — go / caution / no-go before high-risk tasks like EVAs
-5. **Pharmacy potency tracker** — forecasts which onboard medicines are losing strength
-
-## Repo layout
-```
-data/        RadLab radiation snapshot + simulated crew data
-scripts/     crew simulator (3 crew × 120 days, planted demo events)
-src/rules/   coupling rules, one file per rule, each with its citation
-backend/     tiny server that holds the AI API key + caches RadLab data
-```
-
-## Getting started
 ```bash
-git clone https://github.com/leonardoperugia09-cyber/nsac26.git
-cd nsac26
-npm create vite@latest . -- --template react-ts   # first person only, then commit
-npm install
-npm run dev
+npm ci
+npm run dev:full
 ```
-Put API keys in a `.env` file (copy `.env.example`). **Never commit `.env`.**
 
-## Team workflow
-Make a branch before you code (`git checkout -b yourname-feature`) and merge into `main` with a Pull Request.
+Open http://localhost:5173. API documentation: http://127.0.0.1:3001/docs.
+Use the Overview scenario buttons to compare C2 day50/day60, radiation day40, and
+cognitive readiness day70. All severity changes come from the shared engine.
 
-## Real vs simulated data
-| Data | Real or simulated | Source |
-|---|---|---|
-| ISS radiation dose rate | Real | OSDR RadLab API (cached snapshot) |
-| Mars / Moon dose rates | Real numbers, applied by us | MSL RAD (1.8 mSv/day cruise) |
-| Biomarker baseline ranges | Real ranges | OSDR Inspiration4 datasets |
-| Rates of bone, muscle, fluid, sleep change | Real published rates | Papers cited in `src/rules/` |
-| 3 crew members + daily readings | Simulated | `scripts/` simulator |
-| Coupling rule thresholds | Demo parameters | Our own, labelled as such |
+## Included
 
-## Challenge requirements
-- [ ] Gathers health indicators and lets astronauts act on them
-- [ ] Visual self-assessment tool (clickable body map)
-- [ ] Guidance on treatments / health improvements
-- [ ] Six named indicators: blood pressure, heart rate, blood sugar, temperature, sleep, mood
-- [ ] Which measurements work in space, and why each matters
-- [ ] How spaceflight hazards affect each indicator
-- [ ] When to involve crew / flight surgeons
-- [ ] Preventive actions
+- All seven coupled patterns, with missing-input gates, persistence, source references,
+  uncertainty and explicit Unknown outcomes.
+- Local check-ins, educational cognition/vision tasks, source-labelled trends and body map.
+- Triage-first assistant with offline fallback and optional constrained hosted-AI wording selection.
+- Demonstration readiness, crew overview, isolated what-if scenarios and mission context.
+- SQLite report drafts, human-approved simulated delivery, medication schedule references/adherence.
+- Source/evidence browser, real historical NASA RadLab snapshot and original-unit refresh adapter.
+- PWA app-shell cache and on-device data/rules/evidence for outages.
 
-## AI agent test results
-_20-question safety / accuracy / clarity eval — to be added._
+## Real and simulated
+
+| Item                                             | Provenance                                                            |
+| ------------------------------------------------ | --------------------------------------------------------------------- |
+| Three crew ×120days and all their readings       | Simulated; never clinical training/validation data                    |
+| Pre-flight reference values and adaptation bands | Fictional references / demo models                                    |
+| Risk thresholds and readiness recommendations    | Explicit demonstration parameters                                     |
+| NASA RadLab instrument snapshot                  | Real historical absorbed dose rate; labelled stale                    |
+| Scientific sources                               | Authored summaries, population/limits recorded; expert review pending |
+| Medication potency                               | Unknown; no validated model or strength estimate is presented         |
+| Report delivery                                  | Simulated only; nothing is transmitted to Earth or other people       |
+
+Hosted AI needs network access and a key; local monitoring and reviewed fallback wording
+continue without it. Real operation would require validated sensors, approved medical
+protocols, domain review, appropriate privacy controls and prospective validation.
+
+## Development
+
+```bash
+npm test
+npm run check:drift
+npm run check:risks
+npm run typecheck
+npm run typecheck:backend
+npm run build
+npm run test:browser
+```
+
+[Backend setup and API](backend/README.md) ·
+[Execution tracker and all19feature areas](backend/docs/EXECUTION_TRACKER.md) ·
+[Scientific boundaries and architecture](backend/docs/ARCHITECTURE.md) ·
+[Verification](backend/docs/VERIFICATION.md)
+
+Work lives on `manar-backend`, synced from the team's main at `9cde66c`. Existing team
+frontend assets and simulator are retained; the backend/scoring integrations are reviewable
+on this branch. Branch changes should be reviewed before any merge to main.

@@ -1,0 +1,11 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": { "lib": ["ES2023", "DOM"], "types": ["node"] },
+  "include": [
+    "node/**/*.ts",
+    "server.ts",
+    "tests/**/*.ts",
+    "../src/engine/**/*.ts",
+    "../src/rules/**/*.ts"
+  ]
+}

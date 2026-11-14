@@ -11,9 +11,9 @@
 .watchWord { color: var(--watch-ink); }
 .risk { margin: 12px 0 0; max-width: 62ch; padding: 12px 14px; border-radius: 14px; font-size: 15px; }
 .risk b { font-weight: 500; }
-.risk.act { background: rgba(180, 43, 35, 0.07); color: var(--ink); }
+.risk.act { background: var(--act-soft); color: var(--ink); }
 .risk.act b { color: var(--act); }
-.risk.watch { background: rgba(224, 138, 30, 0.1); }
+.risk.watch { background: var(--watch-soft); }
 .risk.watch b { color: var(--watch-ink); }
 .whyTitle { margin: 24px 0 4px; font-size: 15px; font-weight: 500; }
 .why { margin: 0 0 8px; font-size: 15px; max-width: 62ch; }
