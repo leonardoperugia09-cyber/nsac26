@@ -1,7 +1,7 @@
 .more { margin-top: 8px; font-size: 14px; }
 .more summary { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; color: var(--accent); font-weight: 500; cursor: pointer; list-style: none; transition: color 0.16s ease-out; }
 .more summary::-webkit-details-marker { display: none; }
-.more summary:hover { color: var(--accent-hover); }
+.more summary:hover { color: var(--accent-hover); text-decoration: underline; text-underline-offset: 3px; }
 .caret { transition: transform 0.25s var(--ease-out); }
 .more[open] .caret { transform: rotate(180deg); }
 .body { padding-bottom: 4px; color: var(--ink-2); animation: lift var(--enter) var(--ease-out) both; }

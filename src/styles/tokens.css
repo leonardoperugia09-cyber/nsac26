@@ -1,27 +1,32 @@
 /* HALO design tokens. Every colour, font and radius comes from here.
-   Design rule ("warning lamp"): if something is coloured, it is about your body, never about the interface.
-   The interface is ink on neutral surfaces; Mars orange means Watch, red means Act or Urgent help.
-   Two looks: "field" (default: white cards on a light grey page) and "plain" (white page, chosen in Settings). */
+   Design rule ("Mars glass"): orange is Mars, the world HALO lives in: the page behind everything and the one
+   primary button per page. Liquid glass is the navigation floating over it. Data sits on solid white cards.
+   Body state never uses orange: caution yellow = Watch, red = Act or Urgent help (NASA caution and warning).
+   Two looks: "field" (default, Mars orange page) and "plain" (white page, chosen in Settings). */
 :root {
   --page: #ECEEF2;
   --card: #FCFCFD;
   --ink: #10131A;
   --ink-2: #555C6B;
-  --ink-on-field: #3E4452;
+  --ink-on-field: #3E4452;  /* text that sits directly on the orange page, 5:1 or better there */
 
-  /* Body state: the only colours in the app */
-  --watch-mark: #E0701E;   /* Mars orange: Watch marks, bars, outlines */
-  --watch-ink: #A34A10;    /* Watch text, 5.9:1 on white */
-  --watch-soft: rgba(224, 112, 30, 0.1);
-  --act: #B42B23;          /* Act and Urgent help only, 6.3:1 on white */
+  /* Mars: the world and the primary action */
+  --mars: #C1440E;          /* logo and primary buttons: white text 5.1:1 */
+  --mars-deep: #8E2F08;
+  --primary: var(--mars);
+  --primary-hover: #A3380B;
+
+  /* Body state: caution yellow and warning red */
+  --watch-mark: #E8B10A;    /* Watch strip, bars, outlines: ink text on it 9.6:1 */
+  --watch-ink: #7A5500;     /* Watch text on white, 6.7:1 */
+  --watch-soft: rgba(232, 177, 10, 0.14);
+  --act: #B42B23;           /* Act and Urgent help only, white text 6.3:1 */
   --act-hover: #962018;
   --act-soft: rgba(180, 43, 35, 0.07);
   --unknown: #7A8292;
   --figure: #DDE1E8;
-  --mars: #C1440E;         /* the logo */
-  --mars-deep: #8E2F08;
 
-  /* Controls are ink: links, ticks, selections, focus. No colour on the interface itself. */
+  /* Everyday controls stay ink: links, ticks, selections, focus */
   --accent: var(--ink);
   --accent-hover: #262B36;
   --accent-soft: rgba(16, 19, 26, 0.06);
@@ -59,6 +64,15 @@
 * { box-sizing: border-box; }
 html, body { margin: 0; }
 body { background: var(--page); color: var(--ink); font: 15px/1.5 var(--sans); }
+/* Mars: a clear orange sky at the top right that settles into warm light lower down. Fixed, so it stays put while
+   cards and glass move over it. Strongest colour sits away from the text column on the left. */
+:root:not([data-look="plain"]) body {
+  background:
+    radial-gradient(65% 55% at 92% -8%, rgba(226, 88, 24, 0.9), rgba(226, 88, 24, 0) 72%),
+    radial-gradient(55% 45% at 45% -12%, rgba(240, 132, 64, 0.55), rgba(240, 132, 64, 0) 70%),
+    linear-gradient(180deg, #F7CFB2 0%, #F9E0CF 38%, #F7EBE3 72%, #F4EEEA 100%);
+  background-attachment: fixed;
+}
 a { color: inherit; }
 button { font: inherit; color: inherit; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }

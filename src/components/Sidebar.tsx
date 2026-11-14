@@ -1,4 +1,7 @@
+import type { CSSProperties } from "react";
 import { Books, ChatCircleText, GearSix, Heartbeat, NotePencil, Pill, Planet, SquaresFour, type Icon } from "@phosphor-icons/react";
+import { LiquidGlass } from "./ui/apple-tahoe-liquid-glass-button";
+import { LiquidNavbar } from "./ui/liquid-glass-navbar";
 import { HaloMark } from "./HaloMark";
 import s from "./Sidebar.module.css";
 
@@ -16,25 +19,31 @@ const ITEMS: { id: Page; label: string; icon: Icon }[] = [
   { id: "settings", label: "Settings", icon: GearSix },
 ];
 
-/** A flat panel, like a cabin wall: ink on light, the current section in a quiet grey pill. */
+const waterStyle = { fontFamily: "var(--sans)", "--n-fg": "var(--ink)", "--n-fg-soft": "var(--ink-2)" } as CSSProperties;
+
 export function Sidebar({ page, onNavigate }: { page: Page; onNavigate: (p: Page) => void }) {
   return (
-    <aside className={s.side}>
-      <div className={s.brand}>
-        <HaloMark />
-        <span>HALO</span>
-      </div>
-      <nav className={s.nav} aria-label="Main">
-        {ITEMS.map(({ id, label, icon: I }) => {
-          const current = id === page;
-          return (
-            <button key={id} type="button" className={s.item} aria-current={current ? "page" : undefined} onClick={() => onNavigate(id)} title={label}>
-              <I size={20} weight={current ? "fill" : "regular"} aria-hidden="true" />
-              <span className={s.label}>{label}</span>
-            </button>
-          );
-        })}
-      </nav>
-    </aside>
+    <LiquidGlass asChild material="regular" refraction={28}>
+      <aside className={s.side}>
+        <div className={s.brand}>
+          {/* Mars inside its halo: the ring's back half sits behind the planet, the front half crosses it */}
+          <HaloMark />
+          <span>HALO</span>
+        </div>
+        {/* Water drop slides between sections; bare = no second glass inside the glass sidebar */}
+        <LiquidNavbar
+          className={s.water}
+          ariaLabel="Main"
+          orientation="vertical"
+          bare
+          ambient="interaction"
+          tone="light"
+          style={waterStyle}
+          active={Math.max(0, ITEMS.findIndex((i) => i.id === page))}
+          onChange={(i) => onNavigate(ITEMS[i].id)}
+          items={ITEMS.map(({ label, icon: I }) => ({ label, icon: <I size={20} />, fx: "pop" as const }))}
+        />
+      </aside>
+    </LiquidGlass>
   );
 }

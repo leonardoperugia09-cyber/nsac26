@@ -30,8 +30,8 @@
 .stepDone > span:last-child { text-decoration: line-through; text-decoration-color: var(--accent); color: var(--ink-on-field); }
 .allDone { display: inline-flex; align-items: center; gap: 8px; min-height: 50px; font-weight: 500; }
 .act { display: flex; align-items: center; gap: 24px; }
-.cta { height: 50px; padding: 0 24px; border: 0; border-radius: 16px; background: var(--ink); color: var(--card); font-size: 16px; font-weight: 500; display: inline-flex; align-items: center; gap: 10px; cursor: pointer; }
-.cta:hover { background: #262B36; }
+.cta { height: 50px; padding: 0 24px; border: 0; border-radius: 16px; background: var(--primary); color: #fff; font-size: 16px; font-weight: 500; display: inline-flex; align-items: center; gap: 10px; cursor: pointer; }
+.cta:hover { background: var(--primary-hover); }
 .cta:active { transform: translateY(1px) scale(0.98); }
 .ctaLabel { display: inline-block; animation: lift var(--enter) var(--ease-out) both; }
 /* Secondary action: a white surface with a hairline, quieter than the solid primary button */

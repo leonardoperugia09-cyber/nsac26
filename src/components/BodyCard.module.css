@@ -4,7 +4,7 @@
   --bm-stage: var(--card);
   --bm-nominal: #A3AAB8;
   --bm-watch: var(--watch-mark);
-  --bm-watch-glow: rgba(224, 112, 30, 0.3);
+  --bm-watch-glow: rgba(232, 177, 10, 0.4);
   --bm-act: var(--act);
   --bm-act-glow: rgba(180, 43, 35, 0.3);
   --bm-unknown: #B3B9C4;

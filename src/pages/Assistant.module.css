@@ -47,8 +47,8 @@ input[type="file"]:focus-visible + .attach { outline: 2px solid var(--accent); o
 .fileChip button:hover { background: rgba(16, 19, 26, 0.1); }
 .mic { width: 44px; height: 50px; border: 0; background: transparent; color: var(--ink-2); border-radius: 14px; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; }
 .mic:hover { background: var(--page); color: var(--accent); }
-.cta { height: 50px; padding: 0 24px; border: 0; border-radius: 16px; background: var(--ink); color: var(--card); font-size: 16px; font-weight: 500; cursor: pointer; }
-.cta:hover { background: #262B36; }
+.cta { height: 50px; padding: 0 24px; border: 0; border-radius: 16px; background: var(--primary); color: #fff; font-size: 16px; font-weight: 500; cursor: pointer; }
+.cta:hover { background: var(--primary-hover); }
 .cta:active { transform: translateY(1px) scale(0.98); }
 .vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
