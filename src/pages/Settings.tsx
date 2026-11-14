@@ -1,4 +1,5 @@
 import card from "../components/Card.module.css";
+import { InstrumentsCard } from "../components/InstrumentsCard";
 import s from "./Settings.module.css";
 
 export type Look = "field" | "plain";
@@ -19,9 +20,13 @@ const LOOKS: { id: Look; label: string; note: string }[] = [
 export function Settings({
   look,
   onLook,
+  crewId,
+  day,
 }: {
   look: Look;
   onLook: (l: Look) => void;
+  crewId: string;
+  day: number;
 }) {
   return (
     <>
@@ -55,6 +60,7 @@ export function Settings({
           ))}
         </div>
       </section>
+      <InstrumentsCard crewId={crewId} day={day} />
       {/* Manar's backend: only needed when the HALO server runs with HALO_API_TOKEN set */}
       <section className={`${card.card} ${s.group} ${s.server}`} aria-labelledby="server-title">
         <div className={card.head}><h2 id="server-title">HALO server</h2></div>

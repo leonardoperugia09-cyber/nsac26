@@ -161,7 +161,18 @@ test("successful AI selection can only arrange reviewed wording and excludes pri
 });
 
 test("common questions get their own answer and next step, not the risk summary", async () => {
-  const ask = (question: string) => answer({ crewId: "C2", day: 60, profile: "mars_transit", question, symptoms: [], allowAI: false } as any, assessment);
+  const ask = (question: string) =>
+    answer(
+      {
+        crewId: "C2",
+        day: 60,
+        profile: "mars_transit",
+        question,
+        symptoms: [],
+        allowAI: false,
+      } as any,
+      assessment,
+    );
   const headache = await ask("I have a headache");
   assert.match(headache.explanation, /fluid shifting toward the head/);
   assert.match(headache.explanation, /What to do now:/);

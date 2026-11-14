@@ -3,11 +3,16 @@
 /* How old the value is: quiet when fresh, a grey "Old data" flag past 3 days (not a body state, so no colour) */
 .age { font-size: 12px; color: var(--ink-2); opacity: 0.8; white-space: nowrap; }
 .age.stale { opacity: 1; color: var(--unknown); font-weight: 600; }
+.age { display: inline-flex; align-items: center; gap: 5px; }
+/* Live strap: a small ink dot that breathes with each new beat (stops with reduced motion) */
+.liveDot { width: 6px; height: 6px; border-radius: 50%; background: var(--ink); animation: beat 1s ease-in-out infinite; }
+@keyframes beat { 50% { opacity: 0.35; } }
 .v { font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: 26px; line-height: 1.25; letter-spacing: -0.01em; }
 .v small { font-family: var(--sans); font-size: 14px; color: var(--ink-2); letter-spacing: 0; margin-left: 2px; }
 .n { font-size: 13px; color: var(--ink-2); }
 .out { color: var(--watch-ink); }
 .nb { white-space: nowrap; }
+.links { display: flex; gap: 20px; }
 
 @media (max-width: 1279px) {
   .wide { grid-column: span 2; }

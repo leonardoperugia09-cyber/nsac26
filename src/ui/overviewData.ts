@@ -3,7 +3,7 @@
 // task list are MOCK; the risk level comes from the shared assessment (src/engine/assessment.ts), the same one the backend serves.
 import { bandCentreAt, computeBaselines, computeDrift } from "../engine/baseline.ts";
 import { SIGNAL_BY_KEY } from "../engine/signals.ts";
-import { MISSION_PROFILE, contextOf, historyOf } from "../data/crew.ts";
+import { MISSION_PROFILE, contextOf, historyOf, sourceOf } from "../data/crew.ts";
 import { STALE_AFTER_DAYS } from "../bodymap/model.ts";
 import { assessCrew } from "../engine/assessment.ts";
 import type { BodySystem, LinkedSeries, OverviewModel, PriorityRisk, ReadingSummary, Task } from "./viewTypes.ts";
@@ -101,9 +101,12 @@ export function buildOverview(crewId: string, day: number): OverviewModel {
   const age = (d: number) => (d === day ? "Today" : d === day - 1 ? "Yesterday" : `${day - d} days old`);
   const reading = (label: string, keys: string[], show: (vals: number[]) => string, unit: string | undefined, note: string, isOut: boolean): ReadingSummary => {
     const got = keys.map(last);
-    if (got.some((g) => !g)) return { label, value: "No reading", note, out: false, age: "Never measured", stale: true };
+    if (got.some((g) => !g)) return { label, value: "No reading", note, out: false, age: "Never measured", stale: true, signal: keys[0] };
     const oldest = Math.min(...got.map((g) => g!.day));
-    return { label, value: show(got.map((g) => g!.v)), unit, note, out: isOut, age: age(oldest), stale: day - oldest > STALE_AFTER_DAYS };
+    // Where the value came from: an instrument (strap, file import) or the simulator
+    const src = sourceOf(crewId, keys[0], got[0]!.day);
+    const source = src ? (src.provenance === "simulated" ? src.sourceId : `${src.sourceId}`) : undefined;
+    return { label, value: show(got.map((g) => g!.v)), unit, note, out: isOut, age: age(oldest), stale: day - oldest > STALE_AFTER_DAYS, signal: keys[0], source };
   };
   const totalDose = last("radiation_mSv_total");
   const readings: ReadingSummary[] = [

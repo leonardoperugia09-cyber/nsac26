@@ -38,19 +38,23 @@ type Props = {
 export function TopBar({ profile, day, crew, selected, onSelect, onUrgentHelp }: Props) {
   const m = MISSION[profile];
   const sync = useSyncStatus();
-  const waiting = sync.pending ? `, ${sync.pending} check-in${sync.pending > 1 ? "s" : ""} waiting` : "";
-  const linkText = sync.ok === null ? "Checking link"
-    : sync.ok && sync.at ? `Synced ${ago(sync.at, sync.now)}${waiting}`
-    : `Not synced, saved on this device${waiting}`;
+  const waiting = sync.pending ? ` · ${sync.pending} waiting to send` : "";
+  const online = !!(sync.ok && sync.at);
+  const linkText = sync.ok === null ? "Checking" : online ? `Synced ${ago(sync.at!, sync.now)}${waiting}` : `Offline${waiting}`;
 
   return (
     <header className={s.top}>
+      {/* An instrument readout: a small label above each value, like the fields on a cabin display */}
       <div className={s.info}>
-        <span><span className={`mono ${s.day}`}>Day {day}</span>&nbsp;&nbsp;<span className={s.dim}>{m.name}</span></span>
-        <span className={`${s.dim} ${s.push}`} role="status">{linkText}</span>
-        <span className={s.dim}>
-          {m.delay ? <>Houston hears you in <span className="mono">{m.delay}</span></> : "Live link to Houston"}
-        </span>
+        <div className={s.field}><span className={s.label}>Mission day</span><span className={s.value}>{day} · {m.name}</span></div>
+        <div className={s.field}>
+          <span className={s.label}>{m.delay ? "Houston hears you in" : "Houston"}</span>
+          <span className={s.value}>{m.delay ?? "Live link"}</span>
+        </div>
+        <div className={`${s.field} ${s.link}`} title={online ? "Connected to the HALO server" : "The HALO server is not reachable. Check-ins are kept on this device and sent when the link is back."}>
+          <span className={s.label}>Link</span>
+          <span className={s.value} role="status"><span className={`${s.dot} ${online ? s.on : ""}`} aria-hidden="true" />{linkText}</span>
+        </div>
       </div>
       <LiquidNavbar
         ariaLabel="Astronaut"

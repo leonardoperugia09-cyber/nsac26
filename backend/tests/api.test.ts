@@ -395,3 +395,76 @@ test("audit logs contain metadata instead of assistant questions", async () => {
     await a.close();
   }
 });
+
+test("instrument measurements: store, list, unit check, server history and FHIR export", async () => {
+  const a = await build();
+  try {
+    const post = (measurements: any[]) =>
+      a.inject({
+        method: "POST",
+        url: "/api/measurements",
+        payload: { crewId: "C2", measurements },
+      });
+    const hr = {
+      signal: "heart_rate",
+      value: 71,
+      unit: "bpm",
+      sourceId: "Polar H10",
+      provenance: "measured",
+      missionDay: 58,
+      observedAt: "2026-11-14T09:00:00.000Z",
+    };
+    const bp = [
+      {
+        signal: "bp_sys",
+        value: 118,
+        unit: "mmHg",
+        sourceId: "Cuff",
+        provenance: "measured",
+        missionDay: 58,
+      },
+      {
+        signal: "bp_dia",
+        value: 76,
+        unit: "mmHg",
+        sourceId: "Cuff",
+        provenance: "measured",
+        missionDay: 58,
+      },
+    ];
+    const stored = await post([hr, ...bp]);
+    assert.equal(stored.statusCode, 200);
+    assert.equal(stored.json().stored, 3);
+    const wrongUnit = await post([{ ...hr, unit: "Hz" }]);
+    assert.equal(wrongUnit.statusCode, 422);
+    const listed = (await a.inject(url("measurements", "C2", 58))).json();
+    assert.equal(listed.length, 3);
+    assert.ok(listed.every((m: any) => m.crewId === "C2" && m.recordedAt));
+    assert.equal(
+      (await a.inject(url("measurements", "C2", 57))).json().length,
+      0,
+    );
+    // the stored strap reading replaces the simulator in the server's own view of the day
+    assert.equal(
+      (await a.inject(url("snapshot", "C2", 58))).json().reading.heart_rate,
+      71,
+    );
+    const fhir = (await a.inject(url("fhir/Observation", "C2", 58))).json();
+    assert.equal(fhir.resourceType, "Bundle");
+    const obs = fhir.entry.map((e: any) => e.resource);
+    const heart = obs.find((o: any) => o.code.coding[0].code === "8867-4");
+    assert.equal(heart.valueQuantity.value, 71);
+    assert.equal(heart.valueQuantity.code, "/min");
+    assert.equal(heart.device.display, "Polar H10");
+    assert.equal(heart.meta, undefined);
+    const panel = obs.find((o: any) => o.code.coding[0].code === "85354-9");
+    assert.deepEqual(
+      panel.component.map((c: any) => c.code.coding[0].code),
+      ["8480-6", "8462-4"],
+    );
+    const temp = obs.find((o: any) => o.code.coding[0].code === "8310-5");
+    assert.equal(temp.meta.tag[0].code, "simulated");
+  } finally {
+    await a.close();
+  }
+});

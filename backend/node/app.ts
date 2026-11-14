@@ -21,11 +21,13 @@ import {
   WhatIf,
   UNITS,
   MeasurementReview,
+  MeasurementBatch,
 } from "./contracts.ts";
 import { assessCrew, readiness } from "../../src/engine/assessment.ts";
 import { answer } from "./assistant.ts";
 import { evidence, evidenceBundle, protocols } from "./evidence.ts";
 import { radiationCache, fetchRadiation } from "./radiation.ts";
+import { fhirBundle } from "../../src/shared/fhir.ts";
 import type { MissionProfile, Reading } from "../../src/engine/types.ts";
 export type Options = {
   dbPath?: string;
@@ -222,6 +224,46 @@ export async function makeServer(options: Options = {}) {
   });
   route("GET", "/api/checkins", Selection, (s) =>
     store.list("checkin", s.crewId).filter((l) => l.day <= s.day),
+  );
+  // Instruments: readings from straps, file imports or manual entry, stored per astronaut and day
+  route("POST", "/api/measurements", MeasurementBatch, (s, _req, reply) => {
+    const wrong = s.measurements.find((m: any) => m.unit !== UNITS[m.signal]);
+    if (wrong)
+      return reply.code(422).send({
+        error: {
+          code: "INVALID_INPUT",
+          message: `Unit for ${wrong.signal} must be ${UNITS[wrong.signal]}`,
+        },
+      });
+    if (!data.crew.some((c) => c.id === s.crewId))
+      return reply
+        .code(404)
+        .send({ error: { code: "NOT_FOUND", message: "Unknown astronaut" } });
+    const recordedAt = new Date(now()).toISOString();
+    for (const m of s.measurements)
+      store.put(
+        "measurement",
+        `${s.crewId}:${m.missionDay ?? "none"}:${m.signal}:${m.sourceId}`,
+        s.crewId,
+        { ...m, crewId: s.crewId, recordedAt },
+      );
+    return { stored: s.measurements.length };
+  });
+  route("GET", "/api/measurements", Selection, (s) =>
+    store
+      .list("measurement", s.crewId)
+      .filter((m) => (m.missionDay ?? 0) <= s.day),
+  );
+  // FHIR R4 export: the day's readings as Observations (LOINC codes, UCUM units)
+  route("GET", "/api/fhir/Observation", Selection, (s) =>
+    fhirBundle(
+      data.crew.find((c) => c.id === s.crewId)?.name ?? s.crewId,
+      s.crewId,
+      s.day,
+      store.list("measurement", s.crewId).filter((m) => m.missionDay === s.day),
+      data.readings.find((r) => r.crew_id === s.crewId && r.day === s.day),
+      UNITS,
+    ),
   );
   route("GET", "/api/risks", Selection, (s) => context(s).assessment);
   route("GET", "/api/readiness", Selection, (s) => context(s).readiness);

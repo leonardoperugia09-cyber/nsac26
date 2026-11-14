@@ -90,4 +90,6 @@ export const responseContracts: Record<string, z.ZodType> = {
   "/api/assistant": AssistantOutput,
   "/api/evidence": z.array(EvidenceOutput),
   "/api/checkins": z.unknown(),
+  "/api/measurements": z.unknown(),
+  "/api/fhir/Observation": z.unknown(),
 };

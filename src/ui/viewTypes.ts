@@ -46,7 +46,7 @@ export type BodySystemId = "mind" | "eyes" | "lungs" | "heart" | "kidneys" | "gu
 export type BodySystem = { id: BodySystemId; label: string; status: SystemStatus; detail: string };
 
 /** `age`: "Today", "Yesterday" or "N days old"; `stale` once older than the body map's 3-day limit */
-export type ReadingSummary = { label: string; value: string; unit?: string; note: string; out: boolean; age: string; stale: boolean };
+export type ReadingSummary = { label: string; value: string; unit?: string; note: string; out: boolean; age: string; stale: boolean; signal: string; source?: string };
 
 export type OverviewModel = {
   risk: PriorityRisk | null;

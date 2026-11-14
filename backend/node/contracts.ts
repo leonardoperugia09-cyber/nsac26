@@ -152,29 +152,29 @@ export const WhatIf = Selection.extend({
   horizon: z.number().int().min(1).max(30),
   changes: Values,
 }).strict();
+/** One instrument reading (strap, file import, manual), shared by review and storage */
+export const Measurement = z
+  .object({
+    signal: z.enum(Object.keys(UNITS) as [string, ...string[]]),
+    value: num.nullable(),
+    unit: z.string(),
+    sourceId: z.string().min(1).max(120),
+    provenance: z.enum(["measured", "self_reported", "estimated", "simulated"]),
+    observedAt: z.iso.datetime().optional(),
+    missionDay: z.number().int().positive().optional(),
+    quality: z.enum(["valid", "suspect", "invalid"]).default("valid"),
+  })
+  .strict();
 export const MeasurementReview = z
   .object({
     maxAgeSeconds: z.number().int().positive().optional(),
-    measurements: z
-      .array(
-        z
-          .object({
-            signal: z.enum(Object.keys(UNITS) as [string, ...string[]]),
-            value: num.nullable(),
-            unit: z.string(),
-            sourceId: z.string().min(1).max(120),
-            provenance: z.enum([
-              "measured",
-              "self_reported",
-              "estimated",
-              "simulated",
-            ]),
-            observedAt: z.iso.datetime().optional(),
-            missionDay: z.number().int().positive().optional(),
-            quality: z.enum(["valid", "suspect", "invalid"]).default("valid"),
-          })
-          .strict(),
-      )
-      .max(26),
+    measurements: z.array(Measurement).max(26),
+  })
+  .strict();
+/** A batch of readings for one astronaut, as sent by the app's instruments */
+export const MeasurementBatch = z
+  .object({
+    crewId: Selection.shape.crewId,
+    measurements: z.array(Measurement).max(500),
   })
   .strict();

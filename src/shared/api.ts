@@ -5,26 +5,30 @@ export type Selection = {
   profile: MissionProfile;
 };
 /** Last contact with the HALO server, shown in the top bar instead of a fixed "synced" text */
-export const link: { ok: boolean | null; at: number | null } = { ok: null, at: null };
+export const link: { ok: boolean | null; at: number | null } = {
+  ok: null,
+  at: null,
+};
 const markLink = (ok: boolean) => {
   link.ok = ok;
   if (ok) link.at = Date.now();
   window.dispatchEvent(new Event("halo-sync"));
 };
-export const pendingCheckins = () => localCheckins().filter((l) => l.pending).length;
+export const pendingCheckins = () =>
+  localCheckins().filter((l) => l.pending).length;
 export async function api<T = any>(path: string, body?: unknown): Promise<T> {
   const token = sessionStorage.getItem("halo-api-token");
   let response: Response;
   try {
     response = await fetch("/api" + path, {
-    method: body === undefined ? "GET" : "POST",
-    headers: {
-      ...(body === undefined ? {} : { "Content-Type": "application/json" }),
-      ...(token ? { Authorization: `Bearer ${token}` } : {}),
-    },
-    ...(body === undefined ? {} : { body: JSON.stringify(body) }),
-    signal: AbortSignal.timeout(16000),
-  });
+      method: body === undefined ? "GET" : "POST",
+      headers: {
+        ...(body === undefined ? {} : { "Content-Type": "application/json" }),
+        ...(token ? { Authorization: `Bearer ${token}` } : {}),
+      },
+      ...(body === undefined ? {} : { body: JSON.stringify(body) }),
+      signal: AbortSignal.timeout(16000),
+    });
   } catch (e) {
     markLink(false);
     throw e;

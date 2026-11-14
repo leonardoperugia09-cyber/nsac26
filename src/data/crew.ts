@@ -1,5 +1,6 @@
 // Loads the simulated crew data once. Field names are the shared contract in src/engine/types.ts.
 import raw from "../../data/crew_sim.json";
+import { measurementsOn } from "../shared/measurements.ts";
 import type {
   CrewMember,
   MissionProfile,
@@ -55,10 +56,15 @@ export const historyOf = (crewId: string): Reading[] => {
               values.reduce((a: number, b: number) => a + b, 0) / values.length;
         } catch {}
       }
+      // Instrument readings (strap, file import) replace the simulated value for that day and signal
+      for (const [signal, m] of measurementsOn(crewId, r.day)) (row as any)[signal] = m.value;
       return row;
     })
     .sort((a, b) => a.day - b.day);
 };
+
+/** Where a value came from: an instrument reading for that day, or null when it is the simulator's. */
+export const sourceOf = (crewId: string, signal: string, day: number) => measurementsOn(crewId, day).get(signal) ?? null;
 export const readingOn = (crewId: string, day: number): Reading | undefined =>
   historyOf(crewId).find((r) => r.day === day);
 

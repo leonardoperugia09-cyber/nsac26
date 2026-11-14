@@ -13,7 +13,10 @@ export async function answer(
 ) {
   const t = triage(input.question, input.symptoms);
   const priority = assessment.priority;
-  const topic = t.urgent || MED.test(input.question) ? null : topicAnswer(input.question, priority);
+  const topic =
+    t.urgent || MED.test(input.question)
+      ? null
+      : topicAnswer(input.question, priority);
   let text = t.urgent
     ? "Contact the crew medical officer immediately and follow the onboard emergency procedure. Do not wait for an Earth reply."
     : MED.test(input.question)
@@ -21,8 +24,8 @@ export async function answer(
       : topic
         ? topicText(topic)
         : priority
-        ? `${priority.name}: ${priority.level}. ${priority.contributors.map((c) => c.label).join(", ")} contribute to this demonstration pattern. ${priority.action}`
-        : "The available data do not establish an active multi-signal pattern. Missing data and symptoms still require human review; this is not an all-clear.";
+          ? `${priority.name}: ${priority.level}. ${priority.contributors.map((c) => c.label).join(", ")} contribute to this demonstration pattern. ${priority.action}`
+          : "The available data do not establish an active multi-signal pattern. Missing data and symptoms still require human review; this is not an all-clear.";
   const ids = MED.test(input.question)
     ? ["drug_2011"]
     : (topic?.evidenceIds ?? priority?.evidenceIds ?? ["nasa_body"]);

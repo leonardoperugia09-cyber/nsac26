@@ -6,6 +6,8 @@ import { Overview } from "./pages/Overview";
 import { RiskBanner } from "./components/RiskBanner";
 import { buildOverview, easedToday } from "./ui/overviewData.ts";
 import { pullCheckins, syncCheckins } from "./shared/api.ts";
+import { pullMeasurements, syncMeasurements } from "./shared/measurements.ts";
+import { setLiveTarget } from "./instruments/live.ts";
 import { useDataRevision } from "./shared/useDataRevision.ts";
 import { Health } from "./pages/Health";
 import { DailyLog } from "./pages/DailyLog";
@@ -43,14 +45,16 @@ export default function App() {
   // Manar's backend: send check-ins saved offline when the link is back, pull the server's copies, follow page jumps from inside pages
   useEffect(() => {
     syncCheckins();
+    syncMeasurements();
     window.addEventListener("online", syncCheckins);
+    window.addEventListener("online", syncMeasurements);
     const go = (e: Event) => setPage((e as CustomEvent<Page>).detail);
     const urgentHelp = () => { setUrgent(true); setPage("assistant"); }; // same as the top bar's Urgent help
     window.addEventListener("halo-navigate", go);
     window.addEventListener("halo-urgent", urgentHelp);
-    return () => { window.removeEventListener("online", syncCheckins); window.removeEventListener("halo-navigate", go); window.removeEventListener("halo-urgent", urgentHelp); };
+    return () => { window.removeEventListener("online", syncCheckins); window.removeEventListener("online", syncMeasurements); window.removeEventListener("halo-navigate", go); window.removeEventListener("halo-urgent", urgentHelp); };
   }, []);
-  useEffect(() => { pullCheckins({ crewId, day: DEMO_DAY, profile: MISSION_PROFILE }); }, [crewId]);
+  useEffect(() => { pullCheckins({ crewId, day: DEMO_DAY, profile: MISSION_PROFILE }); pullMeasurements({ crewId, day: DEMO_DAY, profile: MISSION_PROFILE }); setLiveTarget(crewId, DEMO_DAY); }, [crewId]);
   const [planDone, setPlanDone] = useState<Record<string, string[]>>({});
   const done = planDone[crewId] ?? [];
   const setDone = (ids: string[]) => setPlanDone((m) => ({ ...m, [crewId]: ids }));
@@ -64,7 +68,7 @@ export default function App() {
       <main key={crewId} className={s.main}>
         {actRisk && page !== "overview" && <RiskBanner risk={actRisk} onOpen={() => navigate("overview")} />}
         {page === "overview" && <Overview key={crewId} crewId={crewId} day={DEMO_DAY} delay={DELAY} onOpenHealth={openHealth} done={done} onDone={setDone} />}
-        {page === "settings" && <Settings look={look} onLook={setLook} />}
+        {page === "settings" && <Settings look={look} onLook={setLook} crewId={crewId} day={DEMO_DAY} />}
         {page === "health" && <Health crewId={crewId} day={DEMO_DAY} selected={system} onSelect={setSystem} />}
         {page === "log" && <DailyLog crewId={crewId} day={DEMO_DAY} />}
         {page === "assistant" && <Assistant crewId={crewId} day={DEMO_DAY} delay={DELAY} urgent={urgent} />}

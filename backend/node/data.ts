@@ -47,6 +47,9 @@ export function historyFor(
   if (!data.crew.some((c) => c.id === crewId)) throw Error("Unknown astronaut");
   const logs = new Map(store.list("checkin", crewId).map((l) => [l.day, l]));
   const tests = store.list("test", crewId);
+  const measured = store
+    .list("measurement", crewId)
+    .filter((m) => m.quality !== "invalid" && m.value != null);
   return data.readings
     .filter((r) => r.crew_id === crewId)
     .map((r) => {
@@ -55,6 +58,15 @@ export function historyFor(
         if (t.type === "reaction") adjusted.reaction_time_ms = t.average;
         if (t.type === "memory") adjusted.memory_score = t.average;
       }
+      // Instrument readings (strap, file import) win over the simulator; measured beats simulated
+      for (const m of measured
+        .filter((m) => m.missionDay === r.day)
+        .sort(
+          (a, b) =>
+            Number(a.provenance !== "simulated") -
+            Number(b.provenance !== "simulated"),
+        ))
+        (adjusted as any)[m.signal] = m.value;
       return adjusted;
     });
 }

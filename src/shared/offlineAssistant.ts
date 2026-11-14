@@ -13,10 +13,10 @@ export function answer(question: string, a: ReturnType<typeof assessCrew>) {
       : medication
         ? "I cannot recommend doses or change medication. Refer to your approved schedule and medical officer."
         : topic
-        ? topicText(topic)
-        : a.priority
-          ? `${a.priority.name}: ${a.priority.level}. ${a.priority.why}. ${a.priority.action}`
-          : "No persistent demo pattern established. Missing inputs and symptoms still require human review.",
+          ? topicText(topic)
+          : a.priority
+            ? `${a.priority.name}: ${a.priority.level}. ${a.priority.why}. ${a.priority.action}`
+            : "No persistent demo pattern established. Missing inputs and symptoms still require human review.",
     escalation: "Use the approved crew medical escalation process.",
     citations: [],
     limitations:

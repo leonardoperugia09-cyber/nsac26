@@ -44,6 +44,18 @@ Hosted AI needs network access and a key; local monitoring and reviewed fallback
 continue without it. Real operation would require validated sensors, approved medical
 protocols, domain review, appropriate privacy controls and prospective validation.
 
+## Connect instruments
+
+HALO accepts real measurements next to the simulated crew data. Every reading keeps its source and provenance (`measured`, `self_reported`, `estimated`, `simulated`), and measured values replace the simulated value for that day and signal, so baselines, risks and the body map update automatically.
+
+- **Bluetooth heart-rate strap (live):** Settings > Instruments > Connect. Uses Web Bluetooth (Chrome or Edge on a computer) and the standard Heart Rate service (0x180D), so any strap that broadcasts it works (for example the Polar H10, used in a NASA exercise study). While connected, the homepage heart rate is live and each minute's average is saved as today's reading. A clearly labelled simulated strap is available for demos without hardware.
+- **File import:** Actiwatch or Hexoskin CSV exports (column mapping is shown and can be corrected) and Apple Health `export.xml` (iPhone: Health > profile > Export All Health Data). The newest imported day maps to the current mission day. Sample files are in `public/samples/`.
+- **Apple Watch:** it cannot stream heart rate to a browser by itself; bring its data in through the Apple Health export.
+- **API:** `POST /api/measurements` stores a batch `{ crewId, measurements: [{ signal, value, unit, sourceId, provenance, observedAt?, missionDay, quality }] }` (units must match `UNITS` in `backend/node/contracts.ts`); `GET /api/measurements?crewId&day&profile` lists them.
+- **FHIR export:** `GET /api/fhir/Observation?crewId&day&profile` returns a FHIR R4 Bundle of Observations with LOINC codes (heart rate 8867-4, blood pressure panel 85354-9 with 8480-6 / 8462-4, SpO2 2708-6, body temperature 8310-5, body weight 29463-7) and UCUM units; other HALO signals use the local code system `urn:halo:signal`, and simulated values are tagged.
+
+NASA flight instruments (Astroskin, Crew Active Dosimeter, Actiwatch on the ISS) do not stream to outside software; HALO connects to the same class of devices on the ground and to NASA's public RadLab radiation data.
+
 ## Development
 
 ```bash
