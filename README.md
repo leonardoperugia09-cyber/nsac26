@@ -20,7 +20,7 @@ scripts/     crew simulator (3 crew x 120 days, planted demo events) and the eng
 src/engine/  personal baselines + drift scores, coupled risk engine, medicine potency tracker
 src/rules/   coupling rules, one file per rule, each with its citation
 src/         the app (React + Vite)
-backend/     server that will hold the AI key and cache RadLab data (in progress)
+backend/     FastAPI server: assistant, red flags, dose filter, evidence, report, RadLab cache
 ```
 
 ## Getting started
@@ -29,9 +29,18 @@ git clone https://github.com/leonardoperugia09-cyber/nsac26.git
 cd nsac26
 npm ci
 npm run dev          # app on http://localhost:5173
+npm run typecheck
 npm run check        # engine checks: drift, risks, body map, potency (Node 22.6+)
 python3 scripts/crew_simulator.py   # regenerates data/ exactly (seed 42)
 ```
+Backend (optional, the app falls back to local answers without it):
+```bash
+cd backend && python -m venv .venv && source .venv/bin/activate
+pip install -e ".[dev]" && pytest -q
+export AI_API_KEY=...                  # optional, never commit it
+uvicorn halo_backend.main:app --reload
+```
+Build for the offline demo with `npm run build && npm run preview` (installs the offline shell).
 
 **Demo path (day 58, Marco):** Overview opens with the daily check-in, then the kidney stone Act and its plan. Health shows the body map (kidneys and skeleton Act). Mission shows spacewalk readiness and the day-40 solar storm. Medicines shows today's doses and the onboard kit's potency forecast. Assistant answers symptoms and refuses doses.
 Put API keys in a `.env` file (copy `.env.example`). **Never commit `.env`.**
@@ -75,14 +84,24 @@ There is no pharmacy resupply on a Mars transit, so HALO forecasts how strong ea
 | Vitamin D decline, bone-breakdown index, sleep-debt and reaction-time weights | **Demo parameters** | Marked `DEMO` in the simulator |
 
 ## Challenge requirements
-- [ ] Gathers health indicators and lets astronauts act on them
-- [ ] Visual self-assessment tool (clickable body map)
-- [ ] Guidance on treatments / health improvements
-- [ ] Six named indicators: blood pressure, heart rate, blood sugar, temperature, sleep, mood
-- [ ] Which measurements work in space, and why each matters
-- [ ] How spaceflight hazards affect each indicator
-- [ ] When to involve crew / flight surgeons
-- [ ] Preventive actions
+- [x] Gathers health indicators and lets astronauts act on them
+- [x] Visual self-assessment tool (clickable body map)
+- [x] Guidance on treatments / health improvements
+- [x] Six named indicators: blood pressure, heart rate, blood sugar, temperature, sleep, mood
+- [x] Which measurements work in space, and why each matters
+- [x] How spaceflight hazards affect each indicator
+- [x] When to involve crew / flight surgeons
+- [x] Preventive actions
 
 ## AI agent test results
-_20-question safety / accuracy / clarity eval — to be added._
+20 questions covering emergencies, dose traps, diagnosis traps, readiness and everyday symptoms.
+Latest run, full table in [docs/EVAL_RESULTS.md](docs/EVAL_RESULTS.md). Re-run with `python backend/eval/run_eval.py`.
+
+- Safety. 20 of 20 (all 6 emergencies caught by rules before any model, no doses, no diagnoses)
+- Escalation line present. 20 of 20
+- Relevance. judged only when a model key is set, run it before submitting
+
+## Limits
+Synthetic crew data. Coupling thresholds are demo parameters. Red flag rules are a demo list and need clinician review. The AI explains and never prescribes. Not a medical device.
+
+See [docs/SUBMISSION.md](docs/SUBMISSION.md) for the AI use statement, data sources and demo script.

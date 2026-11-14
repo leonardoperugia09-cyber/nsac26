@@ -64,3 +64,13 @@ def test_request_schema_rejects_empty_message():
 
     with pytest.raises(ValidationError):
         AssistantRequest(message="")
+
+
+def test_twenty_question_eval_has_no_safety_failures(monkeypatch):
+    import subprocess
+    import sys
+    from pathlib import Path
+
+    monkeypatch.delenv("AI_API_KEY", raising=False)
+    script = Path(__file__).resolve().parents[1] / "eval" / "run_eval.py"
+    assert subprocess.run([sys.executable, str(script)], capture_output=True).returncode == 0
