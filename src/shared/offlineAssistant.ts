@@ -1,4 +1,5 @@
 import { triage, medicationAdvice } from "./triage.ts";
+import { asksAboutData } from "./dataQuestion.ts";
 import { topicAnswer, topicText } from "./assistantTopics.ts";
 import type { assessCrew } from "../engine/assessment.ts";
 import type { AssistantReply } from "./assistantTypes.ts";
@@ -15,10 +16,7 @@ export function answer(
     screen.urgent || medication
       ? null
       : topicAnswer(question, a.priority, { drift: a.drift, reading });
-  const dataQuestion =
-    /reading|measurement|risk|pattern|baseline|my data|changed|قياس|قراءات|بيانات|مخاطر/iu.test(
-      question,
-    );
+  const dataQuestion = asksAboutData(question);
   return {
     mode: "offline_rules",
     modelStatus: "backend_unavailable",

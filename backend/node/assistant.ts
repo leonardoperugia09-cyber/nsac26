@@ -15,6 +15,7 @@ import { UNITS } from "./contracts.ts";
 import { resolveModelConfig, ModelConfigurationError } from "./model-config.ts";
 import { topicAnswer, topicText } from "../../src/shared/assistantTopics.ts";
 import { isYou } from "../../src/data/you.ts";
+import { asksAboutData } from "../../src/shared/dataQuestion.ts";
 export { triage } from "../../src/shared/triage.ts";
 export type AssistantInput = z.input<typeof Ask>;
 export const ASSISTANT_VERSION = "halo-rag-1.0";
@@ -101,14 +102,8 @@ export async function answer(
               )
               .join(" ")} ${relevant[0].limitations[0]}`
           : "The current evidence library does not cover this question. Ask the crew medical officer or add a reviewed source; I cannot infer an answer from unrelated readings.";
-  const asksAboutData =
-    /reading|measurement|risk|pattern|baseline|unknown|my data|changed|report|readiness|eva|docking|spacewalk|قياس|قراءات|بيانات|مخاطر/iu.test(
-      input.question,
-    ) ||
-    /\bmy (heart|pulse|sleep|oxygen|spo2|weight|temperature|temp|mood|stress|fluid|urine|workload|blood pressure)/i.test(
-      input.question,
-    );
-  if (!t.urgent && !medication && !topic && asksAboutData) {
+  const asksData = asksAboutData(input.question);
+  if (!t.urgent && !medication && !topic && asksData) {
     explanation = priority
       ? `Current demonstration assessment: ${priority.name}, ${priority.level}. ${priority.why}. ${priority.action} Missing inputs: ${assessment.unknown.join(", ") || "none listed"}.`
       : `No active coupled pattern is established. Unassessed hypotheses: ${assessment.unknown.join(", ") || "none listed"}. This is not an all-clear.`;
@@ -119,7 +114,7 @@ export async function answer(
       ? ["drug_2011"]
       : topic
         ? topic.evidenceIds
-        : asksAboutData
+        : asksData
           ? (priority?.evidenceIds ?? [])
           : relevant.slice(0, 2).map((p) => p.sourceId);
   let citations = evidence.filter((e: any) => fallbackIds.includes(e.id));
@@ -136,7 +131,7 @@ export async function answer(
     "Rules and source summaries have not been clinically validated or approved.",
   ];
   let followUp = ["What changed, and when did you notice it?"];
-  let insufficientEvidence = !relevant.length && !asksAboutData && !topic;
+  let insufficientEvidence = !relevant.length && !asksData && !topic;
   const rawMeasurements =
     currentReading?.crew_id === input.crewId && currentReading.day === input.day
       ? Object.entries(UNITS)
@@ -160,6 +155,19 @@ export async function answer(
     status: d.status,
     valueBasis: "engine current value; slow signals may be recent averages",
   }));
+  // Nothing measured for this person (the empty "You" profile): there is nothing to ground an answer in, so say so
+  if (
+    !rawMeasurements.length &&
+    !signals.length &&
+    asksData &&
+    !t.urgent &&
+    !medication &&
+    !topic
+  ) {
+    explanation =
+      "HALO has no readings for you yet, so it cannot say how you are doing. Import your Apple Health export in Settings, connect a strap, or do today's check-in in Daily Log. HALO only judges what it has measured.";
+    insufficientEvidence = true;
+  }
   if (t.urgent || medication) modelStatus = "safety_bypass";
   else if (input.allowAI) {
     const configuration = assistantStatus(options);

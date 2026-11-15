@@ -21,6 +21,7 @@
     "check:sim": "tsx scripts/check_sim.ts",
     "check:ai": "node --env-file-if-exists=.env --import=tsx backend/check-ai.ts",
     "eval:safety": "node --env-file-if-exists=.env --import=tsx scripts/safety_eval_live.ts",
+    "eval:accuracy": "node --env-file-if-exists=.env --import=tsx scripts/accuracy_eval_live.ts",
     "check:potency": "tsx scripts/check_potency.ts",
     "check": "npm run -s check:drift && npm run -s check:risks && npm run -s check:bodymap && npm run -s check:potency && npm run -s check:sim"
   },

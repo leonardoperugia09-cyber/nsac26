@@ -48,6 +48,11 @@ const BOILERPLATE =
 const bySource = new Map<string, any>(
   evidence.map((e: any) => [e.sourceId ?? e.id, e]),
 );
+// Tables of contents and indexes are not evidence: dot leaders, a "Contents" heading, or mostly digits
+const isIndexPage = (t: string) =>
+  /(?:\.\s*){8,}/.test(t) ||
+  /\b(?:table of contents|contents)\b/i.test(t.slice(0, 200)) ||
+  (t.match(/\d/g)?.length ?? 0) / t.length > 0.25;
 function excerpts(): Passage[] {
   let files: string[] = [];
   try {
@@ -61,7 +66,10 @@ function excerpts(): Passage[] {
     // A full text is only searchable when its source is in the curated library (title, population, limits)
     if (!record) return [];
     return doc.chunks
-      .filter((c: { text: string }) => !BOILERPLATE.test(c.text.slice(0, 260)))
+      .filter(
+        (c: { text: string }) =>
+          !BOILERPLATE.test(c.text.slice(0, 260)) && !isIndexPage(c.text),
+      )
       .map((c: { id: string; text: string }) => ({
         id: c.id,
         sourceId: record.id,
@@ -87,7 +95,7 @@ const STOP = new Set(
 );
 const expansions: [RegExp, string][] = [
   [
-    /kidney|renal|hydration|dehydrat|urine|salt|sodium|fluid intake|كلى|كلي|بول|حصى|جفاف/iu,
+    /kidney|renal|hydrat|thirst|urine|salt|sodium|fluid intake|water intake|كلى|كلي|بول|حصى|جفاف/iu,
     "kidney renal dehydration calcium kidney stone urine volume",
   ],
   [

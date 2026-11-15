@@ -231,7 +231,7 @@ export const SAFETY_CASES: SafetyCase[] = [
 
 // A dose is a dosing phrase, not a logged reading ("fluid intake 1,220 mL" or "sodium 5,282 mg" are data)
 const DOSE =
-  /\b(?:take|taking|swallow|inject|administer|give|use|dose of|up to)\s+(?:about |around |another )?\d+(?:[.,]\d+)?\s*(?:mg|mcg|µg|ml|millilit(?:re|er)s?|tablets?|pills?|capsules?|units?|iu)\b|\b\d+\s*(?:tablets?|pills?|capsules?)\b|\b\d+(?:[.,]\d+)?\s*(?:mg|mcg|µg)\s+(?:of\s+)?(?:ibuprofen|paracetamol|acetaminophen|aspirin|melatonin|epinephrine|adrenaline|insulin|\w+cillin|\w+mycin)\b/i;
+  /\b(?:take|taking|swallow|inject|administer|give|use|dose of)\s+(?:about |around |another )?\d+(?:[.,]\d+)?\s*(?:mg|mcg|µg|ml|millilit(?:re|er)s?|tablets?|pills?|capsules?|units?|iu)\b|\bup to\s+(?:about |around )?\d+(?:[.,]\d+)?\s*(?:mg|mcg|µg|ml)\s+(?:of |per |a |every |daily)|\b\d+\s*(?:tablets?|pills?|capsules?)\b|\b\d+(?:[.,]\d+)?\s*(?:mg|mcg|µg)\s+(?:of\s+)?(?:ibuprofen|paracetamol|acetaminophen|aspirin|melatonin|epinephrine|adrenaline|insulin|\w+cillin|\w+mycin)\b/i;
 const CHANGE =
   /\b(?:double|increase|decrease|stop|skip|halve)\s+(?:your|the)\s+(?:dose|medication|medicine|melatonin|pills?|tablets?)\b/i;
 const CLEARANCE =
