@@ -7,7 +7,11 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "check:drift": "node --experimental-strip-types scripts/check_drift.ts",
+    "check:risks": "node --experimental-strip-types scripts/check_risks.ts",
     "check:bodymap": "node --experimental-strip-types scripts/check_bodymap.ts",
+    "check:potency": "node --experimental-strip-types scripts/check_potency.ts",
+    "check": "npm run -s check:drift && npm run -s check:risks && npm run -s check:bodymap && npm run -s check:potency",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
