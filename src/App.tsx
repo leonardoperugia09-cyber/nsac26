@@ -5,7 +5,7 @@ import { DEMO_DAY, MISSION_PROFILE, SIM, crewById, historyOf, syncScenario } fro
 import { Overview } from "./pages/Overview";
 import { RiskBanner } from "./components/RiskBanner";
 import { buildOverview, easedToday } from "./ui/overviewData.ts";
-import { addFluid, api, query, localCheckins, pullCheckins, syncCheckins } from "./shared/api.ts";
+import { addFluid, api, query, pullCheckins, syncCheckins } from "./shared/api.ts";
 import { pullMeasurements, syncMeasurements } from "./shared/measurements.ts";
 import { setLiveTarget } from "./instruments/live.ts";
 import { useDataRevision } from "./shared/useDataRevision.ts";
@@ -16,7 +16,6 @@ import { Mission } from "./pages/Mission";
 import { Medicines } from "./pages/Medicines";
 import { Evidence } from "./pages/Evidence";
 import { Settings, type Look } from "./pages/Settings";
-import { QuickCheckin } from "./components/QuickCheckin";
 import { NoMedicines } from "./components/NoMedicines";
 import { isYou } from "./data/you.ts";
 import { EMPTY_DAY, type MedDay } from "./ui/medicinesData.ts";
@@ -73,10 +72,8 @@ export default function App() {
   };
   const actRisk = risk?.level === "act" && !easedToday(risk, done) ? risk : null;
 
-  // Leo: today's Daily Log, per crew member. The homepage asks once ("How are you doing?") until it's saved
+  // Leo: today's Daily Log, per crew member
   const [logged, setLogged] = useState<Record<string, boolean>>({});
-  const [quickMood, setQuickMood] = useState<Record<string, number>>({});
-  const [later, setLater] = useState<Record<string, boolean>>({});
   // Medicines taken or skipped, stored per astronaut and day on this device and on the HALO server (Manar)
   const [meds, setMeds] = useState<Record<string, MedDay>>({});
   const medKey = `${crewId}:${day}`;
@@ -95,8 +92,6 @@ export default function App() {
       .catch(() => {});
     return () => { cancelled = true; };
   }, [crewId, day]);
-  const firstName = crewById(crewId).name.split(" ").slice(-2)[0];
-  const askCheckin = page === "overview" && !logged[crewId] && !later[crewId] && !localCheckins().some((l) => l.crewId === crewId && l.day === day);
 
   return (
     <>
@@ -110,7 +105,7 @@ export default function App() {
         {page === "settings" && <Settings look={look} onLook={setLook} crewId={crewId} day={day}
           onToday={setDay} />}
         {page === "health" && <Health crewId={crewId} day={day} selected={system} onSelect={setSystem} />}
-        {page === "log" && <DailyLog crewId={crewId} day={day} quickMood={quickMood[crewId] ?? null}
+        {page === "log" && <DailyLog crewId={crewId} day={day}
           onSaved={() => setLogged((m) => ({ ...m, [crewId]: true }))} />}
         {page === "assistant" && <Assistant crewId={crewId} day={day} delay={DELAY} urgent={urgent} />}
         {page === "mission" && <Mission crewId={crewId} day={day} />}
@@ -119,13 +114,6 @@ export default function App() {
           : <Medicines crewId={crewId} day={day} delay={DELAY} today={medsToday} onChange={changeMeds} />)}
         {page === "evidence" && <Evidence />}
       </main>
-      {askCheckin && (
-        <QuickCheckin key={`checkin-${crewId}-${day}`} name={firstName} day={day} mood={quickMood[crewId] ?? null}
-          onMood={(m) => setQuickMood((q) => ({ ...q, [crewId]: m }))}
-          onOpenLog={() => { setLater((l) => ({ ...l, [crewId]: true })); navigate("log"); }}
-          onTalk={() => { setLater((l) => ({ ...l, [crewId]: true })); navigate("assistant"); }}
-          onLater={() => setLater((l) => ({ ...l, [crewId]: true }))} />
-      )}
     </>
   );
 }
