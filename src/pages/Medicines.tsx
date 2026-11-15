@@ -1,15 +1,17 @@
 import { useEffect, useMemo, useState } from "react";
 import { Check, PaperPlaneTilt, Warning } from "@phosphor-icons/react";
-import { Line, LineChart, ReferenceLine, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+import { Area, ComposedChart, Line, ReferenceLine, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import card from "../components/Card.module.css";
 import { More } from "../components/More";
 import { PageHero } from "../components/PageHero";
 import { MISSION_PROFILE, historyOf, readingOn } from "../data/crew";
 import { evaluateRisks } from "../engine/risks.ts";
 import type { Level } from "../engine/types.ts";
+import { AGE_AT_LAUNCH_DAYS, USP_LIMIT, potencyStatus, type PotencyForecast } from "../engine/potency.ts";
+import { NORMAL_DOSE } from "../rules/solarStorm.ts";
 import {
-  CATEGORIES, HORIZON_DAY, MEDS, MED_BY_ID, PACKED_DAYS_BEFORE_LAUNCH, STOCK,
-  adherence, belowDay, clockNow, lastSetDay, nextDose, pastState, runsOutDay, scheduleOf, statusOf, strengthCurve, strengthOf, untilText,
+  CATEGORIES, HORIZON_DAY, MEDS, MED_BY_ID, STOCK,
+  adherence, clockNow, lastSetDay, nextDose, pastState, potencyOf, runsOutDay, scheduleOf, statusOf, untilText,
   type Category, type MedDay, type MedInfo, type TodayStatus,
 } from "../ui/medicinesData";
 import s from "./Medicines.module.css";
@@ -21,8 +23,8 @@ const SKIP_REASONS = ["Felt unwell", "Forgot until too late", "Ran out", "Flight
 const NOTE_STARTERS = ["I need more of a medicine", "I think I have a side effect", "I have a question about my schedule"];
 const HISTORY_DAYS = 14;
 
-type Supply = "Fine" | "Use first" | "Below 80%" | "Runs out";
-const SUPPLY_ORDER: Supply[] = ["Below 80%", "Runs out", "Use first", "Fine"];
+type KitStatus = "Below 90%" | "Runs out" | "Use first" | "Watch" | "Fine";
+const STATUS_ORDER: KitStatus[] = ["Below 90%", "Runs out", "Use first", "Watch", "Fine"];
 
 /** Onboard medicines, today's doses, adherence and notes to the flight surgeon. HALO never changes a dose. */
 export function Medicines({ crewId, day, delay, today, onChange }: Props) {
@@ -39,7 +41,7 @@ export function Medicines({ crewId, day, delay, today, onChange }: Props) {
 
   const next = nextDose(crewId, today, now);
   const total = readingOn(crewId, day)?.radiation_mSv_total ?? 0;
-  const stowed = day + PACKED_DAYS_BEFORE_LAUNCH;
+  const stowed = day + AGE_AT_LAUNCH_DAYS;
 
   const take = (id: string) => onChange({ ...today, taken: { ...today.taken, [id]: clockNow() } });
   const undo = (id: string) => {
@@ -245,40 +247,40 @@ function HistoryCard({ crewId, day, today, now }: { crewId: string; day: number;
   );
 }
 
-// ---- Onboard pharmacy -------------------------------------------------------------------------------
+// ---- Onboard pharmacy and potency tracker -----------------------------------------------------------
 
 type PharmProps = { crewId: string; day: number; total: number; stowed: number; cautionsOf: (m: MedInfo) => { text: string }[] };
+const pct = (x: number) => Math.round(x);
 
 function PharmacyCard({ crewId, day, total, stowed, cautionsOf }: PharmProps) {
   const [cat, setCat] = useState<Category | "All">("All");
   const [open, setOpen] = useState<string | null>(null);
   const doses = scheduleOf(crewId);
   const stock = STOCK[crewId] ?? STOCK.C1;
+  const rate = NORMAL_DOSE[MISSION_PROFILE];
 
   const rows = MEDS.map((m) => {
-    const strength = strengthOf(m.k, m.r, stowed, total);
-    const drop = belowDay(m.k, m.r, day, total);
+    const f = potencyOf(m, day, total, rate);
     const perDay = doses.filter((d) => d.medId === m.id).length || (m.prnPerWeek ?? 0) / 7;
     const left = stock[m.id] ?? 0;
     const out = runsOutDay(left, perDay, day);
-    // No resupply on a Mars transit: flag anything dropping below 90% within about 6 months
-    const supply: Supply = strength < 80 ? "Below 80%"
-      : out !== null && out - day < 180 ? "Runs out"
-      : strength < 90 || (drop !== null && drop - day < 180) ? "Use first" : "Fine";
-    return { m, strength, drop, left, out, supply, cautions: cautionsOf(m) };
+    // No resupply on a Mars transit: flag anything running out within about 6 months
+    const ps = potencyStatus(f, day);
+    const status: KitStatus = ps === "Below 90%" ? ps : out !== null && out - day < 180 ? "Runs out" : ps;
+    return { m, f, left, out, status, cautions: cautionsOf(m) };
   })
     .filter((r) => r.left > 0)
-    .sort((a, b) => SUPPLY_ORDER.indexOf(a.supply) - SUPPLY_ORDER.indexOf(b.supply) || a.m.name.localeCompare(b.m.name));
+    .sort((a, b) => STATUS_ORDER.indexOf(a.status) - STATUS_ORDER.indexOf(b.status) || (a.f.below90.mid ?? 9999) - (b.f.below90.mid ?? 9999));
 
   const shown = cat === "All" ? rows : rows.filter((r) => r.m.category === cat);
-  const flagged = rows.filter((r) => r.supply !== "Fine").length;
+  const flagged = rows.filter((r) => r.status !== "Fine" && r.status !== "Watch").length;
   const cats = CATEGORIES.filter((c) => rows.some((r) => r.m.category === c));
 
   return (
     <section className={`${card.card} ${s.pharm}`} aria-labelledby="ph-h">
       <div className={card.head}>
         <h2 id="ph-h">Your onboard kit</h2>
-        <span>{flagged ? `${flagged} of ${rows.length} need a plan` : `All ${rows.length} fine`}</span>
+        <span>{flagged ? `${flagged} of ${rows.length} need a plan` : `All ${rows.length} fine for now`}</span>
       </div>
       <div className={s.filters} role="group" aria-label="Filter by type">
         {(["All", ...cats] as const).map((c) => (
@@ -288,11 +290,12 @@ function PharmacyCard({ crewId, day, total, stowed, cautionsOf }: PharmProps) {
 
       <table className={s.table}>
         <thead>
-          <tr><th>Medicine</th><th>Left</th><th>Strength now</th><th>Below 90% around</th><th>Status</th></tr>
+          <tr><th>Medicine</th><th>Left</th><th>Strength now</th><th>Drops below 90%</th><th>Status</th></tr>
         </thead>
         <tbody>
           {shown.map((r) => {
             const isOpen = open === r.m.id;
+            const b = r.f.below90;
             return [
               <tr key={r.m.id} className={`${s.rowBtn} ${isOpen ? s.rowOpen : ""}`} onClick={() => setOpen(isOpen ? null : r.m.id)}>
                 <th scope="row">
@@ -308,18 +311,22 @@ function PharmacyCard({ crewId, day, total, stowed, cautionsOf }: PharmProps) {
                   <span className={s.sub}>{r.out === null ? "Lasts the mission" : <>Until Day <span className="mono">{r.out}</span></>}</span>
                 </td>
                 <td>
-                  <span className={s.bar} aria-hidden="true"><i style={{ width: `${r.strength}%` }} className={r.strength < 90 ? s.barWarn : ""} /></span>
-                  <span className="mono">{r.strength}%</span>
+                  <span className={s.bar} aria-hidden="true"><i style={{ width: `${r.f.now.mid}%` }} className={r.f.now.mid < USP_LIMIT ? s.barWarn : ""} /></span>
+                  <span className="mono">{pct(r.f.now.mid)}%</span>
+                  <span className={s.sub}>Range <span className="mono">{pct(r.f.now.low)}-{pct(r.f.now.high)}%</span></span>
                 </td>
-                <td>{r.drop === null ? "Lasts the round trip" : <span className="mono">Day {r.drop}</span>}</td>
                 <td>
-                  <span className={r.supply === "Fine" ? s.fine : s.warn}>{r.supply}</span>
+                  {b.mid === null ? <span>Lasts the round trip</span> : <span className="mono">Day {b.mid}</span>}
+                  <span className={s.sub}>{rangeText(b)}</span>
+                </td>
+                <td>
+                  <span className={r.status === "Fine" ? s.fine : s.warn}>{r.status}</span>
                   {r.cautions.length > 0 && <span className={`${s.sub} ${s.warn}`}>Ask before using</span>}
                 </td>
               </tr>,
               isOpen && (
                 <tr key={`${r.m.id}-d`} id={`med-${r.m.id}`} className={s.detailRow}>
-                  <td colSpan={5}><MedDetail r={r} day={day} total={total} /></td>
+                  <td colSpan={5}><MedDetail r={r} day={day} /></td>
                 </tr>
               ),
             ];
@@ -328,42 +335,50 @@ function PharmacyCard({ crewId, day, total, stowed, cautionsOf }: PharmProps) {
       </table>
 
       <More label="How strength and supply are estimated">
-        <p>Every medicine has been stowed <span className="mono">{stowed}</span> days and absorbed <span className="mono">{Math.round(total)}</span> mSv. Strength drops with time and radiation.</p>
-        <p>Demo model shaped by Du et al. 2011: after 880 days in orbit only 31% of medicines passed potency tests, against 54% on Earth. Not a lab measurement. Future dose assumes 1.8 mSv per day in Mars cruise.</p>
-        <p>Supply counts your scheduled doses per day; as-needed medicines use a rough weekly estimate. There is no resupply on a Mars transit, so anything running out within about 6 months is flagged.</p>
+        <p>Each pack was made about <span className="mono">{AGE_AT_LAUNCH_DAYS}</span> days before launch, so it is <span className="mono">{stowed}</span> days old, and has absorbed <span className="mono">{Math.round(total)}</span> mSv in flight. From here HALO assumes <span className="mono">{rate}</span> mSv a day.</p>
+        <p>Medicines lose strength slowly on Earth too. HALO takes the label date as the day a pack stored on Earth reaches 90%, which is cautious: in Wotring 2016, 5 of 9 medicines returned from the ISS still met the US standard 5-8 months after that date.</p>
+        <p>Space speeds this up. In Du et al. 2011, after 28 months only 9 of the medicines stored on the ISS still met the US potency standard, against 17 of the same medicines kept on Earth; NASA's reanalysis puts breakdown at about 1.5 times faster in flight. HALO scales that by radiation dose, so deep space ages medicine faster than the ISS. Nobody has measured that part yet (Blue et al. 2019), so HALO shows a range: from no extra effect to twice as fast.</p>
+        <p>Demo model, not a lab test. Shelf lives are typical label values. Supply counts your scheduled doses; as-needed medicines use a rough weekly estimate. With no resupply on a Mars transit, anything running out within about 6 months, or dropping below 90% within about 4 months, is flagged; within a year is marked Watch.</p>
       </More>
     </section>
   );
 }
 
-type Row = { m: MedInfo; strength: number; drop: number | null; left: number; out: number | null; supply: Supply; cautions: { text: string }[] };
+const rangeText = (b: PotencyForecast["below90"]) =>
+  b.early === null ? "Even in the worst case it lasts"
+    : b.late === null ? `Day ${b.early} at worst, after Day ${HORIZON_DAY} at best`
+    : `Day ${b.early} to Day ${b.late}`;
 
-function MedDetail({ r, day, total }: { r: Row; day: number; total: number }) {
-  const data = useMemo(() => strengthCurve(r.m.k, r.m.r, day, total), [r.m, day, total]);
-  const lo = Math.min(80, Math.floor((Math.min(...data.map((d) => d.strength)) - 5) / 10) * 10);
-  const plan = r.supply === "Runs out" ? `Supply runs out around Day ${r.out}. Ask your flight surgeon how to plan for the rest of the mission.`
-    : r.supply === "Below 80%" ? "Weaker than it should be. Ask your flight surgeon before relying on it."
-    : r.supply === "Use first" ? "Losing strength sooner than the rest. Use these packs before newer ones."
+type Row = { m: MedInfo; f: PotencyForecast; left: number; out: number | null; status: KitStatus; cautions: { text: string }[] };
+
+function MedDetail({ r, day }: { r: Row; day: number }) {
+  const data = useMemo(() => r.f.series.map((p) => ({ day: p.day, mid: +p.mid.toFixed(1), band: [+p.low.toFixed(1), +p.high.toFixed(1)] })), [r.f]);
+  const lo = Math.max(0, Math.min(80, Math.floor((Math.min(...r.f.series.map((p) => p.low)) - 5) / 10) * 10));
+  const plan = r.status === "Runs out" ? `Supply runs out around Day ${r.out}. Ask your flight surgeon how to plan for the rest of the mission.`
+    : r.status === "Below 90%" ? "Weaker than the 90% standard. Ask your flight surgeon before relying on it."
+    : r.status === "Use first" ? `Expected below 90% around Day ${r.f.below90.mid}. Use these packs before newer ones and tell your flight surgeon.`
+    : r.status === "Watch" ? `Fine on the best estimate, but could drop below 90% as early as Day ${r.f.below90.early}.`
     : "Nothing to do.";
   return (
     <div className={s.detail}>
       <div className={s.detailText}>
         <p><b>{r.m.purpose}.</b>{r.m.note ? ` ${r.m.note}` : ""}</p>
         {r.cautions.map((c) => <p key={c.text} className={s.caution}><Warning size={16} weight="bold" />{c.text}</p>)}
-        <p className={r.supply === "Fine" ? s.small : s.warnText}>{plan}</p>
-        <p className={s.small}>Stored in {r.m.location}.</p>
+        <p className={r.status === "Fine" || r.status === "Watch" ? s.small : s.warnText}>{plan}</p>
+        <p className={s.small}>Typical label shelf life {r.m.shelfLifeMonths} months. Stored in {r.m.location}.</p>
       </div>
-      <div className={s.chart} role="img" aria-label={`Estimated strength of ${r.m.name} from Day ${day} to Day ${HORIZON_DAY}`}>
-        <ResponsiveContainer width="100%" height={150}>
-          <LineChart data={data} margin={{ top: 8, right: 8, bottom: 0, left: -18 }}>
+      <div className={s.chart} role="img" aria-label={`Estimated strength of ${r.m.name} from Day ${day} to Day ${HORIZON_DAY}, with its uncertainty range`}>
+        <ResponsiveContainer width="100%" height={160}>
+          <ComposedChart data={data} margin={{ top: 8, right: 8, bottom: 0, left: -18 }}>
             <XAxis dataKey="day" type="number" domain={[day, HORIZON_DAY]} ticks={[day, 300, 600, HORIZON_DAY]} tickFormatter={(d) => `D${d}`}
               tick={{ fontSize: 11, fill: "var(--ink-2)" }} axisLine={false} tickLine={false} />
             <YAxis domain={[lo, 100]} ticks={[...new Set([lo, 80, 90, 100])].filter((v) => v >= lo)} tick={{ fontSize: 11, fill: "var(--ink-2)" }} axisLine={false} tickLine={false} unit="%" />
-            <ReferenceLine y={90} stroke="var(--watch-mark)" strokeDasharray="4 4" />
+            <Area dataKey="band" stroke="none" fill="var(--ink)" fillOpacity={0.1} isAnimationActive={false} />
+            <ReferenceLine y={USP_LIMIT} stroke="var(--watch-mark)" strokeDasharray="4 4" />
             {r.out !== null && <ReferenceLine x={r.out} stroke="var(--act)" strokeDasharray="4 4" label={{ value: `Runs out D${r.out}`, fontSize: 11, fill: "var(--act)", position: r.out > 600 ? "insideBottomRight" : "insideBottomLeft" }} />}
-            <Tooltip formatter={(v) => [`${v}%`, "Strength"]} labelFormatter={(d) => `Day ${d}`} />
-            <Line type="monotone" dataKey="strength" stroke="var(--ink)" strokeWidth={2} dot={false} isAnimationActive={false} />
-          </LineChart>
+            <Tooltip formatter={(v, name) => name === "band" && Array.isArray(v) ? [`${v[0]}-${v[1]}%`, "Range"] : [`${v}%`, "Best estimate"]} labelFormatter={(d) => `Day ${d}`} />
+            <Line type="monotone" dataKey="mid" stroke="var(--ink)" strokeWidth={2} dot={false} isAnimationActive={false} />
+          </ComposedChart>
         </ResponsiveContainer>
       </div>
     </div>
