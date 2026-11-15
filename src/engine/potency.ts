@@ -11,7 +11,7 @@
 //   timeTerm  = kGround * total days since manufacture
 //   spaceTerm = kGround * beta * (dose absorbed in flight / ISS dose per day)
 // kGround comes from the label shelf life: we assume the label date is where a ground-stored pack reaches 90%,
-// which is cautious (Wotring 2016: 5 of 9 ISS-returned medicines still passed 5-8 months after their label date).
+// which is cautious (Wotring 2016: 4 of 9 ISS-returned medicines still passed up to 8 months after their label date).
 // The space term is scaled by radiation dose, so a 1.8 mSv/day Mars cruise ages medicine faster than the ISS.
 //
 // beta (how much faster spaceflight makes it), calibrated on the ISS:

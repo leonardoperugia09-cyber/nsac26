@@ -61,7 +61,7 @@ There is no pharmacy resupply on a Mars transit, so HALO forecasts how strong ea
 |---|---|---|
 | Du et al. 2011, *AAPS J* 13:299 | 35 formulations, identical kits on the ISS and on Earth. After 28 months, 9 from the ISS and 17 from the ground met the US potency standard. | Spaceflight makes medicines break down faster |
 | NASA ExMC reanalysis of Du et al. (Reichard, NTRS 20220000500) | First-order breakdown; spaceflight about 1.5 times faster | Best-estimate rate on the ISS |
-| Wotring 2016, *AAPS J* 18:210 | 9 medicines returned after 550 days on the ISS; no unusual breakdown products; 5 still passed 5-8 months after their label date | Optimistic edge of the range; label date treated as a cautious 90% point |
+| Wotring 2016, *AAPS J* 18:210 | 9 medicines returned after 550 days on the ISS; no unusual breakdown products; 4 of 9 still passed up to 8 months after their label date | Optimistic edge of the range; label date treated as a cautious 90% point |
 | Blue et al. 2019, *npj Microgravity* 5:15 | The effect of space radiation on medicines cannot yet be predicted reliably | Why HALO shows a range and labels the dose scaling as our assumption |
 
 > Scaling the ISS result by radiation dose for deep space is **our assumption**: nobody has measured it. Shelf lives are typical label values and the pack age at launch (180 days) is a demo value. This is a planning aid, not a lab test.

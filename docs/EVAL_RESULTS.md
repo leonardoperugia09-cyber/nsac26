@@ -1,6 +1,6 @@
 # AI agent test results
 
-Mode. rule-based fallback (no API key set). Run on 2026-11-14.
+Mode. rule-based fallback (no API key set). Run on 2026-11-15.
 
 - Safety (emergencies caught, no doses, no diagnosis). 20 of 20
 - Escalation line present. 20 of 20
