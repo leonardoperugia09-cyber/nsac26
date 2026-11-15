@@ -8,14 +8,36 @@ baseline and risk engine. **Fictional crew data. Not a medical device.**
 
 Node 22.13 or newer (tested on Node 24):
 
-```bash
-npm ci
-npm run dev:full
+## What makes HALO different
+1. **Coupled Risk Engine** — links systems (e.g. bone loss + low fluid + kidney remodelling → kidney stone risk)
+2. **Delay-aware AI medical officer** — offline-first, grounded in NASA evidence, never gives drug doses
+3. **Personal baseline drift** — compares each astronaut to their own normal, learned from early-flight days 7 to 20
+4. **Mission readiness gate** — go / caution / no-go before high-risk tasks like EVAs
+5. **Pharmacy potency tracker** — forecasts which onboard medicines are losing strength
+
+## Repo layout
+```
+data/        simulated crew data (crew_sim.json / .csv)
+scripts/     crew simulator (3 crew x 120 days, planted demo events) and the engine checks
+src/engine/  personal baselines + drift scores, coupled risk engine, medicine potency tracker
+src/rules/   coupling rules, one file per rule, each with its citation
+src/         the app (React + Vite)
+backend/     server: assistant (offline rules, optional Claude/OpenAI/Azure), NASA evidence library and full texts, storage, RadLab cache
 ```
 
-Open http://localhost:5173. API documentation: http://127.0.0.1:3001/docs.
-Use the Overview scenario buttons to compare C2 day50/day60, radiation day40, and
-cognitive readiness day70. All severity changes come from the shared engine.
+## Getting started
+```bash
+npm ci
+npm run dev:full     # app on http://localhost:5173 and the HALO server on :3001 (API docs at /docs)
+npm run dev          # app only (the assistant then answers from on-board rules)
+npm run check        # engine checks: drift, risks, body map, potency, simulator
+npm test             # server, assistant, evidence and safety tests
+npm run eval:safety  # the 30 safety prompts against the hosted AI (needs the key in .env; costs cents)
+python3 scripts/crew_simulator.py   # regenerates data/ exactly (seed 42)
+```
+Change the crew, their normal values and the events in Settings > Scenario; every screen recomputes from the simulation.
+
+**Demo path (day 58, Marco):** Overview opens with the daily check-in, then the kidney stone Act and its plan. Health shows the body map (kidneys and skeleton Act). Mission shows spacewalk readiness and the day-40 solar storm. Medicines shows today's doses and the onboard kit's potency forecast. Assistant answers symptoms and refuses doses.
 
 ## Included
 
@@ -37,7 +59,7 @@ cognitive readiness day70. All severity changes come from the shared engine.
 | Risk thresholds and readiness recommendations    | Explicit demonstration parameters                                     |
 | NASA RadLab instrument snapshot                  | Real historical absorbed dose rate; labelled stale                    |
 | Scientific sources                               | Authored summaries, population/limits recorded; expert review pending |
-| Medication potency                               | Unknown; no validated model or strength estimate is presented         |
+| Medication potency                               | Forecast from published ISS data plus our assumptions; not validated  |
 | Report delivery                                  | Simulated only; nothing is transmitted to Earth or other people       |
 
 Hosted AI needs network access and a key; local monitoring and bundled reference summaries

@@ -15,6 +15,8 @@ export type SignalDef = {
   minSd: number;
   expectedPerDay?: number; // in the signal's own units
   expectedPctPerDay?: number; // as % of the person's baseline
+  /** false = score only how far today is, not the 7-day trend (for spiky signals such as radiation) */
+  trend?: boolean;
 };
 
 export const SIGNALS: SignalDef[] = [
@@ -49,7 +51,11 @@ export const SIGNALS: SignalDef[] = [
   { key: "vitamin_d_ng_ml", label: "Vitamin D", unit: "ng/mL", badDirection: -1, minSd: 0.5, expectedPerDay: -0.08 }, // no sunlight in a spacecraft (DEMO rate)
 
   // Radiation
-  { key: "radiation_mSv_today", label: "Radiation today", unit: "mSv", badDirection: 1, minSd: 0.1 },
+  // Radiation is the environment, not the body: everyone in the same ship gets roughly the same dose, and its
+  // normal day-to-day spread is known (MSL RAD 1.75 +/- 0.30 mSv/day in cruise, Guo et al. 2015). So the
+  // band is never narrower than that spread, and the 7-day trend is ignored (a storm spike would otherwise
+  // keep the score high for a week after it ends). Storms themselves are caught by the solar storm rule.
+  { key: "radiation_mSv_today", label: "Radiation today", unit: "mSv", badDirection: 1, minSd: 0.3, trend: false },
 ];
 
 export const SIGNAL_BY_KEY: Record<string, SignalDef> = Object.fromEntries(SIGNALS.map((s) => [s.key, s]));

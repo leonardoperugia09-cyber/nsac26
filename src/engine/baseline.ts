@@ -175,7 +175,7 @@ export function computeDrift(
 
     const rawFar = (value - centre) / band.sd;
     const rawFast =
-      lastWeek.length < 3
+      def?.trend === false || lastWeek.length < 3
         ? 0
         : ((slope(
             lastWeek.map((r) => get(r, key)),
