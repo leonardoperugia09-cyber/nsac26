@@ -10,8 +10,9 @@ systems, spots a risk before it becomes an emergency, and tells the crew what to
 
 ## Where to look
 - **Live demo:** https://halo.nubidubi0977.workers.dev. It opens on mission day 58 with Marco, whose kidney stone risk is high.
-- **To see Claude:** open Assistant and tick "Use hosted AI for this session" (it is off by default because the question and
-  readings then leave the device). Without it the assistant answers from the bundled sources and says so.
+- **To see Claude:** open Assistant and ask. The hosted AI is on by default for the simulated crew (the page says so, and "Use hosted AI
+  for this session" switches it off). It is off by default for the "You" profile and for a real strap, because that is a person's own data.
+  When it is off or limited, the assistant answers from the bundled sources and says so.
 - **Code:** this repository. `npm ci`, `npm run dev:full`, `npm test`, `npm run check`.
 - **Limits, stated plainly:** all crew data is simulated; the thresholds are demonstration parameters; the 46 source
   summaries have not been reviewed by a physician or space-medicine expert; the layout is for laptops and tablets, not phones.
@@ -23,6 +24,8 @@ Yes. See "AI use statement" in the README for the full text. In short:
   and HALO rejects answers that cite an unknown source, give a dose, or give a diagnosis.
 - Claude Code (Claude Opus 5.5 and Sonnet 5.5) and OpenAI Codex helped write the code, tests, documentation and evidence
   summaries. The team reviewed and tested the output.
+- The idea, the design decisions and the direction came from the team, working together on NASA's challenge. AI did not come up with the idea.
+- Demo video: the narration is a synthetic voice made with ElevenLabs (elevenlabs.io); the video is a recording of the live app, put together with scripts written with Claude Code.
 - No AI-generated images; no NASA logos or branding.
 - Tests of the assistant on fresh sets of 100 questions: 93 passed on one set and 87 on another (our bar was 90). A second
   Claude model acted as fact-checker, so this is not medical validation.
@@ -40,16 +43,8 @@ Yes. See "AI use statement" in the README for the full text. In short:
 React, Vite, TypeScript, Fastify, SQLite, Cloudflare Workers, the Anthropic API; Geist fonts (SIL OFL) and Phosphor icons (MIT).
 All sources and credits are on the Evidence page and in the README citations.
 
-## 30-second demo script (matches the app; mission day 58, Marco)
-1. 0:00 to 0:05. Say your name and team, and the challenge: "Astronauts must spot health changes in themselves."
-2. 0:05 to 0:10. Name the project and tagline. Show Overview: "Kidney stone risk is high": fluid, urine and sodium drifting together.
-3. 0:10 to 0:16. Tap "I drank 250 ml": the plan is a short checklist. Open Health: the kidneys and skeleton are flagged on the body map.
-4. 0:16 to 0:25. Open Assistant, tick "Use hosted AI", ask "Why is my kidney stone risk high?". The dots, then an answer labelled
-   "Your data" and "What the research says", with NASA sources named.
-5. 0:25 to 0:30. Type "I vomited blood": the emergency response fires at once, with no AI. Close on: built on NASA's own reports; simulated crew, not a medical device.
-
-For slides instead of a video (7 at most): title and team; the problem; how HALO works (personal baseline, coupled risks); Overview screenshot;
-Assistant screenshot with sources; NASA data and tests; limits and what comes next.
+## Demo video (29 seconds, English, captions burned in)
+A recording of the live app (mission day 58, Marco): the opening card ("A kidney stone, 18 minutes from help. You just might be the patient."); the Overview with the coupled kidney stone risk; the body map; today's plan; the Assistant answering with a real Claude answer, its sources and its limits (the waiting time was cut, and the video says so); an emergency phrase handled by plain rules with no AI; the closing card. No faces, nobody under 18, no NASA logos. The narration is a synthetic voice (ElevenLabs), stated in the video description. The public link is on the project page.
 
 ## Final checks before submitting
 Opens Sat 14 Nov 09:00 and closes Sun 15 Nov 23:59 in the Local Event's time zone (or the Team Owner's, for the Universal Event).

@@ -43,6 +43,7 @@ import type {
   ConversationTurn,
 } from "../shared/assistantTypes.ts";
 import { liveNow } from "../instruments/live.ts";
+import { isYou } from "../data/you.ts";
 import { askClaudeOnWeb, type WebFail } from "../shared/claudeWeb.ts";
 import { answer } from "../shared/offlineAssistant.ts";
 import { buildOverview } from "../ui/overviewData.ts";
@@ -270,9 +271,15 @@ export function Assistant({
   const area = useRef<HTMLDivElement>(null);
   const input = useRef<HTMLTextAreaElement>(null);
   const [file, setFile] = useState<File | null>(null);
-  const [allowAI, setAllowAI] = useState(
-    () => sessionStorage.getItem("halo-allow-ai") === "true",
-  );
+  // The hosted AI is on by default for the simulated crew, so a visitor gets a real answer without finding the box.
+  // It stays off by default for the "You" profile and for a real strap, because that is a person's own data.
+  // A tick or untick on this page always wins.
+  const [aiChoice, setAiChoice] = useState<boolean | null>(() => {
+    const v = sessionStorage.getItem("halo-allow-ai");
+    return v === "true" ? true : v === "false" ? false : null;
+  });
+  const strap = liveNow();
+  const allowAI = aiChoice ?? (!isYou(crewId) && !(strap && !strap.simulated));
   const [aiStatus, setAiStatus] = useState<AssistantStatus | null>(null);
   useEffect(() => {
     let cancelled = false;
@@ -857,7 +864,7 @@ export function Assistant({
                 type="checkbox"
                 checked={allowAI}
                 onChange={(e) => {
-                  setAllowAI(e.target.checked);
+                  setAiChoice(e.target.checked);
                   sessionStorage.setItem(
                     "halo-allow-ai",
                     String(e.target.checked),
