@@ -98,8 +98,19 @@ input[type="file"]:focus-visible + .attach { outline: 2px solid var(--accent); o
 
 /* Server answers: citations, the waiting line, and which path answered */
 .sources { font-size: 14px; color: var(--ink-2); }
-.pending { margin: 0; color: var(--ink-2); animation: lift var(--enter) var(--ease-out) both; }
+.pending { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; margin: 0; color: var(--ink-2); animation: lift var(--enter) var(--ease-out) both; }
+.pendingNote { flex-basis: 100%; font-size: 13px; }
+/* Three dots that rise in turn: steady and quiet, in the ink colour (amber is only for data) */
+.dots { display: inline-flex; align-items: center; gap: 6px; height: 16px; color: var(--ink); }
+.dots i { width: 7px; height: 7px; border-radius: 50%; background: currentColor; opacity: 0.35; animation: think 1.3s ease-in-out infinite; }
+.dots i:nth-child(2) { animation-delay: 0.16s; }
+.dots i:nth-child(3) { animation-delay: 0.32s; }
+@keyframes think { 0%, 60%, 100% { opacity: 0.35; transform: translateY(0); } 30% { opacity: 1; transform: translateY(-4px); } }
+@media (prefers-reduced-motion: reduce) { .dots i { animation: none; opacity: 0.6; } }
 .via { margin: 0; font-size: 13px; color: var(--ink-2); }
+/* Each part of a generated answer says where it comes from: quiet, sentence case, no colour (colour is for data) */
+.part { display: flex; flex-direction: column; gap: 4px; }
+.partLabel { font-size: 12px; font-weight: 500; color: var(--ink-2); }
 /* Optional hosted AI: a quiet setting, off by default */
 .aiToggle { display: flex; align-items: center; gap: 10px; min-height: 44px; margin-top: 8px; font-size: 14px; color: var(--ink-2); cursor: pointer; }
 .aiToggle input { flex: none; width: 16px; height: 16px; margin: 0; accent-color: var(--accent); cursor: pointer; }

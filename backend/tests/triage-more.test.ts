@@ -68,3 +68,18 @@ test("bleeding and self-harm in more wordings, medicine advice without a name, a
   ])
     assert.equal(asksAboutData(q), true, q);
 });
+
+test("set E gaps: heart pain in Spanish, suggest something to take, shelf lives, past week, what HALO cannot tell", () => {
+  assert.equal(triage("Mi corazón duele mucho y casi me desmayo").urgent, true);
+  assert.equal(
+    medicationAdvice("Suggest something to take for stomach pain"),
+    true,
+  );
+  assert.equal(
+    medicationAdvice("How do medicine shelf lives change in space?"),
+    false,
+  );
+  assert.equal(medicationAdvice("Can I change my medicine tonight?"), true);
+  assert.equal(asksAboutData("How was my past week?"), true);
+  assert.equal(asksAboutData("What can't HALO tell me yet?"), true);
+});

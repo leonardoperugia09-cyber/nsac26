@@ -142,3 +142,39 @@ test("reported symptoms raise a risk even when its readings are not measured", (
   assert.ok(fluid.level === "Watch" || fluid.level === "Act", fluid.level);
   assert.ok(fluid.missing.length > 0); // the unmeasured readings stay visible
 });
+
+test("only the inputs that are still not logged are reported as missing", () => {
+  const missing = (inputs: object) =>
+    risk(
+      evaluateRisks(history("C1"), 58, "mars_transit", inputs),
+      "fluid_shift",
+    ).uncertainty.find((u) => u.startsWith("Missing inputs"));
+  assert.match(
+    missing({})!,
+    /headache log.*puffy face check.*vision check score/,
+  );
+  const symptomsOnly = missing({ symptoms: ["headache"] })!;
+  assert.match(symptomsOnly, /vision check score/);
+  assert.doesNotMatch(symptomsOnly, /headache log|puffy face check/);
+  assert.equal(missing({ symptoms: ["headache"], vision_score: 4 }), undefined);
+});
+
+test("the missing list names only the fluid shift input that is still missing", () => {
+  const missingOf = (context: object) =>
+    assessCrew(history("C1"), 58, "mars_transit", context).risks.find(
+      (r) => r.ruleId === "fluid_shift",
+    )!.missing;
+  assert.ok(missingOf({}).includes("symptom check and vision self-report"));
+  assert.ok(
+    missingOf({ symptoms: ["headache"] }).includes("vision self-report"),
+  );
+  assert.ok(
+    !missingOf({ symptoms: ["headache"] }).some((m) => /symptom check/.test(m)),
+  );
+  assert.ok(missingOf({ vision_score: 4 }).includes("symptom check"));
+  assert.ok(
+    !missingOf({ symptoms: [], vision_score: 4 }).some((m) =>
+      /symptom check|vision self-report/.test(m),
+    ),
+  );
+});

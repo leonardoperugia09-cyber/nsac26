@@ -3,7 +3,7 @@
 import { triage, MEDICATION_TEXT } from "../shared/triage.ts";
 
 export type Block =
-  | { kind: "text"; text: string }
+  | { kind: "text"; text: string; label?: string }
   | { kind: "check"; text: string }
   | { kind: "evidence" }
   | { kind: "action"; text: string }

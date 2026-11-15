@@ -16,7 +16,12 @@ const markLink = (ok: boolean) => {
 };
 export const pendingCheckins = () =>
   localCheckins().filter((l) => l.pending).length;
-export async function api<T = any>(path: string, body?: unknown): Promise<T> {
+/** `timeoutMs` is 16 s for most calls; a hosted AI answer is allowed longer, or the page would give up while the server is still working */
+export async function api<T = any>(
+  path: string,
+  body?: unknown,
+  timeoutMs = 16000,
+): Promise<T> {
   const token = sessionStorage.getItem("halo-api-token");
   const base = (import.meta.env.VITE_API_BASE_URL || "/api").replace(/\/$/, "");
   let response: Response;
@@ -28,7 +33,7 @@ export async function api<T = any>(path: string, body?: unknown): Promise<T> {
         ...(token ? { Authorization: `Bearer ${token}` } : {}),
       },
       ...(body === undefined ? {} : { body: JSON.stringify(body) }),
-      signal: AbortSignal.timeout(16000),
+      signal: AbortSignal.timeout(timeoutMs),
     });
   } catch (e) {
     markLink(false);

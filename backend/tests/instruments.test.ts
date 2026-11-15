@@ -136,7 +136,9 @@ test("simulated strap stays calm (62 to 72 bpm) and stops", async () => {
   const strap = startSimulatedStrap((bpm) => seen.push(bpm), 2);
   assert.equal(strap.name, "Simulated strap");
   assert.equal(seen.length, 1); // first value at once
-  await new Promise((r) => setTimeout(r, 40));
+  // wait for a few readings instead of a fixed delay, so a busy machine cannot make this flaky
+  for (let waited = 0; seen.length <= 3 && waited < 2000; waited += 10)
+    await new Promise((r) => setTimeout(r, 10));
   strap.stop();
   const count = seen.length;
   await new Promise((r) => setTimeout(r, 20));

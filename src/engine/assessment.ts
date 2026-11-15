@@ -56,11 +56,14 @@ export function assessCrew(
         (!today || !safeNumber((today as any)[key]) || !drift[key]),
     );
     // Vision and immune hypotheses require the extra symptoms absent from the simulator.
-    if (
-      rule.id === "fluid_shift" &&
-      (!Array.isArray(context.symptoms) || !safeNumber(context.vision_score))
-    )
-      missing.push("symptom check and vision self-report");
+    if (rule.id === "fluid_shift") {
+      const noSymptoms = !Array.isArray(context.symptoms);
+      const noVision = !safeNumber(context.vision_score);
+      if (noSymptoms && noVision)
+        missing.push("symptom check and vision self-report");
+      else if (noSymptoms) missing.push("symptom check");
+      else if (noVision) missing.push("vision self-report");
+    }
     if (rule.id === "immune_strain" && !Array.isArray(context.symptoms))
       missing.push("skin symptoms and cold sore check");
     const acuteCognition =

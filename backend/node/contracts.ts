@@ -7,35 +7,8 @@ export const Selection = z.object({
   profile: Profile.default("mars_transit"),
 });
 export type SelectionType = z.infer<typeof Selection>;
-export const UNITS: Record<string, string> = {
-  heart_rate: "bpm",
-  bp_sys: "mmHg",
-  bp_dia: "mmHg",
-  temp_c: "degC",
-  spo2: "%",
-  glucose_mg_dl: "mg/dL",
-  sleep_hours: "h",
-  sleep_debt_h: "h",
-  mood_1to5: "score/5",
-  stress_1to5: "score/5",
-  fluid_intake_ml: "mL",
-  urine_color_1to8: "score/8",
-  sodium_mg: "mg",
-  plasma_volume_change_pct: "% baseline change",
-  bone_density_pct: "% baseline",
-  bone_resorption_index: "demo index",
-  calf_volume_pct: "% baseline",
-  exercise_min: "min",
-  resistance_load_kg: "kg",
-  body_mass_kg: "kg",
-  kcal_eaten: "kcal",
-  vitamin_d_ng_ml: "ng/mL",
-  radiation_mSv_today: "mSv",
-  radiation_mSv_total: "mSv",
-  reaction_time_ms: "ms",
-  memory_score: "score/100",
-  workload_1to5: "score/5",
-};
+export { UNITS } from "../../src/shared/units.ts";
+import { UNITS } from "../../src/shared/units.ts";
 const num = z.number().finite();
 export const Values = z
   .object(

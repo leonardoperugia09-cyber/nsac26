@@ -14,6 +14,7 @@ export type Source = {
   source_url: string;
   review_status: string;
   limitations: string[];
+  studied_population: string;
 };
 const sources: (Source & {
   supported_claims: string[];
@@ -100,3 +101,21 @@ export function searchEvidence(
 }
 
 export const sourceOf = (id: string) => sources.find((s) => s.id === id);
+
+/** The passages in the shape the server gives Claude, so the hosted site's Claude sees the same kind of evidence */
+export function passagesFor(question: string, limit = 6) {
+  return searchEvidence(question, limit).map((h) => {
+    const src = sourceOf(h.sourceId)!;
+    return {
+      id: h.id,
+      sourceId: h.sourceId,
+      title: src.title,
+      sourceUrl: src.source_url,
+      text: h.text,
+      population: src.studied_population,
+      limitations: src.limitations,
+      reviewStatus: src.review_status,
+      kind: "summary" as const,
+    };
+  });
+}

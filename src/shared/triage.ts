@@ -23,6 +23,8 @@ export const RED_FLAG_MORE = new RegExp(
     String.raw`overdos\w*|poison\w*|swallowed (?:too many|something|bleach)|took too many`,
     String.raw`can'?t swallow|(?:severe|serious|bad) allergic reaction|allergic reaction.{0,40}(?:breath|swell|swollen|throat|tongue|lips)`,
     String.raw`(?:cabin|module|station)\s+(?:fire|smoke|depressuri[sz]\w*)|ammonia leak|toxic (?:gas|smoke|fumes)|fire (?:on board|onboard|in the (?:cabin|module))|smell(?:s|ing)? (?:smoke|burning)`,
+    // Heart pain and near-fainting, in several languages
+    String.raw`casi me desmay|me duele (?:mucho )?el coraz[oó]n|coraz[oó]n (?:me )?duele|dolor (?:fuerte )?en el coraz[oó]n|mi fa male il cuore|quasi svenut|sto per svenire|j'ai failli m'[ée]vanouir|douleur (?:forte )?au c[oœ]ur|fast ohnm[äa]chtig|herzschmerzen|quase desmaiei|dor (?:forte )?no cora[çc][ãa]o`,
     // Italian
     String.raw`emorragia|vomit\w* sangue|sputo? sangue|non respira|ha smesso di respirare|forte dolore al petto|pressione al petto|ictus|crisi convulsiva|attacco epilettico|voglio uccidermi|overdose`,
     // Spanish
@@ -79,7 +81,7 @@ export function medicationAdvice(question: string) {
     );
   // "What should I take for nausea" asks for medicine advice without naming a medicine
   const takeFor =
-    /what (?:should|can|could|do|may) i (?:take|use|swallow|drink|give)\b|\b(?:take|swallow) (?:something|anything) for\b|\bwhat to (?:take|use|swallow)\b|\brecommend (?:me )?(?:a |an |some |something )?(?:painkillers?|medicines?|medications?|drugs?|pills?|tablets?|antibiotics?)\b/iu.test(
+    /what (?:should|can|could|do|may) i (?:take|use|swallow|drink|give)\b|\b(?:take|swallow) (?:something|anything) for\b|\bwhat to (?:take|use|swallow)\b|\bsomething to (?:take|swallow)\b|\b(?:suggest|recommend|prescribe) (?:me )?(?:something|anything)\b|\brecommend (?:me )?(?:a |an |some |something )?(?:painkillers?|medicines?|medications?|drugs?|pills?|tablets?|antibiotics?)\b/iu.test(
       question,
     );
   const personalChange =
@@ -87,7 +89,7 @@ export function medicationAdvice(question: string) {
     ((quantity &&
       /(?:should|can|may|could|do) i\b|\btake\b|\btaking\b/iu.test(question)) ||
       medicine) &&
-    /how (?:much|many)|(?:right|correct|safe|proper|appropriate|recommended|maximum|usual|typical|normal) (?:amount|quantity)|what amount|(?:should|can|may|could) i|(?:stop|start|change|increase|decrease|double|skip|take|use)\b|تناول|أتوقف|اوقف/iu.test(
+    /how (?:much|many)|(?:right|correct|safe|proper|appropriate|recommended|maximum|usual|typical|normal) (?:amount|quantity)|what amount|(?:should|can|may|could) i|(?:stop|start|increase|decrease|double|skip|take|use)\b|\bchange (?:my|the|your|a|an|some|\d+)\b|تناول|أتوقف|اوقف/iu.test(
       question,
     );
   return doseRequest || personalChange || takeFor;

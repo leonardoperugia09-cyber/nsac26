@@ -186,3 +186,38 @@ test("each signal sent to Claude says whether it is inside its reference range a
     await app.close();
   }
 });
+
+test("asking about my symptoms searches for the symptoms that were logged", async () => {
+  const sent: { payload?: any } = {};
+  const app = await makeServer({
+    dbPath: ":memory:",
+    ...fakeClaude(sent, ["logged_symptoms"]),
+  });
+  try {
+    await app.inject({
+      method: "POST",
+      url: "/api/checkins",
+      payload: {
+        crewId: "C1",
+        day: 58,
+        measurements: {},
+        symptoms: ["headache", "puffy_face"],
+      },
+    });
+    await app.inject({
+      method: "POST",
+      url: "/api/assistant",
+      payload: {
+        crewId: "C1",
+        day: 58,
+        profile: "mars_transit",
+        question: "Look at my symptoms and my live heart rate together.",
+        allowAI: true,
+      },
+    });
+    const texts = sent.payload.evidence.map((p: any) => p.text).join(" ");
+    assert.match(texts, /headache|head fullness|headward fluid shift/i);
+  } finally {
+    await app.close();
+  }
+});

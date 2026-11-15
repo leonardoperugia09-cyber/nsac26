@@ -73,7 +73,11 @@ export function evaluateRule(
   ];
   let spread = 0.4;
   // Inputs the rule wants count as missing only until the astronaut logs them
-  const stillMissing = rule.inputs?.every((i) => inp.provided?.has(i)) ? [] : (rule.needs ?? []);
+  // Only what is not logged yet: a logged headache is no longer "missing" just because the vision check is
+  const stillMissing =
+    rule.inputs && rule.inputNeeds
+      ? rule.inputs.filter((i) => !inp.provided?.has(i)).flatMap((i) => rule.inputNeeds![i] ?? [])
+      : (rule.needs ?? []);
   if (stillMissing.length) {
     uncertainty.push(`Missing inputs: ${stillMissing.join(", ")}.`);
     spread += 0.3 * stillMissing.length;

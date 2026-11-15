@@ -35,7 +35,7 @@ import {
   isCustomScenario,
   readingOn,
 } from "../data/crew.ts";
-import type { MissionProfile } from "../engine/types.ts";
+import type { MissionProfile, Reading } from "../engine/types.ts";
 import { assessCrew } from "../engine/assessment.ts";
 import { api } from "../shared/api.ts";
 import type {
@@ -44,6 +44,7 @@ import type {
   ConversationTurn,
 } from "../shared/assistantTypes.ts";
 import { liveNow } from "../instruments/live.ts";
+import { askClaudeOnWeb, type WebFail } from "../shared/claudeWeb.ts";
 import { answer } from "../shared/offlineAssistant.ts";
 import { buildOverview } from "../ui/overviewData.ts";
 import { GATE_OF, worstGate } from "../ui/missionData.ts";
@@ -61,6 +62,32 @@ import {
 } from "../ui/assistantData.ts";
 import s from "./Assistant.module.css";
 
+/** Shown while an answer is on its way: three quiet dots, what HALO is doing, and a note if the hosted AI is slow */
+function Thinking({ ai }: { ai: boolean }) {
+  const [slow, setSlow] = useState(false);
+  useEffect(() => {
+    const t = window.setTimeout(() => setSlow(true), 6000);
+    return () => window.clearTimeout(t);
+  }, []);
+  return (
+    <p className={s.pending} role="status" aria-live="polite">
+      <span>
+        {ai ? "HALO is reading its sources" : "HALO is checking your readings"}
+      </span>
+      <span className={s.dots} aria-hidden="true">
+        <i />
+        <i />
+        <i />
+      </span>
+      {slow && ai && (
+        <small className={s.pendingNote}>
+          The hosted AI can take up to 30 seconds.
+        </small>
+      )}
+    </p>
+  );
+}
+
 type Props = {
   crewId: string;
   day: number;
@@ -73,6 +100,15 @@ type Props = {
 type Reply = AssistantReply;
 
 const ON_BOARD: Block = { kind: "via", text: "Answered on board" };
+const WEB_WHY: Record<WebFail, string> = {
+  limit: "The hosted AI has reached its usage limit for now.",
+  rate: "You have asked a lot in a short time, so the hosted AI is paused for you for a few minutes.",
+  busy: "The hosted AI is busy.",
+  unreachable: "The hosted AI could not be reached.",
+  declined: "The hosted AI did not give an answer.",
+  checks:
+    "HALO did not use the hosted AI's answer because it failed HALO's safety checks.",
+};
 const replyBlocks = (r: Reply): Block[] =>
   r.triage.urgent
     ? [
@@ -83,7 +119,16 @@ const replyBlocks = (r: Reply): Block[] =>
         },
       ]
     : [
-        ...r.explanation.split(/\n{2,}/).flatMap(splitAction),
+        // A generated answer labels each part, so it is clear what comes from your numbers and what from the library
+        ...(r.mode === "grounded_ai" && r.paragraphs?.length
+          ? r.paragraphs.flatMap((p) =>
+              splitAction(p.text).map((b, n) =>
+                n === 0 && b.kind === "text"
+                  ? { ...b, label: partLabel(p) }
+                  : b,
+              ),
+            )
+          : r.explanation.split(/\n{2,}/).flatMap(splitAction)),
         ...(r.citations.length
           ? [
               {
@@ -106,6 +151,14 @@ const replyBlocks = (r: Reply): Block[] =>
           ? [{ kind: "quick", options: r.followUp.slice(0, 3) } as const]
           : []),
       ];
+const partLabel = (p: { evidenceIds: string[]; signalKeys: string[] }) =>
+  p.evidenceIds.length && p.signalKeys.length
+    ? "Your data and the research"
+    : p.evidenceIds.length
+      ? "What the research says"
+      : p.signalKeys.length
+        ? "Your data"
+        : undefined;
 /** "… What to do now: X" becomes the explanation plus a highlighted action line */
 const splitAction = (text: string): Block[] => {
   const [said, todo] = text.split(ACTION_MARK);
@@ -273,18 +326,42 @@ export function Assistant({
   ): Promise<Block[]> => {
     const context = contextOf(crewId, day);
     try {
-      const r = await api<Reply>("/assistant", {
-        crewId,
-        day,
-        profile,
-        question: q,
-        symptoms: context.symptoms ?? [],
-        live: liveNow() ?? undefined,
-        history,
-        allowAI,
-      });
+      const r = await api<Reply>(
+        "/assistant",
+        {
+          crewId,
+          day,
+          profile,
+          question: q,
+          symptoms: context.symptoms ?? [],
+          live: liveNow() ?? undefined,
+          history,
+          allowAI,
+        },
+        allowAI ? 50000 : 16000,
+      );
       return [...replyBlocks(r), { kind: "via", text: serverLine(r) }];
     } catch {
+      // No server (the hosted site): with the person's consent, Claude is reached through HALO's AI service
+      let why: WebFail | null = null;
+      if (allowAI) {
+        const web = await askClaudeOnWeb(
+          {
+            question: q,
+            history,
+            assessment: assessCrew(historyOf(crewId), day, profile, context),
+            reading: readingOn(crewId, day) as unknown as Reading | undefined,
+            crewId,
+            day,
+            symptoms: context.symptoms ?? [],
+            live: liveNow(),
+          },
+          fetch,
+          (w) => (why = w),
+        );
+        if (web)
+          return [...replyBlocks(web), { kind: "via", text: serverLine(web) }];
+      }
       const local = replyBlocks(
         answer(
           q,
@@ -293,7 +370,16 @@ export function Assistant({
           readingOn(crewId, day) as Record<string, unknown> | undefined,
         ),
       );
-      return [...local, ON_BOARD];
+      // Say so when the hosted AI was asked for but not used, instead of quietly answering from the sources
+      return [
+        ...local,
+        why
+          ? {
+              kind: "via",
+              text: `${WEB_WHY[why]} This answer comes from HALO's sources.`,
+            }
+          : ON_BOARD,
+      ];
     }
   };
   const send = (raw: string) => {
@@ -346,7 +432,12 @@ export function Assistant({
   const renderBlock = (b: Block, i: number): ReactNode => {
     switch (b.kind) {
       case "text":
-        return (
+        return b.label ? (
+          <div key={i} className={s.part}>
+            <span className={s.partLabel}>{b.label}</span>
+            <p className={s.p}>{b.text}</p>
+          </div>
+        ) : (
           <p key={i} className={s.p}>
             {b.text}
           </p>
@@ -425,11 +516,7 @@ export function Assistant({
           </ul>
         );
       case "pending":
-        return (
-          <p key={i} className={s.pending} role="status">
-            HALO is checking your readings
-          </p>
-        );
+        return <Thinking key={i} ai={allowAI} />;
       case "via":
         return (
           <p key={i} className={s.via}>
@@ -540,7 +627,9 @@ export function Assistant({
         line={
           mode === "start"
             ? status
-            : "Offline on board. Emergency rules run before the AI."
+            : allowAI
+              ? "Hosted AI is on. Emergency rules run before it."
+              : "Answers come from HALO's sources. Emergency rules run before anything else."
         }
       />
       <div className={s.grid}>
@@ -783,7 +872,7 @@ export function Assistant({
             <p className={s.aiNote} role="status">
               {aiStatus
                 ? aiStatus.message
-                : "The HALO server isn't reachable, so answers come from the on-board rules."}{" "}
+                : "The HALO server isn't reachable here, so answers come from the on-board sources unless the hosted AI is on."}{" "}
               When on, your question, the last six messages and this astronaut's
               simulated readings go to{" "}
               {aiStatus?.provider === "azure"
@@ -792,7 +881,9 @@ export function Assistant({
                   ? "OpenAI"
                   : aiStatus?.provider === "anthropic"
                     ? "Anthropic (Claude)"
-                    : "the configured AI provider"}
+                    : aiStatus
+                      ? "the configured AI provider"
+                      : "Anthropic (Claude), through HALO's AI service"}
               . Names are left out.
             </p>
           </section>

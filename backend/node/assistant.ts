@@ -15,6 +15,7 @@ import { UNITS } from "./contracts.ts";
 import { resolveModelConfig, ModelConfigurationError } from "./model-config.ts";
 import { topicAnswer, topicText } from "../../src/shared/assistantTopics.ts";
 import { isYou } from "../../src/data/you.ts";
+import { crewContext, answerRejected } from "../../src/shared/claudeContext.ts";
 import { asksAboutData } from "../../src/shared/dataQuestion.ts";
 export { triage } from "../../src/shared/triage.ts";
 export type AssistantInput = z.input<typeof Ask> & {
@@ -59,11 +60,6 @@ export function assistantStatus(options: ModelOptions = {}) {
   };
 }
 
-// This screen catches selected high-risk output patterns, not all possible medical errors.
-// Citation-ID checks verify traceability, not whether the source entails generated prose.
-const UNSAFE_OUTPUT =
-  /\b(?:take|swallow|inject|drink|administer)\s+(?:up to\s+)?\d+(?:\.\d+)?\s*(?:mg|mcg|ml|litres?|liters?|tablets?|pills?)\b|\b(?:start|stop|double|increase|decrease|skip|change)\b[^.!?\n]{0,35}\b(?:your |the )?(?:dose|medication|medicine|tablets?|pills?)\b|\byou (?:have|are diagnosed with|definitely have) (?:a |an )?(?:kidney stone|renal failure|infection|disease|syndrome)\b|\b(?:you are|you're) (?:cleared|fit|safe) (?:for|to)|\b(?:ignore|override) (?:the |your )?(?:doctor|medical officer|protocol)/i;
-
 export async function answer(
   input: AssistantInput,
   assessment: ReturnType<typeof assessCrew>,
@@ -75,8 +71,15 @@ export async function answer(
   const previous = (input.history ?? [])
     .filter((m) => m.role === "user")
     .map((m) => m.content);
+  // A question about "my symptoms" searches for the symptoms that were actually logged, not just those words
+  const reported = input.attached?.loggedSymptoms.today ?? [];
+  const searchText =
+    reported.length &&
+    /\b(?:symptoms?|logged|reported|noted)\b/i.test(input.question)
+      ? `${input.question} ${reported.map((s) => s.replace(/_/g, " ")).join(" ")}`
+      : input.question;
   const retrieved =
-    t.urgent || medication ? [] : retrieve(input.question, previous);
+    t.urgent || medication ? [] : retrieve(searchText, previous);
   const relevant = retrieved;
   const priority = assessment.priority;
   // Curated answers for the most common questions come first: they carry a concrete next step
@@ -140,36 +143,22 @@ export async function answer(
   ];
   let followUp = ["What changed, and when did you notice it?"];
   let insufficientEvidence = !relevant.length && !asksData && !topic;
-  const rawMeasurements =
-    currentReading?.crew_id === input.crewId && currentReading.day === input.day
-      ? Object.entries(UNITS)
-          .filter(
-            ([key]) =>
-              typeof currentReading[key as keyof Reading] === "number" &&
-              Number.isFinite(currentReading[key as keyof Reading]),
-          )
-          .map(([key, unit]) => ({
-            key,
-            unit,
-            value: currentReading[key as keyof Reading],
-            missionDay: input.day,
-          }))
-      : [];
-  const signals = Object.entries(assessment.drift).map(([key, d]) => ({
-    key,
-    value: d.value,
-    unit: UNITS[key] ?? "demo index",
-    reference: [d.bandLo, d.bandHi],
-    status: d.status,
-    insideReferenceRange: d.value >= d.bandLo && d.value <= d.bandHi,
-    trendScore: Math.round(d.howFast * 100) / 100,
-    valueBasis: "engine current value; slow signals may be recent averages",
-  }));
-  // Symptoms the astronaut reported count as something to ground an answer in
-  const hasSymptoms =
-    !!input.attached &&
-    (input.attached.loggedSymptoms.today.length > 0 ||
-      input.attached.loggedSymptoms.earlierThisWeek.length > 0);
+  const {
+    selectedCrewContext,
+    rawMeasurements,
+    signals,
+    hasSymptoms,
+    citableKeys,
+  } = crewContext({
+    assessment,
+    currentReading,
+    crewId: input.crewId,
+    day: assessment.day,
+    isYou: isYou(input.crewId),
+    units: UNITS,
+    attached: input.attached,
+    live: input.live,
+  });
   // Nothing measured for this person (the empty "You" profile): there is nothing to ground an answer in, so say so
   if (
     !rawMeasurements.length &&
@@ -197,61 +186,16 @@ export async function answer(
           {
             question: input.question,
             conversation: input.history ?? [],
-            selectedCrewContext: {
-              missionDay: assessment.day,
-              profile: assessment.profile,
-              provenance: isYou(input.crewId)
-                ? "own measurements, imports and check-ins (not simulated)"
-                : "simulated",
-              baselineKind: assessment.baselineKind,
-              baselineDays: assessment.baselineDays,
-              rawMeasurements,
-              loggedSymptoms: input.attached?.loggedSymptoms,
-              liveReading: input.live && {
-                ...input.live,
-                provenance: input.live.simulated
-                  ? "simulated strap, not a real measurement"
-                  : "measured by the attached strap",
-                note: "one current value, not an average",
-              },
-              storedMeasurementsToday: input.attached?.storedMeasurementsToday,
-              signals,
-              risks: assessment.risks.map((r) => ({
-                ruleId: r.ruleId,
-                name: r.name,
-                level: r.level,
-                why: r.why,
-                missing: r.missing,
-                uncertainty: r.uncertainty,
-              })),
-            },
+            selectedCrewContext,
             evidence: relevant,
           },
           options,
         );
-        const ids = new Set(relevant.map((p) => p.id));
-        const keys = new Set([
-          ...signals.map((s) => s.key),
-          ...rawMeasurements.map((s) => s.key),
-          // citable whenever the symptom list was sent, also to say that none were reported
-          ...(input.attached ? ["logged_symptoms"] : []),
-          ...(input.live ? ["live_heart_rate"] : []),
-        ]);
-        const prose = [
-          ...generated.paragraphs.map((p) => p.text),
-          ...generated.uncertainties,
-          ...generated.followUp,
-        ].join(" ");
         if (
-          UNSAFE_OUTPUT.test(prose) ||
-          /https?:\/\//i.test(prose) ||
-          generated.paragraphs.some(
-            (p) =>
-              p.evidenceIds.some((id) => !ids.has(id)) ||
-              p.signalKeys.some((k) => !keys.has(k)) ||
-              (!generated.insufficientEvidence &&
-                !p.evidenceIds.length &&
-                !p.signalKeys.length),
+          answerRejected(
+            generated,
+            new Set(relevant.map((p) => p.id)),
+            citableKeys,
           )
         )
           throw new ModelFailure("invalid_output");
