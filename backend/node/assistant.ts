@@ -88,9 +88,16 @@ export async function answer(
       : topic
         ? topicText(topic)
         : relevant.length
-          ? `Reference summary (not an AI-generated answer): ${relevant
+          ? `Reference summary (not an AI-generated answer): ${[
+              ...relevant.filter((p) => p.kind === "summary"),
+              ...relevant.filter((p) => p.kind !== "summary"),
+            ]
               .slice(0, 2)
-              .map((p) => p.text)
+              .map((p) =>
+                p.kind === "summary"
+                  ? p.text
+                  : `From "${p.title}": "${p.text.length > 320 ? p.text.slice(0, 320).replace(/\s+\S*$/, "") + "…" : p.text}"`,
+              )
               .join(" ")} ${relevant[0].limitations[0]}`
           : "The current evidence library does not cover this question. Ask the crew medical officer or add a reviewed source; I cannot infer an answer from unrelated readings.";
   const asksAboutData =

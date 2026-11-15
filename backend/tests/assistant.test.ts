@@ -127,8 +127,8 @@ test("structured red flags bypass provider independently of text", async () => {
   assert.equal(r.triage.urgent, true);
   assert.equal(r.modelStatus, "safety_bypass");
 });
-test("all seven sources and passage IDs are stable and unique", () => {
-  assert.equal(new Set(evidence.map((e: any) => e.id)).size, 7);
+test("all sources and passage IDs are stable and unique", () => {
+  assert.equal(new Set(evidence.map((e: any) => e.id)).size, 46);
   assert.ok(evidence.every((e: any) => typeof e.id === "string"));
   assert.equal(new Set(passages.map((p) => p.id)).size, passages.length);
   assert.ok(
@@ -142,7 +142,7 @@ test("retrieval selects question-specific sources, including Arabic and follow-u
     ["sleep in space", "sleep_2014"],
     ["kidney stones and calcium", "kidney_2024"],
     ["drug stability storage", "drug_2011"],
-    ["muscle exercise in space", "muscle_2009"],
+    ["muscle exercise in space", "hrp_muscle_aerobic_2023"],
     ["قلة النوم في الفضاء", "sleep_2014"],
   ])
     assert.ok(
@@ -750,4 +750,148 @@ test("the model is told the size limits the checker enforces", async () => {
   assert.match(SYSTEM_PROMPT, /1,?600 characters/);
   assert.match(SYSTEM_PROMPT, /200 characters/);
   assert.match(SYSTEM_PROMPT, /400 characters/);
+});
+
+// ---- NASA evidence library and full papers ----
+test("each HALO topic question finds a fitting NASA or peer-reviewed source", () => {
+  const cases: [string, string[]][] = [
+    [
+      "Why is my urine dark?",
+      [
+        "hrp_renal_stone_2017",
+        "nasa_body",
+        "kidney_2024",
+        "okada_urolithiasis_2022",
+      ],
+    ],
+    [
+      "My vision is blurry",
+      ["hrp_sans_2017", "lee_sans_2020", "gew_sans_consensus_2026"],
+    ],
+    [
+      "I feel dizzy when I stand up",
+      ["hrp_orthostatic_2015", "wood_legcuff_2019"],
+    ],
+    [
+      "How fast do astronauts lose bone?",
+      [
+        "stavnichuk_bone_2020",
+        "hrp_bone_fracture_2024",
+        "okada_urolithiasis_2022",
+        "rosenthal_bisphosphonate_2024",
+      ],
+    ],
+    [
+      "How much muscle do I lose without exercise?",
+      ["hrp_muscle_aerobic_2023", "scott_exercise_2023"],
+    ],
+    [
+      "What is NASA's career radiation limit?",
+      [
+        "nasa_std_3001_vol1_revc",
+        "nasa_ochmo_radiation_brief",
+        "ntrs_radiation_pel_2016",
+      ],
+    ],
+    [
+      "What happens in a solar particle event?",
+      ["hrp_ars_spe_2016", "nasa_ochmo_radiation_brief"],
+    ],
+    [
+      "How did I sleep?",
+      ["hrp_sleep_circadian_2016", "sleep_2014", "koller_sleep_2021"],
+    ],
+    [
+      "Why do I keep getting cold sores?",
+      ["immune_2019", "crucian_immune_2018", "hrp_immune_2013"],
+    ],
+    [
+      "Do medicines expire faster in space?",
+      [
+        "reichard_potency_2023",
+        "drug_2011",
+        "diaz_formulary_2024",
+        "hrp_pharmacology_2023",
+      ],
+    ],
+    ["Am I eating enough food?", ["hrp_nutrition_2015", "laurens_energy_2019"]],
+    [
+      "I feel lonely and stressed",
+      [
+        "hrp_behavioral_2016",
+        "nasrini_hera_cognition_2020",
+        "dev_cognition_2024",
+      ],
+    ],
+  ];
+  for (const [q, ids] of cases)
+    assert.ok(
+      retrieve(q).some((p) => ids.includes(p.sourceId)),
+      q,
+    );
+});
+test("off-topic questions find no evidence, so the model is not asked", () => {
+  for (const q of [
+    "What is the capital of France?",
+    "Tell me a joke",
+    "best pizza recipe",
+  ])
+    assert.deepEqual(retrieve(q), [], q);
+});
+test("search over the full library stays fast", () => {
+  const qs = [
+    "kidney stones",
+    "blurry vision",
+    "radiation limit",
+    "sleep",
+    "bone loss",
+    "dizzy standing",
+    "medicine expiry",
+    "cold sores",
+    "muscle",
+    "lonely",
+  ];
+  const t = performance.now();
+  for (let i = 0; i < 3; i++) for (const q of qs) retrieve(q);
+  assert.ok((performance.now() - t) / (qs.length * 3) < 50);
+});
+test("every full text has a reuse licence and a curated record; every quote is in its source", async () => {
+  const { readdirSync, readFileSync } = await import("node:fs");
+  const dir = new URL("../resources/papers/", import.meta.url);
+  const norm = (s: string) =>
+    s
+      .normalize("NFKC")
+      .replace(/[‘’]/g, "'")
+      .replace(/[“”]/g, '"')
+      .replace(/[–—]/g, "-")
+      .replace(/­/g, "")
+      .replace(/\s+/g, " ")
+      .trim()
+      .toLowerCase();
+  const texts = new Map<string, string[]>();
+  for (const f of readdirSync(dir)) {
+    const doc = JSON.parse(readFileSync(new URL(f, dir), "utf8"));
+    assert.match(doc.licence, /CC BY|public use permitted/, doc.id);
+    assert.ok(
+      evidence.some((e: any) => e.sourceId === doc.id),
+      `${doc.id} has a curated record`,
+    );
+    texts.set(
+      doc.id,
+      doc.chunks.map((c: any) => norm(c.text)),
+    );
+  }
+  let checked = 0;
+  for (const e of evidence as any[]) {
+    const chunks = texts.get(e.sourceId);
+    if (!chunks) continue; // summary-only sources are checked against their PDFs when ingested
+    for (const q of e.claim_quotes ?? []) {
+      assert.ok(
+        chunks.some((t) => t.includes(norm(q.quote))),
+        `${e.sourceId}: ${q.quote.slice(0, 60)}`,
+      );
+      checked++;
+    }
+  }
+  assert.ok(checked > 150, `checked ${checked} quotes`);
 });

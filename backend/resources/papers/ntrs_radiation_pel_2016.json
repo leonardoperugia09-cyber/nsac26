@@ -1,0 +1,27 @@
+{
+"id": "ntrs_radiation_pel_2016",
+"title": "NASA Space Radiation Protection Strategies: Risk Assessment and Permissible Exposure Limit",
+"authors": "Huff JL, Patel ZS, Simonsen LC",
+"year": 2016,
+"licence": "NASA NTRS: public use permitted",
+"source_url": "https://ntrs.nasa.gov/citations/20160014511",
+"topics": [
+"radiation"
+],
+"kind": "full_text_excerpts",
+"note": "Verbatim text extracted from the source for retrieval; page furniture and the reference list removed. Not reviewed by HALO.",
+"chunks": [
+{
+"id": "ntrs_radiation_pel_2016:x1",
+"text": "NASA SPACE RADIATION PROTECTION STRATEGIES – RISK ASSESSMENT AND J.L. Huff1, 2, Z.S. Patel2, 3, L.C Simonsen4 1MEI Technologies, 2KBRwyle, 3NASA Johnson Space Center, 4NASA Langley Research Permissible exposure limits (PELs) for short-term and career astronaut exposures to space radiation have been set and approved by NASA with the goal of protecting astronauts against health risks associated with ionizing radiation exposure. Short term PELs are intended to prevent clinically significant deterministic health effects, including performance decrements, which could threaten astronaut health and jeopardize mission success. Career PELs are implemented to control late occurring health effects, including a 3% risk of exposure induced death (REID) from cancer, and dose limits are used to prevent cardiovascular and central nervous system diseases."
+},
+{
+"id": "ntrs_radiation_pel_2016:x2",
+"text": "For radiation protection, meeting the cancer PEL is currently the design driver for galactic cosmic ray and solar particle event shielding, mission duration, and crew certification (e.g., 1year ISS missions). The risk of cancer development is the largest known long-term health consequence following radiation exposure, and current estimates for long-term health risks due to cardiovascular diseases are approximately 30% to 40% of the cancer risk for exposures above an estimated threshold (Deep Space one-year and Mars missions). Large uncertainties currently exist in estimating the health risks of space radiation exposure."
+},
+{
+"id": "ntrs_radiation_pel_2016:x3",
+"text": "Improved understanding through radiobiology and physics research allows increased accuracy in risk estimation and is essential for ensuring astronaut health as well as for controlling mission costs, optimization of mission operations, vehicle design, and countermeasure assessment. We will review the Space Radiation Program Element’s research strategies to increase accuracy in risk models and to inform development and validation of the permissible exposure limits."
+}
+]
+}

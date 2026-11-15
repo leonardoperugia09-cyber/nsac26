@@ -1,0 +1,59 @@
+{
+"id": "ntrs_standard_measures_2018",
+"title": "Spaceflight Standard Measures",
+"authors": "Zwart SR, et al.",
+"year": 2018,
+"licence": "NASA NTRS: public use permitted",
+"source_url": "https://ntrs.nasa.gov/citations/20180002943",
+"topics": [
+"monitoring"
+],
+"kind": "full_text_excerpts",
+"note": "Verbatim text extracted from the source for retrieval; page furniture and the reference list removed. Not reviewed by HALO.",
+"chunks": [
+{
+"id": "ntrs_standard_measures_2018:x1",
+"text": "The main goal is to ensure that a minimal set of measures is consistently captured from all ISS crewmembers until the end of ISS to characterize the effects of space. The data from these measures will placed in an archive managed by HRP and can be made available to studies via data sharing agreements. • The data from these measures will be utilized to: • Generate metrics (non-identified) for human system risk assessments to enable: • Monitoring of countermeasure effectiveness • Interpretation of health and performance outcomes (standards)"
+},
+{
+"id": "ntrs_standard_measures_2018:x2",
+"text": "• Inform and support future hypothesis-driven, missionenabling research • The data from these measures will be placed in an archive managed by HRP and can be made available to studies via data sharing agreements. • All measures vetted in previous ISS flight studies • Standard Measures is not hypothesis-driven • How a study can request Standard Measures data: • Data sharing must be approved via standard Data Sharing Actigraphy w/ sleep logs (2 weeks each) (L-270 & L-180) Actigraphy (continuous) Actigraphy w/ sleep logs (2 weeks) (R+0) Personality survey (anytime preflight) Sleep quality/team questionnaires (monthly)"
+},
+{
+"id": "ntrs_standard_measures_2018:x3",
+"text": "Cognition (L-120 fam & L-90) Cognition (FD30 & R-30) Cognition (R+10 & R+30) Cellular Profile (L-270 & L-90) Cellular Profile (FD30 & R-30) Cellular Profile (+ Survey) (R+30) Biochemical Markers (L-180) Biochemical Markers (blood only) (FD30 & R-30) Biochemical Markers (R+30) Microbiome (L-90) Microbiome (FD30 & R-30) Microbiome (R+30) Carotid Intima-Media Thickness (cIMT) (L-180) cIMT (R+5 & R+30) Test Sessions: Worn for two 2-week sessions pre-flight (L-270, L-180), continuously in-flight starting before first scheduled sleep on station, and one 2-week session post-flight (R+0)"
+},
+{
+"id": "ntrs_standard_measures_2018:x4",
+"text": "• Worn snug against the non-dominant wrist, similar to a wrist watch. • A brief post-sleep survey daily during the two-week periods when actigraphy is collected on the ground Risk of Performance Decrements and Adverse Health Outcomes Resulting from Sleep Loss, Circadian Desynchronization, and Work Overload (Sleep) Test Sessions: Personality Survey – anytime pre-flight; Sleep quality/team questionnaire monthly in-flight Personality Survey (one time pre-flight): • International Personality Item Pool, Neuroticism-Extraversion-Openness (IPIPNEO)"
+},
+{
+"id": "ntrs_standard_measures_2018:x5",
+"text": "• Contains questions related to the way one tends to think and act Sleep quality/team questionnaire (monthly): • Completed monthly during the mission before and after sleep • Contains questions related to sleep (e.g., amount, quantity, quality), mood, affect, team cohesion and performance, and crew living/habitability Risk of Performance and Behavioral Health Decrements Due to Inadequate Cooperation, Coordination, Communication, and Psychosocial Adaptation within a Team (Team) Risk of Performance Decrements and Adverse Health Outcomes Resulting from Sleep Loss, Circadian"
+},
+{
+"id": "ntrs_standard_measures_2018:x6",
+"text": "Desynchronization, and Work Overload (Sleep) Test Sessions: L-120 fam, L-90, FD30, R-30, R+10, and R+30 A brief computerized neurocognitive test battery • 10 brief tests that cover a range of cognitive domains relevant for spaceflight including: Risk of Adverse Cognitive or Behavioral Conditions and Psychiatric Disorders (BMed) Test Sessions: L-270, L-90, Undock of eligible return vehicle closest to FD30, Undock of your return vehicle, and R+30; Cellular Profile Survey R+15 • 2 tubes totaling 10 mL are collected at each session • In-flight, the blood collected as close as feasible to a Soyuz undock so that live blood cells may be quickly returned to ground."
+},
+{
+"id": "ntrs_standard_measures_2018:x7",
+"text": "• Collected at start of day on the same day the blood is collected • Return ground samples to JSC immediately in provided cooler Cellular Profile Survey (post-flight only) • A questionnaire about experiences during flight related to immunology, such as allergies, rashes, hypersensitivities, infections and wound healing Risk of Adverse Health Event due to Altered Immune Response (Immune) Test Sessions: L-180, FD30, R-30, and R+30 • Ground: 3 tubes totaling 15.7 mL collected each session, collected early morning • In-flight: 2 tubes totaling 10 mL collected"
+},
+{
+"id": "ntrs_standard_measures_2018:x8",
+"text": "• 24-hour urine collection -shared with medical collection when feasible • Exercise log completed at time of sample collection Risk of Performance Decrement and Crew Illness Due to Inadequate Food and Nutrition (Nutrition and Food) Test Sessions: L-90, FD30, R-30, and R+30 • Sample forearm, forehead, nostril, and control area using pre-moistened swabs • Short environment, health and hygiene survey completed before each collection session • Sample every other day for 7 days (Total: 4 samples) • Ground collection using Human Stool Sampling Kit (provided)"
+},
+{
+"id": "ntrs_standard_measures_2018:x9",
+"text": "• In-Flight collection using swab to collect sample from WHC immediately after defecation Risk of Adverse Health Effects due to Host-Microorganism Interactions (Microhost) -Types and concentrations of microorganisms on the body cIMT • Ultrasound measures of carotid arterial wall thickness (arterial structure) • Early indicator of vascular dysfunction (oxidative stress) • Short survey conducted during the test regarding exercise, diet, sleep Risk of Cardiovascular Disease and Other Degenerative Tissue Effects from Radiation Exposure (Degen)"
+},
+{
+"id": "ntrs_standard_measures_2018:x10",
+"text": "Test Sessions: L-225 fam session, L-90, R+0, and R+9 • Rise from a seated position as quickly as you can without using hands • Walk 10 heel-to-toe steps across the floor with eyes closed and arms and hands folded across the chest for 3 trials • Rise from a prone position as quickly as possible • Step on a solid floor and remain standing for 3 minutes • Conducted multiple times during the test to assess motion sickness level Risk of Impaired Control of Spacecraft/Associated Systems and Decreased Mobility due to Vestibular/Sensorimotor Alterations Associated with Space Flight (Sensorimotor)"
+},
+{
+"id": "ntrs_standard_measures_2018:x11",
+"text": "HRP Spaceflight Standard Measures will provide a consistent set of validated measured parameters that document response to spaceflight as well as variation in the astronaut population in response to various duration exposures to spaceflight. This set of measures will constitute a back stop of data for investigators to leverage off of to develop hypotheses, provide context for experimental data acquired concurrently with each unique experiment, or be analyzed for population responses to various mission durations (e.g., 6 weeks, 6 months, and 1 year)."
+}
+]
+}

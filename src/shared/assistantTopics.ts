@@ -55,20 +55,33 @@ export function topicAnswer(
       evidenceIds: priority?.evidenceIds ?? ["nasa_body"],
     };
   }
+  // Never let HALO talk anyone out of reporting: the crew medical officer decides, HALO can miss things
+  if (
+    /(?:don'?t|do not|no) need to (?:tell|report|inform|bother)|skip (?:telling|the) (?:cmo|medical officer|doctor)|(?:not|never) tell (?:the |my )?(?:cmo|medical officer|doctor|surgeon|anyone)|keep (?:it|this) (?:from|secret)|hide (?:it|this|my symptoms)/.test(
+      q,
+    )
+  ) {
+    return {
+      text: "Please do tell your crew medical officer. HALO's readings and rules are a demonstration and can miss things, and a nominal result is not an all-clear.",
+      action:
+        "Tell your crew medical officer what you noticed today, even if it seems small.",
+      evidenceIds: ["ntrs_eimo_conops_2024"],
+    };
+  }
   if (q.includes("headache")) {
     return {
-      text: "Was it sudden and severe, or does it come with vision change, confusion or weakness? If yes, use Urgent help now. If not, headaches in space often come from fluid shifting toward the head or from cabin CO2.",
+      text: "Was it sudden and severe, or does it come with vision change, confusion or weakness? If yes, use Urgent help now. If not, headaches in space can come from fluid shifting toward the head or from cabin CO2.",
       action:
         "Note it in Daily Log, with when it started. Tell your crew medical officer if it keeps coming back.",
-      evidenceIds: ["nasa_body"],
+      evidenceIds: ["hrp_sans_2017", "nasa_body"],
     };
   }
   if (/dizz|light-?headed|faint|woozy/.test(q)) {
     return {
-      text: "Feeling dizzy when you stand up is common in space. Fluids shift toward the head in microgravity, and after a while the body is slower to adjust when you move upright (orthostatic intolerance).",
+      text: "Dizziness on standing is best documented after landing: fluid that shifted toward the head in flight leaves less blood volume, so the body is slower to adjust when you stand up (orthostatic intolerance). In orbit it is less studied, so it is worth telling your crew medical officer.",
       action:
         "Sit or lie down until it passes. Drink fluids as normal, log it in Daily Log and tell your crew medical officer. If you faint, or have chest pain or palpitations, use Urgent help.",
-      evidenceIds: ["nasa_body"],
+      evidenceIds: ["hrp_orthostatic_2015"],
     };
   }
   if (/radiation/.test(q) && /dose|so far|total|exposure|msv/.test(q)) {
@@ -95,26 +108,34 @@ export function topicAnswer(
   }
   if (/blurr|vision|eyesight/.test(q)) {
     return {
-      text: "Blurred vision can be an early sign of SANS, when fluid shifting toward the head affects the eye. About 66% of long-duration astronauts show early signs.",
+      text: "Blurred vision can be an early sign of SANS, when fluid shifting toward the head affects the eye. About two in three long-duration astronauts show optic disc swelling on detailed eye scans, and about four in five show at least one SANS sign.",
       action:
         "Do the vision self-test in Daily Log today and tell your crew medical officer. If you suddenly lose vision, use Urgent help.",
-      evidenceIds: ["nasa_body"],
+      evidenceIds: ["gew_sans_consensus_2026", "hrp_sans_2017"],
     };
   }
   if (/sleep|slept|insomnia|tired/.test(q)) {
     const night = facts.drift?.sleep_hours;
     if (night)
       return {
-        text: `Last night you slept ${round(night.value)} hours. Your normal range is ${round(night.bandLo)} to ${round(night.bandHi)} hours. One short night slows reaction time.`,
+        text: `Last night you slept ${round(night.value)} hours. Your normal range is ${round(night.bandLo)} to ${round(night.bandHi)} hours. A night without sleep slows reaction time; a single shortened night may not.`,
         action:
           "Take the reaction test before any spacewalk or docking. Tonight, dim the lights an hour before sleep and keep your schedule fixed.",
-        evidenceIds: ["sleep_2014"],
+        evidenceIds: [
+          "hrp_sleep_circadian_2016",
+          "sleep_2014",
+          "nasrini_hera_cognition_2020",
+        ],
       };
     return {
-      text: "Most crews sleep about 6 hours in space. One short night slows reaction time.",
+      text: "Most crews sleep about 6 hours in space. A night without sleep slows reaction time; a single shortened night may not.",
       action:
         "Take the reaction test before any spacewalk or docking. Tonight, dim the lights an hour before sleep and keep your schedule fixed.",
-      evidenceIds: ["sleep_2014"],
+      evidenceIds: [
+        "hrp_sleep_circadian_2016",
+        "sleep_2014",
+        "nasrini_hera_cognition_2020",
+      ],
     };
   }
   return null;

@@ -1,0 +1,183 @@
+{
+"id": "diaz_formulary_2024",
+"title": "Expiration analysis of the International Space Station formulary for exploration mission planning",
+"authors": "Diaz TE, Ives EC, Lazare DI, Buckland DM",
+"year": 2024,
+"licence": "CC BY 4.0",
+"source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11266549/",
+"topics": [
+"medication"
+],
+"kind": "full_text_excerpts",
+"note": "Verbatim text extracted from the source for retrieval; page furniture and the reference list removed. Not reviewed by HALO.",
+"chunks": [
+{
+"id": "diaz_formulary_2024:x1",
+"text": "Effective medications will be required to maintain human health for long-duration space operations. Previous studies have explored the stability and potency of several of the medications used on the International Space Station (ISS). This study is a comprehensive analysis of the expected terrestrial shelf-lives of the entire 2023 ISS formulary using 4 international registries. Of the 106 medications in the ISS formulary, shelf-life data was found in at least 1 of the registries for 91 (86%) medications. Of these 91 medications, 54 have an estimated terrestrial shelf-life of ≤36 months when stored in their original packaging. 14 will expire in less than 24 months. The results of this study provide operational insight to supplying a pharmacy for an exploration mission, optimize therapeutic outcomes, and prevent diseases associated with extended spaceflight operations."
+},
+{
+"id": "diaz_formulary_2024:x2",
+"text": "Ultimately, those responsible for the health of spaceflight crews will have to find ways to extend the expiration of medications to the complete mission duration or accept the elevated risk associated with administration of an expired medication. Subject terms: Occupational health, Outcomes research, Pharmacodynamics Space is an extreme environment containing unique stressors which present hazards to human health1. In addition, humans who live and work in the space environment are separated from the standard of care available on Earth2,3. As the National Aeronautics and Space Administration (NASA) and its international partners plan for long duration, deep space missions, humans will be at a greater risk of adverse medical conditions compared to missions in low earth orbit (LEO)2. The use of select pharmacological agents will be one of many countermeasures to mitigate these risks4,5."
+},
+{
+"id": "diaz_formulary_2024:x3",
+"text": "Astronauts report daily use of medications from medication kits aboard the International Space Station (ISS)6. A 2015 retrospective study, which examined medication use during space flights greater than 30 days, discovered pain, congestion, circadian disruptions, and allergies were some of the most common conditions astronauts routinely self-treated aboard the ISS6. In addition, a follow-up study utilizing a software-based medication tracker found on average 20.6 ± 8.4 doses of various medications administered per subject per week in flight7. However, the expiration of medications, lack of resupply capability, and absence of emergency evacuation present an operational challenge to the medical capabilities during deep space missions, such as a 36 month expedition to and from Mars8–10."
+},
+{
+"id": "diaz_formulary_2024:x4",
+"text": "Therefore, it is imperative to consider the usefulness of a safe and effective pharmacy aboard future spacecraft. Medication stability and potency are a few of the primary factors to consider for supplying a self-sufficient astropharmacy, capable of performing Earth Independent Medical Operations (EIMO)9,11. Drug stability evaluation guidance is issued by the International Conference on Harmonisation (ICH) and adopted by the US Food and Drug Administration (FDA) to ensure the quality of a drug substance or product under a variety of factors including time and environmental factors (i.e. temperature, humidity, and light)12–15. Stability testing establishes storage conditions as well as a drug retest timelines for drug substances12,15."
+},
+{
+"id": "diaz_formulary_2024:x5",
+"text": "If a drug becomes unstable, its physical or chemical properties may be altered, such as its appearance, potency, dissolution, solubility, or presence of degradation products13,14. Manufacturers must perform these tests on at least three primary batches of a drug substance12,15. In addition, testing must also be done on a drug substance in the container system it is to be stored and distributed in, as well as under its storage conditions12,16. As of 2018, the ICH establishes the acceptable range of drug potency for medications approved by the FDA must fall within 95-105%12. Any variation from this range may suggest potential danger to the patient due to lack of efficacy or the presence of toxic degradation products17,18. Stability studies of a drug’s active pharmaceutical ingredient (API) guide the medication’s estimated shelf-life15,16."
+},
+{
+"id": "diaz_formulary_2024:x6",
+"text": "Using the estimated shelf-life, manufacturers extrapolate potency data from their stability studies to identify a supported shelf-life and a maximum shelf-life, which are calculated using statistical methods and an ICH decision tree, respectively15. The labeled shelf-life, which is printed on the drug product’s label, is defined as the shorter of the supported shelf-life and maximum shelf-life15. The labeled shelf-life is then used to calculate the actual expiration date on each drug product15. However, it is important to note that this expiry date is the minimum period of time which the drug will remain stable under its sealed packaging in recommended storage conditions. Therefore, it is not a reflection of the drug’s true shelf-life, which may be significantly longer than proposed."
+},
+{
+"id": "diaz_formulary_2024:x7",
+"text": "Medications contained in the United States (US) portion of the ISS, as part of the ISS medication kits, are stored and packaged in the US prior to flight. In the US, terrestrial shelf-life data are largely unavailable to the public9,19. This is primarily because US law does not require expiration dates, use-by dates, or re-test dates on their product labels. Without accurate shelf-lives, humans in long duration, deep-space operations will be at risk of therapeutic failure or toxicity if given a medication past its expiration date9,11,20. Ultimately, this gap in knowledge proves the necessity to establish a repository characterizing the labeled shelf-lives of all medications that are to be transported to space."
+},
+{
+"id": "diaz_formulary_2024:x8",
+"text": "Through a Freedom of Information Act (FOIA) request, we received a comprehensive manual from NASA containing the medical protocols, procedures, and supplies existing aboard the ISS (received on August 2nd, 2023). This document contains the list of chosen medications and medical equipment stored on the ISS, referred to here as the ISS “formulary.” Each medication within the formulary is divided and assigned to a medication pack based on use. This formulary contains the drug product, strength/volume, route of administration, quantity in pack, unit, possible side effects, comments, and location; however, it does not cite any expiry data. In this study, the term “medications” refers to the products that exist in the ISS formulary, regardless of whether the product contains an actual API (i.e, sterile water)."
+},
+{
+"id": "diaz_formulary_2024:x9",
+"text": "This investigation aims to evaluate the proposed terrestrial shelf-lives of medications stored on board the ISS utilizing publicly available shelf-life data and to identify a shelf-life for each medication, if available. As of 2023, there are 111 total medications on board the ISS, split between five different medical kits. Each medical kit is color coded and holds medications pertinent to their designated use. The medication breakdown is as follows: the convenience medication pack holds 23 medications; the emergency medical treatment pack holds 4 medications; the oral medication pack holds 36 medications; the topical & injectable medication pack holds 37 medications; the vascular contingency medication pack holds 11 medications. Two medications exist as a diluent for another medication and were excluded: sterile water for injection and sterile water for reconstitution."
+},
+{
+"id": "diaz_formulary_2024:x10",
+"text": "Three medications of the same strength and dosage form exist in more than one medication pack, therefore these duplicates were excluded: fexofenadine (Allegra) 180 mg tablets, modafinil (Provigil) 200 mg tablets, and bacitracin 500 units per gram ointment. Consequently, 106 unique drug products were analyzed. No expiration data could be obtained for 14% (n = 15) of the ISS formulary. Terrestrial expiration data were obtained for 86% (n = 91) of the ISS formulary. Using each medication’s maximum labeled shelf-life, 59.3% (n = 54) of the 91 unique medications with expiry data had a terrestrial shelf-life ≤36 months when stored in their original packaging. Using each medication’s minimum labeled shelf-life, 97.8% (n = 89) have a terrestrial shelf-life ≤36 months when stored in their original packaging."
+},
+{
+"id": "diaz_formulary_2024:x11",
+"text": "Table 1 is the convenience medication pack. There are four medications in it with no publicly available expiry data: bacitracin 500 units per gram topical ointment; dextran, glycerin and hypromellose (GenTeal Tears) 0.1% and 0.2%, 0.3%, ophthalmic solution; mineral oil & white petrolatum (Refresh PM) 42.5%/57.3% ophthalmic ointment; sodium chloride (AYR saline) 0.9% intranasal spray. Table 2 is the emergency medical treatment medication pack, and all four medications in it contain publicly available expiry data from at least one source. Table 3 is the oral medication pack."
+},
+{
+"id": "diaz_formulary_2024:x12",
+"text": "There are five medications in it with no publicly available expiry data or did not meet inclusion criteria: fexofenadine (Allegra) 180 mg tablet [duplicate], benzonatate (Tessalon Perles) 100 mg softgel, hydrocodone/acetaminophen (Vicodin HP) 10 mg/300 mg tablets, meclizine (Antivert) 25 mg tablets, and modafinil (Provigil) 200 mg tablet [duplicate]. Table 4 is the topical & injectable medication pack."
+},
+{
+"id": "diaz_formulary_2024:x13",
+"text": "There are ten medications in it with no publicly available expiry data or did not meet inclusion criteria: benzocaine swabstick 20% topical swab, bacitracin 500 units per gram topical ointment [duplicate], ciprofloxacin/dexamethasone (Ciprodex) 0.3%/0.1% ophthalmic drops, erythromycin 0.5% ophthalmic ointment, cromolyn (Nasalcrom) 5.2 mg intranasal spray, diphenhydramine (Benadryl) 50 mg per mL injection, sterile water for injection, fluorescein strip 1 mg ophthalmic strips, desoximetasone (Topicort) 0.05% topical cream/gel, and cyanoacrylate (Dermabond) 0.5 mL topical swab. Table 5 is the vascular contingency medication pack, and there is one medication in it with no publicly available expiry data or did not meet inclusion criteria: sterile water for reconstitution."
+},
+{
+"id": "diaz_formulary_2024:x14",
+"text": "Shelf-life data for the convenience medication pack in months Expiration data points are presented in months. Medication(s) in italics exist as a duplicate drug. Shelf-lives with an asterisk (*) represent data obtained from drug products of a differing strength than the ISS formulary. A “drug class” is presented with each group of medications, as reported in the ISS formulary. Shelf-life data for the emergency medical treatment medication pack in months Expiration data points are presented in months. Shelf-lives with an asterisk (*) represent data obtained from drug products of a differing strength than the ISS formulary. A “drug class” is presented with each group of medications, as reported in the ISS formulary."
+},
+{
+"id": "diaz_formulary_2024:x15",
+"text": "Shelf-life data for the oral medication pack in months Expiration data points are presented in months. Medication(s) in italics exist as a duplicate or were excluded from final analysis. Shelf-lives with an asterisk (*) represent data obtained from drug products of a differing strength than the ISS formulary. A “drug class” is presented with each group of medications, as reported in the ISS formulary. Shelf-life data for the topical & injectable medication pack in months Expiration data points are presented in months. Medication(s) in italics exist as a duplicate or were excluded from final analysis. Shelf-lives with an asterisk (*) represent data obtained from drug products of a differing strength than the ISS formulary. A “drug class” is presented with each group of medications, as reported in the ISS formulary."
+},
+{
+"id": "diaz_formulary_2024:x16",
+"text": "Shelf-life data for the vascular contingency medication pack in months Expiration data points are presented in months. Medication(s) in italics were excluded from final analysis. Shelf-lives with an asterisk (*) represent data obtained from drug products of a differing strength than the ISS formulary. A “drug class” is presented with each group of medications, as reported in the ISS formulary. Much of the expiry data in this publicly available repository are presented as a range due to the varying shelf-lives between manufacturers of the same drug product, such as brand versus generic products. Additionally, the shelf-lives represent the expiration for each drug product in its original packaging, and thus may be shorter if repackaged such as with the medications in the ISS5,8–11,18,20,21."
+},
+{
+"id": "diaz_formulary_2024:x17",
+"text": "The lack of expiration data available for 14% (n = 15) of the 2023 ISS formulary presents the risk of therapeutic failure for humans in extended space missions. A crewed mission to and from Mars, with ample time on the planet’s surface, may take approximately 24 to 36 months22. Using the maximum labeled shelf-life across all sources for each medication, we found that 14 medications will expire by 24 months: one ophthalmic lubricant, one advanced life support medication, one anaphylaxis treatment medication, one benzodiazepine, one antiangina medication, two corticosteroids, one local anesthetic, one topical urinary jelly, two antibiotics, one antipsychotic, one inhaler, and one ear wax removal medication. Furthermore, over half (n = 54) of the entire 2023 ISS formulary will expire by 36 months; this is demonstrated in the Kaplan-Meier survival curve in Fig. 1."
+},
+{
+"id": "diaz_formulary_2024:x18",
+"text": "The earliest medication expiration begins at 18 months, presenting a minimal risk for an extended mission to the moon: one ophthalmic lubricant. Ultimately, these findings amplify the risk of therapeutic failure when treating an adverse health condition in an extended space expedition. Due to pharmaceutical company proprietary concerns, it is difficult to obtain US expiry data from the FDA23. This required us to consult drug databases in online repositories from other countries with similar drug stability standards as the US24–26. However, the ISS formulary shelf-lives may differ from the shelf-lives of medications manufactured in other countries due to differences in excipients, packaging, and re-test standards9. For example, we found promethazine tablets possess a shelf-life of up to 60 months from manufacturers in NZ and AU, but a shelf-life of 36 months in the UK/EU."
+},
+{
+"id": "diaz_formulary_2024:x19",
+"text": "Importation of medications and collaboration with other countries may therefore be a future consideration. Another logistical consideration for supplying a self-sufficient pharmacy in space pertains to pharmaceutical supply chains. The pharmaceutical industry is a complex landscape with many factors affecting the dynamics of its supply chains, often resulting in delays to the distribution of a drug product. The stepwise process from primary manufacturing of the API to the distribution of the final drug product to wholesalers and retailers may take up to 300 days27. This is due to delays from quality control, factory equipment and cleaning, potential coordination with contractors, and transportation of supplies, among others27. By the time NASA receives and packages their drug products for spaceflight, the products may have already lost a year of their shelf-life."
+},
+{
+"id": "diaz_formulary_2024:x20",
+"text": "Therefore, a product’s functional shelf-life can be even shorter than the labeled shelf-life. In rare scenarios, drug shortages occur, which can impact NASA mission planning. Management of drug demand at a manufacturer level is based on historical data and market intelligence in each geographic location27. In the context of supplying medications in space, this bottleneck effect can be anticipated from market trends, but ultimately there is little that can be done on the consumer level. The use of logistics data and trends through data mining may be useful for NASA and its counterparts."
+},
+{
+"id": "diaz_formulary_2024:x21",
+"text": "Based on comments within the ISS formulary, the two sterile water diluents we excluded are intended for use with alternate medications: ziprasidone (Geodon) 20 mg per mL injection and prothrombin complex concentrate (KCentra) 1000 units. Moreover, packaging information from manufacturers of both of these products describe a diluent included with their drug product. For this reason, we assumed that these diluents likely have the same shelf-life as the actual drug product it is packaged with. However, we found that the labeled shelf-life of sterile water ranges from 18 to 60 months across all sources, depending on the container type (i.e. bags, vials, or ampoules) and size."
+},
+{
+"id": "diaz_formulary_2024:x22",
+"text": "We found data for benzocaine 20% gel but did not include this in the final analysis due to a likely different formulation than the benzocaine 20% swabstick used in the ISS. The shelf-life of benzocaine gel is 36 months from EU sources. Similarly, a 500 mg coated granule formulation of levetiracetam was found from UK/EU sources but was not included in the final analysis. The shelf-life of these coated granules in sachets is 60 months. Cromolyn (Nasalcrom) 5.2 mg intranasal spray exists in the US as an OTC product, but is unavailable in this dosage form in the UK/EU, NZ, and AU; therefore, no data was found for this product. While Zaleplon (Sonata) was discontinued for marketing and distribution in the EU in 2015, the shelf life data used in our analysis for this medication was from an EU source28."
+},
+{
+"id": "diaz_formulary_2024:x23",
+"text": "Blue et al. explored the challenges and current understanding of supplying a pharmacy for space exploration in 2019, but did not include a list of every medication in the ISS and their shelf-life9. However, Blue et al. did provide preliminary information from emc of the shelf-lives of 42 medications aboard the ISS, two of which are the same drug in different dosage forms (Diphenhydramine tablet and injectable and promethazine tablet and injectable)9. Aside from four of the 42 medications explored in Blue et al. (levofloxacin 500 mg tablet, modafinil 200 mg tablet, tamsulosin 0.4 mg capsule, and diphenhydramine 50 mg per mL), the shelf-life data obtained in our study align with previously reported emc-obtained data. Therefore, our study is more comprehensive due to inclusion of all medications routinely stored on board the ISS as of 2023."
+},
+{
+"id": "diaz_formulary_2024:x24",
+"text": "Furthermore, our study also includes data from sources outside of the US and UK/EU, such as NZ and AU. However, there is one medication included in the Blue et al. analysis which was not listed in the 2023 ISS formulary: triamcinolone cream9. This is likely due to an update in the ISS formulary since publication. Triamcinolone cream is not included in our analysis, but the reported shelf-life from Blue et al. is 36 months9. Additionally, sodium chloride (normal saline) is included in the Blue et al. analysis, but the exact dosage form is not specified; the reported shelf-life was 36 months9."
+},
+{
+"id": "diaz_formulary_2024:x25",
+"text": "While drug products naturally degrade over time, studies have alluded to degradation at an accelerated rate in space29–35. Du et al. found 25 of 36 medicines stored for 880 days (~2.5 years) on the ISS did not meet USP requirements for API strength, compared to the control group of 17 of 36 medicines at the same time point29. This is the only published study comparing the stability of medications after space flight to a control group on Earth after a set period of time11,29. However, medications stored on board the ISS are often repackaged in different containers than the stability studies conducted on Earth5,8–11,18,20. While interplanetary radiation may play a role in medication degradation, recent evidence proposes that drug repackaging prior to transportation to space may drive the accelerated degradation of drug stability11."
+},
+{
+"id": "diaz_formulary_2024:x26",
+"text": "Therefore, it should be noted the data presented in our study is merely an estimate of the terrestrial shelf-lives of the medications listed, and does not represent the shelf-lives of these medications in space. Regardless, our data contain valuable evidence for future investigations of space exploration medical capability5. The ISS formulary is frequently updated based on growing evidence of medication use in microgravity environments. For example, a publicly available document containing the 2016 ISS formulary includes 95 medications, but a 2017 NASA evidence report cites 107 medications in the ISS formulary23. This 2017 report also acknowledges information about the expiration dates of the ISS formulary medications based on FDA standards, suggesting that NASA may have a baseline knowledge of the proposed terrestrial shelf-lives of their medications23."
+},
+{
+"id": "diaz_formulary_2024:x27",
+"text": "It is unclear as to whether NASA utilizes brand or generic medications in the medication kits aboard the ISS; this may result in varying shelf-lives. In addition, this study may not include medications that might be used for commercial astronauts and space “tourists.” In our results tables, we indicate with an asterisk whether a data point was collected for a drug of a differing strength than what is contained in the ISS formulary. This is because some pharmaceutical companies from varying countries do not always manufacture the same drug strength as products in the US. For example, data for aspirin 81 mg tablets could not be found in the UK/EU, NZ, or AU, but these countries contained data for aspirin 75 mg or 100 mg tablets instead."
+},
+{
+"id": "diaz_formulary_2024:x28",
+"text": "Some of the expiration data points of the drug products collected in our analysis exist in different dosage forms, containers, or packaging compared to the ISS. For example, data for capsules, caplets, softgels, and tablets were obtained synonymously, and are stored in varying containers depending on the manufacturer, such as high density polyethylene (HDPE) bottles or polyvinyl chloride (PVC) blister packs. Additionally, data for vials, syringes, and ampoules for injection were obtained synonymously, but it is unlikely that ampoules may be used safely in space due to debris and inability to draw up the liquid into a syringe in a microgravity environment. This presents a vast limitation in some of the data presented in this study, particularly for the injectable products."
+},
+{
+"id": "diaz_formulary_2024:x29",
+"text": "One such situation in which our expiration data may not accurately represent the shelf-life of the drug product contained in the ISS is with sodium chloride flush (normal saline) 0.9%. Based on our inclusion criteria, we collected shelf-life data for sodium chloride vials, ampoules, and bags; data points for sodium chloride syringes could not be found. The shelf-life for this product ranged from 15 to 60 months. Similarly, sterile water is supplied in many different containers. As stated earlier, we chose to exclude both sterile water products in our analysis because comments in the ISS formulary describe these products as diluents for both ziprasidone and prothrombin complex concentrate. However, we recognize that many of the injectable products, such as the antibiotics, likely exist as a lyophilized powder and require reconstitution prior to use."
+},
+{
+"id": "diaz_formulary_2024:x30",
+"text": "Therefore, it is assumed that other diluents may exist in the ISS. The range of shelf-lives that we found for sterile water are 18 to 60 months, depending on the packaging and size. As previously mentioned, our study solely focuses on the terrestrial expiry data of drugs in their original storage conditions and does not take into account the risk of accelerated expiration of pharmaceuticals stored in space for extended periods of time, such as due to space radiation11. Lastly, the authors acknowledge this analysis is based on publicly available data through August 2023 and is subject to change based on future stability studies surrounding the aforementioned drug products."
+},
+{
+"id": "diaz_formulary_2024:x31",
+"text": "There is still much research to be conducted regarding the safe and efficacious use of medications for long-duration space flight missions. Several studies have explored the pharmacokinetic and pharmacodynamic (PK/PD) properties of medications in microgravity environments36–40. In-vivo PK/PD studies of commonly used ISS medications may guide future clinical guidelines for best practice dosing regimens in humans in space. Limited data is available regarding in-depth tracking of medication usage amongst humans during spaceflight6,7. One study utilized a novel iOS application to collect medication use data from volunteer astronauts during spaceflight, but usability was the primary criticism7. Advancements in software-based dose-tracking applications may assist with formulary selection, understanding medication tolerance, and pharmacovigilance in space."
+},
+{
+"id": "diaz_formulary_2024:x32",
+"text": "Pharmacogenomics, described as the impact of genetic variation on drug response, has been suggested to support pharmacological treatment in astronauts41. Stingl et al. found approximately a third of medications routinely stored in the ISS may be affected by genetic polymorphisms41. A deeper analysis of these medications and the extent of their effect on medication safety and effectiveness may provoke consideration of pharmacogenetic testing prior to spaceflight as well as personalized dosing for astronauts. The US Shelf-Life Extension Program (SLEP) investigates terrestrial expiration date extensions of select drug products for emergency preparedness42,43."
+},
+{
+"id": "diaz_formulary_2024:x33",
+"text": "For example, select lot numbers of doxycycline hyclate 100 mg capsules were approved for an expiration extension of over four years beyond the manufacturer’s originally labeled expiry date for an anthrax emergency preparedness response44. Other studies have demonstrated that many medications remain stable beyond their labeled expiration dates when stored in their original packaging45–50. Future expiration extension studies may provide a deeper understanding of under what conditions the expiration dates of medications can be extended for use in deep-space missions. Some pharmaceutical companies, such as Merck and Eli Lilly and Company, have begun exploring alterations in physical and chemical properties of medications in microgravity environments51,52."
+},
+{
+"id": "diaz_formulary_2024:x34",
+"text": "This may eventually lead to onboard manufacturing of space medicines such as through 3-D printing or on-demand manufacturing via miniaturized portable systems53–56. Although new stability guidance would likely be established for a pharmaceutical product manufactured in space, this concept may provide a solution for drug stability during EIMO. Pharmaceuticals will likely be the cornerstone of maintaining the health and performance of humans participating in exploration space missions. There is a gap in public knowledge in the prospective shelf-lives of the medications contained in the ISS formulary. It is imperative to know and understand these pharmacologic parameters in order to supply a safe and effective astropharmacy."
+},
+{
+"id": "diaz_formulary_2024:x35",
+"text": "The range of shelf-lives obtained from various international sources in this study provide insight for supplying a pharmacy for exploration spaceflight and may also provide foundational evidence for a deeper analysis of expiration extension studies. A lack of expiration data for 14% of the ISS medications shows the necessity for collaboration and transparency between pharmaceutical suppliers and spaceflight operators. More than half of the entire ISS formulary will expire before 36 months, the approximate duration of an extended mission to and from Mars. Instability of pharmaceutical agents increases the risk of therapeutic failure, and may complicate mission planning."
+},
+{
+"id": "diaz_formulary_2024:x36",
+"text": "NASA and its international partners may have the capability to design a self-sufficient pharmacy in space or on other terrestrial bodies through strategically planned research efforts to address the gaps in knowledge presented in this analysis. Ultimately, those responsible for the health of spaceflight crews will have to find ways to extend the expiration of medications to the complete mission duration or accept the elevated risk associated with administration of an expired medication. The medications in each medication kit within the ISS formulary were cross-referenced with each drug’s respective, publicly available US new drug application (NDA) and monograph, as well as the 2023 American Hospital Formulary Service (AHFS) Drug Information compendium to identify US shelf-life data."
+},
+{
+"id": "diaz_formulary_2024:x37",
+"text": "Then, we consulted four drug databases in online repositories from other countries to compare and explore expiry data. We used the United States Pharmacopeia (USP) Dictionary to identify international nomenclature equivalents of certain medications. The Electronic Medicines Compendium (emc) and Medthority were used in accordance with the European Medicines Agency (EMA) and Medicines and Healthcare products Regulatory Agency (MHRA) to obtain United Kingdom (UK) and European (EU) shelf-life data; MedSafe was used to obtain New Zealand (NZ) shelf-life data; Australian Register of Therapeutic Goods (ARTG) was used to obtain Australian (AU) shelf-life data."
+},
+{
+"id": "diaz_formulary_2024:x38",
+"text": "Shelf-life data from other publicly available sources were assessed for credibility utilizing a Stanford Credibility Tool, in which the sources were assessed for expertise, trustworthiness, reproducibility, and quality and given a score of 0–4. Expiration data points were scrutinized descriptively and stored in Microsoft Excel. The data were presented in tables indicating each medication in the ISS formulary with a range of estimated shelf-lives from each international source. Figure 2 provides a simplified pipeline of the project methodology. For analysis, both the minimum and maximum labeled shelf-life of each medication across all sources was scrutinized. For example, if a medication contains a shelf-life of 24–48 months in the UK/EU but 36 months in NZ and 60 months in AU, the minimum shelf-life was considered 24 months and the maximum 60 months."
+},
+{
+"id": "diaz_formulary_2024:x39",
+"text": "This method was used to create two Kaplan-Meier survival curves - one using the minimum shelf-lives and one using the maximum shelf-lives. The Kaplan-Meier survival curves were created manually using a Microsoft Excel Kaplan-Meier add-in. Medications included in our analysis are: (1) over-the-counter (OTC) and prescription products; (2) brand and generic products; (3) products that are of a similar dosage form and contain the same API, route of administration, and strength as the ISS formulary. If a shelf life for a certain drug strength was unavailable, the next closest drug strength was obtained, as indicated with an asterisk in our results."
+},
+{
+"id": "diaz_formulary_2024:x40",
+"text": "Medications were excluded from our analysis if: (1) a product has a different route of administration than the respective ISS formulary product; (2) exists in a combination product with a differing API not listed on the ISS formulary; (3) is no longer available for marketing or distribution in the US. Additionally, specific medications were excluded on a case-by-case basis depending on indication, formulation, or purpose compared to the ISS formulary. We would like to thank Dr. Mollie Scott for her encouragement, advice, and support to explore the field of aerospace medicine while working toward our Doctorates in Pharmacy."
+},
+{
+"id": "diaz_formulary_2024:x41",
+"text": "T.E.D. conceptualized the scope of the project, developed project methodology, collected expiration data, developed all figures and tables, and drafted and revised the manuscript. E.C.I. developed project methodology, collected expiration data, and drafted and revised the manuscript. D.I.L. developed project methodology, collected expiration data, and drafted and revised the manuscript. D.M.B. conceptualized the scope of the project, developed the methodology, provided leadership and oversight of project design and data collection, and revised the manuscript."
+},
+{
+"id": "diaz_formulary_2024:x42",
+"text": "All data supporting this research are publicly available, and may be found in previous publications cited within the text. The underlying code for this study is available in GitHub and can be accessed via this link: https://github.com/lukashalim/ExcelSurvival. The authors declare no competing interests. Publisher’s note Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations."
+}
+]
+}

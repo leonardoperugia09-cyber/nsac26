@@ -1,0 +1,427 @@
+{
+"id": "hrp_immune_2013",
+"title": "Evidence Report: Risk of Crew Adverse Health Event Due to Altered Immune Response",
+"authors": "Crucian B, Sams C",
+"year": 2013,
+"licence": "NASA NTRS: public use permitted",
+"source_url": "https://ntrs.nasa.gov/citations/20140002769",
+"topics": [
+"immune"
+],
+"kind": "full_text_excerpts",
+"note": "Verbatim text extracted from the source for retrieval; page furniture and the reference list removed. Not reviewed by HALO.",
+"chunks": [
+{
+"id": "hrp_immune_2013:x1",
+"text": "Risk of Crew Adverse Health Event Due to Altered Immune Brian Crucian, Ph.D. NASA Johnson Space Center Clarence F. Sams, Ph.D. NASA Johnson Space Center Approved for Public Release: date to be added National Aeronautics and Space Administration 1. Ground‐analog Human Data 17 a. Antarctic Winter‐over Analog 18 b. Haughton‐Mars Project Analog (Canadian Arctic) 18 c. NEEMO Undersea Analog 20 d. Head‐down‐tilt Extended Bed Rest Analog 21 MICROBIAL ENVIRONMENT AND VIRULENCE DURING SPACEFLIGHT 22 RISK IN CONTEXT OF EXPLORATION MISSION OPERATIONAL SCENARIOS 23"
+},
+{
+"id": "hrp_immune_2013:x2",
+"text": "The Risk of Crew Adverse Health Event Due to Altered Immune Response is identified by the National Aeronautics and Space Administration (NASA) Human Research Program (HRP) as a recognized risk to human health and performance in space. The HRP Program Requirements Document (PRD) defines these risks. This Evidence Report provides a summary of the evidence that has been used to identify and characterize this risk. It is known that human immune function is altered in‐ and post‐flight, but it is unclear at present if such alterations lead to increased susceptibility to disease. Reactivation of latent viruses has been documented in crewmembers, although this reactivation has not been directly correlated with immune changes or with observed diseases."
+},
+{
+"id": "hrp_immune_2013:x3",
+"text": "As described in this report, further research is required to better characterize the relationships between altered immune response and susceptibility to disease during and after spaceflight. This is particularly important for future deep‐space exploration missions. There is a large body of evidence associated with immune dysregulation and spaceflight. However, current studies onboard the International Space Station (ISS) that are defining space normal for the human immune system remain insufficient to determine clinical risk during exploration space missions. In particular, more in‐flight studies are needed using human subjects. The in‐flight studies that have been performed historically have used small numbers of subjects or been limited to short‐duration flights. This is being rectified, however, as several larger studies on ISS are ongoing or are being planned."
+},
+{
+"id": "hrp_immune_2013:x4",
+"text": "More data have been obtained from post‐flight testing of crew members, but these findings do not necessarily reflect the in‐flight conditions. Rather, landing‐day observations may be skewed by the effects of re‐entry and readaptation to gravity following deconditioning. Ground‐analog testing of humans, while extremely useful for some applications (e.g., assay development, countermeasure validation), can never be said with certainty to mirror physiological changes during spaceflight. Each analog may simulate some aspect of flight, but no analog can completely replicate all the aspects of flight. A well‐defined ground analog for space immune dysregulation has yet to be identified and validated, although Antarctica winter‐over remains a promising candidate."
+},
+{
+"id": "hrp_immune_2013:x5",
+"text": "During long‐duration flight, cell‐mediated immunity has been demonstrated to be reduced in some subjects, and there may be a relationship between the observed in‐flight immune changes and reactivation of latent viruses. Post‐flight human testing has revealed severely depressed T cell function following 6 months of flight, but unaltered function following short‐duration flight. Altered cytokine production patterns and potentially a shift to the Th2 pattern have been observed following spaceflight. Natural killer (NK) cell, monocyte, and neutrophil functions have all been found to be reduced following spaceflight."
+},
+{
+"id": "hrp_immune_2013:x6",
+"text": "Stress hormone levels have been found to be elevated following flight, heavily dependent on mission duration. Newer published data confirm that more broad immune changes occur during short‐duration flight, and preliminary ISS data indicate that the phenomenon indeed persists during long‐duration flight. In‐flight testing of humans has revealed that latent herpes viruses reactivate to a high level during short‐ duration spaceflight, and new preliminary data indicate that this phenomenon also persists during extended‐duration flight. Various animal studies have demonstrated similar findings either during or after flight. These data necessarily imply that dysregulation and viral reactivation are not transient launch/landing stress phenomena but are legitimately associated with the spaceflight environment."
+},
+{
+"id": "hrp_immune_2013:x7",
+"text": "Human ground analog data have varied widely depending on the analog selected. To date, the 6‐ month Antarctic winter‐over analog appears to be the best terrestrial analog for long‐duration spaceflight relevant to immunity. Reactivation of latent herpes viruses, immune dysregulation, and physiological stress that appear similar to spaceflight‐associated immune dysregulation have all been observed in the Antarctic analog. Shorter‐duration analogs, such as the NASA Extreme Environment Mission Operations (NEEMO) missions (off Key Largo, 2 weeks in duration) and Arctic expeditions on Devon Island (Haughton‐Mars"
+},
+{
+"id": "hrp_immune_2013:x8",
+"text": "Project, ~1.5 months in duration), also appear to be promising analogs for short‐ and intermediate‐duration spaceflight, respectively. Recent pilot studies have found immune dysregulation similar to that associated with spaceflight during both of these analogs, and both are far easier to use, from a logistical perspective, than the Antarctic winter‐over analog. An ongoing ESA‐NASA joint study is assessing immunity, viral, and stress parameters during winter‐over at Concordia Station, interior Antarctica. Bed rest has been reported by some investigators to induce immune changes, but the contrary has been reported by other investigators."
+},
+{
+"id": "hrp_immune_2013:x9",
+"text": "While prolonged bed rest is an excellent analog for bone loss and muscle deterioration from lack of use, it does not simulate the primary suspected causes of spaceflight‐associated immune dysregulation (including physiological stress, disrupted circadian rhythms, and microgravity). Terrestrial clinical research has repeatedly demonstrated that altered immunity is associated with adverse conditions, as well as that immune “balance” is essential for good health. For example, depressed immunity may lead to an increased incidence of infections, but elevated immunity may lead to allergies or autoimmunity. More specific alterations in Th1/Th2 cytokine balance may be associated with many conditions, including rheumatoid arthritis, multiple sclerosis, asthma, lupus, and allergies. A recent NASA study has provided a linkage between immune dysregulation (and a Th2 shift) and viral reactivation."
+},
+{
+"id": "hrp_immune_2013:x10",
+"text": "If immune dysregulation were found to persist in the deep space environment, clinical risks could include hypersensitivities, allergies, autoimmunity, increased infection rates, and even malignancies associated with impaired tumor surveillance. Rather than develop gradually, the risks related to altered immunity have the potential to suddenly impact a mission, likely in a manner very difficult to treat remotely. The reactivation of latent viruses, while not typically a clinical concern terrestrially, could pose a health risk if it persists for the duration of an exploration‐class mission."
+},
+{
+"id": "hrp_immune_2013:x11",
+"text": "We now have established immune dysregulation as a legitimate in‐flight phenomenon, and preliminary analysis indicates that it persists during long‐duration spaceflight. However, knowledge gaps exist related to unexamined immune parameters including clinical relevance of immune alterations, validation strategies, and an appropriate terrestrial analog. Immune dysregulation, in conjunction with an increased radiation environment and prolonged mission duration, may be a significant clinical risk during exploration‐class missions. This argues strongly for in‐flight assessments of immunity, viral reactivation, and physiological stress that will explore unexamined areas, such as innate immunity during flight. This is necessary to better define and understand the nature of dysregulation during flight and properly interpret clinical risk, as well as decide upon candidate countermeasures."
+},
+{
+"id": "hrp_immune_2013:x12",
+"text": "The assessment of immunocompetence is a fast‐developing, ever‐changing scientific discipline, made difficult by the complexity of the immune system. A number of distinct subpopulations of leukocytes (white blood cells) populate the blood, lymph nodes, and gut, and they generally traffic around all body tissues. The specific functions of these cell populations can vary widely. In many cases, they act in synergy, while they are counter‐regulatory in other cases. In addition, the emerging science of neuroimmunology illustrates the complexity with which the immune system interacts with other physiological systems via a communication network involving hormones, cytokines, and cells."
+},
+{
+"id": "hrp_immune_2013:x13",
+"text": "The finding that altered immune regulation is directly related to the presence of clinical disease is well‐accepted and may be related to an increased incidence of infection, autoimmunity, and an increased risk of tumor formation. For this report, immune dysregulation in astronauts is defined as a deviation from “normal” or from pre‐flight baseline values. Dysregulation, as detected by a variety of immune assays, may result in either hyper‐activity or hypo‐activity. In terrestrial medicine, hyper‐immunity is associated with allergies and various auto‐immune diseases, whereas hypo‐immunity can be associated with increased incidence of infection and possibly tumor formation. In addition, the balance and bias of the immune system within itself (e.g., Th1/Th2 cytokine profiles) is correlated with the risk and incidence of specific diseases."
+},
+{
+"id": "hrp_immune_2013:x14",
+"text": "To advance the study of immunology, a large number of assays have been developed. In the hospital laboratory, determination of the number of T cells positive for the surface protein CD4 (CD4+) and the titer of antibodies to viruses are well‐established tests utilized in clinical practice. Such tests have defined ‘normal ranges’. However, there are many other direct measurements of other immune parameters available for clinical research. Examples of immune assays are measurement of the level of immune cell subpopulations in the blood (phenotyping), isolation and stimulation of cultured immune cells followed by various functional assessments, determination of factors such as mRNA gene expression, secretion of cytokines, and expression of activation markers."
+},
+{
+"id": "hrp_immune_2013:x15",
+"text": "Published data strongly suggest that immune dysregulation is associated with spaceflight, regardless of duration, and several excellent reviews have been published regarding this subject [1‐3]. U.S. and Russian space scientists have investigated human immune responsiveness following space flight since the late 1960s. Immune system dysregulation, should it persist for the duration of an exploration‐class deep‐ space mission, could result in specific clinical risks for crewmembers [4]. The specific cause of immune dysregulation during flight remains unknown but is likely associated with one or more of the following: physiological stress, disrupted circadian rhythms, microgravity, isolation, altered environment, altered nutrition, and radiation."
+},
+{
+"id": "hrp_immune_2013:x16",
+"text": "While the post‐flight status of the human immune system has been well characterized, the status of the immune system during flight (and particularly during longer duration flight) is incomplete. Only recently have studies onboard International Space Station (ISS) begun to define space normal for the immune system. A general overview of spaceflight‐associated immune dysregulation (potential causes, summary of observations to date, and potential clinical risk) is presented in Figure 1. A current goal of NASA, the International Partners, and the space life science community is to determine the specific clinical risks associated with all flight effects on human physiology so that countermeasures may be developed prior to the initiation of exploration‐class space missions."
+},
+{
+"id": "hrp_immune_2013:x17",
+"text": "This need has been heightened by the impending advent of deep‐space missions, likely to be initiated within the next decade. Possible destinations include asteroids, the lunar surface, or an L2 deep space station. The published data regarding spaceflight and immunity may fall into numerous categories, such as evidence collected during flight, after flight, and from ground analogs in humans and animals. For astronaut crewmembers, data are typically captured as follows: before flight to establish baseline values, during flight (if possible), on landing day (R+0) to establish spaceflight‐associated changes, and after flight to monitor return to baseline."
+},
+{
+"id": "hrp_immune_2013:x18",
+"text": "Due to the limits of practicality, it is impossible to review ALL evidence in this report. However, representative evidence demonstrating our current understanding of how spaceflight affects the human immune system is presented. The narrative text of this report represents a summation of the data and likely clinical significance. Certain highly relevant studies or recent studies are described in detail in the text, and many other representative articles have been summarized by category in Appendix 1. In total, the evidence described reflects the major scientific findings for the discipline, as it currently exists. This report will be updated periodically as new evidence becomes available."
+},
+{
+"id": "hrp_immune_2013:x19",
+"text": "The narrative text that follows is a description of major relevant evidence; however, it is not possible to summarize the entire evidence base. Major reports, highly relevant data, or simply representative data are discussed. For reference, evidence regarding various aspects of space‐flight immunity is listed and briefly summarized in tabular form in Appendix 1. Figure 1. Overview of spaceflight‐associated immune dysregulation. Historically, due to the access issues, cost, and complexities associated with in‐flight experiments, there have been comparatively few in‐flight studies of human immune function. Most of those that have been performed have had a small number of subjects."
+},
+{
+"id": "hrp_immune_2013:x20",
+"text": "Depressed cell‐mediated immunity (CMI), determined in vivo using the CMI skin test, has been observed during long‐duration flight [5,6], and the reactivation of latent herpes viruses has been observed repeatedly during short‐duration flights [7‐11]. The in‐flight reactivation of latent herpes viruses during a short‐duration Soyuz taxi flight to the ISS was assessed [12]. Three crewmembers participated in a 14‐day mission to the ISS and were monitored for the reactivation of varicella‐zoster virus (VZV), cytomegalovirus (CMV), and Epstein‐Barr virus (EBV) using blood, urine, and saliva assays. During flight, only saliva was assayed; urine and blood were tested before and after flight. The data demonstrated EBV reactivation before, during, and following flight. CMV was reactivated before and after flight, and VZV was reactivated during and after flight."
+},
+{
+"id": "hrp_immune_2013:x21",
+"text": "No increases in the titer of antibodies to these viruses were found, suggesting that an immune response may not be necessary for reactivation to occur. These data support the Shuttle findings, as similar changes were found following short‐duration flight on different vehicles. No in‐flight data exist regarding latent viral reactivation during long‐duration flight. Taylor and Janney [13] reported reduced delayed‐type hypersensitivity responses to a panel of intra‐dermally applied recall antigens on flight days 3, 5, or 10 from 10 astronauts when compared with their preflight control values. This demonstrates that alterations in cell‐mediated immunity do occur in vivo and supports the hypothesis that the immune system is functionally altered during space flight."
+},
+{
+"id": "hrp_immune_2013:x22",
+"text": "More recently, expanded in‐flight studies that assess the various aspects of human immunity in an integrated manner during long‐duration space missions are now beginning using the ISS as a research platform to (A) characterize in‐flight dysregulation; (B) develop a monitoring strategy for the validation of countermeasures; and (C) validate any candidate countermeasures. The recent European Space Agency (ESA) in‐flight “Immuno” study (long duration, ISS/Soyuz, n=6) and the NASA in‐flight “Integrated Immune” study (long duration, ISS/Shuttle, n=17) have addressed this in‐flight knowledge gap. Comprehensive in‐ flight immune data will enable a determination of clinical risk (if any) associated with immunity during prolonged exploration‐class flights."
+},
+{
+"id": "hrp_immune_2013:x23",
+"text": "In 2012, Strewe et al. [14] reported the first findings from the European Immuno study, which assessed innate immunity and stress parameters in European and Russian ISS crewmembers. Assays included plasma levels of endocannabinoids, salivary cortisol, and crew‐perceived stress as quantified via a questionnaire. Flight onboard ISS resulted in a sustained increase in endocannabinoids, which returned to baseline following mission end. The authors interpreted the results to suggest that enhanced EC signaling is required for adaptation and tolerance to the microgravity environment."
+},
+{
+"id": "hrp_immune_2013:x24",
+"text": "The NASA Integrated Immune study, an integrated assessment of immune, viral, and stress parameters during short‐ and long‐duration spaceflight, was recently completed. The aim of this study was to collect blood and saliva samples on‐orbit and return them to earth for evaluation. Because live cells were required for immune functional measures, samples were collected as near to a vehicle undock as possible to reduce the transit time. Blood samples were collected in nutrient‐containing anticoagulated tubes to ensure 48‐72‐hour viability for the live blood samples. This study was successful in defining the in‐ flight status of some adaptive immune parameters and latent herpes virus reactivation. Both baseline and post‐flight recovery samples were collected, and for short‐duration Shuttle crewmembers, a single in‐flight sample was collected immediately prior to Shuttle landing."
+},
+{
+"id": "hrp_immune_2013:x25",
+"text": "The short‐duration component of this study was recently completed and confirmed that immune dysregulation is a legitimate in‐flight phenomenon, as opposed to merely a post‐flight phenomenon [15‐16]. Assays included peripheral immunophenotype, T cell function, cytokine profiles, viral‐specific immunity, latent viral reactivation (EBV, CMV, VZV), and stress hormone measurements. The short‐duration study data revealed that the constitutive distribution of most peripheral leukocyte subset populations was largely unaltered during flight [15‐16]. Exceptions included a mild increase in levels of memory CD4+ T cells and a decrease in naïve CD8+ T cells, accompanied by a corresponding increase in central/effector memory CD8+ T cells. No increase in constitutively activated T cells was observed during flight. Various functional measurements were employed."
+},
+{
+"id": "hrp_immune_2013:x26",
+"text": "Cytokine‐producing T cells (intracellular measurement; both CD4+/IL‐2+ and CD8+/IFNg+) were mildly reduced during flight and further reduced upon landing. General T cell function (early blastogenesis response to mitogenic stimulation) yielded varying results. T cell stimulation with Staphyloccoal enterotoxins was dramatically reduced in‐flight, whereas T cell stimulation with anti‐TCR antibodies was unchanged in‐flight (and elevated post‐flight). The post‐flight elevation is in concurrence with previously published findings for that mitogen as described above [17]. Bulk‐secreted Th1/Th2 cytokines were measured following T cell activation, and mitogen‐dependent in‐flight reductions were observed in IFNg, IL‐10, TNFa, and IL‐6 production."
+},
+{
+"id": "hrp_immune_2013:x27",
+"text": "Secreted inflammatory cytokine levels were also measured following monocyte stimulation (LPS); however, a flight‐ associated decrease was only observed for IL‐10, whereas IL‐8 levels were increased during flight. The number of virus‐specific CD8+ T‐cells was measured using MHC tetramers, while their function was measured using intracellular cytokine analysis following peptide stimulation. Both the number and function of EBV‐specific cells decreased during flight compared with preflight levels. The number of CMV‐specific T‐ cells generally increased as the mission progressed, while their function was generally unaltered. The viral (EBV) load in blood was elevated post‐flight. Elevated anti‐EBV VCA antibodies were evident in ~40% of the astronauts, and anti‐CMV antibodies generally increased during and after flight."
+},
+{
+"id": "hrp_immune_2013:x28",
+"text": "Stress hormones were measured in plasma, urine, and saliva before, during, and after flight. There was generally a higher level of cortisol as measured in blood, urine, and saliva in the astronauts during flight. Circadian rhythm of salivary cortisol was normal before and after flight in most of the astronauts; however, changes were observed during the flight phase. From this comprehensive in‐flight data, it may be concluded that immune dysregulation is indeed an in‐flight phenomenon and not merely a post‐flight stress response. Preliminary analysis of the long‐duration study data indicates that the dysregulation of certain adaptive immune parameters observed during short‐duration flight seems to persist for the duration of a 6‐ month orbital spaceflight [18]."
+},
+{
+"id": "hrp_immune_2013:x29",
+"text": "Further studies onboard ISS will hopefully characterize other aspects of immunity, such as humoral or innate parameters or host‐pathogen interactions. As a collective, it is anticipated that these data will allow a determination of crew clinical risk for deep‐space missions. 2. In‐flight Incidence Rates (Unpublished) Immune dysregulation during orbital flight is generally perceived to be subclinical. However, information that can be referenced regarding the incidence of adverse medical events during spaceflight that may be related to immune dysregulation is lacking. Such events may include a variety of bacterial or viral infections (e.g., skin, URI, UTI), clinical viral reactivation (e.g., zoster), documented hypersensitivities, or increased incidence of allergies."
+},
+{
+"id": "hrp_immune_2013:x30",
+"text": "More downstream concerns are the consequences of persistent latent herpes virus reactivation, as well as possibly autoimmunity or malignancies. Analysis of medical records during the early Apollo missions indicated that approximately 50% to 60% of the crewmembers experienced some symptoms of “infectious illness” during the preflight or in‐ flight time period. To minimize the mission impact of these incidents, the Health Stabilization Program (HSP) was implemented prior to Apollo 14 (discussed further below). The program limits exposure of the crew to potentially infectious individuals and significantly reduced the incidence of reported illnesses during subsequent Apollo missions. The HSP program remains an element of the current Shuttle and ISS medical support program and continues to minimize the incidence of illness in the crews."
+},
+{
+"id": "hrp_immune_2013:x31",
+"text": "However, even with the HSP in place, a significant number of Shuttle missions have included reports consistent with infectious disease during the immediate preflight and in‐flight time periods. This suggests that a reduction in immune function is associated with the stress of preparing for and executing space missions. In addition to the experimental evidence, with regard to in‐flight testing of human subjects, there is also substantial anecdotal data regarding immunity during flight. These data are almost entirely clinical and consist of crew reports regarding adverse medical events that occurred during various space missions."
+},
+{
+"id": "hrp_immune_2013:x32",
+"text": "Such data are potentially very useful if they reflect consistent flight‐related alterations in disease progression or wound healing. However, in accordance with Health Insurance Portability & Accountability Act of 1996 regulations, such clinical data are generally restricted and may be available for science purposes only in an un‐attributable manner. Several efforts have been made to review and categorize in‐ flight incidence, as well as tabulate those findings in a non‐attributable manner. Recently, Dr. Kathy Johnson‐Throop of the JSC Life Sciences Data Archive surveyed the Shuttle clinical data archive for in‐flight incidence rates of infectious disease."
+},
+{
+"id": "hrp_immune_2013:x33",
+"text": "The number of events that occurred in these very healthy, screened, and essentially isolated individuals (presented in the following table) was remarkable, especially in consideration of the pre‐flight quarantine of all Shuttle crewmembers. Table: Shuttle incidence of in‐flight infectious disease* (STS‐1 through STS‐108). 29 Total incidents in 106 Shuttle/742 flown crewmembers *Based on postflight medical debriefs [Longitudinal Study of Astronaut Health] – Dr. Kathy Johnson ‐Throop Given the relative ease of performing post‐flight assessments of human immunity, a significant number of studies have been performed. Until either in‐flight sample return or on‐orbit analysis became available, measurements to assess the nature of spaceflight‐associated immune system dysregulation were limited to post‐flight evaluation."
+},
+{
+"id": "hrp_immune_2013:x34",
+"text": "Advantages of post‐flight evaluations include lower cost, readily available access to human participants, and minimal technical barriers. The primary disadvantage of a post‐flight assessment is the potential that data do not reflect the in‐flight condition and are skewed by the confounding physiological stress of re‐entry and re‐adaptation to unit gravity; however, as an important starting point, much has been learned about crewmember immune status immediately following both short‐ and long‐duration spaceflights. Specific immune system alterations that have been observed when evaluation was performed immediately after spaceflight include dysregulation of cytokine production patterns [19‐27], NK cell function [23, 28‐30], leukocyte distribution [20, 31], monocyte function [32, 33], granulocyte function [31,"
+},
+{
+"id": "hrp_immune_2013:x35",
+"text": "34], T cell intracellular signaling [35‐38], neuroendocrine responses [39], and leukocyte proliferation following activation [40, 41]. Russian scientists have reported reduced in vitro proliferative responses after 140‐day missions that were associated with lymphopenia in crewmembers [33, 42]. Reduced NK cytotoxicity and decreased in vitro interferon production after space flight have also been documented [33, 42]. Further evidence of in vitro immune dysregulation was reported by French and Russian investigators from 5 cosmonauts who resided between 26 and 166 days on‐board the Russian space station Mir [13]. They reported reduced numbers of cells expressing IL‐2 receptors 48 h after stimulation in culture, without changes in the number of T suppressor/cytotoxic (CD8+) or T helper/inducer (CD4+) cells."
+},
+{
+"id": "hrp_immune_2013:x36",
+"text": "The supernatants from these cultures contained normal levels of IL‐1 and increased amounts of IL‐2. A comprehensive post‐flight immune assessment was performed on 17 short‐duration Space Shuttle crewmembers and 8 long‐duration ISS crewmembers [17]. The testing consisted of a comprehensive peripheral leukocyte subset analysis, determination of early T cell functional capabilities, and intracellular/secreted cytokine profiles. For short‐duration crewmembers, the distribution of the peripheral leukocyte subsets was found to be altered post‐flight. The percentage of granulocytes, B cells,"
+},
+{
+"id": "hrp_immune_2013:x37",
+"text": "CD4+ T cells, and memory‐specific CD4+ T cells was increased, whereas the percentages of lymphocytes and monocytes were decreased. Early T cell activation (progression through the first 24 h of blastogenesis) was actually elevated post‐flight; however, the percentage of T cell subsets capable of being stimulated to produce IL‐2 and IFN was decreased. The ratio of secreted IFN :IL‐10 following T cell stimulation declined after landing, a finding that could indicate a Th2 shift associated with spaceflight. For the long‐duration crewmembers, some alterations in peripheral leukocyte distribution were also detected after landing. In contrast to short‐duration crewmembers, the long‐duration crewmembers demonstrated a statistically significant reduction in early T cell activation potential immediately post‐flight."
+},
+{
+"id": "hrp_immune_2013:x38",
+"text": "The percentage of T cells capable of producing IL‐2 was reduced, but IFN percentages were unchanged. A reduction in the secreted IFN:IL‐10 ratio (Th2 shift) was also observed post‐flight in the ISS crewmembers. Therefore, peripheral phenotype changes and altered cytokine production profiles are demonstrated to occur following spaceflight of both short and long duration; however, functional immune alterations may vary with mission duration. A Th2 cytokine shift appears to be associated with spaceflight, which may explain the observed alterations in cell‐mediated immunity during flight, in the context of unaltered humoral immunity. The differential responses to T cell activation are likely explained by the complicated relationship between acute versus chronic stress effects on T cell function and/or the precise nature of the gravisensing defect in"
+},
+{
+"id": "hrp_immune_2013:x39",
+"text": "T cell intracellular signal transduction. Early events associated with the expression of cellular activation antigens are unaltered or actually enhanced in Shuttle crewmembers, but downstream events such as cytokine secretion are depressed. These results are in line with our current hypothesis, which states that a threshold shift for T cell activation occurs in conjunction with microgravity exposure. Note that for long‐ duration ISS crewmembers, even the early‐event sensitization becomes depressed (data not shown), which indicates that prolonged exposure to spaceflight results in further depressed immunological responses."
+},
+{
+"id": "hrp_immune_2013:x40",
+"text": "In parallel with the adaptive immune assessment described above, innate monocyte phenotype and function were also assessed following short‐ and long‐duration spaceflight [43]. While bulk monocyte percentages were unchanged following short‐duration flight, some monocyte functional parameters, such as IL‐6 expression, were depressed. Constitutive monocyte expression of both CD62L and HLA‐DR was reduced following spaceflight in a mission‐specific manner. Loss of either molecule indicates a functional disability of monocytes, either by inhibition of adhesion and tissue migration (CD62L) or by impaired antigen presentation (HLA‐DR). Following in vitro monocyte stimulation, post‐flight expression of IL‐6,"
+},
+{
+"id": "hrp_immune_2013:x41",
+"text": "TNFα, and IL‐10 were significantly reduced (by 43, 44, and 41%, respectively) and expression of IL‐1b was elevated (65%). IL‐8 production was either elevated or reduced, in a mission‐specific manner. Following PMA+ionomycin stimulation of all leukocyte populations, only the expression of IL‐6 was significantly reduced post‐flight. It therefore appears that dysregulation of both adaptive and innate parameters are evident following spaceflight, which may impact overall crewmember immunocompetence. More recent Russian post‐flight studies have included assessments of various innate or adaptive parameters after flights on‐board ISS."
+},
+{
+"id": "hrp_immune_2013:x42",
+"text": "Rykova et al. reported findings from 30 cosmonauts who flew on‐ board ISS (15 long‐duration subjects), employing a variety of assays, including peripheral leukocyte distribution, NK cytotoxic activity, phagocytic activity of monocytes and granulocytes, proliferation of T‐ cells in response to a mitogen, levels of immunoglobulins, and serum cytokine levels [44]. Following spaceflight, the percentage of NK cells was significantly reduced and NK activity was suppressed. T‐cell function decreased in 5 of 13 cosmonauts, with no alteration in the levels of CD3+, CD4+, and CD8+ T‐cells."
+},
+{
+"id": "hrp_immune_2013:x43",
+"text": "Overall, virus‐specific antibody levels were not altered post‐flight, and there were no consistent patterns of alterations in plasma cytokine levels. The same group also found that levels of allergen‐specific IgE and IL‐4 were also unaltered following spaceflight [45]. The authors concluded that despite many improvements that have been made to the living conditions on‐board the ISS, there persists a remarkable depression in the immunological function of certain cell types after ISS missions. Morukov et al. reported post‐flight findings from 12 cosmonauts who flew on‐board ISS [46]. The level of leukocytes, lymphocytes, monocytes, and granulocytes was increased post‐flight, and there was an increase in the percentage and absolute level of CD3+CD4+ cells, CD4+CD45RA+ (naïve) cells, and"
+},
+{
+"id": "hrp_immune_2013:x44",
+"text": "CD4+CD25+ regulatory cells in peripheral blood after landing. Following T cell stimulation in vitro, the authors reported a trend toward reduced proliferation of T cells and an apparent post‐flight decrease in secreted IFN‐g and IL‐10. Although latent herpes virus reactivation has been found to occur at high levels during short‐ duration space flight, some researchers had speculated that the salivary measurements of viral DNA might not reflect infectious viral particles. To investigate this further, immediately following a recent Space"
+},
+{
+"id": "hrp_immune_2013:x45",
+"text": "Shuttle mission, cultures were performed to determine if infectious viruses were being shed. In 2 of 3 astronauts who participated in the study, following landing, live VZV was found to be present in the saliva samples [47]. Another recent post‐flight investigation established a direct correlation between immune dysregulation and the reactivation of latent herpesviruses in astronauts [48]. Seventeen astronauts were studied for reactivation and shedding of latent EBV, VZV, or CMV following short‐duration spaceflight. No shedding of viruses occurred before flight, but 9 of the 17 (designated “virus shedders”) shed at least one or more viruses during and after flight. The remaining 8 astronauts did not shed any of the 3 target viruses (non‐virus shedders). Virus‐shedders showed elevations in 10 plasma cytokines (IL‐1α, IL‐6, IL‐8, IFNγ, IL‐4,"
+},
+{
+"id": "hrp_immune_2013:x46",
+"text": "IL‐10, IL‐12, IL‐13, eotaxin, and IP‐10) at R+0 over baseline values. Only IL‐4 and IP‐10 were elevated in the plasma of non‐virus shedders. In virus shedders, plasma IL‐4 (a Th2 cytokine) was elevated 21‐fold at R+0, whereas IFNγ (a Th1 cytokine) was elevated only 2‐fold, indicating a Th2 shift. The powerful inflammatory cytokine IL‐6 was elevated 33‐fold at R+0. In non‐shedding astronauts at R+0, only IL‐4 and IP‐10 levels were elevated over control values. Elevated cytokines began returning to normal by R+3, and by R+120, all except IL‐4 had returned to baseline values. These data show an association between elevated plasma cytokines, potentially a Th2 shift, and increased viral reactivation in astronauts."
+},
+{
+"id": "hrp_immune_2013:x47",
+"text": "EBV‐specific T cell immunity, responsible for controlling viral reactivation, is altered following spaceflight [49]. Levels of EBV‐specific T cells (measured by the MHC tetramer method) rise following flight, likely indicating an attempt to control latent virus reactivation. However, EBV‐ specific T cell function (IFNg cytokine expression following EBV peptide stimulation in culture) was dramatically reduced following spaceflight. These data (derived from the Epstein Barr flight study [DSO‐500, E129]) indicated that the immune defect that allows viral reactivation to occur is altered T cell function, not a loss of specific T cells responsible for virus control. Prolonged reduced function of the entire T cell population could result in immunosuppression and disease susceptibility."
+},
+{
+"id": "hrp_immune_2013:x48",
+"text": "The level of EBV mRNA gene expression in infected peripheral B cells was found to be altered following spaceflight compared with both the pre‐flight baseline and normal healthy controls [50]. Several EBV genes were measured by quantitative polymerase chain reaction (PCR); they were subdivided into genes expressed during EBV latency, genes expressed intermediate‐early or early (IE/E), and genes expressed late in the active replicative phase of infection and reactivation. For this assay, actin mRNA was measured as a positive control and the EBV EBER gene was measured as a control for the presence of infected B cells. Transcripts of the EBER gene are expressed to varying degrees in all infected B cells, regardless of the viral latency state. EBV gene expression in peripheral blood from healthy adults is highly restricted."
+},
+{
+"id": "hrp_immune_2013:x49",
+"text": "Five of 24 samples were positive for latent gene expression, while only 3 of 24 samples were positive for IE/E expression; none of the 24 control subjects were positive for any of the late replication EBV genes. For Shuttle crewmembers, 5 of 12 samples showed evidence of latent gene expression, while 9 of 12 samples exhibited IE/E gene expression. Notably, some of the samples were positive for multiple viral gene transcripts. None of the pre‐ or post‐flight samples were positive for late gene transcripts. For ISS crewmembers, 9 of 12 samples were positive for latent gene transcripts, while 11 of 12 were positive for"
+},
+{
+"id": "hrp_immune_2013:x50",
+"text": "IE/E gene transcripts. In addition, a much higher percentage of samples were positive for multiple viral gene transcripts. Importantly, for the first time, evidence of late (i.e., replicate) gene transcription was found, post‐flight only; specifically, four of the six landing day samples were positive for one or more of the late genes. None of the samples from healthy controls or the Shuttle post‐flight samples demonstrated any late EBV gene expression. These data (derived from the Epstein Barr flight study [DSO‐500, E129]) suggest that reactivation of latent EBV is to some degree observed at the L‐10 post‐flight timepoint. However, it is known that for some stress measurements, L‐10 may be too close to launch to serve as a fair baseline, as crewmember stress is present by this point in the countdown. Additionally, the data show that EBV reactivation is affected by mission duration."
+},
+{
+"id": "hrp_immune_2013:x51",
+"text": "This may be due to poorer cellular immune control over viral replication during prolonged space missions. Alternatively, spaceflight may have a more direct effect on viral reactivation and replication. Persistent reactivation of latent herpes viruses during long‐duration space missions, in conjunction with dysregulated immunity, elevated radiation exposure, and other factors, may represent a significant clinical health risk to crewmembers participating in exploration‐class deep‐space missions. Another recent report by the same group examined the effects of long‐duration spaceflight on neuroimmune responses by comparing adrenocortical and immune responses between short‐ (11 d) and long‐ (180 d) duration spaceflight [49]. In Shuttle crewmembers, increased stress hormone levels, altered leukocyte subsets and T cell function were observed prior to launch and at landing."
+},
+{
+"id": "hrp_immune_2013:x52",
+"text": "No preflight changes occurred in ISS crewmembers, but long‐duration crewmembers exhibited significantly greater spikes in both plasma and urinary cortisol at landing compared with Shuttle crewmembers. The percentage of T cells capable of producing intracellular IFN‐g was decreased in ISS crewmembers. Plasma IL‐10 was increased post‐flight. Unexpectedly, stress‐induced shifts in lymphocyte subpopulations were absent after long‐ duration flights despite significantly increased stress hormones at landing. These results demonstrated significant differences in neuroimmune responses between astronauts flying on short‐duration Shuttle missions versus long‐duration ISS missions, and they agree with prior studies [51] demonstrating the importance of mission duration in the magnitude of these changes."
+},
+{
+"id": "hrp_immune_2013:x53",
+"text": "One may briefly summarize these collective post‐flight observations as follows: there appears to be a generalized multi‐faceted immunosuppression that is detectable post‐flight. Production of various cytokines (intracellular, secreted, or otherwise) is reduced, and the functional capabilities of the various immunocytes (granulocytes, monocytes, NK cells, and T cells) are reduced. Although some of these findings are almost certainly related to landing and readaptation, more recent findings indicate that at least some post‐flight observations may reflect in‐flight immune alterations."
+},
+{
+"id": "hrp_immune_2013:x54",
+"text": "Unfortunately, the majority of spaceflight immunity studies with animal subjects have involved post‐flight testing of animals flown in space. Those studies are listed under “post‐flight animal data”. Some animal studies have assessed immunity during spaceflight; these primarily involved dissection of animals during flight and return of samples to Earth. On the Shuttle SLS‐2 mission, rats were flown and samples returned for analysis. Spleen T cell and NK cell function were reduced during and after flight; however, marrow NK cells appeared to be unaltered. Altered cytokine production patterns were also reported [52]."
+},
+{
+"id": "hrp_immune_2013:x55",
+"text": "A number of animal studies during spaceflight have provided biosamples available for post‐flight testing. In particular, immune splenocytes and thymocytes have been available from rats and mice flown in space on several SLS Shuttle missions. On several flights of Russian COSMOS satellites, live rats were flown and recovered. Several variables in these studies cannot be controlled, such as mission duration, launch vehicle, and animal species. These additional variables make comparison of data from different studies difficult; however, actual flight data remain extremely valuable, regardless of the launch vehicle used."
+},
+{
+"id": "hrp_immune_2013:x56",
+"text": "The post‐flight animal data include observations of altered leukocyte distribution [53, 54] and altered cytokine production [22, 24, 27, 40]. One study indicated that post‐flight mitogenic and proliferative responses of lymph node lymphocytes, as well as IL‐2 production, were unaltered in space‐flown rats [41]. In general, the animal data are similar to the post‐flight human data, revealing immune dysregulation post‐ flight. Changes include dysregulated cell function (proliferation, cytokine production, and other functions). Interestingly, it was suggested that microgravity has a tissue‐specific effect on lymphocyte function [41], a finding that is impossible to evaluate in human subjects and highlights the greater utility of animal studies for in‐flight immune investigations."
+},
+{
+"id": "hrp_immune_2013:x57",
+"text": "Recently, mice flown on the STS‐118 Space Shuttle mission were available for immunological studies. For this study, spleen and thymus from flown mice were evaluated and results compared with similarly held ground controls. Samples were collected 3‐6 h following Shuttle landing. In general, the observations were similar to those obtained from human subjects and included alterations in the distribution of the lymphocyte subsets, a reduction in blastogenesis following mitogenic stimulation, and shifted cytokine profiles. Specifically, IL‐2 production was decreased, whereas IL10 and IFNg were increased. In addition, alterations in the expression of 30 cancer‐related genes were reported [55]. During the same mission, innate immune function was investigated by determining responses to LPS stimulation."
+},
+{
+"id": "hrp_immune_2013:x58",
+"text": "Secretion of IL‐6 and IL‐10, but not of TNFa, was increased in the flown mice compared with the ground control mice [56], and the genes responsible for scavenging reactive oxygen species (ROS) were upregulated. Also performed on the same space‐flown murine subjects was microarray gene expression analysis of the thymus lobes, in conjunction with quantitative RT‐PCR [57]. Examination of the microarray data revealed 970 individual probes that had a 1.5‐fold or greater change. The authors identified genes that were significantly dysregulated by at least 1.5‐fold after spaceflight, that differed from the AEM controls, and that were confirmed via QRT‐PCR as follows: Rbm3 (up‐regulated) and Hsph110, Hsp90aa1, Cxcl10,"
+},
+{
+"id": "hrp_immune_2013:x59",
+"text": "Stip1, and Fkbp4 (down‐regulated). QRT‐PCR confirmed the microarray results and demonstrated additional gene expression alterations in other T cell‐related genes, including Ctla‐4, IFN‐alpha2a (up‐ regulated) and CD44 (down‐regulated). The authors concluded that spaceflight induced changes in the thymic mRNA expression of genes that regulate stress, glucocorticoid receptor metabolism, and, in particular, T cell signaling activity. These data explain, in part, the reported gravi‐sensitive compromise of the immune system related to signal transduction after exposure to spaceflight."
+},
+{
+"id": "hrp_immune_2013:x60",
+"text": "In another intriguing animal experiment, Drosophila fruit flies were recently flown on‐board the Space Shuttle to assess various molecular and functional aspects of innate immunity [58]. The Drosophila innate immunity is simple, yet shares many similarities with human innate immunity at the level of molecular pathways. A total of 50 male and 25 female fruit flies were housed and bred on‐orbit, and a new generation of flies was born in microgravity. The ability of larval plasmatocytes to phagocytose E. coli in culture was attenuated following spaceflight, and the expression of genes involved in cellular maturation was downregulated."
+},
+{
+"id": "hrp_immune_2013:x61",
+"text": "In addition, the authors found that the level of constitutive expression of pattern recognition receptors and opsonins that specifically recognize bacteria, and of lysozyme, antimicrobial peptide (AMP) pathway, and immune stress genes, hallmarks of humoral immunity, were also reduced in larvae. In adults, the efficiency of bacterial clearance measured in vivo following systemic infection with E. coli post‐flight remained robust. The post‐flight analysis of space‐flown flies indicated that spaceflight alters both cellular and humoral immune responses in Drosophila."
+},
+{
+"id": "hrp_immune_2013:x62",
+"text": "Several studies involving in‐flight culture/in‐flight activation of immune cells have been performed. Such studies investigated the effect of microgravity directly on the ability of cells to grow, mature, or function in vitro. These studies are important for identifying the effect of microgravity on cell function and identifying potential mechanistic causes of the in‐flight immune dysregulation manifested by humans and animals. However, these data should be interpreted with caution, as it is unknown if in‐flight culture observations accurately reflect altered (or unaltered) in vivo human immune function. Although microgravity culture may be altered, it is difficult to say that such culture conditions represent the in vivo responses, considering additional in vivo influences such as shear flow, hemodynamics, soluble factors, and non‐artificially purified cell lines."
+},
+{
+"id": "hrp_immune_2013:x63",
+"text": "For example, T cells from perfectly healthy individuals generally do not activate during simulated microgravity culture [59]. Astronauts display altered T cell function following spaceflight using common 1xG terrestrial cell culture conditions [17]. Either of these results may or may not reflect the in‐flight condition, nor is it understood how other variables, such as radiation or physiological stress, may influence the complicated immune situation that equilibrates during flight. Specific findings revealed by in‐flight culture of various immunocyte populations include unaltered"
+},
+{
+"id": "hrp_immune_2013:x64",
+"text": "NK function [29], altered cytokine production profiles [19], and various observations of altered progression of cellular activation following mitogenic stimulation [35, 36, 59‐61]. Fitzgerald et al. [62] studied the immune responses of human lymphoid tissue explants in microgravity on‐board ISS. During spaceflight, lymphoid cells did not respond to antigenic or polyclonal challenge, whereas cells challenged prior to the space flight maintained their antibody and cytokine responses in space. This indicates that immune activation of cells derived from lymphoid tissue is blunted in microgravity, which the authors feel reflects the immune dysfunction observed in astronauts during space flights."
+},
+{
+"id": "hrp_immune_2013:x65",
+"text": "Certain functions of immune cells in returning astronauts are known to be altered. A dramatic depression of the mitogenic in vitro activation of human lymphocytes was observed in low gravity. T‐cell activation requires the interaction of different types of immune cells, such as T‐lymphocytes and monocytes. Cell motility based on a continuous rearrangement of the cytoskeletal network within the cell is essential for cell‐cell contacts. Meloni et al. [63] recently studied the influence of microgravity on cytoskeletal structures and migration capacity in monocytes on‐board ISS. During flight, a monocyte line was incubated on a colloid gold substrate attached to a cover slide. Migrating cells removed the colloid gold, leaving a track recording cell motility. A severe reduction of the motility of J‐111 cells was found during spaceflight compared with 1g in‐flight and ground controls."
+},
+{
+"id": "hrp_immune_2013:x66",
+"text": "Cell shape appeared more contracted, whereas the control cells showed the typical morphology of migrating monocytes, i.e., elongated and with pseudopodia. A qualitative and quantitative analysis of the structures of F‐actin, β‐tubulin, and vinculin revealed that exposure of J‐111 cells to low gravity affected the distribution of the different filaments and significantly reduced the fluorescence intensity of F‐actin fibers. The authors indicated that the highly Extended head‐down bed rest Fluid shifts, bone demineralization, muscle loss"
+},
+{
+"id": "hrp_immune_2013:x67",
+"text": "Closed‐chamber confinement Psychological and isolation issues Haughton‐Mars Project (Arctic) Isolation, extreme environment, circadian rhythms NEEMO (undersea station) Isolation, real mission activities, risk, EVA, extreme environment, circadian rhythms Antarctic winter‐over Isolation, confinement, extreme environment, circadian rhythms, physiological stress, long duration reduced motility of monocytes in low gravity, attributed to the disruption of the cytoskeletal structures, may be one of the contributing factors of in‐flight immune dysregulation."
+},
+{
+"id": "hrp_immune_2013:x68",
+"text": "It has been speculated that a decreased number of lymphocytes might be a cause of spaceflight immunosuppression, possibly due to the induction of apoptosis. Early activation of 5‐lipoxygenase (5‐LOX) might play a central role in the initiation of the apoptotic program. Battista et al. recently performed an ISS experiment to ascertain the induction of apoptosis in human lymphocytes under authentic microgravity and to elucidate possible mechanisms [64]. The results demonstrated that exposure of human lymphocytes to microgravity for 48 h on‐board the ISS remarkably increased apoptotic hallmarks such as DNA fragmentation and cleaved‐poly polymerase protein expression, as well as mRNA levels of apoptosis‐ related markers such as p53 and calpain. These changes were paralleled by an early increase in 5‐LOX activity."
+},
+{
+"id": "hrp_immune_2013:x69",
+"text": "The authors concluded that the findings provided a molecular background for the immune dysfunction observed in astronauts, as well as possible new biomarkers that could be used as part of a monitoring strategy. To evaluate the effects of mission‐associated factors on human physiology, ground‐based “spaceflight analogs” may be used [65]. A variety of analogs are available, each unique and exerting some influence on human physiology that is similar to one or more aspects of spaceflight. Examples of the most well‐known human ground‐based spaceflight analogs are presented in the following table:"
+},
+{
+"id": "hrp_immune_2013:x70",
+"text": "Terrestrial analogs may be augmented. For example, a recent study at Brooks Air Force Base by Stowe et al. [51] added high‐G human centrifugation prior to and after a 16‐day prolonged head‐down tilt bed rest to simulate launch and landing and thus better replicate the physiological aspects of a shuttle mission. Another study added a daily 1‐h 2.5xG human centrifugation session to a 16‐day bed rest study to evaluate artificial gravity as a possible countermeasure [66]. For ground‐based studies, it is very important to choose the analog that is most appropriate for the physiological system of interest. For example, bed rest may be an excellent analog for muscle loss, whereas NEEMO or Antarctic winter‐over would not, as the prime causal factor (microgravity) is not replicated."
+},
+{
+"id": "hrp_immune_2013:x71",
+"text": "Because analog use is much more cost‐effective compared with flight, the immunology discipline at NASA is pursuing validation of an appropriate ground‐based spaceflight analog for spaceflight‐associated immune dysregulation. This is based on suggestions made at the 2006 Immunology Program Review and on consensus direction statements provided during the 2007 NASA Human Research Program Workshop. Validation of a ground‐based analog would be extremely useful for basic science as well as countermeasure development, especially considering that spaceflight‐associated immune dysregulation is now believed to persist during long‐duration flight [18] and countermeasure development is warranted. An excellent ground‐based flight analog for immune studies would simulate mission‐associated stress, isolation, and disrupted circadian rhythms."
+},
+{
+"id": "hrp_immune_2013:x72",
+"text": "An overview of immune data collected during various analog studies follows. a. Antarctic Winter‐over Analog. During Antarctic winter‐over (AWO), subjects experience prolonged isolation in a harsh extreme environment, and several comprehensive immune studies have been conducted during these expeditions. It is likely that AWO represents the closest analog to long‐ duration or exploration‐class spaceflight available on Earth. This is because the mission length, extreme environment, extreme isolation, mission‐associated activities, disrupted circadian rhythms, and other factors are similar to those of long‐duration spaceflight. During AWO, participants are completely isolated, as no aircraft are capable of reaching the various Antarctic outposts during this time."
+},
+{
+"id": "hrp_immune_2013:x73",
+"text": "Immune studies performed during winter‐over missions have shown decreased cell‐mediated immune responses [67‐69], reduced T cell function [70], altered cytokine production profiles [70, 71], and latent herpes virus reactivation [69, 70]. A study of antibody production following immunization during AWO revealed no mid‐ mission alterations [72], potentially indicating that humoral immunity is unchanged in the presence of altered cellular immunity. These data support the Antarctic analog as the most successful analog to date in simulating long‐duration spaceflight‐associated immune dysregulation. The only serious limiting factor regarding physiology studies during AWO is the logistical access during a mission."
+},
+{
+"id": "hrp_immune_2013:x74",
+"text": "Ironically, this is directly related to the isolation factors that make AWO such a good analog, thus truly making it “flight‐like.” Studies that require simple collection and freezing of samples (blood, saliva) are obviously very compatible with mid‐mission AWO studies. However, as recent data have indicated, it is immune functional capacity that appears to be compromised during spaceflight [15]. Assessments of immune function typically require live cell culture and more immediate processing and analysis of samples. NASA and ESA have recently performed a comprehensive assessment of immune parameters, viral reactivation, and physiological stress at the French‐Italian Concordia Station. This base is located in the harsh Antarctica interior at 3233 M altitude, under conditions of persistent hypobaric hypoxia."
+},
+{
+"id": "hrp_immune_2013:x75",
+"text": "The implementation of this study was similar to that of the Integrated Immune flight study. Preliminary data analysis indicates that immune alterations (some similar and some dissimilar to flight) did persist during the winter‐over period [73]. Final analysis of these data will hopefully confirm that AWO at an isolated interior base is, or is not, an appropriate analog for in‐flight immune dysregulation. b. Haughton‐Mars Project Analog (Canadian Arctic). Another potentially useful analog for spaceflight‐associated immune dysregulation is the NASA Haughton‐Mars Project (HMP). The HMP is an international field research project centered on the scientific study of the Haughton meteorite impact structure and surrounding terrain on Devon Island, Nunavut Territory, Canadian High Arctic. It is viewed as an analog for planetary exploration, in particular for exploration of the moon and Mars."
+},
+{
+"id": "hrp_immune_2013:x76",
+"text": "It is particularly well suited for exploration‐related human physiology studies because field personnel are subject to actual and relevant environmental stressors, although they are clearly not as extreme as those encountered in space. In addition, personnel are engaged in field exploration tasks that, in many cases, are direct analogs of those anticipated for the moon and Mars. The following factors encountered by HMP field participants are particularly relevant to spaceflight or planetary exploration:  Long travel to and from Devon Island (several days of travel followed by weeks of stay)"
+},
+{
+"id": "hrp_immune_2013:x77",
+"text": " Relatively harsh polar desert environment  Disrupted circadian rhythms (24 h of daylight during the summer field season)  Relative isolation from the outside world (with limited exception)  Limited local infrastructure (HMP Research Station is analogous to early lunar or Martian outpost)  Activities relevant to those that crewmembers on lunar and Mars missions would be expected to perform, including exploration, field work, and EVA  Reliance on remote telemedicine and communications equipment. These factors and mission duration make the HMP a potentially good analog for spaceflight‐ associated immune dysfunction studies."
+},
+{
+"id": "hrp_immune_2013:x78",
+"text": "The 30‐ to 45‐day mission duration seems to make HMP a potentially useful analog for ISS Flight Engineer‐2 subjects, who rotate on successive Shuttle flights and have mission durations longer than those of Shuttle‐only crewmembers but shorter than those of ISS‐Soyuz (6‐month) crewmembers. In 2002, a NASA pilot study was performed with the following objectives: (1) develop and field‐evaluate methods for processing biological samples to support immune function testing in remote locations, and (2) use the protocol to assess mission‐associated immune changes during an HMP mission. The data demonstrated that in the HMP participants, changes in immune function and physiological stress occurred that were in some ways similar to those observed in astronauts following spaceflight [74]."
+},
+{
+"id": "hrp_immune_2013:x79",
+"text": "Specifically, phenotypic alterations, reductions in intracellular cytokine levels, humoral data that suggested EBV reactivation, and altered stress hormone levels were all observed during this intermediate‐length HMP mission. c. NEEMO Undersea Analog. A third likely relevant analog for immune changes observed during short‐duration spaceflight is the NASA Extreme Environment Mission Operations (NEEMO) project. The NEEMO project was developed by NASA to use extended undersea missions based in Aquarius (the world’s only permanent undersea station) as a high‐fidelity ground‐based spaceflight analog. Aquarius was constructed and is operated by a partnership of the National Oceanic and Atmospheric Administration, the"
+},
+{
+"id": "hrp_immune_2013:x80",
+"text": "University of North Carolina at Wilmington, and the National Undersea Research Center, and it is utilized routinely for undersea oceanic research. It is located 7 miles offshore of Key Largo, Florida, at a depth of approximately 65 feet. During research missions, which typically last 7‐14 days, crewmembers (“aquanauts”) use saturation diving. In this dive protocol, easy return to the surface is not possible and nominal resurfacing requires approximately 18 h of decompression. NEEMO missions are timelined and executed in such a way that the spaceflight analog conditions are the best possible:"
+},
+{
+"id": "hrp_immune_2013:x81",
+"text": " Confinement to the station lasts the duration of the mission.  EVA activities are performed while the crewmembers are linked to Mission Control Center in  A variety of Shuttle and ISS experiments are performed.  Telemedicine is used to communicate with NASA flight surgeons.  For high fidelity, only Shuttle or ISS food may be consumed (NEEMO‐5). It is important to note that although the NEEMO missions simulate high‐fidelity spaceflight conditions, they are actual missions in their own right with real health risks and are not necessarily only simulations. Given the short mission duration and high‐fidelity similarity to a Shuttle mission, NEEMO may represent a useful analog for the spaceflight‐associated immune dysregulation that has been observed during short‐duration spaceflight."
+},
+{
+"id": "hrp_immune_2013:x82",
+"text": "Additionally, NEEMO is extremely easy to use logistically, making it an attractive test bed for hardware and initial countermeasure development. Pilot data generated during the NEEMO 4, 5, 12, and 13 missions have indicated that immune dysregulation and viral reactivation during NEEMO missions are similar to those observed during or following spaceflight. To investigate whether NEEMO induces in‐flight immune alterations similar to those observed during Shuttle missions, as well as to evaluate assays developed for SMO‐015, a pilot study was performed on NEEMO 12 and 13, during 2007. Assays were performed that assessed immune status, physiological stress, and latent viral reactivation. Blood and saliva samples were collected at pre‐, mid‐, and post‐mission timepoints."
+},
+{
+"id": "hrp_immune_2013:x83",
+"text": "The data revealed minimal changes in peripheral leukocyte subsets, as would be expected from healthy subjects in an adverse environment in the absence of actual illness. Dramatic alterations in T cell function were observed. Intracellular cytokine profiles within T cell subsets were altered, and generalized T cell function was diminished during the missions, in a manner similar to that observed post‐flight in ISS crewmembers. Serological evidence of EBV reactivation was observed in 50% of the subjects. As evidence of latent VZV reactivation, salivary VZV DNA was detected in 2 of the 4 NEEMO‐12 subjects. Plasma cortisol was elevated in some of the NEEMO subjects, and salivary concentrations of cortisol were greater during the mission than before or after it."
+},
+{
+"id": "hrp_immune_2013:x84",
+"text": "Taken together, the pilot study data seem to validate the NEEMO analog as being appropriate to induce some of the aspects of spaceflight‐associated immune dysregulation that are observed during short‐duration Shuttle flights. In addition, the ease of utility and high‐fidelity of the analog make it attractive for rapid investigations. However, to investigate immune dysregulation associated with prolonged missions (a key element to determining clinical risk for exploration‐class missions), another analog would be required. d. Head‐Down‐Tilt Extended Bed Rest Analog. The use of long‐duration head‐down‐tilt bed rest (HDBR) has also been investigated to determine whether this analog is appropriate for spaceflight‐ associated immune dysregulation."
+},
+{
+"id": "hrp_immune_2013:x85",
+"text": "The most obvious relevance of bed rest is to study muscle loss and bone demineralization, but some investigators believe that the fluid shifts replicated during bed rest may be relevant to in‐vivo immune alterations. Some of the evidence conflicts regarding validation of the bed rest analog as a replicate for spaceflight‐associated immune dysregulation. Published data indicate that some immune changes, including decreases in T cell activation potential and altered cytokine patterns, are associated with this analog [75, 76]. However, these data were induced by exogenous delivery of stress hormones to the participants."
+},
+{
+"id": "hrp_immune_2013:x86",
+"text": "Data generated during a general immune assessment as part of the recent NASA Flight Analogs Project bed rest campaigns did not show altered leukocyte distribution, altered cytokine production patterns, reduced T cell function, or significant viral reactivation during the campaigns [77]. Given the absence of the most likely causes of spaceflight‐associated immune dysregulation (e.g., disrupted circadian rhythms, mission‐associated stress, and isolation), bed rest most likely does not represent the best analog for exploration‐class spaceflight‐associated immune dysregulation."
+},
+{
+"id": "hrp_immune_2013:x87",
+"text": "However, other recent studies also found immunological alterations, to some degree, during HDBR. Kanikowska et al. [78] investigated various stress‐associated proteins and cytokines during HDBR (20 days) with and without an exercise countermeasure. Adrenaline and noradrenaline concentrations increased significantly in both groups, while the concentration of C‐reactive protein decreased. The concentration of C‐reactive protein was significantly higher, and that of adrenaline was significantly lower, in the control group compared with the exercise group. The authors concluded that several neuroendocrine and immunological parameters are modulated by prolonged HDBR and that these changes may be counteracted at least in part by artificial gravity with exercise."
+},
+{
+"id": "hrp_immune_2013:x88",
+"text": "Rai et al. [79] investigated the effects of 21 days of head‐down tilt (HDT) on psychological stress and the production of various salivary stress hormones. After one week of HDT, all volunteers developed psychological stress, and the secretions of CgA, cortisol, alpha‐amylase, and beta‐endorphin were all significantly higher. In seven healthy subjects subjected to 3 weeks of HDBR, Kelsen et al. [80] studied 90 mmol potassium bicarbonate as a nutritional countermeasure aimed against bone demineralization. Whole blood was stimulated with antigen, i.e.,"
+},
+{
+"id": "hrp_immune_2013:x89",
+"text": "Candida albicans, purified protein derivative (PPD) tuberculin, tetanus toxoid, and Cytomegalovirus. The authors observed a significant decrease in the production of interleukin‐2 (IL‐2), interferon‐γ (IFN‐γ), and tumor necrosis factor‐α (TNF‐α) following phytohemagglutinin (PHA) stimulation, with a rapid normalization being observed after HDBR. Only three individuals responded to the specific T cell antigens without showing signs of an altered response during HDBR, and we did not observe reactivation of CMV or Epstein‐Barr virus (EBV). The authors cite the data as evidence of a potential Th2 shift and alterations in cell‐mediated immunity during HDBR, which could have utility for space physiology studies."
+},
+{
+"id": "hrp_immune_2013:x90",
+"text": "Ground analog animal data are essentially confined to hind limb elevation, suspension, unloading, or restraint. Altered cytokine production patterns and reduced ability to fight infection have been observed using such analogs [25, 81]. Although these results are extremely interesting, direct correlation with human astronaut clinical risk from prolonged spaceflight‐associated immune dysregulation is to some degree debatable. There are obvious differences between humans and rodents, and the animal suspension/restraint analogs are clearly different from prolonged spaceflight. However, an animal model has certain unique utility compared with human descriptive studies. Animal subjects may be exposed to variables such as radiation, altered nutrition, or pharmacological interventions, which are not possible in human studies."
+},
+{
+"id": "hrp_immune_2013:x91",
+"text": "Because of this, validation of an appropriate animal model remains a priority. Ground cell culture analogs for modeled microgravity, such as clinorotation, bioreactors, and the High‐Aspect‐Ratio Vessel, all essentially subject cultured cells to a continuous free fall, which has been shown to replicate some cellular effects of microgravity exposure. A variety of cellular effects, including altered actin polymerization, reduced lymphocyte locomotion, disrupted transmission of intracellular signals, and altered gene expression, are all commonly observed results that are believed to be similar to spaceflight observations [82‐85]. Sundaresan et al. [86] identified the intracellular defect responsible for altered locomotion in modeled microgravity at the level of PKC or upstream, with lymphocyte calcium signaling pathways found to be functional."
+},
+{
+"id": "hrp_immune_2013:x92",
+"text": "Hughes‐Fulford et al. [84] found that alterations in 10 key genes were associated with simulated microgravity culture, indicating that the intracellular protein kinase A pathway was a key pathway altered during microgravity conditions and likely responsible for some of the observed spaceflight‐associated immune dysregulation effects in humans. Fitzgerald et al. [62] examined responses of lymphoid tissue cells to modeled microgravity. Terrestrial simulated microgravity was achieved by solid‐body suspension in a rotating, oxygenated culture vessel. The data revealed that tissues or cells challenged by a recall antigen or polyclonal activator in simulated microgravity lost their ability to produce antibodies and cytokines and to increase their metabolic activity."
+},
+{
+"id": "hrp_immune_2013:x93",
+"text": "In contrast, if the cells were challenged before being exposed to simulated microgravity suspension culture, they maintained their responses. Ground cell‐culture analogs may have significant utility for mechanistic studies that will determine the root causes of cell‐specific microgravity‐induced immune system changes. However, any conclusions regarding clinical risk for exploration‐class missions will require human subject studies, as variables such as stress and isolation cannot be replicated by these cellular analogs. MICROBIAL ENVIRONMENT AND VIRULENCE DURING SPACEFLIGHT"
+},
+{
+"id": "hrp_immune_2013:x94",
+"text": "A growing body of evidence indicates that microbial virulence may be altered during spaceflight. In the context of host‐pathogen interactions, increased microbial virulence may increase crew clinical disease risk, even in the absence of any immune dysregulation. Therefore, the Space Habitability and Human Factors Element has baselined a dedicated risk related to this phenomenon. This evidence is described in the SHFH Evidence Report entitled: ‘Risk of Adverse Health Effects Due to Alterations in Host‐ Microorganism Interactions’. This report can be accessed on the Human Research Roadmap at the following publicly available link: http://humanresearchroadmap.nasa.gov/Evidence/"
+},
+{
+"id": "hrp_immune_2013:x95",
+"text": "We know of no clinically relevant computer‐based simulations for the human immune system. RISK IN CONTEXT OF EXPLORATION MISSION OPERATIONAL SCENARIOS The likelihood of an adverse clinical event (allergy, hypersensitivity, infection, or malignancy) related to immunology is difficult to estimate due to limited in‐flight data and a lack of understanding of the in‐ flight condition. Current studies on ISS are rectifying this situation. Unfortunately, the environment experienced by crewmembers on such missions will likely be vastly different from the environments experienced by crewmembers on long‐duration lunar or Mars missions. In general, the NASA Immunology"
+},
+{
+"id": "hrp_immune_2013:x96",
+"text": "Discipline Team feels that low‐Earth orbital flight of up to 6 months in duration does NOT pose a significant health risk related to immunology. This is because of several factors unique to orbital flight, including a readily available return option and protection from certain types of high‐energy radiations that are more prevalent beyond the Earth’s magnetosphere. Additionally, orbital flight is likely a vastly different experience with regard to physiological stress than will be encountered during exploration‐class flight. It is expected that exploration‐class flight, with up to six‐fold increases in mission duration, planetary exploration, and exposure to higher energy radiation will increase the clinical risk. Radiation is a factor that should be considered in assessing clinical risk related to immunology due to the link between immunity, radiation, and cancer."
+},
+{
+"id": "hrp_immune_2013:x97",
+"text": "Immune precursor cells residing in the marrow are particularly sensitive to radiation. Additionally, if immune dysregulation is found to persist during longer missions, the clinical risk related to tumor surveillance and development of malignancies may become significant. Determining the effect of space travel on the human immune system has proven to be extremely challenging. Limited opportunities for in‐flight studies, varying mission durations, technical and logistical obstacles, small subject numbers, and a broad range of potential assays have contributed to this problem."
+},
+{
+"id": "hrp_immune_2013:x98",
+"text": "Additionally, the inherent complexity of the immune system, with its vast array of cell populations, sub‐ populations, diverse regulatory molecules, and broad interactions with other physiological systems, makes determining precise variables to measure very difficult. There is also the challenge of determining the clinical significance of any observed immune alterations. Will such a change lead to disease, or is it a transient subclinical observation related to short‐term stress? The effect of this problem may be observed by scanning publications associated with immunity and spaceflight, which began to appear during the"
+},
+{
+"id": "hrp_immune_2013:x99",
+"text": "1970s. Although individually they are each valid studies, the comprehensive literature to date suffers from widely varying sampling methods and assay techniques, low subject counts, and sometimes a disparate focus on narrow aspects of immunity. The most clinically relevant data are derived from in‐flight human studies, which have demonstrated altered cell‐mediated immunity and reactivation of latent herpes viruses. Much more data are available from post‐flight testing of humans, with clear evidence of altered cytokine production patterns, altered leukocyte distribution, continued latent viral reactivation, and evidence of dramatically altered virus‐specific immunity. It is unknown if post‐flight assessments relate to the in‐flight condition or are a response to landing stress and readaptation."
+},
+{
+"id": "hrp_immune_2013:x100",
+"text": "In‐flight culture of cells has clearly demonstrated that immune cells are gravity‐sensitive and display altered functional characteristics. It is unknown if these data are related to in vivo immune cell function or are an artifact of microgravity culture. Ground analog testing of humans and animals, as well as microgravity‐analog cell culture, has demonstrated utility. However, in all cases, it is not known with certainty if these data would reflect similar testing during space travel. Given their ready availability, ground analogs may be extremely useful for assay development and the evaluation of potential countermeasures."
+},
+{
+"id": "hrp_immune_2013:x101",
+"text": "In general, the evidence base suffers from widely disparate studies on small numbers of subjects that do not directly correlate well with each other or spaceflight itself. This results in significant knowledge ‘gaps’ that must be filled by future studies to determine any clinical risk related to immunity for human exploration‐class space missions. These gaps include a significant lack of in‐flight data, particularly during long‐duration space missions. The International Space Station represents an excellent science platform with which to address this knowledge gap. Other knowledge gaps include lack of a single validated ground analog for the phenomenon and a lack of flight‐compatible laboratory equipment capable of monitoring astronauts (for either clinical or research purposes)."
+},
+{
+"id": "hrp_immune_2013:x102",
+"text": "However, enough significant data exist, as described in this report, to warrant addressing this phenomenon during the utilization phase of the ISS. A recent Space Shuttle investigation has confirmed the in‐flight nature of immune dysregulation, demonstrating that it is not merely a post‐flight phenomenon. Several current studies are ongoing onboard the ISS that should thoroughly characterize the phenomenon. NASA recognizes that if spaceflight‐associated immune dysregulation persists during exploration flights in conjunction with other dangers, such as high‐energy radiation, the result may be a significant clinical risk."
+},
+{
+"id": "hrp_immune_2013:x103",
+"text": "This emphasizes the need for a continued integrated comprehensive approach to determining the effect of prolonged spaceflight, separated from transient launch and landing stresses, on human immunity. Such studies will substantially advance our understanding of space‐related immune dysregulation, and, hopefully, a monitoring strategy will have been developed that could be used to monitor the effectiveness of countermeasures."
+}
+]
+}

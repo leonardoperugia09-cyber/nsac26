@@ -1,0 +1,51 @@
+{
+"id": "ntrs_eimo_conops_2024",
+"title": "Earth-Independent Medical Operations (EIMO) Concept of Operations",
+"authors": "Parker J, Krihak M, Laing J, et al.",
+"year": 2024,
+"licence": "NASA NTRS: public use permitted",
+"source_url": "https://ntrs.nasa.gov/citations/20240001402",
+"topics": [
+"medical_operations"
+],
+"kind": "full_text_excerpts",
+"note": "Verbatim text extracted from the source for retrieval; page furniture and the reference list removed. Not reviewed by HALO.",
+"chunks": [
+{
+"id": "ntrs_eimo_conops_2024:x1",
+"text": "National Aeronautics and Space Administration Earth-Independent Medical Operations (EIMO) Concept of Operations (ConOps) Marina Parker, PhD, Mike Krihak, PhD, Chris Laing, Jorge Bardina, PhD, Arian Anderson, MD “Expanding the Boundaries of Space Medicine and Technology” • Progressive Earth-independent crew health & performance systems for Mars-class missions • Monitor and maintain crew health and performance during communication delays and in an environment that does not allow emergency evacuation or terrestrial medical assistance • Validate readiness of systems and operations to support crew health and performance for the initial human Mars exploration campaign"
+},
+{
+"id": "ntrs_eimo_conops_2024:x2",
+"text": "Exploration Systems Development Mission Directorate (ESDMD) HEOMD-415 Version 1 International Space Station Gateway Lunar Surface Mars Transit •Limited onboard medical care (Earth-reliant) •Expanded onboard medical care (crew/vehicle-reliant) •EIMO – The gradual transition of medical care and decision making from terrestrial to space-based assets, enabling support of astronaut health and performance and reducing overall mission risk •Purpose – Systems Engineering (SE) Team to provide a preliminary vision/concept of an EIMO Medical System for Mars via Concept ConOps and Foundational Requirements"
+},
+{
+"id": "ntrs_eimo_conops_2024:x3",
+"text": "•Pave the way for an Earth Independent Medical System – to be revised over time to fully capture stakeholders’ Needs, Goals, and Objectives (NGOs) •Scope – EIMO Concept of Operations highlighting crew and system autonomy •A process of integrating clinical and systems engineering inputs to generate recommendations for medical system design Needs, Goals and Objectives (NGOs) Development Legends Phase Deliverable Milestone Iterative Process Future considerations for out-of-scope topics Formal Stakeholders (Passive & Active) list Legends Phase Deliverable Milestone Iterative Process CST: Clinical Science Team"
+},
+{
+"id": "ntrs_eimo_conops_2024:x4",
+"text": "Each Scenario contains: i.Scenario Information ii.Highlighted EIMO Components iii.Context iv.Relevant EIMO Objectives v.Environment vi.Assumptions vii.Highlighted Functionality viii.Narrative ix.Activity Diagram Activity Diagram for Scenario 6: Abdominal Pain Treatment Activity Diagram for Scenario 6: Abdominal Pain Treatment Activity Diagram for Scenario 6: Abdominal Pain Treatment Activity Diagram for Scenario 6: Abdominal Pain Treatment To v i e w o u r C o n O p s M o d e l R e p o r t : •Email Marina Parker, Mike Krihak or Chris Laing to for access approval"
+},
+{
+"id": "ntrs_eimo_conops_2024:x5",
+"text": "•NAMS Requests needed for web access are handled by the SE Team Activity Diagram for Scenario 6: Abdominal Pain Treatment •The EIMO ConOps was a joint development effort between the ExMC System Engineering Team and the ExMC Clinical Science •The EIMO ConOps is comprised of the needs, goals, and objectives that are supported by nine medical scenarios in an MBSE model. •Currently reworking ConOps content to better highlight clinical practice differences present under EIMO conditions •We have begun requirements development for L2,3, & 4 baseline delivery"
+},
+{
+"id": "ntrs_eimo_conops_2024:x6",
+"text": "Product Team (XMIPT) at NASA is seeking solutions to increase the mass, power, and volume efficiency of its exploration medical system. Integrated Data Architecture (CHP-IDA) system as a platform to enable the amalgamation of a variety of crew-relevant data sources and applications. Navigation (SCaN) provides communications and navigation services over the full operational life cycle of a mission from launch to deorbit. Autonomous Medical Operations (AMO) project is developing an on-board software-based Medical Decision Support System (MDSS) which will enable astronauts to diagnose and treat emergent conditions in a timely manner ."
+},
+{
+"id": "ntrs_eimo_conops_2024:x7",
+"text": "EIMO utilizes data streams from multiple sources to assess Crew Health & Performance and makes recommendations using AI-supported natural language processing and machine learning techniques EIMO (Earth Independent Medical Operations) ECLSS (Environmental Control & Life Support System) CHP-IDA (Crew Health & Performance Integrated Data Architecture) XMIPT (Exploration Medical Integrated Product Team) SCaN (Space Communications and Navigation) IMPACT (Informing Mission Planning via Analysis of Complex Tradespaces) •Communication latency and reduced data transmission bandwidth"
+},
+{
+"id": "ntrs_eimo_conops_2024:x8",
+"text": "•Leverage mixed reality augmentation, AI, & machine learning •Non-emergent medical condition management less dependent on real time ground support •Requirement for high baseline KSA and access to on-board CDSS •On-board knowledge, skill & abilities (KSA) requirements •Allocation & training of KSA by crewmember •On-board routine training / practice modules / Just-In-Time Supplies & Resource Management Task Load Management •Exploration class missions cannot rely on resupply. •Expiration dates, lack of maintenance, and environmental/operational stressors = selective supplies to account for mass, volume, stability, durability, and re-usability"
+},
+{
+"id": "ntrs_eimo_conops_2024:x9",
+"text": "•Delays / lack of ground support = increased task demand, task switching & higher cognitive load (all shown to impair decision making) •Identification of tasks that can be automated to reduce cognitive load demands •Inventory, resource location, storage & retrieval of medical record information"
+}
+]
+}

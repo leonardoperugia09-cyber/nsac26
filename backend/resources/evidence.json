@@ -1,165 +1,2546 @@
 {
-  "schema_version": "1.0",
-  "bundle_version": "1.0.0-demo",
-  "scope": "research_prototype_source_summaries",
-  "records": [
+ "schema_version": "1.0",
+ "bundle_version": "1.0.0-demo",
+ "scope": "research_prototype_source_summaries",
+ "records": [
+  {
+   "id": "nasa_human_body",
+   "title": "The Human Body in Space",
+   "source_url": "https://www.nasa.gov/humans-in-space/the-human-body-in-space/",
+   "authors": [
+    "NASA Human Research Program"
+   ],
+   "publication_year": null,
+   "source_kind": "agency_overview",
+   "topics": [
+    "spaceflight_hazards",
+    "bone_health",
+    "muscle_health",
+    "fluid_shift",
+    "renal_health",
+    "radiation"
+   ],
+   "studied_population": "Agency overview drawing on multiple human-spaceflight research programs; it is not a single study cohort.",
+   "supported_claims": [
+    "NASA describes radiation, isolation and confinement, distance from Earth, altered gravity, and hostile or closed environments as spaceflight hazards.",
+    "Microgravity is associated with bone and muscle changes and headward fluid shifts.",
+    "NASA identifies dehydration and increased calcium excretion from bones as contributors to kidney stone concerns during spaceflight."
+   ],
+   "limitations": [
+    "An agency overview does not validate HALO thresholds, a combined risk score, or an individual probability of illness.",
+    "The summary does not establish operational EVA clearance or an approved treatment protocol.",
+    "The statements here are authored summaries, not source quotations; domain review is pending."
+   ],
+   "summary_kind": "authored_summary",
+   "review_status": "domain_review_pending",
+   "clinically_approved": false
+  },
+  {
+   "id": "siew_kidney_2024",
+   "title": "Cosmic kidney disease: an integrated pan-omic, physiological and morphological study into spaceflight-induced renal dysfunction",
+   "source_url": "https://www.nature.com/articles/s41467-024-49212-1",
+   "authors": [
+    "Siew K",
+    "Nestler KA",
+    "Nelson C"
+   ],
+   "publication_year": 2024,
+   "source_kind": "peer_reviewed_open_access",
+   "topics": [
+    "bone_health",
+    "hydration",
+    "radiation",
+    "renal_health"
+   ],
+   "studied_population": "Integrated human and mouse spaceflight datasets and ground-based simulated-radiation experiments with differing exposures and study designs.",
+   "supported_claims": [
+    "The study investigates kidney molecular and structural changes associated with spaceflight and simulated radiation exposures.",
+    "The reported renal changes support investigating kidney stone mechanisms beyond a bone-calcium explanation alone.",
+    "In 66 ISS astronauts, urinary calcium excretion rose during flight and returned to normal after landing.",
+    "Urine volume fell and urine concentration (osmolality) rose during spaceflight.",
+    "Mice given simulated galactic cosmic radiation at a Mars round-trip dose showed kidney damage and dysfunction.",
+    "The authors list drinking more fluid to raise urine output as one proposed way to prevent stones in flight."
+   ],
+   "limitations": [
+    "Human observations, mouse spaceflight results and animal radiation experiments are distinct evidence populations and must not be treated as interchangeable.",
+    "Animal radiation findings do not establish an individual astronaut's probability of renal injury on a Mars mission.",
+    "The study does not validate HALO's arbitrary bone-marker index, coupling thresholds, or treatment recommendations.",
+    "The astronaut data are mostly male and the animal data mostly female, from short low-Earth-orbit stays, far shorter than a Mars trip.",
+    "The radiation experiments used a single acute dose in mice, which may not match slow cumulative exposure on a Mars mission.",
+    "Most mechanism findings come from mice and omics data, not from astronauts' own kidneys."
+   ],
+   "summary_kind": "authored_summary",
+   "review_status": "domain_review_pending",
+   "clinically_approved": false,
+   "claim_quotes": [
     {
-      "id": "nasa_human_body",
-      "title": "The Human Body in Space",
-      "source_url": "https://www.nasa.gov/humans-in-space/the-human-body-in-space/",
-      "authors": ["NASA Human Research Program"],
-      "publication_year": null,
-      "source_kind": "agency_overview",
-      "topics": [
-        "spaceflight_hazards",
-        "bone_health",
-        "muscle_health",
-        "fluid_shift",
-        "renal_health",
-        "radiation"
-      ],
-      "studied_population": "Agency overview drawing on multiple human-spaceflight research programs; it is not a single study cohort.",
-      "supported_claims": [
-        "NASA describes radiation, isolation and confinement, distance from Earth, altered gravity, and hostile or closed environments as spaceflight hazards.",
-        "Microgravity is associated with bone and muscle changes and headward fluid shifts.",
-        "NASA identifies dehydration and increased calcium excretion from bones as contributors to kidney stone concerns during spaceflight."
-      ],
-      "limitations": [
-        "An agency overview does not validate HALO thresholds, a combined risk score, or an individual probability of illness.",
-        "The summary does not establish operational EVA clearance or an approved treatment protocol.",
-        "The statements here are authored summaries, not source quotations; domain review is pending."
-      ],
-      "summary_kind": "authored_summary",
-      "review_status": "domain_review_pending",
-      "clinically_approved": false
+     "claim": 2,
+     "quote": "in astronauts, FECa increases signi ﬁcantly during ﬂight. This urinary abnormality normalises on return to Earth",
+     "chunk_id": "siew_kidney_2024:x11"
     },
     {
-      "id": "siew_kidney_2024",
-      "title": "Cosmic kidney disease: an integrated pan-omic, physiological and morphological study into spaceflight-induced renal dysfunction",
-      "source_url": "https://www.nature.com/articles/s41467-024-49212-1",
-      "authors": ["Siew et al."],
-      "publication_year": 2024,
-      "source_kind": "research_article",
-      "topics": ["renal_health", "radiation", "bone_health"],
-      "studied_population": "Integrated human and mouse spaceflight datasets and ground-based simulated-radiation experiments with differing exposures and study designs.",
-      "supported_claims": [
-        "The study investigates kidney molecular and structural changes associated with spaceflight and simulated radiation exposures.",
-        "The reported renal changes support investigating kidney stone mechanisms beyond a bone-calcium explanation alone."
-      ],
-      "limitations": [
-        "Human observations, mouse spaceflight results and animal radiation experiments are distinct evidence populations and must not be treated as interchangeable.",
-        "Animal radiation findings do not establish an individual astronaut's probability of renal injury on a Mars mission.",
-        "The study does not validate HALO's arbitrary bone-marker index, coupling thresholds, or treatment recommendations."
-      ],
-      "summary_kind": "authored_summary",
-      "review_status": "domain_review_pending",
-      "clinically_approved": false
+     "claim": 3,
+     "quote": "There was also a decrease in urinary volume during spaceﬂight and an increase in urinary osmolality",
+     "chunk_id": "siew_kidney_2024:x12"
     },
     {
-      "id": "du_pharmaceuticals_2011",
-      "title": "Evaluation of Physical and Chemical Changes in Pharmaceuticals Flown on Space Missions",
-      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3085701/",
-      "authors": ["Du et al."],
-      "publication_year": 2011,
-      "source_kind": "research_article",
-      "topics": ["medication_storage", "radiation"],
-      "studied_population": "Pharmaceutical formulations stored in flight and comparison ground kits; these are drug-product stability observations, not patient treatment outcomes.",
-      "supported_claims": [
-        "Physical and chemical stability changes varied across the studied formulations and storage durations.",
-        "The study discusses radiation exposure and repackaging as possible contributors to pharmaceutical stability changes."
-      ],
-      "limitations": [
-        "The study does not isolate a universal radiation effect across all medications and packaging conditions.",
-        "It does not establish a general formula converting mission duration or accumulated radiation into remaining medication potency.",
-        "These findings do not support calculating a person's dose, deciding that a particular onboard product is safe, or changing a prescribed schedule."
-      ],
-      "summary_kind": "authored_summary",
-      "review_status": "domain_review_pending",
-      "clinically_approved": false
+     "claim": 4,
+     "quote": "renal damage and dysfunction when exposed to a Mars roundtrip dose-equivalent of simulated GCR",
+     "chunk_id": "siew_kidney_2024:x2"
     },
     {
-      "id": "sleep_2014",
-      "title": "Prevalence of sleep deficiency and use of hypnotic drugs in astronauts before, during, and after spaceflight: an observational study",
-      "source_url": "https://doi.org/10.1016/S1474-4422(14)70122-X",
-      "authors": ["Barger et al."],
-      "publication_year": 2014,
-      "source_kind": "research_article",
-      "topics": ["sleep"],
-      "studied_population": "Astronauts observed around spaceflight; observational sleep study.",
-      "supported_claims": [
-        "Documents sleep deficiency and hypnotic use in the studied astronaut cohorts."
-      ],
-      "limitations": [
-        "Does not establish a universal sleep duration, a causal cognition model, or HALO fitness-for-duty thresholds.",
-        "HALO demo rule weights and thresholds are not validated by this source.",
-        "Bibliographic metadata was checked; detailed content/domain review remains pending."
-      ],
-      "summary_kind": "authored_summary",
-      "review_status": "domain_review_pending",
-      "clinically_approved": false
-    },
-    {
-      "id": "muscle_2009",
-      "title": "Exercise in space: human skeletal muscle after 6 months aboard the International Space Station",
-      "source_url": "https://doi.org/10.1152/japplphysiol.91578.2008",
-      "authors": ["Trappe et al."],
-      "publication_year": 2009,
-      "source_kind": "research_article",
-      "topics": ["muscle"],
-      "studied_population": "Human skeletal-muscle observations after a six-month ISS mission.",
-      "supported_claims": [
-        "Investigates skeletal muscle changes after long-duration ISS flight despite exercise."
-      ],
-      "limitations": [
-        "Group findings do not validate personalized linear muscle or exercise-response predictions.",
-        "HALO demo rule weights and thresholds are not validated by this source.",
-        "Bibliographic metadata was checked; detailed content/domain review remains pending."
-      ],
-      "summary_kind": "authored_summary",
-      "review_status": "domain_review_pending",
-      "clinically_approved": false
-    },
-    {
-      "id": "immune_2019",
-      "title": "Herpes Virus Reactivation in Astronauts During Spaceflight and Its Application on Earth",
-      "source_url": "https://doi.org/10.3389/fmicb.2019.00016",
-      "authors": ["Rooney et al."],
-      "publication_year": 2019,
-      "source_kind": "research_article",
-      "topics": ["immune"],
-      "studied_population": "Astronaut spaceflight viral-reactivation research.",
-      "supported_claims": [
-        "Reviews herpesvirus reactivation in astronauts and its relevance to spaceflight health research."
-      ],
-      "limitations": [
-        "Mood, sleep and stress inputs cannot diagnose immune suppression or viral reactivation.",
-        "HALO demo rule weights and thresholds are not validated by this source.",
-        "Bibliographic metadata was checked; detailed content/domain review remains pending."
-      ],
-      "summary_kind": "authored_summary",
-      "review_status": "domain_review_pending",
-      "clinically_approved": false
-    },
-    {
-      "id": "radlab_api",
-      "title": "NASA OSDR RadLab Data API",
-      "source_url": "https://visualization.osdr.nasa.gov/radlab/gui/data-api/",
-      "authors": ["NASA OSDR"],
-      "publication_year": null,
-      "source_kind": "agency_documentation",
-      "topics": ["radlab"],
-      "studied_population": "Instrument observations from multiple spacecraft and radiation detectors.",
-      "supported_claims": [
-        "Documents absorbed dose rate in microgray/hour and dose-equivalent rate in microsievert/hour as distinct quantities."
-      ],
-      "limitations": [
-        "An instrument observation is not personal effective dose; a daily aggregate is not a real-time storm classifier.",
-        "HALO demo rule weights and thresholds are not validated by this source.",
-        "API guide and a historical response shape were checked."
-      ],
-      "summary_kind": "authored_summary",
-      "review_status": "domain_review_pending",
-      "clinically_approved": false
+     "claim": 5,
+     "quote": "Proposed interventions to prevent potential mission critical kidney stone formation in spaceﬂight include increasing urine output by maximising oral ﬂuid intake",
+     "chunk_id": "siew_kidney_2024:x54"
     }
-  ]
+   ],
+   "licence": "CC BY 4.0",
+   "full_text": true,
+   "hypotheses": [
+    "The paper presents renal transporter dephosphorylation as something that may indicate a primary kidney cause of stone risk, not only a result of bone loss. This is a hypothesis, not established.",
+    "The paper suggests kidney remodelling in microgravity, possibly linked to the head-ward fluid shift, may be a primary event. It is not established."
+   ]
+  },
+  {
+   "id": "du_pharmaceuticals_2011",
+   "title": "Evaluation of Physical and Chemical Changes in Pharmaceuticals Flown on Space Missions",
+   "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3085701/",
+   "authors": [
+    "Du et al."
+   ],
+   "publication_year": 2011,
+   "source_kind": "research_article",
+   "topics": [
+    "medication_storage",
+    "radiation"
+   ],
+   "studied_population": "Pharmaceutical formulations stored in flight and comparison ground kits; these are drug-product stability observations, not patient treatment outcomes.",
+   "supported_claims": [
+    "Physical and chemical stability changes varied across the studied formulations and storage durations.",
+    "The study discusses radiation exposure and repackaging as possible contributors to pharmaceutical stability changes."
+   ],
+   "limitations": [
+    "The study does not isolate a universal radiation effect across all medications and packaging conditions.",
+    "It does not establish a general formula converting mission duration or accumulated radiation into remaining medication potency.",
+    "These findings do not support calculating a person's dose, deciding that a particular onboard product is safe, or changing a prescribed schedule."
+   ],
+   "summary_kind": "authored_summary",
+   "review_status": "domain_review_pending",
+   "clinically_approved": false
+  },
+  {
+   "id": "sleep_2014",
+   "title": "Prevalence of sleep deficiency and use of hypnotic drugs in astronauts before, during, and after spaceflight: an observational study",
+   "source_url": "https://doi.org/10.1016/S1474-4422(14)70122-X",
+   "authors": [
+    "Barger et al."
+   ],
+   "publication_year": 2014,
+   "source_kind": "research_article",
+   "topics": [
+    "sleep"
+   ],
+   "studied_population": "Astronauts observed around spaceflight; observational sleep study.",
+   "supported_claims": [
+    "Documents sleep deficiency and hypnotic use in the studied astronaut cohorts."
+   ],
+   "limitations": [
+    "Does not establish a universal sleep duration, a causal cognition model, or HALO fitness-for-duty thresholds.",
+    "HALO demo rule weights and thresholds are not validated by this source.",
+    "Bibliographic metadata was checked; detailed content/domain review remains pending."
+   ],
+   "summary_kind": "authored_summary",
+   "review_status": "domain_review_pending",
+   "clinically_approved": false
+  },
+  {
+   "id": "muscle_2009",
+   "title": "Exercise in space: human skeletal muscle after 6 months aboard the International Space Station",
+   "source_url": "https://doi.org/10.1152/japplphysiol.91578.2008",
+   "authors": [
+    "Trappe et al."
+   ],
+   "publication_year": 2009,
+   "source_kind": "research_article",
+   "topics": [
+    "muscle"
+   ],
+   "studied_population": "Human skeletal-muscle observations after a six-month ISS mission.",
+   "supported_claims": [
+    "Investigates skeletal muscle changes after long-duration ISS flight despite exercise."
+   ],
+   "limitations": [
+    "Group findings do not validate personalized linear muscle or exercise-response predictions.",
+    "HALO demo rule weights and thresholds are not validated by this source.",
+    "Bibliographic metadata was checked; detailed content/domain review remains pending."
+   ],
+   "summary_kind": "authored_summary",
+   "review_status": "domain_review_pending",
+   "clinically_approved": false
+  },
+  {
+   "id": "immune_2019",
+   "title": "Herpes Virus Reactivation in Astronauts During Spaceflight and Its Application on Earth",
+   "source_url": "https://doi.org/10.3389/fmicb.2019.00016",
+   "authors": [
+    "Rooney BV, Crucian BE, Pierson DL, Laudenslager ML, Mehta SK"
+   ],
+   "publication_year": 2019,
+   "source_kind": "peer_reviewed_open_access",
+   "topics": [
+    "immune"
+   ],
+   "studied_population": "Astronaut spaceflight viral-reactivation research.",
+   "supported_claims": [
+    "Reviews herpesvirus reactivation in astronauts and its relevance to spaceflight health research.",
+    "47 of 89 Shuttle astronauts (53%) and 14 of 23 ISS astronauts (61%) shed one or more herpes viruses in saliva or urine.",
+    "Viral shedding is usually without symptoms, but in some cases live virus was recovered and linked to skin lesions or atopic dermatitis."
+   ],
+   "limitations": [
+    "Mood, sleep and stress inputs cannot diagnose immune suppression or viral reactivation.",
+    "HALO demo rule weights and thresholds are not validated by this source.",
+    "Bibliographic metadata was checked; detailed content/domain review remains pending.",
+    "A review combining studies with different methods.",
+    "Shedding shows reactivation, not illness; most cases had no symptoms.",
+    "Sample numbers differ between viruses and missions."
+   ],
+   "summary_kind": "authored_summary",
+   "review_status": "domain_review_pending",
+   "clinically_approved": false,
+   "claim_quotes": [
+    {
+     "claim": 1,
+     "quote": "Currently, 47/89 (53%) astronauts from shuttle-flights and 14/23 (61%) astronauts from ISS missions shed one or more herpes viruses in saliva/urine samples.",
+     "chunk_id": "immune_2019:x2"
+    },
+    {
+     "claim": 2,
+     "quote": "Typically, shedding of viral DNA is asymptomatic in astronauts regardless of mission duration; however, in some cases, live/infectious virus was recovered by tissue culture that was associated with atopic-dermatitis or skin lesions during and after spaceflight.",
+     "chunk_id": "immune_2019:x1"
+    }
+   ],
+   "licence": "CC BY 4.0",
+   "full_text": true,
+   "hypotheses": []
+  },
+  {
+   "id": "radlab_api",
+   "title": "NASA OSDR RadLab Data API",
+   "source_url": "https://visualization.osdr.nasa.gov/radlab/gui/data-api/",
+   "authors": [
+    "NASA OSDR"
+   ],
+   "publication_year": null,
+   "source_kind": "agency_documentation",
+   "topics": [
+    "radlab"
+   ],
+   "studied_population": "Instrument observations from multiple spacecraft and radiation detectors.",
+   "supported_claims": [
+    "Documents absorbed dose rate in microgray/hour and dose-equivalent rate in microsievert/hour as distinct quantities."
+   ],
+   "limitations": [
+    "An instrument observation is not personal effective dose; a daily aggregate is not a real-time storm classifier.",
+    "HALO demo rule weights and thresholds are not validated by this source.",
+    "API guide and a historical response shape were checked."
+   ],
+   "summary_kind": "authored_summary",
+   "review_status": "domain_review_pending",
+   "clinically_approved": false
+  },
+  {
+   "id": "hrp_renal_stone_2017",
+   "title": "Evidence Report: Risk of Renal Stone Formation",
+   "source_url": "https://ntrs.nasa.gov/citations/20170004709",
+   "authors": [
+    "Sibonga J",
+    "Pietrzyk R"
+   ],
+   "publication_year": 2017,
+   "source_kind": "nasa_evidence_report",
+   "licence": "NASA NTRS: public use permitted",
+   "full_text": true,
+   "topics": [
+    "renal_health",
+    "hydration",
+    "bone_health"
+   ],
+   "studied_population": "US and Russian crew data from Skylab, Shuttle and ISS missions plus a chart review of US astronauts (357 flyers); a literature-based evidence report, not one new study.",
+   "supported_claims": [
+    "The report names two main spaceflight stone risk factors: more calcium in the urine from bone loss, and lower urine output.",
+    "Dehydration and a high-sodium, high-animal-protein diet are listed as other contributing risk factors.",
+    "In long-duration crew, urine volume was 47% lower early in the mission (before flight day 30) and 39% lower late (after mission day 60).",
+    "The report says stone risk rises when urine volume falls below 1.5 liters per day, and that a hydration countermeasure should aim for 2.5 to 3 liters per day of urine.",
+    "A chart review found 14 stone cases in 12 US astronauts, 9 of them after flight."
+   ],
+   "claim_quotes": [
+    {
+     "claim": 0,
+     "quote": "The primary risk factors for renal stone formation in space are the increased excretion of calcium due to bone atrophy and lower urine output associated with the microgravity environment",
+     "chunk_id": "hrp_renal_stone_2017:x11"
+    },
+    {
+     "claim": 1,
+     "quote": "Other contributing risk factors include dehydration, diet (high sodium, high animal proteins)",
+     "chunk_id": "hrp_renal_stone_2017:x11"
+    },
+    {
+     "claim": 2,
+     "quote": "there was a 47% decrease in urine volume early during the missions (before flight day 30) and a 39% lower urine output late in the mission (after mission day 60).",
+     "chunk_id": "hrp_renal_stone_2017:x31"
+    },
+    {
+     "claim": 3,
+     "quote": "the risk for renal stone development increases when urinary volume drops below 1.5 liters/day; therefore, an effective hydration countermeasure should be sufficient to produce 2.5-3 liters/day of urine volume",
+     "chunk_id": "hrp_renal_stone_2017:x43"
+    },
+    {
+     "claim": 4,
+     "quote": "identified fourteen cases of renal stone formation occurring in twelve different astronauts, with nine of those episodes occurring in the post-flight period (n=7 astronauts)",
+     "chunk_id": "hrp_renal_stone_2017:x28"
+    }
+   ],
+   "limitations": [
+    "It is a literature review. Much of the in-flight data comes from short Shuttle flights and older missions.",
+    "The 1.5 and 2.5 to 3 liter figures refer to urine volume, not how much a person drinks, and are cited from a modelling paper.",
+    "Urine chemistry is a risk marker. It does not show who will form a stone."
+   ],
+   "hypotheses": [],
+   "summary_kind": "authored_summary",
+   "review_status": "domain_review_pending",
+   "clinically_approved": false
+  },
+  {
+   "id": "okada_urolithiasis_2022",
+   "title": "Bisphosphonate Use May Reduce the Risk of Urolithiasis in Astronauts on Long-Term Spaceflights",
+   "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8770998/",
+   "authors": [
+    "Okada A"
+   ],
+   "publication_year": 2022,
+   "source_kind": "peer_reviewed_open_access",
+   "licence": "CC BY 4.0",
+   "full_text": true,
+   "topics": [
+    "renal_health",
+    "bone_health",
+    "exercise"
+   ],
+   "studied_population": "17 ISS astronauts on missions of 4.5 to 6.2 months: 10 did resistive exercise only, 7 also took a bone-resorption-blocking drug; urine collected before, during and after flight.",
+   "supported_claims": [
+    "Urine volume fell during spaceflight in both groups and recovered after return.",
+    "In the exercise-only group (10 astronauts), urinary calcium rose between flight day 15 and 30, while it stayed slightly lower in the 7 who also took the drug.",
+    "Bone breakdown markers in urine were raised in the exercise-only group during flight, with no rise in the drug group.",
+    "No astronaut was found to form a new stone, but the study measured stone risk markers, not stones.",
+    "The paper cites femoral bone density falling about 1.5% per month in space, about 10 times the rate in postmenopausal women."
+   ],
+   "claim_quotes": [
+    {
+     "claim": 0,
+     "quote": "Urine volume decreased in both groups during spaceflight but recovered after return.",
+     "chunk_id": "okada_urolithiasis_2022:x1"
+    },
+    {
+     "claim": 1,
+     "quote": "The ARED group showed increased urinary calcium excretion from the 15th to 30th day of spaceflight, whereas urinary calcium was slightly decreased in the ARED+ALN group.",
+     "chunk_id": "okada_urolithiasis_2022:x2"
+    },
+    {
+     "claim": 2,
+     "quote": "Urinary N‐terminal telopeptide (NTX) and helical peptide (HP) of type I collagen, as bone resorption markers, were elevated in the ARED group during and until 0 days after spaceflight",
+     "chunk_id": "okada_urolithiasis_2022:x2"
+    },
+    {
+     "claim": 3,
+     "quote": "this study used renal stone risk markers as surrogates, and did not detect the clinical event of a de novo renal stone in any astronaut study subject",
+     "chunk_id": "okada_urolithiasis_2022:x34"
+    },
+    {
+     "claim": 4,
+     "quote": "femoral bone mineral density (BMD) decreases by about 1.5% per a month in space, which is about 10 times the rate of bone loss in postmenopausal women.",
+     "chunk_id": "okada_urolithiasis_2022:x5"
+    }
+   ],
+   "limitations": [
+    "Small, non-randomised groups (7 and 10); astronauts chose whether to take the drug, so groups may differ in other ways.",
+    "Stone formation was checked only by ultrasound, and the stone risk markers are stand-ins for real stones.",
+    "The design cannot separate the drug effect from the exercise effect or show whether they add up."
+   ],
+   "hypotheses": [
+    "The authors say their findings help generate hypotheses to test in further studies. They do not prove that blocking bone breakdown prevents stones in flight."
+   ],
+   "summary_kind": "authored_summary",
+   "review_status": "domain_review_pending",
+   "clinically_approved": false
+  },
+  {
+   "id": "rosenthal_bisphosphonate_2024",
+   "title": "The Case for Bisphosphonate Use in Astronauts Flying Long-Duration Missions",
+   "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11352369/",
+   "authors": [
+    "Rosenthal R",
+    "Schneider V",
+    "Jones J",
+    "Sibonga J"
+   ],
+   "publication_year": 2024,
+   "source_kind": "peer_reviewed_open_access",
+   "licence": "CC BY 4.0",
+   "full_text": true,
+   "topics": [
+    "bone_health",
+    "renal_health",
+    "medication"
+   ],
+   "studied_population": "Narrative review and opinion paper by NASA-linked authors, drawing on ISS astronaut bone studies, bed rest studies and terrestrial osteoporosis research.",
+   "supported_claims": [
+    "Even when resistive exercise keeps preflight bone mass, markers of bone breakdown in astronaut urine stay raised.",
+    "The review cites as much as a 26% bone density loss at the hip in long-duration flight, from a personal communication.",
+    "Post-flight T-scores below -2.5, the threshold used for age-related fragility, were not seen in ISS astronauts.",
+    "The review says stone risk in flight rests mainly on increased bone turnover, reduced hydration and saturated urine.",
+    "Bisphosphonate drugs have so far been used in spaceflight only in research studies."
+   ],
+   "claim_quotes": [
+    {
+     "claim": 0,
+     "quote": "Even with the maintenance of preflight skeletal bone mass with resistance exercise, there is still an increased excretion of resorption biomarkers",
+     "chunk_id": "rosenthal_bisphosphonate_2024:x16"
+    },
+    {
+     "claim": 1,
+     "quote": "As much as a 26% loss in BMD was observed in the hip during long-duration spaceflight",
+     "chunk_id": "rosenthal_bisphosphonate_2024:x12"
+    },
+    {
+     "claim": 2,
+     "quote": "postflight T-scores <−2.5 ((the diagnostic criterion for age-related skeletal fragility) were also not evident in ISS astronauts",
+     "chunk_id": "rosenthal_bisphosphonate_2024:x15"
+    },
+    {
+     "claim": 3,
+     "quote": "The risk for renal stone formation during spaceflight is heavily based upon increased bone turnover, reduced hydration, and saturated urine in astronauts",
+     "chunk_id": "rosenthal_bisphosphonate_2024:x36"
+    },
+    {
+     "claim": 4,
+     "quote": "Thus far bisphosphonates have only been used during spaceflight research.",
+     "chunk_id": "rosenthal_bisphosphonate_2024:x33"
+    }
+   ],
+   "limitations": [
+    "It is a review with an advocacy aim, not a new trial.",
+    "The 26% hip figure is a personal communication, not a published measurement, and its time span is not given.",
+    "Bone density by DXA has not been tied to fracture in actively flying astronauts."
+   ],
+   "hypotheses": [
+    "The review calls high cabin CO2 (possible hypercapnia) a putative risk factor for bone loss. This is a hypothesis, not established.",
+    "The contributions of CO2, a high-salt diet and ionizing radiation to bone breakdown are described as not fully defined."
+   ],
+   "summary_kind": "authored_summary",
+   "review_status": "domain_review_pending",
+   "clinically_approved": false
+  },
+  {
+   "id": "hrp_bone_fracture_2024",
+   "title": "Risk of Bone Fracture due to Spaceflight-induced Changes to Bone",
+   "source_url": "https://ntrs.nasa.gov/citations/20240005190",
+   "authors": [
+    "Sibonga J",
+    "Spector E",
+    "Yardley G"
+   ],
+   "publication_year": 2024,
+   "source_kind": "nasa_evidence_report",
+   "licence": "NASA NTRS: public use permitted",
+   "full_text": true,
+   "topics": [
+    "bone_health",
+    "exercise"
+   ],
+   "studied_population": "Literature-based NASA evidence report on bone fracture risk, drawing on DXA and CT data from Mir cosmonauts and ISS astronauts, bed rest studies and modelling.",
+   "supported_claims": [
+    "Mir cosmonauts on 4 to 14 month flights lost on average 1 to 1.5% of preflight bone density per month, and the report states the same average rate for hip and spine in astronauts.",
+    "Lumbar spine loss in astronauts is described as about 10 times faster than at the onset of menopause.",
+    "Resistive exercise on ARED alone only partly protected against bone loss and did not prevent losses at the total hip, trochanter and lumbar spine.",
+    "Bone markers show resorption is stimulated in flight while formation is unresponsive or suppressed.",
+    "The report states there is no fracture risk or clinical guideline based on a percent change in bone density."
+   ],
+   "claim_quotes": [
+    {
+     "claim": 0,
+     "quote": "This seminal study averaged the total percentage loss of preflight BMD each month (i.e., 1–1.5% BMD loss/month), as the Mir cosmonauts participated in spaceflights of varying durations (4–14 months)",
+     "chunk_id": "hrp_bone_fracture_2024:x26"
+    },
+    {
+     "claim": 0,
+     "quote": "In astronauts, t he average loss rate of pre -flight areal bone mineral density (aBMD , g/cm2) at 1 –1.5% per month for hip and spine",
+     "chunk_id": "hrp_bone_fracture_2024:x35"
+    },
+    {
+     "claim": 1,
+     "quote": "The accelerated rate of bone loss in the lumbar spine of astronauts is considered ~10x faster than the vertebral aBMD loss observed in females in the onset of menopause.",
+     "chunk_id": "hrp_bone_fracture_2024:x35"
+    },
+    {
+     "claim": 2,
+     "quote": "Resistive exercise (on ARED) alone however could only partially protect against bone loss, failing to mitigate losses in the total hip, hip trochanter, and the lumbar spine",
+     "chunk_id": "hrp_bone_fracture_2024:x147"
+    },
+    {
+     "claim": 3,
+     "quote": "Assays of biochemical markers of bone turnover consistently describe the stimulation of bone resorption during spaceflight with an unresponsive/suppressed response in bone formation following",
+     "chunk_id": "hrp_bone_fracture_2024:x38"
+    },
+    {
+     "claim": 4,
+     "quote": "there is no fracture risk or clinical guideline based upon a % change in aBMD.",
+     "chunk_id": "hrp_bone_fracture_2024:x38"
+    }
+   ],
+   "limitations": [
+    "The 1 to 1.5% per month figure is a group average from older Mir and early ISS data, before ARED exercise was fully in place.",
+    "Bone density by DXA is called an insufficient stand-in for fracture risk, so the percent loss does not tell anyone their fracture risk.",
+    "It is a review with no new measurements."
+   ],
+   "hypotheses": [
+    "The report says it is not known if bone changes can be reduced by the partial gravity of the Moon and Mars.",
+    "The report presents rapid bone loss as something that could be a fragility risk factor, potentially leading to more fractures. This is an analogy to Earth data, not established in astronauts."
+   ],
+   "summary_kind": "authored_summary",
+   "review_status": "domain_review_pending",
+   "clinically_approved": false
+  },
+  {
+   "id": "stavnichuk_bone_2020",
+   "title": "A systematic review and meta-analysis of bone loss in space travelers",
+   "source_url": "https://doi.org/10.1038/s41526-020-0103-2",
+   "authors": [
+    "Stavnichuk M",
+    "Mikolajewicz N",
+    "Corlett T",
+    "Morris M",
+    "Komarova SV"
+   ],
+   "publication_year": 2020,
+   "source_kind": "peer_reviewed_open_access",
+   "licence": "CC BY 4.0",
+   "full_text": true,
+   "topics": [
+    "bone_health"
+   ],
+   "studied_population": "Meta-analysis of 25 published articles: bone density for 148 space travelers and bone marker data for 124 (about 189 of 565 astronauts had usable data).",
+   "supported_claims": [
+    "After flight, lower limb bone density was 5.4% below preflight and lumbar spine/pelvis 6.2% below; lower limb loss was 0.8% per month.",
+    "Skull bone density rose 2.2% while thorax and upper limbs were about neutral, so changes depend on skeletal site.",
+    "Bone resorption markers rose to about 113% above preflight, reaching half of that rise in about 11 days.",
+    "The paper opens by citing bone loss of 1 to 1.5% per month, only partly helped by non-drug countermeasures.",
+    "Several studies report 2 to 5 years are needed to recover the bone lost in flight."
+   ],
+   "claim_quotes": [
+    {
+     "claim": 0,
+     "quote": "negative in the lumbar spine/pelvis, −6.2 [ −6.7, −5.6], and lower limbs, −5.4% [ −6.0, −4.9]. In the lower limb region, the rate of bone loss was −0.8% [−1.1, −0.5] per month.",
+     "chunk_id": "stavnichuk_bone_2020:x2"
+    },
+    {
+     "claim": 1,
+     "quote": "A percentage difference in bone density relative to pre- ﬂight was positive in the skull, +2.2% [95% con ﬁdence interval: +1.1, +3.3]",
+     "chunk_id": "stavnichuk_bone_2020:x2"
+    },
+    {
+     "claim": 2,
+     "quote": "Bone resorption markers increased hyperbolically with a time to half-max of 11 days [9, 13] and plateaued at 113% [108, 117] above pre- ﬂight levels.",
+     "chunk_id": "stavnichuk_bone_2020:x2"
+    },
+    {
+     "claim": 3,
+     "quote": "space travelers have been known to experience severe bone loss at a rate of 1 –1.5% per month, which is only partially responsive to non-pharmacological countermeasures",
+     "chunk_id": "stavnichuk_bone_2020:x4"
+    },
+    {
+     "claim": 4,
+     "quote": "several studies reported that 2–5 years are required to recover microgravity-induced bone loss",
+     "chunk_id": "stavnichuk_bone_2020:x38"
+    }
+   ],
+   "limitations": [
+    "Pooled published data: more than 95% of the variance was between-study heterogeneity, and some astronauts may be counted twice.",
+    "Bone density was measured right after landing, mixing missions with different exercise hardware and lengths.",
+    "Short missions were highly variable, and only about a third of astronauts had usable data."
+   ],
+   "hypotheses": [
+    "The paper says lack of mechanical loading has long been speculated to cause bone loss, but may not be the only factor. This is an open question."
+   ],
+   "summary_kind": "authored_summary",
+   "review_status": "domain_review_pending",
+   "clinically_approved": false
+  },
+  {
+   "id": "hrp_muscle_aerobic_2023",
+   "title": "Evidence Report: Risk of Impaired Performance Due to Reduced Muscle Mass, Strength and Endurance; and Reduced Aerobic Capacity",
+   "source_url": "https://ntrs.nasa.gov/citations/20220019338",
+   "authors": [
+    "Rivas E",
+    "Strock N",
+    "Dillon EL",
+    "Frisco D"
+   ],
+   "publication_year": 2023,
+   "source_kind": "nasa_evidence_report",
+   "licence": "NASA NTRS: public use permitted",
+   "full_text": true,
+   "topics": [
+    "muscle_health",
+    "exercise",
+    "fluid_shift"
+   ],
+   "studied_population": "Literature-based NASA evidence report; the leg muscle numbers used here come from MRI studies of 4 and 10 ISS crew (161 to 194 day missions), preliminary NASA data on 98 crew, and bed rest studies.",
+   "supported_claims": [
+    "After ISS missions of about 161 to 194 days, calf muscles lost 10 to 18% versus 4 to 7% for thigh muscles.",
+    "Within the calf, the soleus lost the most (15 to 19%) and the gastrocnemius about 10%.",
+    "Preliminary NASA data on 98 crew show knee strength down about 14%, knee endurance about 11% and ankle strength about 13%.",
+    "Plasma volume was reported 17% lower on flight day 1 and 12% lower on flight days 8 to 12.",
+    "In bed rest, plasma volume reached a 10% loss within 24 hours and about 12% by day 3."
+   ],
+   "claim_quotes": [
+    {
+     "claim": 0,
+     "quote": "Calf muscles were found to undergo the greater decrements than thigh muscles (10-18% vs. 4–7% loss, respectively)",
+     "chunk_id": "hrp_muscle_aerobic_2023:x155"
+    },
+    {
+     "claim": 1,
+     "quote": "Both studies reported the greatest loss in the soleus muscle (15-19% loss), with loss of a lesser extent in the gastrocnemius muscle (10% loss)",
+     "chunk_id": "hrp_muscle_aerobic_2023:x155"
+    },
+    {
+     "claim": 2,
+     "quote": "finding that knee strength is reduced by about 14%, knee endurance is reduced by about 11% (Figure 2 4), and ankle strength is reduced by about 13%",
+     "chunk_id": "hrp_muscle_aerobic_2023:x172"
+    },
+    {
+     "claim": 3,
+     "quote": "plasma volume was reduced by 17% on flight day (FD) 1 and 12% on FDs 8- 12",
+     "chunk_id": "hrp_muscle_aerobic_2023:x88"
+    },
+    {
+     "claim": 4,
+     "quote": "Plasma volume has been observed to be decreased in as little as 6 hrs, reaching a 10% loss in 24 hrs, and equaling approximately 12% by the third day of bed rest",
+     "chunk_id": "hrp_muscle_aerobic_2023:x246"
+    }
+   ],
+   "limitations": [
+    "The MRI data come from very small groups (4 and 10 crew), measured about 4 to 5 days after landing, and from the older iRED exercise era.",
+    "The 98-crew strength figures are described as preliminary and unpublished.",
+    "The plasma volume figures for early flight come from a cited earlier study, and the 24-hour figure is from bed rest, which only imitates spaceflight."
+   ],
+   "hypotheses": [
+    "The report says in-flight calf strength testing on one Shuttle mission may have acted as an unplanned exercise countermeasure. This is a hypothesis, not established."
+   ],
+   "summary_kind": "authored_summary",
+   "review_status": "domain_review_pending",
+   "clinically_approved": false
+  },
+  {
+   "id": "scott_exercise_2023",
+   "title": "Effects of exercise countermeasures on multisystem function in long duration spaceflight astronauts",
+   "source_url": "https://doi.org/10.1038/s41526-023-00256-5",
+   "authors": [
+    "Scott JM",
+    "Feiveson AH",
+    "English KL"
+   ],
+   "publication_year": 2023,
+   "source_kind": "peer_reviewed_open_access",
+   "licence": "CC BY 4.0",
+   "full_text": true,
+   "topics": [
+    "exercise",
+    "muscle_health",
+    "bone_health"
+   ],
+   "studied_population": "46 ISS astronauts (37 men, 9 women) on missions averaging 178 days, tested before and after flight; all did mandatory aerobic and resistive exercise, so there was no non-exercise control.",
+   "supported_claims": [
+    "About 600 minutes per week of aerobic and resistance exercise did not fully protect against deconditioning during 178-day missions.",
+    "Lower leg muscle cross-sectional area and strength fell significantly, with no evidence of a similar change in upper body strength.",
+    "Mean total body mass, lean mass and fat mass were virtually unchanged after flight.",
+    "Mean bone density fell 2.1% to 3.7% depending on site, with larger drops of 5.3% to 8.5% in trabecular bone.",
+    "The authors estimate up to 17% of astronauts on future missions could have performance-limiting deconditioning with current exercise."
+   ],
+   "claim_quotes": [
+    {
+     "claim": 0,
+     "quote": "during 178 ± 48 d of space ﬂight, ~600 min/wk of aerobic and resistance exercise did not fully protect against multisystem deconditioning.",
+     "chunk_id": "scott_exercise_2023:x1"
+    },
+    {
+     "claim": 1,
+     "quote": "mean lower leg muscle cross-sectional area and strength were signiﬁcantly decreased ( p < 0.05); but there was no evidence of a similar change in mean upper body muscle strength",
+     "chunk_id": "scott_exercise_2023:x9"
+    },
+    {
+     "claim": 2,
+     "quote": "Means of total body mass, lean mass, and fat mass were virtually unchanged post ﬂight",
+     "chunk_id": "scott_exercise_2023:x10"
+    },
+    {
+     "claim": 3,
+     "quote": "Changes in mean bone mineral density (BMD) were moderate, ranging from −2.1% ± 0.7% to −3.7% ± 0.6%; however much greater declines were observed for bone content in the trabecular regions",
+     "chunk_id": "scott_exercise_2023:x10"
+    },
+    {
+     "claim": 4,
+     "quote": "We estimated that up to 17% of astronauts would experience performancelimiting deconditioning if current exercise countermeasures were used on future space ﬂight missions.",
+     "chunk_id": "scott_exercise_2023:x2"
+    }
+   ],
+   "limitations": [
+    "Only 46 astronauts, mostly men, which is small for a study of individual differences.",
+    "Exercise is mandatory, so the effect of exercise versus no exercise in flight is not known.",
+    "Post-flight tests came days after landing, and the Artemis exercise hardware may be weaker than ISS ARED."
+   ],
+   "hypotheses": [
+    "The 17% figure is a model estimate for future missions, not an observed result."
+   ],
+   "summary_kind": "authored_summary",
+   "review_status": "domain_review_pending",
+   "clinically_approved": false
+  },
+  {
+   "id": "hrp_nutrition_2015",
+   "title": "Evidence Report: Risk Factor of Inadequate Nutrition",
+   "source_url": "https://ntrs.nasa.gov/citations/20150000512",
+   "authors": [
+    "Smith SM",
+    "Zwart SR",
+    "Heer M"
+   ],
+   "publication_year": 2015,
+   "source_kind": "nasa_evidence_report",
+   "licence": "NASA NTRS: public use permitted",
+   "full_text": true,
+   "topics": [
+    "nutrition",
+    "fluid_shift",
+    "hydration"
+   ],
+   "studied_population": "Literature-based NASA evidence report on nutrition; draws on Apollo, Skylab, Shuttle, Mir and ISS crew data, bed rest and starvation studies.",
+   "supported_claims": [
+    "In-flight intakes averaged about 70% of predicted requirements from Apollo through Shuttle, and about 80% on ISS.",
+    "Body mass losses of 1% to 5% of preflight mass have been typical in spaceflight history, though some crew kept their mass.",
+    "ISS crew who met their energy and vitamin D targets and exercised kept body mass and preflight bone density.",
+    "Plasma volume dropped about 17% early in flight, then about 11% by days 8 to 12, and stayed 10% to 15% low on long flights.",
+    "Total body water fell only about 1% in flight; the authors conclude that weightlessness-induced dehydration does not exist."
+   ],
+   "claim_quotes": [
+    {
+     "claim": 0,
+     "quote": "crewmember dietary intakes during flight have averaged about 70% of predicted requirements (31), with ISS intakes on average about 80% of requirements (Figure 1).",
+     "chunk_id": "hrp_nutrition_2015:x107"
+    },
+    {
+     "claim": 1,
+     "quote": "Body mass losses of 1% to 5% of preflight body mass have been a typical finding in the history of spaceflight, although some crewmembers have been able to maintain body mass",
+     "chunk_id": "hrp_nutrition_2015:x114"
+    },
+    {
+     "claim": 2,
+     "quote": "In addition to maintaining energy intake and vitamin D status, in conjunction with exercise, these crewmembers maintained body mass; came home leaner, with less fat; and maintained bone mineral density at preflight levels",
+     "chunk_id": "hrp_nutrition_2015:x128"
+    },
+    {
+     "claim": 3,
+     "quote": "Plasma volume was partially restored during this period, from the initial ~17% below preflight levels to ~11% below preflight levels (28), and it has been found to remain 10% to 15% below preflight levels even for extended-duration flights",
+     "chunk_id": "hrp_nutrition_2015:x165"
+    },
+    {
+     "claim": 4,
+     "quote": "Shuttle and Skylab astronauts had decreases of about 1% in total body water during flight (28, 174, 175), and the percentage of body mass represented by water did not change. Thus, the often-proposed weightlessness-induced dehydration does not exist.",
+     "chunk_id": "hrp_nutrition_2015:x167"
+    }
+   ],
+   "limitations": [
+    "Mostly Shuttle, Skylab and early ISS data from small crews; intake figures depend on food logs and estimates.",
+    "Energy expenditure was measured only on short Shuttle flights, so long-flight energy balance is unknown.",
+    "The 17% and 11% plasma volume values come from one cited early study, so they are not a fresh measurement."
+   ],
+   "hypotheses": [
+    "The report says whether energy expenditure trends continue on longer flights is not known, and the health effects of inadequate intake still need to be determined."
+   ],
+   "summary_kind": "authored_summary",
+   "review_status": "domain_review_pending",
+   "clinically_approved": false
+  },
+  {
+   "id": "laurens_energy_2019",
+   "title": "Revisiting the Role of Exercise Countermeasure on the Regulation of Energy Balance During Space Flight",
+   "source_url": "https://doi.org/10.3389/fphys.2019.00321",
+   "authors": [
+    "Laurens C",
+    "Simon C",
+    "Vernikos J",
+    "Gauquelin-Koch G",
+    "Blanc S",
+    "Bergouignan A"
+   ],
+   "publication_year": 2019,
+   "source_kind": "peer_reviewed_open_access",
+   "licence": "CC BY 4.0",
+   "full_text": true,
+   "topics": [
+    "nutrition",
+    "exercise"
+   ],
+   "studied_population": "Narrative review of energy balance in space, drawing on a few small astronaut studies (for example 4 astronauts on a 16-day mission), ISS reports and bed rest studies.",
+   "supported_claims": [
+    "The review says ISS astronauts still lose 2 to 5% of their initial body mass during their time in space.",
+    "In 4 astronauts, energy intake did not match expenditure: the deficit was as large as 5.7 MJ per day, which if sustained could cost over 5 kg per month.",
+    "Muscle loss contributes to body mass loss but does not explain all of it; about 2 kg of fat mass was lost after 2 weeks in one study.",
+    "In bed rest, resistive exercise alone raised total energy expenditure by about 2%, while resistive plus aerobic exercise raised it by 15%."
+   ],
+   "claim_quotes": [
+    {
+     "claim": 0,
+     "quote": "Most recent reports on the ISS, however, show that astronauts still lose from 2 to 5% of their initial body mass during their time in space",
+     "chunk_id": "laurens_energy_2019:x5"
+    },
+    {
+     "claim": 1,
+     "quote": "This mismatch led to an energy deficit as large as 5.7 ± 0.3 MJ/day in four astronauts (Stein et al., 1999a). If sustained, this may cause a weight loss of >5 kg/month.",
+     "chunk_id": "laurens_energy_2019:x8"
+    },
+    {
+     "claim": 2,
+     "quote": "Body fat loss was indeed reported during in-flight experiments. For example, a decrease of about 2 kg in fat mass was observed following 2 weeks in space",
+     "chunk_id": "laurens_energy_2019:x7"
+    },
+    {
+     "claim": 3,
+     "quote": "while the resistive exercise protocol had a minor impact on total energy expenditure (+2%), the combined resistive and aerobic exercise countermeasure increased total energy expenditure by 15%",
+     "chunk_id": "laurens_energy_2019:x36"
+    }
+   ],
+   "limitations": [
+    "A narrative review, not a new measurement; the 5.7 MJ deficit comes from only 4 astronauts on a short Shuttle-era mission.",
+    "The 2 to 5% body mass loss is cited from one earlier ISS report, with no month-by-month breakdown in the passages used.",
+    "Exercise energy cost is mostly inferred from bed rest, which does not reproduce microgravity."
+   ],
+   "hypotheses": [
+    "The review suggests the required exercise program, rather than microgravity itself, may be partly responsible for chronic weight loss in space. This is a hypothesis, not established.",
+    "The review offers, as an alternative interpretation, that 24-hour energy expenditure is the main driver of body mass change because intake cannot match it."
+   ],
+   "summary_kind": "authored_summary",
+   "review_status": "domain_review_pending",
+   "clinically_approved": false
+  },
+  {
+   "id": "hrp_sans_2017",
+   "title": "Evidence Report: Risk of Spaceflight Associated Neuro-ocular Syndrome (SANS)",
+   "source_url": "https://ntrs.nasa.gov/citations/20180000936",
+   "authors": [
+    "Stenger MB, Tarver WJ, Brunstetter T, et al."
+   ],
+   "publication_year": 2017,
+   "source_kind": "nasa_evidence_report",
+   "licence": "NASA NTRS: public use permitted",
+   "full_text": true,
+   "topics": [
+    "vision",
+    "fluid_shift"
+   ],
+   "studied_population": "US and partner astronauts on Shuttle and ISS missions, plus case reports, bed rest, parabolic flight and patient comparisons (NASA evidence report).",
+   "supported_claims": [
+    "In NASA's 2017 count, optic disc edema (the main SANS sign) was found in 16% of astronauts, but 38% to 51% of long-duration crew had at least one SANS finding.",
+    "60% of long-duration ISS crew reported worse distance or near vision, versus 29% after short Shuttle flights.",
+    "Head-down bed rest up to 70 days did not produce the eye changes seen in spaceflight.",
+    "Since Apollo, astronauts have reported headaches linked to the headward fluid shift, along with a feeling of head fullness.",
+    "An analysis of ISS records linked 7-day average cabin CO2 to headache incidence but found no link between CO2 and vision changes."
+   ],
+   "claim_quotes": [
+    {
+     "claim": 0,
+     "quote": "the overall incidence of SANS is considered to be 16%. However, 24 crewmembers have been identified as having one or more of the constellation of symptoms",
+     "chunk_id": "hrp_sans_2017:x23"
+    },
+    {
+     "claim": 1,
+     "quote": "29% of crewmembers who participated in a short-duration Shuttle spaceflight and 60% of crewmembers who participated in longduration spaceflight onboard the International Space Station (ISS) reported degradation of distance or near-visual acuity",
+     "chunk_id": "hrp_sans_2017:x25"
+    },
+    {
+     "claim": 2,
+     "quote": "the lack of gross ocular changes after up to 70-days of head-down tilt bed rest suggests that bed rest does not increase ICP",
+     "chunk_id": "hrp_sans_2017:x110"
+    },
+    {
+     "claim": 3,
+     "quote": "anecdotal reports of headaches due to cephalad fluid shifts have been documented. Indeed, a feeling of “fullness” of the head, or facial edema lasting for the duration of the flight were reported by all Apollo astronauts.",
+     "chunk_id": "hrp_sans_2017:x182"
+    },
+    {
+     "claim": 4,
+     "quote": "reported an association between 7-day average CO2 concentrations and headache incidence (Law et al. 2014). However, they found no association between CO2 levels and vision changes.",
+     "chunk_id": "hrp_sans_2017:x227"
+    },
+    {
+     "claim": 0,
+     "quote": "38% to 51% of long-duration crewmembers have developed one or more findings associated with SANS",
+     "chunk_id": "hrp_sans_2017:x23"
+    }
+   ],
+   "limitations": [
+    "Prevalence depends on which sign is counted and on how many crew were tested for each sign, so the figure ranges from 16% to about 51%.",
+    "Mostly observational data from a small number of astronauts, many measured only after flight with inconsistent methods.",
+    "The headache reports are anecdotal and do not prove that fluid shift is the only cause."
+   ],
+   "hypotheses": [
+    "The report presents cerebrospinal fluid compartmentalization in the optic nerve sheath as a proposed mechanism, not an established one."
+   ],
+   "summary_kind": "authored_summary",
+   "review_status": "domain_review_pending",
+   "clinically_approved": false
+  },
+  {
+   "id": "lee_sans_2020",
+   "title": "Spaceflight associated neuro-ocular syndrome (SANS) and the neuro-ophthalmologic effects of microgravity: a review and an update",
+   "source_url": "https://doi.org/10.1038/s41526-020-0097-9",
+   "authors": [
+    "Lee AG, Mader TH, Gibson CR, et al."
+   ],
+   "publication_year": 2020,
+   "source_kind": "peer_reviewed_open_access",
+   "licence": "CC BY 4.0",
+   "full_text": true,
+   "topics": [
+    "vision",
+    "fluid_shift"
+   ],
+   "studied_population": "Review of NASA and partner reports on long-duration ISS astronauts, with case findings from a small group of astronauts who had lumbar punctures and imaging.",
+   "supported_claims": [
+    "SANS is defined in this review as a group of findings: optic disc edema, globe flattening, choroidal and retinal folds, hyperopic shifts above 0.75 D, and cotton wool spots.",
+    "The cause is unclear; one idea is that headward fluid shift raises pressure inside the skull.",
+    "Astronauts with SANS findings report only mild or occasional headaches, unlike patients with raised skull pressure on Earth, where headache is seen in over 90%."
+   ],
+   "claim_quotes": [
+    {
+     "claim": 0,
+     "quote": "unilateral and bilateral optic disc edema (variable Frisén grades), globe ﬂattening (as de ﬁned qualitatively on imaging), choroidal and retinal folds, hyperopic refractive error shifts (>0.75 D), or focal areas of ischemic retina",
+     "chunk_id": "lee_sans_2020:x4"
+    },
+    {
+     "claim": 1,
+     "quote": "two basic theories have been offered (although these are not mutually exclusive hypotheses). First, these changes may result from a rise in intracranial pressure (ICP) from cephalad",
+     "chunk_id": "lee_sans_2020:x10"
+    },
+    {
+     "claim": 2,
+     "quote": "Terrestrial IIH is typically associated with prominent headaches, seen in more than 90% of all IIH patients, 15 but only mild or occasional headaches are reported in astronauts on ISS.",
+     "chunk_id": "lee_sans_2020:x13"
+    }
+   ],
+   "limitations": [
+    "A narrative review, not a new measurement study, and it relies on small case series.",
+    "The anatomical changes cannot yet be tied to one single mechanism.",
+    "Long-term vision effects after return are not settled."
+   ],
+   "hypotheses": [
+    "The review presents a rise in skull pressure and a local optic nerve sheath mechanism as two theories, not established causes."
+   ],
+   "summary_kind": "authored_summary",
+   "review_status": "domain_review_pending",
+   "clinically_approved": false
+  },
+  {
+   "id": "gew_sans_consensus_2026",
+   "title": "Spaceflight-associated neuro-ocular syndrome (SANS): expert consensus on diagnosis and management",
+   "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13462731/",
+   "authors": [
+    "Gew et al."
+   ],
+   "publication_year": 2026,
+   "source_kind": "peer_reviewed_open_access",
+   "licence": "CC BY 4.0",
+   "full_text": true,
+   "topics": [
+    "vision"
+   ],
+   "studied_population": "Expert consensus guide drawing on NASA data of long-duration astronauts (for example 52 of 64 NASA astronauts for the 81% finding).",
+   "supported_claims": [
+    "At least one SANS feature has been reported in 81% of NASA astronauts.",
+    "Using a retinal thickness rise of 20 micrometres on OCT as the threshold, 66% of astronauts after long-duration flight may be diagnosed with optic disc oedema due to SANS.",
+    "No permanent functional change has been recorded so far, and the only established countermeasure is stronger glasses.",
+    "CO2 levels are considered an unlikely cause of SANS because SANS did not change after ISS CO2 levels were modified."
+   ],
+   "claim_quotes": [
+    {
+     "claim": 0,
+     "quote": "at least one feature of SANS has been reported in 81% of National Aeronautics and Space Administration (NASA) astronauts.",
+     "chunk_id": "gew_sans_consensus_2026:x1"
+    },
+    {
+     "claim": 1,
+     "quote": "Using this threshold, 66% of astronauts after LDSF may be diagnosed with optic disc oedema due to SANS (Table 2).",
+     "chunk_id": "gew_sans_consensus_2026:x47"
+    },
+    {
+     "claim": 2,
+     "quote": "No permanent functional changes have yet been recorded and no countermeasures beyond utilising higher-powered spectacles",
+     "chunk_id": "gew_sans_consensus_2026:x13"
+    },
+    {
+     "claim": 3,
+     "quote": "since the modification of CO2 levels on the ISS, there has been no change in the occurrence of SANS, making CO2 levels an unlikely mechanism.",
+     "chunk_id": "gew_sans_consensus_2026:x30"
+    }
+   ],
+   "limitations": [
+    "Historical data use different methods and technicians, so prevalence figures are not directly comparable.",
+    "Some recommendations rest on expert opinion, and the guide says it will need updating.",
+    "The 66% figure refers to optic disc oedema by an OCT threshold, not to all early signs."
+   ],
+   "hypotheses": [
+    "The guide notes that cerebrospinal fluid may be trapped in the optic nerve sheath, and says this is speculated by some authors, not established."
+   ],
+   "summary_kind": "authored_summary",
+   "review_status": "domain_review_pending",
+   "clinically_approved": false
+  },
+  {
+   "id": "hrp_orthostatic_2015",
+   "title": "Risk of Orthostatic Intolerance During Re-Exposure to Gravity",
+   "source_url": "https://ntrs.nasa.gov/citations/20150007319",
+   "authors": [
+    "Platts SH, Stenger MB, Lee SMC, et al."
+   ],
+   "publication_year": 2015,
+   "source_kind": "nasa_evidence_report",
+   "licence": "NASA NTRS: public use permitted",
+   "full_text": true,
+   "topics": [
+    "cardiovascular",
+    "fluid_shift"
+   ],
+   "studied_population": "US and Russian astronauts and cosmonauts after Shuttle, Mir and ISS flights, plus bed rest studies (NASA evidence report).",
+   "supported_claims": [
+    "After short Shuttle flights 20 to 30% of returning crew became presyncopal (light headed, nauseous, tunnel vision or systolic pressure below 70 mmHg) during testing.",
+    "On landing day, 4 of 6 ISS astronauts (66%) could not finish a 10-minute 80 degree tilt test, versus 13 of 66 (20%) Shuttle astronauts.",
+    "The headward fluid shift and resulting plasma volume loss is an important starting event, but all tested crew are low in volume on landing day and only some develop orthostatic intolerance.",
+    "Skylab crews lost on average 8.4%, 13.1% and 15.9% of plasma volume (missions 2, 3 and 4), measured after flight.",
+    "In flight, heart rate and both systolic and diastolic blood pressure were lower than before flight (no mmHg value given in this passage)."
+   ],
+   "claim_quotes": [
+    {
+     "claim": 0,
+     "quote": "These studies report orthostatic hypotension that results in presyncope (light headedness, nausea, tunnel vision, or a systolic pressure below 70 mmHg) in 20-30% of returning crewmembers.",
+     "chunk_id": "hrp_orthostatic_2015:x37"
+    },
+    {
+     "claim": 1,
+     "quote": "On landing day, 4 of 6 (66%) ISS astronauts were unable to complete a 10-min 80° head-up tilt test compared to 13 of 66 (20%) Shuttle astronauts.",
+     "chunk_id": "hrp_orthostatic_2015:x41"
+    },
+    {
+     "claim": 2,
+     "quote": "while all crewmembers that have been tested are hypovolemic on landing day, only a fraction of them develop orthostatic intolerance during stand/tilt testing.",
+     "chunk_id": "hrp_orthostatic_2015:x15"
+    },
+    {
+     "claim": 3,
+     "quote": "with average losses of 8.4%, 13.1% and 15.9% for Skylab 2, 3 and 4",
+     "chunk_id": "hrp_orthostatic_2015:x52"
+    },
+    {
+     "claim": 4,
+     "quote": "Inflight heart rate and systolic and diastolic blood pressure were decreased when compared to the preflight values",
+     "chunk_id": "hrp_orthostatic_2015:x29"
+    }
+   ],
+   "limitations": [
+    "Plasma volume was measured after landing, so the time course in flight is unknown, and the report itself says fluid loading since 1985 hides the true landing day deficit.",
+    "Early studies were mostly male astronauts, and women show higher presyncope rates (above 80% versus about 20%) so averages hide large sex differences.",
+    "Report on the landing day response; it does not describe symptoms during orbit."
+   ],
+   "hypotheses": [
+    "The report states that the mechanism of plasma volume loss has been debated, and that flight data are too limited to say whether it is diuresis or fluid moving between compartments."
+   ],
+   "summary_kind": "authored_summary",
+   "review_status": "domain_review_pending",
+   "clinically_approved": false
+  },
+  {
+   "id": "wood_legcuff_2019",
+   "title": "Inflight leg cuff test does not identify the risk for orthostatic hypotension after long-duration spaceflight",
+   "source_url": "https://doi.org/10.1038/s41526-019-0082-3",
+   "authors": [
+    "Wood KN, Murray KR, Greaves DK, Hughson RL"
+   ],
+   "publication_year": 2019,
+   "source_kind": "peer_reviewed_open_access",
+   "licence": "CC BY 4.0",
+   "full_text": true,
+   "topics": [
+    "cardiovascular",
+    "fluid_shift"
+   ],
+   "studied_population": "8 male ISS astronauts (mean age 44, mean mission 167 days) tested before, during and after flight.",
+   "supported_claims": [
+    "The in-flight leg cuff test did not predict who had orthostatic hypotension after landing: 2 of 8 astronauts did, and the test did not flag them.",
+    "The lowest blood pressure during a sit-to-stand test was lower after flight (17 mmHg drop) than before flight (11 mmHg drop)."
+   ],
+   "claim_quotes": [
+    {
+     "claim": 0,
+     "quote": "Two of eight subjects exhibited orthostatic hypotension during the post ﬂight stand test; their responses were not predicted by the in ﬂight leg cuff",
+     "chunk_id": "wood_legcuff_2019:x2"
+    },
+    {
+     "claim": 1,
+     "quote": "the nadir of MAP was lower post ﬂight (−17 ± 9 mmHg) than preﬂight (−11 ± 6 mmHg",
+     "chunk_id": "wood_legcuff_2019:x2"
+    }
+   ],
+   "limitations": [
+    "Only 8 male astronauts, so it says little about women or larger groups.",
+    "The test used leg cuffs in flight and sit-stand on Earth, which are different stresses.",
+    "It shows this one test fails to predict, not that prediction is impossible."
+   ],
+   "hypotheses": [],
+   "summary_kind": "authored_summary",
+   "review_status": "domain_review_pending",
+   "clinically_approved": false
+  },
+  {
+   "id": "marshall_goebel_jugular_2019",
+   "title": "Assessment of Jugular Venous Blood Flow Stasis and Thrombosis During Spaceflight",
+   "source_url": "https://doi.org/10.1001/jamanetworkopen.2019.15011",
+   "authors": [
+    "Marshall-Goebel K, Laurie SS, Alferova IV, et al."
+   ],
+   "publication_year": 2019,
+   "source_kind": "peer_reviewed_open_access",
+   "licence": "CC BY 4.0",
+   "full_text": true,
+   "topics": [
+    "fluid_shift",
+    "cardiovascular"
+   ],
+   "studied_population": "11 ISS crew members (mean 210 days in space, 9 men) measured with ultrasound before, during and after flight.",
+   "supported_claims": [
+    "6 of 11 crew (55%) had stagnant or reverse blood flow in the internal jugular vein at about flight day 50, and one crew member had an occlusive clot.",
+    "Jugular vein area rose from 9.8 to 70.3 square millimetres and vein pressure from 5.1 to 21.1 mmHg in flight, compared with seated on Earth.",
+    "Lower body negative pressure in flight lowered stroke volume, cardiac output and mean arterial pressure and raised heart rate."
+   ],
+   "claim_quotes": [
+    {
+     "claim": 0,
+     "quote": "stagnant or reverse flow in the IJV was observed in 6 crew members (55%) on approximate flight day 50. Notably, 1 crew member was found to have an occlusive IJV thrombus",
+     "chunk_id": "marshall_goebel_jugular_2019:x4"
+    },
+    {
+     "claim": 1,
+     "quote": "Mean IJV area increased from 9.8 (95% CI, −1.2 to 20.7) mm2 in the preflight seated position to 70.3 (95% CI, 59.3-81.2) mm2 during spaceflight (P < .001).",
+     "chunk_id": "marshall_goebel_jugular_2019:x4"
+    },
+    {
+     "claim": 2,
+     "quote": "application of LBNP, which relocates blood volume to the lower extremities, decreased stroke volume, cardiac output and mean arterial pressure, which were associated with an increase in heart rate",
+     "chunk_id": "marshall_goebel_jugular_2019:x17"
+    }
+   ],
+   "limitations": [
+    "Only 11 crew members, one clot case, so the clot risk cannot be estimated as a rate.",
+    "Measurements were made at set days (about 50 and 150), so changes between them are not shown.",
+    "It shows association with blood flow stasis, not what causes clots in every individual."
+   ],
+   "hypotheses": [],
+   "summary_kind": "authored_summary",
+   "review_status": "domain_review_pending",
+   "clinically_approved": false
+  },
+  {
+   "id": "jones_inspiration4_2024",
+   "title": "Molecular and physiological changes in the SpaceX Inspiration4 civilian crew",
+   "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11357997/",
+   "authors": [
+    "Jones CW, Overbey EG, et al."
+   ],
+   "publication_year": 2024,
+   "source_kind": "peer_reviewed_open_access",
+   "licence": "CC BY 4.0",
+   "full_text": true,
+   "topics": [
+    "cognition",
+    "immune",
+    "cardiovascular"
+   ],
+   "studied_population": "4 civilian astronauts on a 3-day orbital flight (Inspiration4), with blood, ultrasound, smartwatch and cognition tests.",
+   "supported_claims": [
+    "After 3 days in orbit, astronauts were slower on four of ten cognition tests, while accuracy on eight of ten was unaffected.",
+    "The paper notes that ISS sleep below 6 h has been linked to psychomotor slowing, and this crew averaged 6.7 h of sleep per night in flight.",
+    "Antibody reactivity showed 8 events of rising virus signal, 4 for Epstein-Barr virus, over the short flight."
+   ],
+   "claim_quotes": [
+    {
+     "claim": 0,
+     "quote": "slower response speeds were observed on four cognition tests",
+     "chunk_id": "jones_inspiration4_2024:x48"
+    },
+    {
+     "claim": 1,
+     "quote": "While astronaut sleep durations less than 6 h on the ISS have been associated with psychomotor slowing, Inspiration4 astronauts averaged 6.7 h of sleep per night in-flight",
+     "chunk_id": "jones_inspiration4_2024:x49"
+    },
+    {
+     "claim": 2,
+     "quote": "We detected a total of n = 8 such events (defined as significant reactivity increases); the largest number corresponded to Epstein–Barr virus (n = 4)",
+     "chunk_id": "jones_inspiration4_2024:x16"
+    },
+    {
+     "claim": 0,
+     "quote": "accuracy on eight of the ten (80%) cognition tests was unaffected by short-duration spaceflight",
+     "chunk_id": "jones_inspiration4_2024:x48"
+    }
+   ],
+   "limitations": [
+    "Only 4 people, and one astronaut drove part of the cognition result, so it cannot give reliable rates.",
+    "Only 3 days of flight, so it does not describe 6 month missions.",
+    "Civilian crew; results may not match professional astronauts."
+   ],
+   "hypotheses": [],
+   "summary_kind": "authored_summary",
+   "review_status": "domain_review_pending",
+   "clinically_approved": false
+  },
+  {
+   "id": "hrp_immune_2013",
+   "title": "Evidence Report: Risk of Crew Adverse Health Event Due to Altered Immune Response",
+   "source_url": "https://ntrs.nasa.gov/citations/20140002769",
+   "authors": [
+    "Crucian B, Sams C"
+   ],
+   "publication_year": 2013,
+   "source_kind": "nasa_evidence_report",
+   "licence": "NASA NTRS: public use permitted",
+   "full_text": true,
+   "topics": [
+    "immune"
+   ],
+   "studied_population": "Astronaut and cosmonaut immune data from Apollo to ISS, plus Antarctic, undersea and bed rest analogs (NASA evidence report).",
+   "supported_claims": [
+    "The specific cause of immune dysregulation in flight is unknown; candidates are stress, disrupted circadian rhythm, microgravity, isolation, altered environment, nutrition and radiation.",
+    "About 50% to 60% of early Apollo crew had some symptoms of infectious illness before or during flight.",
+    "Elevated anti-EBV antibodies were seen in about 40% of astronauts in one dataset."
+   ],
+   "claim_quotes": [
+    {
+     "claim": 0,
+     "quote": "The specific cause of immune dysregulation during flight remains unknown but is likely associated with one or more of the following: physiological stress, disrupted circadian rhythms, microgravity, isolation, altered environment, altered nutrition, and radiation.",
+     "chunk_id": "hrp_immune_2013:x15"
+    },
+    {
+     "claim": 1,
+     "quote": "approximately 50% to 60% of the crewmembers experienced some symptoms of “infectious illness” during the preflight or in‐ flight time period.",
+     "chunk_id": "hrp_immune_2013:x30"
+    },
+    {
+     "claim": 2,
+     "quote": "Elevated anti‐EBV VCA antibodies were evident in ~40% of the astronauts",
+     "chunk_id": "hrp_immune_2013:x27"
+    }
+   ],
+   "limitations": [
+    "Older data and small samples, and the report says immune dysregulation could create clinical risk if it persists on deep space missions, not that it has.",
+    "Analogs only partly copy spaceflight.",
+    "Does not show how often immune changes lead to illness."
+   ],
+   "hypotheses": [
+    "The report presents persistent immune dysregulation on deep space missions as a possible risk, not an established one."
+   ],
+   "summary_kind": "authored_summary",
+   "review_status": "domain_review_pending",
+   "clinically_approved": false
+  },
+  {
+   "id": "crucian_immune_2018",
+   "title": "Immune System Dysregulation During Spaceflight: Potential Countermeasures for Deep Space Exploration Missions",
+   "source_url": "https://doi.org/10.3389/fimmu.2018.01437",
+   "authors": [
+    "Crucian BE, Chouker A, Simpson RJ, et al."
+   ],
+   "publication_year": 2018,
+   "source_kind": "peer_reviewed_open_access",
+   "licence": "CC BY 4.0",
+   "full_text": true,
+   "topics": [
+    "immune"
+   ],
+   "studied_population": "Review of ISS, Shuttle and analog studies of astronaut immune function with countermeasure discussion.",
+   "supported_claims": [
+    "Immune dysregulation and herpesvirus reactivation persist for the whole duration of a 6 month orbital flight.",
+    "Crew show increased infectious disease, allergic symptoms and persistent skin hypersensitivity in flight, despite isolation from pathogens."
+   ],
+   "claim_quotes": [
+    {
+     "claim": 0,
+     "quote": "dysregulation of the human immune system and the reactivation of latent herpesviruses persists for the duration of a 6-month orbital spaceflight.",
+     "chunk_id": "crucian_immune_2018:x1"
+    },
+    {
+     "claim": 1,
+     "quote": "there is an increased incidence of infectious disease as well as increased allergic symptoms and persistent skin hypersensitivity reactions in some crewmembers during orbital flight",
+     "chunk_id": "crucian_immune_2018:x11"
+    }
+   ],
+   "limitations": [
+    "A narrative review, not new trial data.",
+    "Countermeasure ideas (diet, exercise, drugs, vaccines) are proposed, not tested in flight.",
+    "Core temperature rise is mentioned but not quantified in the passages checked."
+   ],
+   "hypotheses": [
+    "The review says viral reactivation could be a biomarker of weak cytotoxic T cell function, and presents this as possible."
+   ],
+   "summary_kind": "authored_summary",
+   "review_status": "domain_review_pending",
+   "clinically_approved": false
+  },
+  {
+   "id": "hrp_sleep_circadian_2016",
+   "title": "Risk of Performance Decrements and Adverse Health Outcomes Resulting from Sleep Loss, Circadian Desynchronization, and Work Overload",
+   "source_url": "https://ntrs.nasa.gov/citations/20160003864",
+   "authors": [
+    "Flynn-Evans E, Gregory K, Arsintescu L, Whitmire A"
+   ],
+   "publication_year": 2016,
+   "source_kind": "nasa_evidence_report",
+   "licence": "NASA NTRS: public use permitted",
+   "full_text": true,
+   "topics": [
+    "sleep",
+    "cognition"
+   ],
+   "studied_population": "Astronauts on Shuttle, Mir and ISS (sleep logs, actigraphy, polysomnography), plus laboratory sleep deprivation and shift work studies (NASA evidence report).",
+   "supported_claims": [
+    "Studies agree that sleep duration in space is about six hours, but it is unclear if crew need less sleep or if spaceflight factors cut it.",
+    "In one Shuttle survey of 58 crew, sleep averaged 6 hours per day in space versus 7.9 hours on Earth.",
+    "Barger and colleagues (Shuttle and ISS) found astronauts slept about 19 minutes less in flight than the two weeks before.",
+    "Sleep medication is the most common fatigue countermeasure; about three-quarters of Shuttle and ISS astronauts reported using it.",
+    "In sleep deprivation research, responses slow and attention lapses and errors increase."
+   ],
+   "claim_quotes": [
+    {
+     "claim": 0,
+     "quote": "there is a general consensus between studies that sleep duration in space is approximately six hours, it is unclear whether this is due to a majority of astronauts requiring less sleep than the general population",
+     "chunk_id": "hrp_sleep_circadian_2016:x36"
+    },
+    {
+     "claim": 1,
+     "quote": "reported sleeping on average 6 hours per day while in space compared to 7.9 hours terrestrially",
+     "chunk_id": "hrp_sleep_circadian_2016:x37"
+    },
+    {
+     "claim": 2,
+     "quote": "astronauts averaged about 19 minutes less sleep during spaceflight relative to a two -week pre-mission period",
+     "chunk_id": "hrp_sleep_circadian_2016:x39"
+    },
+    {
+     "claim": 3,
+     "quote": "Barger et al. found that a bout three-quarters of both Shuttle and ISS astronauts reported using sleep medi cations during their missions",
+     "chunk_id": "hrp_sleep_circadian_2016:x85"
+    },
+    {
+     "claim": 4,
+     "quote": "Sleep deprivation results in an overall slowing of responses, an increase in lapses and in errors of commission",
+     "chunk_id": "hrp_sleep_circadian_2016:x91"
+    }
+   ],
+   "limitations": [
+    "Many spaceflight studies are low-level evidence (surveys, small groups) and preflight sleep was often disturbed by training.",
+    "The 'general consensus' of 6 hours mixes short and long missions.",
+    "The slowing result comes from ground sleep deprivation research, not from a spaceflight measurement of one short night."
+   ],
+   "hypotheses": [
+    "The report says it is unclear whether short sleep in space reflects lower need or spaceflight factors."
+   ],
+   "summary_kind": "authored_summary",
+   "review_status": "domain_review_pending",
+   "clinically_approved": false
+  },
+  {
+   "id": "koller_sleep_2021",
+   "title": "Altered sleep spindles and slow waves during space shuttle missions",
+   "source_url": "https://doi.org/10.1038/s41526-021-00177-1",
+   "authors": [
+    "Koller DP, Kasanin V, Flynn-Evans EE, et al."
+   ],
+   "publication_year": 2021,
+   "source_kind": "peer_reviewed_open_access",
+   "licence": "CC BY 4.0",
+   "full_text": true,
+   "topics": [
+    "sleep"
+   ],
+   "studied_population": "4 astronauts on two Space Shuttle missions, with full-night sleep EEG before, during and after flight.",
+   "supported_claims": [
+    "In flight, fast sleep spindle density rose, slow spindle frequency was higher and slow wave amplitude was lower than on Earth.",
+    "The authors expected fewer sleep spindles in flight but fast spindle density went up by 1.76 spindles per minute."
+   ],
+   "claim_quotes": [
+    {
+     "claim": 0,
+     "quote": "increased fast spindle density, elevated slow spindle frequency, and decreased slow wave amplitude in space compared to on Earth.",
+     "chunk_id": "koller_sleep_2021:x2"
+    },
+    {
+     "claim": 1,
+     "quote": "we hypothesized that sleep spindle density during sleep stages N2 and N3 would be reduced in",
+     "chunk_id": "koller_sleep_2021:x10"
+    },
+    {
+     "claim": 1,
+     "quote": "fast spindle density signi ﬁcantly increased by 1.76 ± 0.53 spindles/min in",
+     "chunk_id": "koller_sleep_2021:x17"
+    }
+   ],
+   "limitations": [
+    "Only 4 astronauts and some nights used melatonin or placebo, so findings are preliminary.",
+    "Short Shuttle missions, not long cruise.",
+    "Describes EEG patterns, not whether sleep felt restful or performance suffered."
+   ],
+   "hypotheses": [
+    "The study found the opposite of its stated expectation (more fast spindles, not fewer), so what this means for sleep quality is an open question."
+   ],
+   "summary_kind": "authored_summary",
+   "review_status": "domain_review_pending",
+   "clinically_approved": false
+  },
+  {
+   "id": "hrp_behavioral_2016",
+   "title": "Risk of Adverse Cognitive or Behavioral Conditions and Psychiatric Disorders: Evidence Report",
+   "source_url": "https://ntrs.nasa.gov/citations/20160004365",
+   "authors": [
+    "Slack KJ, Williams TJ, Schneiderman JS, et al."
+   ],
+   "publication_year": 2016,
+   "source_kind": "nasa_evidence_report",
+   "licence": "NASA NTRS: public use permitted",
+   "full_text": true,
+   "topics": [
+    "behavioral_health",
+    "cognition"
+   ],
+   "studied_population": "Astronauts on Shuttle and ISS, analog crews (Antarctic, Mars simulations) and general psychology studies (NASA evidence report).",
+   "supported_claims": [
+    "No behavioral emergencies have been reported in spaceflight so far, and the average rate of adverse behavioral events is relatively low for current conditions.",
+    "Anecdotal and empirical evidence suggest the likelihood of problems greatly increases with mission length.",
+    "Among 208 Shuttle crew (1981 to 1989), 34 behavioral signs or symptoms were reported over 4,442.8 person-days, an incidence of 0.11 per 14-day mission.",
+    "On ISS expeditions morale tends to dip in the third quarter, though evidence for this effect is inconsistent."
+   ],
+   "claim_quotes": [
+    {
+     "claim": 0,
+     "quote": "the average incidence rate of an adverse behavioral health event occurring during a space mission is relatively low for the current conditions. While mood and anxiety disturbances have occurred, no behavioral emergencies have been reported to date in space flight.",
+     "chunk_id": "hrp_behavioral_2016:x23"
+    },
+    {
+     "claim": 1,
+     "quote": "the likelihood of an adverse cognitive or behavioral condition or psychiatric disorder occurring greatly increases with the length of a mission.",
+     "chunk_id": "hrp_behavioral_2016:x23"
+    },
+    {
+     "claim": 2,
+     "quote": "This is an incidence rate of 0.11 for a 14-day mission",
+     "chunk_id": "hrp_behavioral_2016:x65"
+    },
+    {
+     "claim": 3,
+     "quote": "morale on the ISS tends to dip during the third quarter and then rise during the final quarter (Stuster 2010b)",
+     "chunk_id": "hrp_behavioral_2016:x70"
+    }
+   ],
+   "limitations": [
+    "Evidence is largely anecdotal or from analogs, and astronauts may under-report.",
+    "Past missions were short and low-stress compared to Mars.",
+    "Rates come from highly screened crews and may not apply to others."
+   ],
+   "hypotheses": [
+    "The report presents increased risk on exploration missions as an expectation and open question, not a measured fact.",
+    "The third quarter effect is described as inconsistent in the literature."
+   ],
+   "summary_kind": "authored_summary",
+   "review_status": "domain_review_pending",
+   "clinically_approved": false
+  },
+  {
+   "id": "dev_cognition_2024",
+   "title": "Cognitive performance in ISS astronauts on 6-month low earth orbit missions",
+   "source_url": "https://doi.org/10.3389/fphys.2024.1451269",
+   "authors": [
+    "Dev SI, Khader AM, Begerowski SR, Anderson SR, Clement G, Bell SL"
+   ],
+   "publication_year": 2024,
+   "source_kind": "peer_reviewed_open_access",
+   "licence": "CC BY 4.0",
+   "full_text": true,
+   "topics": [
+    "cognition"
+   ],
+   "studied_population": "25 professional astronauts on 6 month ISS missions, tested at five mission phases with the Cognition battery.",
+   "supported_claims": [
+    "Cognitive performance was generally stable over a 6 month mission.",
+    "Early in flight astronauts were slower on processing speed, visual working memory and sustained attention tasks.",
+    "Risk-taking propensity decreased in late flight and after flight."
+   ],
+   "claim_quotes": [
+    {
+     "claim": 0,
+     "quote": "Cognitive performance was generally stable over time with some differences observed across mission phases for specific subtests.",
+     "chunk_id": "dev_cognition_2024:x2"
+    },
+    {
+     "claim": 1,
+     "quote": "There was slowed performance observed in early flight on tasks of processing speed, visual working memory, and sustained attention.",
+     "chunk_id": "dev_cognition_2024:x2"
+    },
+    {
+     "claim": 2,
+     "quote": "We observed a decrease in risk-taking propensity during late flight and post-flight mission phases.",
+     "chunk_id": "dev_cognition_2024:x2"
+    }
+   ],
+   "limitations": [
+    "25 astronauts, highly selected and highly motivated, so limited sensitivity to small changes.",
+    "Each astronaut was tested at only a few points.",
+    "Slowing was early in flight, so it cannot be tied to sleep or any single cause."
+   ],
+   "hypotheses": [],
+   "summary_kind": "authored_summary",
+   "review_status": "domain_review_pending",
+   "clinically_approved": false
+  },
+  {
+   "id": "nasrini_hera_cognition_2020",
+   "title": "Cognitive Performance During Confinement and Sleep Restriction in NASA's Human Exploration Research Analog (HERA)",
+   "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7198903/",
+   "authors": [
+    "Nasrini J, Hermosillo E, Dinges DF, et al."
+   ],
+   "publication_year": 2020,
+   "source_kind": "peer_reviewed_open_access",
+   "licence": "CC BY 4.0",
+   "full_text": true,
+   "topics": [
+    "cognition",
+    "sleep"
+   ],
+   "studied_population": "32 astronaut-like volunteers in eight ground-based HERA confinement missions (1 and 2 weeks, crews of four).",
+   "supported_claims": [
+    "A night of partial sleep restriction (bed around 3 am) only lowered accuracy on a facial emotion task, with no other speed or accuracy change.",
+    "After one full night of total sleep deprivation, crews were slower and less accurate on psychomotor vigilance and slower on throughput and motor tasks.",
+    "Mood also got worse during the sleep loss challenge."
+   ],
+   "claim_quotes": [
+    {
+     "claim": 0,
+     "quote": "No other standard speed or accuracy outcomes of the Cognition battery showed a significant main effect of the sleep challenge in campaign 1.",
+     "chunk_id": "nasrini_hera_cognition_2020:x27"
+    },
+    {
+     "claim": 1,
+     "quote": "Subjects in campaign 2 were significantly slower and less accurate on psychomotor vigilance, and slower on cognitive throughput and motor praxis tasks during a night of total sleep deprivation.",
+     "chunk_id": "nasrini_hera_cognition_2020:x2"
+    },
+    {
+     "claim": 2,
+     "quote": "subjects reported significantly worsening mood during the sleep loss challenge on several affective domains",
+     "chunk_id": "nasrini_hera_cognition_2020:x2"
+    },
+    {
+     "claim": 0,
+     "quote": "subjects in campaign 1 were significantly less accurate on a facial emotion identification task during a night of partial sleep restriction",
+     "chunk_id": "nasrini_hera_cognition_2020:x2"
+    }
+   ],
+   "limitations": [
+    "A ground analog, not spaceflight; crews were healthy volunteers for 1 to 2 weeks.",
+    "Two different sleep challenges in two different campaigns, so they cannot be compared directly.",
+    "Only one night of loss, so it does not show cumulative effects of chronic short sleep."
+   ],
+   "hypotheses": [
+    "The authors state there may be a sleep deprivation threshold between the two challenges that would impair vigilance, as a possibility, not a finding."
+   ],
+   "summary_kind": "authored_summary",
+   "review_status": "domain_review_pending",
+   "clinically_approved": false
+  },
+  {
+   "id": "hrp_ars_spe_2016",
+   "title": "Evidence Report: Risk of Acute Radiation Syndromes Due to Solar Particle Events",
+   "source_url": "https://ntrs.nasa.gov/citations/20160003870",
+   "authors": "Carnell L, Blattnig S, Hu S, et al.",
+   "publication_year": 2016,
+   "source_kind": "nasa_evidence_report",
+   "licence": "NASA NTRS: public use permitted",
+   "full_text": true,
+   "topics": [
+    "radiation"
+   ],
+   "studied_population": "NASA evidence review of acute radiation syndromes from solar particle events, built on human patient and accident data plus dose models of historical solar events (no astronaut cohort).",
+   "supported_claims": [
+    "Large solar particle events seen in the modern era would add about 10 to 500 mGy of dose behind average spacecraft shielding.",
+    "Outside low-Earth orbit the most likely effects are early nausea, vomiting, loss of appetite and fatigue, mainly in spacewalk scenarios, with skin injury and blood-forming organ depletion also possible.",
+    "Solar particle events cannot be predicted in advance, and the biggest ones were recorded in November 1960, August 1972 and October 1989.",
+    "Blood-forming organ doses above 1 Gy from a solar event are called highly unlikely if the crew reaches a moderately shielded spot in time.",
+    "Models cited in the report put the continuous galactic cosmic ray dose near solar minimum at 1.5 mSv per day."
+   ],
+   "claim_quotes": [
+    {
+     "claim": 0,
+     "quote": "The various SPEs shown in Figure 1, which are characterized as large SPEs (F >30 MeV > 108 particles/cm2), would contribute doses of 10 to 500 mGy for average shielding conditions.",
+     "chunk_id": "hrp_ars_spe_2016:x18"
+    },
+    {
+     "claim": 1,
+     "quote": "there are EVA scenarios outside of low -Earth orbit where the risk of prodromal effects, including nausea, vomiting, anorexia, and fatigue, as well as skin injury and depletion of the blood -forming organs (BFO) , may occur.",
+     "chunk_id": "hrp_ars_spe_2016:x9"
+    },
+    {
+     "claim": 2,
+     "quote": "Extraordinarily large SPEs were recorded in November 1960, August 1972, and October 1989.",
+     "chunk_id": "hrp_ars_spe_2016:x19"
+    },
+    {
+     "claim": 2,
+     "quote": "To date, accurate short- or long-term prediction of SPEs has not been possible.",
+     "chunk_id": "hrp_ars_spe_2016:x19"
+    },
+    {
+     "claim": 3,
+     "quote": "Doses to the BFO from an SPE event above 1 Gy are highly unlikely if crew members are able to reach a moderately shielded (5 to 10 g/cm2) location in a timely manner.",
+     "chunk_id": "hrp_ars_spe_2016:x25"
+    },
+    {
+     "claim": 4,
+     "quote": "Figure 5a shows the modeled granulopoietic effects under the chroni c dose rate of 1.5 mSv/d, which has been predicted for the GCR dose near a solar minimum (Cucinotta et al. 2006).",
+     "chunk_id": "hrp_ars_spe_2016:x100"
+    },
+    {
+     "claim": 1,
+     "quote": "ARS has been well -defined for gamma- and X-ray exposures, both characterized as low -LET radiation. However, less is known about the acute effects from whole-body exposures to SPE protons",
+     "chunk_id": "hrp_ars_spe_2016:x13"
+    }
+   ],
+   "limitations": [
+    "Acute radiation syndrome is well defined for gamma and X-rays, but much less is known for whole-body exposure to solar-event protons.",
+    "Most human data come from patients and accident victims exposed to terrestrial radiation, not from spaceflight.",
+    "The dose figures are model estimates for historical events, not measurements on a crew."
+   ],
+   "hypotheses": [
+    "The report presents a link between a weakened immune system from skin dose or microgravity and higher blood-forming organ risk as a reasonable concern, not as established."
+   ],
+   "summary_kind": "authored_summary",
+   "review_status": "domain_review_pending",
+   "clinically_approved": false
+  },
+  {
+   "id": "hrp_carcinogenesis_2016",
+   "title": "Evidence Report: Risk of Radiation Carcinogenesis",
+   "source_url": "https://ntrs.nasa.gov/citations/20160004369",
+   "authors": "Huff J, Carnell L, Blattnig S, et al.",
+   "publication_year": 2016,
+   "source_kind": "nasa_evidence_report",
+   "licence": "NASA NTRS: public use permitted",
+   "full_text": true,
+   "topics": [
+    "radiation"
+   ],
+   "studied_population": "NASA evidence review of cancer risk from space radiation, drawing on atomic bomb survivor and other human radiation studies, animal work and risk models (no astronaut cancer cohort).",
+   "supported_claims": [
+    "In this 2016 report NASA limited career exposure to a 3% risk of exposure induced death from fatal cancer.",
+    "NASA policy is that the 3% limit must not be exceeded at a 95% confidence level once model uncertainty is included.",
+    "Cancer risk estimates from different expert panels (ICRP, NCRP and others) agree within a factor of two or less.",
+    "An older 1989 NCRP recommendation used age and sex dependent career dose limits tied to the same 3% cancer mortality risk.",
+    "The 3% level was chosen by comparison with ground radiation workers and with death rates in less safe industries, and ALARA means astronauts should not treat limits as tolerance values."
+   ],
+   "claim_quotes": [
+    {
+     "claim": 0,
+     "quote": "Career exposure to radiation is limited to not exceed 3% risk of exposure induced death (REID) from fatal cancer.",
+     "chunk_id": "hrp_carcinogenesis_2016:x47"
+    },
+    {
+     "claim": 1,
+     "quote": "NASA policy is to assure that this risk limit is not exceeded at a 95% confidence level using a statistical assessment of the uncertainties in the risk projection calculations",
+     "chunk_id": "hrp_carcinogenesis_2016:x48"
+    },
+    {
+     "claim": 2,
+     "quote": "Overall, the estimates of cancer risks between the different reports of these panels will agree to within a factor of two or less.",
+     "chunk_id": "hrp_carcinogenesis_2016:x50"
+    },
+    {
+     "claim": 3,
+     "quote": "In 1989, the NCRP Report No. 98 recommended age and sex dependent career dose limits using as a common risk limit of a 3% increase in cancer mortality.",
+     "chunk_id": "hrp_carcinogenesis_2016:x70"
+    },
+    {
+     "claim": 4,
+     "quote": "The limiting level of 3% excess cancer fatality risk was based on several criteria , including comparison to dose limits for grou nd radiation workers and to rates of occupational death in the less-safe industries.",
+     "chunk_id": "hrp_carcinogenesis_2016:x71"
+    },
+    {
+     "claim": 4,
+     "quote": "An important function of ALARA is to ensure that astronauts do not approach radiation limits and that such limits are not considered as “tolerance values.”",
+     "chunk_id": "hrp_carcinogenesis_2016:x48"
+    },
+    {
+     "claim": 2,
+     "quote": "However, there is continued controversy for doses below 50 mSv and for low dose -rate radiation because of debate over the linear no - threshold hypothesis often used in statistical analyses of these data.",
+     "chunk_id": "hrp_carcinogenesis_2016:x50"
+    }
+   ],
+   "limitations": [
+    "The wording cites NASA-STD-3001 Volume 1 Revision A, which was later replaced; the current limit is stated differently (see nasa_std_3001_vol1_revc).",
+    "Risk projections rest on atomic bomb survivor and other low-LET data, then are extrapolated to space radiation, so uncertainty is large.",
+    "It gives risk limits, not a prediction of any individual astronaut's cancer."
+   ],
+   "hypotheses": [
+    "The report presents the shape of the dose response at low doses and low dose rates (linear no-threshold) as a continuing controversy below 50 mSv, not settled."
+   ],
+   "summary_kind": "authored_summary",
+   "review_status": "domain_review_pending",
+   "clinically_approved": false
+  },
+  {
+   "id": "hrp_cns_radiation_2016",
+   "title": "Evidence Report: Risk of Acute and Late Central Nervous System Effects from Radiation Exposure",
+   "source_url": "https://ntrs.nasa.gov/citations/20170001372",
+   "authors": "Nelson GA, Simonsen L, Huff JL",
+   "publication_year": 2016,
+   "source_kind": "nasa_evidence_report",
+   "licence": "NASA NTRS: public use permitted",
+   "full_text": true,
+   "topics": [
+    "radiation",
+    "cognition"
+   ],
+   "studied_population": "Slide deck summarising NASA's evidence on central nervous system and circulatory effects of space radiation; animal model and epidemiology data, no astronaut cohort.",
+   "supported_claims": [
+    "Meeting the cancer career limit is described as the design driver for shielding, mission length and crew selection.",
+    "The deck says younger female crew have the highest cancer risk and that exceeding the cancer limit starts to exceed thresholds for brain and heart risks.",
+    "Animal work shows nervous system changes at heavy-ion exposure levels of concern to NASA, but the meaning for humans is not understood."
+   ],
+   "claim_quotes": [
+    {
+     "claim": 0,
+     "quote": "Maintain Balance Across Four Distinct Risk Areas Based on – Meeting Cancer Career PEL is design driver for GCR & SPE shielding, mission duration, and crew selection",
+     "chunk_id": "hrp_cns_radiation_2016:x2"
+    },
+    {
+     "claim": 1,
+     "quote": "Mission driver: younger female crew have highest risk (highlights importance of age and sex dependence)",
+     "chunk_id": "hrp_cns_radiation_2016:x3"
+    },
+    {
+     "claim": 1,
+     "quote": "By exceeding Cancer PELs & accepting increased risk – begin to exceed thresholds for CNS and CVD risks",
+     "chunk_id": "hrp_cns_radiation_2016:x3"
+    },
+    {
+     "claim": 2,
+     "quote": "Research with animal models shows changes to the CNS occur at HZE exposure levels in range of concern to NASA",
+     "chunk_id": "hrp_cns_radiation_2016:x3"
+    },
+    {
+     "claim": 2,
+     "quote": "Significance to morbidity in humans (in-flight or late) and modification of risk by other spaceflight factors not understood",
+     "chunk_id": "hrp_cns_radiation_2016:x3"
+    }
+   ],
+   "limitations": [
+    "Slide deck with fragments, not a full report; numbers are bullet points without methods.",
+    "Central nervous system findings come from animal models, so human effect size is unknown."
+   ],
+   "hypotheses": [
+    "The deck presents the human significance of nervous system changes seen in animals, and how other spaceflight factors change that risk, as not understood."
+   ],
+   "summary_kind": "authored_summary",
+   "review_status": "domain_review_pending",
+   "clinically_approved": false
+  },
+  {
+   "id": "chancellor_radiation_2018",
+   "title": "Limitations in predicting the space radiation health risk for exploration astronauts",
+   "source_url": "https://doi.org/10.1038/s41526-018-0043-2",
+   "authors": "Chancellor JC, Blue RS, Cengel KA, et al.",
+   "publication_year": 2018,
+   "source_kind": "peer_reviewed_open_access",
+   "licence": "CC BY 4.0",
+   "full_text": true,
+   "topics": [
+    "radiation"
+   ],
+   "studied_population": "Narrative review of limits in predicting space radiation health risk; draws on ground radiobiology, atomic bomb data and spaceflight dose models, no new cohort.",
+   "supported_claims": [
+    "Models predict astronaut crews may receive about 1 to 2 mSv per day in interplanetary space and about 0.5 to 1 mSv per day on the Martian surface.",
+    "The review says large uncertainties remain in predicting human biological responses to space radiation.",
+    "The NCRP concluded the 3% career limit may not be conservative enough given incomplete biological data.",
+    "A solar minimum forecast projects higher cosmic ray levels and as much as a 20% cut in allowable safe days beyond low-Earth orbit."
+   ],
+   "claim_quotes": [
+    {
+     "claim": 0,
+     "quote": "Models of the space environment outside of LEO have predicted that astronaut crews may receive a total body dose of approximately 1 – 2 mSv/ day in interplanetary space and approximately 0.5 – 1 mSv/day on the Martian surface.",
+     "chunk_id": "chancellor_radiation_2018:x35"
+    },
+    {
+     "claim": 1,
+     "quote": "large uncertainties remain in predicting and extrapolating biological responses to radiation exposure in humans.",
+     "chunk_id": "chancellor_radiation_2018:x3"
+    },
+    {
+     "claim": 2,
+     "quote": "the NCRP’s recent conclusions speci ﬁed that their 3% limit may not be conservative enough given the incomplete biological data used in existing projection models",
+     "chunk_id": "chancellor_radiation_2018:x5"
+    },
+    {
+     "claim": 3,
+     "quote": "leading to increased background radiation exposure and, subsequently, as much as a 20% decrease in the allowable safe days in space (outside of LEO) to stay below the 3% REID limits.",
+     "chunk_id": "chancellor_radiation_2018:x6"
+    }
+   ],
+   "limitations": [
+    "A review, so it reports other people's estimates and does not measure dose itself.",
+    "Ground experiments use single ions and short exposures, so they only partly represent real cosmic rays.",
+    "Dose figures are model predictions from 2018 and predate the 2023 NASA standard."
+   ],
+   "hypotheses": [
+    "The review presents effects of long, low-dose-rate cosmic ray exposure on brain and heart health as difficult to interpret and not established in humans."
+   ],
+   "summary_kind": "authored_summary",
+   "review_status": "domain_review_pending",
+   "clinically_approved": false
+  },
+  {
+   "id": "slaba_artemis_radiation_2025",
+   "title": "Validated space radiation exposure predictions from earth to mars during Artemis-I",
+   "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11814067/",
+   "authors": "Slaba TC, et al.",
+   "publication_year": 2025,
+   "source_kind": "peer_reviewed_open_access",
+   "licence": "CC BY 4.0",
+   "full_text": true,
+   "topics": [
+    "radiation"
+   ],
+   "studied_population": "Blind comparison of NASA radiation transport models against dose rate measurements on ISS, uncrewed Orion (Artemis I, 2022), BioSentinel and the Mars surface (Curiosity RAD); no human subjects.",
+   "supported_claims": [
+    "Models were run blind, without prior knowledge of the measurements.",
+    "Model results were within 5% of the free space measurements from Orion and BioSentinel.",
+    "Model results were within 7% to 12% of the dose rate measured on the Mars surface by RAD during Artemis I.",
+    "Overall the models were within about 10 to 25% of ISS measurements, 4% of free space and 10% of Mars surface measurements."
+   ],
+   "claim_quotes": [
+    {
+     "claim": 0,
+     "quote": "all model calculations were performed blind—without prior knowledge of the measurements.",
+     "chunk_id": "slaba_artemis_radiation_2025:x1"
+    },
+    {
+     "claim": 1,
+     "quote": "All model results were within 5% of the available free space measurements.",
+     "chunk_id": "slaba_artemis_radiation_2025:x23"
+    },
+    {
+     "claim": 2,
+     "quote": "model results are within 7%–12% of the dose-rate measured on the surface of Mars by RAD during the Artemis-I mission.",
+     "chunk_id": "slaba_artemis_radiation_2025:x24"
+    },
+    {
+     "claim": 3,
+     "quote": "model calculations are within ~10–25% of ISS measurements, 4% of free space measurements, and 10% of Mars surface measurements.",
+     "chunk_id": "slaba_artemis_radiation_2025:x26"
+    }
+   ],
+   "limitations": [
+    "It checks absorbed dose rate in a detector, not the effective dose to a person, and the paper does not convert to mSv per day.",
+    "Artemis I was a 25 day uncrewed flight near the Moon, not a Mars cruise.",
+    "Mars surface agreement is a surface measurement, not interplanetary cruise."
+   ],
+   "hypotheses": [],
+   "summary_kind": "authored_summary",
+   "review_status": "domain_review_pending",
+   "clinically_approved": false
+  },
+  {
+   "id": "ntrs_radiation_pel_2016",
+   "title": "NASA Space Radiation Protection Strategies: Risk Assessment and Permissible Exposure Limit",
+   "source_url": "https://ntrs.nasa.gov/citations/20160014511",
+   "authors": "Huff JL, Patel ZS, Simonsen LC",
+   "publication_year": 2016,
+   "source_kind": "nasa_technical_document",
+   "licence": "NASA NTRS: public use permitted",
+   "full_text": true,
+   "topics": [
+    "radiation",
+    "cardiovascular"
+   ],
+   "studied_population": "Conference abstract by NASA radiation program staff describing the permissible exposure limits and the research behind them; no study population.",
+   "supported_claims": [
+    "Career limits were set to control late health effects including a 3% risk of exposure induced death from cancer, with separate dose limits for heart and nervous system disease.",
+    "Heart disease risk is estimated at about 30% to 40% of the cancer risk above a threshold for deep space one-year and Mars missions, and large uncertainties exist."
+   ],
+   "claim_quotes": [
+    {
+     "claim": 0,
+     "quote": "Career PELs are implemented to control late occurring health effects, including a 3% risk of exposure induced death (REID) from cancer, and dose limits are used to prevent cardiovascular and central nervous system diseases.",
+     "chunk_id": "ntrs_radiation_pel_2016:x1"
+    },
+    {
+     "claim": 1,
+     "quote": "current estimates for long-term health risks due to cardiovascular diseases are approximately 30% to 40% of the cancer risk for exposures above an estimated threshold (Deep Space one-year and Mars missions).",
+     "chunk_id": "ntrs_radiation_pel_2016:x2"
+    },
+    {
+     "claim": 1,
+     "quote": "Large uncertainties currently exist in estimating the health risks of space radiation exposure.",
+     "chunk_id": "ntrs_radiation_pel_2016:x2"
+    }
+   ],
+   "limitations": [
+    "A three-paragraph abstract: it gives no data tables or methods.",
+    "It predates the 2023 NASA standard that replaced the age and sex specific career limit."
+   ],
+   "hypotheses": [],
+   "summary_kind": "authored_summary",
+   "review_status": "domain_review_pending",
+   "clinically_approved": false
+  },
+  {
+   "id": "hrp_pharmacology_2023",
+   "title": "Evidence Report: Risk of Ineffective or Toxic Medication During Long-Duration Exploration Spaceflight",
+   "source_url": "https://ntrs.nasa.gov/citations/20230018496",
+   "authors": "Reichard JF, Lehnhardt K, Easter B, et al.",
+   "publication_year": 2023,
+   "source_kind": "nasa_evidence_report",
+   "licence": "NASA NTRS: public use permitted",
+   "full_text": true,
+   "topics": [
+    "medication",
+    "radiation"
+   ],
+   "studied_population": "NASA evidence review of medication failure risk, covering six ISS drug stability studies (up to 880 days in orbit), a ground irradiation study and radiation modelling; no astronaut dosing outcomes.",
+   "supported_claims": [
+    "Nine of 24 solid oral drugs stored on the ground as controls failed on active ingredient content before their expiry date.",
+    "After 880 days, 2 of 14 drugs kept in manufacturer packaging (about 14%) differed from controls by more than 5%, against 9 of 22 repackaged drugs (41%).",
+    "NASA currently removes solid oral drugs from sealed packaging and repackages them in plastic zip-lock bags to save mass and volume.",
+    "Modelling in the report concludes ionizing radiation at fluences expected on exploration missions will have no significant effect on drug stability.",
+    "The report says the overall risk from drug degradation on exploration missions is unclear because few studies were published or had matched controls."
+   ],
+   "claim_quotes": [
+    {
+     "claim": 0,
+     "quote": "Nine of 24 (38%) terrestrial (e.g., control) SODFs failed before their expiration date, as based on their API content.",
+     "chunk_id": "hrp_pharmacology_2023:x81"
+    },
+    {
+     "claim": 1,
+     "quote": "the API content of only 2 of 14 spaceflight drugs (~14%) that were stored in the manufacturer’s packaging deviated from their corresponding controls by more than 5%, whereas the API content of 9 of 22 (41%) repackaged spaceflight medications differed",
+     "chunk_id": "hrp_pharmacology_2023:x76"
+    },
+    {
+     "claim": 1,
+     "quote": "After 880 days of spaceflight, the API content of only 2 of 14 spaceflight drugs (~14%) that were stored in the manufacturer’s packaging deviated from their corresponding controls",
+     "chunk_id": "hrp_pharmacology_2023:x76"
+    },
+    {
+     "claim": 2,
+     "quote": "NASA’s current practice is to remove solid oral dosage formulations (SODFs) from their sealed, manufacturers’ packaging and repackage them in plastic zip-lock baggies.",
+     "chunk_id": "hrp_pharmacology_2023:x31"
+    },
+    {
+     "claim": 3,
+     "quote": "In silico predictions confirm that ionizing radiation at fluences anticipated during exploration spaceflight will have no significant effect on drug stability.",
+     "chunk_id": "hrp_pharmacology_2023:x184"
+    },
+    {
+     "claim": 4,
+     "quote": "Overall, the risk that drug degradation imposes for exploration human space missions is unclear because only a fraction of National Aeronautics and Space Administration (NASA)- supported studies have been published",
+     "chunk_id": "hrp_pharmacology_2023:x30"
+    }
+   ],
+   "limitations": [
+    "All real spaceflight data are from low-Earth orbit on the ISS, at lower radiation than a Mars cruise.",
+    "The radiation modelling covers a few drugs and is a worst case calculation, and the ground irradiation study used drugs not known to be radiation sensitive.",
+    "Most studies measured active ingredient only, not breakdown products."
+   ],
+   "hypotheses": [
+    "The report presents an extra ~50% in baseline degradation rate as caused by uncharacterized spaceflight factors, a hypothesis not a proven mechanism."
+   ],
+   "summary_kind": "authored_summary",
+   "review_status": "domain_review_pending",
+   "clinically_approved": false
+  },
+  {
+   "id": "reichard_potency_2023",
+   "title": "The effect of long-term spaceflight on drug potency and the risk of medication failure",
+   "source_url": "https://doi.org/10.1038/s41526-023-00271-6",
+   "authors": "Reichard JF, Phelps SE, Lehnhardt KR, Young M, Easter BD",
+   "publication_year": 2023,
+   "source_kind": "peer_reviewed_open_access",
+   "licence": "CC BY 4.0",
+   "full_text": true,
+   "topics": [
+    "medication"
+   ],
+   "studied_population": "Reanalysis of six spaceflight drug stability studies covering 36 drug products stored up to 880 days on the ISS, with one lot-matched ground control study (Du 2011).",
+   "supported_claims": [
+    "Medicines stored in orbit stayed within 10% of lot-matched ground controls, with about a 1.5 times higher degradation rate.",
+    "The fitted spaceflight degradation rate was about 1.51 times (51% higher than) the ground rate, at 0.00478 per month.",
+    "At 880 days 14 of 36 flight drugs stayed within 5% of control and none lost more than 10% of control content.",
+    "For a three year mission, most drug products in both flight and ground groups were projected to fall below 90% of label strength under current repackaging.",
+    "In the original study 25 of 36 flight drugs fell below US Pharmacopeia strength after 880 days, against 17 of 36 ground controls."
+   ],
+   "claim_quotes": [
+    {
+     "claim": 0,
+     "quote": "Overall, the potency for all spaceflight-exposed medications remains within 10% of terrestrial lot-matched control with a ~1.5 increase in degradation rate.",
+     "chunk_id": "reichard_potency_2023:x2"
+    },
+    {
+     "claim": 1,
+     "quote": "These findings compare to a degradation rate of −0.00478/month (t½ = 145 months) for spaceflight samples, which equated to a ~1.51-fold (51%) increased rate",
+     "chunk_id": "reichard_potency_2023:x28"
+    },
+    {
+     "claim": 2,
+     "quote": "At 880 days of spaceflight storage, 39% of flight-exposed drugs (14 of 36) remain within ±5% of control potency, and no drug has a loss of API exceeding 10% of control amounts.",
+     "chunk_id": "reichard_potency_2023:x13"
+    },
+    {
+     "claim": 3,
+     "quote": "the potency remaining for most drug products in both the control and spaceflight treatment groups at the end of a three-year exploration space mission falls below 90% of the label strength",
+     "chunk_id": "reichard_potency_2023:x22"
+    },
+    {
+     "claim": 4,
+     "quote": "mean API content in 25 out of 36 medications in the spaceflight group fell below USP standards for labeled API strength (i.e., “failed”) after 880 days of storage",
+     "chunk_id": "reichard_potency_2023:x12"
+    },
+    {
+     "claim": 4,
+     "quote": "compared to 17 out of 36 in the control group at the same time point.",
+     "chunk_id": "reichard_potency_2023:x12"
+    }
+   ],
+   "limitations": [
+    "Only one study had lot-matched ground controls; the other five used opportunistic samples.",
+    "All data are from low-Earth orbit and mostly repackaged solid oral drugs, so Mars cruise radiation and injectables are not covered.",
+    "Active ingredient only was measured, and the 1.5 factor is an average with wide spread between drugs (rate ratios from 0.69 to 9.43)."
+   ],
+   "hypotheses": [
+    "The paper presents the part of the loss that occurred before day 13 as caused by factors other than prolonged spaceflight, not by spaceflight itself."
+   ],
+   "summary_kind": "authored_summary",
+   "review_status": "domain_review_pending",
+   "clinically_approved": false
+  },
+  {
+   "id": "diaz_formulary_2024",
+   "title": "Expiration analysis of the International Space Station formulary for exploration mission planning",
+   "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11266549/",
+   "authors": "Diaz TE, Ives EC, Lazare DI, Buckland DM",
+   "publication_year": 2024,
+   "source_kind": "peer_reviewed_open_access",
+   "licence": "CC BY 4.0",
+   "full_text": true,
+   "topics": [
+    "medication"
+   ],
+   "studied_population": "Desk analysis of terrestrial shelf-life data for 106 medications in the 2023 ISS formulary, from four international registries; no flight samples tested.",
+   "supported_claims": [
+    "Shelf-life data were found for 91 (86%) of the ISS formulary medications, and 54 of those have a terrestrial shelf-life of 36 months or less in original packaging.",
+    "Fourteen medications will expire in less than 24 months.",
+    "The printed expiry date is the minimum period the drug is guaranteed stable when sealed, not its true shelf-life, which may be significantly longer.",
+    "US law does not require expiration dates on product labels, and supply chain steps may use up a year of shelf-life before NASA receives the drug.",
+    "The paper cites an acceptable potency range of 95 to 105% for FDA-approved medications under ICH rules."
+   ],
+   "claim_quotes": [
+    {
+     "claim": 0,
+     "quote": "shelf-life data was found in at least 1 of the registries for 91 (86%) medications. Of these 91 medications, 54 have an estimated terrestrial shelf-life of ≤36 months when stored in their original packaging.",
+     "chunk_id": "diaz_formulary_2024:x1"
+    },
+    {
+     "claim": 1,
+     "quote": "14 will expire in less than 24 months.",
+     "chunk_id": "diaz_formulary_2024:x1"
+    },
+    {
+     "claim": 2,
+     "quote": "this expiry date is the minimum period of time which the drug will remain stable under its sealed packaging in recommended storage conditions.",
+     "chunk_id": "diaz_formulary_2024:x6"
+    },
+    {
+     "claim": 2,
+     "quote": "Therefore, it is not a reflection of the drug’s true shelf-life, which may be significantly longer than proposed.",
+     "chunk_id": "diaz_formulary_2024:x6"
+    },
+    {
+     "claim": 3,
+     "quote": "This is primarily because US law does not require expiration dates, use-by dates, or re-test dates on their product labels.",
+     "chunk_id": "diaz_formulary_2024:x7"
+    },
+    {
+     "claim": 3,
+     "quote": "By the time NASA receives and packages their drug products for spaceflight, the products may have already lost a year of their shelf-life.",
+     "chunk_id": "diaz_formulary_2024:x19"
+    },
+    {
+     "claim": 4,
+     "quote": "the ICH establishes the acceptable range of drug potency for medications approved by the FDA must fall within 95-105%",
+     "chunk_id": "diaz_formulary_2024:x5"
+    }
+   ],
+   "limitations": [
+    "Shelf-life figures come from registry labels, often for similar products or other countries, not from testing the actual flight stock.",
+    "It looks at sealed terrestrial storage and does not measure effects of spaceflight or repackaging.",
+    "Data was missing for 15 products (14%)."
+   ],
+   "hypotheses": [
+    "The paper presents extending expiry to cover a whole Mars mission as something crews will have to find a way to do, or accept the risk of expired drugs; no solution is shown."
+   ],
+   "summary_kind": "authored_summary",
+   "review_status": "domain_review_pending",
+   "clinically_approved": false
+  },
+  {
+   "id": "ntrs_imm_overview_2015",
+   "title": "Integrated Medical Model Overview",
+   "source_url": "https://ntrs.nasa.gov/citations/20150002713",
+   "authors": "Myers J, Boley L, Foy M",
+   "publication_year": 2015,
+   "source_kind": "nasa_technical_document",
+   "licence": "NASA NTRS: public use permitted",
+   "full_text": true,
+   "topics": [
+    "medical_operations",
+    "medication"
+   ],
+   "studied_population": "Slide overview of NASA's Integrated Medical Model, a probabilistic risk simulation; no study population.",
+   "supported_claims": [
+    "The Integrated Medical Model uses probabilistic risk analysis with Monte Carlo simulation to plan medical resources.",
+    "It is used to ask which conditions will occur most, the chance of crew loss, and which medications should be tested for stability."
+   ],
+   "claim_quotes": [
+    {
+     "claim": 0,
+     "quote": "Verification, Validation & Certification (V,V&C) •Simulation for medical resource planning •Utilizes space flight community knowledge Probabilistic Risk Analysis / Monte Carlo Simulation",
+     "chunk_id": "ntrs_imm_overview_2015:x1"
+    },
+    {
+     "claim": 1,
+     "quote": "•What medical conditions will occur most? •What is the probability of loss of crew life?",
+     "chunk_id": "ntrs_imm_overview_2015:x2"
+    },
+    {
+     "claim": 1,
+     "quote": "Which medications should be tested for stability? Most frequently used medications for Mars DRM",
+     "chunk_id": "ntrs_imm_overview_2015:x2"
+    }
+   ],
+   "limitations": [
+    "Three short slides with no numbers on model accuracy.",
+    "Describes a planning tool, not measured health outcomes."
+   ],
+   "hypotheses": [],
+   "summary_kind": "authored_summary",
+   "review_status": "domain_review_pending",
+   "clinically_approved": false
+  },
+  {
+   "id": "ntrs_eimo_conops_2024",
+   "title": "Earth-Independent Medical Operations (EIMO) Concept of Operations",
+   "source_url": "https://ntrs.nasa.gov/citations/20240001402",
+   "authors": "Parker J, Krihak M, Laing J, et al.",
+   "publication_year": 2024,
+   "source_kind": "nasa_technical_document",
+   "licence": "NASA NTRS: public use permitted",
+   "full_text": true,
+   "topics": [
+    "medical_operations",
+    "medication"
+   ],
+   "studied_population": "Slide summary of NASA's Earth-Independent Medical Operations concept for Mars missions; a design concept, no study population.",
+   "supported_claims": [
+    "NASA aims to monitor and maintain crew health during communication delays in an environment with no emergency evacuation or terrestrial medical help.",
+    "The concept states exploration class missions cannot rely on resupply and that expiration dates and stressors drive selective supplies.",
+    "The concept is built on needs, goals and objectives supported by nine medical scenarios."
+   ],
+   "claim_quotes": [
+    {
+     "claim": 0,
+     "quote": "Monitor and maintain crew health and performance during communication delays and in an environment that does not allow emergency evacuation or terrestrial medical assistance",
+     "chunk_id": "ntrs_eimo_conops_2024:x1"
+    },
+    {
+     "claim": 1,
+     "quote": "Exploration class missions cannot rely on resupply. •Expiration dates, lack of maintenance, and environmental/operational stressors = selective supplies",
+     "chunk_id": "ntrs_eimo_conops_2024:x8"
+    },
+    {
+     "claim": 1,
+     "quote": "Expiration dates, lack of maintenance, and environmental/operational stressors = selective supplies to account for mass, volume, stability, durability, and re-usability",
+     "chunk_id": "ntrs_eimo_conops_2024:x8"
+    },
+    {
+     "claim": 2,
+     "quote": "The EIMO ConOps is comprised of the needs, goals, and objectives that are supported by nine medical scenarios in an MBSE model.",
+     "chunk_id": "ntrs_eimo_conops_2024:x5"
+    }
+   ],
+   "limitations": [
+    "A concept deck with bullets only; it states intent, not tested performance.",
+    "Requirements work was still in progress when the slides were made."
+   ],
+   "hypotheses": [],
+   "summary_kind": "authored_summary",
+   "review_status": "domain_review_pending",
+   "clinically_approved": false
+  },
+  {
+   "id": "ntrs_mars_med_conops_2019",
+   "title": "Medical System Concept of Operations for Mars Exploration Mission-11: Exploration Medical Capability",
+   "source_url": "https://ntrs.nasa.gov/citations/20200001715",
+   "authors": "Urbina M, McGuire K, Lehnhardt K",
+   "publication_year": 2019,
+   "source_kind": "nasa_technical_document",
+   "licence": "NASA NTRS: public use permitted",
+   "full_text": true,
+   "topics": [
+    "medical_operations",
+    "radiation"
+   ],
+   "studied_population": "NASA concept of operations for the medical system of a Mars exploration mission (document of scenarios and assumptions); no study population.",
+   "supported_claims": [
+    "Mars missions are expected to last 2 to 3 years, and limits on real-time communication, resupply and evacuation drive medical system design.",
+    "The planning assumptions are a 6 to 9 month transit, communication delay of 4 to 22 minutes in Mars orbit, a possible 2 week blackout, and no capability for emergency evacuation.",
+    "Crew size is at most four including one physician astronaut and one assistant medical officer.",
+    "The physician astronaut directs care in real time while flight surgeons act as consultants rather than direct managers."
+   ],
+   "claim_quotes": [
+    {
+     "claim": 0,
+     "quote": "NASA’s exploration missions to Mars will have durations of 2-3 years and will take humans farther away from Earth than ever before.",
+     "chunk_id": "ntrs_mars_med_conops_2019:x20"
+    },
+    {
+     "claim": 0,
+     "quote": "Constraints on real-time communication, resupply, and medical evacuation are major architectural drivers.",
+     "chunk_id": "ntrs_mars_med_conops_2019:x20"
+    },
+    {
+     "claim": 1,
+     "quote": "Duration 6-9-month transit to Mars; 2-17-month orbit; 6-9-month return to DSG Communication ~1.3 seconds (NRHO) to 4-22 minutes (Mars orbit). Communication blackout of ~2 weeks may occur during this phase due to solar conjunction or a lack of relay capability.",
+     "chunk_id": "ntrs_mars_med_conops_2019:x58"
+    },
+    {
+     "claim": 1,
+     "quote": "No capability for emergency evacuation back to Earth or access to definitive medical care.",
+     "chunk_id": "ntrs_mars_med_conops_2019:x58"
+    },
+    {
+     "claim": 2,
+     "quote": "Maximum four crewmembers, including one physician astronaut and one assistant medical officer.",
+     "chunk_id": "ntrs_mars_med_conops_2019:x59"
+    },
+    {
+     "claim": 3,
+     "quote": "The physician astronaut will serve as director of care during real-time medical events and will be the primary source for in-mission medical decision-making.",
+     "chunk_id": "ntrs_mars_med_conops_2019:x32"
+    }
+   ],
+   "limitations": [
+    "A concept of operations; the scenarios are narratives, and the document says specific technologies are only representative and not requirements.",
+    "Figures are planning assumptions for a baseline mission and may change."
+   ],
+   "hypotheses": [
+    "The document presents the required level of crew autonomy as needing future analysis, not as settled."
+   ],
+   "summary_kind": "authored_summary",
+   "review_status": "domain_review_pending",
+   "clinically_approved": false
+  },
+  {
+   "id": "ntrs_mars_conditions_2019",
+   "title": "Development of an Accepted Medical Condition List for Mars Transit Medical Capability Scoping",
+   "source_url": "https://ntrs.nasa.gov/citations/20190025913",
+   "authors": "Nusbaum D, Blue R, Antonsen E, et al.",
+   "publication_year": 2019,
+   "source_kind": "nasa_technical_document",
+   "licence": "NASA NTRS: public use permitted",
+   "full_text": true,
+   "topics": [
+    "medical_operations"
+   ],
+   "studied_population": "Slide set describing a pilot expert-panel process that screened 194 medical conditions for Mars transit medical system planning, using Integrated Medical Model outputs for a four-person crew.",
+   "supported_claims": [
+    "The pilot considered 194 conditions: 135 were listed Should Plan to Treat with no dissent, 22 Plan to Treat with Conditions, and 34 were excluded.",
+    "Conditions were ranked on probability, severity, likelihood of successful treatment and resources needed.",
+    "The Integrated Medical Model run behind the list used a 4 crew profile (2 male, 2 female) and considered outcomes for 100 conditions."
+   ],
+   "claim_quotes": [
+    {
+     "claim": 0,
+     "quote": "There were 194 conditions considered for the initial pilot project design. • 135 were listed as “Should Plan to Treat” for medical system scoping with no dissent.",
+     "chunk_id": "ntrs_mars_conditions_2019:x7"
+    },
+    {
+     "claim": 0,
+     "quote": "• 22 conditions were listed as “Plan to Treat, with Conditions”. • 34 conditions were excluded from consideration for system scoping by consensus",
+     "chunk_id": "ntrs_mars_conditions_2019:x7"
+    },
+    {
+     "claim": 1,
+     "quote": "Based on probability of occurrence, severity of disease, likelihood of successful treatment, and amount of resources required to manage.",
+     "chunk_id": "ntrs_mars_conditions_2019:x2"
+    },
+    {
+     "claim": 2,
+     "quote": "The probability of occurrence for various conditions were based upon data from IMM run – Used a 4 crew (2 male, 2 female) profile",
+     "chunk_id": "ntrs_mars_conditions_2019:x3"
+    },
+    {
+     "claim": 2,
+     "quote": "Considers outcomes for 100 medical conditions that have or may occur in-flight",
+     "chunk_id": "ntrs_mars_conditions_2019:x4"
+    }
+   ],
+   "limitations": [
+    "The slides give no list of the individual conditions, so they cannot confirm any specific condition is on it.",
+    "The listed counts add to 191, not 194, with no explanation for the other 3.",
+    "Futility and complexity are subjective and the tie-breaking decisions were not externally validated."
+   ],
+   "hypotheses": [
+    "The slides present a wider range of disease manifestations and an uncertainty factor for unexpected conditions as future work, not yet done."
+   ],
+   "summary_kind": "authored_summary",
+   "review_status": "domain_review_pending",
+   "clinically_approved": false
+  },
+  {
+   "id": "ntrs_standard_measures_2018",
+   "title": "Spaceflight Standard Measures",
+   "source_url": "https://ntrs.nasa.gov/citations/20180002943",
+   "authors": "Zwart SR, et al.",
+   "publication_year": 2018,
+   "source_kind": "nasa_technical_document",
+   "licence": "NASA NTRS: public use permitted",
+   "full_text": true,
+   "topics": [
+    "monitoring",
+    "sleep",
+    "cognition",
+    "immune",
+    "cardiovascular"
+   ],
+   "studied_population": "Slide summary of NASA's Spaceflight Standard Measures, a fixed set of tests collected from every ISS crewmember; no outcome data in this deck.",
+   "supported_claims": [
+    "Standard Measures is a minimal set of measures consistently captured from all ISS crewmembers until the end of ISS.",
+    "Sleep is tracked with a wrist-worn device worn continuously in flight, plus a questionnaire each month.",
+    "Other measures include a computerized test battery of 10 brief cognitive tests, blood biochemistry, microbiome samples and carotid artery ultrasound.",
+    "The aim is to compare responses across mission lengths such as 6 weeks, 6 months and 1 year."
+   ],
+   "claim_quotes": [
+    {
+     "claim": 0,
+     "quote": "The main goal is to ensure that a minimal set of measures is consistently captured from all ISS crewmembers until the end of ISS to characterize the effects of space.",
+     "chunk_id": "ntrs_standard_measures_2018:x1"
+    },
+    {
+     "claim": 1,
+     "quote": "continuously in-flight starting before first scheduled sleep on station",
+     "chunk_id": "ntrs_standard_measures_2018:x3"
+    },
+    {
+     "claim": 1,
+     "quote": "Worn snug against the non-dominant wrist, similar to a wrist watch.",
+     "chunk_id": "ntrs_standard_measures_2018:x4"
+    },
+    {
+     "claim": 1,
+     "quote": "Completed monthly during the mission before and after sleep",
+     "chunk_id": "ntrs_standard_measures_2018:x5"
+    },
+    {
+     "claim": 2,
+     "quote": "A brief computerized neurocognitive test battery • 10 brief tests that cover a range of cognitive domains relevant for spaceflight",
+     "chunk_id": "ntrs_standard_measures_2018:x6"
+    },
+    {
+     "claim": 2,
+     "quote": "Biochemical Markers (L-180) Biochemical Markers (blood only) (FD30 & R-30) Biochemical Markers (R+30) Microbiome (L-90) Microbiome (FD30 & R-30)",
+     "chunk_id": "ntrs_standard_measures_2018:x3"
+    },
+    {
+     "claim": 2,
+     "quote": "Ultrasound measures of carotid arterial wall thickness (arterial structure)",
+     "chunk_id": "ntrs_standard_measures_2018:x9"
+    },
+    {
+     "claim": 3,
+     "quote": "be analyzed for population responses to various mission durations (e.g., 6 weeks, 6 months, and 1 year).",
+     "chunk_id": "ntrs_standard_measures_2018:x11"
+    }
+   ],
+   "limitations": [
+    "It lists what is measured and when, not what was found.",
+    "The measures are for ISS research and are not a diagnostic or fitness-for-duty protocol.",
+    "Data are archived for research use and are not analysed in real time."
+   ],
+   "hypotheses": [],
+   "summary_kind": "authored_summary",
+   "review_status": "domain_review_pending",
+   "clinically_approved": false
+  },
+  {
+   "id": "nasa_std_3001_vol1_revc",
+   "title": "NASA-STD-3001, Volume 1, Revision C: NASA Spaceflight Human-System Standard, Crew Health",
+   "source_url": "https://standards.nasa.gov/sites/default/files/standards/NASA/C//nasa-std-3001-vol-1-rev-c-signature.pdf",
+   "authors": [
+    "NASA Office of the Chief Health and Medical Officer"
+   ],
+   "publication_year": 2023,
+   "source_kind": "nasa_standard",
+   "licence": "NASA public document, summary only",
+   "full_text": false,
+   "topics": [
+    "radiation",
+    "medical_operations",
+    "bone_health"
+   ],
+   "studied_population": "A NASA requirements standard (Volume 1 Revision C, approved 2023-09-15, superseding Revision B); not a study.",
+   "supported_claims": [
+    "The career limit is: an individual crewmember's total career effective radiation dose from spaceflight shall be less than 600 mSv, universal for all ages and sexes.",
+    "The career limit is based on staying below a 3% mean risk of cancer death above the non-exposed baseline, and the rationale says model choices can shift the output by 25%.",
+    "The short-term solar particle event limit is an effective dose of less than 250 mSv for the design reference event (the sum of the October 1989 events).",
+    "For habitable systems supporting crew for more than 60 days, galactic cosmic ray exposure must stay below 1.3 mSv/day in free space and 0.9 mSv/day on planetary surfaces.",
+    "The unshielded free space cosmic ray effective dose rate at solar minimum is given as 1.5 mSv/day, which vehicle shielding can reduce by about 15% to 1.3 mSv/day."
+   ],
+   "claim_quotes": [
+    {
+     "claim": 0,
+     "quote": "[V1 4030] An individual crewmember’s total career effective radiation dose due to spaceflight radiation exposure shall be less than 600 mSv. This limit is universal for all ages and sexes.",
+     "chunk_id": "page:40"
+    },
+    {
+     "claim": 1,
+     "quote": "The total career dose limit is based on ensuring each crewmember (inclusive of all ages and sexes) remains below 3% mean risk of cancer mortality (risk of exposure-",
+     "chunk_id": "page:40"
+    },
+    {
+     "claim": 1,
+     "quote": "Due to variability and subjectivity of the selection of model parameters that can easily modify the model output by 25%,, the model need not be updated unless new data indicates a 30% change",
+     "chunk_id": "page:41"
+    },
+    {
+     "claim": 2,
+     "quote": "[V1 4031] The program shall protect crewmembers from exposure to the design reference Solar Particle Event (SPE) environment proton energy spectrum (sum of the October 1989 events) to less than an effective dose of 250 mSv.",
+     "chunk_id": "page:42"
+    },
+    {
+     "claim": 3,
+     "quote": "[V1 4033] For habitable space systems designed to support crew for > 60 days, the program shall protect crewmembers from exposure to the galactic cosmic ray (GCR) environment to less than a NASA effective dose",
+     "chunk_id": "page:45"
+    },
+    {
+     "claim": 3,
+     "quote": "rate of 1.3 mSv/day for systems in free space and to less than 0.9 mSv/day for systems on planetary surfaces.",
+     "chunk_id": "page:45"
+    },
+    {
+     "claim": 4,
+     "quote": "During solar minimum, vehicle shielding can effectively reduce the free space, unshielded GCR effective dose rate of 1.5 mSv/day by approximately 15% to 1.3 mSv/day or lower",
+     "chunk_id": "page:46"
+    }
+   ],
+   "limitations": [
+    "It sets design and program limits, not an individual dose forecast or a medical rule for one astronaut.",
+    "The 1.3 and 0.9 mSv/day values are design requirements for vehicles, not measured cruise doses.",
+    "Effective dose here uses a fixed 35-year-old female model for all crew, so it is a limit-setting convention, not a personal dose."
+   ],
+   "hypotheses": [],
+   "summary_kind": "authored_summary",
+   "review_status": "domain_review_pending",
+   "clinically_approved": false
+  },
+  {
+   "id": "nasa_ochmo_radiation_brief",
+   "title": "Design for Ionizing Radiation Protection (NASA-STD-3001 Technical Brief OCHMO-TB-020 Rev E)",
+   "source_url": "https://www.nasa.gov/wp-content/uploads/2023/03/radiation-protection-technical-brief-ochmo.pdf",
+   "authors": [
+    "NASA Office of the Chief Health and Medical Officer"
+   ],
+   "publication_year": 2022,
+   "source_kind": "nasa_technical_document",
+   "licence": "NASA public document, summary only",
+   "full_text": false,
+   "topics": [
+    "radiation"
+   ],
+   "studied_population": "A NASA OCHMO technical brief (OCHMO-TB-020 Rev E, 2022-12-27) summarising radiation requirements; not a study.",
+   "supported_claims": [
+    "The brief states the career limit is 600 mSv and the solar particle event limit is 250 mSv per event.",
+    "The brief repeats the Revision B career limit wording, which is universal for all ages and sexes.",
+    "About 95% of solar particle events need only ALARA and do not approach dose limits, and the chance of spacewalk organ doses above 100 mSv is under one in a million.",
+    "Aluminum and polyethylene shielding cut solar event dose by about 50% on average but galactic cosmic ray dose by only about 7%.",
+    "The brief notes the galactic cosmic ray limit was under consideration and not formally adopted at that revision."
+   ],
+   "claim_quotes": [
+    {
+     "claim": 0,
+     "quote": "total career effective radiation dose during spaceflight radiation exposure is not to exceed 600 millisieverts (mSv).",
+     "chunk_id": "page:1"
+    },
+    {
+     "claim": 0,
+     "quote": "short-term radiation exposure to solar particle events is limited to an effective dose of 250 mSv per event to minimize acute effects.",
+     "chunk_id": "page:1"
+    },
+    {
+     "claim": 1,
+     "quote": "An individual astronaut’s total career effective radiation dose due to space flight radiation exposure shall be less than 600 mSv. This limit is universal for all ages and sexes.",
+     "chunk_id": "page:4"
+    },
+    {
+     "claim": 2,
+     "quote": "Large majority (~95%) of SPEs require only ALARA considerations and do not approach dose limits.",
+     "chunk_id": "page:10"
+    },
+    {
+     "claim": 2,
+     "quote": "The probability of EVA organs doses >100 mSv is less than one in a million based on SPE statistics of event frequency, size and energy spectra.",
+     "chunk_id": "page:10"
+    },
+    {
+     "claim": 3,
+     "quote": "They provide an average 50% reduction in dosage levels from SPE radiation. GCR radiation does not respond to shielding, with only an average 7% reduction in dosage levels.",
+     "chunk_id": "page:7"
+    },
+    {
+     "claim": 4,
+     "quote": "Note : The Galactic Cosmic Radiation (GCR) has not been formally adopted but is under consideration.",
+     "chunk_id": "page:4"
+    }
+   ],
+   "limitations": [
+    "A reference summary that says it does not supersede NASA-STD-3001; check the standard for binding wording.",
+    "Rev E (2022) quotes Volume 1 Revision B, so the GCR statement is out of date after Revision C (2023).",
+    "Gives limits and shielding guidance, not measured crew doses."
+   ],
+   "hypotheses": [],
+   "summary_kind": "authored_summary",
+   "review_status": "domain_review_pending",
+   "clinically_approved": false
+  }
+ ]
 }

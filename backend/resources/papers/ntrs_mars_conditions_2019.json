@@ -1,0 +1,51 @@
+{
+"id": "ntrs_mars_conditions_2019",
+"title": "Development of an Accepted Medical Condition List for Mars Transit Medical Capability Scoping",
+"authors": "Nusbaum D, Blue R, Antonsen E, et al.",
+"year": 2019,
+"licence": "NASA NTRS: public use permitted",
+"source_url": "https://ntrs.nasa.gov/citations/20190025913",
+"topics": [
+"medical_operations"
+],
+"kind": "full_text_excerpts",
+"note": "Verbatim text extracted from the source for retrieval; page furniture and the reference list removed. Not reviewed by HALO.",
+"chunks": [
+{
+"id": "ntrs_mars_conditions_2019:x1",
+"text": "National Aeronautics and Space Administration National Aeronautics and Space Administration • To discuss the need for an accepted medical condition list for deep space missions. • To describe what currently exists with regards to deep space-related medical condition lists and its limitations. • To describe the methodology for a repeatable, evidence-based approach by which to create and/or update a medical condition list for deep space missions. • To describe the results of this repeatable, evidence-based approach for creating and/or updating a medical condition list for deep space missions."
+},
+{
+"id": "ntrs_mars_conditions_2019:x2",
+"text": "Need for Process to Develop Medical Condition List • Will assist in identifying high priority medical conditions to plan for during deep space missions. • Based on probability of occurrence, severity of disease, likelihood of successful treatment, and amount of resources required to manage. • Will drive decisions related to what medical resources/capability will be available aboard future deep space vehicles. • May also drive research related to the development of future spaceflight-related medical technologies. – the International Space Station (ISS) Integrated Medical Group (IMG) Medical Checklist (JSC-48522)4"
+},
+{
+"id": "ntrs_mars_conditions_2019:x3",
+"text": "– the Flight Data File Medical Checklist (JSC-48031)5 – In-flight medical incidence data in the Lifetime Surveillance of Astronaut Health (LSAH) repository – NASA Flight Surgeon subject matter expertise. – May not accurately represent probabilities. – Are not adequately anticipated by SMEs. • May overestimate likelihood of some conditions if: – Misperceived as a large concern by SMEs. • IMCL was used as starting point for discussion. • The probability of occurrence for various conditions were based upon data from IMM run – Used a 4 crew (2 male, 2 female) profile"
+},
+{
+"id": "ntrs_mars_conditions_2019:x4",
+"text": "• 6 EVA related conditions were initially excluded but then reintroduced with change to CisLunar DRM. • Probablistic Risk Assessment (PRA) using Monte Carlo methodology • Used to assess mission risk due to in-flight medical events • Considers relevant preexisting medical conditions • User defined Design Reference Missions (DRM) (eg. crew, duration, EVA, etc.) • Considers outcomes for 100 medical conditions that have or may occur in-flight • Incidence data from spaceflight medical events, and analog and general populations • 20 of 100 conditions have sex-dependent outcomes"
+},
+{
+"id": "ntrs_mars_conditions_2019:x5",
+"text": "National Aeronautics and Space Administration 7 • Calculated Exclusion Scores were assessed by Element Scientist. • Each condition was assessed with regards to “Should Plan to Treat” or “Should Not Plan to Treat”.* • Then the Medical Expert Group was asked to assess the outcomes determined by the Element Scientist and agree or disagree (as well as provide rationale for decisions). • Where the Group disagreed, the final decision was made by the Element Scientist. • Subsequently, the medical list was further refined by attaching medical resources/capabilities to each of the conditions."
+},
+{
+"id": "ntrs_mars_conditions_2019:x6",
+"text": "• Medical resources and capabilities were attached to each condition by the panel of space medicine SMEs by incorporating their experience and understanding of what is considered “best terrestrial practice” for the treatment of each condition, but modified to take into consideration what are expected to be spaceflight-associated limitations on medical capabilities. • This information was then used by the same medical professionals to further order and refine which conditions would and would not be treated. • This incorporated a dimension of “resource requirements” to previous assessments of complexity, futility, and probability."
+},
+{
+"id": "ntrs_mars_conditions_2019:x7",
+"text": "• There were 194 conditions considered for the initial pilot project design. • 135 were listed as “Should Plan to Treat” for medical system scoping with no dissent. • 22 conditions were listed as “Plan to Treat, with Conditions”. • 34 conditions were excluded from consideration for system scoping by consensus, designated as “Should Not Plan to Treat”. • Futility and Complexity are subjective (and thus impacted by individual clinician biases). • Decisions made by Element Scientist (including final, tie-breaking decisions) were not externally validated."
+},
+{
+"id": "ntrs_mars_conditions_2019:x8",
+"text": "• “Best Case Scenario” and “Worst Case Scenario” definitions were often limited and do not represent the whole spectra of clinical sequelae for a given disease. • This methodology focused on exclusion of conditions from mission planning and thus started from a baseline list of possible conditions. • Future efforts should consider the broader range of disease manifestations, as well as clinical sequelae of different conditions. • Refine the model to better define and objectively determine which conditions warrant resource allocation (eliminate subjectivity and SME opinion.)"
+},
+{
+"id": "ntrs_mars_conditions_2019:x9",
+"text": "• Otherwise, provide opportunity to externally validate subjective opinions. • Building in an uncertainty factor into the medical capabilities for future missions to account for conditions that are missing or unexpected. • Weighing the relative risk of various medical conditions from an ethical viewpoint, including acknowledgement of uncertainty in risk prediction for exploration missions."
+}
+]
+}

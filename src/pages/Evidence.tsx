@@ -19,6 +19,9 @@ type Source = {
   supported_claims: string[];
   limitations: string[];
   review_status?: string;
+  licence?: string;
+  full_text?: boolean;
+  hypotheses?: string[];
 };
 
 const topicName = (t: string) => t.replace(/_/g, " ");
@@ -81,7 +84,7 @@ export function Evidence(_props: Props) {
             {shown.map((r) => (
               <article key={r.id} className={s.source}>
                 <h3>{r.title}</h3>
-                <p className={s.topics}>{r.topics.map(topicName).join(", ")}</p>
+                <p className={s.topics}>{r.topics.map(topicName).join(", ")}{r.licence ? ` · ${r.licence}` : ""}{r.full_text ? " · full text searchable by HALO" : ""}</p>
                 <ul className={s.claims}>
                   {r.supported_claims.map((c) => <li key={c}>{c}</li>)}
                 </ul>
@@ -91,6 +94,10 @@ export function Evidence(_props: Props) {
                   <ul className={s.claims}>
                     {r.limitations.map((c) => <li key={c}>{c}</li>)}
                   </ul>
+                  {!!r.hypotheses?.length && <>
+                    <p className={s.p}><b>Open questions, not established.</b></p>
+                    <ul className={s.claims}>{r.hypotheses.map((c) => <li key={c}>{c}</li>)}</ul>
+                  </>}
                 </More>
                 <a className={s.link} href={r.source_url} target="_blank" rel="noreferrer">Open original source</a>
               </article>

@@ -1,0 +1,575 @@
+{
+"id": "ntrs_mars_med_conops_2019",
+"title": "Medical System Concept of Operations for Mars Exploration Mission-11: Exploration Medical Capability",
+"authors": "Urbina M, McGuire K, Lehnhardt K",
+"year": 2019,
+"licence": "NASA NTRS: public use permitted",
+"source_url": "https://ntrs.nasa.gov/citations/20200001715",
+"topics": [
+"medical_operations"
+],
+"kind": "full_text_excerpts",
+"note": "Verbatim text extracted from the source for retrieval; page furniture and the reference list removed. Not reviewed by HALO.",
+"chunks": [
+{
+"id": "ntrs_mars_med_conops_2019:x1",
+"text": "Exploration Medical Capability (ExMC) Element National Aeronautics and Space Administration Human Health and Performance Contract, MEI Technologies Baseline Concept of operations for a medical system for the EM-11 mission to Mars. Incorporated comments from the Exploration Medical Capability Control 1. INTRODUCTION .............................................................................................................. 8 1.1. Purpose ..................................................................................................................................................... 8"
+},
+{
+"id": "ntrs_mars_med_conops_2019:x2",
+"text": "1.2. Scope ........................................................................................................................................................ 8 1.3. Change Authority ...................................................................................................................................... 9 1.4. Applicable Documents .............................................................................................................................. 9 1.5. Reference Documents ............................................................................................................................... 9"
+},
+{
+"id": "ntrs_mars_med_conops_2019:x3",
+"text": "2. STAKEHOLDER NEEDS AND SYSTEM GOALS ................................................................... 10 2.1. Stakeholder Needs .................................................................................................................................. 10 2.2. System Goals ........................................................................................................................................... 11 2.2.1. Comprehensive Health Management .................................................................................................... 11"
+},
+{
+"id": "ntrs_mars_med_conops_2019:x4",
+"text": "2.2.2. Crew Autonomy ..................................................................................................................................... 11 2.2.3. Continual Information Application & Learning ...................................................................................... 12 2.2.4. System Flexibility and Extensibility ........................................................................................................ 12 2.2.5. Medical, Vehicle, and Mission Systems Integration .............................................................................. 12"
+},
+{
+"id": "ntrs_mars_med_conops_2019:x5",
+"text": "2.2.6. Crew and Medical System Integration ................................................................................................... 12 2.2.7. Ground Awareness ................................................................................................................................ 12 2.2.8. Crew Performance ................................................................................................................................. 13 2.2.9. Research Support ................................................................................................................................... 13"
+},
+{
+"id": "ntrs_mars_med_conops_2019:x6",
+"text": "3. MEDICAL SYSTEM DESCRIPTION .................................................................................... 13 3.1. Flight Systems ......................................................................................................................................... 14 3.1.1. Crew Health and Performance Systems ................................................................................................ 14 3.2. Crew ........................................................................................................................................................ 15"
+},
+{
+"id": "ntrs_mars_med_conops_2019:x7",
+"text": "3.3. Ground Systems ...................................................................................................................................... 15 4. MARS MISSION CONSTRAINTS AND ASSUMPTIONS ...................................................... 15 4.1. Duration .................................................................................................................................................. 16 4.2. Communication ....................................................................................................................................... 16"
+},
+{
+"id": "ntrs_mars_med_conops_2019:x8",
+"text": "4.3. Equipment and Consumable Availability ................................................................................................. 16 4.4. Evacuation .............................................................................................................................................. 16 4.5. Crew Size and Composition ..................................................................................................................... 17 4.6. Vehicle Configuration .............................................................................................................................. 17"
+},
+{
+"id": "ntrs_mars_med_conops_2019:x9",
+"text": "4.7. Level of Care............................................................................................................................................ 17 5. MISSION PHASE DESCRIPTIONS AND ASSUMPTIONS ..................................................... 18 5.1. Pre-Launch .............................................................................................................................................. 18 5.2. Launch through Mars Transit Rendezvous ............................................................................................... 19"
+},
+{
+"id": "ntrs_mars_med_conops_2019:x10",
+"text": "5.3. Mars Transit, Orbit, & Return .................................................................................................................. 19 5.4. Earth Return Rendezvous through Earth EDL ........................................................................................... 20 5.5. Immediate Post-Landing Recovery .......................................................................................................... 20 6. MEDICAL CARE DEFINITIONS ......................................................................................... 21"
+},
+{
+"id": "ntrs_mars_med_conops_2019:x11",
+"text": "7. MARS MEDICAL SCENARIOS .......................................................................................... 22 7.1. Pre-Launch .............................................................................................................................................. 24 7.2. Launch through Mars Transit Rendezvous ............................................................................................... 24 7.3. Mars Transit, Orbit, & Return .................................................................................................................. 24"
+},
+{
+"id": "ntrs_mars_med_conops_2019:x12",
+"text": "7.3.1. Intravehicular Activity Scenarios ........................................................................................................... 24 7.3.2. Extravehicular Activity Scenarios ........................................................................................................... 52 7.4. Earth Return Rendezvous through Earth EDL ........................................................................................... 52 7.5. Immediate Post-Landing Recovery .......................................................................................................... 52"
+},
+{
+"id": "ntrs_mars_med_conops_2019:x13",
+"text": "8. APPENDIX A: ACRONYMS AND ABBREVIATIONS ............................................................ 53 9. APPENDIX B: REFERENCES ............................................................................................. 54 10. APPENDIX C: ACTIVITIES ............................................................................................ 55 11. APPENDIX D: TBD TABLE ............................................................................................ 56 Figure 1 – Context Architectural View of Medical System ................................................................. 14"
+},
+{
+"id": "ntrs_mars_med_conops_2019:x14",
+"text": "Figure 7-1. Mars Transit, Orbit, & Return Phase IVA Scenarios .......................................................... 25 Figure 7-2. Activity Flowchart: IVA, Planned, Self-Care, Autonomous, Exercise ................................ 26 Figure 7-3. Activity Flowchart: IVA, Planned, Self-Care, Semi-Autonomous, Family Conference ...... 28 Figure 7-4. Activity Flowchart - IVA, Planned, Directed Care, Autonomous, Dental Exam ................ 29 Figure 7-5. Activity Flowchart - IVA, Planned, Directed Care, Semi-Autonomous, Psychological Conference .......................................................................................................................................... 31"
+},
+{
+"id": "ntrs_mars_med_conops_2019:x15",
+"text": "Figure 7-6. Activity Flowchart - IVA, Planned, Medical Training and Education, Semi-Autonomous, Continuing Medical Education ............................................................................................................ 33 Figure 7-7. Activity Flowchart - IVA, Unplanned, Self-Care, Autonomous, Headache ....................... 34 Figure 7-8. Activity Flowchart - IVA, Unplanned, Directed Care, Autonomous, Urinary Tract Infection .............................................................................................................................................. 36"
+},
+{
+"id": "ntrs_mars_med_conops_2019:x16",
+"text": "Figure 7-9. Activity Flowchart - IVA, Unplanned, Directed Care, Semi-Autonomous, Dental Abscess................................................................................................................................................ 39 Figure 7-10 Activity Flowchart - IVA, Unplanned, Directed Care, Semi-Autonomous, Acute Radiation Sickness .............................................................................................................................. 42 Figure 7-11. Activity Flowchart - IVA, Unplanned, Emergent Care, Autonomous, Arm Injury ........... 45"
+},
+{
+"id": "ntrs_mars_med_conops_2019:x17",
+"text": "Figure 7-12. Activity Flowchart - IVA, Unplanned, Emergent Care, Autonomous, Decompression Sickness ............................................................................................................................................... 48 Figure 7-13. Activity Flowchart - Transit, IVA, Unplanned, Medical System Maintenance, SemiAutonomous, Exercise Hardware Malfunction ................................................................................... 50 Figure 7-14. Activity Flowchart - IVA, Unplanned, Medical Training and Education, Autonomous,"
+},
+{
+"id": "ntrs_mars_med_conops_2019:x18",
+"text": "Just-In-Time Training .......................................................................................................................... 52 Table 2-2-1. Stakeholder Needs .......................................................................................................... 11 Table 4-1 Medical Evacuation Considerations .................................................................................... 17 Table 5-1 Pre-Launch Phase Assumptions .......................................................................................... 18"
+},
+{
+"id": "ntrs_mars_med_conops_2019:x19",
+"text": "Table 5-2 Launch Through Mars Transit Rendezvous Phase Assumptions......................................... 19 Table 5-3 Mars Transit, Orbit, & Return Phase Assumptions ............................................................. 20 Table 5-4 Earth Return Rendezvous Through Earth EDL Phase Assumptions .................................... 20 Table 5-5 Immediate Post-Landing Recovery Phase Assumptions ..................................................... 21 Table 6-1 Medical Care Characteristic Definitions.............................................................................. 22"
+},
+{
+"id": "ntrs_mars_med_conops_2019:x20",
+"text": "Table 7-1 Medical System Role Definitions ........................................................................................ 23 NASA’s exploration missions to Mars will have durations of 2-3 years and will take humans farther away from Earth than ever before. This will result in a paradigm shift for mission planning, spacecraft design, human systems integration, and in-flight medical care. Constraints on real-time communication, resupply, and medical evacuation are major architectural drivers. These constraints require medical system development to be tightly integrated with mission and vehicle design to provide crew autonomy and enable mission success."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x21",
+"text": "This concept of operations provides a common vision of medical care for developing a medical system for Mars exploration missions. It documents an overview of the stakeholder needs and goals of a medical system and provides examples of the types of activities the system will be used for during the mission. Development of the concept of operations considers mission variables such as distance from Earth, duration of mission, time to definitive medical care, communication protocols between crewmembers and ground support, personnel capabilities and skill sets, medical hardware and software, and medical data management. The information provided in this document informs the ExMC Systems Engineering effort to define the functions to be provided by the medical system."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x22",
+"text": "In addition, this concept of operations will inform the subsequent systems engineering process of developing technical requirements, system architectures, interfaces, and verification and validation approaches for the medical system. This document supports the closure of ExMC Gap Med01: We do not have a concept of operations for medical care during exploration missions, corresponding to the ExMC-managed human system risk: Risk of Adverse Health Outcomes & Decrements in Performance due to Inflight Medical Conditions. This document is applicable to the ExMC Element Systems Engineering process and may be used for collaboration within the Human Research Program."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x23",
+"text": "This document describes a distinct concept of operations for a medical system for each phase of the proposed Exploration Mission-11 (EM-11) [1]. This concept of operations only includes crewed Deep Space Transport (DST) transit from the Gateway/DST/Orion stack to Mars, Mars orbit, and the return transit; it does not include crewed Orion transit from Earth to the Gateway/DST stack and back. At this time, there is no NASA program-level concept of operations for this mission. Our assumptions about the mission are documented in Sections 3 and 4 until one becomes available."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x24",
+"text": "The concept of operation for each phase is described through the use of scenarios of medical events that may occur during that phase. These scenarios abide by the ExMC interpretation of NASA-STD-3001 as documented in NASA /TM_2017_219290 Interpretation of NASA-STD-3001 Levels of Care for Exploration Medical System Development. They have been developed with input from ExMC clinicians within the Concept of Operations project team and other clinicians via the ExMC Clinicians Working Group. Each scenario is represented by a hypothetical narrative and associated activity flowchart that outline the steps required to successfully address the scenario and provide system developers an understanding of system goals."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x25",
+"text": "The medical system components outlined in this document, including all hardware, software, and knowledge management tools, are only representations of potential solutions. The inclusion of specific technologies in this document should not be interpreted as levied requirements. The focus of this document is to capture functional concepts to be provided by the medical system, not the implementation solutions. This version of the Medical System Concept of Operations for Mars Exploration Mission-11 will be submitted to the Control Board of ExMC for approval. Subsequent proposed changes to this document will be submitted to the Control Board of ExMC for consideration and disposition. The"
+},
+{
+"id": "ntrs_mars_med_conops_2019:x26",
+"text": "Control Board of ExMC will be defined in the ExMC Element Management Plan. Applicable documents consist of documents that contain provisions or other pertinent requirements directly related to and necessary for the performance of the activities specified by the document. TBD-2 ExMC Systems Engineering Management Plan NASA-STD-3001, Vol 1 Space Flight Human-System Standard: Crew Health NASA-STD-3001, Vol 2 Space Flight Human-System Standard: Human Factors, NASA/TM_2017_219290 Interpretation of NASA-STD-3001 Levels of Care for The following documents contain supplemental information and provide guidance in the application of the Medical System Concept of Operations for Mars Exploration Missions document."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x27",
+"text": "These documents may or may not be specifically cited within the text of this document. HRP 47065, Rev H Human Research Program Integrated Research Plan NPR 7123.B, Appendix A NASA Systems Engineering Processes and Requirements N/A Safe Passage: Astronaut Care for Exploration Missions SSP 50260 ISS Medical Operations Requirements Document SSP 50667, Vol B Medical Evaluations Document: Crew Medical Officer Health SSP 54045_54046-ANX4 Increment Definition and Requirements Document for Increments 45 and 46, Annex 4: Medical Operations and"
+},
+{
+"id": "ntrs_mars_med_conops_2019:x28",
+"text": "IMM-GEN-309-IMCL IMM data request for the Integrated Medical Model Medical NASA/SP-2010-3407 Human Integration Design Handbook In 2001, the Committee on Creating a Vision for Space Medicine During Travel Beyond Low Earth Orbit released a report entitled Safe Passage: Astronaut Care for Exploration Missions [2]. This committee acted on authority of the Institute of Medicine to assess what is known about the health effects of space travel and provide recommendations on how to approach health care during these missions. In the years since Safe Passage was published, some of its recommendations have been implemented in low Earth orbit (LEO). The recommendations from this report formed the conceptual basis for the current workings of the Human Research Program and a roadmap for biomedical research [3]."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x29",
+"text": "Much work remains to extend the vision to exploration missions through the merging of engineering requirements and medical priorities in the context of technology and process development. As Safe Passage suggests, NASA’s exploration goals will require a comprehensive health care system built on a strategic research plan while ensuring the integration of the engineering and health sciences. Stakeholders need a medical system capable of supporting autonomous prevention, diagnosis, treatment, and long-term management of medical conditions, as part of a comprehensive health care system. This medical system is needed to keep healthy crew healthy and to manage disease and injury when necessary. These terms are defined as follows:"
+},
+{
+"id": "ntrs_mars_med_conops_2019:x30",
+"text": "Promotion of physical and mental health, prevention of disease through screening, crew and vehicle system monitoring, and mitigation. Diagnosis The determination of the nature of a disease or injury. Treatment Psychological, medical or surgical management of a patient. Continuing management of persistent medical conditions, including reassessment, treatment, rehabilitation, and palliative care. The goals of the medical system provide a foundation for exploration medical system development and high-level requirements. They establish a basis for quality attributes of the medical system and also influence technical measures commonly used for insight into performance of the technical solution. Goals of the medical system are defined in the sections below and are based on constraints levied on the medical system by stakeholder needs, mission architecture, and stakeholder expectations."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x31",
+"text": "Provide comprehensive health management capabilities to enable mission success. Recognizing the extended duration and distance from Earth during Mars exploration missions, inmission care capabilities must be more autonomous than those available in LEO and Gateway missions and span prevention, diagnosis, treatment, and long-term management of well-being and clinical health. The Comprehensive Health Management capabilities will use resources (e.g., skillsets, software, hardware, medication) to prepare for and execute planned and unplanned medical operations, pharmacy operations, personalized medicine, training, resource management, ethics considerations, data management, and risk estimation. Future analysis is required to determine the extent of these comprehensive health management capabilities required to meet this goal."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x32",
+"text": "Enable crew autonomy in medical task execution and decision-making Although ground medical support will remain an important part of medical care, the autonomous care model for Mars exploration driven by communication delays and blockages requires flight surgeons and other staff to serve as consultants, rather than as direct managers of crew care. The physician astronaut will serve as director of care during real-time medical events and will be the primary source for in-mission medical decision-making. To support the physician astronaut, this medical care paradigm requires comprehensive vehicle capabilities and resources in the form of onboard medical references and decision support systems. Future analysis is required to determine the expected and required levels of autonomy."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x33",
+"text": "2.2.3. Continual Information Application & Learning Support medical system knowledge augmentation over the mission lifetime. Knowledge gained during the mission and on the ground is needed to update medical system elements, such as task training, decision support, and models for estimation and prediction of crew health and system status. 2.2.4. System Flexibility and Extensibility Balance conflicting needs for medical system resource conservation (in design and in mission) and medical system operations. Flexibility and extensibility are needed because mission resources will be constrained and because of the inability to definitively predict all medical conditions that will occur during the mission."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x34",
+"text": "Medical flexibility helps identify the broadest use opportunities for a limited resource set relevant for clinical needs. Extensibility addresses conditions and situations outside of the target design conditions. 2.2.5. Medical, Vehicle, and Mission Systems Integration Integrate hardware, software, human, and operational aspects of the medical system with the mission and vehicle design. The in-mission medical system should be viewed as a component of the overall integrated vehicle system. When allowed and appropriate, medical data and information should be shared with other vehicle system components, and vice versa."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x35",
+"text": "2.2.6. Crew and Medical System Integration Design the medical system to fit the needs, abilities, and limitations of the crew. A well-designed medical system minimizes training time and operation complexity and lowers mission medical risk. It accounts for the various modes of data entry, input devices, computing platforms, and user preferences employed on the vehicle. It incorporates human system integration and human factors guidelines to reduce the cognitive and physical workload while using the medical system. A well-designed, usable medical system is easy to learn and operate, keeps the user informed on what is going on, reduces the number of errors and makes them easy to recover from, and assists in the timely completion of tasks. The expectation is that unobtrusive automated and manual processes are available to support crew activities."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x36",
+"text": "Maintain ground situation awareness of crew health and medical system status as flight communication constraints permit. Despite the increase in crew autonomy for Mars missions, the ground support system should continue to be informed on the state of the crew and medical system to assess impacts to the mission goals and objectives and to provide support as needed. Future analysis is required to determine the level and frequency of monitoring and transmission of data to the ground support system to ensure proper medical support. Enable the crew to perform mission tasks by ensuring fitness for duty."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x37",
+"text": "Exploration spaceflight missions will involve long-duration exposure of crewmembers to environmental and social conditions that may have deleterious effects on crewmembers’ ability to perform tasks, even if their clinical health is not affected. Conducting fitness assessments throughout the mission, including assessments of physical, cognitive, and behavioral states, will support the crew in achieving mission objectives by the early identification of degradation in crewmembers’ ability to perform tasks. Enable in-mission crew health and performance research through the use of hardware, software, human, and operational aspects of the medical system."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x38",
+"text": "To minimize the redundancy of in-flight resources, the medical system should be compatible with the collection, storage, and maintenance of crew health and performance research samples and data. The consolidation of clinical and research protocols, when appropriate, reduces the overall data collection burden on the crew. The management of clinical and research data by a single system expedites the sharing of data for improved crew care and more meaningful research. The medical system described in this document is one of many systems envisioned within the mission environment. This environment is represented in Figure 1, with the components addressed in this document in yellow. The other components, such as “Ground Systems” and other crew health and performance systems, are included because they have important interactions with the medical system."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x39",
+"text": "Figure 1 – Context Architectural View of the Medical System This draft system context architecture was developed based on the needs, goals, and medical system behaviors as described in this document and will be further refined as requirements are written. As system development continues, lower levels of detail will be defined and system functions will be mapped to physical components. Flight Systems include the crew and all functional vehicle subsystems required to sustain vehicle and crew operations. In this context architecture, the technical aspects of the Flight System are divided into “Crew Health and Performance Systems” (CHPS) and “Other Vehicle Systems” components."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x40",
+"text": "This document focuses on the medical system, which is part of the CHPS component, and the crew. “Other Vehicle Systems” includes subsystems that are not directly related to medical care, such as Structures, Avionics, and Communications & Tracking. It is included in this diagram to provide context and awareness of future interfaces between the medical system and those subsystems, such as the use of water for medical purposes, which would likely be provided by the Environmental Control and Life Support System. 3.1.1. Crew Health and Performance Systems"
+},
+{
+"id": "ntrs_mars_med_conops_2019:x41",
+"text": "While this Concept of Operations focuses on the medical component of the Crew Health and Performance System (CHPS), current work performed by the ExMC Element includes additional components that will be addressed outside of this document: a) Health & Wellness - Crew support systems, such as food supply, exercise, and behavioral health support. b) Mission Task Performance Support – Systems that provide in-mission crew training and Crew Health & Performance Data System user interfaces. c) Natural and Induced Environments Protection – Systems that protect the crew from environmental hazards."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x42",
+"text": "Interfaces between these components and the medical system, especially the Crew Health and Performance Data System, are currently being identified. The contents of these components may be referenced by the medical system but will not be controlled by it. The medical system is divided into three subsystems: a) Medical Supplies - Items used for medical care that are consumable, do not require power, and do not generate data. For example, this subsystem includes reusable items, such as scissors and splints, and single-use items, such as gloves and bandages. These items are tracked here to define an understanding of the quantities required for a particular trade space concept. b) Medical Devices - Items used for performing medical tasks or procedures. These items possess interface(s) with one or more other systems in the form of power, data, vacuum, or consumables."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x43",
+"text": "This subsystem may include biosensors, which collect and transmit physiological data, and pharmaceutical hardware, which aid in the dispensing of medication. c) Crew Health & Performance Data System – Collects and stores all medically relevant data from disparate sources (e.g. environmental details, biosensors, exercise regimens, medications, lab diagnostics, and electronic medical records) and provides them to crew members via user interfaces. These data are available for consultation onboard the spacecraft and are also transmitted to the ground for additional analysis. The system provides data to other onboard systems as needed through software interfaces and enables decision support capability by tracking and analyzing biometric data and implementing analytical algorithms that augment crewmembers’ knowledge."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x44",
+"text": "Within a mission, the crew will function as both patient and caregiver. The flight system must be developed to support both roles. Future analysis is required to determine the skill, knowledge, training, and continuing educational needs required for the crew to meet the medical expectations of an exploration mission. This analysis will include input from the flight surgeon community. Ground systems include all functional subsystems required to support the crew and vehicle from earth-based facilities. This includes medical data systems and subject matter experts, which will interface with the onboard CHPS and crew."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x45",
+"text": "4. MARS MISSION CONSTRAINTS AND ASSUMPTIONS Astronauts travelling to Mars will require medical care support throughout all mission phases. Although a Mars program of record is not currently in place, development efforts for the medical system must be undertaken to support a shift in operations from the current Earth-reliant International Space Station (ISS) operations to the Earth-independent operations envisioned for Mars. In lieu of an official NASA design reference mission (DRM), this concept of operations uses constraints and assumptions identified by the ExMC Systems Engineering and Concept of"
+},
+{
+"id": "ntrs_mars_med_conops_2019:x46",
+"text": "Operations teams based upon the EM-11 mission defined in the Progress in Defining the Deep Space Gateway and Transport Plan presentation to the NASA Advisory Council [1]. The EM-11 mission will bring a crew to an orbit around Mars in the DST vehicle utilizing the Deep Space Gateway (DSG) habitat as a rendezvous point in lunar space and utilizing the Orion vehicle for launch from Earth to the DSG and landing from DSG to Earth. ExMC understands that the DRM implemented by a future NASA Mars program may differ. Mars opportunities occur approximately every 26 months based on orbital mechanics and current launch technology. The duration of a typical mission is approximately 2 to 3 years."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x47",
+"text": "A typical mission will include a 3- to 4-day Earth-to-DSG transit, a 6- to 9-month DSG-to-Mars transit, 2 to 17 months in Mars orbit, a 6- to 9-month Mars-to-DSG return, and a 3- to 4-day DSG-to-Earth return. Due to the distance between Earth and Mars, unobstructed communication between the crew and ground has a maximum one-way delay of about 22 minutes (about 44 minutes round trip) during the mission. Communication blackouts of 2 weeks are possible every 2 years during certain phases of the mission when Earth is occluded by the sun. As a result of variable distances between the vehicle and Earth, communication between crewmembers and ground support will occur through a combination of synchronous (e.g., real-time audio and video) and asynchronous (e.g., email, recorded audio and video) methods."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x48",
+"text": "Other operational constraints, such as network availability and bandwidth, will further limit communication frequency, duration, and data volume. The extent of these constraints is still to be defined by the overall mission architecture. 4.3. Equipment and Consumable Availability The availability of additional consumables and equipment is dependent on pre-deployment, resupply, and in-situ resource utilization (ISRU) and will vary across mission phases. Predeployment is defined as the manifest and shipment of supplies onboard a cargo vehicle that is strategically placed on the trajectory of the crewed vehicle before launch of the crew. Resupply is defined as the manifest and shipment of supplies onboard a cargo vehicle that is launched after the crew for rendezvous with the crewed vehicle during the mission."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x49",
+"text": "ISRU is the collection, processing, storing, and use of local resources that replace resources that would otherwise be brought from Earth. These non-Earth-supplied resources can be used to fulfill or enhance the requirements and capabilities of the mission. This document defines “definitive medical care” as Earth-based care rendered to conclusively manage a patient’s condition, such as the full range of preventive care, diagnostic care, treatment, and long-term management. In this context, time to definitive care is determined by the length of time required for the crew to return to Earth per the nominal mission trajectory, which would be on the order of days, weeks, or months for a Mars mission, depending on the phase of the mission in which the need for care occurs, as illustrated in Table 4-1."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x50",
+"text": "Launch through Mars Transit Rendezvous Yes Hours to Days Earth Return Rendezvous through Earth EDL Yes Days Immediate Post-Landing Recovery Yes Minutes to Hours Table 4-1 Medical Evacuation Considerations Within this mission there is a maximum of four crewmembers. As specified by NASA-STD-3001, at least one crewmember will have physician-level medical training. This document refers to this crewmember, who serves as the primary caregiver, as the “physician astronaut.” At least one additional crewmember, who serves as the assistant medical officer, is assumed to have medical proficiency at a level that has yet to be determined. This document makes no assumptions about the specialty training of the physician astronaut. Future analysis is required to determine the level of skill and training required for both the physician astronaut and assistant medical officer roles."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x51",
+"text": "This concept of operations assumes that parameters such as operational volume, power allocation, environmental maintenance, and system interfaces are vehicle-specific and will not be consistent across all phases of the Mars mission. In addition, data storage and processing and the capability to transmit that data between the vehicle and ground resources are dependent on vehicle resources and mission phase needs. The crew will be transported to the Near Rectilinear Halo Orbit (NRHO) within the Orion capsule, where it will then dock to the DSG/DST stack [1]. For Mars transit, the crew will ingress the DST and undock from the DST/Orion stack. Upon return from Mars, the DST will dock with the DSG/Orion stack and, for Earth return, the crew will ingress the Orion capsule and undock from the DSG/DST stack."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x52",
+"text": "NASA-STD-3001 Space Flight Human-System Standard: Crew Health, defines five levels of medical care. The level of care applied to the Mars mission described in this document is Level of Care V. 1. Level of Care I identifies the need for first aid, including anaphylaxis response, care for space motion sickness, and basic life support, and it includes the use of private audio. 2. Level of Care II adds clinical diagnostics and ambulatory care to the care identified in Level I. It also includes the use of private video and private telemedicine."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x53",
+"text": "3. Level of Care III adds limited advanced life support, trauma care, and limited dental care to the care identified in Level II. 4. Level of Care IV adds sustainable advanced life support, limited surgical care and dental care to the care identified in Level III. It also includes the use of medical imaging. 5. Level of Care V adds autonomous advance life support, autonomous ambulatory care, and autonomous basic surgical care to the care identified in Level IV. It also includes the presence of a physician-level trained caregiver who is the director of care of the crew during the mission. This autonomous care model also drives the use of medical support on the ground as consultants rather than directors of care."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x54",
+"text": "5. MISSION PHASE DESCRIPTIONS AND ASSUMPTIONS In lieu of an official NASA design reference mission, this concept of operations uses constraints and assumptions [4] identified by the ExMC Systems Engineering and Concept of Operations teams and mission details outlined in Progress in Defining the Deep Space Gateway and Transport Plan presentation to the NASA Advisory Council [1] for the EM-11 mission. ExMC understands that the DRM implemented by a future NASA Mars program may differ. The Mars mission phases used by this concept of operations are described in this section."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x55",
+"text": "The Pre-Launch phase includes activities that occur before crew ingress into the Orion capsule at the launch pad. This includes integration, testing, and validation of the system, along with activities to prepare the crew for the mission, such as training, medical certification, and personalized medicine. Further analysis is needed to determine the level of pre-launch medical system activities. Crew Size & Composition Maximum four prime crewmembers and four backup crewmembers, including one physician astronaut and one assistant medical officer for each crew."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x56",
+"text": "Vehicle Configuration Orion capsule, DSG, DST (for training and integration purposes) 5.2. Launch through Mars Transit Rendezvous The Launch through Mars Transit Rendezvous phase starts when the crew ingresses the Orion capsule on the launch pad. It includes the Orion capsule docking with the DSG and any time the crew spends within the Orion/DSG/DST stack. This phase ends when the crew initiates a TransMars Injection (TMI) burn after ingressing the DST and undocking from the DSG/Orion stack. Communication Delays of 0 (launch) to ~1.3 seconds (NRHO)"
+},
+{
+"id": "ntrs_mars_med_conops_2019:x57",
+"text": "No pre-deployment, resupply, or return of equipment or consumables. Evacuation Access to definitive medical care is possible on the order of minutes (launch pad) to days (NRHO). Crew Size & Composition Maximum four crewmembers, including one physician astronaut and one assistant medical officer. Vehicle Configuration The crew will launch within the Orion capsule, which will dock with the DSG upon reaching NRHO. The Orion capsule will consist of a livable space with stowage of medical equipment and consumables, but without dedicated or reconfigurable volume for medical care delivery."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x58",
+"text": "Table 5-2 Launch Through Mars Transit Rendezvous Phase Assumptions The Mars transit phase starts after the crew initiates a TMI burn. This phase ends when the DST docks with the DSG/Orion stack in NRHO. Duration 6-9-month transit to Mars; 2-17-month orbit; 6-9-month return to DSG Communication ~1.3 seconds (NRHO) to 4-22 minutes (Mars orbit). Communication blackout of ~2 weeks may occur during this phase due to solar conjunction or a lack of relay capability. No pre-deployment, resupply, or return of equipment or consumables. Evacuation No capability for emergency evacuation back to Earth or access to definitive medical care."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x59",
+"text": "Crew Size & Composition Maximum four crewmembers, including one physician astronaut and one assistant medical officer. Vehicle Configuration DST will consist of a livable space with dedicated or reconfigurable volume for medical care execution and stowage of medical equipment and consumables. Table 5-3 Mars Transit, Orbit, & Return Phase Assumptions 5.4. Earth Return Rendezvous through Earth EDL The Return Rendezvous through Earth EDL phase begins when the crew ingresses the DSG after the DST docks with the DSG/Orion stack in NRHO. This phase ends when the Orion capsule touches down on Earth and right before the crew egresses the capsule."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x60",
+"text": "Communication ~1.3 seconds (NRHO) to 0 seconds (landing). Pre-deployment, resupply, or return of equipment or consumables is possible. Evacuation Medical evacuation to Earth is possible. Crew Size & Composition Maximum four crewmembers, including one physician astronaut and one assistant medical officer. Vehicle Configuration DST/DSG/Orion stack will consist of a livable space with dedicated or reconfigurable volume for medical care execution. The Orion capsule will consist of livable space without dedicated or reconfigurable volume for medical care delivery."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x61",
+"text": "Table 5-4 Earth Return Rendezvous Through Earth EDL Phase Assumptions This phase begins when the crew egresses the Orion capsule after return to Earth. The end of this phase is not defined. Evacuation Evacuation to definitive medical care is possible. Crew Size & Composition Maximum four crewmembers, including one physician astronaut and one assistant medical officer. Table 5-5 Immediate Post-Landing Recovery Phase Assumptions Medical care within this concept of operations is defined by four characteristics: activity location; activity scheduling; autonomy mode; and activity type, as defined in Table 5-1. The medical scenarios described in Section 6 are based on various combinations of these characteristics to explore medical system functionality. These characteristics were derived, in part, by reviewing the"
+},
+{
+"id": "ntrs_mars_med_conops_2019:x62",
+"text": "ISS medical activities in the Increment Definition and Requirements Document (IDRD) Annex 4, the Medical Operations Requirements Document (MORD), and the Medical Evaluation Document Vol B: Crew Medical Officer Health Status Evaluations (MED Vol B), to determine logical groupings of planned activities in the context of the role-based approach taken in this document. Conditions of concern for exploration missions were reviewed using the Integrated Medical Model (IMM) Medical Condition List (IMCL) to help determine potential unplanned activities."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x63",
+"text": "Activity Location Extravehicular Activities (EVA) Occurs external to the vehicle or habitat Occurs internal to the vehicle or habitat Activity Scheduling Planned Expected or required to occur Unplanned Not expected nor required to occur but addressed on an as-needed basis Autonomy Mode Autonomous No expectation or no opportunity for ground input Semi-Autonomous Expectation or desire for ground input when available Activity Type Self-Care Self-treatment by the patient Directed Care Medical decision making from a caregiver Emergent Care Immediate intervention initiated by any crewmember"
+},
+{
+"id": "ntrs_mars_med_conops_2019:x64",
+"text": "Preventive or corrective maintenance to medical system software applications or hardware Acquisition and maintenance of medical knowledge and skills. Table 6-1 Medical Care Characteristic Definitions Medical scenarios illustrate example situations when medical care is needed and highlight medical system functionality involved in a particular scenario type. Together, these scenarios represent a broad set of medical system capability to exemplify the vision of the system, but they are not intended to define all system functionality. Highlighted functionality statements are provided with each scenario to illuminate some of the system functionality that are exemplified in that particular scenario."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x65",
+"text": "Each scenario contains an activity flowchart and a narrative. The activity flowcharts are graphical activity representations to provide ease of recognition of system functions and implementers. These implementers or roles, which are defined in Table 6-1, are used throughout the narratives and activity diagrams. The flowcharts are then used by ExMC Systems Engineering as a basis for system interface identification and functional requirement and architecture development. For the purposes of this document, the flowchart activities are presented in a linear manner with the understanding that, when actually implemented, some activities may be performed in parallel."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x66",
+"text": "The narratives are detailed activity representations to provide a vivid picture to the reader through example implementation. These narratives are descriptive stories of medical activities with example implementation of the medical system meant to portray what the system should be able to do and not how it should do it. These narratives demonstrate a diverse range of functionalities; for example, one scenario may involve manual data entry while another scenario incorporates automated data entry. Caregiver (CG) The crewmember(s) providing medical care in each scenario. This includes the physician astronaut, the assistant medical officer, and any crewmember aiding the provision of care during a scenario."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x67",
+"text": "The physician astronaut will serve as director of care during realtime medical events and will be the primary source for in-mission medical decision making. The assistant medical officer will serve as a redundancy to the physician astronaut and will have medical proficiency at a level that has yet to be determined. Patient (PT) The crewmember receiving the medical care. Crewmember (CM) Any crewmember who is not a caregiver. Ground System (GS) Medical and technical personnel and systems on Earth. Groundbased clinicians, specialists, and other allied health professionals will provide medical support during a mission."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x68",
+"text": "Medical System (MS) Any medical hardware, software, and data infrastructure within the vehicle Vehicle System (VS) Any non-medical hardware, software, and data infrastructure that supports vehicle operations Table 7-1 Medical System Role Definitions Any differences in scenarios or scenario-specific assumptions are purposeful and are meant to show different functions that may be required or desired throughout the mission (e.g., manual vs automatic biomonitoring). The following assumptions apply to all scenarios: a) The medical system will complement the caregivers’ skillsets to accommodate the physician, assistant medical officer, and minimally trained crew. b) The medical system has adjustable levels of automated support."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x69",
+"text": "Caregivers can utilize the automated support as much or as little as desired. c) All medical resources (e.g., equipment, medication, software) are integrated with the medical system. d) The vehicle provides an appropriate level of privacy to conduct medical activities. e) The medical system has a direct interface with the vehicle system. f) The medical system interfaces with the vehicle system scheduling platform. g) The medical system uses the vehicle system for communication with the ground. h) The vehicle system will monitor the environment. i) The synchronization of in-mission and ground medical data systems depends on a variety of factors (e.g., telemetry bandwidth, distance from earth, priority of data). j) The communication between crew and ground during transits and Mars orbit is delayed enough to prevent effective real-time communication. k) The term “information” includes data and information. “Information” is used as shorthand. l) The term “record and report” indicates that the medical system stores the information collected and presents that information back to the user."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x70",
+"text": "7.2. Launch through Mars Transit Rendezvous The scenarios for the transit phase were developed to portray the breadth of the system needs for each applicable activity type. The scenarios for this mission phase are represented in Figure 7-1, Mars Transit, Orbit, & Return Phase IVA Scenarios, and were selected as examples of the types of medical encounters a crew may face during mission intravehicular activities. The scenarios were chosen to portray specific activities that would involve each of the different roles and distinct medical system functionalities. Some of the activity types do not have scenarios for all autonomy modes for both the planned and unplanned scheduling types, since the system functionality was already demonstrated in other scenarios and would not have provided additional and distinct medical system needs."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x71",
+"text": "Additional scenarios may be considered in the requirements generation process, if needed, to portray additional functionality. Figure 7-1. Mars Transit, Orbit, & Return Phase IVA Scenarios This scenario was developed in the context of an exercise protocol. This scenario shows that the medical system can: a) Prompt the initiation of an activity per the crewmember's schedule b) Interpret information gathered during an activity c) Provide exercise prescriptions d) Create flags of potential issues using information from sensors This scenario assumes that: a) Exercise equipment is integrated with the medical system"
+},
+{
+"id": "ntrs_mars_med_conops_2019:x72",
+"text": "The following is a graphical representation of the scenario narrative: Figure 7-2. Activity Flowchart: IVA, Planned, Self-Care, Autonomous, Exercise Note: This narrative is a descriptive story meant to provide a vivid picture to the reader. Specific technologies are only representative and are not intended to indicate requirements. The medical system sends an alert to a crewmember’s personal monitor that she has an upcoming scheduled exercise session on the treadmill. She changes into her workout clothes and floats to the treadmill in the exercise module. The crewmember activates the medical system via the treadmill user interface, which uses biometric analysis to identify her and display her personal exercise prescription. After donning her treadmill harness and attaching the loading mechanisms, she notifies the medical system that she is ready to begin her exercise."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x73",
+"text": "After the loading devices reach their set point, the treadmill belt starts moving and she starts running. Sensors embedded into the treadmill and harness measure her physical exertion, including running speed, step force exerted on the treadmill, and her vital signs. Upon completion of her exercise session, the medical system stores this data in her personal health record. She disconnects the loading mechanism and stows the treadmill harness. She then heads back to the hygiene station to get cleaned up and continue with the rest of her workday."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x74",
+"text": "Upon receipt of the crewmember’s exercise-related data, the medical system processes it and generates an interpretation, which is also stored within the crewmember’s health record. The medical system detects a change in the crewmember’s heart rate data but determines that it is within normal limits. No action is required, but a flag is placed in her record for the caregiver to read at his next crew status review. The medical system coordinates with the vehicle’s communication system to downlink the crewmember’s updated health record and synchronize the onboard and ground electronic health systems."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x75",
+"text": "This scenario was developed in the context of a family conference. This scenario shows that the medical system can a) Log medical-related encounters This scenario shows that the vehicle system can a) Support private medical needs via its communication system This scenario assumes that: a) Conferences are conducted and transmitted to ground by the vehicle system b) The medical system keeps a record of conference occurrence; it does not record conference content The following is a graphical representation of the scenario narrative: Figure 7-3. Activity Flowchart: IVA, Planned, Self-Care, Semi-Autonomous, Family Conference"
+},
+{
+"id": "ntrs_mars_med_conops_2019:x76",
+"text": "Note: This narrative is a descriptive story meant to provide a vivid picture to the reader. Specific technologies are only representative and are not intended to indicate requirements. The medical system sends an alert to a crewmember’s personal monitor that he has an upcoming scheduled private family conference. The crewmember initiates the planned family conference using the vehicle’s communication system and selects the intended recipients. He records and saves his message, which is then transmitted to the ground’s communication system. Upon receipt, the recorded message is transmitted to the recipient."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x77",
+"text": "The recipient records a response for the crewmember and transmits it to the ground’s communication system, which then transmits it to the vehicle’s communication system. The vehicle system informs the crewmember that he has a new message and he receives the message from it. The medical system records that this transaction has occurred in the crewmember’s health record and then coordinates with the vehicle’s communication system to downlink the crewmember’s updated health record and synchronize the onboard and ground electronic health systems."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x78",
+"text": "This scenario was developed in the context of a dental exam. This scenario shows that the medical system can: a) Prompt the initiation of an activity per the crewmember's schedule b) Prompt the initiation of an activity based on a protocol c) Retrieve information from the patient d) Guide a crewmember during an activity e) Interpret information gathered during an activity f) Provide varying levels of support to a crewmember This scenario assumes that: a) The caregiver is the physician astronaut b) The physician astronaut is not a dentist"
+},
+{
+"id": "ntrs_mars_med_conops_2019:x79",
+"text": "The following is a graphical representation of the scenario narrative: Figure 7-4. Activity Flowchart - IVA, Planned, Directed Care, Autonomous, Dental Exam Note: This narrative is a descriptive story meant to provide a vivid picture to the reader. Specific technologies are only representative and are not intended to indicate requirements. The medical system sends an alert to the physician astronaut and patient that a scheduled dental exam will start in ten minutes. The patient heads over to the medical bay and picks up a display, which uses biometric analysis to identify him and grants him access to his health record in the medical system."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x80",
+"text": "The medical system starts the appointment by prompting him to review his health record documentation for accuracy and update if needed. Areas of review include: past medical, surgical, and dental treatment history, allergies, current medications, and then a series of questions to complete a review of systems. It then uses biosensors to collect vital signs from the patient, such as blood pressure, heart rate, oxygen saturation, temperature, and respiratory rate. These are all automatically saved to his health record and displayed back to him."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x81",
+"text": "The medical system then notifies the physician astronaut that the patient is ready for the dental exam. She arrives at the Medical Bay and begins by reviewing her patient’s history information from within the medical system. She proceeds with the dental exam of the crewmember, populating the findings in the medical system. As part of the routine dental exam, the medical system prompts the physician astronaut to perform imaging. She receives guidance from it on how to perform the imaging and collects the desired images from the patient, which are immediately stored within his health record. The medical system then analyzes and interprets the collected images and records its findings."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x82",
+"text": "Because the physician astronaut is not a dentist, she prefers that the medical system interprets the images and she reviews its findings. Nothing out of the ordinary is found, and the medical system then prompts the physician astronaut to perform preventive oral care on the patient. It records the preventive care within his health record and then coordinates with the vehicle’s communication system to downlink the updated health record and synchronize the onboard and ground electronic health systems. IVA, Planned, Directed Care, Semi-Autonomous"
+},
+{
+"id": "ntrs_mars_med_conops_2019:x83",
+"text": "This scenario was developed in the context of a psychological conference. This scenario shows that the medical system can: a) Prompt the initiation of an activity per the crewmember's schedule b) Query the crewmember for information c) Receive psychological health plans from the ground system This scenario assumes that: a) No crewmembers are psychologists b) The ground medical support team includes a psychologist The following is a graphical representation of the scenario narrative: Figure 7-5. Activity Flowchart - IVA, Planned, Directed Care, Semi-Autonomous, Psychological"
+},
+{
+"id": "ntrs_mars_med_conops_2019:x84",
+"text": "Note: This narrative is a descriptive story meant to provide a vivid picture to the reader. Specific technologies are only representative and are not intended to indicate requirements. The medical system informs the patient that she has a planned psychological conference due. She directs the medical system to display the psychological conference assessment, in which she enters the appropriate information. The medical system records this information, such as voice stress analysis and crew interaction notes into her health record. The medical system interprets the assessment using predictive analytics tools, develops a forward plan, and updates the patient’s health record. It then coordinates with the vehicle’s communication system to downlink the patient’s updated health record and synchronize the onboard and ground electronic health systems."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x85",
+"text": "The behavioral health team on Earth reviews the completed assessment and the recommend forward plan developed by the MS. The GS modifies this forward plan. The ground communication system coordinates with the vehicle’s communication system to uplink the behavioral health team’s plan and synchronize the onboard and ground electronic health systems. The medical system then updates the patient’s health record and displays the new information to the patient, who reviews the ground’s recommended plan. IVA, Planned, Medical Training and Education, Semi-Autonomous"
+},
+{
+"id": "ntrs_mars_med_conops_2019:x86",
+"text": "This scenario was developed in the context of a continuing medical education need. This scenario shows that the medical system can: a) Receive updated continuing medical education requirements from the ground system b) Retrieve continued medical education material from the ground system This scenario assumes that: a) The caregiver is the physician astronaut b) The physician astronaut holds specialty certification by an accredited medical board that requires completion of continuing medical education. The following is a graphical representation of the scenario narrative:"
+},
+{
+"id": "ntrs_mars_med_conops_2019:x87",
+"text": "Figure 7-6. Activity Flowchart - IVA, Planned, Medical Training and Education, Semi-Autonomous, Note: This narrative is a descriptive story meant to provide a vivid picture to the reader. Specific technologies are only representative and are not intended to indicate requirements. The physician astronaut has an upcoming scheduled continuing medical education (CME) training session. To prepare for this, the ground medical support team updates the physician astronaut’s CME requirements with changes in the medical certification requirements from the accredited medical board. The medical system informs the physician astronaut of the changes."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x88",
+"text": "The message states, “You must fulfill your assigned CME requirements before the deadline in order to maintain your board certification.” It further states that, “You may fulfill your requirements by completing one training module from the approved list.” The physician astronaut scans the “approved list” and finds a module of interest. He directs the medical system to retrieve the module and, at the next available opportunity, it uplinks the module from the ground’s communication system. Once onboard, the module is displayed by the medical system for the physician astronaut, who completes his CME requirements."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x89",
+"text": "The medical system then updates his training record with this information and coordinates with the vehicle’s communication system to downlink his updated health record and synchronize the onboard and ground electronic health systems. This scenario was developed in the context of a headache. This scenario shows that the medical system can: a) Assess resource availability b) Assess resources for personalized medicine c) Dispense resources d) Track resources e) Update patient health record This scenario assumes that a) The “resource” in this scenario is a medication"
+},
+{
+"id": "ntrs_mars_med_conops_2019:x90",
+"text": "The following is a graphical representation of the scenario narrative: Figure 7-7. Activity Flowchart - IVA, Unplanned, Self-Care, Autonomous, Headache Note: This narrative is a descriptive story meant to provide a vivid picture to the reader. Specific technologies are only representative and are not intended to indicate requirements. For the past few hours a crewmember has been experiencing a headache of moderate intensity that he recognizes as typical of those he has had in the past. Given that he has no other symptoms, he decides that there is no need to involve the physician astronaut and will treat it with acetaminophen, as he had for the previous headaches. He accesses the medical system and logs his current problem and his desire for acetaminophen."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x91",
+"text": "The medical system quickly cross-checks the vehicle’s inventory system and determines that the acetaminophen supply is adequate and verifies that it is not contraindicated for this patient. It then dispenses the proper acetaminophen dose to the patient, who picks up the pills and washes them down with some water from a drink bag. The medical system updates the patient’s health record with this new event, logs the medication administered, and updates the vehicle’s inventory tracking system. It also coordinates with the vehicle’s communication system to downlink the patient’s updated health record and synchronize the onboard and ground electronic health systems."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x92",
+"text": "IVA, Unplanned, Directed Care, Autonomous This scenario was developed in the context of a urinary tract infection. This scenario shows that the medical system can: a) Prompt the initiation of an activity based on a protocol b) Guide a crewmember during an activity c) Allow approval of recorded information d) Suggest differential diagnoses e) Provide relevant reference material f) Suggest diagnostic tests g) Interpret information gathered during an activity This scenario assumes that: a) The caregiver is the physician astronaut The following is a graphical representation of the scenario narrative:"
+},
+{
+"id": "ntrs_mars_med_conops_2019:x93",
+"text": "Figure 7-8. Activity Flowchart - IVA, Unplanned, Directed Care, Autonomous, Urinary Tract Infection Note: This narrative is a descriptive story meant to provide a vivid picture to the reader. Specific technologies are only representative and are not intended to indicate requirements. For a few days, a crewmember had been experiencing a headache, burning with urination, fatigue, and an increase in urination frequency. Concerned, he tracks down the physician astronaut, and explains his problems. The physician astronaut picks up a display, which uses biometric analysis to identify him as the caregiver and grants him access to his patient’s health record in the medical system. The patient explains his symptoms in more detail. The physician astronaut decides to perform an exam, so the two head over to the medical bay."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x94",
+"text": "He directs the medical system to initiate a medical encounter, which prompts it to record all medical interaction between the caregiver, patient, and medical system. The physician astronaut begins the exam by gathering the appropriate history from his patient. The medical system prompts, records, reviews, and summarizes the interview in the patient’s medical record for the physician astronaut. Once the physician astronaut is satisfied with the notes, he references the vehicle’s historical environment data and his patient’s health record via the medical system, but finds no correlation with the vehicle environment. The physician astronaut makes a note of this in the patient’s health record."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x95",
+"text": "The medical system then prompts the physician astronaut to collect vital signs from the patient. He gathers the equipment for measuring blood pressure, heart rate, oxygen saturation, temperature, and respiratory rate and places them on his patient. The medical system automatically receives the measurements and saves them to the patient’s health record. The medical system displays the data back to the physician astronaut, who proceeds with the physical exam of the patient, populating his findings in the medical system template. He finds that the patient has a little suprapubic tenderness on his abdominal exam, as well as some mild right sided flank tenderness."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x96",
+"text": "Based on the physical exam findings and vital signs, the medical system produces a differential diagnosis and presents it to the physician astronaut, who focuses on the higher risk conditions first. Each suggested condition contains a link to additional information, such as variation in presentation, diagnostic approach, and treatment modalities, all stored within the medical system and accessible to the physician astronaut if desired. The physician astronaut knows that the most likely diagnosis is that the patient has a urinary tract infection (UTI), but he needs additional data to confirm the diagnosis and to make certain there were no other medical issues, such as a kidney stone."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x97",
+"text": "The physician astronaut activates the ultrasound and deploys the ultrasound probe from its stowage location. He informs the medical system of his intent to take a renal scan and it offers to identify the image and guide him through the process. He applies the probe to the patient’s right flank and his kidney appears on a display. As the physician astronaut proceeds with the scan, the medical system’s image processing algorithms trace out the border of the kidney and calculates the renal parameters. He sees no kidney stones. All images and associated interpretations and calculations are stored to the patient’s health record within the medical system."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x98",
+"text": "To gather more information for his suspected diagnosis of a UTI, he then hands a urine sample bag to the patient and directs him to provide a sample. While the patient is in the lavatory, the physician astronaut unstows and activates the medical system laboratory analysis hardware. When the patient returns with his urine sample, the physician astronaut interfaces the bag with the lab analysis hardware and starts a urinalysis run. He also wants to perform a blood analysis, so he unstows the blood sampling hardware and collects a sample from his patient. When the lab analysis hardware completes the urinalysis run, the physician astronaut interfaces the blood sample with the hardware and begins a blood analysis."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x99",
+"text": "With this new data, the medical system provides an updated differential diagnosis, which confirms the physician astronaut’s diagnosis. The physician astronaut updates the medical system to indicate that a urinary tract infection is the most likely condition and informs his patient. He then develops a treatment plan that includes antibiotics. The medical system cross-checks the antibiotic prescription with the patient’s health record to verify that there are no contra-indications for that particular medication. The treatment plan is logged into the medical system, which displays the entered information for review."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x100",
+"text": "The medical system then coordinates with the vehicle’s communication system to downlink the patient’s updated health record and synchronize the onboard and ground electronic health systems. IVA, Unplanned, Directed Care, Semi-Autonomous This scenario was developed in the context of a dental abscess. This scenario shows that the medical system can: a) Do most things specified from the Unplanned, Directed, Autonomous scenario b) Allow edits to recorded information c) Notify the ground system that a consult is needed d) Receive consult information from the ground system e) Access vehicle sensor information"
+},
+{
+"id": "ntrs_mars_med_conops_2019:x101",
+"text": "This scenario assumes that: a) The caregiver is the physician astronaut b) The physician astronaut is not a dentist The following is a graphical representation of the scenario narrative: Figure 7-9. Activity Flowchart - IVA, Unplanned, Directed Care, Semi-Autonomous, Dental Abscess Note: This narrative is a descriptive story meant to provide a vivid picture to the reader. Specific technologies are only representative and are not intended to indicate requirements. For a few days, a crewmember has been experiencing a toothache on the left side. Concerned, she tracks down the physician astronaut to explain her problems. The two head over to the medical bay and the physician astronaut picks up her display, which uses biometric analysis to identify her as the caregiver and grants her access to her patient’s health record in the medical system."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x102",
+"text": "The patient explains her symptoms in more detail. The physician astronaut decides to perform an exam and directs the medical system to initiate a medical encounter, which prompts it to record all medical interaction between the caregiver, patient, and the medical system. The physician astronaut starts the exam off by gathering the appropriate history from the patient. The medical system prompts, records, reviews and summarizes the interview in the medical record for the physician astronaut. As the physician astronaut scans the automated entry, she sees something that should be updated and edits the note. The medical system then prompts the physician astronaut to review the vehicle’s historical environment information and the patient’s health records. The medical system records and reports these actions taken by the physician astronaut."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x103",
+"text": "The medical system prompts the physician astronaut to collect vital signs from the patient. She gathers the required equipment and places them on the patient. These devices are used to measure blood pressure, heart rate, oxygen saturation, temperature, and respiratory rate. The physician astronaut calls out the results as they are gathered and the medical system automatically saves them to the patient’s health record using voice recognition technology. The medical system displays information back to the physician astronaut, who proceeds with the physical exam of the patient, populating her findings in the medical system template. She finds that the patient has red, swollen gingival tissue near the left lower third molar and swelling on the left side of her face. At this point the physician astronaut opts to take a picture of the affected area."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x104",
+"text": "That picture is automatically downloaded into the physical exam portion of the encounter once the physician astronaut reviews and approves it. Based on the physical exam findings and vital signs, the medical system produces a differential diagnosis and presents it to the physician astronaut. Each suggested condition contains a link to additional information, such as variation in presentation, diagnostic approach, and treatment modalities, all stored within the medical system and accessible to the physician astronaut if desired. The physician astronaut suspects that her patient has a dental abscess and she wants additional information to gain more confidence in the diagnosis. She reviews the additional diagnostic tests suggested by the medical system."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x105",
+"text": "She decides to activate the ultrasound within the medical system and deploys the broad band linear ultrasound probe from its stowage location. She informs the medical system of her intent to perform a soft tissue ultrasound scan of the neck and face. The medical system guides her to pick the appropriate preset, apply gel, and place the probe on the patients face on the unaffected side first. During scanning, it offers to guide her through the scanning process while identifying and measuring dark anechoic areas that may represent an abscess. Upon completing the ultrasound scan, all images and associated interpretations and calculations are stored to the patient’s health record. The physician astronaut reviews the ultrasound information and disagrees with the medical system’s interpretation."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x106",
+"text": "She provides an updated interpretation and informs the patient that there is likely an infection in her tooth and gum tissue. The medical system updates its differential diagnosis. The physician astronaut also wants to perform a blood analysis to check for signs of systemic infection, so she unstows the blood sampling hardware and collects a sample from her patient. She interfaces the blood sample with the laboratory analysis hardware, which is integrated with the medical system, and begins a blood analysis. Upon completion of the blood test, the lab analysis hardware transmits the results to the medical system, which then provides an interpretation of the data to the physician astronaut."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x107",
+"text": "After reviewing the laboratory information, she confirms the medical system’s interpretation and informs the patient that the lab results are normal, indicating that there are no signs of systemic infection. With this new information, the initial list of differential diagnoses provided by the medical system is reduced. The physician astronaut updates the medical system to indicate that a dental abscess is the most likely condition. She prescribes a course of oral antibiotics and pain medication as the initial treatment. She also elects to seek specialty consult with a ground dentist and oral surgeon."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x108",
+"text": "Her request for a consultation is recorded in the medical system and then synchronized with the vehicle’s communication system for transmittal to the ground. The patient’s health record is downlinked along with the request. Upon review of the downlinked patient health record, the ground medical support team concurs with the dental abscess diagnosis and modifies the treatment plan to include drainage. The ground uplinks the treatment plan to the medical system. The physician astronaut reviews the plan and cross-checks her antibiotic prescription with the patient’s health record to verify that there are no contraindications for that particular medication. She then logs the treatment plan into the medical system."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x109",
+"text": "The medical system again coordinates with the vehicle’s communication system to downlink the patient’s updated health record and synchronize the onboard and ground electronic health systems. IVA, Unplanned, Directed Care, Semi-Autonomous This scenario was developed in the context of acute radiation sickness. This scenario shows that the medical system can: a) Query the vehicle system for data b) Model crew radiation exposure c) Recommend the need for a clinical assessment d) Collect vitals data in a way that does not require caregiver action e) Analyze lab data f) Provide a differential diagnosis g) Recommend a treatment plan h) Review patient information to determine contra-indications i) Notify ground support of the need for a consult"
+},
+{
+"id": "ntrs_mars_med_conops_2019:x110",
+"text": "This scenario assumes that: a) The caregiver is the physician astronaut b) Radiation environment detectors are embedded into the vehicle system c) The vehicle has a radiation shelter available to the crew d) The caregiver does not need assistance in conducting exams e) The vehicle system and medical system are not affected by the radiation event The following is a graphical representation of the scenario narrative: Figure 7-10 Activity Flowchart - IVA, Unplanned, Directed Care, Semi-Autonomous, Acute Radiation Note: This narrative is a descriptive story meant to provide a vivid picture to the reader. Specific technologies are only representative and are not intended to indicate requirements."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x111",
+"text": "Radiation environment sensors embedded within the vehicle system detect a solar particle event and annunciates alarms to warn the crew and the medical system. The crew relocates to the vehicle’s radiation shelter and waits out the radiation event. About 14 hours later, a contingency alarm goes off. The decision is quickly make for two crewmembers to leave the shelter to address the issue and then return. The medical system queries the vehicle system for crew radiation exposure data and uses a model to provide the physician astronaut with an estimate of crew radiation exposure and, based on this estimate, a recommendation for a radiation clinical assessment. The medical system presents their radiation level of about 2.2 Gray average absorbed dose."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x112",
+"text": "The physician astronaut then expresses the imminence of nausea, vomiting, dehydration, extreme fatigue, and possibly some diarrhea that the two crewmembers will face in the near future. After two days of living in the radiation shelter, the vehicle system informs the crew that radiation levels were back to normal and the crew is able to leave the shelter. The crew relocates to the vehicle’s medical bay and the physician astronaut prompts the medical system to collect vitals data from all the crew, which it does by activating the patients’ biosensor and transmitting the data to their respective health records. The medical system displays the data for review by the physician astronaut, who follows this up with a thorough physical exam of all crewmembers."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x113",
+"text": "It is clear to the physician astronaut that the two crewmembers who left the shelter need additional testing in order to make a proper diagnosis and appropriate treatment plan. The physician astronaut orders diagnostic labs for the exposed crewmembers and delivers the collected blood samples to the medical system for analysis and interpretation. The physical astronaut reviews and concurs with the medical system’s results and associated differential diagnosis of the crewmembers’ condition. The medical system proposes an initial treatment plan, based upon the crewmembers’ medical history, the calculated radiation exposure, and results of their physical exams. The physician astronaut takes this proposal into account as he prescribes a treatment plan and enters it into the medical system, which confirms no contra-indications for any of the crewmembers."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x114",
+"text": "Over the next couple of days, the physician astronaut executes the treatment for the two crewmembers, which includes plenty of IV fluids, antiemetics, antidiarrheals, and granulocyte-colony stimulating factor (GCSF). Given the seriousness of radiation exposure, the physician astronaut requests a ground consult with specialists to review the patient data and provide a long-term treatment plan. This request, along with the up-to-date crew medical records, are transmitted to the ground medical support personnel. The best clinical radiation experts on Earth were brought in to consult and provide a more refined diagnosis and long-term treatment plan. This new data is transmitted back to the vehicle for review by the physician astronaut."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x115",
+"text": "Over the next few weeks, the two affected crewmembers became very sick and were incapacitated with persistent vomiting and diarrhea, as their nervous system and gut were affected by the massive radiation dose they had received. Their blood counts showed steadily dropping numbers of infection fighting white cells. They were treated with a steady stream of IV and oral fluids, antiemetics, and antidiarrheals. They were also given prophylactic antibiotics to prevent infection and GCSF to speed the recovery of their infection fighting white cells. The crewmembers’ course to recovery was carefully documented within the medical system and transmitted to the ground specialist for close tracking. Gradually, the crewmembers became better."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x116",
+"text": "IVA, Unplanned, Emergent Care, Autonomous This scenario was developed in the context of an arm injury. This scenario shows that the medical system can: a) Prompt the initiation of an activity based on a protocol b) Execute an emergent medical event initiation sequence c) Notify the caregiver of an emergent medical event d) Retrieve information from the patient e) Report the location of medical supply in the vehicle f) Conduct and report real-time analyzes of vital collection information g) Provide relevant reference material h) Suggest a rehabilitation plan i) Provide mission impact statements"
+},
+{
+"id": "ntrs_mars_med_conops_2019:x117",
+"text": "This scenario also shows that multiple crewmembers can be involved during an emergent medical event. This scenario assumes that: a) Caregiver 1 (CG1) is the assistant medical officer b) The assistant medical officer has paramedic-level training c) Caregiver 2 (CG2) is the physician astronaut d) All crewmembers are wearing biosensors The following is a graphical representation of the scenario narrative: Figure 7-11. Activity Flowchart - IVA, Unplanned, Emergent Care, Autonomous, Arm Injury Note: This narrative is a descriptive story meant to provide a vivid picture to the reader. Specific technologies are only representative and are not intended to indicate requirements."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x118",
+"text": "Due to a malfunctioning hatch, a crewmember’s arm is pinned by the door just above the wrist. The assistant medical officer, who was nearby, acts quickly to re-open the hatch door and, seeing the dome of blood expanding from her forearm, realizes that emergent medical care is required. It appears to him that his crewmate has a 3-4-inch-deep skin laceration. He applies pressure to the wound to slow down the bleeding and then initiates the medical system emergency sequence. Through the use of various sensors throughout the vehicle, the medical system detects or infers the cause, nature, and severity of the injury. It immediately notifies the physician astronaut who, having not been present during the incident, immediately rushes to the injured patient."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x119",
+"text": "Concurrently, the medical system sends a notification to the ground medical support team to inform them of the current emergent situation and to prepare them to provide assistance if needed. Per the emergency protocol, the medical system activates the patient’s biosensor and collects vital signs, which are transmitted to her health record and also displayed for review by the physician astronaut. The physician astronaut assesses the wound and determines that the wound is still bleeding and the pulsating nature of the flow indicates a possible arterial injury. He directs the medical system to locate a tourniquet, and it responds with the proper information. As the assistant medical officer assists in retrieving the equipment, the physician astronaut dons personal protection equipment, restrains his patient to facilitate treatment, and then quickly applies the tourniquet above the injury."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x120",
+"text": "He decides that more information and better examination is required to make an accurate diagnosis and create a treatment plan. As they perform initial treatment, the medical system continuously collects vital signs from the patient and displays the data for the physician astronaut. The medical system highlights the fact that the patient’s blood pressure had dropped slightly and her heart rate has increased. The physician astronaut quickly directs the assistant medical officer to start an intravenous (IV) catheter in the patient’s unaffected arm to administer fluids to support the patient’s blood pressure. The assistant medical officer uses the medical system to provide instructions on IV insertion and he successfully completes the task."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x121",
+"text": "The physician astronaut inspects his patient’s hand and quickly walks through the sensory and motor portions of the physical examination. He completes the exam, informing the medical system of his findings for the need to perform an artery ligation. The medical system records all information to the patient’s health record and displays it back to the physician for verification. The patient informs the physician astronaut of the pain she is experiencing and he decides to address. He determines that the best course of action is to perform an axillary nerve block to control the pain and allow exploration and management of the injury. He prefers to use an ultrasound to help locate the nerve. He activates the medical system imaging support function and then uses the medical system to locate the equipment required to perform the imaging and the nerve block."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x122",
+"text": "With the help of the assistant medical officer, the physician astronaut sets up the imaging equipment and the medical system begins with a step-by-step prompting through the imaging protocol. As the physician astronaut uses the imaging probe to identify the desired nerve for the nerve block procedure, the medical system provides additional instructions and visual feedback to help him find his target. It interprets the data collected by the probe and informs him when he has found the nerve. The medical system saves all imaging data to the patient’s health record as it is collected. The physician astronaut proceeds to clean the affected area and then uses the ultrasound to guide the placement of the needle to administer the nerve block. He injects the medication and informs the patient of the imminent pain relief she should be experiencing."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x123",
+"text": "Now that the patient is more comfortable, the physician astronaut informs his crewmates of his plans to perform an invasive stabilization treatment, a ligation of the ulnar artery. He directs the medical system to locate the equipment necessary to perform the procedure. As the assistant medical officer retrieves the equipment and stands by with the medical suction device ready to collect any stray blood, the physician astronaut performs the ligation and finishes the procedure by cleaning, sterilizing, and closing the wound. He dictates all pertinent information to the medical system, which then updates the patient’s health record."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x124",
+"text": "He then requests that the medical system suggest a rehabilitation plan and calculate the projected disability of the injured crewmember. He also requests a mission impact statement, taking into account the crew’s health and the unexpected use of consumables. The physician astronaut then recommends a long-term treatment plan for the patient, which includes a vascular consult, a follow-up, and repeat imaging. The medical system records and updates the patient’s health record, displays the information for the physician astronaut, and sends it to the ground for consult at the next available opportunity. The medical system then coordinates with the vehicle’s communication system to downlink the patient’s updated health record and synchronize the onboard and ground electronic health systems."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x125",
+"text": "IVA, Unplanned, Emergent Care, Autonomous (physician astronaut as patient) This scenario was developed in the context of a decompression sickness case. This scenario shows that the medical system can: a) Know when the patient is the physician astronaut This scenario assumes that: a) The patient is the physician astronaut b) The caregiver is the assistant medical officer c) The assistant medical officer has paramedic-level training d) A portion of the vehicle can be sealed-off and re-pressurized to support medical actions The following is a graphical representation of the scenario narrative:"
+},
+{
+"id": "ntrs_mars_med_conops_2019:x126",
+"text": "Figure 7-12. Activity Flowchart - IVA, Unplanned, Emergent Care, Autonomous, Decompression Note: This narrative is a descriptive story meant to provide a vivid picture to the reader. Specific technologies are only representative and are not intended to indicate requirements. Due to a micrometeoroid impact to the vehicle that caused a breach in the hull, the internal vehicle pressure drops to a level where the crew is required to don pressure suits. The physician astronaut does not don his suit in time and passes out from the low cabin oxygen levels and lack of atmospheric pressure. The other crewmembers notice and quickly move towards him."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x127",
+"text": "The commander of the mission calls out for help to get the physician astronaut into a suit. The crew works together to quickly get him into his suit, close the visor, and power-up the suit to provide normal levels of pressure and oxygen. The designated assistant medical officer for the mission then activates the medical system’s emergency sequence and the medical system notifies the ground medical support team at the next available opportunity about the emergent situation. Because the medical system recognizes the assistant medical officer and knows her level of training, it allows her to access the physician astronaut’s health record and provides an enhanced level of medical support."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x128",
+"text": "As part of the emergency protocol, the medical system then activates the patient’s biosensor and starts to collect vital signs, which are recorded to the patient’s record and displayed for review. The medical system assesses the collected vital signs and other environmental and system parameters collected by vehicle sensors triggered by the emergency situation and makes a suggested diagnosis of hypoxic-hypoxia with probable decompression sickness (DCS) and provides relevant reference information to the assistant medical officer. It then recommends a treatment plan of recompression therapy and suggests performing a myringotomy first to prevent uncontrolled tympanic membrane rupture because the suit will be pressurized to 60ft of sea water. The assistant medical officer agrees and uses the medical system to locate the appropriate medical supplies."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x129",
+"text": "The crew relocates to a pressure-stable and isolated vehicle module so that the helmet of the patient can be removed to perform the procedure. The assistant medical officer removes her helmet and gloves and restrains the patient to facilitate treatment. The medical system guides the assistant medical officer through the myringotomy protocol and, when complete, she applies the recompression device. The medical system guides her through the processes of increasing and decreasing the pressure of the recompression device to treat the DCS and providing oxygen to treat the hypoxia."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x130",
+"text": "Meanwhile, the medical system records the procedures being performed and continuously collects and displays the patient’s vital signs. As the stabilization treatment comes to a completion, the patient regains consciousness and the medical system prompts a physical exam to be logged. It guides the assistant medical officer through the physical exam, during which the patient conveys that he is having difficulty hearing. The assistant medical officer performs a hearing test to assess the degree of hearing loss. She then requests that the medical system calculate the projected disability of the patient and provide a recommended rehabilitation plan for his compromised hearing, which was affected due to the myringotomy. She also requests a mission impact statement, taking into account the crew’s health, the unexpected use of resources, and the state of the vehicle."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x131",
+"text": "With this information, the medical system recommends a long-term treatment plan for the patient, records and updates the patient’s health record, and displays the information for the assistant medical officer. The medical system then coordinates with the vehicle’s communication system to downlink the patient’s updated health record and synchronize the onboard and ground electronic health systems. IVA, Unplanned, Medical System Maintenance, Semi-Autonomous This scenario was developed in the context of an exercise hardware malfunction requiring ground intervention."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x132",
+"text": "This scenario shows that the medical system can: a) Identify need for maintenance b) Report maintenance need to the crewmembers and the ground system c) Confirm repairs This scenario assumes that: a) Exercise equipment is integrated with the medical system b) while an aspect of the medical system requires maintenance, the rest of the system is fully functional c) The crewmember cannot diagnose the issue The following is a graphical representation of the scenario narrative: Figure 7-13. Activity Flowchart - Transit, IVA, Unplanned, Medical System Maintenance, SemiAutonomous, Exercise Hardware Malfunction"
+},
+{
+"id": "ntrs_mars_med_conops_2019:x133",
+"text": "Note: This narrative is a descriptive story meant to provide a vivid picture to the reader. Specific technologies are only representative and are not intended to indicate requirements. A crewmember completes her treadmill run for the afternoon and is just about to log out of the treadmill system when she sees that the system is displaying a maintenance flag. She directs the medical system to provide more information, and she is told that the treadmill axle bearings have prematurely failed and a replacement activity is required. The medical system also informs her that a message has been sent to the ground medical support and relevant engineering teams with the same information."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x134",
+"text": "Despite the flag, the ground team wants to collect additional data to confirm that the message is not erroneous or that it is not an artifact of another issue. Fortunately, the medical system has additional diagnostic algorithms that could be run by the crew to provide additional data. The ground sends a message to the crewmember with instructions to perform the diagnostic procedure. Upon receiving the message, the crewmember performs the diagnostic steps. When the diagnostic test is complete, the medical system records the results, displays them to the crewmember, and transmits them to the ground for analysis. The ground team reviews the diagnostic data after it is downlinked and confirms the recommendation to change out the treadmill axle bearings. They send a message to the crewmember directing her to perform this maintenance activity at the next available opportunity."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x135",
+"text": "The medical system presents her with the procedure and uses the vehicle’s inventory system to locate all necessary parts and tools. She unstows and pre-positions everything near the treadmill and gets to work. After completing the maintenance procedure, the crewmember performs a successful activation and checkout and informs her crewmates that the treadmill is back up and running. She restows the tools she had used and disposes of the old bearings. The medical system then sends a message to the ground medical support and engineering teams notifying them of her success and the resumption of treadmill exercise."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x136",
+"text": "IVA, Unplanned, Medical Training and Education, Autonomous This scenario was developed in the context of a just-in-time training need. This scenario shows that the medical system can: a) Provide training material b) Accommodate crew training as needed This scenario assumes that: a) The caregiver is the physician astronaut The following is a graphical representation of the scenario narrative: Figure 7-14. Activity Flowchart - IVA, Unplanned, Medical Training and Education, Autonomous, Note: This narrative is a descriptive story meant to provide a vivid picture to the reader. Specific technologies are only representative and are not intended to indicate requirements."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x137",
+"text": "Before performing a complex eye-exam using the slit-lamp, the physician astronaut decides that he would like additional training to refresh his memory. He activates the medical system to access the training system and then requests the desired training material. It provides him with the training material requested. He completes the training and it is documented in his record by the medical system. The medical system coordinates with the vehicle’s communication system to downlink the physician astronaut’s updated training record and synchronize the onboard and ground electronic health systems."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x138",
+"text": "7.4. Earth Return Rendezvous through Earth EDL 8. APPENDIX A: ACRONYMS AND ABBREVIATIONS GCSF Granulocyte-Colony Stimulating Factor IDRD Increment Definition and Requirements Document MORD Medical Operations Requirements Document NASA National Aeronautics and Space Administration [1] W. Gerstenmaier, Progress in Defining the Deep Space Gateway and Transport Plan, Presentation to the NASA Advisory Council, 2017. [2] Committee on Creating a Vision for Space Medicine During Travel Beyond Earth Orbit, \"Safe Passage: Astronaut Care for Exploration Missions,\" in Institute of Medicine of the"
+},
+{
+"id": "ntrs_mars_med_conops_2019:x139",
+"text": "[3] NASA Human Research Program, \"Human Research Roadmap, Risk of Adverse Health Outcomes & Decrements in Performance due to Inflight Medical Conditions,\" [Online]. Available: https://humanresearchroadmap.nasa.gov/Risks/risk.aspx?i=95. [4] ExMC Systems Engineering and Concept of Operations teams, \"Exploration Mission [5] \"NASA/TP-2014-217392 Telemedicine Operational Concepts for Human Exploration [6] \"MediLexicon,\" [Online]. Available: www.medilexicon.com. TBD-12. This section is for representative medical activities and their frequencies of occurrence."
+},
+{
+"id": "ntrs_mars_med_conops_2019:x140",
+"text": "TBD-1 ExMC Element Management Plan document # TBD-2 ExMC Systems Engineering Management Plan document # TBD-4 Launch Through Mars Transit Rendezvous phase level of care TBD-5 Earth Return Rendezvous Through Earth EDL phase level of care TBD-6 Immediate Post-Landing Recovery phase level of care TBD-8 Launch through Mars Transit Rendezvous phase scenarios TBD-9 Mars Transit, Orbit, & Return phase extravehicular activity scenarios TBD-10 Earth Return Rendezvous through Earth EDL scenarios TBD-11 Immediate Post-Landing Recovery scenarios"
+}
+]
+}

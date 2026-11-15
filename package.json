@@ -19,7 +19,8 @@
     "format:check": "prettier --check backend/node backend/tests backend/*.ts src/engine/assessment.ts src/shared",
     "check:bodymap": "tsx scripts/check_bodymap.ts",
     "check:sim": "tsx scripts/check_sim.ts",
-    "check:ai": "node --env-file-if-exists=.env --import=tsx backend/check-ai.ts"
+    "check:ai": "node --env-file-if-exists=.env --import=tsx backend/check-ai.ts",
+    "eval:safety": "node --env-file-if-exists=.env --import=tsx scripts/safety_eval_live.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.8.0",

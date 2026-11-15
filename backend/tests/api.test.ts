@@ -21,7 +21,7 @@ test("health, JSON contracts, evidence and exact real source values", async () =
     assert.equal(s.assessment.priority.level, "Act");
     assert.equal(
       (await a.inject("/api/offline-bundle")).json().manifest.records.length,
-      7,
+      46,
     );
   } finally {
     await a.close();
@@ -524,7 +524,7 @@ test("assistant capability status and missing-model response are explicit", asyn
     const status = await a.inject("/api/assistant/status");
     assert.equal(status.statusCode, 200);
     assert.equal(status.json().configured, false);
-    assert.equal(status.json().evidenceSources, 7);
+    assert.equal(status.json().evidenceSources, 46);
     assert.equal(status.json().providerVerified, false);
     const r = await a.inject({
       method: "POST",

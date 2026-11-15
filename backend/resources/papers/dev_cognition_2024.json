@@ -1,0 +1,215 @@
+{
+"id": "dev_cognition_2024",
+"title": "Cognitive performance in ISS astronauts on 6-month low earth orbit missions",
+"authors": "Dev SI, Khader AM, Begerowski SR, Anderson SR, Clement G, Bell SL",
+"year": 2024,
+"licence": "CC BY 4.0",
+"source_url": "https://doi.org/10.3389/fphys.2024.1451269",
+"topics": [
+"cognition"
+],
+"kind": "full_text_excerpts",
+"note": "Verbatim text extracted from the source for retrieval; page furniture and the reference list removed. Not reviewed by HALO.",
+"chunks": [
+{
+"id": "dev_cognition_2024:x1",
+"text": "Current and future astronauts will endure prolonged exposure to spaceflight hazards and environmental stressors that could compromise cognitive functioning, yet cognitive performance in current missions to the International Space Station remains critically under-characterized. We systematically assessed cognitive performance across 10 cognitive domains in astronauts on 6-month missions to the ISS. Twenty-five professional astronauts were administered the Cognition Battery as part of National Aeronautics and Space Administration (NASA) Human Research Program Standard Measures Cross-Cutting Project. Cognitive performance data were collected at five mission phases: pre-flight, early flight, late flight, early post-flight, and late post-flight."
+},
+{
+"id": "dev_cognition_2024:x2",
+"text": "We calculated speed and accuracy scores, corrected for practice effects, and derived z-scores to represent deviations in cognitive performance across mission phases from the sample’s mean baseline (i.e., pre-flight) performance. Linear mixed models with random subject intercepts and pairwise comparisons examined the relationships between mission phase and cognitive performance. Cognitive performance was generally stable over time with some differences observed across mission phases for specific subtests. There was slowed performance observed in early flight on tasks of processing speed, visual working memory, and sustained attention. We observed a decrease in risk-taking propensity during late flight and post-flight mission phases."
+},
+{
+"id": "dev_cognition_2024:x3",
+"text": "Beyond examining group differences, we inspected scores that represented a significant shift from the sample’s mean baseline score, revealing that 11.8% of all flight and post-flight scores were at or below 1.5 standard deviations below the sample’s baseline mean. Finally, exploratory analyses yielded no clear pattern of associations between cognitive performance and either sleep or ratings of alertness. There was no evidence for a systematic decline in cognitive performance for astronauts on a 6-month missions to the ISS. Some differences were observed for specific subtests at specific mission phases, suggesting that processing speed, visual working memory, sustained attention, and risk-taking propensity may be the cognitive domains most susceptible to change in Low Earth Orbit for high performing, professional astronauts."
+},
+{
+"id": "dev_cognition_2024:x4",
+"text": "We provide descriptive statistics of pre-flight cognitive performance from 25 astronauts, the largest published preliminary normative database of its kind to date, to help identify significant performance decrements in future samples. Astronauts on current and future spaceflight missions are required to execute complex tasks in which even minor errors could have devastating consequences. Intact cognitive functioning is critical to maintain exceptional performance standards during long duration spaceflight missions."
+},
+{
+"id": "dev_cognition_2024:x5",
+"text": "However, astronauts are exposed to spaceflight environmental stressors that include spaceflight hazards (i.e., radiation, altered gravity, isolation and confinement, hostile/closed environment, and distance from Earth) as well as operational challenges (e.g., work overload, circadian shifts, communication delays) that could compromise cognitive functioning (Slack et al., 2016). Some of these challenges are experienced by astronauts living and working on the International Space Station (ISS), yet the extent to which cognitive performance decrements are observed on ISS missions remains critically under-characterized."
+},
+{
+"id": "dev_cognition_2024:x6",
+"text": "This body of literature is limited by small samples, lack of measurement standardization across studies, limited sensitivity of measures to detect change in high performing populations, and inconsistent timepoints within mission (Strangman et al., 2014). Further, the scope of cognitive domains assessed is restricted and there is an overall paucity of data documenting other cognitive functions that may impact mission relevant tasks, such as memory, executive functions, and emotional processing. Nevertheless, current evidence suggests at most mild and reversible decrements in aspects of cognition among astronaut crew on ISS missions of 6-month duration or shorter."
+},
+{
+"id": "dev_cognition_2024:x7",
+"text": "Only one published study to date has comprehensively assessed a wide range of cognitive domains across multiple mission phases in spaceflight. The well-known NASA Twin study (Garrett-Bakelman et al., 2019) conducted cognitive testing using the Cognition Battery (Basner et al., 2015) in a pair of monozygotic twins, one of which spent approximately 1 year (340 days) on the ISS while the other remained on Earth. Early inflight improvements were documented in speed and accuracy, with the exception of accuracy decrements in specific domains of visual memory and abstract reasoning (>1 standard deviation [SD] decline). Relative to early flight, late flight performance was slower in emotion recognition (>1SD) and less accurate in abstract reasoning (>2 SD)."
+},
+{
+"id": "dev_cognition_2024:x8",
+"text": "However, the most notable decrements were observed in the post-flight mission phase across most cognitive domains that persisted up to 6 months. Though a single case study, findings underscore the relevance of assessing a breadth of cognitive domains in spaceflight, support previous studies indicating that cognitive performance may be differentially impacted at different mission phases, and suggest that longer duration missions may induce more persistent decrements. Terrestrial analogs that simulate spaceflight conditions offer a unique opportunity to study singular or combined spaceflight hazards and stressors on relevant behavioral health and performance outcomes."
+},
+{
+"id": "dev_cognition_2024:x9",
+"text": "Decrements resolve soon after returning to normal daily activities and were only exacerbated by a combined HDBR and CO2 protocol in isolated tasks of executive function and sustained attention (Basner et al., 2021b; Lee et al., 2019; Mahadevan et al., 2021). Thus, analog studies have identified mild, possibly reversible, decrements in cognitive performance across several domains in the context of spaceflight stressors. Even among those that did not report significant group level differences, observed individual variability in performance suggests that some individuals are more at risk for cognitive decrements than others."
+},
+{
+"id": "dev_cognition_2024:x10",
+"text": "Taken together, the extant literature documenting cognitive performance in spaceflight or spaceflight analogs suggests possible mild decrements in some, but not necessarily all, cognitive domains and that these decrements may be singularly or synergistically influenced by multiple spaceflight hazards (e.g., altered gravity) and stressors (e.g., sleep restriction). Given the dynamic nature of spaceflight missions and thus the potential for hazards and stressors to interact in varying degrees within a mission, it is also possible that there are specific mission phases in which performance is more vulnerable to decrements."
+},
+{
+"id": "dev_cognition_2024:x11",
+"text": "However, we were unable to locate a published study that has described the neuropsychological profile expected in low earth orbit spaceflight by systematically assessing cognitive performance across a wide range of cognitive domains in a cohort of astronauts aboard the ISS for 6-month missions. The primary aims of the current study were to 1) provide a descriptive summary of performance across several cognitive domains in a sample of professional astronauts on 6-month ISS missions, 2) characterize cognitive performance over time and between distinct mission phases of a 6-month ISS mission, and 3) examine the prevalence of low scores across subtests. While we generally expected stable cognitive performance across time, we predicted that performance would be most vulnerable during mission phases that require greater adaptation to and from spaceflight conditions."
+},
+{
+"id": "dev_cognition_2024:x12",
+"text": "Further, processing speed, attention, and working memory are cognitive domains which are more susceptible to state-like alterations due to internal or external distractions (Eysenck and Calvo, 1992; Robert and Hockey, 1997). Thus, we hypothesized that 1) there would be mild decrements in early flight and early post-flight mission phases relative to pre-flight; and 2) the subtests with the greatest frequency of low scores would be those assessing processing speed, attention, and working memory. Finally, given previous studies identifying individual differences predicting variability in cognitive performance, we also explored the relationship between self-reported sleep and ratings of alertness."
+},
+{
+"id": "dev_cognition_2024:x13",
+"text": "A total of 25 professional astronauts aged 33 to 61 (mean (SD) = 45.12 (7.25); 32% Female) participated in the NASA Spaceflight Standard Measures study. All US orbital segment astronauts assigned to a mission to the ISS were eligible to participate in the study; no additional exclusion or inclusion criteria were applied. Ten crew members had previous flight experience that ranged from 12 to 199 days inflight (mean (SD) = 129.9 (85.6)) prior to the current mission. Cognitive performance was assessed once pre-mission, twice in-mission (within 30 days of launch and return, respectively), and twice post-mission (within 10 and 30 days of landing, respectively). All crew members completed an approximately 6-month ISS mission. See Figure 1 for data collection timeline."
+},
+{
+"id": "dev_cognition_2024:x14",
+"text": "The Cognition Battery is a computerized test that was developed to assess a range of cognitive domains in high performing individuals over successive administrations (Basner et al., 2015; Lee et al., 2020). There are 10 subtests that are modeled after well-known neuropsychological tests. The battery has 15 alternate versions and published corrections to minimize practice effects with successive administrations (Basner et al., 2020a). The Cognition Battery was installed and administered to crew on Hewlett Packard Z-Book 15 G2 laptops for all sessions. The average to complete a full session was 37.10 min (SD = 25.16). Performance metrics were calculated consistent with previous studies using the Cognition Battery in spaceflight or spaceflight analogs to facilitate comparison across studies."
+},
+{
+"id": "dev_cognition_2024:x15",
+"text": "Metrics across most subtests are broadly characterized with speed (i.e., reaction time recorded to nearest millisecond) and accuracy scores. A familiarization and practice session preceded all pre-flight data collection session to introduce participants to the battery. The Visual Object Learning Task (VOLT) is a task of visual learning and memory. Participants are directed to memorize three-dimensional figures and are later instructed to select those targets from a set that includes both old and new figures. The Fractal 2-Back (F2B) is a task of nonverbal working memory. The task presents sequential figures that have the potential to repeat multiple times. Participants must respond when the current stimulus matches the one displayed two figures prior."
+},
+{
+"id": "dev_cognition_2024:x16",
+"text": "Abstract Matching (AM) is a difficult executive functioning task that assesses abstraction, problem-solving, and concept formation. Participants are presented with object pairs and are required to match target items to one of the two pairs based on abstract rules not explicitly provided to them. The Line Orientation Task (LOT) is a measure of visuospatial orientation. Participants are presented with two lines and are required to rotate one until it is parallel to its counterpart. The presented lines vary in length and orientation. The Emotion Recognition Task (ERT) assess facial emotion recognition. Participants are shown photographs of people portraying a range of facial emotions and are required to select one of five labels that most accurately describes the expressed emotion. The possible labels are “happy”, “sad”, “angry”, “fearful”, and “no emotion”."
+},
+{
+"id": "dev_cognition_2024:x17",
+"text": "The Matrix Reasoning Task (MRT) is a task of nonverbal abstract reasoning and pattern recognition and is analogous to a well-known paradigm often utilized for assessing general intelligence. A pattern series is presented on a grid and one item in the pattern is missing. The participant is directed to select the item that fits the pattern from a set of potential options. The Digit Symbol Substitution Task (DSST) measures complex scanning, visual tracking, and speed of processing. Participants are provided with a legend linking single digits to unique symbols. One of the nine symbols appear on the screen and participants select the corresponding number as quickly as possible. The entire task has a fixed duration of 90 s."
+},
+{
+"id": "dev_cognition_2024:x18",
+"text": "The Balloon Analog Risk Test (BART) is a measure of risk-taking behavior. Participants either inflate an animated balloon or choose to collect a reward. However, the balloon will pop after an unknown number of pumps that changes from trial to trial, which requires the participant to judge the behavior of balloons and adjust their strategy. Rewards are given as a function of when it was collected relative to the balloon’s final possible size. The Psychomotor Vigilance Test (PVT) is a task of vigilant and sustained attention that assesses response times to visual stimuli that are seen at random intervals. Crew members are asked to press the space bar as quickly as possible when they see a millisecond counter appear on the screen. They are instructed to inhibit responses when the number counter is not present."
+},
+{
+"id": "dev_cognition_2024:x19",
+"text": "For F2B, the accuracy score was a proportion that accounts for the number of matches (i.e., correct hits) and non-matches (i.e., correct rejection). The LOT accuracy score is a proportion that accounts for the number of clicks the participant was off from the correct orientation. The PVT accuracy score is a proportion that accounts for lapses, false starts, and the total number of stimuli presented. The BART risk score is a proportion that considers the maximum pumps possible and the total pumps taken. Scores range from 0 to 1 with higher values indicating greater risk tolerance. In other words, higher scores suggest that the individual is more willing to risk popping the balloon in return for a higher reward. No accuracy score was calculated for the MPT as directions for this task does not emphasize accurate performance."
+},
+{
+"id": "dev_cognition_2024:x20",
+"text": "Published corrections to account for stimulus set and practice effects due to repeated administrations over an average of 12 days were applied (Basner et al., 2020a). Descriptive information and figures of raw scores at each mission phase can be found in Supplementary Material. All individual outcome scores were z-transformed using the mean and standard deviation of the full sample’s baseline test session, after excluding the individual, that occurred during the pre-fight mission phase. Z-scores for speed were multiplied by (−1), such that higher z-scores indicate better (i.e., faster) performance. Higher z-scores for the BART Risk score indicates greater risk tolerance. Finally, summary speed and accuracy z-scores were calculated by averaging all subtest speed and accuracy z scores (Basner et al., 2021a; Basner et al., 2021b)."
+},
+{
+"id": "dev_cognition_2024:x21",
+"text": "While the BART speed score was included in the overall speed score, the BART risk score was not included in the overall accuracy score as it is not a measure of accuracy. Immediately prior to the first subtest, crew members were asked to self-report the number of hours of sleep they obtained the previous evening. They also provided subjective ratings of alertness from 0 (Tired) to 10 (Alert) in the moment in which they submitted their ratings (Basner et al., 2015). Descriptive statistics for speed and accuracy metrics for each subtest were generated for baseline (i.e., pre-flight) raw scores and for z scores at each mission phase (aim 1). A series of linear mixed model (LMM) analyses with random subject intercepts were used to assess the relationship between mission phases and each speed and accuracy performance outcome variable (aim 2)."
+},
+{
+"id": "dev_cognition_2024:x22",
+"text": "Age, gender, and previous flight experience were included as fixed effects to statistically control for reported associations with cognitive performance (Lee et al., 2020) and possible differences in the magnitude of structural brain alterations (Hupfeld et al., 2022) between novice and repeat flyers. For each LMM, residuals were plotted and normality was assessed using the Shapiro-Wilk test. Robust LMMs were utilized when violations of normality were detected (Koller, 2016). The False Discovery Rate method was applied to adjust for 21 multiple comparisons. Trimmed models with adjusted p-values for each measure are reported in text and tables; unadjusted p-values can be found in Supplementary Table S1. Follow up LMMs with random subject intercepts to facilitate pairwise comparisons included timepoint as a categorical variable to examine differences between mission phases."
+},
+{
+"id": "dev_cognition_2024:x23",
+"text": "Tukey’s HSD was applied to adjust for Type I error and adjusted p-values are reported. To examine the frequency of low scores during flight and post-flight performance (aim 3), the percent frequency of data points representing performance 1.5 standard deviations at or below the baseline (i.e., pre-flight) sample mean (z ≤ −1.5) was calculated for each subtest. This cutoff was utilized because it is commonly used to detect impairment in clinical populations (Petersen et al., 2001; Petersen and Morris, 2005; Petersen et al., 1999; Jak et al., 2009). For exploratory analyses, LMMs with random subject intercepts were utilized to assess the relationships between survey items and all speed and accuracy measures for each subtest across all mission phases. Statistical significance was set to α = 0.05 and all analyses were performed using R 4.2.1."
+},
+{
+"id": "dev_cognition_2024:x24",
+"text": "Data were downloaded, processed, visualized, and inspected for quality. Data from four subtests were excluded from data analysis, not necessarily from the same individual: one was excluded due to technical difficulties that interfered with task performance, two were excluded due to suspected non-adherence (i.e., pattern of accuracy and speed outliers indicative of rapid responding rapid and/or careless responding and elevated false positives; (Basner et al., 2015)), and one was excluded due to a participant comment indicating confusion with subtest instructions. Table 1 displays raw baseline (i.e., pre-flight) scores used to generate z-scores for the present analysis and can be used as a preliminary normative database for future studies. Descriptive information for each subtest’s z-scores by mission phase is presented in Table 2."
+},
+{
+"id": "dev_cognition_2024:x25",
+"text": "Descriptive Characteristics of pre-flight baseline raw subtest scores at pre-flight mission phase. Note: BART Accuracy score reflects risk taking propensity. N represents number of unique data points in pre-flight baseline sample. Data points removed for F2B, PVT, and LOT, as described in Results section; SD, standard deviation. Descriptive Characteristics of Z-scores by subtest and mission phase. Note: Z-scores calculated with current samples pre-flight baseline raw scores. BART Accuracy score reflects risk taking propensity; SD, standard deviation."
+},
+{
+"id": "dev_cognition_2024:x26",
+"text": "3.1 Cognitive performance over mission phases Hypothesis 1suggested that there would be mild decrements in early flight and early post-flight mission phases relative to pre-flight. For each outcome we first present results assessing linear relationships of performance over mission phases (see Supplementary Table S1) followed by direct pairwise comparisons between mission phases. Linear mixed models revealed no linear relationship between mission phase and the summary speed score. In support of Hypothesis 1, pairwise analysis characterizing differences in summary speed between mission phases (Figure 2, Panel A) revealed significant, but small, differences between pre-mission and early flight (β = .35, adjusted p = .002, ∆z = .31) as well as early flight and late post-flight (β = −.33, adjusted p = .004, ∆z = .29)."
+},
+{
+"id": "dev_cognition_2024:x27",
+"text": "There was no significant difference between pre-flight and early post-flight. Summary accuracy declined over time (β = −.05, adjusted p = .03) but no pairwise comparisons were significantly different (Figure 2, Panel A) and the effect sizes of the mean differences between mission phases were negligible.Support for Hypothesis 1 across the 10 subtests in the Cognition battery varied by domain. Differences between mission phases were observed in several subtests, even among those with no linear associations with time (Figures 2, 3). VOLT speed and accuracy remained stable over time and between mission phases. No pairwise comparisons between mission phases survived multiple comparisons and the effect sizes of the mean differences in VOLT accuracy (∆z’s = .07 to .55) and speed (∆z’s = .02 to .11) between mission phases ranged from negligible to medium."
+},
+{
+"id": "dev_cognition_2024:x28",
+"text": "See Figure 2, Panel B.F2B speed declined over time (β = −.23, 95% CI [-.35–.1], adjusted p < .001). Pairwise contrasts revealed faster performance during pre-mission compared to all other mission phases (β′s range .8–1.29; adjusted p’s range .01 to < .001). The effect sizes of the significant mean differences between mission phases were large (∆z’s = .81 to 1.23). F2B accuracy remained stable over time and between mission phases. See Figure 2, Panel C.AM speed improved over time (β = .12, 95% CI [.07 – .17], adjusted p < .001). Pre-flight performance was slower than late in-flight (β = −.35, adjusted p = .03, ∆z = .40) and both post-flight phases (vs early: β = −.39, adjusted p = .01, ∆z = .47; vs. late: β = −.43, adjusted p = .004; ∆z = .52)."
+},
+{
+"id": "dev_cognition_2024:x29",
+"text": "Early in-flight performance was also slower than both post-flight phases (vs early: β = −.36, adjusted p = .03; ∆z = .35; vs late: β = −.41, p = .009; ∆z = .40). The effect sizes of the significant mean differences ranged from small to medium. AM accuracy remained stable over time and between mission phases. See Figure 2, Panel D.LOT speed and accuracy remained stable over time and between mission phases. See Figure 2, Panel E.ERT speed improved over time (β = .1, 95% CI [.03 – .17], adjusted p = .02). No pairwise comparisons between mission phases were significant and the effect sizes of the mean differences for ERT speed between mission phases ranged from negligible to small (∆z’s = .05 to .41). ERT accuracy remained stable over time and between mission phases. See Figure 3, Panel A.MRT speed improved over time (β = .13, 95% CI [.04 – .23], adjusted p = .02)."
+},
+{
+"id": "dev_cognition_2024:x30",
+"text": "Late post-flight performance was faster relative to both in flight mission phases (vs early: β = −.81, adjusted p = .002, ∆z = .74; vs late: β = −.6, p = .04, ∆z = .60); effect sizes of the significant mean differences between mission phases ranged from medium to large. MRT accuracy remained stable over time and between mission phases. See Figure 3, Panel B.There was no significant linear association between time and DSST speed (β = −.05, 95% CI [-.13–.04], adjusted p = .42). However, comparison of discrete mission phases revealed slowed performance during both in flight (vs early: β = .78, adjusted p = .0001, ∆z = .78; vs late: β = .73, adjusted p = .0002, ∆z = .72) and early post-flight (β = −.61, adjusted p = .003, ∆z = .74) compared to pre-flight performance. Effect sizes of the significant mean differences between mission phases were large."
+},
+{
+"id": "dev_cognition_2024:x31",
+"text": "DSST accuracy remained stable over time and between mission phases. See Figure 3, Panel C.BART speed remained stable over time and between mission phases. The BART Risk Score declined over time (β = −.23, 95% CI [-.31 to −.15], adjusted p < .001). Pairwise comparisons between mission phases revealed greater risk tolerance during pre-flight and early flight phases compared to late flight (vs pre-flight: β = .78, adjusted p = .0002, ∆z = .86; vs early flight: β = .70, adjusted p = .001, ∆z = .68), early post-flight (vs pre-flight: β = .61, adjusted p = .007, ∆z = .70; vs early flight: β = .53, adjusted p = .03, ∆z = .52) and late post-flight (vs pre-flight: β = .9, adjusted p < .0001, ∆z = .94; vs early flight: β = .82, adjusted p = .0001, ∆z = .77) mission phases. The effect sizes of the significant mean differences between mission phase ranged from medium to large."
+},
+{
+"id": "dev_cognition_2024:x32",
+"text": "See Figure 3, Panel D.There was no significant relationship between time and PVT speed (β = −.07, 95% CI [-.17–.03], adjusted p = .27). However, comparison of discrete mission phases revealed slowed performance during early flight compared to pre-flight mission phases (β = .62, adjusted p = .05, ∆z = .5); the effect size of the mean difference was medium. PVT accuracy remained stable over time and between mission phases. See Figure 3, Panel E.MPT speed improved over time (β = .09, 95% CI [.02 – .17], adjusted p = .03). Pairwise comparisons of mission phases revealed that MRT speed was faster in the late post-flight mission phase compared to early in-flight (β = −.63, adjusted p = .0005, ∆z = .57) and early post-flight (β = −.48, adjusted p = .02, ∆z = .29) and marginally faster than late flight (β = −.4, adjusted p = .06, ∆z = .39)."
+},
+{
+"id": "dev_cognition_2024:x33",
+"text": "Corresponding effect sizes for the significant mean differences between mission phases were small to moderate. See Figure 3, Panel F. Overall, 11.8% of all individual test scores were at or below 1.5 standard deviations of the full sample baseline mean (i.e., z-score ≤ −1.5). Consistent with Hypothesis 2, the subtests with the greatest frequency of low scores were on tasks of working memory (F2B; 18.7%), processing speed (DSST; 16.7%), and sustained attention (PVT; 13.6%). The frequency of low scores on the BART risk score (19.2%) was also higher than speed and accuracy scores on other subtests; these scores represent individual observations indicating substantially decreased risk taking propensity compared to pre-flight baseline. See Table 3. Figure 4 selects the three subtests with the highest frequencies of low scores, respectively, and presents data across mission phases."
+},
+{
+"id": "dev_cognition_2024:x34",
+"text": "Percent frequency of low scores during flight and post-flight. Note: Low scores were identified as scores at or below 1.5 standard deviations below average baseline (i.e., pre-flight) performance (z ≤ -1.5). BART accuracy score reflects risk taking propensity. 3.3 Sleep duration and alertness over mission phases Across all mission phases, there were no relationships between hours of sleep reported and performance on any subtest of the Cognition battery. Alertness was inversely related to DSST accuracy (β = −.1, p = .05) only. See Table 4."
+},
+{
+"id": "dev_cognition_2024:x35",
+"text": "Self-reported hours of sleep and alertness. Note: Self-reported number of hours slept during the night prior to cognitive performance testing. Subjective ratings of alertness assessed on a 10-point scale, from (0) Tired to 10 (Alert), per (Basner et al., 2014). SD, standard deviation. This investigation characterized performance across a wide breadth of cognitive domains in a sample of 25 astronauts on 6-month ISS missions. We were unable to locate any published studies with a more comprehensive or larger dataset on a sample of astronauts; thus, we believe this study makes a substantial contribution in characterizing astronaut cognitive performance in spaceflight. We have reported pre-flight baseline descriptive information characterizing cognitive performance across all subtests that can be utilized as a preliminary normative database for future research."
+},
+{
+"id": "dev_cognition_2024:x36",
+"text": "As a group, astronaut crew demonstrated generally stable performance on summary measures of cognition and only mild changes in isolated cognitive domains during specific mission phases. Specifically, slowed performance was observed early in flight on tasks of processing speed (i.e., DSST), visual working memory (i.e., F2B), and sustained attention (i.e., PVT); slowed processing speed and working memory persisted into post-flight. Risk taking propensity also reduced after the early flight mission phases. A total of 11.8% of all flight and post-flight scores were classified as low, such that they fell at or below 1.5 standard deviations below the sample’s pre-flight baseline mean. Finally, exploratory analysis found no consistent relationships between cognitive performance and either self-reported amount of sleep or ratings of alertness."
+},
+{
+"id": "dev_cognition_2024:x37",
+"text": "This study makes three important contributions which are discussed next. First, we report no systematic decline in cognitive performance during 6-month low earth orbit missions among the largest sample of professional astronauts published to date. This is in contrast to some of the previous research that observed declines across several cognitive domains during flight and post-flight mission phases (Garrett-Bakelman et al., 2019; Takács et al., 2021). Our results do not necessarily contradict these findings as we also observed interindividual variability in our sample and it is possible that longer duration missions elicit greater decrements at later mission phases. However, we did not find support for group level impacts of spaceflight conditions on cognitive performance in low earth orbit."
+},
+{
+"id": "dev_cognition_2024:x38",
+"text": "Next, by using a comprehensive assessment of cognitive functions we identified cognitive domains that were more variable across phases of a 6-month low earth orbit missions. This suggests that these cognitive domains are more vulnerable to spaceflight conditions than other domains. Specifically, we observed early flight slowed performance, but stable accuracy, on tasks of processing speed and visual working memory that persisted through the duration of the mission. Visual working memory speed did not return to pre-flight levels at 30 days post mission. Slower performance on the PVT was observed during early flight only. Notably, these decrements were present despite generally preserved, or even improved, sensorimotor functioning."
+},
+{
+"id": "dev_cognition_2024:x39",
+"text": "Finally, we present the first published professional astronaut preliminary normative dataset for the Cognition Battery that can be used to derive standard scores to identify significant deviations from pre-flight baseline functioning. For example, despite modest group level differences in cognitive performance across most subtests, 11.8% of observations across all tasks during flight or post-flight fell at or below 1.5 standard deviations of the samples pre-flight baseline mean. The greatest number of observations below cut off were on tasks assessing working memory, processing speed, and sustained attention, which are domains vulnerable to state-like alterations related to acute changes in sleep (Jones et al., 2022; Lim and Dinges, 2010), stress (Eysenck and Calvo, 1992), workload (Ghalenoei et al., 2022), and dehydration (Wittbrodt and Millard-Stafford, 2018)."
+},
+{
+"id": "dev_cognition_2024:x40",
+"text": "Though there is no evidence of an increased frequency of low scores in this sample compared to other cognitively healthy populations (Crawford et al., 2007; Binder et al., 2009), even highly infrequent or temporary barriers to adequately engaging cognitive functions required to perform complex operational task may result in catastrophic consequences in spaceflight. This preliminary normative dataset provides operational support with the ability to identify low scores during flight, elucidate effective in mission support to enhance performance (i.e., stress reduction, timeline alterations), or inform concept-of-operations during mission critical tasks. This dataset can also be utilized in future research to compare performance against future astronauts on extended duration missions or those that venture beyond low earth orbit and include more extreme stressors."
+},
+{
+"id": "dev_cognition_2024:x41",
+"text": "These significant contributions underscore critical knowledge gaps that should be prioritized for future research. First, there are likely individual differences in susceptibility to spaceflight environmental stressors. The current sample size was too small to stratify our normative baseline by age. Although we did not find clear associations between cognitive performance and self-reported hours of sleep or ratings of alertness, there are several other stressors that are not accounted for in the current dataset such as workload, stress and fatigue specific to extravehicular activities, nutrition/exercise, and individual behavioral health. These may become more impactful during future space exploration missions as conditions of greater radiation exposure, extra-vehicular surface activities, and earth independent operations deplete individual cognitive reserve to unmask larger decrements."
+},
+{
+"id": "dev_cognition_2024:x42",
+"text": "The operational consequences to observed changes in cognitive performance also remains unknown. The everyday demands required of spaceflight are more complex, dangerous, and uncertain than those of terrestrial life suggesting that current clinical thresholds to define impairment may not be appropriate. Basner et al. (2020b) reported associations between a spaceflight docking task and processing speed, sustained attention, visuospatial orientation, and abstract reasoning, suggesting that this mission critical task is vulnerable to some of the decrements we observed in this investigation. Future studies investigating the relationship between cognitive performance and other operationally activities are required to determine appropriate decrement thresholds beyond which performance is most at risk."
+},
+{
+"id": "dev_cognition_2024:x43",
+"text": "Further development of earth independent operational supports to maintain optimal cognitive performance will further reduce the risk to individual cognitive health and performance on operational tasks. The reported results should be interpreted in the context of some limitations. Despite applying corrections for practice effects, the reported data suggests continued improvement over time in a subset of the Cognition Battery subtests. This likely due to small sizes and key differences between our study design and that of the published corrections, including administration intervals (i.e., 10–28 days vs > 60 days) and population (i.e., university vs. operational settings). Updates to the practice corrections may be warranted now that the Cognition Battery has become more commonly used among several high performing operational environments."
+},
+{
+"id": "dev_cognition_2024:x44",
+"text": "Cognitive performance assessed during the early flight and early post-flight stages were collected on average 28.88 (SD = 10.01) days after launch and 9 (SD = 1.85) days after landing. Thus, performance was not characterized during what may be the most acute transitional phases of a mission or during long term follow up. Nevertheless, the pre-flight data published here is the first preliminary astronaut normative dataset that can be used in future studies to derive standard scores for independent samples. In summary, we observed no evidence for systematic widespread declines in cognitive performance suggestive of damage to the central nervous system during 6-month ISS missions."
+},
+{
+"id": "dev_cognition_2024:x45",
+"text": "Our results revealed early mildly slowed performance in isolated tasks of processing speed, working memory, and attention that persisted to varying degrees through the mission, reduced risk taking after early flight mission phases, and stable performance on tasks of memory and executive functions. This investigation makes a substantial contribution by providing a pre-flight normative sample of professional astronauts that can be used to characterize individual or group level deviations from baseline functioning, characterizes cognitive performance under conditions of spaceflight in low earth orbit, and substantially shapes a growing body of literature towards a future that best positions humans to thrive in space."
+},
+{
+"id": "dev_cognition_2024:x46",
+"text": "The data presented in the study are deposited in the NASA Life Science Portal at https://nlsp.nasa.gov/view/lsdapub/lsda_experiment/ea3997a6-1093-5e0f-8f54-47684d4f1e73. The studies involving humans were approved by NASA Institutional Review Board. The studies were conducted in accordance with the local legislation and institutional requirements. The participants provided their written informed consent to participate in this study. SD: Conceptualization, Data curation, Formal Analysis, Investigation, Methodology, Project administration, Supervision, Visualization, Writing–original draft, Writing–review and editing. AK: Data curation, Project administration, Visualization, Writing–review and editing. SB: Data curation, Project administration, Writing–review and editing. SA: Investigation, Project administration, Writing–review and editing."
+},
+{
+"id": "dev_cognition_2024:x47",
+"text": "GC: Funding acquisition, Project administration, Resources, Writing–review and editing. SB: Conceptualization, Data curation, Investigation, Methodology, Resources, Writing–review and editing. The author(s) declare that financial support was received for the research, authorship, and/or publication of this article. Research was funded by the National Aeronautics and Space Administration (NASA) Human Research Program Standard Measures Cross-Cutting Project. SID, AMK, SRG, SRA, and GC were supported by KBR’s Human Health and Performance Contract NNJ15HK11B through NASA."
+},
+{
+"id": "dev_cognition_2024:x48",
+"text": "We thank Mathias Basner for data processing and analysis consultation, Millennia Young for statistical consultation, the NASA Spaceflight Standard Measures and Research Operation and Integration teams for facilitating this research, and the ISS astronaut crew for their dedicated time and efforts to support behavioral health research in spaceflight. The authors of this report are entirely responsible for its content. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the authors and do not necessarily reflect the views of the US Government, NASA, KBR, or JES Tech. The authors have no interests that may be perceived as conflicting with the work described or proposed here."
+},
+{
+"id": "dev_cognition_2024:x49",
+"text": "Authors SD, SB, SA, and GC were employed by KBR, Inc. The remaining authors declare that the research was conducted in the absence of any commercial or financial relationships that could be construed as a potential conflict of interest. All claims expressed in this article are solely those of the authors and do not necessarily represent those of their affiliated organizations, or those of the publisher, the editors and the reviewers. Any product that may be evaluated in this article, or claim that may be made by its manufacturer, is not guaranteed or endorsed by the publisher."
+},
+{
+"id": "dev_cognition_2024:x50",
+"text": "The Supplementary Material for this article can be found online at: https://www.frontiersin.org/articles/10.3389/fphys.2024.1451269/full#supplementary-material"
+}
+]
+}

@@ -50,7 +50,7 @@ test("invalid NASA response and unbounded queries are rejected", async () => {
 test("source registry resolves all rule references and never claims clinical approval", () => {
   const b = evidenceBundle();
   assert.match(b.sha256, /^[a-f0-9]{64}$/);
-  assert.equal(evidence.length, 7);
+  assert.equal(evidence.length, 46);
   assert.ok(evidence.every((e: any) => e.clinically_approved === false));
 });
 test("corrupt dataset cannot masquerade as healthy demo data", () => {

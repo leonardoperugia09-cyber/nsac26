@@ -1,0 +1,84 @@
+{
+"id": "hrp_cns_radiation_2016",
+"title": "Evidence Report: Risk of Acute and Late Central Nervous System Effects from Radiation Exposure",
+"authors": "Nelson GA, Simonsen L, Huff JL",
+"year": 2016,
+"licence": "NASA NTRS: public use permitted",
+"source_url": "https://ntrs.nasa.gov/citations/20170001372",
+"topics": [
+"radiation",
+"cognition"
+],
+"kind": "full_text_excerpts",
+"note": "Verbatim text extracted from the source for retrieval; page furniture and the reference list removed. Not reviewed by HALO.",
+"chunks": [
+{
+"id": "hrp_cns_radiation_2016:x1",
+"text": "National Aeronautics and Space Administration • Space Radiation Program Element Requirements Develop & Modify Standards: Cancer PELs, Short-Term/non-cancer (CNS, CVD, • 4.1.3 The SR shall perform the research necessary to enable the development and modification of the SR standards sets documented in NASA - STD- 3001, Vol.1 and Vol. 2. • 5.1.6 The SR shall qualitatively or quantitatively assess the Space Radiation-applicable risks • 5.4.5 The SR shall provide evidence to support determination of status for SR-applicable concerns • 5.3.5 The SR shall develop methods and technologies to monitor indicators of adverse outcomes of SR-applicable risks"
+},
+{
+"id": "hrp_cns_radiation_2016:x2",
+"text": "Risk Mitigation: Physical and Biomedical Countermeasures • 5.2.5 The SR shall develop countermeasures and technologies, or provide research evidence to inform mission and vehicle requirements, to prevent or mitigate adverse outcomes of SR-applicable risks • 6.4.3 The SR shall develop methods and technologies to reduce human systems resource requirements (mass, volume, power, crew time, etc.). 3From: HRP-47052, HRP Program Requirements Doc Maintain Balance Across Four Distinct Risk Areas Based on – Meeting Cancer Career PEL is design driver for GCR & SPE shielding, mission duration, and crew selection -"
+},
+{
+"id": "hrp_cns_radiation_2016:x3",
+"text": "• Mission driver: younger female crew have highest risk (highlights importance of age and sex dependence) • By exceeding Cancer PELs & accepting increased risk – begin to exceed thresholds for CNS and CVD risks – Research with animal models shows changes to the CNS occur at HZE exposure levels in range of concern to NASA - • Significance to morbidity in humans (in-flight or late) and modification of risk by other spaceflight factors not understood – Evidence for elevation of CVD risk at doses as low as 0.5 Gy - • Studies of A-bomb survivor data and epidemiology data from occupational and medical exposures – which will impact %REID career limits"
+},
+{
+"id": "hrp_cns_radiation_2016:x4",
+"text": "Current Portfolio Priority: Cancer, In-flight Central Nervous System (CNS), Cardiovascular, Acute Radiation syndromes, Late CNS • Current Radiation PELs are documented in • PELs are in place to prevent clinically significant adverse outcomes and/or limit risk to a level that NASA deems acceptable to the crew • PELs are in place to protect against both short-term and late health effects • PELs are important for mission design including vehicle design, shielding configuration, mission length and crew certification for flight Congress has chartered the National Council on Radiation Protection (NCRP) to guide"
+},
+{
+"id": "hrp_cns_radiation_2016:x5",
+"text": "Federal agencies on radiation limits and procedures • NCRP guides NASA on astronaut dose limits • Basis for current PELs - NCRP Report No. 132 (2000) Radiation Protection Guidance for Activities in Low-Earth Orbit • Less than 1 in 33 chance of early death • Best estimate is 15-years average life loss for space radiation attributable cancer • Confidence level depends on exposure type (GCR, SPE) Based on 1989 comparison of risks in “lesssafe” industries 95% confidence is conservative and is intended to account for uncertainties inherent in risk projection model – vary from"
+},
+{
+"id": "hrp_cns_radiation_2016:x6",
+"text": "Career exposure to radiation is limited to not exceed 3% risk of exposure‐induced death (REID) from fatal cancers, measured at the 95% confidence level Flow chart for REID and REIC calculations F.A. Cucinotta, M.-H.Y. Kim, and L.J. Chappell. 2011.Space Radiation Cancer Risk Projections and Uncertainties— • The relationship between radiation exposure and risk is age- and sex- specific related to latency effects and differences in tissue types, sensitivities, and lifespans between sexes • Limits for other career or mission lengths vary and can be calculated using the appropriate life-table formalism and projections in risk uncertainties"
+},
+{
+"id": "hrp_cns_radiation_2016:x7",
+"text": "• The 95th percentile confidence level using uncertainties in risk projections must be applied to these values Durante and Cucinotta, Nature Rev. Cancer, 2008 • Qualitative and quantitative differences between space radiation compared with x-rays or gamma rays • Dependence of risk on the dose rates encountered in space • Statistics, Bias, Transfer to US population • Measurement dosimetry, space environment, radiation transport models Individual Organ and Tissue Contributions to Cancer Risk For crew members at mid-mission age 47y ISS at 400 km during Solar Minimum Activity"
+},
+{
+"id": "hrp_cns_radiation_2016:x8",
+"text": "Major Sources of Uncertainty in Estimating and Blue: NSRL collection of radiobiology data • Radiation quality effects on biological damage − Qualitative and quantitative differences between space radiation compared with gamma rays • Dependence of risk on the dose and dose rates Limits on Tissue Reactions (Deterministic Effects) •Non-cancer risks are considered to be deterministic: •Both the probability and severity of non-stochastic effects increase with dose above a threshold dose where clinical effects can be observed •Early radiation effects are in general considered to be related to a significant fraction of cell loss, occurring above the threshold for functional impairment in a tissue"
+},
+{
+"id": "hrp_cns_radiation_2016:x9",
+"text": "•Short-term dose limits are imposed to prevent clinically significant noncancer health effects including performance degradation, sickness, or death inflight •Career dose limits for cataracts, heart disease, and damage to the central nervous system are imposed to limit or prevent risks of degenerative tissue diseases (e.g., stroke, coronary heart disease, etc.) that occur post-mission Limits on Tissue Reactions (Deterministic Effects) *Lens limits are intended to prevent early (< 5 yr) severe cataracts (e.g., from a solar particle event). An additional cataract risk exists at lower doses from cosmic rays for sub-clinical cataracts, which may progress to severe types after long latency (> 5 yr) and are not preventable by existing mitigation measures; however, they are deemed an acceptable risk to the program."
+},
+{
+"id": "hrp_cns_radiation_2016:x10",
+"text": "**Heart doses calculated as average over heart muscle and adjacent arteries. ***CNS limits should be calculated at the hippocampus. Current Non-Cancer Dose Limits defined in NASA Standard 3001: Limits on Tissue Reactions (Deterministic Effects) The Gray-Equivalent based on relative biological effectiveness factors (RBEs) are used to calculate the effective doses for non-cancer effects Note that the RBE for Central Nervous System (CNS) non-cancer effects is largely unknown and, therefore, a physical dose limit (mGy) is used Risk of Acute Radiation Syndromes from Solar"
+},
+{
+"id": "hrp_cns_radiation_2016:x11",
+"text": "• Clinical course of ARS are well defined in human populations accidently exposed to acute, high doses of gamma- and X-rays • Symptoms 4 to 48 hours post-exposure for sub-lethal doses with a latency time inversely correlated with dose • Risk for ARS is low in Low Earth Orbit (LEO) due to protection by Earth’s magnetosphere • Risk increases beyond LEO Risks where protection by magnetosphere is lost • SPEs can be effectively shielded; however their occurrence and magnitude are difficult to predict • Uncertainty exists about the magnitude of acute health effects from whole-body exposures to protons from an SPE, which are characterized by a high degree of variability in dose distribution in the body as well as by dynamic changes in dose-rates and energy spectra"
+},
+{
+"id": "hrp_cns_radiation_2016:x12",
+"text": "Inhomogeneous Dose Distribution and Impact of Radiation Quality of Protons, combined effects of microgravity How do these parameters influence the BFO dose limits? • PELs inform mission design, vehicle shielding and storm shelter requirements The 30-day blood forming organ (BFO) limit is intended to protect the hematopoietic system from depletion below a critical limit • Also, considered to be adequate to project against the risks of symptoms associated with the prodromal phase of ARS, such as nausea, vomiting, and fatigue The 30-day skin limit is intended to protect against late skin complications (dermal atrophy, fibrosis, necrosis, telangiectasia)"
+},
+{
+"id": "hrp_cns_radiation_2016:x13",
+"text": "• Also, considered to be adequate to protect against early, acute skin effects such as erythema and desquamation Impact of Radiation Quality of Protons, combined effects of microgravity Risk of Cardiovascular Disease from Space Radiation Exposure • Recent studies of atomic bomb survivor data and epidemiology data from occupational and medical exposures provide evidence for elevation of risk at doses as low as 0.5 Gy ‒ Data at low doses is confounded by life-style factors, clouding interpretation of epidemiology ‒ Effects are considered deterministic, with an associated threshold dose; however recent evidence showing risk at lower doses questions this assumption"
+},
+{
+"id": "hrp_cns_radiation_2016:x14",
+"text": "• Preliminary risk assessment models are being formulated based on recent epidemiology data for lower dose low-LET exposures — future risk estimates will depend on high LET research results • Additional mortality and morbidity risks for non-cancer diseases of the cardiovascular system are of concern because they could increase REID values • Well documented that exposure to high doses of low-LET (>5 Gy) radiation during radiotherapy to the chest is associated with increased risk of cardiovascular disease later in life • Current research is focused on understanding and quantifying the risk of cardiovascular disease at space relevant exposures in support of validating"
+},
+{
+"id": "hrp_cns_radiation_2016:x15",
+"text": "PELs and development of risk assessment models - Identify disease spectrum and latency for low dose heavy ions - Establishing dose thresholds for heavy ions - Understand qualitative differences between GCR and gamma-rays to quantify RBEs Cardiovascular Disease from Space Radiation Career limits for the heart are intended to limit risk of death from radiation induced for cardiovascular diseases to be below a few percent, and are expected to be largely age and gender independent RBE’s to assess risks/limits for the cardiovascular and CNS are largely unknown – research required to inform PELs"
+},
+{
+"id": "hrp_cns_radiation_2016:x16",
+"text": "• Radiation effects to the CNS are a significant risk for long duration exploration class missions: – possibility of acute, in-flight functional alterations that negatively impact performance – possibility of late neurological pathologies such as early onset dementia and other neuropsychological changes • Examples of human behaviors and cognitive function of interest that may be affected by space flight include memory, learning, spatial orientation, motor function, emotion recognition, risk decision making, vigilance, reaction time, processing speed, circadian regulation, fatigue and neuropsychological changes."
+},
+{
+"id": "hrp_cns_radiation_2016:x17",
+"text": "• Focus on CNS risk definition and characterization • Understanding whether there are significant risks at space relevant exposures – Description of the spectrum and severity of possible in-flight cognitive, behavioral, and functional changes as well as possible late neurodegenerative conditions – Radiation quality and dose-rate dependencies – Establish possibility of dose thresholds Based on available radiobiology data information on relative biological effectiveness for CNS risks are highly uncertain and therefore CNS dose limits are expressed in mGy; with a separate limit for heavy ions with elemental charge >10 absorbed dose (in mGy)"
+}
+]
+}

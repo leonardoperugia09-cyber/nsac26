@@ -1,0 +1,923 @@
+{
+"id": "hrp_pharmacology_2023",
+"title": "Evidence Report: Risk of Ineffective or Toxic Medication During Long-Duration Exploration Spaceflight",
+"authors": "Reichard JF, Lehnhardt K, Easter B, et al.",
+"year": 2023,
+"licence": "NASA NTRS: public use permitted",
+"source_url": "https://ntrs.nasa.gov/citations/20230018496",
+"topics": [
+"medication"
+],
+"kind": "full_text_excerpts",
+"note": "Verbatim text extracted from the source for retrieval; page furniture and the reference list removed. Not reviewed by HALO.",
+"chunks": [
+{
+"id": "hrp_pharmacology_2023:x1",
+"text": "Risk of Ineffective or Toxic Medication During Long-Duration Exploration Medical Capability (ExMC) Element Approved for Public Release: December 20, 2023 National Aeronautics and Space Administration University of Cincinnati College of Medicine, Department of Environmental and Public Health, division of Industrial Hygiene Exploration Medical Capability Element, NASA Johnson Space Center, Johnson Space Center, Houston, Texas, USA Kris. R. Lehnhardt, MD Department of Emergency Medicine and Center for Space Medicine, Baylor College of Medicine, Houston, TX; Element Scientist,"
+},
+{
+"id": "hrp_pharmacology_2023:x2",
+"text": "Exploration Medical Capability Element, NASA Johnson Space Center, Johnson Space Center, Houston, Texas, USA Benjamin D. Easter, MD Department of Emergency Medicine, University of Colorado School of Medicine, Denver, CO; Assistant Element Scientist, Exploration Medical Capability Element, NASA Johnson Space Center, Johnson Jay Lemery, MD Department of Emergency Medicine, University of Colorado School of Medicine, Denver, CO; Associate Element Scientist, Exploration Medical Capability Element, NASA Johnson Space Center, Johnson S. Robin Elgart, PhD Space Radiation Element Scientist at NASA Johnson Space Center,"
+},
+{
+"id": "hrp_pharmacology_2023:x3",
+"text": "Johnson Space Center, Houston, Texas, USA Virginia E. Wotring, PhD Department of Pharmacology, Baylor College of Medicine Center for Space The authors thank Kerry A. George, ELS (KBR/NASA Lyndon Johnson Space Center) for editing this report. iii LIST OF ACRONYMS.................................................................................................................... - 1 - RISK TITLE: RISK OF INEFFECTIVE OR TOXIC MEDICATION DURING LONG -DURATION EXPLORATION SPACEFLIGHT ............................................................................................................................. - 3 -"
+},
+{
+"id": "hrp_pharmacology_2023:x4",
+"text": "STATUS ...................................................................................................................................... - 3 - EXECUTIVE SUMMARY ............................................................................................................... - 3 - INTRODUCTION.......................................................................................................................... - 5 - EVIDENCE ................................................................................................................................... - 6 -"
+},
+{
+"id": "hrp_pharmacology_2023:x5",
+"text": "A. PRINCIPLES OF DRUG DEGRADATION ........................................................................................ - 6 - PHYSICAL AND CHEMICAL DEGRADATION OF DRUGS ....................................................... - 6 - a. Brief Overview of Drug Degradation ......................................................................................... - 6 - KINETICS OF DRUG DEGRADATION REACTIONS ................................................................ - 7 - B. DRUG EFFICACY DURING SPACEFLIGHT ..................................................................................... - 8 -"
+},
+{
+"id": "hrp_pharmacology_2023:x6",
+"text": "EVIDENCE........................................................................................................................... - 8 - CONCLUSIONS ................................................................................................................. - 11 - C. EFFECT OF SPACEFLIGHT ON DRUG CONTENT ......................................................................... - 12 - CONTEXT: BASIS FOR DETERMINING DRUG STABILITY AND QUALITY ............................ - 12 - EVIDENCE: EFFECTS OF SPACEFLIGHT ON DRUG CONTENT ............................................ - 13 - a. Summary ................................................................................................................................. - 13 - b. Lot-Matched Controlled Study of Drug Content ...................................................................... - 16 - c."
+},
+{
+"id": "hrp_pharmacology_2023:x7",
+"text": "Opportunistic Spaceflight Studies of Drug Content. ................................................................ - 21 - d. Conclusion from all available opportunistic spaceflight studies .............................................. - 29 - D. DEGRADATION IMPURITIES ..................................................................................................... - 32 - CONTEXT: FORMATION OF IMPURITIES .......................................................................... - 32 - TOXICITY OF IMPURITIES ................................................................................................. - 33 -"
+},
+{
+"id": "hrp_pharmacology_2023:x8",
+"text": "EVIDENCE: NASA SUPPORTED IMPURITY STUDIES .......................................................... - 33 - a. Summary of Available Spaceflight Study Results ..................................................................... - 33 - b. Conclusions from spaceflight drug degradation studies. ......................................................... - 36 - E. EFFECT OF SPACEFLIGHT ON PHYSICAL STABILITY OF DRUG SUBSTANCES .............................. - 36 - CONTEXT: FACTORS INFLUENCING PHYSICAL DRUG STABILITY ...................................... - 36 -"
+},
+{
+"id": "hrp_pharmacology_2023:x9",
+"text": "EVIDENCE: NASA-SUPPORTED STUDIES OF PHYSICAL STABILITY .................................... - 37 - F. PACKAGING AND DRUG STABILITY ........................................................................................... - 41 - iv CONTEXT: ROLE OF PACKAGING AND REPACKAGING ON DRUG DEGRADATION............ - 41 - a. Atmospheric oxygen ................................................................................................................ - 41 - b. Water vapor ............................................................................................................................ - 42 - c. Current NASA Repackaging Process ........................................................................................ - 43 -"
+},
+{
+"id": "hrp_pharmacology_2023:x10",
+"text": "EVIDENCE: PACKAGING AND SPACEFLIGHT DRUG STABILITY ......................................... - 44 - G. THE EFFECTS OF IONIZING SPACE RADIATION ON DRUG STABILITY ......................................... - 45 - CONTEXT: RADIOSTABILITY OF DRUGS ............................................................................ - 45 - EVIDENCE: NASA-SUPPORTED DRUG RADIATION STABILITY STUDIES ............................ - 46 - a. Scope of Studies ...................................................................................................................... - 46 - b. Studies of Spaceflight Radiation Exposure .............................................................................. - 46 - c. Irradiation studies without post-radiation storage ................................................................. - 47 - d."
+},
+{
+"id": "hrp_pharmacology_2023:x11",
+"text": "Irradiation study with long-term post-irradiation storage. ..................................................... - 50 - IN SILICO MODELING OF THE EFFECT OF SPACEFLIGHT RADIATION ON D RUG STABILITY- 53 - RISK IN CONTEXT OF EXPLORATION MISSION OPERATION SCENARIOS .................................... - 54 - A. COUNTERMEASURES ............................................................................................................... - 58 - Protective packaging/repackaging.................................................................................. - 58 -"
+},
+{
+"id": "hrp_pharmacology_2023:x12",
+"text": "Drug product selection. ................................................................................................... - 58 - Pragmatic Storage Conditions. ........................................................................................ - 59 - B. OPERATIONAL PERSPECTIVE .................................................................................................... - 61 - DIRECTED ACYCLIC GRAPH (DAG) REVIEW AND INTEGRATION WITH OTHER RISKS .................. - 62 - A. DAG REVIEW: .......................................................................................................................... - 62 -"
+},
+{
+"id": "hrp_pharmacology_2023:x13",
+"text": "B. GAPS IN KNOWLEDGE: ............................................................................................................. - 65 - Link to the current gaps on the Human Research Roadmap ........................................... - 65 - C. STATE OF KNOWLEDGE AND FUTURE WORK ........................................................................... - 65 - D. REMAINING GAPS: ................................................................................................................... - 65 - CONCLUSION ........................................................................................................................... - 67 -"
+},
+{
+"id": "hrp_pharmacology_2023:x14",
+"text": "REFERENCES ............................................................................................................................. - 70 - APPENDIX 1. DRUG DEGRADATION KINETICS ........................................................................... - 83 - APPENDIX 2. DRUG SHELF LIFE ................................................................................................. - 87 - A. REGULATION OF DRUG STABILITY AND SHELF LIFE. ................................................................. - 87 - Drug potency (i.e., API content) ....................................................................................... - 87 -"
+},
+{
+"id": "hrp_pharmacology_2023:x15",
+"text": "Organic Impurities ........................................................................................................... - 87 - B. SHELF LIFE VERSUS EXPIRATION DATE AND THE AVAILABILITY OF SHELF LIFE DATA ............... - 89 - C. DRUG SHELF LIFE FOR EXPLORATION SPACESFLIGHTS ............................................................. - 90 - v D. DRUG STABILITY AND THE IMPORTANCE OF FORMULATION .................................................. - 91 - E. SHELF LIFE OF REPACKAGED DRUGS ........................................................................................ - 95 -"
+},
+{
+"id": "hrp_pharmacology_2023:x16",
+"text": "APPENDIX 3. DIFFERENCE IN API POTENCY (%) BETWEEN SPACEFLIGHT AND CONTROL MEDICATIONS .......................................................................................................................... - 97 - APPENDIX 4. RATE OF DEGRADATION OF DRUGS IN THE DU ET AL. (2011) STUDY. .................. - 99 - APPENDIX 5. DRUGS TESTED IN OPPORTUNISTIC SPACEFLIGHT DRUG STABILITY STUDIES .... - 100 - APPENDIX 6. ASSESSMENT OF IMPURITY TOXICITY AND SETTING HEALTH -BASED EXPOSURE LIMITS. ................................................................................................................................... - 101 -"
+},
+{
+"id": "hrp_pharmacology_2023:x17",
+"text": "APPENDIX 7. DRUG PACKAGING ............................................................................................ - 105 - A. REGULATORY CONTEXT FOR DRUG REPACKAGING ............................................................... - 105 - B. DRUG EXPIRATION DATES AND PHARMACEUTICAL PACKAGING ........................................... - 107 - APPENDIX 8: PUBLICLY AVAILABLE SOURCES OF RADIOSTABILITY DATA ............................... - 109 - A. LABEL “PROTECT FROM LIGHT” STATEMENT ......................................................................... - 109 -"
+},
+{
+"id": "hrp_pharmacology_2023:x18",
+"text": "B. LITERATURE STUDIES OF DRUG RADIOSTERILIZATION AND RADIOSTABILITY ....................... - 112 - APPENDIX 9: MECHANISMS OF IONIZING RADIATION-MEDIATED DRUG DEGRADATION ....... - 112 - A. SPACE RADIATION ENVIRONMENT ........................................................................................ - 113 - B. EVIDENCE OF HOW DRUG PRODUCTS ARE IMPACTED BY IONIZING RADIATION ................... - 114 - Radiosensitivity of drugs versus radiosensitivity of organisms ..................................... - 114 - Drug degradation pathways and products are not unique to radiation ....................... - 115 -"
+},
+{
+"id": "hrp_pharmacology_2023:x19",
+"text": "Sensitivity of drugs to ionizing radiation ....................................................................... - 115 - C. DILUTE DRUG SOLUTIONS MAY BE MORE SUSCEPTIBLE TO DEGRADATION THAN CONCENTRATED SOLUTIONS ............................................................................................................................ - 117 - D. THE DOSE-RATE OF IONIZING RADIATION IMPACTS DRUG DEGRADATION ........................... - 117 - APPENDIX 10: EXPERIMENTAL DETAILS FOR MEDICATIONS TESTED IN ALL OPPORTUNISTIC SPACEFLIGHT STUDIES ............................................................................................................... - 1 - vi"
+},
+{
+"id": "hrp_pharmacology_2023:x20",
+"text": "TABLE 1. OPPORTUNISTIC STUDIES OF THE STABILITY OF SPACEFLIGHT MEDICATIONS ................................................................. - 15 - TABLE 2. COMPARISON OF LOT-MATCHED PHARMACEUTICALS TESTED BY DU ET AL. AND BY THE FDA. ......................................... - 23 - TABLE 3. SUMMARY OF PHYSICAL CHANGES IN SPACEFLIGHT SAMPLES REPORTED BY DU ET AL. (2011) AND CORRESPONDING API CONTENT. ............................................................................................................................................................ - 39 -"
+},
+{
+"id": "hrp_pharmacology_2023:x21",
+"text": "TABLE 4. RESULTS OF THE 2006 GAMMA /TITANIUM STUDY API CONTENT (% LABEL STRENGTH) REMAINING AFTER IRRADIATION. ... - 47 - TABLE 5. MEAN API CONTENT (% LABEL STRENGTH) FOR THE 18 DRUG PRODUCTS (20 APIS) TESTED IN THE 2006 NSRL STUDY....... - 50 - TABLE 6. MOLAR QUANTITY OF DRUG REMAINING AFTER EXPOSURE TO 0.61 GY OF CHARGED PARTICLE RADIATION FOR A 3 YEAR MISSION . - TABLE 7. OFFICIAL HSRB DESIGN REFERENCE MISSION (DRM) CATEGORIES (ANTONSEN, 2020). .............................................. - 55 - TABLE 8. LIKELIHOOD BY CONSEQUENCE (LXC) MATRIX FOR RISK OF INEFFECTIVE OR TOXIC MEDICATIONS. .................................... - 56 -"
+},
+{
+"id": "hrp_pharmacology_2023:x22",
+"text": "TABLE A1. WATER VAPOR TRANSMISSION RATE FOR COMMON PACKAGING MATERIALS ............................................................ - 85 - TABLE A2. EXCIPIENTS USED BY REPRESENTATIVE MANUFACTURERS IN THE FORMULATION OF IBUPROFEN 400MG ........................... - 94 - TABLE A3. DIFFERENCE IN API POTENCY (%) BETWEEN SPACEFLIGHT AND TERRESTRIAL CONTROL DRUGS ....................................... - 97 - TABLE A4. ESTIMATES OF DEGRADATION RATE AND PREDICTIONS OF SHELF LIFE DURING EXPLORATORY SPACE MISSIONS ................... - 99 - TABLE A5. SUMMARY OF DRUG PRODUCTS TESTED IN OPPORTUNISTIC STUDIES ..................................................................... - 100 -"
+},
+{
+"id": "hrp_pharmacology_2023:x23",
+"text": "TABLE A6. CONCENTRATION-DEPENDENT DRUG DECOMPOSITION IN AQUEOUS SOLUTIONS. DRUG FORMULATED AT LOWER CONCENTRATIONS EXHIBIT MORE EXTENSIVE DEGRADATION (RADIATION DOSE OF 25 KGY OF GAMMA RADIATION) (MARCINIEC AND DETTLAFF 2008). ............................................................................................................................................... - 118 - FIGURE 1. RELATIVE CHANGE IN THE STRENGTH OF ............................................................................................................... - 18 -"
+},
+{
+"id": "hrp_pharmacology_2023:x24",
+"text": "FIGURE 2. POTENCY RELATIONSHIP BETWEEN SPACEFLIGHT MATCHED CONTROLS. ...................................................................... - 20 - FIGURE 3. LEAST SQUARES DEGRADATION TRENDS FOR 8 ACTIVE PHARMACEUTICAL INGREDIENTS (API) (9 FORMULATIONS) BASED ON TESTING DATA FROM ALL AVAILABLE SPACEFLIGHT STUDIES ............................................................................................ - 30 - FIGURE 4. THE COMPOSITION OF THE NASA SPACE RADIATION LABORATORY GALACTIC COSMIC RAY SIMULATION .......................... - 51 -"
+},
+{
+"id": "hrp_pharmacology_2023:x25",
+"text": "FIGURE 5. LONGITUDINAL EFFECTS OF STORAGE TIME ON API CONTENT. .................................................................................. - 52 - FIGURE 6. DIRECTED ACYCLIC GRAPH (DAG) FOR THE RISK OF INEFFECTIVE OR TOXIC MEDICATION DURING LONG-DURATION EXPLORATION SPACEFLIGHT. THE EVIDENCE IN THIS REPORT IS FOCUSED ON THE ACTUAL SHELF LIFE VERTEX WITH A SINGLE EDGE DIRECTED TO PHARMACEUTICAL EFFECTIVENESS. ........................................................................................................................... - 63 -"
+},
+{
+"id": "hrp_pharmacology_2023:x26",
+"text": "FIGURE A1. COMPARISON OF THE DECOMPOSITION OF SOLID SUBSTANCES AND AQUEOUS SOLUTIONS ......................................... - 117 - ExMC Exploration Medical Capabilities (Element) GCRsim simulated galactic cosmic radiation ICH International Council for Harmonisation KeV kiloelectron volt kg kilogram kGy kilogray LC-MS liquid chromatography-mass spectroscopy LTH long-term health lux unit of illuminance, equal to one lumen per square meter NASA National Aeronautics and Space Administration U.S. FDA United States Food and Drug Administration"
+},
+{
+"id": "hrp_pharmacology_2023:x27",
+"text": "RISK TITLE: RISK OF INEFFECTIVE OR TOXIC MEDICATION DURING LONG-DURATION EXPLORATION Risk Statement: Given that no method currently exists to sufficiently characterize how the quality and performance of medications that are exposed to the crewed environment during long-duration exploration missions relate to their stability and potency, provisioning of a safe and effective drug treatment may be significantly limited, which could impact the health and performance of crewmembers. • Active: Work and research are ongoing to address this risk."
+},
+{
+"id": "hrp_pharmacology_2023:x28",
+"text": "The scope of this report is limited to evaluating drug stability with respect to spaceflight. The effects of spaceflight on drug pharmacokinetics (PK) or drug pharmacodynamics (PD) are not addressed in this report: these topics will be reviewed in future reports. This is the first report of the available evidence pertaining to the chemical and physical stability of drugs in the context of drug impurity, drug repackaging, and exposure to ionizing space radiation. Previous studies are discussed within this report and, where possible, the data are interpreted and contextualized with regards to drug stability."
+},
+{
+"id": "hrp_pharmacology_2023:x29",
+"text": "Pharmaceuticals are used during space missions to treat a range of medical conditions, and to prevent or mitigate health-related concerns known to occur during spaceflight. The pharmaceuticals that will be selected for future human exploration space missions must remain adequately safe and effective throughout the duration of the mission. Evidence that medications degrade during spaceflight comes primarily from one controlled drug stability study that reported a loss of potency and physical changes for some drugs after approximately 2.5 years of spaceflight exposure (Du, et al., 2011). Several other opportunistic studies have provided mixed anecdotal evidence that some medications degrade during spaceflight; however, the design of these studies precludes comparison of spaceflight aging and normal aging in a terrestrial environment."
+},
+{
+"id": "hrp_pharmacology_2023:x30",
+"text": "Overall, the risk that drug degradation imposes for exploration human space missions is unclear because only a fraction of National Aeronautics and Space Administration (NASA)- supported studies have been published, and most do not include matched terrestrial controls or a series of timepoints that enable degradation rates to be compared between these environments. Many studies have assessed the stability of pharmaceuticals, and the literature associated with these studies is abundant. In part, this is because the stability of drugs reflects the aggregate effect of factors that include product formulation, manufacturing process, storage condition, and environmental exposure on"
+},
+{
+"id": "hrp_pharmacology_2023:x31",
+"text": "- 4 - the chemical and physical properties of each drug product. It is very well established that environmental factors, particularly humidity, can facilitate physical and chemical degradation of drugs. Consequently, the pharmaceutical containers in which drugs are marketed are considered an integral part of the drug product itself, and critical for ensuring stability of the product over its expected shelf life. To minimize mass and volume for space missions, NASA’s current practice is to remove solid oral dosage formulations (SODFs) from their sealed, manufacturers’ packaging and repackage them in plastic zip-lock baggies. Although appropriate for current mission scenarios, this process jeopardizes the expected shelf life of many oral medications and could be a concern for long-duration exploration missions."
+},
+{
+"id": "hrp_pharmacology_2023:x32",
+"text": "This is particularly problematic because many of the drug products currently being considered for exploration space missions have shelf lives that are inadequate for the duration of these missions and non-protective repackaging heightens this concern. Whereas the risk of therapeutic failure related to the loss of a drug’s active pharmaceutical ingredient (API) can be straightforward to assess, health risks imposed by degradation impurities must be assessed by addressing fundamental elements of hazard analysis, dose-response, exposure, and risk characterization (National Research Council, 1983)."
+},
+{
+"id": "hrp_pharmacology_2023:x33",
+"text": "Despite the evidence currently available, it remains unclear whether spaceflight has any measurable effect on pharmaceutical stability. All currently available spaceflight studies have substantive method and design limitations, including inadequate experimental transparency and the absence of matched terrestrial controls. Furthermore, ionizing radiation in the range of acceptable human exposures appears to have little to no dose-related effect on pharmaceuticals. Available evidence strongly supports the conclusion that vapor- and gas-permeable packaging is likely detrimental to the long-term stability of some SODF (tablets and capsules). Compounding this problem is that the shelf life for many spaceflight formulary medications, even under labeled terrestrial storage conditions, is inadequate for long-duration exploration missions."
+},
+{
+"id": "hrp_pharmacology_2023:x34",
+"text": "Repackaging medication exacerbates the shelf-life problem and may potentiate the comparatively minor effect of ionizing radiation. NASA and its international partners are developing capabilities to conduct human exploratory space missions beyond low Earth orbit (LEO). A roundtrip mission to Mars is expected to last 2–3 years (Drake and Watts, 2014; Smith, 2020). Unlike the International Space Station (ISS), which can be regularly resupplied, planetary missions will be too distant for resupply. For this reason, future exploration-class spaceflight missions will need to be increasingly Earth-independent. Long-duration space missions will expose crews to new and increased hazards, leading to increased potential for adverse health effects."
+},
+{
+"id": "hrp_pharmacology_2023:x35",
+"text": "Pharmaceuticals are a critical resource for maintaining crewmembers’ health and performance and for managing highly probable and potentially severe medical conditions that may arise during deep-space missions. Concurrent with the increased risks of adverse health effects, the limitations of mass, volume, and power for these missions will result in constrained pharmaceutical resources (Patel, et al., 2020). Therefore, pharmaceuticals must be carefully selected and packaged to ensure stability and therapeutic efficacy throughout the entire duration of an exploration mission (Hanson, et al., 2019)."
+},
+{
+"id": "hrp_pharmacology_2023:x36",
+"text": "All the NASA-supported studies of drug stability conducted so far have provided an inconsistent and incomplete picture of drug stability during spaceflight. Results from the only controlled study of drug stability during spaceflight indicate that the majority of both terrestrial and spaceflight medication (61.5 ± 9.0% and 82.1 ± 6.8%, respectively) failed to meet U.S. Pharmacopeia (USP) standards for drug potency after 880 days of storage (Reichard, et al., 2023). Five additional NASA-supported opportunistic spaceflight studies have produced inconsistent results (Table 1). All 6 flight-based investigations have limitations in design that make quantitative comparisons across studies difficult, and result in large qualitative uncertainties."
+},
+{
+"id": "hrp_pharmacology_2023:x37",
+"text": "Administration (FDA), 2017; U.S. Food and Drug Administration (FDA), 2020a) and on shelf life testing (U.S. Food and Drug Administration (FDA), 1999; U.S. Food and Drug Administration (FDA), 2003), and for USP specifications on packaging (United States Pharmacopeia, 2020a; United States Pharmacopeia, 2020b). Drug stability contributes directly to the risk of ineffective or toxic medications and is applicable to the knowledge gaps for PK and PD. Chemical reactions degrade drug products (Appendix 1), leading to a loss - 6 - of the API, which reduces therapeutic efficacy. Changes in inactive ingredients (excipients) can alter dissolution rate of oral drugs. Chemical reactions mediating the loss of API concurrently produce degradation impurities that can have adverse toxicological outcomes and may further influence API stability."
+},
+{
+"id": "hrp_pharmacology_2023:x38",
+"text": "These effects, API loss, impurities, and altered excipients are interrelated. Chemically degraded drugs do not deliver the dose of API required to attain blood and tissue concentrations (PK) needed to achieve the desired PD effects. Physical degradation can impact factors such as dissolution rate, which in turn affects absorption and bioavailability (PK), and consequently PD. Increases in dissolution can increase API, which increases the rate of absorption of API and results in elevated blood concentrations and an increased risk of side effects. If dissolution rate slows, absorption and bioavailability of API may be reduced, resulting in lower concentrations of API in the blood and, potentially, an increased risk of therapeutic failure. Both chemical and physical properties of pharmaceuticals deteriorate due to interaction of drug ingredients and environmental factors."
+},
+{
+"id": "hrp_pharmacology_2023:x39",
+"text": "Thus, the strategy of NASA’s Human Research Program’s (HRP) Exploration Medical Capability (ExMC) Element is to evaluate both the chemical and the physical characteristics of drug stability. PHYSICAL AND CHEMICAL DEGRADATION OF DRUGS Pharmaceuticals contain one (or more) API, which is the active drug substance, in combination with other active or inactive ingredients, known as excipients. For example, an aspirin tablet contains the drug substance acetylsalicylic acid, which is the API, as well as several therapeutically inactive excipients. The API gives the medication its pharmacological activity, whereas excipients are important for the manufacturing process and give the medication all its physical characteristics. The term drug is an ambiguous term but is used here as shorthand for pharmaceutical, medication, or drug product. a. Brief Overview of Drug Degradation"
+},
+{
+"id": "hrp_pharmacology_2023:x40",
+"text": "Drugs degrade in 2 principal ways: physical degradation and chemical degradation. Physical degradation affects the drug’s physical characteristics, such as its appearance, hardness, or dissolution rate, which can impact the drug’s behavior . Dissolution rate, as noted above, is important because it regulates the release of API from solid medications and influences concentrations in the blood. Many other forms of physical change affect the physical integrity of drugs, which often depend on the dosage form. One example is phase separation, which can occur with topical emulsion (e.g., creams, ointments) if the homogeneous dispersion of the ingredients breaks down into its constituent parts. Another example of a physical change is"
+},
+{
+"id": "hrp_pharmacology_2023:x41",
+"text": "- 7 - moisture adsorption by a hygroscopic excipient in a tablet formulation that causes the tablet to become soft and crumbly. Chemical degradation changes the molecular content of a drug by reducing API content and producing impurities. Although these chemical reactions can mediate the breakdown of either the API or the inactive excipients, the loss of API is usually of greater concern because this can reduce therapeutic efficacy. Excipients, which are pharmacologically inactive but not chemically inert, can also undergo degradation reactions and in some cases they contribute to API loss (Challenger, 2019; Narang, Desai and Badawy, 2012;"
+},
+{
+"id": "hrp_pharmacology_2023:x42",
+"text": "The chemical and the physical properties of a drug can degrade from interactions with the environment or from interactions between the ingredients (or impurities) in the drug formulation itself (e.g., incompatibilities). In many instances physical and chemical stability are interrelated; for example, adsorption of water by hygroscopic excipients in compressed tablets can promote hydrolysis of active ingredients and can also impact tablet hardness and dissolution rate (Carstensen, 1988; Waterman, et al., 2002). The chemistry of drug degradation is the chemistry of functional groups (a.k.a., moieties)—groups of atoms in a molecule that contribute to a chemical’s characteristic reactivity."
+},
+{
+"id": "hrp_pharmacology_2023:x43",
+"text": "A particular functional group (i.e., amide, carbonyl, alcohol) will undergo the same or similar chemical reactions regardless of the rest of the molecule's composition (Bokser and O’Donnell, 2013; Guillory and Poust, 2002; Wigent, 2013). Therefore, knowledge of a molecule’s functional groups can be used to predict pathways of degradation. The most common pathways mediating chemical degradation are hydrolysis, oxidation, and photolysis (Baker, 2019). For example, drugs containing amides, lactams, esters, imides, or acetal moieties are susceptible to hydrolysis, in order from most to least, respectively (Roy, et al., 2018; Waterman, et al., 2002)."
+},
+{
+"id": "hrp_pharmacology_2023:x44",
+"text": "Although susceptible to hydrolysis, the rate of reaction for any of these groups can vary widely and is often modified by factors including neighboring structures in the molecule, other ingredients in the medication, and environmental conditions. Hence, although ester hydrolysis is among the most common reactions contributing to drug instability, esters, depending on the drug formulation, can be stable for years, if protected from humidity and stored at cool temperatures (Guillory and Poust, 2002). With a knowledge of functional groups and environmental conditions, it is possible to anticipate environmental susceptibilities of a drug (Guillory and Poust, 2002)."
+},
+{
+"id": "hrp_pharmacology_2023:x45",
+"text": "The effect of environmental factors on APIs is well established. For example, Leeson and Mattocks (1958) showed a correlation between the rate at which solid aspirin (tablets) degrade and the atmospheric vapor pressure. It was later shown that moisture adsorbs onto the surface of the aspirin, which results in a film of water surrounding each aspirin particle (Carstensen, 1988; Nelson, Elwyn, Eppich and Carstensen, 1974). The water film is rapidly saturated in solid aspirin (i.e., an equilibrium is established), and as hydrolytic decomposition rapidly removes aspirin molecules, they are instantly replaced in solution by new aspirin molecules that form the particles’ surface."
+},
+{
+"id": "hrp_pharmacology_2023:x46",
+"text": "When abundant moisture is present, the kinetic rate at which the aspirin degrades appears to increase linearly with the concentration of the aspirin (i.e., pseudo-first order), and at a rate related to moisture that is independent of concentration (i.e., pseudo zero-order) (Carstensen 1988). Similarly, furosemide, a potent diuretic, is very susceptible to moisture, and is also susceptible to pH and oxygen changes in aqueous solutions (Asafu-Adjaye et al. 2011). The rate of a chemical reaction is governed by the laws of thermodynamics. A brief overview of the chemistry of drug degradation and rates of chemical reactions is presented in Appendix 1. Chemical reaction rates are critically important for the rationales regarding drug packaging, the shelf life of drug products, and the effect of temperature on chemical reaction rate."
+},
+{
+"id": "hrp_pharmacology_2023:x47",
+"text": "One practical implication of the dependence of reaction rate on temperature for exploration space missions is that low temperature storage slows the rate at which drugs degrade, which prolongs shelf life. The USP permits medications requiring controlled room temperature storage to be stored at cool or refrigerated temperatures (United States Pharmacopeia, 2021a), unless otherwise specified, which is in contrast to strict restrictions on the exposure of medications to temperatures above labeled storage conditions (United States Pharmacopeia, 2020c)."
+},
+{
+"id": "hrp_pharmacology_2023:x48",
+"text": "Space motion sickness, now called space adaptation syndrome (SAS), often develops during the first 6 hours of spaceflight. Approximately 60–80% of astronauts experience SAS within 2–3 days after launch, with symptoms peaking about 24–48 hours after onset and resolving 72–96 hours after onset (Davis, Jennings and Beck, 1993; Heer and Paloski, 2006). About 84% of the crewmembers who took drugs to treat SAS perceived the drugs to be effective, and most reports of ineffective treatments occurred during the first mission day (Putcha, et al., 1999). It was concluded that medications for treating SAS, regardless of type, were nearly always reported to be effective: 54% of the medications were reported as very efficacious, 30% moderately efficacious, and 7% mildly efficacious. Only 8% of the drug treatments were reported as not efficacious."
+},
+{
+"id": "hrp_pharmacology_2023:x49",
+"text": "No analysis was conducted to assess if treatment failures were associated with concomitant with emesis, which can result in the purging of an orally administered medication before dissolution or is absorbed; however, intramuscular promethazine seemed to be more effective than oral or rectal promethazine. If this is correct, then the greater effectiveness of intramuscular injections, compared to the oral and rectal administered drugs, is likely because injection bypasses pre-systemic clearance by the liver, yielding greater bioavailability. It can be concluded that because space shuttle missions are short (< 18 days), the drugs observed to be ineffective would not have had time to degrade (see PRINCIPLES OF DRUG"
+},
+{
+"id": "hrp_pharmacology_2023:x50",
+"text": "DEGRADATION). This is supported by the observation that most astronauts had good therapeutic response to administered drugs, indicating that drugs retained their potency. Drug failures are more likely to be related to other factors, such as symptom severity, drug selection, dose, and route of administration. A second study assessed medication usage by 24 ISS crewmembers during long-duration missions (mean = 159 ± 36 days) from 2002 to 2012 (Wotring, 2015). The subject group consisted of 18 men and 6 women; of these, 2 men and one woman reported using no medication during their missions. Data sources consisted of anonymized mission medical records and physician’s notes taken during the private medical conferences that were conducted weekly during each mission. The study found that the only medications reported to be ineffective were treatments for skin rash and SAS."
+},
+{
+"id": "hrp_pharmacology_2023:x51",
+"text": "Six crewmembers took drugs to treat skin rashes: a total of 46 treatments were reported. Two individuals indicated that treatment failure drove the use of repeat doses or a switch to a different pharmaceutical. Importantly, treatment failures for topical medications used for dermal disorders cannot be attributed to altered pharmacokinetics. Twelve instances of medication were used for the treatment of SAS symptoms, including 9 uses of promethazine, 2 uses of scopolamine, and one use of meclizine (Wotring, 2015). The medication was considered ineffective in 2 of the 5 cases where symptoms were the driving factor for medication use: promethazine was used in one case and scopolamine in the other. Because SAS and rash both affected crewmembers during the first days of the mission, drug stability cannot be the cause of drug failure because the kinetics of drug degradation preclude"
+},
+{
+"id": "hrp_pharmacology_2023:x52",
+"text": "- 10 - such rapid loss of potency during this time frame (see PRINCIPLES OF DRUG DEGRADATION). Furthermore, other subjects were successfully treated with the same medications, indicating the drugs were active for most crewmembers, and Du et al. (2011) showed promethazine maintains stability for almost a year during spaceflight (Du, et al., 2011; Reichard, 2023). The NASA evidence report titled Therapeutic Failure Due to Ineffectiveness of Medication discusses the results of an unpublished data mining study that retrospectively reviewed portions of anonymized medical debriefs from 511 crewmembers who flew on 88 Shuttle missions (Putcha 2009 as cited in (Wotring,"
+},
+{
+"id": "hrp_pharmacology_2023:x53",
+"text": "Because this investigation appears to be an extension of a previous study, it likely includes many of the same study subjects as the earlier study but is updated with more recent records; however, without access to the original report this cannot be verified. The review of medical debriefing records found that promethazine was the most commonly taken medication (201 total doses). Overall, 130 crewmembers (65%) reported that promethazine provided relief of SAS. Less often, promethazine was taken in combination with dextroamphetamine (45 instances), and slightly more than half of the crewmembers who took both medications reported symptomatic improvement. In contrast to the Putcha et al. (1999) report, a large percentage of some medications used to treat SMS were described as ineffective and a substantial number of treatment failures were reported."
+},
+{
+"id": "hrp_pharmacology_2023:x54",
+"text": "The combination of scopolamine and dextroamphetamine was effective only 37% of the time: 36 of 97 total doses resulted in symptom improvement (“much or somewhat better”), and 24% of doses were ineffective. Comparisons of the effectiveness of the different dosage forms of promethazine revealed that intramuscular injection was most effective for alleviating symptoms: after the injection 55% felt much better, 16% reported some improvement, and 7% reported no improvement or worsening symptoms, which is consistent with earlier reports (Davis, Jennings and Beck, 1993; Putcha and Cintrón, 1991). Symptom severity is not available for these data, so it is possible that crewmembers who experience severe symptoms took the combination of medications expecting this would provide greater relief."
+},
+{
+"id": "hrp_pharmacology_2023:x55",
+"text": "This is a good example of why it is important to collect information on symptom severity when assessing subjective efficacy of medication. Neither raw data - 11 - nor a complete report containing study methods and detailed results was available for review. Promethazine was the most common medication taken for SMS. An important limitation of all the studies described above is that they rely on retrospective documentation of medication use. Since 1989, information on medication use has been collected during the private medical conferences between flight surgeons and crewmembers (Davis, Jennings and Beck, 1993;"
+},
+{
+"id": "hrp_pharmacology_2023:x56",
+"text": "Wotring and Smith, 2020). These records suffer from recall bias and collection bias: recall bias because crewmembers are asked to recall the types and frequency of medications used over a period of time, often well after the medication(s) were used, and collection bias because the flight surgeon has the discretion to document in the record only what is deemed pertinent to the maintenance of crewmembers’ health (Wotring and Smith, 2020). The level of confidence in these records is further reduced because only 62% of the crewmembers responded to their medical debrief questionnaires, of which 32% were incomplete— hence, an overall completion rate of 42% (Wotring, 2011). Furthermore, documentation of medication use by ISS crewmembers has been reported to be incomplete (Wotring, 2015; Wotring and Smith, 2020)."
+},
+{
+"id": "hrp_pharmacology_2023:x57",
+"text": "The large amount of missing data raises a concern for reporting bias, which occurs when that missing information is not randomly distributed. Overall, reports that drug efficacy is reduced during spaceflight are inconclusive. First, no comparable terrestrial controls exist to compare the changes in drug efficacy during spaceflight. It might be possible, for example, to compare drug efficacy rates for SAS to effectiveness rates of medications for similar symptoms under terrestrial conditions, such as drug efficacy for the treatment of motion sickness or nausea induced by certain types of chemotherapeutics. In the absence of comparisons to terrestrial drug failure rates, therapeutic failure of SAS treatments during space missions cannot be deemed better or worse than therapeutic failure of terrestrial treatment of motion sickness."
+},
+{
+"id": "hrp_pharmacology_2023:x58",
+"text": "Therefore, available evidence neither supports nor rules out the possibility that some medications are less (or more) effective during spaceflight than terrestrially. Second, the severity of the symptoms was not considered as a potential factor correlated with medication ineffectiveness—that is, the possibility exists that the severity of a symptom influences the degree to which a subject experiences acceptable symptomatic relief. It is likely that symptomatic severity could not be analyzed because these studies all involved retrospective review of medical conference records that probably did not consistently capture severity information, and are subject to recall, collection, and reporting biases."
+},
+{
+"id": "hrp_pharmacology_2023:x59",
+"text": "When using Bradford Hill criteria (Fedak, et al., 2015) for evaluating evidence of causation, it can be concluded that decreased efficacy of medication during short-term space missions is not likely caused by a loss of drug potency (e.g., degradation). The following evidence supports this conclusion: • Temporal association: Most of the medication efficacies were evaluated during short-duration missions (< 18 days), and most of the medical conditions associated with medication failure occurred within the first day of the mission. This time period is too short to allow clinically significant changes in drug potency (Reichard, 2023), as is discussed below (section PRINCIPLES OF DRUG DEGRADATION)"
+},
+{
+"id": "hrp_pharmacology_2023:x60",
+"text": "• Consistency of effect: The same medications appear to be effective for some individuals and ineffective for others, and for a single crewmember a medication may be therapeutically ineffective at one time and effective at another time. • Strength of association: Generally, reports that medications are ineffective have been infrequent and not consistently associated with a single drug product, route of exposure, or medical condition. It appears more plausible that medication ineffectiveness during short-duration missions is attributable to drug selection, symptom severity, administered dose, and individual PK and PD variability; not drug stability."
+},
+{
+"id": "hrp_pharmacology_2023:x61",
+"text": "• Dose-response relationship: Because drug degradation depends on the rate of chemical change over time, as a drug’s duration of exposure to the spaceflight environment increases, the drug’s potency, and hence its efficacy, will decrease. This time-dependent loss of efficacy has not been observed. Instead, most instances of ineffective medication occur early in a mission when drugs are most potent. Unlike short-duration space missions that have been the focus of past medication use and efficacy studies, long-duration Mars missions will preclude resupply. It is plausible that time-dependent loss of potency for some drugs (Reichard, 2023) will result in a loss of efficacy and an accumulation of impurities during these missions."
+},
+{
+"id": "hrp_pharmacology_2023:x62",
+"text": "Hence, the risk that a drug will lose potency or accumulation degradation impurities is much more important for long-duration missions than for short-duration missions, which have traditionally lasted only a few weeks to months. CONTEXT: BASIS FOR DETERMINING DRUG STABILITY AND QUALITY Classifying medication quality as “acceptable” is critical for determining drug stability. The scope of USP quality specifications and the FDA stability requirements must be understood before they can be - 13 - correctly applied to the use of medications beyond their labelled expiration date during exploration space missions. Key regulatory concepts for interpreting the stability and shelf life of drugs are presented and discussed in Appendix 2."
+},
+{
+"id": "hrp_pharmacology_2023:x63",
+"text": "EVIDENCE: EFFECTS OF SPACEFLIGHT ON DRUG CONTENT a. Summary An association between spaceflight and degradation of pharmaceuticals has been reported in a single pilot study (Du, et al., 2011). In this study, repackaged solid drug products and non-solid drugs in their original manufacturer’s packaging were exposed to spaceflight and compared to lot-match control samples stored in an environmentally controlled chamber at Johnson Space Center (JSC). The study suggests that nearly all spaceflight-exposed drugs either failed1 before their specified expiration dates or exhibited a greater degree of degradation than the matched terrestrial controls (Blue, Rebecca S., et al., 2019; Du, et al.,"
+},
+{
+"id": "hrp_pharmacology_2023:x64",
+"text": "(2011) conducted an 880-day longitudinal drug stability study consisting of 4 time points, and assessed spaceflight drugs and terrestrial controls from the same manufacturing lot. Despite the advantages of this longitudinal design with lot-matched controls, the Du et al. (2011) study was limited because the analysis provides a 1 Based on the USP thresholds for API content or physical characteristics. - 14 - qualitative assessment of drug stability instead of an overall assessment of relative drug stability, and because it did not provide statistical significance of the changes reported."
+},
+{
+"id": "hrp_pharmacology_2023:x65",
+"text": "Table 1. Opportunistic Studies of the Stability of Spaceflight Medications Study Cory et al., 2017 Cory et al., 2016 Wotring, 2016 Wu and Chow, ISS ISS Medical kit ISS Medical kit ISS Medical kit ISS (retest of Du samples) NASA Report NASA Report Published NASA Report NASA Report 3 time points; different timepoints for each medication One time point; different duration for each medication 2 time points for promethazine inj; 3 for all others 2 time points but also includes prolonged period of terrestrial storage No controls One per API; no storage timepoints"
+},
+{
+"id": "hrp_pharmacology_2023:x66",
+"text": "Correspond to spaceflight time points, some do not Unmatched Unmatched N/A Unmatched Each flight sample has lotmatched control Independent between-lot analyses for the same drug; unclear if withinlot replicates are independent (n=10 replicates) Independent between-lot analyses for the same drugs; unclear if within-lot replicates are independent (n=9 or 10 replicates) Independent replicates; likely tested a single lot for each drug and timepoint (n=3) Analytical analysis performed at FDA per USP monograph and repeated on separate days."
+},
+{
+"id": "hrp_pharmacology_2023:x67",
+"text": "51–501 days 132–700 days 550 days 140–699 days 316 or 880 days 3separate lots/flight medication + an unmatched control for each medication One lot/flight medication + unmatched controls for each medication. Not discussed; likely one lot per medication Different lots for each time point/control; no indication samples were from the same mfr. at each time point Different lots tested for each drug or time point (one control is pair-matched to one flight sample) Repackaged All flight samples repackaged; controls packaging not described. All flight samples repackaged; controls packaging not described."
+},
+{
+"id": "hrp_pharmacology_2023:x68",
+"text": "API, active pharmaceutical ingredient; ISS, international space station; HPLC, High-performance liquid chromatography, UPLC, Ultra-performance liquid chromatography; MS/MS, tandem mass-spectroscopy; DAD, Diode Array Detector; PAD, Pulsed Amperometric Detector, LLOQ, lower limit of quantitation; LLOD, Lower limit of detection; LC-MS, liquid chromatography-mass-spectroscopy; UV, ultraviolet; inj, injection b. Lot-Matched Controlled Study of Drug Content The USP defines potency2 (i.e. content) as the amount of API in a drug product. The USP specifies the acceptable range of potency relative to the label claim (i.e. strength) of the dosage unit. Drug labelers guarantee that the potency of a drug will exceed the minimum USP acceptance criteria through the drug’s expiration date. Du et al. assayed the API content of 33 medications at 4 different time points."
+},
+{
+"id": "hrp_pharmacology_2023:x69",
+"text": "The medications were store in 8 medical kits: 4 medication kits were stored on board ISS and 4 were stored terrestrially in an environmentally controlled chamber at JSC. Across all medical kits each drug product was 2 The definition of potency used by USP is different from that is other biomedical sciences which consider potency to be the amount of drug required to produce an effect of a given intensity. In this evidence report, the USP definition of potency as content of API is used exclusively. - 17 - from a single manufacturing lot; hence, the analyses at each time point were conducted on samples (spaceflight and terrestrial) from the same manufacturing lot. Terrestrial samples were stored under comparable temperature and humidity conditions as the flight samples."
+},
+{
+"id": "hrp_pharmacology_2023:x70",
+"text": "Twenty-two of the 24 solid oral dosage forms (SODFs) were removed from the manufacturer's container and repackaged in rigid polypropylene containers. These medication containers are not assumed to be protective because they are not clearly described in the publication and there is no record that the packaging was sealed or tested for vapor transmission (United States Pharmacopeia, 2020d; United States Pharmacopeia, 2021b). Analytical testing included only the amount of API in each formulation at each time point; degradation products were not evaluated, and degradation mass balance was not determined."
+},
+{
+"id": "hrp_pharmacology_2023:x71",
+"text": "Because this study was intended as a pilot study, the study methods were not described in detail in the report and no analytical methods (i.e., API extraction procedure, chromatographic conditions, method suitability evaluation, number of independent replicates, batching of samples for processing and analysis) were provided. The absence of a detailed methods section reduces the level of confidence in the overall conclusions from this study. One critical limitation is that the authors appear to have tested only a single sample of each drug (Wotring, 2016), therefore, the standard deviation represents only analytical variability (which is usually very low) not experimental variability. Experimental variability is critical for hypothesis testing, and this variability could account for the reported differences between the 2 treatment groups."
+},
+{
+"id": "hrp_pharmacology_2023:x72",
+"text": "On the basis of these results, the authors concluded that “…a number of formulations tested had a lower potency or percent content of API after storage in space with a consistently higher number of formulations failing USP potency requirement after each storage period interval in space than on Earth.” This conclusion, based on dichotomized quantitative API content (i.e., pass/fail outcomes), has been repeatedly cited as evidence that latent factors associated with spaceflight increase the risk of drug failure. However, quantitative analysis of API content can provide"
+},
+{
+"id": "hrp_pharmacology_2023:x73",
+"text": "- 18 - more insight into how spaceflight affects drug stability. After 13 days of storage the API content of spaceflight samples and corresponding lot-matched controls varied by less than ±5% for most drugs (34 of 36) (Figure 1). After 880 days of storage, 39% of spaceflight drugs (14 of 36) remained within ±5% of control potency, and the API content of all spaceflight drugs and corresponding controls differed by no more than 10%. Taken together, this supports a conclusion that spaceflight exposure has little effect on drug stability (Appendix 3)."
+},
+{
+"id": "hrp_pharmacology_2023:x74",
+"text": "No investigations have determined individual factors unique to spaceflight that might contribute to increased rates of API degradation. It is pertinent, however, that other NASA-supported studies (see section Opportunistic Spaceflight Studies of Drug Content) have tested SODF that were repackaged into nonprotective packaging for spaceflight (See section PACKAGING AND DRUG STABILITY). Drugs are repackaged to minimize mass and volume. No study has evaluated the effect of the NASA repackaging process on long-term stability of SODF by directly comparing the stability of repackaged medications to the stability of the same medications in their sealed manufacturer’s packaging or other protective packaging."
+},
+{
+"id": "hrp_pharmacology_2023:x75",
+"text": "The study by Du et al. (2011) is the only spaceflight investigation that has included multiple drugs that were not repackaged (14 of the 36 drugs tested). Of these drugs, 10 are an assortment of non-solid formulations, including solutions, ointments, creams, and a suppository. The remaining 4 APIs that were not repackaged Figure 1. Relative change in the strength of active pharmaceutical ingredient (API) after 13 and 880 days of spaceflight. Values represent API potency (%) of terrestrial samples minus API potency (%) of matching spaceflight samples after either 13 days ( ) or 880 days ( ◼) of storage . Error bars reflect ± one standard deviation. The blue shaded area represents a difference of ± 5% in API potency; the dashed line represents a ±10% difference in potency."
+},
+{
+"id": "hrp_pharmacology_2023:x76",
+"text": "A value of zero indicates no difference between the API content of the matched control and spaceflight samples (Reichard, 2023). - 19 - were combination products containing 2 APIs: imipenem with cilastatin (lyophilized powder for injection) and ethinyl estradiol with norethindrone (blister pack oral tablets). After 880 days of spaceflight, the API content of only 2 of 14 spaceflight drugs (~14%) that were stored in the manufacturer’s packaging deviated from their corresponding controls by more than 5%, whereas the API content of 9 of 22 (41%) repackaged spaceflight medications differed from the corresponding controls by more than 5%. Similarly, the mean failure time for drugs that failed during the"
+},
+{
+"id": "hrp_pharmacology_2023:x77",
+"text": "880-day storage period was 707 days (n = 8) for the repackaged drugs, most of which were non-solid formulations (the one exception is ethinyl estradiol), and 633 days for repackaged drugs (n = 12), all of which are either capsules or tablets. The more frequent and earlier failure of SODF is unexpected because solid formulations typically have longer shelf lives than non-solid formulations of the same API, which suggests that repackaging may have contributed to drug degradation. The effect of drug repackaging on drug stability has not been a concern for LEO missions because the ISS can be readily resupplied; however, resupply will be much more limited, if not impossible, for exploration space missions. Therefore, repackaging must provide more protection than repackaging used on the ISS to ensure drug stability throughout the full duration of an exploration mission"
+},
+{
+"id": "hrp_pharmacology_2023:x78",
+"text": "Reichard et al, 2023 showed that the potency of spaceflight and of terrestrial drugs (as assessed by API content) are highly correlated (r = 0.894), with a nearly 1:1 correspondence in drug content across all the drugs they tested (Figure 2). Linear regression of these paired terrestrial and spaceflight potencies yields a slope coefficient of 1.012, which is virtually equivalent to unity, indicating that, overall, drugs under both conditions degraded at nearly the same rates. The offset of the y-intercept ( -4.64%) may reflect an inconsistency in the analytical method, the details of which were not discussed in the published paper or provided as supplementary information."
+},
+{
+"id": "hrp_pharmacology_2023:x79",
+"text": "Du et al. (2011) determined that a few individual oral drugs appeared to degrade faster in spaceflight than in terrestrial conditions, and suggested this may be due to factors such as exposure to ionizing space radiation, the physical effects of vibration and microgravity, the effects of increased levels of - 20 - atmospheric CO2, or off-nominal environmental conditions (e.g., temperature) before, during or after flight. It is well established that many medications are susceptible to atmospheric factors, particularly water vapor and oxygen (Asafu-Adjaye, et al., 2011; Carstensen, 1988; Leeson and Mattocks, 1958)."
+},
+{
+"id": "hrp_pharmacology_2023:x80",
+"text": "What is notable about all the tested medications, except for promethazine suppositories, is that only the SODF exhibited extensive degradation, and all these medications were removed from protective manufacturers’ containers and repackaged into non-protective packaging (United States Pharmacopeia, 2020a; United States Pharmacopeia, 2021a). This is an unexpected observation given liquid formulations are typically less stable than solid formulations of the same IPA and are much more sensitive to ionizing radiation (Abramowicz, Zuccotti and Pflomm, 2016). As shown in Table 1, a common factor associated with all reports of spaceflightinduced degradation of SODF is non-protective packaging that permits ingress of atmospheric constituents, including O2, CO2, and vapor, which are known to mediate chemical and/or physical degradation of medications, and hence U.S."
+},
+{
+"id": "hrp_pharmacology_2023:x81",
+"text": "1.012) is close to unity, which is indicated by the hashed line (slope = 1 and intercept - 21 - stored in the terrestrial environment; that is, uncharacterized factors in the spaceflight exposure increase the basal degradation rate by ~50%. However, it is crucial to note that both the spaceflight samples and the matched terrestrial controls in this study exhibited a substantial time-dependent likelihood of failure (Reichard et al. 2023) that is greater than expected. Nine of 24 (38%) terrestrial (e.g., control) SODFs failed before their expiration date, as based on their API content. This number is surprising because manufacturers must demonstrate that their medications meet UPS requirements for potency through the labeled expiration date."
+},
+{
+"id": "hrp_pharmacology_2023:x82",
+"text": "Because these medications are terrestrial controls, spaceflight factors did not contribute to their failure, meaning repackaging is the most likely factor contributing to premature failure. Consequently, the drug repackaging process is the largest single contributor to drug failure, whereas other environmental factors associated with spaceflight appear to have a minor role in contributing to drug failure. Because no NASA-supported study has included drugs in sealed manufacturer’s packaging as a control, the relative contribution of nonprotective drug repackaging on long-term stability has not been evaluated. Although manufacturer’s packaging is not perfect (see PACKAGING AND DRUG STABILITY section of this report), it remains the bench mark for comparison with other packaging (U.S. Food and Drug Administration (FDA),"
+},
+{
+"id": "hrp_pharmacology_2023:x83",
+"text": "1985; United States Pharmacopeia, 2020e). Hence, a critical need exists to evaluate how NASA’s current drug repackaging practices affect drug quality when compared to stability in the manufacturer’s packaging. In conclusion, quantitative reanalysis of spaceflight drug stability data suggests that baseline degradation (i.e., the deterioration of drugs under controlled terrestrial control) is the dominant factor contributing to shortened shelf life. Spaceflight contributes an additional time-varying effect on degradation (Reichard, 2023). For the few drugs with publicly available data on shelf life, both terrestrial and spaceflight shelf life determined in NASA studies was less than the labeled shelf life, and substantially less than the extended shelf life reported by the U.S. FDA for a some drugs (Lyon, et al., 2006)."
+},
+{
+"id": "hrp_pharmacology_2023:x84",
+"text": "However, no NASAsponsored study has attempted to elucidate which factor(s) are the most significant contributor(s) to the drug deterioration, or whether repackaging practices contribute to the increase probability of failure associated with spaceflight. These mechanisms of damage must be elucidated before countermeasures can be identified and evaluated for prolonging the shelf life of medication, ensure therapeutic efficacy, and minimize the risk of toxic degradation products. c. Opportunistic Spaceflight Studies of Drug Content. NASA has supported 5 opportunistic studies of drug stability during spaceflight (Table1) (Cory, et al.,"
+},
+{
+"id": "hrp_pharmacology_2023:x85",
+"text": "2016; Cory, James and Mangiaracina, 2017; Khan, M. A. and Wotring, 2014; Wotring, 2016; Wu, L. and Chow, 2016). All these studies, apart from Khan and Wotring (2014), assessed medications flown on board - 22 - the ISS. A summary of all data manually extracted from individual reports is provided in Appendix 5. The design and the results of each study are briefly summarized below, and a summary of all the findings is provided at the end of this section. Khan and Wotring, 2014: This study involved a comprehensive analysis of several aged medications in partnership with U.S. FDA (Khan, M. A. and Wotring, 2014). The study design is ad hoc because it used samples leftover from the Du et al. 2011 study that had been stored in an environmental chamber at JSC at controlled room temperature until analyzed by the U.S. FDA."
+},
+{
+"id": "hrp_pharmacology_2023:x86",
+"text": "Three medications were analyzed for API content: Azithromycin 250 mg tablets, levofloxacin 500 mg tablets, and levothyroxine 0.025 mg tablets. When possible, medications exposed to spaceflight were lot-matched with terrestrial controls, however different lots of the same drug were also tested. Only a few dose units were available for study at each timepoint and no more than 2 spaceflight time points were assessed for each medication. In one case, products from 2 different manufacturers were used for the 2 different time points (azithromycin: Sandoz and"
+},
+{
+"id": "hrp_pharmacology_2023:x87",
+"text": "Greenstone). In all cases, different medication lots were tested at different time points. It should be noted that typical investigations of drug stability will use medications from a single manufacturer and lot and include at least 4 time points or more to enable linear modeling of degradation. Experimental details for each medication are provided in Appendix 10. Overall, this study, along with the studies by Cory et al, 2017, provide the most comprehensive description of sample processing, analytical methods, and quality assurance. In addition, complete metadata are provided for each sample tested, including manufacturer, national drug code (NDC), lot number, expiration dates, launch and landing dates, and analysis dates."
+},
+{
+"id": "hrp_pharmacology_2023:x88",
+"text": "This data transparency provides a high level of confidence in the study results, enables independent evaluation of the data, and allows this study’s methods and results to be compared with the results of other studies. The most important characteristic of this study is that it re-tested several of the same samples that were originally tested by Du et al. (2011), in addition to a few samples returned from other missions. However, unlike the Du and colleagues’ study, Wotring and Khan demonstrated system suitability, including system calibration, response factor, precision, accuracy, sensitivity, quantitative range, and variability. These are fundamental criteria that should be provided to support all analytical studies."
+},
+{
+"id": "hrp_pharmacology_2023:x89",
+"text": "FDA testing showed that, in fact, all levothyroxine tablets contained very similar amounts of API, suggesting that the duration of spaceflight exposure did not appear to be associated with increased degradation because spaceflight samples seem to have higher potency than corresponding terrestrial samples. The conclusions of the FDA analyses, which were based in part on API content as well as impurity content (see Appendix 2), were as follows: • Azithromycin: Storage during spaceflight followed by prolonged terrestrial storage beyond the drug’s expiration date did not impact the quality of the Greenstone Azithromycin product. This finding is consistent with the Du et al. (2011) results, which found Azithromycin potency was within USP specifications."
+},
+{
+"id": "hrp_pharmacology_2023:x90",
+"text": "• Levofloxacin: The potency of the aged samples from the NASA flight kit were no different than the potency of an unexpired commercial drug product (i.e., a different, much more recent lot of levofloxacin) from the same manufacturer. These results seem to indicate that the stress of both the spaceflight and the space environment had no effect on the potency of this medication. However, this cannot be ascertained conclusively by this study because the flight and the control Table 2. Comparison of Lot-matched Pharmaceuticals Tested by Du et al. and by the FDA."
+},
+{
+"id": "hrp_pharmacology_2023:x91",
+"text": "Drug tested Timepoint Lot number Treatment 5HP059A Control 94.8 ± 0.39 5/2012 106 ± 2.8 5HP059A Flight 90.9 ± 0.37 5/2012 98.3 ± 2.0 6AG613 Control 85.6 ± 0.89 5/2012 101.2 ± 0.42 6AG613 Flight 81.2 ±0.31 5/2012 101.1 ± 0.61 C05T0861A4 Control 92.3 ± 0.66 1/2012 77.38 ± 1.89 C05T0861A4 Flight 88.6 ± 0.51 1/2012 78.12 ± 1.99 C05T0861A5 Control 75.3 ± 0.14 1/2012 80.91 ± 0.91 C05T0861A5 Flight 72.3 ± .03 1/2012 81.39 ± 1.47 - 24 - samples had expired and had been stored for a considerable length of time in controlled environment after they were returned from space."
+},
+{
+"id": "hrp_pharmacology_2023:x92",
+"text": "Khan and Wotring, 2016: This opportunistic study tested the hypothesis “…that medication degradation on the ISS does not differ from what is typically seen on Earth” (Wotring, 2016). This crosssectional study measured API content in 9 different drugs stored on the ISS for 550 days. Medications were analyzed 3–5 months after return to Earth. All medications tested in this study were oral solid formulations—either tables or capsules. Consistent with normal operational procedures, all the tested medications were repackaged into zip-lock bags for transfer to the ISS medical kit. The published description identifies the expiration date for each medication, as well as the general analytical approach (Appendix 2)."
+},
+{
+"id": "hrp_pharmacology_2023:x93",
+"text": "Of the 9 medications, 3 (ibuprofen, loperamide, and modafinil) were still within their expiration dates at the time of analysis, while the remaining 6 medications were expired, ranging from 151 (acetaminophen) to 334 days (pseudoephedrine) beyond their expiration dates at the time of analysis. Eight of 9 medications tested had an API content that was at least 96% of the label strength, all of which exceeded USP acceptance criteria for API content3. Melatonin, which was 11 months past expiration at the time of analysis, was the only drug that did not meet minimum USP acceptance criteria for potency with 89.2% of label strength, which is less than the required 90% of label strength."
+},
+{
+"id": "hrp_pharmacology_2023:x94",
+"text": "On the basis of qualitative judgment (i.e., not statistical testing), the authors concluded that their results were consistent with the hypothesis that the levels of chemical degradation are no different in LEO spaceflight than on Earth. Although no terrestrial 3 The authors state that acetaminophen did not meet the USP acceptance criteria, which at the time may have been between 98–102% of label strength. Prior to this, the acceptance threshold was a minimum of 97.0% of the label strength, which the test article did meet. Currently (11/2023) the acceptance criteria for acetaminophen tablets is 90.0% to 110.0% of the labeled strength – which would allow this medication to pass"
+},
+{
+"id": "hrp_pharmacology_2023:x95",
+"text": "- 25 - controls were included in this study, the fact that no excessive degradation was observed does appear to support a conclusion that if spaceflight does affect drug stability, then the effect on these medications is quite small. The hypothesis proposed for this study is based on a relative comparison,—i.e., the degradation of drugs on the ISS is different than degradation on Earth. This hypothesis requires a statistical comparison of spaceflight samples to a control group. Therefore, matched terrestrial control samples are required to test the null hypothesis that degradation of drugs during spaceflight is no different from terrestrial degradation."
+},
+{
+"id": "hrp_pharmacology_2023:x96",
+"text": "The study did not include a terrestrial control arm. Instead, the API content of each medication was compared to USP API acceptance criteria, which are quality-based threshold standards that do not give insight into “typical” terrestrial degradation. USP specifications do not account for the time-dependent change in API content that occurs with any drug. Using USP acceptance criteria as a surrogate for measured terrestrial stability has 2 problems: first, USP acceptance criteria are only applicable if medications are tested before their expiration date (here, 6 of the 9 medications were tested after expiration); second, USP monographs are not fixed; USP continuously reviews and revises drug monographs, meaning that USP specifications are subjective benchmarks."
+},
+{
+"id": "hrp_pharmacology_2023:x97",
+"text": "Although the study design does not test the proposed hypothesis, the results do provide “free floating” estimates of absolute API content and impurities for each tested medication and indicate that spaceflight does not have any substantive effect on SODF. Cory et al., 2016: This study measured API content and impurities in 5 medications previously stored on the ISS at “conditions more extreme than those recommended by the manufacturers” (Cory, et al., 2016), however, the report does not discuss how extreme these conditions were or whether they include offnominal temperature, humidity, or other factors (e.g., radiation). This cross-sectional study assayed API content at a single timepoint that was different for each drug tested."
+},
+{
+"id": "hrp_pharmacology_2023:x98",
+"text": "The study compared the API content of medications returned from ISS to the API content of terrestrial “controls” that were from the same manufacturer but not the same lot. In fact, the terrestrial controls ranged from 7 months older than the flight samples (valacyclovir) to more than 60 months newer than the flight samples (Sertraline) (Appendix 10). Although the different lots and ages of the corresponding flight and terrestrial samples made it difficult to interpret the results, the API content was only slightly different for the terrestrial and spaceflight treatment conditions, indicating that spaceflight had very little effect on drug stability."
+},
+{
+"id": "hrp_pharmacology_2023:x99",
+"text": "Overall, no unusual loss of API occurred in the flight medications. The drug exhibiting the lowest potency after spaceflight, relative to its labeled strength, was sertraline 50 mg tablets that were stored on the ISS for 700 days. Sertraline retained 98.6% ± 5.8% of its label potency despite being more than 40 - 26 - months past its expiration date and having spent 700 days in space. Whereas the terrestrial sertraline samples retained 99.5% ± 5.2% of their label potencies and where well within their shelf life (i.e., not expired at the time of testing). Although no statistical testing was performed, it is unlikely that these mean potencies differ based on the large standard deviations reported. None of the drug products exhibited a loss of potency relative to USP acceptance criteria, and the potency of all medications was similar to the potency of the terrestrial controls."
+},
+{
+"id": "hrp_pharmacology_2023:x100",
+"text": "Earth at various asynchronous periods of time. Because this was an opportunistic study, parallel lot-matched controls were not available and baseline potency assays were not measured at the start of the experiment, concurrent with repackaging for flight. Four drug products were analyzed: promethazine 25 mg tablets, promethazine 25 mg/mL injection solution, azithromycin 250 mg tablets, and ibuprofen 400 mg tablets (Appendix 10). The API content of each drug product was assessed at 2–3 timepoints. The report does not give manufacturer information for any of the samples, therefore it cannot be determined if the sets of drugs were from the same manufacturer or not."
+},
+{
+"id": "hrp_pharmacology_2023:x101",
+"text": "The report does provide a detailed description of the analytical methods and robust documentation of analytical quality metrics for each test, such as intra- and inter-day accuracy, quantitation and detection limits, and precision for the liquid chromatography with tandem mass - 27 - spectrometry (LC-MS/MS) assays. However, despite the careful analytical reporting, the report is missing critical information on each medication, particularly for azithromycin, that limit interpretation. Importantly, the report does not provide any type model (linear or otherwise) for “predictive degradation” of medications over time, which was the stated goal of the research."
+},
+{
+"id": "hrp_pharmacology_2023:x102",
+"text": "The 4 pharmaceuticals returned from ISS contain less API content than the corresponding unmatched terrestrial “controls”: Ibuprofen tablets, 14–17% less API; promethazine tablet, 14–23% less API; promethazine injection solution, 15–18% less API; and azithromycin tablet, 17–27% less API. However, these differences probably do not reflect changes due to spaceflight, for several reasons. First, the spaceflight medications were well past their expiration when they were analyzed. The authors provided expiration dates for half (7 of 14) of the spaceflight medications tested, all of which expired between Oct. 2013 and Sept. 20154. The report is dated 11/29/2016, so presumably the samples were analyzed in early 2016, meaning that the flight medications were about 1–3 years past expiration when they were analyzed."
+},
+{
+"id": "hrp_pharmacology_2023:x103",
+"text": "This is a serious problem because controls were not from the same manufacturing lot as the spaceflight samples. The authors did not give the expiration dates for any of the terrestrial controls; however, it appears medications were new because they were used as baseline controls and assumed to contain API at 100% potency. Therefore, this experiment only gives API content of expired medications relative to new, unexpired medications from the same manufacturer, and does not assess the effects of spaceflight. Second, the duration of spaceflight exposure was much shorter than the duration these samples were stored terrestrially. The mean duration of terrestrial storage was 406.6 days, 420.5 days, 236.7 days, and 225.7 days longer than the mean spaceflight exposure for promethazine tablets, promethazine injection, azithromycin, and ibuprofen, respectively (Appendix 10)."
+},
+{
+"id": "hrp_pharmacology_2023:x104",
+"text": "This postflight storage substantially contributes to the time available for the API to degrade. The authors did not report how the spaceflight medications were packaged, however, repackaging could increase the rate of degradation. Third, the report is missing important information needed to evaluate time-related changes. Expiration dates for controls samples were not provided so it is not clear if the control and the spaceflight 4 Mission landing dates are available for all spaceflight medications and range from October 2012 to - 28 - drugs are comparable in age. Additionally, launch dates, landing dates, repackaging dates (if applicable), brand information, and lot information was not provided for the products tested."
+},
+{
+"id": "hrp_pharmacology_2023:x105",
+"text": "For these reasons, no meaningful post hoc analysis of these data is possible. which can provide important insights into spaceflight factors that contributed to the decreased potency In summary, the Wu and Chow study provides limited description of drug content and does not provide a predictive degradation model. The results show no apparent association between API content and the number of days in space; however, no statistical testing was performed to rigorously test for a relationship. The report is missing important information on many of the medications that makes it impossible to determine whether changes in API content are attributable to spaceflight, time past expiration, or brand variability."
+},
+{
+"id": "hrp_pharmacology_2023:x106",
+"text": "Cory et al., 2017: This is an opportunistic study that measured API content and impurities in 3 medications stored on board the ISS for different durations: amoxicillin, aspirin, and pseudoephedrine (Appendix 10). For each medication, all samples were from the same manufacturer, but were from different manufacturing lots with different expiration dates. Additionally, all treatments are compared to a single unmatched terrestrial reference sample. All the terrestrial controls were well within their shelf life (i.e., not expired), whereas all the spaceflight medications were 3–37 months past their expiration date."
+},
+{
+"id": "hrp_pharmacology_2023:x107",
+"text": "Consequently, the flight samples do not represent a clear continuum of change over time, and exposurerelated changes in content are confounded by the different ages of each medication at the time of analysis. Analysis of the results is challenging because a scientific method normally holds all variables constant except for the dependent variable. Here, as with the other opportunistic studies, the experimental variables that affect potency include days in space (51–501 days), days past expiration (91–1185 days), and period of terrestrial storage after spaceflight (338–1231 days). It is strongly recommended that future studies avoid such complicated designs because changing multiple experimental variables obscures the relationship between spaceflight duration and potency."
+},
+{
+"id": "hrp_pharmacology_2023:x108",
+"text": "No clear time-related difference in API content was detected for any of the spaceflight exposed aspirin or amoxicillin samples relative to corresponding terrestrial samples. For pseudoephedrine, however, an apparent difference was detected (no statistical comparison was performed). Interestingly, however, the spaceflight samples of pseudoephedrine retained substantially greater API levels (103.4–107.6%) than the corresponding terrestrial samples (91.0% ± 2.0). It is noteworthy, however, that although all formulations of pseudoephedrine 30 mg tablet were from Major Pharmaceuticals, the NDC number of the terrestrial pseudoephedrine sample (00904-6338-60) given in the report is different than the NDC of the spaceflight"
+},
+{
+"id": "hrp_pharmacology_2023:x109",
+"text": "- 29 - samples (00904-5053-60), indicating that both the spaceflight and the terrestrial samples were produced by the same manufacturer (00904 = Major Pharmaceutical), but are different products of different ages (6338 ≠ 5053). The formulations of these products are very different5. Differences in formulation can significantly affect the efficiency of the extraction when processing the drugs for analysis. Because the spaceflight samples were all the same product but different from the terrestrial sample, it is possible that the extraction process optimized for the spaceflight samples yielded inefficient extraction of the terrestrial samples, and hence an apparent low potency estimate for this medication."
+},
+{
+"id": "hrp_pharmacology_2023:x110",
+"text": "Cory (2017) and Khan (2014) analyzed equivalent medications, but differently formulated drug products. That is, equivalent products (i.e., pseudoephedrine 30 mg tablets) were analyzed but they had different NDC numbers and different formulations. Although all samples were analyzed using USP compendial methods, assessing different products in the same experiment is problematic. A compendial method can be applied to equivalent drug products that are composed of different ingredients; however, when comparing different product formulations, the USP method may require adjustment to account for differences in matrix and should be supported by method validation and verification. This fact is discussed in"
+},
+{
+"id": "hrp_pharmacology_2023:x111",
+"text": "USP chapters <1225> and <1226>, as well as the FDA Guidance for Industry titled Analytical Procedures and Methods Validation for Drugs and Biologics (U.S. Food and Drug Administration (FDA), 2015; United States Pharmacopeia, 2019a; United States Pharmacopeia, 2022). Specifically, as stated in USP <1226>: …the excipients in a drug product can vary widely among manufacturers and may have the potential to directly interfere with the [compendial] procedure or cause the formation of impurities that are not addressed by the compendial procedure. In addition, drug products containing different excipients, antioxidants, buffers, or container extractives may affect the recovery of the drug substance from the matrix. (United States Pharmacopeia, 2019a)(USP"
+},
+{
+"id": "hrp_pharmacology_2023:x112",
+"text": "Hence, although USP methods are validated, the method must still be verified under conditions of use. If this is not done, assay results may underestimate content. We have verified this through direct discussion with the U.S. FDA Office of Product Quality (personal communication). NASA-supported studies have measured drug potency after various periods of spaceflight. All these studies have focused on solid oral drugs that have been repackaged6 into uncharacterized or non-protective 6 Repackaging is defined as “the act of taking a finished drug product from the container in which it was distributed by the original manufacturer and placing it into a different container without further manipulation o f the drug” (U.S. Food and Drug Administration (FDA), 2017; United States Pharmacopeia, 2021b)"
+},
+{
+"id": "hrp_pharmacology_2023:x113",
+"text": "- 32 - packaging, meaning that these packages are not rated as USP “tight” or “well-closed” based on vapor transmission rate (United States Pharmacopeia, 2021b). Such studies provide a worst-case estimate of drug stability under spaceflight conditions. This section evaluates the formation and the safety of pharmaceutical impurities. Impurities can cause adverse health effects if present at sufficiently high levels and with an adequate duration of exposure. All pharmaceutical products contain impurities, the levels of which are regulated by the U.S. FDA. The formal process to evaluate the safety of impurities, and the regulatory context of safety evaluations, is discussed in"
+},
+{
+"id": "hrp_pharmacology_2023:x114",
+"text": "Appendix 6 (Assessment of Impurity Toxicity). Evidence regarding the role of spaceflight exposure on the formation of drug impurities is presented below. All pharmaceuticals contain impurities that can originate from several sources. Impurities are frequently introduced during the production or synthesis of the API (i.e., “process-formed impurities”), or they can be contaminants of the excipients used in compounding the drug product. Drug manufacturers typically outsource excipient production to other chemical manufacturers; hence, impurities levels vary depending on the quality of the materials purchased (Waterman, et al., 2002; Waterman, Adami and Hong,"
+},
+{
+"id": "hrp_pharmacology_2023:x115",
+"text": "2004). Impurities can also accumulate over time due to the chemical reactions that mediate degradation. Such reactions frequently require the presence of environmental factors such as moisture (i.e., relative humidity) and oxygen. In some instances, excipients, or chemical contaminants in excipients, can react with the API (often in the presence of oxygen or moisture) to mediate API degradation. Contamination attributable to biological organisms and metals are excluded from this discussion. Impurities can act as reaction substrates to mediate chemical degradation of a drug API, and, if present at sufficiently high levels, they can pose a risk for adverse health effects. Nitrosamines are an example of one class of impurities that can originate during the synthesis of drug substances, as contaminant of excipients and as products of chemical degradation (U.S."
+},
+{
+"id": "hrp_pharmacology_2023:x116",
+"text": "Food and Drug Administration (FDA), 2020b). Nitrosamines are classified as possible human carcinogens and the recent identification of nitrosamine impurities in several drug products has compelled the FDA to issue industry guidance to control sources of nitrosamine contamination and improve quality testing. Nitrosamines are the reason Ranitidine - 33 - (Zantac®) was withdrawn from the market and the reason for multiple recalls of drugs, such as benazepril (lotensin®). Many of the drug products on the ExMC exploration candidate formulary7 have well-established safety profiles. However, the safety of these medications is based on use within their established shelf life, and exploration space missions may require use of some medications well beyond their expiration date."
+},
+{
+"id": "hrp_pharmacology_2023:x117",
+"text": "Furthermore, most of the SODF will likely be repackaged for long-duration space missions to reduce mass and volume of the medical kits, and manufacture expiration dates are nullified when medications are removed from the sealed manufacturer container . Significant misconceptions exist concerning the acceptability of toxic impurities in pharmaceuticals. Fundamentally, all pharmaceuticals contain impurities, many of which present a risk to human health if the quantities reach a critical level. This discussion is pertinent to the use of pharmaceuticals beyond their established shelf life, as would be expected for exploration space missions, especially if medications are repackaged. Appendices 2 and 6 discuss how acceptable impurity levels in pharmaceuticals are established."
+},
+{
+"id": "hrp_pharmacology_2023:x118",
+"text": "Consistent with industry guidance and accepted chemical risk assessment principals, the objective for assessing impurities is not to ensure spaceflight medications do not accumulate “toxic” impurities; instead, the objective is to ensure that impurities do not exceed levels that pose a health hazard (i.e., they are “qualified”) or, that impurities with genotoxic potential or potential to be immune sensitizers, do not exceed default limits. EVIDENCE: NASA SUPPORTED IMPURITY STUDIES a. Summary of Available Spaceflight Study Results Four studies have evaluated how spaceflight affects the levels of drug impurities. These studies, which are summarized above and in Table 1 (Cory, et al., 2016; Cory, James and Mangiaracina, 2017; Khan,"
+},
+{
+"id": "hrp_pharmacology_2023:x119",
+"text": "M. A. and Wotring, 2014; Wotring, 2016), were all opportunistic studies that analyzed pharmaceuticals from the ISS medical kits that were returned near or shortly after their expiration dates. 7 The ExMC exploration candidate formulary is an evolving list of medications for exploration space missions developed by ExMC. Medications derive from several different sources, including the current operational formulary on board the ISS, Condition Resource Trace medications derived from Clinical finding forms, the IMPACT (Informing Mission Planning via Analysis of Complex Tradespaces) tool, a historical list of drugs from flown ISS Medical Accessory Kit, and medications previously evaluated in spaceflight studies."
+},
+{
+"id": "hrp_pharmacology_2023:x120",
+"text": "Wotring (2016) evaluated potency and impurities in 9 SODF that were flown on board ISS for 550 days. Because this was an opportunistic study, no terrestrial controls were included to measure relative effects of spaceflight or to perform hypothesis testing. An objective was simply to evaluate if unusual impurities might be observed, which might be a health hazard. This study design has several limitations that should be considered when interpreting the results: • Without corresponding terrestrial control samples, the study does not provide any insight on whether (or not) spaceflight conditions affect drug stability any differently than would be expected for the same drug stored under similar terrestrial conditions."
+},
+{
+"id": "hrp_pharmacology_2023:x121",
+"text": "• The study is a cross sectional design and did not evaluate the temporal effects of spaceflight on drug quality. Therefore, the results represent a snapshot at a single point in time. A temporal design would have been able to determine drug degradation rates and the rates of impurity formation. • The mass balance of each medication was not reported, so it is impossible to determine if the major degradation products were quantified; the author acknowledged this limitation. • Baseline impurity content was not measured for any of the drugs prior to spaceflight storage. In the absence of a baseline measurement, it cannot be determined if degradants observed after spaceflight are different from or at greater levels than those present at the start of the experiment."
+},
+{
+"id": "hrp_pharmacology_2023:x122",
+"text": "Of the 9 medications, 3 (ibuprofen, loperamide and modafinil) were still within their expiration dates at the time of analysis, while the remaining 6 medications were expired, ranging from 151 (acetaminophen) to 334 days (pseudoephedrine) beyond their expiration dates at the time of analysis. The strength of several of the drugs was less than the labeled strength, including aspirin (96% of labeled strength), melatonin (90% of labeled strength) and acetaminophen (97% of labeled strength). The change in API content for drugs in this experiment are discussed in the Opportunistic Spaceflight Studies of Drug Content section of this report."
+},
+{
+"id": "hrp_pharmacology_2023:x123",
+"text": "Two of the tested drugs, loperamide and melatonin, had impurity levels slightly exceeding USP quality standards but the impurities were not identified. A third drug, acetaminophen, contained an unidentified impurity that, if determined to be paraaminophenol, would also have exceeded the USP quality limit. In the absence of terrestrial controls or baseline testing, the relative effect of spaceflight exposure on impurity content cannot be determined from these results. Qualitatively, the results suggest that a spaceflight exposure of up to 550 days does not pose a concern for the formation of unusual or excessive accumulation of degradation products or premature drug failure."
+},
+{
+"id": "hrp_pharmacology_2023:x124",
+"text": "Cory and colleagues evaluated drug impurities in 2 separate unpublished spaceflight studies. The first study evaluated the quality of 5 SODF that were repackaged at JSC and stored on board ISS for various durations from 132 to 700 days (Cory, et al., 2016). Each drug was evaluated at a single time point and spaceflight samples were compared to unmatched terrestrial samples of recent lots of the same medication from the same manufacturer (Appendix 10). It appears that all spaceflight samples were analyzed at least 1 to 3 years after return from orbit, which introduces some uncertainty regarding how much degradation is attributable to spaceflight, and how much is attributable to terrestrial storage. Despite using highly sensitive"
+},
+{
+"id": "hrp_pharmacology_2023:x125",
+"text": "LC-MS chromatography, and the fact that 4 of 5 medications were well past their expiration dates, API potency (% of label strength) and impurity levels for all medications remained within USP acceptable limits. No unusual degradants were observed in spaceflight samples. In the second study, Cory et al. (2017) evaluated 3 medications stored on board ISS for different periods of time and compared to a single representative terrestrial control maintained in the JSC pharmacy under ambient conditions (Cory, James and Mangiaracina, 2017). Medications for each treatment condition (i.e., control and spaceflight) were from the same manufacture, however, the terrestrial JSC controls were 2–"
+},
+{
+"id": "hrp_pharmacology_2023:x126",
+"text": "4 years newer than the spaceflight samples: all spaceflight samples had expiration dates that were circa 2013–2016, whereas terrestrial samples expired circa 2017 or 2019; analysis was performed mid-2017. The interval of several years before the spaceflight samples were analyzed contributes additional variability and uncertainty to the results. At the time of analysis, all the flight samples were past their manufacturer’s expiration dates, whereas the terrestrial samples were not expired. The authors reported that the amount of degradation impurities did not correlate with the duration of spaceflight exposure. Both studies by Cory and colleagues indicate that spaceflight exposure did not produce any unusual change in medications, despite the lack of lot-matched matched controls."
+},
+{
+"id": "hrp_pharmacology_2023:x127",
+"text": "A fourth (unpublished) study (Khan, M. A. and Wotring, 2014) evaluated the content of 3 drugs previously reported by Du et al. (2011). This again was an opportunistic study rather than a designed study and therefore the sample selection appears somewhat ad hoc. Three drugs were tested, azithromycin 250 mg tablet, levofloxacin 500 mg tablet, and levothyroxine 0.025 mg tablet (Appendix 10). • Azithromycin included 2 samples from Sandoz and 3 from Greenstone Pharmaceuticals, of which one Sandoz and 2 Greenstone samples were terrestrial comparators (“controls”). The Sandoz control and one Greenstone control remained in the manufacturer’s packaging. The corresponding Sandoz sample and Greenstone samples were exposed to spaceflight for either"
+},
+{
+"id": "hrp_pharmacology_2023:x128",
+"text": "• Levofloxacin samples were all Janssen products and were all repackaged by the JSC pharmacy. Two samples were exposed to spaceflight for either 316 or 880 days and the third sample served as a terrestrial control. The control sample of levofloxacin was lot-matched to the 880-day spaceflight sample but was of a different lot from the 316-day spaceflight sample. • Levothyroxine consisted of 2 sets lot-matched control and spaceflight samples. (i.e., each flight sample had a lot of matched terrestrial control). The spaceflight samples spent either 13 or 880 days on board ISS. All samples were approximately 1600 days past expiration."
+},
+{
+"id": "hrp_pharmacology_2023:x129",
+"text": "Most of the spaceflight samples were several years past their manufacturer expiration dates. Despite the age of these samples, no significant differences in impurity content were detected for any of these samples and all samples were within USP specifications. Interestingly, some of the process-formed impurities of the Sando and Greenstone azithromycin tablets were different, which may have been related to different synthesis processes or formulation ingredients used in the manufacturing of these products. This observation stresses the importance of brand selection for experimental studies and operational use. b. Conclusions from spaceflight drug degradation studies."
+},
+{
+"id": "hrp_pharmacology_2023:x130",
+"text": "The spaceflight drug degradation studies were all opportunistic studies that were not designed to assess time-dependent changes in the levels of degradation impurities. These studies cannot demonstrate an association between spaceflight exposure and emergence of degradation impurities because samples were not punctually analyzed after spaceflight return and were not paired with lot-matched terrestrial controls. In most cases, the spaceflight samples were substantially older than the corresponding controls, meaning that the effect of aging cannot be distinguished from the effects of spaceflight. Regardless of these changes, spaceflight had no clear effect on the degradation of SODF and spaceflight was not associated with the appearance of unusual impurities."
+},
+{
+"id": "hrp_pharmacology_2023:x131",
+"text": "E. EFFECT OF SPACEFLIGHT ON PHYSICAL STABILITY OF DRUG SUBSTANCES CONTEXT: FACTORS INFLUENCING PHYSICAL DRUG STABILITY Physical drug stability contributes directly to pharmacokinetic and pharmacodynamic risks, both of which influence therapeutic efficacy and safety of medications. Physical attributes of a drug are classified by 2 broad testing categories: product quality tests and product performance tests. Product quality tests ensure continuity of manufacturing and storage; product performance standards, when applicable, ensure the functional requirements are met. Product quality tests include both “universal” tests and dosage formspecific tests. Universal tests are often termed “appearance” by USP specifications and are subjective"
+},
+{
+"id": "hrp_pharmacology_2023:x132",
+"text": "- 37 - qualitative descriptions of the dosage form. Physical appearance attributes include the color, texture, and general appearances of the medication (United States Pharmacopeia, 2013; United States Pharmacopeia, 2019b). For example, the specifics of a tablet could be white, round, biconvex, film-coated tablet, imprinted with 400 on one side. As an example, the appearance of an injectable powder could be described as “white to off-white and as cake or powder; free from particles or foreign matter.”(Skwierczynski, 2013). Qualitative universal test-results are the predominant type of data currently available from NASA-supported spaceflight studies."
+},
+{
+"id": "hrp_pharmacology_2023:x133",
+"text": "Dosage form-specific tests, as the name suggests, depend on the specific dosage form. For example, product quality tests applicable to injectable solutions include pH, particulate matter, sterility, bacterial endotoxin, and product uniformity; no product performance tests exist for injectable solutions. For tablets, quality tests include product uniformity, weight, tablet friability, force required to break the tablet, and water content, among others. The excipients in the formulation can significantly influence several of these factors."
+},
+{
+"id": "hrp_pharmacology_2023:x134",
+"text": "For example, hygroscopic ingredients can adsorb moisture from the environment resulting in increased weight and water content, and decrease the force required to break a tablet (Waterman and MacDonald, 2010). Adsorbed moisture can also influence chemical stability (Asafu-Adjaye, et al., 2011; Carstensen, 1988; Chen, et al., 2012; Szakonyi and Zelkó, 2012). Tests of tablet performance include dissolution rate and disintegration tests. Dissolution rate governs the release of the API from solid dosage forms. When dissolution rate increases, the active ingredient may be released too quickly, resulting in elevated concentrations of API in the blood and an increased risk of side effects."
+},
+{
+"id": "hrp_pharmacology_2023:x135",
+"text": "Conversely, if the API is released too slowly then blood concentrations are reduced and the time to reach peak blood concentration will be longer or bioavailability will decrease, which increases the risk of therapeutic failure. Drug aging can induce changes in the molecular structure of drug ingredients, and this can slow dissolution. Such changes include timedependent crosslinking of polymers (i.e., cellulose, polyethylene glycol [PEG]) that are commonly used in the formulation of many medications (Waterman and Adami, 2005), and polymer crosslinking can also be increased by exposure to ionizing radiation (Sarcan and Ozer, 2020; Sintzel, et al., 1997). A recent NASAsupported pilot study assessed dissolution performance of 4 irradiated and aged medications; these results are currently being prepared for publication."
+},
+{
+"id": "hrp_pharmacology_2023:x136",
+"text": "EVIDENCE: NASA-SUPPORTED STUDIES OF PHYSICAL STABILITY Two studies investigated the longitudinal changes in physical drug stability: Du et al. 2011, and an unpublished study of drug stability after simulated space radiation exposure performed in conjunction with NASA Space Radiation Laboratory (NSRL) at Brookhaven National Laboratories (BNL) and University of Du et al. (2011) reported that some physical changes occurred in spaceflight-exposed medications but did not provide a detailed discussion or tabulation of those changes. Furthermore, the report lists the spaceflight drugs that exhibited physical changes (but not the type of change), but did not discuss physical changes in the terrestrial samples. Hence, the results should not be interpreted to mean that the controls samples did not have physical changes."
+},
+{
+"id": "hrp_pharmacology_2023:x137",
+"text": "Additionally, corresponding API content (as the percent of labeled strength) is provided to enable comparison of physical changes with chemical changes. Mupirocin is reported to have undergone phase separation by the 880-day time point; however, this change is omitted in the authors’ tabulated summary of physical changes. Two observation that can be drawn from Table 3. First, there is no consistent dose-effect relationship between duration of spaceflight and physical changes; i.e., physical changes do not progress with increasing duration of spaceflight. Several samples have early changes that are not observed at later timepoints, despite substantially longer exposure to spaceflight (Table 3). Correlation of exposure and effect is one of the key criteria for causal relationships (Fedak, et al., 2015)."
+},
+{
+"id": "hrp_pharmacology_2023:x138",
+"text": "Second, the presence of physical changes (or absence of physical changes in controls) is not associated with chemical changes: several instances of physical changes occurred in the absence of significant changes in API content, and in other cases, significant changes in potency occurred in the absence of corresponding physical changes. The fact that physical and chemical changes do not necessarily coincide is not unusual, but what is difficult to reconcile are instances where physical changes are associated with a clear loss of potency at an earlier"
+},
+{
+"id": "hrp_pharmacology_2023:x139",
+"text": "- 39 - timepoint (i.e., Amoxicillin / clavulanate, Dextroamphetamine, Levothyroxine) but no physical changes were observed at a subsequent timepoint despite clear progression of API loss over time. The investigators also performed dissolution assays on 12 of the solid drug formulations, however, values were similar for control and flight samples of all 12 drug products at all timepoints. It is well recognized that drug products deteriorate over time, especially when they are removed from the manufacturer’s protective packaging. What remains unclear from the Du et al. (2011) report is whether the conditions of spaceflight accelerate (or inhibit) the normal degradation process. Du et al."
+},
+{
+"id": "hrp_pharmacology_2023:x140",
+"text": "(2011) explicitly state they collected weight, physical appearance, color, odor, hardness, friability, and drying data, however, these data are not presented in the text nor provided as supplementary information. Color change is briefly discussed, but the methods used to assess the subjective change are not provided, even though discoloration was reported as “the most frequently observed physical change in flight samples.” Color changes in spaceflight samples were not provided along with corresponding changes in controls, which could have yielded greater insight into how spaceflight affects physical stability of drugs."
+},
+{
+"id": "hrp_pharmacology_2023:x141",
+"text": "The second study that investigated physical changes was initiated in 2017 and includes an assessment of drug dissolution. The results of this study are currently being analyzed for potential publication. The study assessed how exposure to simulated galactic cosmic radiation (GCR) affects the stability of 4 solid drug formulations: acetaminophen 500 mg tablets, amoxicillin 500 mg capsules, ibuprofen 400 mg tablets, and promethazine 25 mg tablets. Each medication was evaluated for drug identity, potency, impurities, and tablet performance. Samples were placed on a foam backing material and irradiated with either 0.5 Gy or 1.0 Gy of mixed energetic ion beams that collectively simulate the GCR field (See Figure 4). A more complete discussion of the methods and conditions for this experiment is provided in the Irradiation"
+},
+{
+"id": "hrp_pharmacology_2023:x142",
+"text": "Study with Long-term Post-irradiation Storage section of this report. The dissolution rates of the irradiated samples and lot-paired unirradiated controls were analyzed at 2 timepoints after irradiation (a later third - 41 - timepoint did not have enough sample to analyze dissolution rate). These data are currently being analyzed, although preliminary inspection of the results indicate that no medications showed a substantive change in dissolution rate. In summary, available evidence does not support an association between length of time pharmaceuticals are exposed to the spaceflight environment and physical change in drug appearance or function. However, physical changes have not been either comprehensively studied and/or comprehensively reported by existing studies."
+},
+{
+"id": "hrp_pharmacology_2023:x143",
+"text": "It is plausible that long-term exposure to low dose-rate radiation could facilitate crosslinking reactions between some medication ingredients, which might slow dissolution and impact physical stability; however, this hypothesis has yet to be tested at spaceflight-relevant radiation doses. CONTEXT: ROLE OF PACKAGING AND REPACKAGING ON DRUG DEGRADATION This section addresses how the pharmaceutical industry and regulators use packaging to ensure the safety and efficacy of drug substances. Evidence from NASA-supported studies related to the effect of drug packaging and repackaging and relevant scientific literature is discussed. Pharmaceutical packaging is one of the most important factors that affect the stability of drugs, and packaging will be critical for maintaining safe and effective medications during long-duration exploration spaceflights."
+},
+{
+"id": "hrp_pharmacology_2023:x144",
+"text": "As noted above, the investigators of the only controlled study of spaceflight medications observed a very high premature failure rate of repackaged terrestrial control medications. The basic principles pertaining to NASA’s repackaging of medications for long-duration space missions are given in Appendix 7. a. Atmospheric oxygen It is well established that atmospheric factors, such as oxygen and moisture, mediate degradation of many medications. For example, solid formulations of aspirin (tablets) degrade by hydrolysis, the rate of which correlates with atmospheric vapor pressure (Carstensen, 1988; Leeson and Mattocks, 1958).Similarly, furosemide, a potent diuretic, becomes unstable when exposed to moisture and is susceptible to changes in pH and oxygen in aqueous solutions (Asafu-Adjaye et al. 2011)."
+},
+{
+"id": "hrp_pharmacology_2023:x145",
+"text": "Oxygen not only contributes to the chemical degradation of many drugs in terrestrial conditions, it also contributes to radiolytic degradation of some drugs (Jacobs, 2022; Silindir Gunay and Ozer, 2009; Wilczyński, et al., 2012). The presence of oxygen during radiation exposure (Jacobs, 2022) increases radiation-induced oxidative degradation of many APIs because the oxygen reacts with intermediates or directly with ionized medicinal substances containing O2 molecules (Sintzel, et al., 1997; Wilczyński, et al., 2012). For example, solutions of propyl gallate, butylated hydroxyanisole, or o-tocopherol irradiated under vacuum with 20 kGy of gamma radiation degraded 16%, 8%, and 90%, respectively; whereas the same radiation exposure in the presence of O2 caused the solutions to degrade 89%, 90%, and 100%, respectively (Jacobs, 1985)."
+},
+{
+"id": "hrp_pharmacology_2023:x146",
+"text": "The presence of oxygen can also increase radiation-induced degradation of polymers (Shulman and Ginell, 1970). Wide arrays of polymers are commonly used to formulate both solid and nonsolid formulations of drugs. Nisar et al. (2016) irradiated diclofenac solutions with 145–1015 Gy of gamma rays under different atmospheric conditions: air, N2O, and N2. At the lowest dose of gamma radiation tested (145 Gy) the loss of potency in the presence of O2 and N2O, both of which can form reactive oxygen intermediates, was substantially greater than in the presence of N2,which does not form reactive oxygen species (Nisar, et al., 2016). Consequently, for some drugs there is a possibility that protective packaging can have an indirect role in protecting drugs from radiation by insulating drugs from oxygen and reducing the formation of reactive oxygen intermediates. b. Water vapor"
+},
+{
+"id": "hrp_pharmacology_2023:x147",
+"text": "It is well established that moisture facilitates chemical degradation and physical deterioration of pharmaceuticals. Water reacts with solid drugs by several mechanisms of which water adsorption, capillary condensation, deliquescence are among the most important. Deliquescence is the process by which a substance sorbs (i.e., adsorption and absorption) water vapor from the atmosphere until it dissolves to form a solution. Capillary condensation draws adsorbed moisture into micropore spaces within a solid drug until the spaces become filled with condensed liquid from the vapor. Deliquescence and capillary condensation, lead to the formation of condensed or bulk water, which can dissolve watersoluble components of a pharmaceutical product."
+},
+{
+"id": "hrp_pharmacology_2023:x148",
+"text": "Crystal hydrates are formed when water molecules penetrate into the crystal lattice of a drug substance, which can disrupt the organized crystal structure to form an amorphous solid (Ahlneck and Zografi, 1990; United States Pharmacopeia, 3013). Amorphous or partially amorphous solids can absorb significant amounts of water because they have enough molecular disorder to permit penetration, swelling, or dissolution. These hygroscopic substances are particularly susceptible to hydrolysis (Waterman, et al., 2002). For example, solid formulations of aspirin (tablets) degrade by hydrolysis at a level that correlates with atmospheric vapor pressure (Leeson and Mattocks,"
+},
+{
+"id": "hrp_pharmacology_2023:x149",
+"text": "1958). Moisture is adsorbed at the surface of aspirin particles resulting in a film of water surrounding the aspirin particles. The water film is rapidly saturated as aspirin molecules are removed from the solid aspirin particle, and undergo hydrolytic decomposition, and as a molecule of aspirin hydrolyzes, it is almost instantaneously replaced by another aspirin molecule from the solid phase particle. The kinetic - 43 - principals underlying aspirin degradation have been documented in great detail, however, because some level of moisture is always present, the degradation rate is pseudo-first order with respect to aspirin concentration and pseudo zero-order with respect to water adsorption (Carstensen, 1988)."
+},
+{
+"id": "hrp_pharmacology_2023:x150",
+"text": "Similarly, furosemide, a potent diuretic, becomes unstable when exposed to moisture and is additionally susceptible to changes in pH and oxygen in aqueous solutions (as cited in (Asafu-Adjaye, et al., 2011). The science surrounding moisture ingress and rates of gas permeation into (and out of) pharmaceutical packaging is known, and rigorous models are available to predict how packaging configurations will perform (Nelson, Eric D. and Huang, 2011; Waterman, et al., 2002). Pharmaceutical manufacturers reduce the effects of environmental factors on medications primarily by selecting packaging materials with barrier properties corresponding to the susceptibilities of the drug product. Repackaging pharmaceuticals into non-protective containers significantly increases exposure to atmospheric water vapor and oxygen."
+},
+{
+"id": "hrp_pharmacology_2023:x151",
+"text": "Consequently, repackaging some drugs into non-protective containers (including Ziplock bags) increases the environmental exposure of the drug products and nullifies the manufacturer’s experimentally determined shelf life. All the spaceflight drug stability studies have focused on testing repackaged drugs. c. Current NASA Repackaging Process NASA’s practice of drug repackaging is essential to reduce the mass and volume of drug resources. The effect of drug repackaging on drug stability is not a concern for LEO missions because the ISS can be readily resupplied; however, for exploration space missions, resupply will be much more limited if not impossible. Therefore, to ensure drug stability throughout the full duration of an exploration mission, the materials used for repackaging will need to be far more protective than those used for the ISS."
+},
+{
+"id": "hrp_pharmacology_2023:x152",
+"text": "Additionally, although current drug repackaging is acceptable for near-Earth missions, improved repackaging (or use of the original manufacturer’s packaging) could reduce the frequency of resupply, and hence the costs associated with resupply for the ISS or future near-Earth missions. At present, the NASA Operational Pharmacy repackages SODF into polymeric plastic, zip-lock closure bags that are purchased from Healthcare Logistics (Circleville, OH) or from Consolidated Plastics (Stow, OH). These packaging products are permeable to gases and vapors, and do not meet the USP standards for protective multiple-unit packaging, which “must be at least as protective or more protective than the original container–closure system in terms of moisture vapor transmission rate, oxygen transmission, light transmission, and compatibility … with the drug product.” (United States Pharmacopeia, 2020e)."
+},
+{
+"id": "hrp_pharmacology_2023:x153",
+"text": "11 had API content below USP specifications (i.e., failed) before the manufacturer’s label expiration date. Of - 45 - the 11 failed medications, 9 were repackaged orals drugs and 2 were non-solid topical medications. Nine of 22 SODF in the terrestrial control group failed to meet USP API content specifications before their labeled expiration date, which represents a striking failure rate of 41% in the control group. This result is incredibly consequential because the manufacturer guarantees that the product meets quality specification before the expiration date is reached. Because the control group was exposed only to terrestrial environmental conditions consistent with label storage requirements, the conclusion is that repackaging contributed to the exceptional number of premature failures."
+},
+{
+"id": "hrp_pharmacology_2023:x154",
+"text": "The mean time until failure8 for non-repackaged drugs that failed during the 880-day storage period was 707 days (n = 8): most were non-solid formulations (the one exception was ethinyl estradiol). Whereas the average failure time was 633 days for repackaged drugs (n = 12), all of which were either capsules or tablets. This difference is unexpected because non-solid drugs typically have shorter shelf lives than comparable solid formulations of the same drug substance. Because repackaging can adversely affect stability (Bokser and O’Donnell, 2013; U.S. Food and Drug Administration (FDA), 1999; U.S. Food and Drug Administration (FDA), 2017; U.S. Food and Drug Administration (FDA),"
+},
+{
+"id": "hrp_pharmacology_2023:x155",
+"text": "2020a) the more frequent and earlier failure of repackaged solid formulations in both the terrestrial and spaceflight samples suggest that repackaging contributes to the drug degradation reported in these studies. For these reasons, NASA needs to investigate the effect of repackaging on drug stability and, if necessary, develop and test protective repackaging options for long-duration space missions (e.g., Mars-length mission). G. THE EFFECTS OF IONIZING SPACE RADIATION ON DRUG STABILITY Speculation exists that exposure to ionizing radiation during long-duration space missions will compromise the stability of some pharmaceutical products (Blue, R. S., et al., 2019; Mehta and Bhayani,"
+},
+{
+"id": "hrp_pharmacology_2023:x156",
+"text": "8 Failure is an API content (i.e., potency) less than the acceptance threshold specified in the USP monograph for each drug. - 46 - determine how various environmental factors contribute to the failure of medications. The assumption that the dose of spaceflight radiation that is acceptable for occupational exposure and human habitation will influence drug stability is not supported by studies using analog GCR, in silico models, or radiostability studies in the literature. The evidence for each source of information is discussed below, as are data gaps and uncertainties. The effect(s) of ionizing radiation on drugs is discussed in Appendix 9."
+},
+{
+"id": "hrp_pharmacology_2023:x157",
+"text": "EVIDENCE: NASA-SUPPORTED DRUG RADIATION STABILITY STUDIES a. Scope of Studies To date, no spaceflight studies have tested the effect of ionizing radiation on drug stability. No NASAsupported study of drug radiostability has been peer reviewed or published. Several pilot analog studies have been performed; however, all these studies have significant limitations that include study design issues, poor method transparency, and limited data availability. Therefore, despite engaging significant time and resources, substantial uncertainty persists."
+},
+{
+"id": "hrp_pharmacology_2023:x158",
+"text": "In the sections below, studies are grouped into 3 categories: spaceflight studies, terrestrial analog studies, and in silico models. As discussed above, NASA has supported 6 spaceflight investigations of drug stability (Table 1). Of these studies, only Du et al. (2011) collected radiation exposure data. Three studies used terrestrial radiation exposure or simulated GCR to evaluate how ionizing radiation affects drug stability. Only one of these studies has a comprehensive record of methods and results; the remaining studies have methods and results available only in abstract format. One study used in silico modeling to evaluate aqueous medications exposed to ionizing radiation at fluences characteristic of exploration spaceflight. b. Studies of Spaceflight Radiation Exposure"
+},
+{
+"id": "hrp_pharmacology_2023:x159",
+"text": "To date no dedicated studies have investigated the effects of spaceflight radiation on the long-term stability of drug products. Du et al. (2011) collected cumulative data on environmental factors, including radiation exposure, and suggested an association between radiation exposure and drug stability. Unfortunately, because of the experimental design, the effects of radiation cannot be isolated from other environmental variables acting on the medications. Most of the SODF evaluated in the study were repackaged into non-protective zip-lock baggies. This type of repackaging exposes medications to atmospheric factors in the surrounding environment, as discussed in the PACKAGING AND DRUG STABILITY section."
+},
+{
+"id": "hrp_pharmacology_2023:x160",
+"text": "Du and colleagues noted the limitations of designing spaceflight studies, stating that “…constraints associated with conducting research in space limit the opportunity for robust experimental design and adequate statistical rigor.” Study design limitations and the absence of method transparency, as discussed in the EFFECT OF SPACEFLIGHT ON DRUG CONTENT and PACKAGING AND DRUG STABILITY sections, precludes causal inference for any environmental factor . The multitude of variables associated with testing spaceflight drug stability will make it difficult to perform well-controlled spaceflight studies."
+},
+{
+"id": "hrp_pharmacology_2023:x161",
+"text": "To our knowledge 3 NASA-supported drug radiostability studies have been performed. All 3 have used the BNL NSRL facilities. c. Irradiation studies without post-radiation storage In 2006, the Humans Research Project’s (HRP) Pharmacotherapeutics Discipline conducted 2 ground-based radiation experiments using the NSRL. These pilot studies were performed to test the hypothesis that high dose-rate ionizing radiation causes degradation of the API in some medications. However, neither study has been published nor are data available from either study for further analysis."
+},
+{
+"id": "hrp_pharmacology_2023:x162",
+"text": "The first study exposed 5 drug products to 2 doses of gamma rays (9.36 kGy or 35.8 kGy) or a single dose of titanium ions (48Ti, 17 Gy) (Table 4). Medications were evaluated for API content, which was expressed as a percentage of label strength. No additional details are available for this experiment. High doses of gamma rays (35.8 kGy) and titanium ions (17 Gy) appear to marginally reduce API content. The most notable effects of gamma radiation were on trimethoprim and clavulanate. For the other drugs, 3.8-fold increase in gamma dose is associated with an apparent decrease in API content of about 56%."
+},
+{
+"id": "hrp_pharmacology_2023:x163",
+"text": "However, available records provide only the arithmetic mean API levels for most drugs and no associated measure of variability (e.g., standard deviation); therefore, it is not possible to statistically test the hypothesis that irradiated samples have lower API content than unirradiated matched control drugs. It is also Table 4. Results of the 2006 Gamma /Titanium Study API Content (% label strength) Remaining After Irradiation. RADIATION SOURCE Control Gamma Nucleon Titanium Amoxicillin 875 mg 111.5 0.16 104.8 1.49 101.5 NR 109.1 NR Clavulanate 125 mg 96.9 0.1 88.1 0.09 83.3 NR 94.5 NR"
+},
+{
+"id": "hrp_pharmacology_2023:x164",
+"text": "Promethazine 25 mg tab 96.2 NR 94 NR NR NR 96.3 NR Promethazine 50 mg/mL Inj 98.3 0.26 96.8 NR 90.3 1.08 93.7 NR Promethazine 25 mg PR 97.6 0.53 95.8 NR 89.5 0.08 95.6 NR Sulfamethoxazole 800 mg 97.9 1.27 94.2 NR 93.1 0.37 96 NR Trimethoprim 160 mg 96.8 1.81 97.9 NR 81.4 3.17 93.6 NR NR = No results provided, PR = suppository, tab = tablet, inj = injectable solution Data obtained from Putcha 2006 Stability Summit presentation, as cited in (Daniels 2019). Unpublished r esults. - 48 - noteworthy that 9 kGy dose is approximately 9000-times greater than the cumulative dose estimated for a"
+},
+{
+"id": "hrp_pharmacology_2023:x165",
+"text": "3-year Mars mission, which is in the range of 1 Gy (National Academies of Sciences, Engineering, and Medicine, 2021). The API content of samples exposed to 17 Gy of titanium ions appears to be only slightly different than the API content of the matched controls, indicating that the medications are not sensitive to radiation at this dose—a dose that is much lower than the dose of gamma radiation (9,300 Gy and 35,800 Gy) and much less than the minimum dose of gamma radiation (25,000 Gy) used for radiosterilization of drugs during manufacturing, and far above the dose of ionizing radiation expected for spaceflight (approximately 1 Gy)."
+},
+{
+"id": "hrp_pharmacology_2023:x166",
+"text": "One major concern with this study is that it is unclear whether the experiment included independent replicates. Variance is required to make statistical inferences about whether experimental conditions have an effect. No statistical analysis is possible using the limited data available for this study. Furthermore, no additional details are available on how the experiment was carried out, including the experimental conditions (e.g., number of units treated, number of replicates, analytical procedures) or the irradiation parameters (gamma ray source, conditions of irradiation, drug packaging, or duration of exposure). It is possible that apparent differences reported in this small pilot study are due to experimental variability."
+},
+{
+"id": "hrp_pharmacology_2023:x167",
+"text": "This supposition is supported by other NASA-sponsored drug stability studies where independent replicates were definitively tested and the median standard deviation was ±1.5% (interquartile range = 1.1%) (Cory, et al., 2016; Cory, James and Mangiaracina, 2017; Wotring and Smith, 2020; Wu, L. and Chow, 2016). The reported experimental variability for most of the drugs in this 2006 radiostability study is much less than in other drug stability studies, indicating that replicate samples are not independent but were likely technical replicates of the same sample. This method was also used in the 2019 study discussed below. Considering the lack of experimental details, these results should be regarded as exploratory pilot research results and interpreted with caution."
+},
+{
+"id": "hrp_pharmacology_2023:x168",
+"text": "A second radiostability study was also performed in 2006. An abstract this study was published as a part of the NASA HRP Investigators Work Shop (IWS) meeting in 2018 conference proceeding9 that suggested some modest degradation changes were observed, but this cannot be confirmed (Daniels, et al., 2017). The objective of this second study was to assess the correlation between radiation dose and API content for a broader range of medications at radiation doses more relevant to spaceflight. This experiment 9 The study was performed in 2006, but study results were not available until provided to the ExMC element in a 2019 study proposal (Daniels, 2019)."
+},
+{
+"id": "hrp_pharmacology_2023:x169",
+"text": "- 49 - assayed 20 APIs contained in 18 drug products (2 drugs contained 2 APIs, Augmentin® and Bactrim®) at a single timepoint after irradiation (Daniels, 2019) The drugs were exposed to 0.1, 10, or 50 Gy of either 1000 MeV/n protons or 1000 MeV/n iron particles, or were unirradiated (Table 5). The tabulated results do not exhibit a dose-response relationship between radiation exposure and loss of API content, even for the highly sensitive aqueous formulations of ciprofloxacin (Tegze, et al., 2019) and promethazine (Bahnemann, Asmus and Wilson, 1983). The lack of a dose-response—a key Bradford Hill consideration for causal associations (Fedak, et al., 2015)—indicates the spaceflight-relevant doses were too low to elicit a measurable loss of API content."
+},
+{
+"id": "hrp_pharmacology_2023:x170",
+"text": "A radiation dose-response relationship was previously reported for damage to a wide range of polymers at gamma radiation doses greater than 10 kGy (Shulman and Ginell, 1970) and for drugs in the range of 10 to 100 kGy (Gopal, 1978; Jacobs, 1985; Jacobs, 1995; Jacobs, 2022). The absence of a dose response in this study is likely the result of the low dose of ionizing radiation used. The highest radiation dose used in this study was 50 Gy, which is approximately 500- to 1000-fold less than the doses used for pharmaceutical radiosterilization, which range from 25 to 50 kGy. The selected drugs are not unusually resistant to the effects of ionizing radiation."
+},
+{
+"id": "hrp_pharmacology_2023:x171",
+"text": "Although this study did not observe a dose dependent change in the 3 mg/mL ciprofloxacin solution, related fluoroquinolones, including 2 mg/mL solutions of moxifloxacin and levofloxacin, lose 10% and 20% of their potency after gamma radiation exposures of 5 kGy and 15kGy, respectively (de Oliveira, Serro and Saramago, 2016). Low concentration ciprofloxacin (0.033 mg/mL) loses 66% of its potency after exposure to 500 Gy of gamma rays (Tegze, et al., 2019). A study of a selection of drugs known to be highly sensitive to ionizing radiation could confirm the susceptibility of solid-state drugs and aqueous solutions in this radiation dose range. It is recommended that future experiments should irradiate medications over a range of doses covering several orders of magnitude, from spaceflight-relevant doses to a dose shown to induce radiochemical effects."
+},
+{
+"id": "hrp_pharmacology_2023:x172",
+"text": "This will enable the shape of the dose effect curve to be determined. Inclusion of electronic spin resonance spectra measurements of the treated samples would confirm the ionizing effect, as well as the persistence of drug ions. - 50 - d. Irradiation study with long-term post-irradiation storage. A follow-up radiation study was initiated in 2018 to evaluate the longitudinal effects of single dose ionizing radiation on 4 SODF . Mixed-species beam exposures were used to simulate the shielded radiation environment that would be encountered by an astronaut in a typical exploration vehicle. The 4 medications were selected based on apparent stability profiles in previous studies and relevance for spaceflight: acetaminophen 500 mg tablets, amoxicillin 500 mg capsules, ibuprofen 400 mg tablets, and promethazine"
+},
+{
+"id": "hrp_pharmacology_2023:x173",
+"text": "25 mg tablets. All medications were lot-matched and repackaged as they would be for spaceflight. The 2 samples of each of the 4 different SODF were exposed to 0.5 Gy or 1.0 Gy of a simulated GCRlike field (GCRsim) consisting of 1H, 4He, 12C, 16O, 28Si, 48Ti, and 56Fe beams. The detailed profile of the NSRL GCRsim is presented in Figure 4. Low-linear energy transfer (LET) (<5keV/μm) radiation provided 86.7% of Table 5. Mean API content (% label strength) for the 18 drug products (20 APIs) tested in the 2006 NSRL study Acetaminophen 325 mg Tab 98.8 96.2 94.7 94 96.7 95.2 94.8"
+},
+{
+"id": "hrp_pharmacology_2023:x174",
+"text": "Atorvastatin 10 mg Tab 100.2 100.4 97.8 98.6 97.3 98.5 96 Amoxicillin 875 mg 116.1 116.2 109.8 115.8 115.6 112 114.4 Clavulanate 125 mg 93.5 88.6 79.4 83.4 88.1 48 78.2 Ciprofloxacin 3 mg/mL Sol 96.9 96 95.9 96.1 96.1 94.5 96.4 Ciprofloxacin 0.3% Oint 99 96.4 94.6 95 94.8 91.7 94.8 Ciprofloxacin 500 mg Tab 99.1 100.9 100.1 100.2 100.3 99.3 99.5 Clotrimazole 1% Cream 99.5 98.6 98.8 98.7 98.8 98.9 98.2 Ibuprofen 400 mg Tab 101.4 102.3 102.3 102.6 102.5 102.6 102.8 Levothyroxine 25 mcg Tab 94.1 96.6 93.5 95.3 93.4 94.2 94.4 Muprocin 2% Oint 100.5 99.6 100.2 100.3 100.3 99.7 99"
+},
+{
+"id": "hrp_pharmacology_2023:x175",
+"text": "Phenazopyridine 100 mg Tab 98 96.2 94.2 92.5 96.6 94.5 93.9 Promethazine 25 mg Tab 97 96.2 96.1 95.3 97.3 93.9 96.3 Promethazine 50 mg/mL Inj sol 99.2 99.6 97.3 98.7 97.8 98.4 98.8 Promethazine 25 mg Supp 103.5 102.3 103.1 103.3 102.1 102.9 103.6 Riboflavin 100 mg Tab 100.8 99.6 98.7 96.9 100.4 98.8 97.7 Silver Sulfadiazine 1% Cream 98.6 97.7 96.8 95.9 98 97.1 96.5 Temazepam 15 mg Cap 100.5 100.4 100.2 100.2 100.1 99.8 99.8 Sulfamethoxazole 800 mg 100.7 97.5 95.9 96.2 100.5 97.5 96.5 Trimethoprim 160 mg 101.5 98.2 96.5 97.1 101.3 98.5 97.3"
+},
+{
+"id": "hrp_pharmacology_2023:x176",
+"text": "API = active pharmaceutical ingredient, NSRL= NASA Space Radiation Laboratory, Supp = suppository, Cap = capsule, Tab = Tablet, Sol = Solution, Oint = Ointment, Inj = Injectable Results are from the NxPCM Pharmaceutical Flight Stability Study Status Report, Lloyd, Putcha et al, 2007 as cited in (Daniels 2019) and as presented at the HRP Investigators’ Workshop, 2018. - 51 - the total GCRsim dose, whereas the high-LET (>5keV/μm) radiation contribution was 13.3%. The 0.5 Gy and 1.0 Gy doses are within the range of the expected cumulative exposures for a round -trip Mars mission (the dose rate, however, is very much higher than expected during a Mars mission). After irradiation, on experimental day 0, the treated samples, along with matching untreated controls, were stored in a chamber at controlled room temperature and humidity (20 oC/30% relative humidity)."
+},
+{
+"id": "hrp_pharmacology_2023:x177",
+"text": "One set of samples was used to assess potency, dissolution (API release) and impurities at 2, 18, or 34 months10 (2018, 2019 and 2021 respectively) after irradiation. 10 Analysis of the 34-month time point was delayed by about a year due to the Covid19 pandemic Figure 4. The composition of the NASA Space Radiation Laboratory Galactic Cosmic Ray si mulation “high-LET” (>5keV/μm) dose contribution to the total GCRsim dose was only 13.3%. Image provided by R. Gaza, “SRAG Radiation Dosimetry Report”, June 2018, courtesy of Dr. Tony Slaba, NASA Langley."
+},
+{
+"id": "hrp_pharmacology_2023:x178",
+"text": "Preliminary analysis of the results (Figure 5) suggests that none of the measured parameters were altered in the irradiated samples relative to the parameters in the matched control samples, although final analysis is presently ongoing. A literature review indicates that none of the 4 medications tested are considered to be particularly susceptible to ionizing radiation in the solid form, according to information in the drug information database or other supporting information (Jacobs, 1985). Three of the 4 medications tested in this study (ibuprofen, amoxicillin, and promethazine) were evaluated previously by Du and colleagues (Du et al. 2011), and the authors reported that only amoxicillin showed a degradation rate greater than the pair-matched control, and ibuprofen and promethazine tablets were not substantially changed relative to controls."
+},
+{
+"id": "hrp_pharmacology_2023:x179",
+"text": "The study did not include medications that are known to be highly sensitive to ionizing radiation and did not expose drugs to a dose of radiation known to achieve a detectable effect on potency, which would have enabled failure risk analysis relative to mission parameters. Figure 5. Longitudinal effects of storage time on API content. Four solid oral medications were exposed to ionizing radiation at 0.5 Gy (orange) , 1 Gy (green), or control (blue) then stored for up to ~36 months. API = active pharmaceutical ingredient. Points and error bars are expected marginal mean ± 95% confidence limits"
+},
+{
+"id": "hrp_pharmacology_2023:x180",
+"text": "IN SILICO MODELING OF THE EFFECT OF SPACEFLIGHT RADIATION ON DRUG STABILITY In silico modeling is an alternative approach to predict radiation effects that avoids the many challenges associated with measuring the effects of ionizing radiation during actual spaceflight. Welldeveloped theoretical models for predicting radiation transport through spacecraft shielding (O'Neill, 2010; O'Neill, Golge and Slaba, 2015; Wilson, et al., 1994) have been used to predict radiation exposures in deep space (Cucinotta, Kim and Chappell, 2012; Naito and Kodaira, 2022; Simonsen, et al., 2020). Although evaluating radiation transport models is beyond the scope of this report, this in silico approach has been used to predict how ionizing radiation affects drugs during a 3-year exploration mission."
+},
+{
+"id": "hrp_pharmacology_2023:x181",
+"text": "A publicly available NASA technical report describes the modeled the effects of radiation in dried food, frozen food, and water (Kim and Plante, 2015) and the investigators predicted that the worst-case scenario would produce nanomolar concentrations of radiolytic radicals (OH●, H●, H2, H2O2 and e–aq) in aqueous drug formulations. The report concluded that the low concentration of these metastable species, produced slowly over a 3-year mission, are unlikely to have a significant impact on drug stability. For example, the expected worst-case frequency for water molecule “hits” per mole of water during a 3-year mission is 7.8 x 109 hits from the core track of charged particles, which is insignificant compared to the number of molecules in a mole of water (6.02 x 1023–7.8 x 109 = 6.02 x 1023)."
+},
+{
+"id": "hrp_pharmacology_2023:x182",
+"text": "Including secondary delta rays modestly increases the predicted number of hits without any substantive effect on the number of radiolytic products. The approach used by Kim and Plante can be applied to drug solutions by considering the direct and indirect effects separately. Direct effects are the interactions of radiation with the drug substance, whereas indirect effects result from radiolysis of water in the drug formulation. Most drug products contain much less than one mole of active ingredients. For example, promethazine11 25 mg/mL injectable solution contains 8.8 x 10-05 moles/mL of API (5.29 x 1019 molecules of drug). Assuming an annualized radiation dose of 0.2"
+},
+{
+"id": "hrp_pharmacology_2023:x183",
+"text": "Gy/year inside the space vehicle, the number of hits on the drug substance over a 3-year mission is insignificant relative to the number of drug molecules in a 1 mL vial (Table 6). Likewise, the quantity of metastable radiolytic species produced is insignificant compared to amount of drug substance (approximately 685 nMol/L). A similar analysis that modeled the effects of radiation on a 10 ml vial of Epinephrine 0.1 mg/mL gives similar results—effectively no change in drug content, even though the - 54 - concentration of this epinephrine solution is much lower than promethazine. These are likely to be conservative estimates because they assume all incidence radiation interacts with the drug substance and all the radiolytic react with drug substance."
+},
+{
+"id": "hrp_pharmacology_2023:x184",
+"text": "In reality, radiation can pass through a target without interacting, and radiolytic species formed in water are transient and the reaction of these species with drug substance is inefficient; much less than 1:1. Furthermore, Kim and Plante (2015) noted that the model assumes a worstcase scenario based on peak ion fluence. Antioxidant excipients that manufacturers include in some aqueous drug formulations can increase the margin of error by increasing the stability of the drug substance (Sarcan and Ozer, 2020; Sintzel, et al., 1997). In silico predictions confirm that ionizing radiation at fluences anticipated during exploration spaceflight will have no significant effect on drug stability. Furthermore, because the effect is so small, these predictions should permit a very large margin of error, which increases the level of confidence in the conclusion that the risk is small."
+},
+{
+"id": "hrp_pharmacology_2023:x185",
+"text": "Table 6. Molar quantity of drug remaining after exposure to 0.61 Gy of charged particle radiation for a 3 year mission Total hits direct hits + radiolytic species per drug volume Moles of drug molecules remaining (Percent potency) mg mol Total hits Moles/L Total hits Promethazine 25 8.79E-05 5.29149E+19 4.39E06 0 4.39E+06 8.79E-05 (100%) Water 1 5.55E-02 3.34161E+22 4.78E08 6.85E-10 Epinephrine 0.01 5.46E-08 3.28595E+16 1.85E+03 0 1.85E+03 5.46E-08 (100%) Water 10 5.55E-01 3.34161E+23 1.79E+10 6.85E-10 Input values for calculations taken from Tables 4, 5, and 6 of Kim and Plante, 2015."
+},
+{
+"id": "hrp_pharmacology_2023:x186",
+"text": "RISK IN CONTEXT OF EXPLORATION MISSION OPERATION SCENARIOS Drugs degrade over time and therefore the risk of degradation is greater for the Mars design reference mission (DRM) (Table 7) than the other DRMs. This contrasts with the risk(s) associated with - 55 - changes in PK and PD, which apply to any DRM and are associated with human physiological changes, not changes in medication quality. PK and PD changes are not included as risk drivers in the Human Systems Risk Board likelihood by consequence (LxC) for shorter DRMs that are considered “green”. A brief discussion for each DRM LxC risk is provided."
+},
+{
+"id": "hrp_pharmacology_2023:x187",
+"text": "The risk of ineffective or toxic medication during long-duration exploration spaceflight as related to drug stability from (1) the loss of API resulting in loss of efficacy and (2) the accumulation of degradation impurities. One controlled study (Du et al. 2011) suggests that most spaceflight medications appear to lose API faster than those stored terrestrially. No other controlled studies have been performed to confirm these results or to investigate the mechanisms contributing to these changes in drug quality. But even if spaceflight is assumed to have no effect on drug stability, there is no doubt that many medications will expire during a multi-year Mars mission, i.e., some medications may become ineffective due to normal time-depended degradation processes."
+},
+{
+"id": "hrp_pharmacology_2023:x188",
+"text": "Irrefutable evidence from the fields of pharmaceutical science and medicinal chemistry demonstrate that drug degradation is a chemical reaction that is commonly facilitated by exposure to environmental factors such as oxygen, moisture, and light. Ensuring that repackaged drugs are not exposed to these conditions is a commonsense approach for extending the stability of SODF. Other countermeasures can also be implemented, such as storage at low temperature, which universally slows Table 7. Official HSRB Design Reference Mission (DRM) Categories (Antonsen, 2020)."
+},
+{
+"id": "hrp_pharmacology_2023:x189",
+"text": "- 56 - chemical reaction rates and is an acceptable storage practice under USP guidance (United States LEO DRMs (< 1 year). The LxC risk posture for short- and long-term LEO DRMs is “strong” (Table 8). The likelihood is very low to insignificant (green) that degraded medications will impact crewmembers’ health or mission objectives. This likelihood is driven by the fact that LEO DRMs can be resupplied rapidly, and therefore, minimal-to-no anticipated decrements in medication quality are expected. The consequences for crewmembers’ long-term health (LTH) and operational performance is considered insignificant."
+},
+{
+"id": "hrp_pharmacology_2023:x190",
+"text": "Lunar Orbital DRMs (< 30 d). The LxC risk posture for short lunar orbital DRMs is moderate (green). The likelihood that degraded medications will impact crewmembers’ health or mission objectives is low (Table 8). The consequence for crewmembers’ health and operational performance is insignificant. The LxC risk posture for LTH is “strong”. The Likelihood of LTH is very low and minimal-to-no LTH impacts are anticipated. Table 8. Likelihood by consequence (LxC) matrix for Risk of Ineffective or Toxic LTH: long-term health; DRM: design reference mission; Ops: operations."
+},
+{
+"id": "hrp_pharmacology_2023:x191",
+"text": "Lunar Orbital DRMs (30 d <DRM <1 y). The LxC risk posture for long lunar orbital DRMs is “weak” (green). The likelihood of an impact on crewmembers’ health or mission objectives is moderate, as attributed to mission length and uncertain mission details. The consequence for crewmembers’ health and performance is insignificant. The LxC risk posture for LTH is \"weak” (green). The likelihood of LTH is low and the impacts to LTH are considered to be minor and short-term, although precise information regarding lunar missions is limited (Table 8)."
+},
+{
+"id": "hrp_pharmacology_2023:x192",
+"text": "Lunar Orbital with Surface Operations (DRM <30 d). The LxC risk posture for short lunar orbital with surface operations DRM is \"weak” (green). The likelihood disposition is moderate (green) that reduced medication quality will impact crewmembers’ health or mission objectives for short lunar orbital DRMs with surface operations, and the likelihood is low for LTH (Table 8). The likelihood disposition is driven by the possibility that some medications on the landing vehicle could be exposed to vacuum, extreme temperatures, and unshielded radiation exposure. The consequence of reduced drug quality is considered insignificant given convenient 2-way audio and video communications with medical experts, and availability of rapid crew return. The low likelihood of LTH effects is driven by minimal consequences of inflight medication changes. Minimal-to-no consequences are anticipated on LTH."
+},
+{
+"id": "hrp_pharmacology_2023:x193",
+"text": "Lunar Orbital with Surface Long operations (30 d <DRM <1 y). The LxC risk posture for long lunar orbital with surface operations DRM is “weak” (yellow). The likelihood disposition is high that reduced medication quality will impact crewmembers’ health or mission objectives for long lunar orbital DRMs with surface operations. The likelihood disposition is driven by the possibility that some medications on the landing vehicle could be exposed to vacuum, extreme temperatures, and unshielded radiation exposure. The consequence of reduced drug quality is considered insignificant given convenient 2-way audio and video communications with medical experts, and availability of rapid crew return. The LxC for"
+},
+{
+"id": "hrp_pharmacology_2023:x194",
+"text": "LTH is “weak” (green). The likelihood that reduced medication quality will impact crewmembers’ LTH is low is driven by minimal consequences of changes in inflight medication (Table 8). Consequences are expected to be minor, short-term impacts on LTH. Mars Preparatory mission (< 1 y). The LxC risk posture for a Mars preparatory DRM is “weak” (yellow). The likelihood disposition is high that reduced medication quality will impact crewmembers’ health or mission objectives for a Mars preparatory DRM. The likelihood disposition is driven by the length of mission, the spaceflight environmental conditions, and the lack of ability for resupply, as well as unknown technical details for this DRM. The consequence of reduced drug quality is possibly significant due to lack of mission details and potentially limited ability for crew return. The LxC for LTH is “weak"
+},
+{
+"id": "hrp_pharmacology_2023:x195",
+"text": "- 58 - (green) (Table 8). Likelihood that reduced quality of medication will impact crewmembers’ LTH is moderate is driven by mission duration and limited ability for crew return. Consequences are expected to be minor, short-term impacts on LTH. Mars Planetary DRM (> 2 y). The LxC risk posture for a Mars preparatory DRM is “speculative” (red). The likelihood disposition is very high that reduced medication quality will impact crewmembers’ health or mission objectives for a Mars planetary DRM. The likelihood disposition is driven by length of mission, spaceflight environmental conditions, and lack of ability for resupply, as well as unknown technical details for this DRM. The consequence of reduced drug quality is possibly significant due to lack of mission details and potentially limited ability for crew return. The LxC for LTH is “speculative” (red)."
+},
+{
+"id": "hrp_pharmacology_2023:x196",
+"text": "The likelihood that reduced medication quality will impact crewmembers’ LTH is very high is driven by mission duration and limited ability for crew return (Table 8). Consequences are expected to be moderate but treatable effects on LTH. Available evidence and first principals suggest that some drugs that are repackaged into nonprotective containers will not remain stable throughout the full duration of an exploration spaceflight. The risk that any drug will fail to meet compendial specifications is time dependent. For drugs stored in manufacturer’s packaging, the risk of degradation should remain low until the manufacturer’s expiration date is reached. For repackaged drugs in non-protective packaging, the time -dependent probability of failure increases at the time the original container is opened."
+},
+{
+"id": "hrp_pharmacology_2023:x197",
+"text": "If drugs are placed into packaging that is at least as protective as manufacturer’s packaging, then the shelf life of these repackaged drugs would be equivalent to their shelf life in the manufacturer’s container . (U.S. Food and Drug Administration (FDA), 1985; U.S. Food and Drug Administration (FDA), 1999; U.S. Food and Drug Administration (FDA), 2004a). Repackaging into containers that are resistant to oxygen and water vapor transmission will help mitigate the risk of drug failure due to loss of API content, impurity accumulation, and physical changes. Some drugs may require additional protective countermeasures that may include purging the containers with inert gas or including oxygen and/or moisture scavenging materials into the packaging. The effectiveness of protective packaging should be confirmed in experimental studies"
+},
+{
+"id": "hrp_pharmacology_2023:x198",
+"text": "Because the shelf life of drugs is proprietary information in the U.S., it is not possible to compare shelf life of different brands of equivalent drugs and to purchase the most stable brands (longest shelf life) for planetary DRMs. Equivalent drug products from different manufacturers can have very different ingredients (Table A2), some of which affect drug stability. Although selecting the product with the longest shelf life is not a major concern for DRMs of a few months to one year, it will be necessary for longer missions. Variability in brand shelf life may be a significant issue for Mars missions because the medications listed in the ExMC Exploration Candidate Formulary are marketed by nearly 700 different U.S. drug manufacturers/labelers, and more than 70 drug products are marketed by 30 or more manufacturers."
+},
+{
+"id": "hrp_pharmacology_2023:x199",
+"text": "Drugs with shelf lives that are close to the duration of the DRM must be carefully evaluated to characterize medication quality because missions beyond LEO cannot be resupplied. Judicious selection of drug brands formulated without hygroscopic (sorbitol, PEG) and other problematic ingredients is encouraged. Drug degradation is a chemical reaction, and all chemical reactions are temperature dependent. This dependence is described by the Boltzmann distribution that relates the rate constant for a chemical reaction as a function of temperature. As temperature increases, reaction rate increases, as described quantitatively by the Arrhenius law. This law applies to all pharmaceuticals such that exposure to increased temperature increases chemical reaction rates—i.e., drug degradation. Conversely, reaction rates slow proportionally with reduced temperature."
+},
+{
+"id": "hrp_pharmacology_2023:x200",
+"text": "Storing pharmaceuticals at low temperatures, unless directed otherwise by the drug label, will therefore extend shelf life for most medications. Generally, low temperature has no adverse effect on most pharmaceuticals and can be protective because physical and chemical changes are reduced, gas and vapor transmission through packaging is slowed, and the rate and extent of water sorption is inhibited, the last of which limits deliquescence formation of hydrates and mesophases. For drugs formulated as aqueous solutions, low temperature storage slows reaction rate chemistry (according to the Arrhenius Law as above) and significantly decreases drug degradation caused by ionizing radiation. Therefore, storage at sustained low temperatures is an effective countermeasure to prolong shelf life of pharmaceuticals with significant stability concerns."
+},
+{
+"id": "hrp_pharmacology_2023:x201",
+"text": "However, low temperature storage is not universally protective; some aqueous medications may not tolerate freezing or may precipitate and form insoluble complexes at low temperatures. Freezing and subsequent thawing of emulsions could cause formulations to crack or separate; and some solutions may precipitate. When room temperature storage is directed for medications, these medications may be stored and shipped in a - 60 - cool place or refrigerated, unless otherwise specified by the drug monograph or on the label (United • Drug Repackaging. It is expected that Mars missions will require many medications to be removed from the original manufacturer’s packaging and repackaged to reduce mass and volume. Implementing protective packaging will require operational changes in repackaging materials, equipment, and processes."
+},
+{
+"id": "hrp_pharmacology_2023:x202",
+"text": "Because some drug products have unique vulnerabilities, customized countermeasures may be necessary to ensure stability of some drugs. Depending on repackaging needs for a Mars mission, a contract repackaging service may be required to provide better assurances of packaging integrity, consistency, and reliability than the current in-house process. For medications with unique vulnerabilities or packaging needs (i.e., packaging incompatibilities), retaining medications in the manufacturer’s packaging may be the most effective method for storing them during spaceflight."
+},
+{
+"id": "hrp_pharmacology_2023:x203",
+"text": "• Bulk packaging of drugs. Once a package containing multiple units of a medication is opened, all the medications in that package are exposed to the ambient atmosphere. For some drugs, this exposure could accelerate degradation of the dosing units remaining in the package. The problem could be worse if the package is repeatedly reopened over time or if the package is not tightly resealed. Medications that will be repackaged into multiple-unit packaging should be divided among several multiple-unit packages so that only a fraction of the total number of units provided are exposed when the package is opened. This will limit exposure of an acceptable portion of the medication to the atmosphere, while protecting the remaining units until they are needed later in the mission."
+},
+{
+"id": "hrp_pharmacology_2023:x204",
+"text": "Decisions regarding the number of dosing units in each multiple-unit package should be guided by information on the susceptibility and stability of individual drug products. • Low temperature storage. Some drugs deemed essential for the treatment of medical conditions may have inadequate shelf life for the full duration of a Mars mission (Appendix 2). Such drugs may lose API at an unacceptable rate or may degrade in ways that makes the medication unacceptable for clinical use (i.e., high concentrations of a hazardous impurity), even when highly protective packaging is used. For example, drugs with formulation incompatibilities, reactive impurities, or metastable drug substances may not retain sufficient potency to ensure clinically efficacy throughout the duration of a Mars planetary"
+},
+{
+"id": "hrp_pharmacology_2023:x205",
+"text": "- 62 - mission. Such drugs can be stored at low temperature to slow the chemistry of degradation and prolong shelf life of most drugs. • Drug Formulation. The importance of formulation is discussed in Appendix 2, section D. Equivalent drug products from different manufacturers commonly contain different ingredients. Selecting drug products that contain favorable ingredients and no unfavorable ones may increase the stability of the drug substance. For example, if a drug API is susceptible to hydrolysis, it may be reasonable to select formulations that contain excipients such as sucrose rather than sorbitol, which readily takes up water when exposed to humidity. Likewise, antioxidants are sometimes incorporated into formulations of drugs that are sensitive to oxidation, and antioxidants have been used to protect aqueous formulations from ionizing radiation."
+},
+{
+"id": "hrp_pharmacology_2023:x206",
+"text": "Drug ingredients are publicly available through the National Libraries of Medicine database Drug Bank. • Direct drug purchasing. Pharmacies typically purchase drugs from a distribution wholesaler, and these drugs typically spend a long period of time in the supply chain (Shah, N., 2004). Purchasing drugs directly from the manufacturer or labeler, shortly after they are manufactured, may extend the functional shelf life of these drugs during spaceflight. DIRECTED ACYCLIC GRAPH (DAG) REVIEW AND INTEGRATION WITH OTHER RISKS The risk of ineffective or toxic medication during long-duration exploration spaceflight centers on pharmaceutical effectiveness. Three basic factors contribute to this: (1) actual shelf life, (2) physiologic changes in the pharmaceutical, and (3) antibiotic resistance."
+},
+{
+"id": "hrp_pharmacology_2023:x207",
+"text": "This evidence report focuses on actual shelf life, as highlighted by the red rectangle in the DAG (Figure 6). The actual shelf life of a medication is affected by the storage conditions, e.g., refrigeration, packaging, etc., whereas the expected shelf life is the shelf life the medication would have without the effects of the spaceflight environment or without repackaging. Evidence presented in this report shows that some uncharacterized aspect(s) of spaceflight increases the rate of degradation of some pharmaceuticals, particularly SODF. These studies, however, have several important limitations that reduce the level of confidence in the results, and issues with study design that preclude direct comparison of results across studies. No radiostability studies have provided evidence that ionizing radiation increases degradation of"
+},
+{
+"id": "hrp_pharmacology_2023:x208",
+"text": "SODF, although it cannot be ruled out that drugs in aqueous dispersions (e.g., solutions, suspensions, creams) may be more susceptible to ionizing radiation than solid-state formulations at radiation doses expected for exploration spaceflights. Drug packaging strongly affects the shelf life of drugs, and the current operational procedure is to repackage SODF into plastic zip-lock bags to reduce the mass and the volume of the medical kit. This practice removes medications from the manufacturer’s protective packaging thereby exposing the medications to oxygen and water vapor, which are common co-reactants for many chemical reactions involved in degradation. Repackaging accelerates degradation reactions both terrestrially and during spaceflight, and protective packaging would be expected to inhibit such reactions."
+},
+{
+"id": "hrp_pharmacology_2023:x209",
+"text": "Figure 6. Directed acyclic graph (DAG) for the r isk of ineffective or toxic medication during long -duration exploration spaceflight. The evidence in this report is focused on the actual shelf life vertex with a single edge directed to pharmaceutical effectiveness. In the DAG, Resupply and Resource Availability lies upstream of Actual Shelf Life: An inability to resupply can lead to a risk of inadequate medications for some DRMs. If pharmaceutical effectiveness is lessened through degradation, crewmembers may use more medications than originally planned and potentially run out sooner ."
+},
+{
+"id": "hrp_pharmacology_2023:x210",
+"text": "Pharmaceutical Effectiveness lies upstream of Pharmaceutical Toxicity: Dosing errors can occur that result in either under-dosing or overdosing of a given medication. Underdosing would be expected if degradation of the active pharmaceutical ingredient leads to a loss of drug potency. Underdosing may also occur if a drug product is rendered unusable by physical changes such as phase separation of topical creams or ointments, or tablet disintegration due to moisture absorption by hygroscopic ingredients. Overdosing of medication can lead to life-threatening toxicities such as suppression of breathing in the case of opioid overdose, or liver damage with acetaminophen overdose."
+},
+{
+"id": "hrp_pharmacology_2023:x211",
+"text": "Overdosing can occur as a result of physical deterioration of medications such as extended-release formulations: degradation can lead to “dose dumping” of the active ingredient, resulting in shorter absorption time and a higher peak plasma concentration of the drug. Appropriate dosing is a function of both the amount of the API present (actual shelf life) and how the body processes the medication (PK and PD). Not captured in the DAG is the toxicological risk of the degradation impurities. When drug products degrade, impurities are formed and accumulate. When the amount of impurities exceeds established standards, the quality of the drug is adversely affected. Impurities may have toxicodynamic activity that could pose a health risk when a sufficient dose is consumed. Daily exposure limits are required for any impurity that exceeds FDA qualification limits."
+},
+{
+"id": "hrp_pharmacology_2023:x212",
+"text": "The spaceflight evidence discussed in this report is inadequate for testing the hypothesis that spaceflight affects the safety of pharmaceuticals. Pharmaceutical Effectiveness lies upstream of Medical Prevention Capability, Medical Diagnostic Capability, and Medical Treatment Capability. Pharmaceutical Effectiveness also affects the severity of side effects and adverse effects. Medications constitute the largest component of the medical system in terms of number of items, mass, and volume. The risk of ineffective or toxic medications during long-duration exploration spaceflight is also relevant to other human health risks that involve pharmaceutical countermeasures, and therefore the risk of ineffective or toxic medications extends across a range of human system risks. Some of the planned"
+},
+{
+"id": "hrp_pharmacology_2023:x213",
+"text": "- 65 - countermeasures are biotechnology products that have not been tested in any NASA-supported study. This limitation is highlighted as Gap 1 in subsection titled REMAINING GAPS Link to the current gaps on the Human Research Roadmap: HRR - Risk - Risk of Ineffective or Toxic Medications During Long-Duration Exploration Spaceflight (nasa.gov) https://humanresearchroadmap.nasa.gov/Risks/risk.aspx?i=177 NASA has chosen to follow the FDA and the state of Texas rules for determining the expiration of repackaged drugs. The drug products on LEO missions are replaced annually, which will be problematic for some long-duration missions and will be impossible for Mars preparatory and planetary missions. Radiationinduced effects on the stability of medication during long-duration and deep space missions are not fully characterized."
+},
+{
+"id": "hrp_pharmacology_2023:x214",
+"text": "How, and to what extent, the spaceflight environment and resultant alterations of human physiology may affect drug PK and PD is unclear. The potential for increased drug instability that is compounded by altered drug response poses a significant risk to crews of exploration spaceflights. Research efforts are underway in the ExMC Element to determine a safe and effective drug formulary for exploration spaceflight that can maintain a ≥ 3-year shelf life. The proposed ExMC strategy will validate the chemical and physical stability, the toxicity of degradation products, and the drug safety profiles of these pharmaceuticals, and better characterize PK, PD, and pharmacotherapeutic properties of drugs stored in the exploration spaceflight environment."
+},
+{
+"id": "hrp_pharmacology_2023:x215",
+"text": "The current drug repackaging methods will be evaluated in accelerated drug stability studies to quantify the effect of nonprotective packaging on drug stability. If it is demonstrated that current repackaging practices are detrimental to the stability of medication, protective packaging will be identified and tested. Several plausible risks and data gaps should be addressed before planning begins for space exploration missions away from LEO. These include • Gap 1 – Sensitivity of biotechnology (biotech) drugs to the spaceflight environment. Biotech drugs are a subset of drugs that are of biological origin, including peptides, proteins, enzymes, and various nucleic acid-based technologies. Biotech drugs are a rapidly growing class of drugs used to treat common health disorders, and these drugs will represent a growing part of the"
+},
+{
+"id": "hrp_pharmacology_2023:x216",
+"text": "- 66 - spaceflight drug formulary in the future. Biotech drugs may be used to counter the physiological effects of prolonged weightlessness, ionizing radiation exposure, or other effects. Biotech drugs include proteins and peptides, antisense oligonucleotides, small inhibitory RNAs, and other technologies. The stability of biotech medications has not been evaluated in spaceflight. • Gap 2 – Radiostability. Drug substances in aqueous solution are typically far more susceptible to degradation from exposure to ionizing radiation than the same drug substance in a solid formulation. The radiostability of the aqueous solutions in the spaceflight drug formulary need to be evaluated over a dose and energy range that is near and well above that anticipated for"
+},
+{
+"id": "hrp_pharmacology_2023:x217",
+"text": "• Gap 3 – Drug repackaging. NASA currently repackages SODF in non-protective zip-lock bags that may expose medications to ambient oxygen and humidity (water vapor). This type of packaging likely permits unacceptable levels of degradation of susceptible medications. The effect of the current repackaging process needs to be evaluated relative to manufacturer’s packaging, and, if necessary, alternative protective repackaging solutions must be identified. • Gap 4 –Formulation selection. Inactive ingredients can have a profound effect on drug stability of both solid and non-solid formulations. The effect of differences in excipients in equivalent drug formulations should be tested to determine the extent to which brand selection affects the probability of drug failure or the extent of degradation over time."
+},
+{
+"id": "hrp_pharmacology_2023:x218",
+"text": "• Gap 5. –Drugs that are susceptible to the spaceflight environmental. It will not be possible to test the stability of every drug in the spaceflight formulary during spaceflight because studies of drug stability are slow and very expensive. The drugs that are likely to be the most sensitive to spaceflight environmental conditions must be identified and tested to determine whether their stability is compromised during prolonged storage in space. The results of the tests on susceptible medications will provide evidence for other medications that may be similarly susceptible."
+},
+{
+"id": "hrp_pharmacology_2023:x219",
+"text": "Key characteristics that need to be evaluated for medications include identifying drugs with the shortest shelf lives; identifying APIs or formulations that are highly sensitivity to ionizing radiation; identifying drugs most sensitivity to oxidation or hydrolysis (esp. acid hydrolysis); identifying drugs with ingredients that shorten shelf life such as hygroscopic excipients or amorphous APIs; and identifying APIs that degrade to produce highly potent health hazards. Safety of medications resulting from changes in PK and PD are excluded in this evidence report and will be addressed separately in a future evidence report."
+},
+{
+"id": "hrp_pharmacology_2023:x220",
+"text": "Decreased therapeutic efficacy of some medications during spaceflight has led to speculation that some drugs may degrade faster with exposure to spaceflight, resulting in less effective medications. Several studies have investigated this hypothesis. However, design limitations in all NASA-supported studies that have investigated spaceflight drug stability have consistently yielded inconclusive results. The most comprehensive study performed to date was an 880-day longitudinal study with multiple timepoints and matched terrestrial controls (Du, et al., 2011). Although this study provides some qualitative evidence that unidentified factors associated with spaceflight have a modest long-term effect on drug stability, the study’s method and data are not transparency."
+},
+{
+"id": "hrp_pharmacology_2023:x221",
+"text": "Several opportunistic studies provide anecdotal evidence that spaceflight has no unusual effect on API content or accumulation of impurities. Together, these studies and first principles of drug chemistry signify that physical and chemical changes in medications do not contribute to the apparent therapeutic failures during short-duration space missions, as has been previously suggested (Mehta and Bhayani, 2017; Wotring, 2011). However, long-duration exploration spaceflight presents a different set of challenges: the processes and procedures used to supply medications to the ISS will be unlikely during long-duration exploration missions, and some medications inherently have shelf lives that are inadequate for these types of mission."
+},
+{
+"id": "hrp_pharmacology_2023:x222",
+"text": "The studies discussed in this report are not adequate to characterize the risk that the spaceflight environment poses to medications. Several of the common design limitations in these studies should be avoided going forward. Future studies must include the following fundamental design characteristics: • Matched controls. All studies that test a hypothesis must include matched controls for each treatment condition (i.e., spaceflight). • Multiple time points. If a temporal effect is suspected, then multiple timepoints enable the slope of change to be evaluated over time. Ideally, the experimental design should include a 0-day timepoint to baseline the initial condition (i.e., amount of API in the medication at the start of the experiment)."
+},
+{
+"id": "hrp_pharmacology_2023:x223",
+"text": "• Prompt sample analysis. Several of the anecdotal studies, and one that is currently ongoing, have not promptly evaluated drug products after sample collection. For a spaceflight time course experiment, the samples need to be analyzed immediately after return of each sample, not after all sample have been collected. The lack of prompt analyzes of medications confounds the data - 68 - and introduces substantial biases for type II statistical errors (false negative result). Uncertainty regarding false negatives contribute to the inconclusive results presented in the report."
+},
+{
+"id": "hrp_pharmacology_2023:x224",
+"text": "• Independent replicates and statistical testing. A fundamental assumption of statistical tests used for hypothesis testing is that replicate samples are independent. Independent samples are essential for characterizing experimental variability and for determining the statistical power that correctly rejects the null hypothesis (i.e., no difference between control and treated samples) with a pre-defined level of confidence. • Data availability. Raw and summary data must be maintained and archived for future review and analysis. Data from pharmaceutical studies must be accessible to investigators."
+},
+{
+"id": "hrp_pharmacology_2023:x225",
+"text": "• Transparent methods. Descriptions of methods must be complete and sufficiently comprehensive to enable other investigators to understand how the experiment was performed and whether the results are reliable. • Focus on the physiochemical characteristics of drugs. Past studies have focused on testing drugs that subject matter experts deemed to be operationally important. This subjective approach does not consider pharmaceutical chemistry or other physiochemical properties as evidence to prioritize medications for testing. This subjective approach is biased by previous experience that may not be pertinent to exploration missions. Because testing drug quality is time consuming and expensive, testing pharmaceuticals that are known to be stable wastes time and resources, and is likely to yield no observed treatment-related effect."
+},
+{
+"id": "hrp_pharmacology_2023:x226",
+"text": "Future studies should focus on drug substances that are known to be sensitive to chemical changes such as oxidation or hydrolysis. Measures that protect the most sensitive medications from conditions that cause degradation will also be effective for prolonging the shelf life of other less-sensitive medications. • Drug formulation. Equivalent drugs can have very different formulations that affect stability. The brand and formulation must be considered as part of the study design of future studies. Many drugs currently used during spaceflight, as well as others on the exploration candidate formulary, will expire over the course of an interplanetary exploration mission, i.e., extend beyond the shelf life determined by the manufacturer ."
+},
+{
+"id": "hrp_pharmacology_2023:x227",
+"text": "NASA does not have the resources to perform extended stability tests to empirically ensure stability of its formulary drugs throughout the duration of long-term space missions. Because every drug substance is a unique combination of chemicals, it is very unlikely that every drug product will meet USP quality specifications throughout the duration of an exploration spaceflight. Nevertheless, long-term stability studies conforming to scientific and industry standards will be extremely important to inform a risk/benefit analysis."
+}
+]
+}
