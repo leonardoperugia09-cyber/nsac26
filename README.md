@@ -6,7 +6,7 @@ On Mars, the doctor is 20 minutes away and the crew medical officer might be the
 
 > ⚠️ Hackathon prototype. **Not a medical device.** All crew data is simulated. Thresholds are demo parameters.
 
-**Live demo:** https://halo.nubidubi0977.workers.dev (open Assistant and tick "Use hosted AI for this session" to ask Claude; without it the assistant answers from the bundled sources).
+**Live demo:** https://halo.nubidubi0977.workers.dev (open Assistant and ask: the hosted Claude is on by default for the simulated crew, and "Use hosted AI for this session" switches it off; when it is off or limited the assistant answers from the bundled sources).
 
 ---
 
@@ -17,7 +17,7 @@ On Mars, the doctor is 20 minutes away and the crew medical officer might be the
 | 1 | **Personal baseline drift** | Learns each astronaut's own normal (mission days 7–20, ±2 SD) and slides it along published in-flight change rates, so normal spaceflight decline is not flagged; only changing *faster* than the research predicts is. | `src/engine/baseline.ts`, `signals.ts` |
 | 2 | **Coupled Risk Engine** | 7 rules turn drift scores into named risks (Nominal / Watch / Act). A risk only reaches Act when several linked signals drift together, so one noisy reading can't raise an alarm. Every risk carries why, what to do, its source and "Why is HALO unsure?". | `src/engine/risks.ts`, `src/rules/` |
 | 3 | **Clickable body map** | 11 body regions coloured by the engine. Tap one to see its readings against your normal, linked risks, why it matters in space, and what HALO cannot measure yet. | Health page, `src/bodymap/` |
-| 4 | **Daily check-in** | The homepage asks "How are you doing?" until the daily log is saved, then fills the log's mood. Fluid, urine colour, sleep, symptoms, reaction and memory tests. | Overview + Daily Log |
+| 4 | **Daily log** | Mood, fluid, urine colour, sleep, symptoms, and reaction and memory tests, saved once a day. What you log feeds the risk rules. | Daily Log |
 | 5 | **Today's plan** | The worst risk becomes 2–3 concrete steps (e.g. "Drink 250 ml now"), with one-tap jumps to the log, body systems, medicines, assistant and mission. | Overview |
 | 6 | **Spacewalk readiness gate** | Go / Caution / No-go before high-risk tasks, from sleep, reaction time and radiation against your own normal. | Mission page |
 | 7 | **Medicine potency tracker** | Forecasts each onboard medicine's strength from days since manufacture and radiation absorbed, with an uncertainty range, and the day it drops below 90%. | Medicines page, `src/engine/potency.ts` |
@@ -185,7 +185,7 @@ NASA flight instruments (Astroskin, Crew Active Dosimeter, Actiwatch on the ISS)
 
 ### Built
 - Crew simulator with planted events; personal baselines and drift scores; Coupled Risk Engine with 7 cited rules (symptoms, vision self-report and workload that you log now feed the rules); medicine potency tracker.
-- App: Overview with daily check-in and today's plan, Health body map, Daily Log, Assistant, Mission readiness and radiation, Medicines, Evidence, Settings (scenario editor, instruments).
+- App: Overview with today's plan, Health body map, Daily Log, Assistant, Mission readiness and radiation, Medicines, Evidence, Settings (scenario editor, instruments).
 - Node server (`backend/`): API, check-ins and measurements saved and synced when offline, readiness, report outbox, evidence search over 46 sources (about 5,000 full-text excerpts of NASA and open-access papers), FHIR export.
 - Instruments: live Bluetooth heart-rate strap, Apple Health, Actiwatch and Hexoskin imports.
 - Assistant: emergency rules first, no doses or diagnoses, answers grounded in the sources with citations. On the server it can use Claude Opus 5.5; on the website it reaches Claude through a small service (`services/halo-ai/`) with usage limits. If the AI is off, limited or fails a check, it answers from the sources.
@@ -218,7 +218,7 @@ npm run eval:accuracy -- --set e   # the 100-question accuracy set against Claud
 python3 scripts/crew_simulator.py   # regenerates data/ exactly (seed 42)
 ```
 
-**Demo path (day 58, Marco):** Overview opens with the daily check-in, then the kidney stone Act and its plan. Health shows the body map (kidneys and skeleton Act). Mission shows spacewalk readiness and the day-40 solar storm. Medicines shows today's doses and the onboard kit's potency forecast. Assistant answers symptoms and refuses doses.
+**Demo path (day 58, Marco):** Overview opens on the kidney stone Act and its plan. Health shows the body map (kidneys and skeleton Act). Mission shows spacewalk readiness and the day-40 solar storm. Medicines shows today's doses and the onboard kit's potency forecast. Assistant answers symptoms and refuses doses.
 
 Put API keys in a `.env` file (copy `.env.example`). **Never commit `.env`.** More: [backend setup and API](backend/README.md), [assistant setup](backend/docs/ASSISTANT.md), [architecture and scientific boundaries](backend/docs/ARCHITECTURE.md), [verification](backend/docs/VERIFICATION.md).
 
@@ -240,7 +240,7 @@ Make a branch before you code (`git checkout -b yourname-feature`) and merge int
 
 ## AI use statement
 - **Crew data is simulated.** No real patient data was used. Readings you connect yourself (a strap or a file) stay on your device and your own server unless you turn on the hosted AI.
-- **Inside HALO.** The risk engine, the emergency detection and the crew simulator are plain deterministic code, not AI. Emergency detection runs first and never depends on a model, and no answer may contain a medication amount. An optional assistant asks Claude Opus 5.5 (Anthropic) to word an answer from the source summaries and, on the server, full-text excerpts. HALO rejects any answer that cites a source it did not supply, gives a dose, or gives a diagnosis. On the website the assistant reaches Claude through `services/halo-ai/`, which holds the key and limits use; it is off until a visitor ticks "Use hosted AI for this session", and when it is limited or fails a check the page says so and answers from the sources.
+- **Inside HALO.** The risk engine, the emergency detection and the crew simulator are plain deterministic code, not AI. Emergency detection runs first and never depends on a model, and no answer may contain a medication amount. An optional assistant asks Claude Opus 5.5 (Anthropic) to word an answer from the source summaries and, on the server, full-text excerpts. HALO rejects any answer that cites a source it did not supply, gives a dose, or gives a diagnosis. On the website the assistant reaches Claude through `services/halo-ai/`, which holds the key and limits use; it is on by default for the simulated crew and off by default for the "You" profile and a real strap (a visitor can switch it with "Use hosted AI for this session"), and when it is limited or fails a check the page says so and answers from the sources.
 - **Building HALO.** Claude Code (Anthropic: Claude Opus 5.5 and Sonnet 5.5) wrote much of the front end, the Node server, the evidence search, the tests and the documentation, and checked evidence summaries against their sources. The first version of the assistant backend was written with OpenAI Codex, and some of Gurman's backend commits were made with Claude. The team reviewed and tested the output and is responsible for it.
 - **Source library.** The 46 source summaries and their quotes were extracted with AI help and checked against the source text. No physician or space-medicine expert has reviewed them; the app marks them "domain review pending".
 - **Images.** The app uses no third-party images and no AI-generated bitmap images. The body map is SVG drawn in code (`src/bodymap`), which the statement above about AI-assisted code also covers.
