@@ -1,6 +1,7 @@
 import { BookOpen } from "@phosphor-icons/react";
 import card from "../components/Card.module.css";
 import { DATA_ROWS, NASA_DATA, RULES, TESTS_TEXT, IMAGE_CREDITS } from "../ui/evidenceData.ts";
+import { References } from "../components/References";
 import s from "./Evidence.module.css";
 
 type Props = Record<string, never>;
@@ -64,6 +65,7 @@ export function Evidence(_props: Props) {
           </div>
         </div>
       </div>
+      <div className={s.stack} style={{ marginTop: 16 }}><References /></div>
     </div>
   );
 }

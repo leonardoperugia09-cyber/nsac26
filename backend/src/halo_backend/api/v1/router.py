@@ -1,4 +1,6 @@
 from fastapi import APIRouter
 
-# Add feature routers here as they are implemented and tested.
+from halo_backend.api.v1.endpoints.assistant import router as assistant_router
+
 router = APIRouter()
+router.include_router(assistant_router)

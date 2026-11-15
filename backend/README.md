@@ -3,9 +3,18 @@
 Python + FastAPI scaffold for the HALO research prototype. This branch establishes
 the structure so features can be implemented together, one module at a time.
 
-**Implemented now:** application startup, configuration, CORS allowlist, typed
-`GET /health`, API documentation, and smoke tests. All health-product features are
-planned; no NASA fetch, assistant, risk calculation or report delivery runs yet.
+**Implemented now:** startup, configuration, CORS allowlist, `GET /health`, and the
+assistant stack under `/api/v1`.
+
+| Endpoint | What it does |
+|---|---|
+| `POST /api/v1/assistant` | Red flag rules first, then the AI model with the crew member's data and evidence notes, then a filter that removes drug doses. Falls back to rules with no key. |
+| `GET /api/v1/evidence?q=` | Offline evidence pack (13 sourced notes), keyword search. |
+| `POST /api/v1/report` | Drafts the report for the flight surgeon. Never sends anything. |
+| `GET /api/v1/radlab` and `POST /api/v1/radlab/refresh` | NASA RadLab dose data, cached in `radlab_snapshot.json`. |
+
+Set `AI_API_KEY` (and optionally `AI_MODEL`, `AI_API_URL`) in the shell to use a real model.
+The browser keeps scoring and coupling rules in `src/engine`; it sends the results as context.
 
 ## Setup
 
