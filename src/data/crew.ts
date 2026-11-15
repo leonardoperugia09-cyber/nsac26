@@ -1,6 +1,9 @@
-// Loads the simulated crew data once. Field names are the shared contract in src/engine/types.ts.
+// The crew data: the bundled simulation, or a scenario edited in Settings (re-simulated in the browser).
+// Field names are the shared contract in src/engine/types.ts.
 import raw from "../../data/crew_sim.json";
 import { measurementsOn } from "../shared/measurements.ts";
+import { api } from "../shared/api.ts";
+import { DEFAULT_EVENTS, simulate, type SimEvent } from "../sim/simulator.ts";
 import type {
   CrewMember,
   MissionProfile,
@@ -8,10 +11,56 @@ import type {
   SimData,
 } from "../engine/types.ts";
 
-export const SIM = raw as unknown as SimData;
-
+const BUNDLED = raw as unknown as SimData;
+const SCENARIO_KEY = "halo-sim-custom-v1";
 /** The demo story is told on mission day 58 (after the planted day-55 fluid drop). */
-export const DEMO_DAY = 58;
+const BUNDLED_DAY = 58;
+
+/** Only the scenario is stored (a few KB); the readings are re-simulated from it, same seed, same data */
+export type Scenario = { crew: CrewMember[]; events: SimEvent[]; today: number };
+
+function storedScenario(): Scenario | null {
+  try {
+    const s = typeof localStorage === "undefined" ? null : JSON.parse(localStorage.getItem(SCENARIO_KEY) ?? "null");
+    return s && Array.isArray(s.crew) && s.crew.length === 3 && Array.isArray(s.events) && Number.isInteger(s.today) ? s : null;
+  } catch {
+    return null;
+  }
+}
+const stored = storedScenario();
+
+// Live bindings: every module that reads SIM or DEMO_DAY sees the scenario after a run or reset
+export let SIM: SimData = stored ? simulate(stored.crew, stored.events) : BUNDLED;
+export let DEMO_DAY = stored?.today ?? BUNDLED_DAY;
+
+export const isCustomScenario = () => SIM !== BUNDLED;
+/** What the Settings editor starts from: the stored scenario, or the bundled crew with today's planted events */
+export const scenarioOf = (): Scenario =>
+  storedScenario() ?? { crew: BUNDLED.crew, events: DEFAULT_EVENTS, today: BUNDLED_DAY };
+
+/** The HALO server (when it runs) uses the same data, so the assistant and exports match the screen */
+export function syncScenario() {
+  const s = storedScenario();
+  if (s) api("/scenario", { crew: s.crew, events: s.events, today: s.today }).catch(() => {});
+}
+
+/** Run the simulation for an edited scenario, keep it on this device and tell every view to recompute */
+export function saveScenario(s: Scenario) {
+  SIM = simulate(s.crew, s.events);
+  DEMO_DAY = s.today;
+  try { localStorage.setItem(SCENARIO_KEY, JSON.stringify(s)); } catch { /* storage blocked: this session only */ }
+  window.dispatchEvent(new Event("halo-data-change"));
+  syncScenario();
+}
+
+/** Back to the bundled demo data, here and on the server */
+export function resetScenario() {
+  SIM = BUNDLED;
+  DEMO_DAY = BUNDLED_DAY;
+  try { localStorage.removeItem(SCENARIO_KEY); } catch { /* nothing stored */ }
+  window.dispatchEvent(new Event("halo-data-change"));
+  api("/scenario/reset", {}).catch(() => {});
+}
 
 export const MISSION_PROFILE =
   (SIM.meta.mission_profile as MissionProfile) ?? "mars_transit";

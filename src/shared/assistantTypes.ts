@@ -1,6 +1,6 @@
 export type ConversationTurn = { role: "user" | "assistant"; content: string };
 export type AssistantStatus = {
-  provider?: "openai" | "azure";
+  provider?: "openai" | "azure" | "anthropic";
   configured: boolean;
   status: string;
   message: string;

@@ -624,3 +624,73 @@ test("assistant API handles a generated, cited answer using the selected crew on
     await a.close();
   }
 });
+
+test("scenario editor: the server re-simulates an edited scenario, rejects bad ones and resets", async () => {
+  const a = await build();
+  try {
+    const crew = (await a.inject("/api/crew")).json().crew;
+    const { DEFAULT_EVENTS } = await import("../../src/sim/simulator.ts");
+    const kidney = async () =>
+      (await a.inject(url("risks", "C2", 58)))
+        .json()
+        .risks.find((r: any) => r.ruleId === "kidney_stone").level;
+    assert.equal(await kidney(), "Act");
+    // Marco no longer drinks less: the kidney stone risk must drop, and provenance must say so
+    const calm = {
+      crew: crew.map((c: any) =>
+        c.id === "C1" ? { ...c, name: "Commander Ana Lima" } : c,
+      ),
+      events: DEFAULT_EVENTS.filter((e: any) => e.type !== "fluid_drop"),
+      today: 58,
+    };
+    const applied = await a.inject({
+      method: "POST",
+      url: "/api/scenario",
+      payload: calm,
+    });
+    assert.equal(applied.statusCode, 200);
+    assert.notEqual(await kidney(), "Act");
+    assert.equal(
+      (await a.inject("/api/crew")).json().crew[0].name,
+      "Commander Ana Lima",
+    );
+    assert.match(
+      (await a.inject(url("snapshot", "C2", 58))).json().provenance.source,
+      /scenario/,
+    );
+    // Wrong crew slots and out-of-range values are refused, and the data stays as it was
+    const twoCrew = await a.inject({
+      method: "POST",
+      url: "/api/scenario",
+      payload: { ...calm, crew: calm.crew.slice(0, 2) },
+    });
+    assert.equal(twoCrew.statusCode, 422);
+    const badBaseline = await a.inject({
+      method: "POST",
+      url: "/api/scenario",
+      payload: {
+        ...calm,
+        crew: calm.crew.map((c: any) => ({
+          ...c,
+          baseline: { ...c.baseline, heart_rate: 400 },
+        })),
+      },
+    });
+    assert.equal(badBaseline.statusCode, 422);
+    assert.notEqual(await kidney(), "Act");
+    // Reset brings back the bundled story
+    const reset = await a.inject({
+      method: "POST",
+      url: "/api/scenario/reset",
+      payload: {},
+    });
+    assert.equal(reset.statusCode, 200);
+    assert.equal(await kidney(), "Act");
+    assert.equal(
+      (await a.inject(url("snapshot", "C2", 58))).json().provenance.source,
+      "data/crew_sim.json",
+    );
+  } finally {
+    await a.close();
+  }
+});

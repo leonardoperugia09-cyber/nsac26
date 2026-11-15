@@ -79,6 +79,11 @@ export function providerAnswerSchema() {
 
 export async function generateAnswer(payload: unknown, options: ModelOptions) {
   const config = resolveModelConfig(options);
+  if (config.provider === "anthropic") {
+    const { generateAnthropicAnswer } =
+      await import("./assistant-anthropic.ts");
+    return generateAnthropicAnswer(payload, options);
+  }
   try {
     const response = await fetch(config.url, {
       method: "POST",

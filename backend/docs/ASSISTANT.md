@@ -48,6 +48,20 @@ For Azure, use [AZURE.md](AZURE.md). For direct OpenAI, copy the root `.env.exam
 - `HALO_MODEL`: a model ID available to that project that supports Chat Completions
   structured outputs. No model ID or paid subscription is assumed by the code.
 
+## Anthropic (Claude)
+
+Copy the root `.env.example` to `.env` and set:
+
+- `AI_PROVIDER=anthropic`
+- `ANTHROPIC_API_KEY`: an API key from the Anthropic Console, stored only on the API server.
+- `HALO_MODEL`: optional. Defaults to `claude-opus-5-5`.
+
+The server calls the official `@anthropic-ai/sdk` with structured output (the same
+JSON schema as the other providers), adaptive thinking, medium effort and a 30 second
+timeout. A refused request is re-run by Anthropic's server-side refusal fallback; a
+final refusal, truncation, timeout or error ends in the labelled offline fallback.
+`npm run check:ai` makes one live call with this provider and can incur API usage.
+
 `npm run server` loads the root `.env` if present; exported variables take precedence.
 Run `npm run dev:full`, open Assistant, and enable **Use hosted AI for this session**.
 Ask a supported question, for example: “What does the evidence say about sleep

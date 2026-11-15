@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { BASELINE_FIELDS, DAYS, EVENT_INFO } from "../../src/sim/simulator.ts";
 export const Profile = z.enum(["iss", "moon", "mars_transit"]);
 export const Selection = z.object({
   crewId: z.string().regex(/^C[123]$/),
@@ -210,5 +211,59 @@ export const MedicationDay = z
           .max(100),
       })
       .strict(),
+  })
+  .strict();
+
+// A scenario edited in Settings: the server re-runs the same simulator, so only crew and events travel
+export const ScenarioInput = z
+  .object({
+    crew: z
+      .array(
+        z
+          .object({
+            id: z.string().regex(/^C[1-3]$/),
+            name: z.string().trim().min(3).max(80),
+            role: z.string().trim().min(2).max(80),
+            age: z.number().int().min(21).max(70),
+            sex: z.enum(["F", "M"]),
+            baseline: z
+              .object(
+                Object.fromEntries(
+                  BASELINE_FIELDS.map((f) => [
+                    f.key,
+                    z.number().min(f.min).max(f.max),
+                  ]),
+                ),
+              )
+              .strict(),
+          })
+          .strict(),
+      )
+      .length(3),
+    events: z
+      .array(
+        z
+          .object({
+            id: z.string().min(1).max(60),
+            type: z.enum(["solar_storm", "fluid_drop", "short_night"]),
+            crewId: z.string().regex(/^(C[1-3]|all)$/),
+            day: z.number().int().min(1).max(DAYS),
+            length: z.number().int().min(1).max(DAYS).optional(),
+            strength: z.number(),
+          })
+          .strict()
+          .refine(
+            (e) =>
+              e.strength >= EVENT_INFO[e.type].min &&
+              e.strength <= EVENT_INFO[e.type].max,
+            "Event strength out of range",
+          )
+          .refine(
+            (e) => e.type === "solar_storm" || e.crewId !== "all",
+            "This event needs one astronaut",
+          ),
+      )
+      .max(20),
+    today: z.number().int().min(1).max(DAYS).optional(),
   })
   .strict();

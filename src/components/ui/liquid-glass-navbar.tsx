@@ -478,13 +478,17 @@ export function LiquidNavbar({
     s.glc = cv ? initGL(cv) : null
     if (!s.glc) setGl("off")
     const lost = (e: Event) => { e.preventDefault(); s.glc = null; setGl("off") }
+    // After sleep or a GPU reset the browser hands the context back: rebuild the water instead of staying on the fallback
+    const restored = () => { s.glc = cv ? initGL(cv) : null; setGl(s.glc ? "on" : "off"); cancelAnimationFrame(s.raf); s.raf = 0; loop() }
     cv?.addEventListener("webglcontextlost", lost)
+    cv?.addEventListener("webglcontextrestored", restored)
     const io = new IntersectionObserver(([e]) => { s.visible = e.isIntersecting; if (s.visible) loop() })
     if (navRef.current) io.observe(navRef.current)
     const vis = () => { s.visible = document.visibilityState === "visible"; if (s.visible) loop() }
     document.addEventListener("visibilitychange", vis)
     return () => {
       cv?.removeEventListener("webglcontextlost", lost)
+      cv?.removeEventListener("webglcontextrestored", restored)
       io.disconnect()
       document.removeEventListener("visibilitychange", vis)
       cancelAnimationFrame(s.raf)
@@ -496,10 +500,13 @@ export function LiquidNavbar({
   const measureRef = React.useRef(measure)
   measureRef.current = measure
   React.useEffect(() => {
-    let lastW = -1
+    // Height matters too: a vertical nav stretched to the window moves its bottom items when the window
+    // height changes, and the canvas and drop must follow (they kept the old size and place before)
+    let lastW = -1, lastH = -1
     const ro = new ResizeObserver(() => {
       const w = navRef.current?.offsetWidth ?? 0
-      if (w !== lastW) { lastW = w; st.current.ready = false; measureRef.current() }
+      const h = navRef.current?.offsetHeight ?? 0
+      if (w !== lastW || h !== lastH) { lastW = w; lastH = h; st.current.ready = false; measureRef.current() }
     })
     if (navRef.current) ro.observe(navRef.current)
     return () => ro.disconnect()

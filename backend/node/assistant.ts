@@ -22,8 +22,9 @@ export function assistantStatus(options: ModelOptions = {}) {
   let configured = false;
   let status = "not_configured";
   let message = "Hosted AI is not configured.";
+  let model: string | undefined;
   try {
-    resolveModelConfig(options);
+    model = resolveModelConfig(options).model;
     configured = true;
     status = "configured_not_verified";
     message =
@@ -37,7 +38,7 @@ export function assistantStatus(options: ModelOptions = {}) {
   return {
     configured,
     provider: options.provider ?? "openai",
-    model: configured ? options.model : null,
+    model: configured ? model : null,
     providerVerified: false,
     status,
     message,
@@ -70,7 +71,16 @@ export async function answer(
   const priority = assessment.priority;
   // Curated answers for the most common questions come first: they carry a concrete next step
   const topic =
-    t.urgent || medication ? null : topicAnswer(input.question, priority);
+    t.urgent || medication
+      ? null
+      : topicAnswer(input.question, priority, {
+          reading:
+            currentReading?.crew_id === input.crewId &&
+            currentReading.day === input.day
+              ? (currentReading as unknown as Record<string, unknown>)
+              : undefined,
+          drift: assessment.drift,
+        });
   let explanation = t.urgent
     ? "Contact the crew medical officer immediately and follow the onboard emergency procedure. Do not wait for an Earth reply."
     : medication

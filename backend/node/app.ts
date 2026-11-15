@@ -8,7 +8,8 @@ import { randomUUID, timingSafeEqual, createHash } from "node:crypto";
 import { resolve } from "node:path";
 import { Store } from "./store.ts";
 import { responseContracts } from "./responses.ts";
-import { loadDataset, historyFor } from "./data.ts";
+import { loadDataset, historyFor, validateDataset } from "./data.ts";
+import { simulate } from "../../src/sim/simulator.ts";
 import {
   Selection,
   Ask,
@@ -23,6 +24,7 @@ import {
   UNITS,
   MeasurementReview,
   MeasurementBatch,
+  ScenarioInput,
 } from "./contracts.ts";
 import { assessCrew, readiness } from "../../src/engine/assessment.ts";
 import { answer, assistantStatus } from "./assistant.ts";
@@ -51,6 +53,24 @@ export async function makeServer(options: Options = {}) {
   const now = options.now ?? Date.now;
   const store = new Store(options.dbPath ?? resolve("backend/var/halo.sqlite"));
   const { data, sha256 } = loadDataset(options.datasetPath);
+  // Settings can replace the crew data with an edited scenario; keep the bundled copy to reset to
+  const original = structuredClone(data);
+  let datasetHash = sha256;
+  let datasetSource = "data/crew_sim.json";
+  const applyScenario = (sc: { crew: any[]; events: any[] }) => {
+    const next = simulate(sc.crew, sc.events);
+    validateDataset(next);
+    Object.assign(data, next);
+    datasetHash = createHash("sha256")
+      .update(JSON.stringify(next))
+      .digest("hex");
+    datasetSource = "scenario edited in HALO Settings (simulated)";
+  };
+  const resetScenario = () => {
+    Object.assign(data, structuredClone(original));
+    datasetHash = sha256;
+    datasetSource = "data/crew_sim.json";
+  };
   await app.register(cors, {
     origin: (process.env.HALO_ALLOWED_ORIGINS ?? "http://localhost:5173").split(
       ",",
@@ -184,8 +204,8 @@ export async function makeServer(options: Options = {}) {
       checkin: store.get("checkin", `${s.crewId}:${s.day}`),
       provenance: {
         kind: "simulated",
-        datasetSha256: sha256,
-        source: "data/crew_sim.json",
+        datasetSha256: datasetHash,
+        source: datasetSource,
         timeBasis: "mission_day",
       },
       mission: PROFILES[s.profile as MissionProfile],
@@ -203,7 +223,7 @@ export async function makeServer(options: Options = {}) {
     days: 120,
     readings: 360,
     simulated: true,
-    datasetSha256: sha256,
+    datasetSha256: datasetHash,
   }));
   route("GET", "/api/missions", undefined, () => ({
     profiles: PROFILES,
@@ -255,6 +275,56 @@ export async function makeServer(options: Options = {}) {
         { ...m, crewId: s.crewId, recordedAt },
       );
     return { stored: s.measurements.length };
+  });
+  // Scenario editor: the same simulator runs here, so the assistant and exports use the numbers on screen
+  {
+    const saved = store.get("scenario", "current");
+    if (saved?.crew) {
+      try {
+        applyScenario(saved);
+      } catch {
+        /* a stored scenario that no longer validates falls back to the bundled data */
+      }
+    }
+  }
+  route("POST", "/api/scenario", ScenarioInput, (s, _req, reply) => {
+    const ids = s.crew
+      .map((c: any) => c.id)
+      .sort()
+      .join(",");
+    if (
+      ids !==
+      original.crew
+        .map((c) => c.id)
+        .sort()
+        .join(",")
+    )
+      return reply.code(422).send({
+        error: {
+          code: "INVALID_INPUT",
+          message: "Scenario must keep the crew slots C1, C2 and C3",
+        },
+      });
+    try {
+      applyScenario(s);
+    } catch {
+      return reply.code(422).send({
+        error: {
+          code: "INVALID_INPUT",
+          message: "Scenario did not produce a valid dataset",
+        },
+      });
+    }
+    store.put("scenario", "current", "public", {
+      crew: s.crew,
+      events: s.events,
+    });
+    return { applied: true, datasetSha256: datasetHash };
+  });
+  route("POST", "/api/scenario/reset", z.object({}).strict(), () => {
+    resetScenario();
+    store.put("scenario", "current", "public", {});
+    return { reset: true, datasetSha256: datasetHash };
   });
   route("GET", "/api/measurements", Selection, (s) =>
     store

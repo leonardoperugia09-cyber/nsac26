@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Sidebar, type Page } from "./components/Sidebar";
 import { TopBar } from "./components/TopBar";
-import { DEMO_DAY, MISSION_PROFILE, SIM, crewById, historyOf } from "./data/crew.ts";
+import { DEMO_DAY, MISSION_PROFILE, SIM, crewById, historyOf, syncScenario } from "./data/crew.ts";
 import { Overview } from "./pages/Overview";
 import { RiskBanner } from "./components/RiskBanner";
 import { buildOverview, easedToday } from "./ui/overviewData.ts";
@@ -31,7 +31,7 @@ const readLook = (): Look => {
 export default function App() {
   const [page, setPage] = useState<Page>("overview");
   const [crewId, setCrewId] = useState("C2"); // demo story: Marco Ricci
-  const [day, setDay] = useState(DEMO_DAY); // Manar's scenarios in Settings move this to other days
+  const [day, setDay] = useState(DEMO_DAY); // "Today" from the scenario in Settings
   const [look, setLook] = useState<Look>(readLook);
   const [system, setSystem] = useState<RegionId | null>(null);
   const [urgent, setUrgent] = useState(false);
@@ -48,6 +48,7 @@ export default function App() {
 
   // Manar's backend: send check-ins saved offline when the link is back, pull the server's copies, follow page jumps from inside pages
   useEffect(() => {
+    syncScenario(); // an edited scenario on this device is mirrored to the HALO server
     syncCheckins();
     syncMeasurements();
     window.addEventListener("online", syncCheckins);
@@ -105,7 +106,7 @@ export default function App() {
         {page === "overview" && <Overview key={crewId} crewId={crewId} day={day} delay={DELAY} onOpenHealth={openHealth} done={done} onDone={setDone}
           logged={!!logged[crewId]} meds={medsToday} profileName={PROFILE_NAME} onNavigate={navigate} />}
         {page === "settings" && <Settings look={look} onLook={setLook} crewId={crewId} day={day}
-          onScenario={(c, d) => { setCrewId(c); setDay(d); }} />}
+          onToday={setDay} />}
         {page === "health" && <Health crewId={crewId} day={day} selected={system} onSelect={setSystem} />}
         {page === "log" && <DailyLog crewId={crewId} day={day} quickMood={quickMood[crewId] ?? null}
           onSaved={() => setLogged((m) => ({ ...m, [crewId]: true }))} />}

@@ -10,6 +10,12 @@ import { retrieve, passages } from "../node/retrieval.ts";
 import { evidence } from "../node/evidence.ts";
 import { loadDataset } from "../node/data.ts";
 import { assessCrew } from "../../src/engine/assessment.ts";
+import Anthropic from "@anthropic-ai/sdk";
+import {
+  modelOptionsFromEnv,
+  resolveModelConfig,
+} from "../node/model-config.ts";
+import { topicAnswer, topicText } from "../../src/shared/assistantTopics.ts";
 const { data } = loadDataset();
 const assessment = assessCrew(
   data.readings.filter((r) => r.crew_id === "C2"),
@@ -523,9 +529,180 @@ test("common questions get their own answer and next step, not the risk summary"
   assert.match(headache.explanation, /fluid shifting toward the head/);
   assert.match(headache.explanation, /What to do now:/);
   const todo = await ask("What should I do?");
-  assert.match(todo.explanation, /Drink 500 ml/);
+  assert.match(todo.explanation, /hydration plan shown on the Overview/);
   const sleep = await ask("I slept badly");
   assert.ok(sleep.citations.some((c: any) => c.id === "sleep_2014"));
   const urgent = await ask("chest pain and headache");
   assert.equal(urgent.triage.urgent, true);
+});
+
+// ---- Anthropic (Claude) provider ----
+const anthropicOptions = (create: (body: any) => Promise<unknown>) => ({
+  provider: "anthropic" as const,
+  apiKey: "server-secret-test",
+  model: "claude-opus-5-5",
+  anthropicClient: { beta: { messages: { create } } },
+});
+const claudeReply = (value: unknown, stop_reason = "end_turn") => ({
+  stop_reason,
+  content: [{ type: "text", text: JSON.stringify(value) }],
+});
+test("anthropic config resolves with key and the default model", () => {
+  const options = modelOptionsFromEnv({
+    AI_PROVIDER: "anthropic",
+    ANTHROPIC_API_KEY: " sk-test ",
+  });
+  assert.equal(options.apiKey, "sk-test");
+  assert.equal(resolveModelConfig(options).model, "claude-opus-5-5");
+  assert.equal(
+    modelOptionsFromEnv({
+      AI_PROVIDER: "anthropic",
+      ANTHROPIC_API_KEY: "k",
+      HALO_MODEL: "other",
+    }).model,
+    "other",
+  );
+  const status = assistantStatus(options);
+  assert.equal(status.provider, "anthropic");
+  assert.equal(status.configured, true);
+  assert.equal(status.model, "claude-opus-5-5");
+});
+test("anthropic without a key is not configured", async () => {
+  const options = modelOptionsFromEnv({ AI_PROVIDER: "anthropic" });
+  assert.equal(assistantStatus(options).status, "not_configured");
+  assert.match(assistantStatus(options).message, /ANTHROPIC_API_KEY/);
+  const r = await answer(input(), assessment, options);
+  assert.equal(r.modelStatus, "not_configured");
+  assert.equal(r.providerDataSent, false);
+});
+test("anthropic refusal and thrown errors fall back to the offline answer", async () => {
+  const refusal = await answer(
+    input(),
+    assessment,
+    anthropicOptions(async () => ({ stop_reason: "refusal", content: [] })),
+  );
+  assert.equal(refusal.modelStatus, "failed_using_offline_fallback");
+  assert.equal(refusal.failureReason, "provider_refusal");
+  assert.equal(refusal.mode, "offline_rules");
+  const failed = await answer(
+    input(),
+    assessment,
+    anthropicOptions(async () => {
+      throw Anthropic.APIError.generate(401, {}, "bad key", new Headers());
+    }),
+  );
+  assert.equal(failed.modelStatus, "failed_using_offline_fallback");
+  assert.equal(failed.failureReason, "authentication_error");
+  const truncated = await answer(
+    input(),
+    assessment,
+    anthropicOptions(async () => claudeReply(generated(), "max_tokens")),
+  );
+  assert.equal(truncated.failureReason, "invalid_output");
+});
+test("anthropic valid structured response is accepted and still safety checked", async () => {
+  let body: any;
+  const ok = await answer(
+    input(),
+    assessment,
+    anthropicOptions(async (b) => {
+      body = b;
+      return claudeReply(generated());
+    }),
+  );
+  assert.equal(ok.mode, "grounded_ai");
+  assert.equal(ok.modelStatus, "available");
+  assert.equal(body.model, "claude-opus-5-5");
+  assert.deepEqual(body.thinking, { type: "adaptive" });
+  assert.equal(body.output_config.effort, "medium");
+  assert.equal(body.output_config.format.type, "json_schema");
+  assert.equal(body.fallbacks, "default");
+  const unsafe = await answer(
+    input(),
+    assessment,
+    anthropicOptions(async () =>
+      claudeReply(
+        generated({
+          paragraphs: [
+            {
+              text: "Drink 500 ml now.",
+              evidenceIds: ["sleep_2014:claim:1"],
+              signalKeys: [],
+            },
+          ],
+        }),
+      ),
+    ),
+  );
+  assert.equal(unsafe.modelStatus, "failed_using_offline_fallback");
+  const invented = await answer(
+    input(),
+    assessment,
+    anthropicOptions(async () =>
+      claudeReply(
+        generated({
+          paragraphs: [
+            { text: "Made up.", evidenceIds: ["fake:claim:1"], signalKeys: [] },
+          ],
+        }),
+      ),
+    ),
+  );
+  assert.equal(invented.modelStatus, "failed_using_offline_fallback");
+});
+
+// ---- Four assistant fixes ----
+const day60 = data.readings.find((r) => r.crew_id === "C2" && r.day === 60)!;
+const offline = (q: string) =>
+  answer(input(q, { allowAI: false }), assessment, {}, day60);
+test("what should I do never prescribes a fluid volume", async () => {
+  const kidney = topicAnswer("what should I do", {
+    ruleId: "kidney_stone",
+    name: "Kidney stone risk",
+    level: "Act",
+    action: "x",
+  });
+  assert.doesNotMatch(topicText(kidney!), /\d+\s*ml/i);
+  assert.match(kidney!.action, /medical officer/);
+  assert.doesNotMatch(
+    (await offline("what should I do")).explanation,
+    /\d+\s*ml/i,
+  );
+});
+test("headache asks about red flags instead of asserting none", async () => {
+  const r = (await offline("I have a headache")).explanation;
+  assert.doesNotMatch(r, /no red flags/i);
+  assert.match(r, /sudden and severe/);
+  assert.match(r, /vision change/);
+  assert.match(r, /Urgent help/);
+});
+test("dizziness has its own answer", async () => {
+  const r = await offline("I feel dizzy when I stand up");
+  assert.match(r.explanation, /orthostatic/);
+  assert.match(r.explanation, /Sit or lie down/);
+  assert.match(r.explanation, /Urgent help/);
+  assert.doesNotMatch(r.explanation, /headache/);
+});
+test("radiation, sleep and urine answers quote the astronaut's own numbers", async () => {
+  const rad = (await offline("What is my radiation dose so far?")).explanation;
+  assert.ok(rad.includes(String(Number(day60.radiation_mSv_total.toFixed(2)))));
+  assert.ok(rad.includes(String(Number(day60.radiation_mSv_today.toFixed(2)))));
+  const sleep = (await offline("How was my sleep?")).explanation;
+  const d = assessment.drift.sleep_hours;
+  assert.match(sleep, new RegExp(`slept ${Number(d.value.toFixed(1))} hours`));
+  assert.match(
+    sleep,
+    new RegExp(
+      `${Number(d.bandLo.toFixed(1))} to ${Number(d.bandHi.toFixed(1))}`,
+    ),
+  );
+  const urine = (await offline("Why is my urine dark?")).explanation;
+  assert.match(
+    urine,
+    new RegExp(`colour ${Number(day60.urine_color_1to8.toFixed(1))} of 8`),
+  );
+  assert.ok(urine.includes(`${Math.round(day60.fluid_intake_ml)} ml`));
+  // Without facts, the general text stays
+  assert.match(topicAnswer("How was my sleep?", null)!.text, /about 6 hours/);
+  assert.equal(topicAnswer("What is my radiation dose so far?", null), null);
 });

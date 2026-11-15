@@ -1,10 +1,14 @@
 export type ModelOptions = {
-  provider?: "openai" | "azure";
+  provider?: "openai" | "azure" | "anthropic";
   apiKey?: string;
   /** OpenAI model ID, or the Azure deployment name (not its underlying model ID). */
   model?: string;
   azureEndpoint?: string;
+  /** Test hook: a stand-in for the Anthropic SDK client. Never set in production. */
+  anthropicClient?: unknown;
 };
+
+export const ANTHROPIC_DEFAULT_MODEL = "claude-opus-5-5";
 
 export class ModelConfigurationError extends Error {
   constructor(
@@ -19,12 +23,22 @@ export function modelOptionsFromEnv(
   env: Record<string, string | undefined> = process.env,
 ): ModelOptions {
   const provider = env.AI_PROVIDER?.trim() || "openai";
-  if (provider !== "openai" && provider !== "azure") {
+  if (
+    provider !== "openai" &&
+    provider !== "azure" &&
+    provider !== "anthropic"
+  ) {
     throw new ModelConfigurationError(
       "invalid_configuration",
-      "AI_PROVIDER must be openai or azure.",
+      "AI_PROVIDER must be openai, azure or anthropic.",
     );
   }
+  if (provider === "anthropic")
+    return {
+      provider,
+      apiKey: env.ANTHROPIC_API_KEY?.trim(),
+      model: env.HALO_MODEL?.trim() || ANTHROPIC_DEFAULT_MODEL,
+    };
   // Never send an OpenAI key to Azure, or an Azure key to OpenAI, as an implicit fallback.
   return provider === "azure"
     ? {
@@ -70,11 +84,25 @@ export function azureBaseUrl(endpoint: string) {
 
 export function resolveModelConfig(options: ModelOptions) {
   const provider = options.provider ?? "openai";
-  if (provider !== "openai" && provider !== "azure")
+  if (provider !== "openai" && provider !== "azure" && provider !== "anthropic")
     throw new ModelConfigurationError(
       "invalid_configuration",
-      "AI_PROVIDER must be openai or azure.",
+      "AI_PROVIDER must be openai, azure or anthropic.",
     );
+  if (provider === "anthropic") {
+    if (!options.apiKey?.trim())
+      throw new ModelConfigurationError(
+        "not_configured",
+        "Hosted AI is not configured. Set ANTHROPIC_API_KEY on the API server.",
+      );
+    // The SDK builds its own URL and auth header; nothing is sent from here.
+    return {
+      provider,
+      url: "",
+      headers: {} as Record<string, string>,
+      model: options.model?.trim() || ANTHROPIC_DEFAULT_MODEL,
+    };
+  }
   const missing =
     provider === "azure"
       ? [

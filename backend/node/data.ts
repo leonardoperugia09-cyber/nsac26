@@ -10,6 +10,12 @@ export function loadDataset(
   const buffer = readFileSync(path);
   if (buffer.length > 2_000_000) throw Error("Dataset too large");
   const data = JSON.parse(buffer.toString()) as SimData;
+  validateDataset(data);
+  return { data, sha256: createHash("sha256").update(buffer).digest("hex") };
+}
+
+/** Same checks for the bundled file and for a scenario simulated from Settings: 3 crew, days 1-120, finite values */
+export function validateDataset(data: SimData) {
   if (
     data.meta.simulated !== true ||
     !Array.isArray(data.crew) ||
@@ -37,7 +43,6 @@ export function loadDataset(
     }
   }
   if (seen.size !== 360) throw Error("Incomplete dataset");
-  return { data, sha256: createHash("sha256").update(buffer).digest("hex") };
 }
 export function historyFor(
   data: SimData,

@@ -12,6 +12,17 @@ type Props = { risk: PriorityRisk | null; series: LinkedSeries[]; today: number;
  *  A solid white card; at Watch or Act a solid state strip runs across its top (the alarm-panel pattern). */
 export function PriorityAlert({ risk, series, today, delay, nextTask, flagged, done, onDone }: Props) {
   const [why, setWhy] = useState(false);
+  // Before day 21 there is no personal normal to compare with yet (it is learned from days 7 to 20): say so
+  if (!risk && today < 21) {
+    return (
+      <section className={s.hero} aria-labelledby="risk-title">
+        <p className={s.status}>Learning</p>
+        <h1 id="risk-title" className={s.title}>HALO is still learning your normal</h1>
+        <p className={s.why}>It learns each person's normal from days 7 to 20, then compares every reading with it. Until day 21 nothing is judged, so keep logging.</p>
+        {nextTask && <p className={s.next}>Next on your list: <b>{nextTask.label}</b>{nextTask.when ? `, ${nextTask.when.toLowerCase()}` : ""}</p>}
+      </section>
+    );
+  }
   if (!risk) {
     const one = flagged.length === 1;
     return (

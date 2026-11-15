@@ -6,12 +6,15 @@ export function answer(
   question: string,
   a: ReturnType<typeof assessCrew>,
   symptoms: string[] = [],
+  reading?: Record<string, unknown>,
 ): AssistantReply {
   const screen = triage(question, symptoms);
   const medication = medicationAdvice(question);
   // Same curated answers as the server, so the next step reads the same with or without the backend
   const topic =
-    screen.urgent || medication ? null : topicAnswer(question, a.priority);
+    screen.urgent || medication
+      ? null
+      : topicAnswer(question, a.priority, { drift: a.drift, reading });
   const dataQuestion =
     /reading|measurement|risk|pattern|baseline|my data|changed|قياس|قراءات|بيانات|مخاطر/iu.test(
       question,

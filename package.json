@@ -18,9 +18,11 @@
     "test:browser": "playwright test",
     "format:check": "prettier --check backend/node backend/tests backend/*.ts src/engine/assessment.ts src/shared",
     "check:bodymap": "tsx scripts/check_bodymap.ts",
+    "check:sim": "tsx scripts/check_sim.ts",
     "check:ai": "node --env-file-if-exists=.env --import=tsx backend/check-ai.ts"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^1.8.0",
     "@fastify/cors": "^11.4.3",
     "@fastify/rate-limit": "^11.2.2",
     "@fastify/swagger": "^9.9.4",
