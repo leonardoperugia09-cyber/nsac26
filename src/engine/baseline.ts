@@ -114,7 +114,7 @@ export function computeDrift(history: Reading[], bands: Record<string, Band>, da
     const centre = bandCentreAt(band, at);
 
     const rawFar = (value - centre) / band.sd;
-    const rawFast = ((slope(lastWeek.map((r) => get(r, key))) - band.expectedPerDay) * TREND_DAYS) / band.sd;
+    const rawFast = def.trend === false ? 0 : ((slope(lastWeek.map((r) => get(r, key))) - band.expectedPerDay) * TREND_DAYS) / band.sd;
     const dir = def.badDirection;
     const howFar = dir === 0 ? Math.abs(rawFar) : dir * rawFar;
     const howFast = dir === 0 ? Math.abs(rawFast) : dir * rawFast;
