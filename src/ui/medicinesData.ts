@@ -3,6 +3,7 @@
 // HALO records what was taken and never suggests or changes a dose.
 
 import type { Level } from "../engine/types.ts";
+import { forecastPotency } from "../engine/potency.ts";
 
 export type Category = "Supplement" | "Sleep" | "Kidney" | "Pain" | "Allergy" | "Motion sickness" | "Infection" | "Emergency";
 export const CATEGORIES: Category[] = ["Supplement", "Sleep", "Kidney", "Pain", "Allergy", "Motion sickness", "Infection", "Emergency"];
@@ -21,9 +22,8 @@ export type MedInfo = {
   purpose: string;
   category: Category;
   location: string;
-  /** Strength model inputs (see strengthOf) */
-  k: number;
-  r: number;
+  /** Typical label shelf life from manufacture, in months (DEMO: real values depend on the product) */
+  shelfLifeMonths: number;
   /** As-needed medicines: rough uses per week, for the "lasts until" estimate */
   prnPerWeek?: number;
   note?: string;
@@ -31,22 +31,22 @@ export type MedInfo = {
 };
 
 export const MEDS: MedInfo[] = [
-  { id: "d3", name: "Vitamin D3", purpose: "Keeps vitamin D up without sunlight", category: "Supplement", location: "Kit A, drawer 1", k: 0.004, r: 0.3 },
-  { id: "mel", name: "Melatonin", purpose: "Helps you fall asleep on a shifted schedule", category: "Sleep", location: "Kit A, drawer 2", k: 0.008, r: 0.5 },
-  { id: "kcit", name: "Potassium citrate", purpose: "Lowers the chance of kidney stones", category: "Kidney", location: "Kit A, drawer 3", k: 0.006, r: 0.4 },
+  { id: "d3", name: "Vitamin D3", purpose: "Keeps vitamin D up without sunlight", category: "Supplement", location: "Kit A, drawer 1", shelfLifeMonths: 24 },
+  { id: "mel", name: "Melatonin", purpose: "Helps you fall asleep on a shifted schedule", category: "Sleep", location: "Kit A, drawer 2", shelfLifeMonths: 24 },
+  { id: "kcit", name: "Potassium citrate", purpose: "Lowers the chance of kidney stones", category: "Kidney", location: "Kit A, drawer 3", shelfLifeMonths: 36 },
   {
-    id: "ibu", name: "Ibuprofen", purpose: "Pain and swelling", category: "Pain", location: "Kit B, drawer 1", k: 0.006, r: 0.4, prnPerWeek: 0.5,
+    id: "ibu", name: "Ibuprofen", purpose: "Pain and swelling", category: "Pain", location: "Kit B, drawer 1", shelfLifeMonths: 36, prnPerWeek: 0.5,
     cautions: [{ ruleId: "kidney_stone", from: "Watch", text: "Your kidney stone risk is up. Ask your flight surgeon before taking this." }],
   },
-  { id: "para", name: "Paracetamol", purpose: "Pain and fever", category: "Pain", location: "Kit B, drawer 1", k: 0.005, r: 0.35, prnPerWeek: 0.5 },
-  { id: "anti", name: "Antihistamine", purpose: "Allergy, itchy skin, congestion", category: "Allergy", location: "Kit B, drawer 2", k: 0.007, r: 0.5, prnPerWeek: 0.3 },
+  { id: "para", name: "Paracetamol", purpose: "Pain and fever", category: "Pain", location: "Kit B, drawer 1", shelfLifeMonths: 36, prnPerWeek: 0.5 },
+  { id: "anti", name: "Antihistamine", purpose: "Allergy, itchy skin, congestion", category: "Allergy", location: "Kit B, drawer 2", shelfLifeMonths: 24, prnPerWeek: 0.3 },
   {
-    id: "prom", name: "Promethazine", purpose: "Space motion sickness", category: "Motion sickness", location: "Kit B, drawer 3", k: 0.015, r: 1.1, prnPerWeek: 0.1,
+    id: "prom", name: "Promethazine", purpose: "Space motion sickness", category: "Motion sickness", location: "Kit B, drawer 3", shelfLifeMonths: 24, prnPerWeek: 0.1,
     note: "Causes drowsiness.",
     cautions: [{ ruleId: "cognitive_readiness", from: "Watch", text: "Your readiness is low today. Check with your flight surgeon before a spacewalk or docking." }],
   },
-  { id: "amox", name: "Amoxicillin", purpose: "Bacterial infections, only when prescribed", category: "Infection", location: "Kit C, drawer 1", k: 0.012, r: 0.9 },
-  { id: "epi", name: "Epinephrine auto-injector", purpose: "Severe allergic reaction", category: "Emergency", location: "Kit C, front pocket", k: 0.02, r: 1.3, note: "Emergency use. Follow the onboard protocol." },
+  { id: "amox", name: "Amoxicillin", purpose: "Bacterial infections, only when prescribed", category: "Infection", location: "Kit C, drawer 1", shelfLifeMonths: 24 },
+  { id: "epi", name: "Epinephrine auto-injector", purpose: "Severe allergic reaction", category: "Emergency", location: "Kit C, front pocket", shelfLifeMonths: 18, note: "Emergency use. Follow the onboard protocol." },
 ];
 export const MED_BY_ID = Object.fromEntries(MEDS.map((m) => [m.id, m])) as Record<string, MedInfo>;
 
@@ -76,32 +76,10 @@ export const STOCK: Record<string, Record<string, number>> = {
   C3: { d3: 815, mel: 395, kcit: 0, ibu: 40, para: 37, anti: 18, prom: 11, amox: 21, epi: 2 },
 };
 
-// DEMO rule: strength = 100 - k * daysStowed - r * radiationTotal / 100, clamped 0-100.
-// Shaped by Du et al. 2011. Not a lab measurement.
-export const PACKED_DAYS_BEFORE_LAUNCH = 90;
-// DEMO: future dose accrues at the Mars-cruise rate (MSL RAD, 1.8 mSv per day).
-export const DOSE_PER_DAY = 1.8;
+// Strength forecasts come from the potency tracker in src/engine/potency.ts.
 export const HORIZON_DAY = 900; // roughly a Mars round trip
-
-export const strengthOf = (k: number, r: number, daysStowed: number, radiationTotal: number) =>
-  Math.round(Math.min(100, Math.max(0, 100 - k * daysStowed - (r * radiationTotal) / 100)));
-
-/** First mission day on which strength falls below `limit`%, or null if it lasts the horizon. */
-export function belowDay(k: number, r: number, day: number, radiationTotal: number, limit = 90): number | null {
-  for (let d = day; d <= HORIZON_DAY; d++) {
-    if (strengthOf(k, r, d + PACKED_DAYS_BEFORE_LAUNCH, radiationTotal + DOSE_PER_DAY * (d - day)) < limit) return d;
-  }
-  return null;
-}
-
-/** Strength from today to the end of the mission, every 10 days, for the chart. */
-export function strengthCurve(k: number, r: number, day: number, radiationTotal: number) {
-  const out: { day: number; strength: number }[] = [];
-  for (let d = day; d <= HORIZON_DAY; d += 10) {
-    out.push({ day: d, strength: strengthOf(k, r, d + PACKED_DAYS_BEFORE_LAUNCH, radiationTotal + DOSE_PER_DAY * (d - day)) });
-  }
-  return out;
-}
+export const potencyOf = (m: MedInfo, day: number, doseSoFar_mSv: number, doseRate_mSv: number) =>
+  forecastPotency({ shelfLifeDays: m.shelfLifeMonths * 30.4, day, doseSoFar_mSv, doseRate_mSv, horizonDay: HORIZON_DAY });
 
 /** Mission day the supply runs out, or null if it lasts the horizon (or nothing is used). */
 export function runsOutDay(stock: number, perDay: number, day: number): number | null {
