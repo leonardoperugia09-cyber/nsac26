@@ -15,20 +15,25 @@ On Mars, the doctor is 20 minutes away and the crew medical officer might be the
 
 ## Repo layout
 ```
-data/        RadLab radiation snapshot + simulated crew data
-scripts/     crew simulator (3 crew × 120 days, planted demo events)
+data/        simulated crew data (crew_sim.json / .csv)
+scripts/     crew simulator (3 crew x 120 days, planted demo events) and the engine checks
+src/engine/  personal baselines + drift scores, coupled risk engine, medicine potency tracker
 src/rules/   coupling rules, one file per rule, each with its citation
-backend/     tiny server that holds the AI API key + caches RadLab data
+src/         the app (React + Vite)
+backend/     server that will hold the AI key and cache RadLab data (in progress)
 ```
 
 ## Getting started
 ```bash
 git clone https://github.com/leonardoperugia09-cyber/nsac26.git
 cd nsac26
-npm create vite@latest . -- --template react-ts   # first person only, then commit
-npm install
-npm run dev
+npm ci
+npm run dev          # app on http://localhost:5173
+npm run check        # engine checks: drift, risks, body map, potency (Node 22.6+)
+python3 scripts/crew_simulator.py   # regenerates data/ exactly (seed 42)
 ```
+
+**Demo path (day 58, Marco):** Overview opens with the daily check-in, then the kidney stone Act and its plan. Health shows the body map (kidneys and skeleton Act). Mission shows spacewalk readiness and the day-40 solar storm. Medicines shows today's doses and the onboard kit's potency forecast. Assistant answers symptoms and refuses doses.
 Put API keys in a `.env` file (copy `.env.example`). **Never commit `.env`.**
 
 ## Team workflow
