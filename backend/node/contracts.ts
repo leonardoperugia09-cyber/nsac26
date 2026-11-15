@@ -2,7 +2,7 @@ import { z } from "zod";
 import { BASELINE_FIELDS, DAYS, EVENT_INFO } from "../../src/sim/simulator.ts";
 export const Profile = z.enum(["iss", "moon", "mars_transit"]);
 export const Selection = z.object({
-  crewId: z.string().regex(/^C[123]$/),
+  crewId: z.string().regex(/^(C[123]|U1)$/), // U1 = the "You" profile (real data only)
   day: z.coerce.number().int().min(1).max(120),
   profile: Profile.default("mars_transit"),
 });
@@ -34,6 +34,7 @@ export const UNITS: Record<string, string> = {
   radiation_mSv_total: "mSv",
   reaction_time_ms: "ms",
   memory_score: "score/100",
+  workload_1to5: "score/5",
 };
 const num = z.number().finite();
 export const Values = z

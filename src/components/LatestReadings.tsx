@@ -12,7 +12,7 @@ export function LatestReadings({ readings, onAll }: { readings: ReadingSummary[]
   const isLive = (r: ReadingSummary) => r.signal === "heart_rate" && live.name !== null && live.bpm !== null;
   const side = (r: ReadingSummary) =>
     isLive(r) ? <><span className={s.liveDot} aria-hidden="true" />Live · {live.name}</>
-    : r.stale ? `Old data, ${r.age.toLowerCase()}`
+    : r.stale && r.value !== "No reading" ? `Old data, ${r.age.toLowerCase()}`
     : r.source ? `${r.source}, ${r.age.toLowerCase()}`
     : r.age;
   return (

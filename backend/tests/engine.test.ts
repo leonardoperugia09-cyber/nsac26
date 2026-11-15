@@ -153,8 +153,12 @@ for (const [ruleId, changes, context] of [
         const b = bands[key];
         (row as any)[key] = b.mean + b.expectedPerDay * (row.day - b.centerDay);
       }
+    // Baseline-matched readings with nothing reported must stay Nominal. (Reported symptoms now count on
+    // their own, see backend/tests/inputs.test.ts, so the calm case reports none.)
+    const nothingReported =
+      "symptoms" in context ? { symptoms: [], vision_score: 5 } : context;
     assert.equal(
-      assessCrew(calm, 60, "mars_transit", context).risks.find(
+      assessCrew(calm, 60, "mars_transit", nothingReported).risks.find(
         (r) => r.ruleId === ruleId,
       )!.level,
       "Nominal",

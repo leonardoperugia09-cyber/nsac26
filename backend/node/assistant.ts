@@ -14,6 +14,7 @@ import { triage, medicationAdvice } from "../../src/shared/triage.ts";
 import { UNITS } from "./contracts.ts";
 import { resolveModelConfig, ModelConfigurationError } from "./model-config.ts";
 import { topicAnswer, topicText } from "../../src/shared/assistantTopics.ts";
+import { isYou } from "../../src/data/you.ts";
 export { triage } from "../../src/shared/triage.ts";
 export type AssistantInput = z.input<typeof Ask>;
 export const ASSISTANT_VERSION = "halo-rag-1.0";
@@ -103,6 +104,9 @@ export async function answer(
   const asksAboutData =
     /reading|measurement|risk|pattern|baseline|unknown|my data|changed|report|readiness|eva|docking|spacewalk|قياس|قراءات|بيانات|مخاطر/iu.test(
       input.question,
+    ) ||
+    /\bmy (heart|pulse|sleep|oxygen|spo2|weight|temperature|temp|mood|stress|fluid|urine|workload|blood pressure)/i.test(
+      input.question,
     );
   if (!t.urgent && !medication && !topic && asksAboutData) {
     explanation = priority
@@ -171,7 +175,9 @@ export async function answer(
             selectedCrewContext: {
               missionDay: assessment.day,
               profile: assessment.profile,
-              provenance: "simulated",
+              provenance: isYou(input.crewId)
+                ? "own measurements, imports and check-ins (not simulated)"
+                : "simulated",
               baselineKind: assessment.baselineKind,
               baselineDays: assessment.baselineDays,
               rawMeasurements,

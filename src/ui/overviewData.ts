@@ -9,6 +9,8 @@ import { STALE_AFTER_DAYS } from "../bodymap/model.ts";
 import { assessCrew } from "../engine/assessment.ts";
 import type { BodySystem, LinkedSeries, OverviewModel, PriorityRisk, ReadingSummary, Task } from "./viewTypes.ts";
 import { SYSTEMS, systemStatus } from "./systems.ts";
+import { joinAnd } from "./text.ts";
+import { isInputKey } from "../engine/risks.ts";
 
 // How a rule reads on the Overview. A rule without copy here falls back to the engine's own wording.
 const RULE_COPY: Record<string, { title: string; actTitle: string; short: string; together: string; plan: PriorityRisk["plan"] }> = {
@@ -74,6 +76,9 @@ export function buildOverview(crewId: string, day: number): OverviewModel {
     return `${SHORT_LABEL[key] ?? SIGNAL_BY_KEY[key]?.label ?? key} is ${now}${shown}, ${side} your normal`;
   };
   const copy = r ? RULE_COPY[r.ruleId] : undefined;
+  const reported = r
+    ? r.contributors.filter((c) => isInputKey(c.signal)).map((c) => c.label.replace(/ logged$/, "").toLowerCase())
+    : [];
   const signals = r ? r.contributors.map((c) => c.signal).filter((k) => bands[k]) : [];
   const facts = signals.map(describe).filter(Boolean) as string[];
   const risk: PriorityRisk | null = r
@@ -82,9 +87,11 @@ export function buildOverview(crewId: string, day: number): OverviewModel {
         title: copy?.title ?? r.name,
         actTitle: copy?.actTitle ?? r.name,
         level: r.level === "Act" ? "act" : "watch",
-        sinceDay: Math.max(1, day - r.persistence.observed + 1),
+        sinceDay: Math.min(day, Math.max(1, day - r.persistence.observed + 1)),
         short: copy?.short ?? r.why + ".",
-        why: facts.length ? `${facts.join(". ")}. ${copy?.together ?? r.why + "."}` : [r.why + ".", ...r.uncertainty].join(" "),
+        why: [...facts, ...(reported.length ? [`You logged ${joinAnd(reported)} today`] : [])].length
+          ? `${[...facts, ...(reported.length ? [`You logged ${joinAnd(reported)} today`] : [])].join(". ")}. ${copy?.together ?? r.why + "."}`
+          : [r.why + ".", ...r.uncertainty].join(" "),
         action: copy?.plan[0]?.label ?? r.action,
         signals,
         eventDay: signals.length ? outSince(signals[0]) : day,
@@ -92,7 +99,11 @@ export function buildOverview(crewId: string, day: number): OverviewModel {
         otherRisks: assessment.risks.filter((x) => x.ruleId !== r.ruleId && (x.level === "Watch" || x.level === "Act")).map((x) => x.name.toLowerCase()),
         systemIds: r.bodyParts as PriorityRisk["systemIds"],
         plan: copy?.plan ?? [
-          { id: r.ruleId + "-review", label: "Review the linked readings with your crew medical officer", when: "Before any decision", cta: "I reviewed them" },
+          // The rule's own action first (e.g. "Report blurred vision to the crew medical officer at once")
+          { id: r.ruleId + "-action", label: r.action.replace(/\.$/, ""), when: "Today", cta: "Done" },
+          ...(/crew medical officer/i.test(r.action)
+            ? []
+            : [{ id: r.ruleId + "-review", label: "Review the linked readings with your crew medical officer", when: "Before any decision", cta: "I reviewed them" }]),
         ],
       }
     : null;

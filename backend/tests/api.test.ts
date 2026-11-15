@@ -14,7 +14,8 @@ test("health, JSON contracts, evidence and exact real source values", async () =
     assert.equal((await a.inject("/openapi.json")).statusCode, 200);
     const m = (await a.inject("/api/crew")).json();
     assert.equal(m.readings, 360);
-    assert.equal(m.crew.length, 3);
+    assert.equal(m.crew.length, 4); // three simulated astronauts plus the empty "You" profile
+    assert.ok(m.crew.some((c: any) => c.id === "U1"));
     const s = (await a.inject(url("snapshot"))).json();
     assert.equal(s.reading.fluid_intake_ml, 1416); // simulator regenerated with realistic in-flight values (653deb2)
     assert.equal(s.provenance.kind, "simulated");
@@ -628,7 +629,9 @@ test("assistant API handles a generated, cited answer using the selected crew on
 test("scenario editor: the server re-simulates an edited scenario, rejects bad ones and resets", async () => {
   const a = await build();
   try {
-    const crew = (await a.inject("/api/crew")).json().crew;
+    const crew = (await a.inject("/api/crew"))
+      .json()
+      .crew.filter((c: any) => c.id !== "U1"); // scenarios edit the three simulated astronauts
     const { DEFAULT_EVENTS } = await import("../../src/sim/simulator.ts");
     const kidney = async () =>
       (await a.inject(url("risks", "C2", 58)))
@@ -690,6 +693,27 @@ test("scenario editor: the server re-simulates an edited scenario, rejects bad o
       (await a.inject(url("snapshot", "C2", 58))).json().provenance.source,
       "data/crew_sim.json",
     );
+  } finally {
+    await a.close();
+  }
+});
+test("a question about one of my own readings counts as a data question", async () => {
+  const a = await build();
+  try {
+    const r = (
+      await a.inject({
+        method: "POST",
+        url: "/api/assistant",
+        payload: {
+          crewId: "C1",
+          day: 58,
+          question: "Why is my heart rate high?",
+          profile: "mars_transit",
+        },
+      })
+    ).json();
+    assert.equal(r.insufficientEvidence, false);
+    assert.doesNotMatch(r.explanation, /does not cover this question/);
   } finally {
     await a.close();
   }

@@ -12,6 +12,9 @@ import { useDataRevision } from "../shared/useDataRevision.ts";
 import { buildOverview } from "../ui/overviewData.ts";
 import { MED_BY_ID, clockNow, nextDose, type MedDay } from "../ui/medicinesData.ts";
 import { joinAnd } from "../ui/text.ts";
+import { driftOn } from "../ui/systems.ts";
+import { SIGNALS } from "../engine/signals.ts";
+import { isYou } from "../data/you.ts";
 import s from "./Overview.module.css";
 
 
@@ -28,7 +31,16 @@ export function Overview({ crewId, day, delay, onOpenHealth, done, onDone, logge
   const flaggedDefs = REGIONS.filter((d) => body.regions[d.id].status === "watch" || body.regions[d.id].status === "act");
   const flagged = flaggedDefs.map((d) => d.name);
   const anyAct = flaggedDefs.some((d) => body.regions[d.id].status === "act");
-  const dose = nextDose(crewId, meds, clockNow());
+  const you = isYou(crewId);
+  const dose = you ? null : nextDose(crewId, meds, clockNow());
+  // How much of what HALO watches is actually measured for this person (sparse for "You")
+  const drift = useMemo(() => driftOn(crewId, day), [crewId, day, revision]);
+  const measured = SIGNALS.filter((g) => drift[g.key]).map((g) => g.label.toLowerCase());
+  // Signals with any value in the last 7 days, even before HALO has learned a normal for them
+  const recent = historyOf(crewId).filter((r) => r.day <= day && r.day > day - 7);
+  const withValues = SIGNALS.filter((g) => recent.some((r) => Number.isFinite((r as Record<string, unknown>)[g.key] as number))).map((g) => g.label.toLowerCase());
+  const outside = SIGNALS.filter((g) => drift[g.key] && drift[g.key].status !== "inside band").map((g) => g.label.toLowerCase());
+  const sparse = measured.length < SIGNALS.length / 2 ? { measured: measured.slice(0, 4), logged: withValues.slice(0, 4), outside, missing: SIGNALS.length - measured.length } : undefined;
 
   const links: QuickLink[] = [
     { id: "log", label: "Daily Log", status: logged ? `Done for Day ${day}` : "Not done today", tone: logged ? "done" : "watch", onOpen: () => onNavigate("log") },
@@ -40,8 +52,8 @@ export function Overview({ crewId, day, delay, onOpenHealth, done, onDone, logge
     },
     {
       id: "medicines", label: "Medicines",
-      status: dose ? `${MED_BY_ID[dose.dose.medId].name} ${dose.status === "Overdue" ? "overdue" : dose.status === "Due now" ? "due now" : `at ${dose.dose.time}`}` : "Today's doses done",
-      tone: dose?.status === "Overdue" ? "act" : dose?.status === "Due now" ? "watch" : dose ? undefined : "done",
+      status: you ? "None set up" : dose ? `${MED_BY_ID[dose.dose.medId].name} ${dose.status === "Overdue" ? "overdue" : dose.status === "Due now" ? "due now" : `at ${dose.dose.time}`}` : "Today's doses done",
+      tone: you ? undefined : dose?.status === "Overdue" ? "act" : dose?.status === "Due now" ? "watch" : dose ? undefined : "done",
       onOpen: () => onNavigate("medicines"),
     },
     { id: "assistant", label: "Assistant", status: "Ask HALO anything", onOpen: () => onNavigate("assistant") },
@@ -51,7 +63,7 @@ export function Overview({ crewId, day, delay, onOpenHealth, done, onDone, logge
   return (
     <>
       <PriorityAlert risk={m.risk} series={m.series} today={day} delay={delay} nextTask={next} done={done} onDone={onDone}
-        flagged={flagged} />
+        flagged={flagged} sparse={sparse} />
       <QuickLinks links={links} />
       <div className={s.below}>
         <TodayTasks key={crewId} initial={m.tasks} />

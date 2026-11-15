@@ -4,6 +4,7 @@ import raw from "../../data/crew_sim.json";
 import { measurementsOn } from "../shared/measurements.ts";
 import { api } from "../shared/api.ts";
 import { DEFAULT_EVENTS, simulate, type SimEvent } from "../sim/simulator.ts";
+import { withYou } from "./you.ts";
 import type {
   CrewMember,
   MissionProfile,
@@ -30,10 +31,12 @@ function storedScenario(): Scenario | null {
 const stored = storedScenario();
 
 // Live bindings: every module that reads SIM or DEMO_DAY sees the scenario after a run or reset
-export let SIM: SimData = stored ? simulate(stored.crew, stored.events) : BUNDLED;
+let custom = !!stored;
+// Every dataset also carries the empty "You" profile (src/data/you.ts)
+export let SIM: SimData = withYou(stored ? simulate(stored.crew, stored.events) : BUNDLED);
 export let DEMO_DAY = stored?.today ?? BUNDLED_DAY;
 
-export const isCustomScenario = () => SIM !== BUNDLED;
+export const isCustomScenario = () => custom;
 /** What the Settings editor starts from: the stored scenario, or the bundled crew with today's planted events */
 export const scenarioOf = (): Scenario =>
   storedScenario() ?? { crew: BUNDLED.crew, events: DEFAULT_EVENTS, today: BUNDLED_DAY };
@@ -46,7 +49,8 @@ export function syncScenario() {
 
 /** Run the simulation for an edited scenario, keep it on this device and tell every view to recompute */
 export function saveScenario(s: Scenario) {
-  SIM = simulate(s.crew, s.events);
+  SIM = withYou(simulate(s.crew, s.events));
+  custom = true;
   DEMO_DAY = s.today;
   try { localStorage.setItem(SCENARIO_KEY, JSON.stringify(s)); } catch { /* storage blocked: this session only */ }
   window.dispatchEvent(new Event("halo-data-change"));
@@ -55,7 +59,8 @@ export function saveScenario(s: Scenario) {
 
 /** Back to the bundled demo data, here and on the server */
 export function resetScenario() {
-  SIM = BUNDLED;
+  SIM = withYou(BUNDLED);
+  custom = false;
   DEMO_DAY = BUNDLED_DAY;
   try { localStorage.removeItem(SCENARIO_KEY); } catch { /* nothing stored */ }
   window.dispatchEvent(new Event("halo-data-change"));

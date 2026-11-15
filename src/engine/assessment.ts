@@ -1,9 +1,10 @@
 import type { Reading, MissionProfile } from "./types.ts";
 import { SIGNAL_BY_KEY } from "./signals.ts";
 import { computeBaselines, computeDrift, bandCentreAt } from "./baseline.ts";
-import { evaluateRisks } from "./risks.ts";
+import { evaluateRisks, isInputKey } from "./risks.ts";
 import { COUPLING_RULES } from "../rules/index.ts";
 import type { RiskResult } from "../rules/types.ts";
+import { isYou } from "../data/you.ts";
 
 export type Severity = "Nominal" | "Watch" | "Act" | "Unknown";
 export const RULE_VERSION = "halo-demo-2.0";
@@ -39,13 +40,20 @@ export function assessCrew(
   const drift = computeDrift(h, bands, day);
   const today = h.find((r) => r.day === day);
   const sourceProfile: MissionProfile = context.sourceProfile ?? "mars_transit";
-  const raw = evaluateRisks(h, day, sourceProfile);
+  const raw = evaluateRisks(h, day, sourceProfile, {
+    symptoms: Array.isArray(context.symptoms) ? context.symptoms : undefined,
+    vision_score: safeNumber(context.vision_score)
+      ? context.vision_score
+      : undefined,
+  });
   const rows = raw.map((r) => [r.ruleId, r] as const);
   const result = new Map(rows);
   const risks: AssessedRisk[] = COUPLING_RULES.map((rule) => {
     const r = result.get(rule.id);
     const missing = Object.keys(rule.signals).filter(
-      (key) => !today || !safeNumber((today as any)[key]) || !drift[key],
+      (key) =>
+        !isInputKey(key) &&
+        (!today || !safeNumber((today as any)[key]) || !drift[key]),
     );
     // Vision and immune hypotheses require the extra symptoms absent from the simulator.
     if (
@@ -67,7 +75,9 @@ export function assessCrew(
       const previous = h.find((x) => x.day === d);
       if (
         !previous ||
-        Object.keys(rule.signals).some((k) => !safeNumber((previous as any)[k]))
+        Object.keys(rule.signals).some(
+          (k) => !isInputKey(k) && !safeNumber((previous as any)[k]),
+        )
       )
         break;
       const earlier = evaluateRisks(
@@ -95,8 +105,15 @@ export function assessCrew(
       }
       observed++;
     }
-    const level: Severity =
-      missing.length || !r
+    // Symptoms the astronaut reports today are direct evidence: when they push a rule to Watch or Act, that
+    // level stands even if some readings are missing or there is no second day yet (missing stays listed)
+    const symptomDriven =
+      !!r &&
+      (r.level === "Watch" || r.level === "Act") &&
+      r.contributors.some((c) => isInputKey(c.signal) && c.score >= 1.5);
+    const level: Severity = symptomDriven
+      ? r!.level
+      : missing.length || !r
         ? "Unknown"
         : observed < required
           ? "Nominal"
@@ -107,7 +124,7 @@ export function assessCrew(
       ruleId: rule.id,
       name: rule.name,
       level,
-      score: missing.length ? null : (r?.score ?? null),
+      score: missing.length && !symptomDriven ? null : (r?.score ?? null),
       range: null,
       contributors: (r?.contributors ?? []).map((c) => ({ ...c })),
       linked: r?.linked ?? 0,
@@ -146,7 +163,9 @@ export function assessCrew(
     day,
     profile,
     radiationReferenceProfile: sourceProfile,
-    baselineKind: "simulated_inflight_adaptation_days_7_20",
+    baselineKind: isYou(h[0]?.crew_id ?? "")
+      ? "own_measurements_days_7_20"
+      : "simulated_inflight_adaptation_days_7_20",
     baselineDays: Object.values(bands)[0]?.nDays ?? 0,
     bands,
     drift,

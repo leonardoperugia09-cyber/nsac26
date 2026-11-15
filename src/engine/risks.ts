@@ -72,9 +72,11 @@ export function evaluateRule(
     "Thresholds are demo parameters, not clinically validated.",
   ];
   let spread = 0.4;
-  if (rule.needs?.length) {
-    uncertainty.push(`Missing inputs: ${rule.needs.join(", ")}.`);
-    spread += 0.3 * rule.needs.length;
+  // Inputs the rule wants count as missing only until the astronaut logs them
+  const stillMissing = rule.inputs?.every((i) => inp.provided?.has(i)) ? [] : (rule.needs ?? []);
+  if (stillMissing.length) {
+    uncertainty.push(`Missing inputs: ${stillMissing.join(", ")}.`);
+    spread += 0.3 * stillMissing.length;
   }
   if (baselineDays < 7) {
     uncertainty.push(`Only ${baselineDays} days of personal baseline so far.`);
@@ -108,10 +110,39 @@ export function evaluateRule(
  * All 7 named risks for one astronaut on one mission day, worst first.
  * `history` = that astronaut's readings (e.g. historyOf("C2")); only data up to `day` is used.
  */
+/** What the astronaut logged today besides readings: ticked symptoms and the vision self-report (1-5 clarity) */
+export type LoggedInputs = { symptoms?: string[]; vision_score?: number };
+
+/** Keys of logged inputs; they are not readings, so baselines, charts and persistence checks skip them */
+export const isInputKey = (k: string) => k.startsWith("symptom_") || k === "vision_selfreport" || k === "workload_1to5";
+
+const SYMPTOM_LABEL: Record<string, string> = {
+  headache: "Headache logged",
+  puffy_face: "Puffy face logged",
+  blurred_vision: "Blurred vision logged",
+  cold_sore: "Cold sore logged",
+  skin_symptoms: "Skin problem logged",
+};
+const logged = (signal: string, label: string, value: number, score: number): Drift => ({
+  signal, label, value, bandLo: 0, bandHi: 0, howFar: score, howFast: 0, score, status: score >= 4 ? "far outside" : "outside band",
+});
+/** DEMO scores: a ticked symptom = 3; vision clarity 2 = 3, 1 = 4; workload 4 = 2.5, 5 = 3.5 */
+function loggedDrift(today: Reading | undefined, inputs: LoggedInputs) {
+  const out: Record<string, Drift> = {};
+  for (const s of inputs.symptoms ?? [])
+    if (SYMPTOM_LABEL[s]) out[`symptom_${s}`] = logged(`symptom_${s}`, SYMPTOM_LABEL[s], 1, 3);
+  const v = inputs.vision_score;
+  if (typeof v === "number" && v <= 2) out.vision_selfreport = logged("vision_selfreport", `Vision clarity ${v} of 5`, v, v <= 1 ? 4 : 3);
+  const w = (today as Record<string, unknown> | undefined)?.workload_1to5;
+  if (typeof w === "number" && w >= 4) out.workload_1to5 = logged("workload_1to5", `Workload ${w} of 5`, w, w >= 5 ? 3.5 : 2.5);
+  return out;
+}
+
 export function evaluateRisks(
   history: Reading[],
   day: number,
   profile: MissionProfile = "mars_transit",
+  inputs: LoggedInputs = {},
 ): RiskResult[] {
   const upTo = history
     .filter((r) => r.day <= day)
@@ -120,8 +151,13 @@ export function evaluateRisks(
   const today = upTo[upTo.length - 1];
   const bands = computeBaselines(upTo, day);
   const baselineDays = Object.values(bands)[0]?.nDays ?? 0;
-  const drift = computeDrift(history, bands, day);
+  const todayRow = upTo.find((r) => r.day === day);
+  const drift = { ...computeDrift(history, bands, day), ...loggedDrift(todayRow, inputs) };
+  const provided = new Set<string>();
+  if (Array.isArray(inputs.symptoms)) provided.add("symptoms");
+  if (typeof inputs.vision_score === "number") provided.add("vision");
+  if (typeof (todayRow as Record<string, unknown> | undefined)?.workload_1to5 === "number") provided.add("workload");
   return COUPLING_RULES.map((rule) =>
-    evaluateRule(rule, { day, today, drift, profile }, baselineDays),
+    evaluateRule(rule, { day, today, drift, profile, provided }, baselineDays),
   ).sort((a, b) => RANK[b.level] - RANK[a.level] || b.score - a.score);
 }

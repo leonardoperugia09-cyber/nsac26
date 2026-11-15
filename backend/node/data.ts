@@ -20,7 +20,9 @@ export function validateDataset(data: SimData) {
     data.meta.simulated !== true ||
     !Array.isArray(data.crew) ||
     !Array.isArray(data.readings) ||
-    data.crew.length !== 3
+    data.crew.length < 3 ||
+    data.crew.length > 4 ||
+    !data.crew.every((c) => /^(C[123]|U1)$/.test(c.id))
   )
     throw Error("Invalid demo source");
   const ids = new Set(data.crew.map((c) => c.id));
@@ -38,11 +40,12 @@ export function validateDataset(data: SimData) {
     seen.add(key);
     for (const k of Object.keys(UNITS)) {
       const n = (r as any)[k];
-      if (n !== null && (typeof n !== "number" || !Number.isFinite(n)))
+      if (n != null && (typeof n !== "number" || !Number.isFinite(n)))
+        // missing or empty is fine, garbage is not
         throw Error("Invalid measurement");
     }
   }
-  if (seen.size !== 360) throw Error("Incomplete dataset");
+  if (seen.size !== data.crew.length * 120) throw Error("Incomplete dataset");
 }
 export function historyFor(
   data: SimData,

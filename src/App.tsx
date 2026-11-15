@@ -17,6 +17,8 @@ import { Medicines } from "./pages/Medicines";
 import { Evidence } from "./pages/Evidence";
 import { Settings, type Look } from "./pages/Settings";
 import { QuickCheckin } from "./components/QuickCheckin";
+import { NoMedicines } from "./components/NoMedicines";
+import { isYou } from "./data/you.ts";
 import { EMPTY_DAY, type MedDay } from "./ui/medicinesData.ts";
 import type { RegionId } from "./bodymap/regions.ts";
 import s from "./App.module.css";
@@ -112,7 +114,9 @@ export default function App() {
           onSaved={() => setLogged((m) => ({ ...m, [crewId]: true }))} />}
         {page === "assistant" && <Assistant crewId={crewId} day={day} delay={DELAY} urgent={urgent} />}
         {page === "mission" && <Mission crewId={crewId} day={day} />}
-        {page === "medicines" && <Medicines crewId={crewId} day={day} delay={DELAY} today={medsToday} onChange={changeMeds} />}
+        {page === "medicines" && (isYou(crewId)
+          ? <NoMedicines />
+          : <Medicines crewId={crewId} day={day} delay={DELAY} today={medsToday} onChange={changeMeds} />)}
         {page === "evidence" && <Evidence />}
       </main>
       {askCheckin && (

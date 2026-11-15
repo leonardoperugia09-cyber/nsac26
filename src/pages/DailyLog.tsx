@@ -178,6 +178,7 @@ export function DailyLog({ crewId, day, quickMood, onSaved }: Props) {
   const [urine, setUrine] = useState(() => clamp(today?.urine_color_1to8 ?? 3, 1, 8));
   const [mood, setMood] = useState(() => quickMood ?? clamp(today?.mood_1to5 ?? 3, 1, 5)); // Leo: the homepage check-in fills in mood
   const [stress, setStress] = useState(() => clamp(today?.stress_1to5 ?? 3, 1, 5));
+  const [workload, setWorkload] = useState(() => clamp(((today as Record<string, unknown> | undefined)?.workload_1to5 as number | undefined) ?? 3, 1, 5));
   const [sleep, setSleep] = useState(() => (today?.sleep_hours ?? 7).toFixed(2).replace(/0$/, ""));
   const [extras, setExtras] = useState<Record<string, string>>(() => Object.fromEntries(EXTRAS.flatMap(([, fields]) => fields).map(([k]) => {
     const v = (today as Record<string, unknown> | undefined)?.[k];
@@ -197,7 +198,7 @@ export function DailyLog({ crewId, day, quickMood, onSaved }: Props) {
   const dirty = () => setSaved(null);
 
   async function save() {
-    const measurements: Record<string, number> = { fluid_intake_ml: total, urine_color_1to8: urine, mood_1to5: mood, stress_1to5: stress };
+    const measurements: Record<string, number> = { fluid_intake_ml: total, urine_color_1to8: urine, mood_1to5: mood, stress_1to5: stress, workload_1to5: workload };
     for (const [k, v] of Object.entries({ ...extras, sleep_hours: sleep })) {
       const n = Number(v);
       if (v.trim() === "" || !Number.isFinite(n)) continue;
@@ -262,6 +263,7 @@ export function DailyLog({ crewId, day, quickMood, onSaved }: Props) {
 
           <Scale name="mood" legend="Mood" value={mood} onChange={(n) => { setMood(n); dirty(); }} />
           <Scale name="stress" legend="Stress" value={stress} onChange={(n) => { setStress(n); dirty(); }} />
+          <Scale name="workload" legend="Workload today" ends={["Light", "Overloaded"]} value={workload} onChange={(n) => { setWorkload(n); dirty(); }} />
 
           <div className={s.field}>
             <label htmlFor="sleep" className={s.legend}>Sleep last night, hours</label>

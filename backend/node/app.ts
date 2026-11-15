@@ -10,6 +10,7 @@ import { Store } from "./store.ts";
 import { responseContracts } from "./responses.ts";
 import { loadDataset, historyFor, validateDataset } from "./data.ts";
 import { simulate } from "../../src/sim/simulator.ts";
+import { withYou } from "../../src/data/you.ts";
 import {
   Selection,
   Ask,
@@ -53,12 +54,13 @@ export async function makeServer(options: Options = {}) {
   const now = options.now ?? Date.now;
   const store = new Store(options.dbPath ?? resolve("backend/var/halo.sqlite"));
   const { data, sha256 } = loadDataset(options.datasetPath);
+  Object.assign(data, withYou(data)); // the empty "You" profile, filled only by real measurements and check-ins
   // Settings can replace the crew data with an edited scenario; keep the bundled copy to reset to
   const original = structuredClone(data);
   let datasetHash = sha256;
   let datasetSource = "data/crew_sim.json";
   const applyScenario = (sc: { crew: any[]; events: any[] }) => {
-    const next = simulate(sc.crew, sc.events);
+    const next = withYou(simulate(sc.crew, sc.events));
     validateDataset(next);
     Object.assign(data, next);
     datasetHash = createHash("sha256")
@@ -295,6 +297,7 @@ export async function makeServer(options: Options = {}) {
     if (
       ids !==
       original.crew
+        .filter((c) => c.id !== "U1")
         .map((c) => c.id)
         .sort()
         .join(",")
