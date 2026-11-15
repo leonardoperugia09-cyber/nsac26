@@ -3,6 +3,7 @@ import type { z } from "zod";
 import {
   GeneratedAnswer,
   ModelFailure,
+  parseGenerated,
   providerAnswerSchema,
   SYSTEM_PROMPT,
   type ModelOptions,
@@ -46,7 +47,7 @@ export async function generateAnthropicAnswer(
       throw new ModelFailure("invalid_output");
     const text = response.content.find((block) => block.type === "text");
     if (!text || text.type !== "text") throw new ModelFailure("invalid_output");
-    return GeneratedAnswer.parse(JSON.parse(text.text));
+    return parseGenerated(JSON.parse(text.text));
   } catch (error) {
     if (error instanceof ModelFailure) throw error;
     if (error instanceof Anthropic.APIConnectionTimeoutError)

@@ -706,3 +706,48 @@ test("radiation, sleep and urine answers quote the astronaut's own numbers", asy
   assert.match(topicAnswer("How was my sleep?", null)!.text, /about 6 hours/);
   assert.equal(topicAnswer("What is my radiation dose so far?", null), null);
 });
+
+test("over-long but safe AI answers are trimmed, not thrown away; too-long paragraphs are still rejected", async () => {
+  // Claude cannot be told size limits through the format (they are stripped), so extra follow-ups and notes are cut
+  const chatty = await answer(
+    input(),
+    assessment,
+    anthropicOptions(async () =>
+      claudeReply(
+        generated({
+          followUp: ["One?", "Two?", "Three?", "Four?", "Five?"],
+          uncertainties: ["A.", "B.", "C.", "D.", "E.", "F."],
+        }),
+      ),
+    ),
+  );
+  assert.equal(chatty.mode, "grounded_ai");
+  assert.deepEqual(chatty.followUp, ["One?", "Two?", "Three?"]);
+  assert.equal(chatty.uncertainties.length, 4);
+  const essay = await answer(
+    input(),
+    assessment,
+    anthropicOptions(async () =>
+      claudeReply(
+        generated({
+          paragraphs: [
+            {
+              text: "x".repeat(1700),
+              evidenceIds: ["sleep_2014:claim:1"],
+              signalKeys: [],
+            },
+          ],
+        }),
+      ),
+    ),
+  );
+  assert.equal(essay.modelStatus, "failed_using_offline_fallback");
+});
+
+test("the model is told the size limits the checker enforces", async () => {
+  const { SYSTEM_PROMPT } = await import("../node/assistant-model.ts");
+  assert.match(SYSTEM_PROMPT, /at most 3 follow-up/i);
+  assert.match(SYSTEM_PROMPT, /1,?600 characters/);
+  assert.match(SYSTEM_PROMPT, /200 characters/);
+  assert.match(SYSTEM_PROMPT, /400 characters/);
+});
