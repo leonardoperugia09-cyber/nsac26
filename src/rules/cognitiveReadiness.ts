@@ -5,8 +5,10 @@ import type { CouplingRule } from "./types.ts";
 export const cognitiveReadiness: CouplingRule = {
   id: "cognitive_readiness",
   name: "Cognitive readiness",
-  signals: { sleep_hours: 1.2, sleep_debt_h: 0.8, reaction_time_ms: 1.2, memory_score: 1, radiation_mSv_today: 0.4 },
+  signals: { sleep_hours: 1.2, sleep_debt_h: 0.8, reaction_time_ms: 1.2, memory_score: 1, radiation_mSv_today: 0.4, workload_1to5: 0.5 },
   needs: ["workload"],
+  inputs: ["workload"],
+  inputNeeds: { workload: ["workload"] },
   minLinked: 2,
   why: "Sleep loss and stress slow vigilance; radiation adds risk",
   source: "Nasrini et al. 2020; Barger et al. 2014",

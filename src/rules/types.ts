@@ -10,6 +10,8 @@ export type RuleInput = {
   today: Reading;
   drift: Record<string, Drift>; // from computeDrift() in src/engine/baseline.ts
   profile: MissionProfile;
+  /** Which logged inputs are present today (symptom check, vision self-report, workload) */
+  provided?: Set<string>;
 };
 
 export type CouplingRule = {
@@ -17,6 +19,10 @@ export type CouplingRule = {
   name: string;
   signals: Record<string, number>; // signal key (field in crew_sim.json) -> weight
   needs?: string[]; // inputs the rule wants that the data doesn't have yet (lowers confidence)
+  /** Logged inputs that answer `needs`: once logged, "Missing inputs" is no longer reported */
+  inputs?: ("symptoms" | "vision" | "workload")[];
+  /** What each logged input answers, so only what is still not logged is reported as missing */
+  inputNeeds?: Partial<Record<"symptoms" | "vision" | "workload", string[]>>;
   minLinked: number; // how many signals must drift together for Act
   why: string; // the physiological link, one line
   source: string;

@@ -1,3 +1,4 @@
+import {computeBaselines} from "../src/engine/baseline.ts";
 // Checks the body-map model (src/bodymap) against the engine and the planted events.
 // Run: npm run check:bodymap   (= node --experimental-strip-types scripts/check_bodymap.ts, Node 22.6+)
 
@@ -90,7 +91,7 @@ const c1h = historyOf("C1");
 const c1bands = computeBaselines(c1h);
 const calmDay = Array.from({ length: 100 }, (_, i) => 21 + i).find((d) => {
   const drift = computeDrift(c1h, c1bands, d);
-  return Object.values(drift).every((x) => x.status === "inside band") && model("C1", d).risks.every((r) => r.level === "Nominal");
+  return Object.values(drift).every((x) => x.status === "inside band") && model("C1", d).risks.every((r) => r.level === "Nominal" || r.level === "Unknown"); // Unknown = inputs missing, not a raised risk
 });
 expect(calmDay !== undefined, `C1 has a calm day after the baseline window (first on day ${calmDay})`);
 if (calmDay !== undefined) {

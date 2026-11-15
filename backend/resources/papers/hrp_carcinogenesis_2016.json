@@ -1,0 +1,711 @@
+{
+"id": "hrp_carcinogenesis_2016",
+"title": "Evidence Report: Risk of Radiation Carcinogenesis",
+"authors": "Huff J, Carnell L, Blattnig S, et al.",
+"year": 2016,
+"licence": "NASA NTRS: public use permitted",
+"source_url": "https://ntrs.nasa.gov/citations/20160004369",
+"topics": [
+"radiation"
+],
+"kind": "full_text_excerpts",
+"note": "Verbatim text extracted from the source for retrieval; page furniture and the reference list removed. Not reviewed by HALO.",
+"chunks": [
+{
+"id": "hrp_carcinogenesis_2016:x1",
+"text": "Approved for Public Release: Month DD, YYYY National Aeronautics and Space Administration Janice Huff, PhD Universities Space Research Association, Houston, TX Lisa Carnell, PhD NASA Langley Research Center, Hampton, VA Steve Blattnig, PhD NASA Langley Research Center, Hampton, VA Lori Chappell Wyle Integrated Science and Engineering, Houston, TX Kerry George Wyle Integrated Science and Engineering, Houston, TX Sarah Lumpkins, PhD Wyle Integrated Science and Engineering, Houston, TX Lisa Simonsen, PhD NASA Langley Research Center, Hampton, VA"
+},
+{
+"id": "hrp_carcinogenesis_2016:x2",
+"text": "Tony Slaba, PhD NASA Langley Research Center, Hampton, VA Charles Werneth, PhD NASA Langley Research Center, Hampton, VA Francis Cucinotta, PhD NASA Johnson Space Center, Houston, TX Reference for original report: Human Health and Performance Risks of Space Exploration Missions, (Jancy C. McPhee and John B. Charles, editors), NASA SP-2009-3405, 2009. I. PRD RISK TITLE: RISK OF RADIATION CARCINOGENESIS ............................... 5 II. EXECUTIVE SUMMARY ................................................................................................. 5"
+},
+{
+"id": "hrp_carcinogenesis_2016:x3",
+"text": "III. INTRODUCTION................................................................................................................ 7 A. Uncertainties in Cancer Projections................................................................................ 8 B. Types of Cancer Caused by Radiation Exposure......................................................... 10 C. Age, Latency, Sex, and Individual Sensitivity Issues ................................................... 11 D. Current NASA Permissible Exposure Limits (PELs).................................................. 13"
+},
+{
+"id": "hrp_carcinogenesis_2016:x4",
+"text": "1. Career Cancer Risk Limits .......................................................................................... 13 2. The Principle of As Low as Reasonably Achievable (ALARA) ................................ 13 IV. EVIDENCE ........................................................................................................................ 13 A. Epidemiology data for low LET radiation.................................................................... 14 1. Life-span studies of atomic bomb survivors ............................................................... 14"
+},
+{
+"id": "hrp_carcinogenesis_2016:x5",
+"text": "2. Other Human Studies .................................................................................................. 16 B. Review of Spaceflight Issues .......................................................................................... 17 C. Past Space Missions ........................................................................................................ 21 V. RADIOBIOLOGY EVIDENCE FOR PROTONS AND HZE NUCLEI ..................... 25 A. Cancer Induction by Space Radiation .......................................................................... 26"
+},
+{
+"id": "hrp_carcinogenesis_2016:x6",
+"text": "1. The Initial Biological Events ...................................................................................... 26 2. Chromosomal Damage and Mutation ......................................................................... 28 3. Genomic Instability ..................................................................................................... 29 4. Cancer and Tissue Effects ........................................................................................... 30 5. Bystander Effects ........................................................................................................ 32"
+},
+{
+"id": "hrp_carcinogenesis_2016:x7",
+"text": "6. Adaptive Response...................................................................................................... 34 7. Oxidative stress and inflammation.............................................................................. 34 8. Animal Models for Carcinogenesis ............................................................................ 38 VI. MODELS OF CANCER RISKS AND UNCERTAINTIES .......................................... 38 A. Track-structure based Risk Model................................................................................ 38"
+},
+{
+"id": "hrp_carcinogenesis_2016:x8",
+"text": "1. Biological Effects Related to Track Structure ............................................................ 39 2. Risk Cross Section and NASA Quality Factor ........................................................... 41 3. Uncertainties in the Projection Model ........................................................................ 42 B. Systems Biology Modeling .............................................................................................. 45 VII. RISK FOR EXPLORATION MISSION OPERATIONAL SCENARIOS .................. 46"
+},
+{
+"id": "hrp_carcinogenesis_2016:x9",
+"text": "A. Risk Estimates for Space Exploration Missions ........................................................... 46 B. Biological and Physical Countermeasures .................................................................... 47 1. Radioprotectors and Mitigators ................................................................................... 47 2. Shielding ..................................................................................................................... 49 VIII. GAPS ................................................................................................................................... 50"
+},
+{
+"id": "hrp_carcinogenesis_2016:x10",
+"text": "IX. CONCLUSION .................................................................................................................. 52 X. REFERENCES ................................................................................................................... 52 XI. TEAM.................................................................................................................................. 68 XII. LIST OF ACRONYMS ..................................................................................................... 68 I. PRD Risk Title: Risk of Radiation Carcinogenesis"
+},
+{
+"id": "hrp_carcinogenesis_2016:x11",
+"text": "Description: In space, astronauts are exposed to ionizing radiation that is quantitatively and qualitatively different from terrestrial radiation. This environment includes protons and high -Z high-energy (HZE) ions together with secondary radiation, including neutrons and recoil nuclei that are produced by nuclear reactions in spacecraft materials or tissue. Space radiation exposure increases cancer morbidity and mortality risk in astronauts. This risk may be influenced by other space flight factors including microgravity, environmental contaminants, nutritional issues, and psychological and physiological stress. Current space radiation risks estimates are based on human epidemiology data for X-rays and gamma-ray exposure scaled to the types and flux-rates in space using radiation quality factors and dose -rate modification factors, and assuming linearity of response."
+},
+{
+"id": "hrp_carcinogenesis_2016:x12",
+"text": "There are large uncertainties in this approach and experimental models imply additional detriment due to the severity of the phenotypes of cancers formed for the heavy ion component of the galactic cosmic rays compared to cancers produced by terrestrial radiation. A Mars mission may not be feasible (within acceptable limits) unless uncertainties in cancer projection models are reduced allowing shielding and biological countermeasures approaches to be evaluated and improved, or unless mission durations are constrained. Astronauts on missions to the International Space Station (ISS) , the moon or Mars are exposed to ionizing radiation with effective doses in the range from 50 to 2000 mSv (milli-Sievert) projected for possible mission scenarios (Cucinotta and Durante 2006; Cucinotta et al. 2008)."
+},
+{
+"id": "hrp_carcinogenesis_2016:x13",
+"text": "The evidence of cancer risk from ionizi ng radiation is extensive for radiation doses above about 50 mSv. Human epidemiology studies that provide evidence for cancer risks for low linear energy transfer (LET) radiation such as X-rays or gamma-rays at doses from 50 to 2000 mSv include the survivors of the atomic -bomb explosions in Hiroshima and Nagasaki, nuclear reactor workers (Cardis et al. 1995, 2007) in the US, Canada, Europe, and Russia, and patients treated therapeutically with radiation. Ongoing studies are providing new evidence of radiati on cancer risks in populations accidentally exposed to radiation from the Chernobyl accident and from"
+},
+{
+"id": "hrp_carcinogenesis_2016:x14",
+"text": "Russian nuclear weapons production sites. Results from the Japanese atomic bomb survivors also continue to be analyzed and integrated into risk projection models (Preston et al. 2004, 2007; Cucinotta et al. 2013). These studies provide strong evidence for cancer morbidity and mortality risks at over 12 tissue sites, with the largest risks for adults found for leukemia and tumors of the lung, breast, stomach, colon, bladder, and liver. There is also strong evidence for sex-dependent variations in risks estimates due to the due to differences in natural incidence of cancer and the additional cancer risks for the breast and ovaries and higher risk from radiation for lung cancer in females (NCRP 2000). Human studies also provide evidence for a declining risk with increasing age at exposure; however, the magnitude of the reduction above age 30 years is uncertain (NCRP"
+},
+{
+"id": "hrp_carcinogenesis_2016:x15",
+"text": "In traveling to Mars, it is estimated that every cell nucleus within an astronaut will be traversed by a proton or secondary electron every few days and an HZE ion every few months (Cucinotta et al. 1998). In spite of their lower cell nucleus hit frequency as compared to protons, the large ionization power of HZE ions makes them an important contributor to the risk. Likewise, light ions and neutrons are additional components that make up a significant percentage of the space radiation environment (Norbury and Slaba 2014). Radiation shielding is an effective countermeasure for solar particle events ( SPEs), which are largely protons with energies below a few hundred MeV."
+},
+{
+"id": "hrp_carcinogenesis_2016:x16",
+"text": "The energy spectrum of the galactic cosmic rays (GCRs) peaks near 1 GeV/n, and consequently, these particles are so penetrating that shielding can only partially reduce the doses absorbed by the crew (Cucinotta et al. 2006). Current shielding approaches do not effectively mitigate exposure from GCR. Increasing shielding thickness poses significant mass constraints to spacecraft launch systems and may actually increase exposures beyond certain thick nesses due to neutron build -up and electromagnetic cascades (Slaba et al. Epidemiological data, largely from the Atomic bomb survivors in Japan (Preston et al. 2003,"
+},
+{
+"id": "hrp_carcinogenesis_2016:x17",
+"text": "2004, 2007 ), provides a basis for risk estimation for low -LET radiation. Models for cancer incidence and mortality based on these data are assumed to be scalable to other populations, doserates, and radiation types (Cucinotta et al. 2013). However, because there is a lack of human data for protons and HZE ions, current space risk estimates must rely entirely on experimental model systems and biophysical considerations. The scaling of mortality rates for space radiation risks to astronauts to the Atomic bomb survivors introduces many uncertainties (Cucinotta et al. 2001;"
+},
+{
+"id": "hrp_carcinogenesis_2016:x18",
+"text": "Cucinotta and Durante 2006) into risk estimates, and there are important questions with regard to the correctness of any scaling approach because of qualitative differences in the biological effects of HZE ions and gamma -rays. The two scaling parameters with large st uncertainties are the radiation quality factor, which estimates the increased effectiveness of HZE nuclei compared to xrays or gamma-rays for the same dose, and the dose- and dose-rate effectiveness factor (DDREF), which reduces estimates of cancer risk at high dose- and dose-rates when the dose- and dose-rate are low (< 0.05 Gy/hr). The mixed field GCR environment in space, predominantly composed of protons with a smaller percentage attributed to more damaging heavy ions, further complicates risk estimation."
+},
+{
+"id": "hrp_carcinogenesis_2016:x19",
+"text": "Acceptable levels of risk are often guided by societal or ethical norms. There is continued debate on what level is acceptable for space radiation cancer risks for exploration of the moon or Mars. A historical perspective is summarized herein; however, we note that other non-cancer mortality and morbidity risks associated with space radiation exposure must also be considered for Mars or other long-duration missions (i.e. central nervous system effects and circulatory disease) as well as confounding spac eflight factors such as microgravity and immune system impacts (Crucian et al. 2015). Improvements in safety in other areas of spaceflight will also place additional pressure on radiation protection efforts to reduce astronaut risk."
+},
+{
+"id": "hrp_carcinogenesis_2016:x20",
+"text": "Ground-based experiment ation is a critical require ment to provide the scientific evidence needed to improve space radiation cancer risk estimates. Flight experiments have not been a high priority because historically these have b een expensive and poorly reproducible (Sihver 2008 ; Durante et al. 2007 , Durante and Cucinotta 2008 ). In general , the low dose rate s on the ISS preclude collection of useful data in a reasonable time and with a reasonable sample size , and experiments in the past have yielded no majo r findings (Kiefer and Pross 1999; Schimmerling et al. 2003; Durante and Kronenberg 2005). Ground-based radiobiology and physics studies are performed at the NASA Space Radiation Laboratory (NSRL) at the Brookhaven National"
+},
+{
+"id": "hrp_carcinogenesis_2016:x21",
+"text": "Laboratory (Upton, NY, USA). This facility is able to simulate the high-energy protons and HZE particles in space. NSRL opened for research in October 2003 , and has produced experimental data of great relevance for reducing uncertainties in risk assessment. The NSRL is currently being upgraded to a GCR simulat or capable of delivering a mixed field environment consisting of protons and ions at dose s and dose rate s that are more representative of the space environment (Norbury et al. 2016). Mechanistic research performed at NSRL with 2D and 3D human cell culture and models, and animal studies in murine models is being pursued to establish level of risk, provide biological knowledge required to reduce uncertainties in risk projection models, guide the extrapolation from experiment to astronauts, and pave the way for biomarker discovery and biological countermeasure development."
+},
+{
+"id": "hrp_carcinogenesis_2016:x22",
+"text": "Studies with animals are an important component of space radiation research; however, they are time consuming and expensive in light of the large number of radiation types, doses, and dose rates of concern to NASA and the need to extrapolate results across species (NCRP 2005). Systems biology models of cancer risk that c ould be used to extrapolate radiation quality over the broad range of nuclear types, energies, and fluence rates in space ar e a promising new approach to these problems."
+},
+{
+"id": "hrp_carcinogenesis_2016:x23",
+"text": "As noted by Durante and Cucinotta (2008), cancer risk caused by exposure to space radiation is now generally considered a main hindrance to interplanetary travel for the following reasons: large uncertainties are associated with the projected cancer risk estimates; no simple and effective countermeasures are available, and significant uncertainties prevent scientists from determining the effectiveness of countermeasures. Optimizing operational pa rameters such as the length of space missions, crew selection for age and sex, or applying mitigation measures such as radiation shielding or use of biological countermeasures can be used to reduce risk, but these procedures have inherent limitations and are clouded by uncertainties."
+},
+{
+"id": "hrp_carcinogenesis_2016:x24",
+"text": "Space radiation is comprised of high energy protons, neutrons and high charge (Z) and energy (E) nuclei (HZE). The i onization patterns and resulting biological insults of these particles in molecules, cells, and tissues are distinct from typical terrestrial radiation, which is largely X-rays and gamma -rays, and generally characterized as low linear energy transfer (LET) radiation. Galactic cosmic rays (GCR) are comprised mostly of highly energetic protons with a small component of high charge and energy (HZE) nuclei. Prominent HZE nuclei include He, C, O, Ne,"
+},
+{
+"id": "hrp_carcinogenesis_2016:x25",
+"text": "Mg, Si, and Fe. GCR ions have median energies near 1 GeV/n, and energies as high as 10 GeV/n make important contributions to the total exposure. Ionizing radiation is a well known carcinogen on Earth (BEIR 2006). The risks of cancer from X-rays and gamma-rays have been established at doses above 50 mSv (5 rem), although there are important uncertainties and on-going scientific debate about cancer risk at lower doses and at low dose rates (<50 mSv/h). The relationship between the early biological effects of HZE nuclei and the probability of cancer in humans is poorly understood, and it is this missing knowledge that leads to significant uncertainties in projecting cancer risks during space exploration (Cucinotta and"
+},
+{
+"id": "hrp_carcinogenesis_2016:x26",
+"text": "Durante 2006; Durante and Cucinotta 2008). The uncertainties that occur in cancer risk projection models for space radiation include:  Uncertainties in determining the quali tative and quantitative d ifferences between the biological damage induced by space radiation compared to X-rays  Uncertainties in human epidemiological data including statistical, record keeping, dosimetry, and bias resulting from mis-reporting of cancer deaths  Uncertainties in transferring radio -epidemiology data to other populations, including cancer rates and survival data in the population of interest for space applications"
+},
+{
+"id": "hrp_carcinogenesis_2016:x27",
+"text": " Uncertainties in transferring radio -epidemiology data to other radiation types an d doserates of interest to space applications  Uncertainties in the shape of the dose -response curve at low doses (i.e. linear, linear - quadratic) and the possibility of dose thresholds  Uncertainties associated with extrapolation of experimental data from animals to humans  Uncertainties associated with i ndividual radiation sensitivity factors, including age, genetic, epigenetic, dietary, and “healthy worker” effects  Uncertainties in space radiation environmental models, transport codes, geometry models, and dosimetry methods"
+},
+{
+"id": "hrp_carcinogenesis_2016:x28",
+"text": " Uncertainties associated with predicting SPE occurrence, energy spectrum, and magnitude  Possible inter-dependence of any of the uncertainties mentioned above Quantitative methods have been developed to propagate uncertainties for seve ral factors that contribute to cancer risk estimates (NCRP 1997; Cucinotta et al. 2013). Current estimates of levels of uncertainty represented as fold changes over the median risk projection are described in detail in Cucinotta et al. (2013). Comparison of risks for adults for terrestrial and space exposures is shown in Figure 1."
+},
+{
+"id": "hrp_carcinogenesis_2016:x29",
+"text": "Microgravity and the effects of other spaceflight stressors such as altered immune function, chronic inflammation and depressed nutritional status during a mission timeframe are unknown modifiers of radiation cancer risk and may confound the effects of radiation impacting the risk projection , and are potentially additional sources of uncertainty in current risk estimates. Several studies have been performed on the ISS and on the ground using apparatus that simulate the space environment. However these studies provide conflicting results with respect to radiation effects on chromosomal aberrations and DNA damage and repair, early endpoints relatable to the carcinogenic process (Yatagai and Ishioka 2014)."
+},
+{
+"id": "hrp_carcinogenesis_2016:x30",
+"text": "Radiation affects cells and tissues either via direct damage to cellular components or via the production of highly reactive free radicals from water (Goodhead 1994). Both of these mechanisms can result in sufficient damage to cause cellular death, DNA mutation, chromosomal aberrations, genomic instability or abnormal cellular function. The extent of damage is generally believed to be dependent upon the dose and type of particle with a linear dose -response curve (Goodhead 1994). T his is true for high and moderate radiation exposure, but is extremely problematic to measure for lower doses where difficulty exists in discerning the effects of radiation exposure from those that are triggered by normal oxidative stress that cells and ti ssues deal with on a constant basis."
+},
+{
+"id": "hrp_carcinogenesis_2016:x31",
+"text": "The HZE nuclei are unique components of space radiation, which produce densely ionizing tracks as they pass through matter. When they traverse a biological system, they leave streaks or tracks of damage at the biomolecu lar level, which are fundamentally different than those left by low LET radiation such as gamma and X -rays. In the nucleus of a cell where genetic material is stored, the traversal of a heavy ion can produce tracks of clustered DNA damage (Cucinotta and Durante 2006) as illustrated in Figure 2. Figure 1. Uncertainties in risk projection for terrestrial and space exposures. This figure shows the current estimates of cancer risks and 95% confidence bands for adults of age 40 yrs, the typical age of ast ronauts on space missions, for several terrestrial exposures and missions on the International Space Station, a lunar colony, and the projections for a Mars mission."
+},
+{
+"id": "hrp_carcinogenesis_2016:x32",
+"text": "The uncertainties are larger for astronauts in space compared to typical exposures on Earth. HZE nuclei impart damage via the primary energetic particle as well as from fragmentation events that produce a spectrum of other energetic nuclei, including protons, neutrons and heavy fragments (Wilson et al. 1995; Cucinotta et al. 1998, 2006; Dur ante and Cucinotta 2011). Therefore, a large penumbra of energy deposition exists that extends outward from the primary particle track (Cucinotta et al. 2000). Secondary radiation produced in shielding materials can be reduced through usage of materials wi th light atomic constituents such as hydrogen and carbon."
+},
+{
+"id": "hrp_carcinogenesis_2016:x33",
+"text": "However, a large percentage of secondary radiation is produced within tissue and is therefore not practically avoidable. Due to the large amount of energy deposited as these particles traverse biological structures, HZE nuclei are capable of producing the greatest amount of cellular damage and are therefore a large concern for astronaut safety. The lack of epidemiological data and sparse radiobiological data on effects for these radiation types leads to a high level of uncertainty in risk estimates for long term health effects following exposure to GCR and SPEs."
+},
+{
+"id": "hrp_carcinogenesis_2016:x34",
+"text": "Figure 2. A comparison of particle tracks in nuclear emulsions and human cells (Cucinotta and Durante 2006). The right panel shows tracks of different ions, from protons to iron, in nuclear emulsions, clearly showing the increasing ionization density (LET = dE/dx) along the track by increasing the charge Z. The left panel shows three nuclei o f human fibroblasts exposed to γ -rays, Si-, or Fe-ions, and immunostained for detection of γ-H2AX. Each green focus corresponds to a DNA DSB. While in the cel l exposed to sparsely ionizing γ -rays foci of the histone variant, H2AX are uniformly distributed in the nucleus, the cells exposed to HZE particles present DNA damage along tracks (one Si - and three Fe -particles, respectively), and the spacing between DNA DSB is reduced at very high LET."
+},
+{
+"id": "hrp_carcinogenesis_2016:x35",
+"text": "B. Types of Cancer Caused by Radiation Exposure Data from the A tomic Bomb survivors shows that a n acute exposure to ionizing radiation increases the mortality from cancer across a wide range of tumor types typical of the spectrum observed in a population (Barcellos-Hoff et al. 2015). The tissue types that contribute to the overall cancer risk observed with low LET radiation include lung, colorectal, breast, stomach, liver, brain, ovarian, esophageal, and bladder cancers, and several types of leukemia, including acute lymphocytic leukemia, acute myeloid leukemia and chronic myeloid leukemia (NCRP 2000;"
+},
+{
+"id": "hrp_carcinogenesis_2016:x36",
+"text": "Preston et al. 2003; BEIR 2006) . It is not fully established if the same spectrum of tumors will occur for high LET radiation as with low LET radiation, although results thus far have not shown novel tumor types generated from HZE ions compared to low LET (Bielefeldt-Ohmann et al. 2012; Barcellos-Hoff et al. 2015 ). However evidence suggests that HZE ions may induce cancers with unique characteristics compared to low -LET induced cancers, with differences in incidence and latency as well as in malignant potential. There may also be distinct radiation quality effects for"
+},
+{
+"id": "hrp_carcinogenesis_2016:x37",
+"text": "HZE ions in terms of the cytogenetic and molecular subtype of the induced tumor, all factors that may impact disease surveillance, progression, treatment and ultimately outcome. Further investigation is required to fully understand these difference s. Relative biological effectiveness factors (RBE) describe the ratio of a dose of high LET radiation to that of X -rays or gamma-rays that produce the identical biolo gical effect. In general, the RBE values observed for solid cancer induced by HZE particles are high. However these values, as well as those observed in mice exposed to neutrons, are highly dependent on tissue type and genetic background of the animal."
+},
+{
+"id": "hrp_carcinogenesis_2016:x38",
+"text": "Females have a higher cancer risk from radiation induced cancer compared to males, largely due to the additional risks to the lung, breast and ovar ies (BEIR 2006, NCRP 2000 ). Mechanisms responsible for increased lung cancer incidence in females have not been elucidated . In contrast, females are at a lower risk for development of radiation induced CMLs, with a recent analysis of Surveillance, Epidemiology and End Results Program (SEER) and A-bomb survivor data suggesting that this difference is due to changes in inherent risk rather than disease latency (Radivoyevitch et al. 2014)."
+},
+{
+"id": "hrp_carcinogenesis_2016:x39",
+"text": "It is generally accepted that the risk of radiation induced cance r is highest f or i ndividuals exposed in childhood and decreases with increasing age at time of exposure. At a sufficiently high age, risk would be expected to decrease with age at exposure because the distribution of latency for tumor development would extend beyond the expected lifespan at older exposure ages. Also, there may be a possible reduction in the number of cells at risk at older age due to senescence or other biological factors (Campisi 2003; Campisi; d'Adda di Fagagna 2007). Age related changes in the host tissue microenvironment may impact the ability of a tissue to support tumor growth or alter tumor properties (Nguyen et al. 2014; Beheshti et al. 2015). Shuryak et al."
+},
+{
+"id": "hrp_carcinogenesis_2016:x40",
+"text": "(2010) reported that age related risks in younger populations are dominated by initiation processes while at later ages, radiation induced cancers may also result from promotion of preexisting malignant cells. Overall, the balance between initiation and promotional effects varies by tissue target and by host age, and complicates the dependence of cancer risk on age at exposure. Genetic and environmental factors also impact risk of cancer from radiation exposure (NCRP 2010; Barcellos-Hoff et al. 2015 ). Studying the mechanisms of genetic sensitivity provides important insights into understanding the radiation risks to astronauts (Durante and Cucinotta"
+},
+{
+"id": "hrp_carcinogenesis_2016:x41",
+"text": "2008). Studies of historical data sets such as the atomic -bomb survivors show that subsets of the exposed cohorts could have a higher than average radiation risk (Ponder 2001). A well-known example is ataxia-telangiectasia (AT) patients that dramatically demonstrated the importance of genetic susceptibility to radiation damage in cancer treatment. Other examples related to DNA repair genes include BRCA1&2, p53 ( Ponder 2001), NBS (Pluth et al . 2008), Artemis (Wang et al. 2005 ), and many other so -called high -penetrance genes involved in cancer susceptibility (Ponder 2001)."
+},
+{
+"id": "hrp_carcinogenesis_2016:x42",
+"text": "Ataxia-Telangiectasia-Mutated (ATM) homozygous individuals represent only a small fraction of radiosensitive patients, although the y appear to be the most sensitive. ATM heterozygotes, who are also cancer-prone, are suspected to represent a large fraction of the extreme radiosensitive patients (Thompson et al. 2005). It has been shown that cells heterozygous for ATM mutations are slightly more sensitive to radiation-induced neoplastic transformation than the wildtype (Smilenov et al. 2001). An increased sensitivity of ATM heterozygotes has been also proven in vivo, measuring the induction of cataracts in ATM homozygotes, heterozygotes, and wild-type mice exposed to 0.5 -4 Gy X -rays (Worgul et al. 2002)."
+},
+{
+"id": "hrp_carcinogenesis_2016:x43",
+"text": "Interestingly, although there is a clear increase in breast cancer risk in individuals who carry deleterious BRCA1/BRCA2 mutations , there is no indication that these individuals are at an increased risk for contralateral breast cancer following radiotherapy (Bernstein et al. 2013). An important issue is how low penetrance genes impact sensitivity to radiation-induced cancer. A study on subjects exposed to high radiation doses to treat ri ngworm of the scalp (tinea capitis) in Israel revealed a strong familia l risk of radiation -induced meningioma (Flint-Ritcher and"
+},
+{
+"id": "hrp_carcinogenesis_2016:x44",
+"text": "Sadetzki 2007), suggesting that radiation carcinogenesis might be an issue for a genetically predisposed subgroup of the general population, rather than a random event (Hall 2007; Sigurdson 2012). This is also supported by identification of genetic variants associated with increased occurrence of second cancers in survivors of childhood Hodgkin’s lymphoma through the use of a genome wide association study (Best et al. 2011) and similarly, the identification of variants associated with radiation related papillary thyroid carcinoma in individuals exposed during the"
+},
+{
+"id": "hrp_carcinogenesis_2016:x45",
+"text": "In contrast to hypersensitivity, certain individuals also exhibit reduced sensitivity and risk due to environmental or other personal factors. A n analysis of lung cancer and other smoking - attributable cancer risks has shown significantly reduced lung cancer risk and overall cancer risk for never -smokers compared to the U.S. population. Since 90% of the astronauts are never - smokers, and the remainder former smokers, such empirical observations are applicable for space radiation risk projections. Other healthy worker effects may also be relevant for space missions and possibly modify risk projections or reduce uncertainties (Cucinotta et al. 2013). A predictive assay able to identify radiation hypersensitive , cancer-prone subjects could be useful in crew selection for long-term spaceflights."
+},
+{
+"id": "hrp_carcinogenesis_2016:x46",
+"text": "Alternatively, identifying resistant or reduced-risk individuals could substantially lower mission costs. However, as the models used currently at NASA to project space radiation ris ks are based on mortality data from population studies and do not include analysis of risk based on individual sensitivity, it is not currently recommended that genetic testing be performed on astronauts (NCRP 2010). Given the rapid advancement in genomic s and personalized medicine, this type of assessment is likely s cientifically achievable within the timeframe currently planned for a human deep exploration mission. Ultimately, for a high risk and high cost endeavor such as a mission to Mars, screening as tronauts for increased resistance to space radiation may be sought in order to reduce the costs of the missions or to support post mission disease surveillance."
+},
+{
+"id": "hrp_carcinogenesis_2016:x47",
+"text": "D. Current NASA Permissible Exposure Limits (PELs) Permissible Exposure Limits (PELs) for short -term and career astronaut exposures to space radiation have been approved by the NASA Chief Health and Medical Officer , and requirements and standards for mission design and crew selection have been set (NASA STD-3001 Vol 1, Rev A). This section describes the cancer risk section of the PELs. Career exposure to radiation is limited to not exceed 3% risk of exposure induced death (REID) from fatal cancer."
+},
+{
+"id": "hrp_carcinogenesis_2016:x48",
+"text": "NASA policy is to assure that this risk limit is not exceeded at a 95% confidence level using a statistical assessment of the uncertainties in the risk projection calculations to limit the cumulative effective dose (in units of Sievert) received by an astronaut throughout his or her career (NASA STD -3001 Vol 1 , Rev A ) Methods for determining REID, including the uncertainties discussed previously, are summarized in Section VI. 2. The Principle of As Low as Reasonably Achievable (ALARA) The ALARA principle is a requirement intended to ensure astronaut safety. An important function of ALARA is to ensure that astronauts do not approach radiation limits and that such limits are not considered as “tolerance values.” ALARA is especially important for space missions in view of the large uncertainties in cancer and other risk projection mode ls."
+},
+{
+"id": "hrp_carcinogenesis_2016:x49",
+"text": "Mission programs and terrestrial occupational procedures resulting in radiation exposures to astronauts are required to find cost-effective approaches to implement ALARA (NASA STD-3001 Vol 1, Rev A). The evidence and updates to projection mo dels for cancer risk from low LET radiation are reviewed periodically by several prestigious bodies, which include the following organizations:  The National Academy of Sciences Committee on the Biological Effects of Ionizing  The United Na tional Scientific Committee on the Effects of Atomic Radiation (UNSCEAR)"
+},
+{
+"id": "hrp_carcinogenesis_2016:x50",
+"text": " The International Commission on Radiological Protection (ICRP)  The National Council on Radiation Protection and Measurements (NCRP) These committees release new reports on cancer ris ks applicable to low LET radiation exposures about every 10 years. Overall, the estimates of cancer risks between the different reports of these panels will agree to within a factor of two or less. However, there is continued controversy for doses below 50 mSv and for low dose -rate radiation because of debate over the linear no - threshold hypothesis often used in statistical analyses of these data. The BEIR VII report (BEIR"
+},
+{
+"id": "hrp_carcinogenesis_2016:x51",
+"text": "2006) and the UNSCEAR 2006 Report (UNSCEAR 2008) are the most recent major reports, and the reports are used in the summary that follows. Evidence for low LET cancer effects must be augmented by information on protons, neutrons and HZE nuclei, which is only available in experimental models. Such data has been reviewed several times in the past by the NCRP (1989, A. Epidemiology data for low LET radiation The human evidence presented in this section is Category III unless otherwise noted. 1. Life-span studies of atomic bomb survivors The life-span study (LSS) of the survivors of the atomic -bombs in Hiroshima and Nagasaki,"
+},
+{
+"id": "hrp_carcinogenesis_2016:x52",
+"text": "Japan, includes 120,321 persons that were registered in 1950. Amongst these were 82,214 from Hiroshima and 38,107 from Nagasaki that were either within 2.5 km of the hypocenters, between 2.5 and 10 km from the hypocenters, or not in the cities at the time of the bombings . The data is currently maintained by the Radiation Effects Research Foundation (RERF). RERF has an extensive list of publications using the LSS data and makes the data freely available to all researchers. The most recently published mortality data is from the LSS Report 14 and has followup from October 1, 1950 to December 31, 2003 (Ozasa 2012). The most recently published solid cancer incidence data has follow-up from January 1, 1958 with the establishment of the Hiroshima and Nagasaki population -based tumor registries to December 31, 1998 (Preston 2007) ."
+},
+{
+"id": "hrp_carcinogenesis_2016:x53",
+"text": "This incidence data was also used by BEIR VII and the UNSCEAR committees to develop cancer site specific excess risk models (BEIR 2006, UNSCEAR 2008). The most recently published leukemia incidence data has follow-up from October 1, 1950 to December 31, 2001 (Hsu 2013). There is a gap in knowledge of the earliest cancer that developed in the first few years after the war, which impacts the assessment of leukemia to an important extent and for solid cancers to a minor extent. Of these persons censures occur, leading to about 86,000 persons when the persons not in the cities are excluded and 113,000 persons when they are included in the analyses. Table 1 shows summary statistics of the number or persons and deaths for different dose groups."
+},
+{
+"id": "hrp_carcinogenesis_2016:x54",
+"text": "These comparisons show that the doses received by the LSS population overlap strongly with the doses of concern to NASA exploration mission (i.e. 50 to 2000 mSv). Table 1 Number of persons, solid cancer deaths, and non -cancer deaths for different dose groups in the LSS study as of January 1, 2004 (Ozasa 2012). Total 0-5 5-100 100-200 200-500 500-1000 1000-2000 >2000 No. Subjects 86,611 38,509 29,961 5,974 6,356 3,424 1,763 624 Cancer Deaths 10,929 4,621 3,653 789 870 519 353 124 35,685 15,906 12,304 2,504 2,736 1,357 657 221 Figure 3 shows the dose response for the excess relativ e risk (ERR) for all solid cancers from"
+},
+{
+"id": "hrp_carcinogenesis_2016:x55",
+"text": "Ozasa et al. (20 12). The most recent publications from BEIR and UNSCEAR have used the incidence data to develop site specific cancer models. The main differences in the preferred models from RERF, BEIR and UNSCEAR ar e the parameterization of the modification terms for age at exposure, attained age, and time since exposure. BEIR VII made the assumption that most individual cancer sites should have similar modification terms for age at exposure and attained age. Hence they used the parameters from the all solid cancer model for an individual site unless there was evidence of departure from the all solid cancer parameter. UNSCEAR however did not make that assumption and only included modification terms that improved the individual sites fit."
+},
+{
+"id": "hrp_carcinogenesis_2016:x56",
+"text": "UNSCEAR also characterized the age at exposure parameter differently than RERF and BEIR. Figure 3. From Ozasa et al. (2012): Excess relative risk (ERR) for all solid cancer in relation to radiation exposure. The black circles represent ERR and 95% CI for the dose categories, together with trend estimates based on linear (L) with 95% CI (dotted lines) and linear-quadratic (LQ) models using the full dose range, and LQ model for the data restricted to dose <2 Gy. Table 2 compares the ERR per Gy for subjects at the attained age of 70 years after exposure at age"
+},
+{
+"id": "hrp_carcinogenesis_2016:x57",
+"text": "30 for males and females calculated using the models developed by Ozasa et al . 2012, Preston et al. 2007, BEIR VII, and UNSCEAR 2006 for selected major cancer sites. Simil arly, Table 3 compares the EAR per person years per Gy for subjects at the attained age of 70 years after exposure at age 30 for males and females. The National Cancer Institute has extended the results from BEIR VII to include more cancer sites in the RadRAT tool, an online calculator for estimating the lifetime risk of cancer incidence from exposure to ionizing radiation (doses below 1 Gy), for members of the U.S. population and other selected countries they have developed (Berrington de"
+},
+{
+"id": "hrp_carcinogenesis_2016:x58",
+"text": "Gonzalez 2012; https://irep.nci.nih.gov/radrat). RERF is continually updating the LSS data and it is beneficial to review the latest publications from their researchers. An update to the incidence data should be released soon. The most recent publications from RERF have focused more closely on several major cancer sites and looked at potential confounders to the radiation effects. Most notable is the publication from Furukawa et al. (2010) that looked at the combined effects of radiation and smoking on lung cancer incidence. Table 2. Male and Female ERR per Gy for subjects at the attained age of 70 years after exposure at age 30 using models with effect modification."
+},
+{
+"id": "hrp_carcinogenesis_2016:x59",
+"text": "Models including modifications for age at exposure and attained age are available for mortality from Ozasa et al. 2012 and for incidence from Preston et al. 2007, BEIR VII, and UNSCEAR 2006. * indicates the model does not include modifications. ** indicates that mortality data was used for the UNSCEAR all solid cancer model. NA indicates that a model is not available. The BEIR VII report (BEIR 2006) and the UNSCEAR 2006 report (UNSCEAR 2008) contain extensive reviews of data sets from human populations, including nuclear reactor workers and patients treated with radiation. The report from Cardis (Cardis et al . 2007) described a multinational study for reactor workers in several countries. Pooled analysis from several studies have been performed at specific cancer sites, including breast and thyroid (BEIR 2006)."
+},
+{
+"id": "hrp_carcinogenesis_2016:x60",
+"text": "These studies require adjustments for photon energy, dose -rate, and country of origin as well as adjustments made in single population studies. The preferred models from the BEIR VII committee implement the results from the pooled analyses for breast and thyroid cancer. Preston et al. (2010) reanalyzed the Mayak workers data and the data for people who lived along the Techa River using Bayesian methods to estimate site -specific risk estimates for the two studies separately. The two studies w ere compared to results from similar methods applied to the LSS data. These types of analysis lend confidence to risk assessments as well as show limitations of such data sets. Of special interest to NASA is the age at exposure dependence of low LET cancer"
+},
+{
+"id": "hrp_carcinogenesis_2016:x61",
+"text": "Ozasa et al. 2012 Preston et al. 2007 BEIR VII UNSCEAR 2006 All solid cancer 0.27 0.57 0.35 0.58 0.27 0.46 0.32** 0.58** Esophagus 0.23 0.97 0.52* 0.52* NA NA 0.53* 0.53* Stomach 0.14 0.52 0.21 0.47 0.17 0.39 0.28 0.28 Colon 0.28 0.40 0.73 0.34 0.51 0.35 0.46 0.46 Liver 0.29 0.47 0.32 0.28 0.26 0.26 0.40* 0.40* Gallbladder 0.68 0.28 -0.05* -0.05* NA NA NA NA Lung 0.41 1.09 0.28 1.33 0.26 1.13 0.32 1.40 Bladder 0.88 1.57 0.61 1.90 0.40 1.33 0.90* 0.90* Thyroid NA NA 0.49 0.65 0.53 1.05 0.75 0.75 Table 3. Male and Female EAR per 10^4 person years (PY) per Gy for subjects at the attained age of 70 years after exposure at age 30 using models with effect modification. Models including modifications for age at exposure and attained age are available for mortality from Ozasa 2012 and for incidence from Preston"
+},
+{
+"id": "hrp_carcinogenesis_2016:x62",
+"text": "2007, BEIR VII, and UNSCEAR 2006. * indicates the model does not include modifications. ** indicates that mortality data was used for the UNSCEAR all solid cancer model. NA indicates that a model is not available. Ozasa et al. 2012 Preston et al. 2007 BEIR VII UNSCEAR 2006 25.14 27.66 43.00 60.00 33.87 43.11 **28.61 **28.61 Esophagus NA NA 0.58* 0.58* NA NA 0.15* 0.15* Stomach 2.93 5.27 9.40 9.70 7.54 7.54 9.37 9.37 Colon 1.62 1.58 13.00 3.00 4.93 2.46 3.91 3.91 Liver 4.02 2.78 6.40 2.10 4.14 1.88 2.72 2.72 Gallbladder NA NA -0.01* -0.01* NA NA NA NA"
+},
+{
+"id": "hrp_carcinogenesis_2016:x63",
+"text": "Lung 7.30 5.70 6.00 9.10 5.13 7.58 5.93 8.86 Bladder 1.71 0.69 3.80 2.60 3.03 1.89 2.47 2.47 Brain NA NA 0.51* 0.51* NA NA *0.49 *0.49 Thyroid NA NA 0.50 1.90 NA NA 0.70 2.74 risk projections. The BEIR VII (BEIR 2006) models show a 50% reduction in risk over the range from 35 to 55 years, while the NCRP Report No. 132 (NCRP 2000) showed about a two -fold reduction over this range. This trend was observed in the most recent report of mortality assessments in the Atomic bomb survivors where the excess relative risk per Gy exposure for solid cancers decreased by 29% per decade increase of age at exposure (Osaza et al. 2012)."
+},
+{
+"id": "hrp_carcinogenesis_2016:x64",
+"text": "Another study of particular interest is the recently organized Million Worker Study of U.S. radiation workers and veterans focused on estimation of radiation health risks following continuous, lo w dose-rate exposures, which are relatable to the space environment and are expected to provide important knowledge for improving the accuracy of NASA’s risk models (Bouville et al. 2015). In considering radiation risks for astronauts, it is useful to consider historical recommendations that NASA has received from external advisory committees. These recommendations have formed the basis for dose limits and risk projection models (Cucinotta et al. 2002). Early radiation effects usually are related to a significant fraction of cell loss, exceeding the threshold for impairment of function in a tissue."
+},
+{
+"id": "hrp_carcinogenesis_2016:x65",
+"text": "These are “deterministic” effects, so called because the statistical fluctuations in the number of affected cells are very small co mpared to the number of cells required to reach the threshold (ICRP 1991). Maintaining dose limits can ensure that no occurrence of early effects take place; these are expected to be accurately understood. Late effects can result from changes in a very small number of cells, so that statistical fluctuations can be large and some level of risk is incurred even at low doses. Referring to them as “stochastic” effect recognizes the predominance of statistical effects in their manifestation."
+},
+{
+"id": "hrp_carcinogenesis_2016:x66",
+"text": "Recommendations by NAS/NRC in 1967 (NAS/NRC 1967) noted that radiation protection in manned spaceflight is philosophically distinct from protection practices of terrestrial workers because of the high -risk nature of space missions. The report by NAS from 1967 did not recommend “permissible doses” for space operations, noting the possibility that such limits may place the mission in jeopardy and instead made estimates of what the likely effects would be for a given dose of radiation. In 1970, the NAS Space Science Board made recommendations of guidelines for career doses to be used by NASA for long -term mission design and manned operations. At that time, NASA employed only male astronauts and the typical age of astronauts was 30 -40 years."
+},
+{
+"id": "hrp_carcinogenesis_2016:x67",
+"text": "A “primary reference risk” was proposed equal to the natural probability of cancer over a period of 20 years following the radiation exposure (using the period from 35 to 55 years of age) and was essentially a doubling dose. The estimated doubling dose of 382 rem (3.82 Sv), which ign ored a dose-rate reduction factor, was rounded to 400 rem (4 Sv). The NAS panel noted that their recommendations were not risk limits, but rather a reference risk, and that higher risk could be considered for planetary missions or a lower level of risk for a possible space station (NAS/NRC 1970). Ancillary reference risks were described to consider monthly, annual, and career exposure patterns."
+},
+{
+"id": "hrp_carcinogenesis_2016:x68",
+"text": "However, the NAS recommendations were implemented by NASA as dose limits used operationally for all missions until 1989. At the time of the 1970 NAS report, the major risk from radiation was believed to be leukemia. Since that time the maturation of the data from the Japanese atomic bomb (AB) survivors has led to estimates of higher levels of cancer risk for a given dose of radiation, including the observation that the risk of solid tumors following radiation exposure occurs with a higher probability than leukemia, although with a longer latency period before expression. Figure 4 illustrates the changing estimates of cancer ris ks since 1970 for an average adult worker."
+},
+{
+"id": "hrp_carcinogenesis_2016:x69",
+"text": "Along with the maturation of the AB data, re -evaluation of the dosimetry of the AB survivors, scientific assessments of the dose response models, and dose-rate dependencies have contributed to the large increase in the risk estimate over this time period (1970 -1997). The possibility of future changes in risk estimates can, of course, not be safely predicted today, and it is possible that such changes could potentially impact NASA mission operations. Thus protection against uncertainties is an ancillary condition to the ALARA principle, suggesting conservatism as workers approach dose limits."
+},
+{
+"id": "hrp_carcinogenesis_2016:x70",
+"text": "By the early 1980’s, several major changes had occurred leading to the need for a new approach to define dose limits for astro nauts. At that time NASA requested the NCRP to re -evaluate dose limits to be used for LEO operations. Considerations included the increases in estimates of radiation-induced cancer risks, the criteria for risk limits, and the role of the evolving makeup of the astronaut population from male test pilots to a larger diverse population (~100) of astronauts, including mission specialists, female astronauts, and career astronauts of higher ages that often participate in several missions. In 1989, the NCRP Report No. 98 recommended age and sex dependent career dose limits using as a common risk limit of a 3% increase in cancer mortality."
+},
+{
+"id": "hrp_carcinogenesis_2016:x71",
+"text": "The limiting level of 3% excess cancer fatality risk was based on several criteria , including comparison to dose limits for grou nd radiation workers and to rates of occupational death in the less-safe industries. It was noted that astronauts face many other risks, and adding an overly large radiation risk was not justified. It also should be noted that the average years of life los s from radiation induced cancer death, about 15 years for workers over age 40-y, and 20 years for workers between 20 and 40 years, is less than that of other occupational injuries. A comparison of radiationinduced cancer deaths to cancer fatalities in the US population is also complex because the smaller years of life loss in the general population where most cancer deaths occurring above age 70."
+},
+{
+"id": "hrp_carcinogenesis_2016:x72",
+"text": "Figure 4. Estimates of the risk per Sv delivered at low dose -rates for the average adult worker from 1970 to 1997 In the 1990’s, the additional follow -up and evaluation of the AB survivor data led to further increases in the estimated cancer risk fo r a given dose of radiation. R ecommendations from the NCRP (NCRP 2000), while keeping the basic philosophy of risk limitation in their earlier report, advocate significantly lower limits than those recommended in 1989 (NCRP 1989). Table 4 lists examples of career radiation limits for a career duration of 10 years with the doses assumed to be spread evenly over a care er. The values from the previous report are also listed for comparison."
+},
+{
+"id": "hrp_carcinogenesis_2016:x73",
+"text": "Both of these reports specify that these limits do not apply to exploration missions because of the large uncertainties in predicting the risks of late effects from heavy ions. Table 4. Career dose limits (in Sv) corresponding to 3% excess cancer mortality for 10 -year careers as a function of age and sex as recommended by the National Council on Radiation Protection a nd The NCRP Report No. 132 (NCRP 2000) notes that the use of comparisons to fatalities in the less-safe industries adv ocated by the NCRP in 1989, was no longer viable because of the large improvements made in ground -based occupational safety. Table 5 shows an update to such a comparison, and indeed the decreased rate of fatalities in the so-called less safe industries, such as mining and agriculture, would suggest a limit below the 3% fatality level today compared to the"
+},
+{
+"id": "hrp_carcinogenesis_2016:x74",
+"text": "1989. The most recent reviews of the acceptable levels of radiation risk for LEO, including a 1996 NCRP symposium (NCRP 1997), and the recent report on LEO dose limits from the NCRP (2000) instead advocate that comparisons to career dose limits for ground -based workers be used. It is also widely held that the social and scientific benefits of spaceflight continue to provide justification for the 3% risk level for astronauts participating in LEO missions. In comparison to the NASA limits, the US nuclear industry uses age-specific limits that neglect any sex dependence. Here career limits are set at a total dose equivalent equal to the individuals"
+},
+{
+"id": "hrp_carcinogenesis_2016:x75",
+"text": "Age  0.01 Sv. It is estimated by the NCRP that ground workers that reach their dose limits would have a lifetime risk of about 3%, but note the differences in dose values corresponding to the limit due to differences in how the radiation doses are accumulated over the worker’s career. NASA’s short-term (30 day and 1-year) dose limits are several times higher than that of terrestrial workers because they are intended to prevent acute risks , while annual dose limits of 50 mSv (5 rem) followed by US terrestrial radiation workers control the accumulation of career doses."
+},
+{
+"id": "hrp_carcinogenesis_2016:x76",
+"text": "Table 5. Occupational death rates (National Safety Council) and life-time risks for 40-yr careers for the less-safe and safe industries. Occupation Deaths per 10,000 Workers per year The exposures received by radiation workers in reactors, accelerators, hospitals, etc. rarely approach dose limits with the average annual exposure of 1 to 2 mSv, which is a factor of 25 below the annual exposure limit, and significantly less than the average dose for a 6-month ISS mission (100 mSv). Similarly, transcontinental pilots, although not characterized as radiation workers in the US, receive annual exposures of about 1 to 5 mSv and enjoy long careers without approaching exposure limits recommended for terrestrial workers in the US. Under these conditions, ground - based radiation workers are estimated to be well below the career limits, even if a 95% confidence level is applied."
+},
+{
+"id": "hrp_carcinogenesis_2016:x77",
+"text": "Because space missions have been relatively short in the past, requiring minimal mitigation, the impact of dose limits when space programs actually approach such boundaries , including the application of the ALARA principle, has been unexplored. Summary of Approaches for Setting Acceptable Levels of Risk The various approaches to setting acceptable levels of radiation risks are summarized here (IOM 1. Comparison to Occupational Fatalities in Less-Safe Industries: The life-loss from attributable radiation cancer death is less than from most other occupational deaths. Also, at this time this comparison would be very restrictive on ISS operations because of continued improvements in ground based occupational safety over last 20 years."
+},
+{
+"id": "hrp_carcinogenesis_2016:x78",
+"text": "2. Comparison to Cancer Rates in Gene ral Population: The life -loss from radiation -induced cancer deaths can be significantly larger than from cancer deaths in the general population, which often occur late in life >70 years. 3. Doubling dose for 20-yrs following exposure: Provides a roughly equivalent comparison based on life-loss from other occupational risks or background cancer fatalities during the worker’s career; however, this approach negates the role of mortality effects later in life. 4. Use of Ground-based worker limits: Provides a reference point equivalent to standard set on"
+},
+{
+"id": "hrp_carcinogenesis_2016:x79",
+"text": "Earth and recognizes that astronauts face other risks. However, ground workers remain well below dose limits, and are largely exposed to low -LET radiation where the uncertainties of biological effects are much smaller than for space radiation. A review of cancer and other radiation risks is provided by the NCRP Report No.153 (2006). The stated purpose of this Report is to identify and describe information needed to make radiation protection recommendations for space missions beyond LEO. The report contains a comprehensive summary of the current body of evidence for radiation -induced health risks and makes recommendations on areas requiring future experimentation. NCRP Report 23 (2014) provides a supplement to previous recommendations."
+},
+{
+"id": "hrp_carcinogenesis_2016:x80",
+"text": "Measureable inc reases in the yield of chromosome damage have been detected in the blood lymphocytes of astronauts after space missions of 3 to 6 months and this provides an alternative evaluation of organ dose equivalents that includes individual radio -sensitivity in the presence of confounding factors such as microgravity. Cancer risk projections can also be obtained directly from cytogenetic data using the quantitative approach derived from the European Study of Cytogenetic Biomarkers and Health, a study of several thou sand persons, which has shown healthy individuals with Medium (M), and High (H) levels of chromosome aberrations in their lymphocytes have a significant increase in cancer incidence and mortality compared to the Low (L) group (Hagmar et al. 1998). This approach has been used to assess cancer risk for astronauts (George et al. 2013a)."
+},
+{
+"id": "hrp_carcinogenesis_2016:x81",
+"text": "Figure 5 shows tertile risk rankings for 30 astronauts before flight and within three weeks of return from their ISS missions (panels A and B , respectively). Individual tertile rankings increased after space flight and only one individual remained in the low category. Analysis of follow up samples from 26 of the original 30 astronauts, taken at least 6 months after their respective flights (Figure 5, panel C) , show that the te rtile rankings remained in the high category for more than 50% of these individuals. Crewmembers with increases that remain in the high category are projected to have a significant increase in life-time cancer risk."
+},
+{
+"id": "hrp_carcinogenesis_2016:x82",
+"text": "Figure 5. Age adjusted tertile risk rankings for astronaut assessed before (panel A), a short time after (panel B), and 6 to 18 months after (panel C) a space mission. Age adjusted yield of total chromosome damage is plotted for each individual. Solid lines indicate the cut off for the low, medium, and high groups. Individual tertile rankings increased after space flight and only one individual remained in the low category. Follow up analysis show that 50% of these individuals remained in the high category at least 6 months after the mission."
+},
+{
+"id": "hrp_carcinogenesis_2016:x83",
+"text": "Biodosimetry has also been performed on five astronauts who participated in two separate ISS missions, and results show consistent increases in chromosome aberration yield in lymphocytes after the second flight as shown in Figure 6. The five plo ts in Figure 6 represent individual astronauts (A to E) and show a time course of aberration yields per 1000 cells plotted against time after first blood draw and supports the assumption of additivity of biological doses is generally valid for ISS crew exposures. Figure 6. From George et al . (2013a). A time course of aberration yields per 1000 cells plotted against time after first blood draw for five astronauts (A to E) and show and supports the assumption of additivity of biological doses is generally valid for ISS crew exposures."
+},
+{
+"id": "hrp_carcinogenesis_2016:x84",
+"text": "The shaded areas indicate the time spent in space during the mission and the line on plot A signifies the timing of a short duration shuttle mission lasting 11 days. This preliminary study supports the assumption of additivity of biological doses is generally valid for ISS crew exposures. Figure 7 shows results for the pre -flight and post-flight frequency of translocations, complex aberrations, and total exchanges. Total exchanges are increased post -flight over pre-flight values in all cases, and translocations increase in all ISS astronauts, but not for two astronauts - one returning from the Mir station and one on a Hubble repair mission. To test if the overall frequency of complex aberrations was increased by space radiat ion, Cucinotta et al. (2008) pooled results into two groups: all ISS data and all ISS data plus results from other NASA missions."
+},
+{
+"id": "hrp_carcinogenesis_2016:x85",
+"text": "The observed increase in complex aberrations is highly significant (P<10 -4), as is the increase in translocation frequency. Figure 7. From Cucinotta et al. (2008) the frequency of translocations, complex aberrations, or total chromosome exchanges measured in each astronaut’s blood lymphocytes before and after their respective space missions on ISS, Mir, or STS. An increase in total exchanges was observed for all astronauts. Translocations (22 of 24) and complex aberrations (17 of 24) were increased in the majority of astronauts. Figure 8 provides a summary of the crew doses for all NASA missions through 2007. The cancer projection model of NCRP Report No. 132 (NCRP 2000) can be applied to these effective doses and indicate REID values approaching 1% for many astronauts that have flown on ISS or the"
+},
+{
+"id": "hrp_carcinogenesis_2016:x86",
+"text": "Russian space station Mir (Cucinotta et al. 2001). 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 Figure 8. Summary of mission personnel dos imetry from all past NASA crew (Cucinotta et al . 2008). Effective dose, and population average Biological Dose Equivalent for astronauts on all NASA space missions, including Mercury, Gemini, Apollo, Skylab, Apollo -Soyuz, Space Shuttle, NASA-Mir and ISS missions"
+},
+{
+"id": "hrp_carcinogenesis_2016:x87",
+"text": "V. Radiobiology Evidence for Protons and HZE nuclei Transferring risk estimates derived from low-LET radiation to risk from exposure to the highLET radiation environment found in space requires new knowledge on the fundamental differences in biological responses (the so -called radiation quality effects) triggered by heavy ion particle radiation versus low -LET radiation associated with Earth -based exposures. The analysis of radiation quality takes into consideration the spatial p attern of energy distribution between different types of radiation and how this relates to the biological effects."
+},
+{
+"id": "hrp_carcinogenesis_2016:x88",
+"text": "Because the energy transferred per unit distance along a heavy ion track is much higher than that deposited for the same dose of low -LET radiation, the amount and type of damage and subsequent activation of damage response systems in the cell are expected to be different and studies with protons and HZE nuclei of RBEs for molecular, cellular and tissue endpoints, including tumor induction, document the higher risk for space radiation components (NAS 1996; NCRP 2006; Cucinotta and Durante 2006). This evidence must be extrapolated to the chronic conditions in space and from the monoenergetic beams used at NSRL and other accelerators to the comple x mixed radiation types in space."
+},
+{
+"id": "hrp_carcinogenesis_2016:x89",
+"text": "Sufficient proof that experimental models represent cancer processes in humans, including estimating the effectiveness of shielding and biological countermeasures, must be obtained for high risk missions where acceptable l evels of cancer risks are approached or perhaps exceeded. Evidence and progress in these areas is described next. A necessary st ep for improving space radiation cancer risk assessment are studies on the molecular pathways causative of cancer initiation and progression, and to extend these studies to learn how such pathways can be disrupted by HZE ions , including both genetic and epigenetic modifications noted as the hallmarks of cancer (Figure 9) (Hanahan and Weinberg 2000, 2011)."
+},
+{
+"id": "hrp_carcinogenesis_2016:x90",
+"text": "Recent studies have provided insight into what has become known as the cancer niche, which involves the tumor microenvironment comprising cancer cells, and surrounding stromal and immune cells and their interactions, all of which are necessary to support tumor growth and cancer progression (Barcellos-Hoff et al. 2013 ; Illa-Bochaca et al. 2014 ; Turley et al. 2015 ). This has generated a deeper understanding of tumor properties, and knowledge on how these interactions are modulated by radiation may lead to potential target for future countermeasure approaches."
+},
+{
+"id": "hrp_carcinogenesis_2016:x91",
+"text": "The goal of space radiation research is to establish a more mechanistic approach for understanding the biological impacts in order to better estimate risk and to answer questions, including whether HZE effects be can scaled from those of gamma-rays, whether risk is linear with low dose-rate, and how individual radiation sensitivity impacts risks for astronauts, a population selected for many factors related to excellence in health. Figure 9. The hallmarks and emerging hallmarks of cancer (Hanahan and Weinberg 2011), enabling characteristics and possible mechanisms of radiation damage that lead to these changes observed in all human tumors ."
+},
+{
+"id": "hrp_carcinogenesis_2016:x92",
+"text": "Energy deposition by HZE ions is highly heterogeneous with a localized contribution along the trajectory of each particle and lateral diffusion of energetic electrons ( δ-rays) many microns from the ion path (Goodhead 1994; Cucinotta et al. 2000). These particles are therefore characterized by a high-LET; however, they contain a low-LET component due to the high-energy electrons ejected by ions as they traverse tissue. Bi ophysical models have shown that the energy deposition events by high -LET radiation produce differential DNA lesions, including complex"
+},
+{
+"id": "hrp_carcinogenesis_2016:x93",
+"text": "The repair of DSB is known to occur through direct end -joining and homologous recombination processes. Indications are 1) that for high -LET radiation, where complex DSB s occur with high frequency, little repair occurs, leading to cell death, or 2) that the mis-rejoining of unrepairable ends with other radiation -induced DSB lead s to large DNA deletions and chromosome aberrations. In particular, it has been demonstrated that, regardless of radiation quality, the overall level of misrepaired damage significantly e xceeds that of unrepaired damage (Loucas 2013). While the high effectiveness in cell killing provides the rationale for heavy -ion cancer therapy (hadrontherapy), residual damage in surviving cells is of concern for carcinogenesis. A comprehensive r eview by Sridharan et al."
+},
+{
+"id": "hrp_carcinogenesis_2016:x94",
+"text": "(2015) provides an examination of current knowledge on DNA damage and repair, associated oxidative stress and inflammation, and potential links and interplay between these early responses following HZE radiation and development of genomic instability associated with cancer development . Figure 10, from the Sridharan review, illustrates repair of simple and complex DNA lesions produced by low and highLET radiation and their relationship to genomic instability. Figure 10. Repair of simple and complex DNA lesions induced by low- and high-LET radiation exposure."
+},
+{
+"id": "hrp_carcinogenesis_2016:x95",
+"text": "A majority of the DNA lesions induced by low-LET irradiation are simple lesions and are repaired within hours of induction via NHEJ- and HR-mediated repair pathways, with pathway preference dependent on cell cycle. On the other hand, a majority of the high-LET radiation-induced DNA damages are clustered lesions, which may impede DNA repair pathways, causing damage to remain unrepaired for longer periods (days to weeks). In addition to radiation-induced ROS, unrepaired DNA lesions may also increase the ROS levels in cells, causing further generation of simple to complex DNA lesions."
+},
+{
+"id": "hrp_carcinogenesis_2016:x96",
+"text": "Unrepaired/misrepaired lesions in mitochondrial or nuclear DNA (dotted line) may also further enhance and perpetuate ROS levels. Ultimately, the unrepaired/ misrepaired DNA lesions may promote genomic instability, leading to initiation of carcinogenesis (Sridharan et al. 2015). Heavy charged particles are very effective at producing chromosome exchanges with the yield of chromosome aberrations increasing linearly with dose (Hada et al. 2011 ; Ritter and Durante 2010). RBE values, estimated from total chromosome exchanges in human lymphocytes at the first post-irradiation mitosis, increase with LET, peaking around 100-200 keV/µm with an RBE of"
+},
+{
+"id": "hrp_carcinogenesis_2016:x97",
+"text": "Yields of chromosome damage are similar for acute exposures of higher energy protons (5 to 2500 MeV), with RBE values for total exchanges close to unity and approaching an RBE of 2 for low dose exposures due to an increased number of complex exchanges at all proton energies compared to γrays (George et al. 2015). The quality of chromosome damage is different when heavy ions are compared to sparsely ionizing radiation. Multi -color fluorescence painting techniques of human chromosomes have clearly demonstrated that HZE ions and proto ns induce a higher percentage of complex -type chromosome exchanges when compared to acute doses of low-LET radiation, and the complexity of observed rearrangements increases with increasing LET. Most of these complex chromosomal rearrangements will ultimately lead to cell death."
+},
+{
+"id": "hrp_carcinogenesis_2016:x98",
+"text": "In general, these animal studies demonstrate that the tumor spectra observed in irradiated animals is similar between low and high -LET irradiated animals and is dependent on the susceptibility of the specific model strain used, and HZE nuclei in general exhibit a higher carcinogenic effectiveness compared to low-LET radiation for induction of solid tumors. Relative biological effectiveness factors comparing gamma-rays to HZE ions have been measured in mice or rats for incidence for tumors of the skin (Burns et al. 1993), Harderian gland (Fry et al."
+},
+{
+"id": "hrp_carcinogenesis_2016:x99",
+"text": "LET irradiation, is adequately described. The earlier latency and increasing effectiveness found with HZE ions similar to earlier studies with neutrons (Ullrich 1984; Fry and Storer 1987), along with the lack of response of gamma-rays seen in many low dose studies, suggests that the scaling concepts using in current risk assessment approaches are unable to describe important qualitative effects and that relative biological effectiveness factors may in principle be indefinable or a faulty concept. Further studies employing additional animal models will be necessary to understand the risk of radiation carcinogenesis due to HZE ions along with stud ies to protect against initiation or progression of the disease. Some key questions still unanswered are outlined in the recent review by Barcellos-Hoff et al. (2015)."
+},
+{
+"id": "hrp_carcinogenesis_2016:x100",
+"text": "It is clear that ionizing radiation acts not only as a cancer initiator, where it direc tly imparts DNA damage and mutation, but it acts also as a cancer promoter, where it influences cancer development through a variety of indirect mechanisms that foster growth of pre -initiated cells through changes in the tissue microenvironment . Several studies have debated the relative importance of these effects comparing low and high-LET radiation impacts on direct DNA damage and mutation or on microenvironment effects such as extracellular matrix remodeling, intercellular communication and other non-targeted effects as contributors to carcinogenesis (Barcellos-Hoff et al. 2005, 2013; Illa-Bochaca et al. 2014 )."
+},
+{
+"id": "hrp_carcinogenesis_2016:x101",
+"text": "Bystander or non -targeted effects are defined as “effects manifesting in non -irradiated cells that received a signal(s) communicated from an irradiated cell” (Morgan and Sowa 2 015), including induction of DNA damage responses in un -hit bystander cells (Klammer et al . 2015). These non-targeted effects, illustrated in Figure 11 from Li et al. (2014), may lead to supra-linear dose-response curves at low doses, perhaps reducing the effectiveness of spacecraft shielding, but they may also be protective by removing damaged cells from the organism. Both effects challenge the conventional linear no -threshold risk model assumption, which is currently adopted for radioprotection on Earth a nd in space. They also suggest important targets for biological countermeasures that are likely to be more effective than countermeasures targeting DNA damage."
+},
+{
+"id": "hrp_carcinogenesis_2016:x102",
+"text": "Figure 11 (from Li et al. 2014) HZE-particle irradiation induces targeted and nontargeted (bystander) effects. Communication of stress-inducing molecules from cells exposed to an HZE particle (cells in red) and its fragmentation products (cells in orange or green) propagate stressful effects that lead to induction of oxidative stress in bystander cells (yellow). The progeny of the targeted and bystander cells may also experience oxidative stress. Cells in white are nonaffected bystander cells. Results in tissues suggest that biological responses differ between high and low LET radiation depending on the model context considered (2D vs. 3D vs. animal). Because of the many types of particles, energies, and doses of interest in sp ace, extensive animal experimentation has been prohibited by costs in the past."
+},
+{
+"id": "hrp_carcinogenesis_2016:x103",
+"text": "Further studies in animal models are needed to better elucidate the contribution of non-targeted effects to cancer risk. Although many unknowns remain regarding the bystander effect and its implications, an important characteristic of this effect is that it is triggered by low radiation doses, irrespective of radiation quality, and saturates with increasing dose, usually by 10 -30 cGy (Yang et al. 2005; Schettino et al. 2005;Yang et al. 2011). Thus, bystander effects are particularly importa nt at low doses and low particle fluences and may have important consequences for astronauts on long - duration missions due to the low particle fluences that characterize the space radiation field."
+},
+{
+"id": "hrp_carcinogenesis_2016:x104",
+"text": "However, generalizations regarding the potential risk of bystander effects cannot yet be made due to the challenges of combining bystander study results from the literature into a cohesive framework and uncertainties in extrapolating results from in vitro studies to predict human cancer risk. There is general agreement that significant differences exist in cellular responses to low-dose compared to high-dose radiation exposure, which may indicate distinct underlying mechanisms . There have been several studies performed that indicate an adaptive response to low-dose ionizing radiation can provide a level of protection against future exposures (Bhattacharjee and Ito 2001;"
+},
+{
+"id": "hrp_carcinogenesis_2016:x105",
+"text": "Mortazavi et al. 2003; Elmore et al. 2008; Rithidech et al. 2012 ). This may be particularly important for understanding risks in the space environment because the GCR environment is comprised predominantly of protons, and it is realistic to expect that cells will be exposed to multiple hits of protons prior to being traversed by an HZE particle. Several studies have begun examining whether prior exposure to protons provides any level of adaptive protection prior to the HZE exposure with diverse results that are dependent on the model system, the order of ions, time between exposures, doses used, and the endpoints being measured. For example a recent study by"
+},
+{
+"id": "hrp_carcinogenesis_2016:x106",
+"text": "Oxidative stress is an imbalance between the production of reactive oxygen species (ROS) and the ability of the body to mitigate their harmful effects. It is a well-known byproduct of radiation exposure and impacts all components of the cell including proteins, DNA and lipids through the production of free radicals or peroxides , illustrated in Figure 12 . It has been li nked to numerous diseases, premature aging, and persistent ROS are thought to play a critical role in DNA damage, telomere dysfunction and fuel inflammatory processes which can lead to the development of cancer (Azzam et al. 2012; Sridharan et al. 2015; Li et al. 2014). Genomic instability has been"
+},
+{
+"id": "hrp_carcinogenesis_2016:x107",
+"text": "Figure 12. Effects of high atomic number (Z) and high -energy (E) (HZE) ion irradiation in mammalian cells. Traversal of a cell by a densely ionizing HZE particle results in direct and indirect cellular effects on macromolecules. Absorption of ionizing radiation by living cells directly disrupts atomic structures, producing chemical and biological changes and indirectly through radiolysis of cellular water and generation of reactive chemical species by stim ulation of oxidases and nitric oxide synthases."
+},
+{
+"id": "hrp_carcinogenesis_2016:x108",
+"text": "Additional evidence indicates that other factors associated with spaceflight, such as microgravity, may be associated with an increase in ROS production, cellular antioxidants and tissue remodeling due to a shift in biological and metabolic homeostasis which may have important implications in the context of space radiation expos ure (Mao et al. 2014). A summary of ROS related studies using high-LET radiation is provided in Table 7 from Sridharan et al. 2015. Table 7. Summary of ROS Related High-LET Studies (from Sridharan et al. 2015)"
+},
+{
+"id": "hrp_carcinogenesis_2016:x109",
+"text": "Table 8. Summary of high-LET inflammation related studies (from Sridharan et al. 2015). Of critical interest for space radiation risk assessment are studies that suggest that the complex DNA damage produced by heavy ion radiation is associated with persistent oxidative stress, chronic inflammation, and genomic instability at levels not observed following exposure to similar doses of low -LET radiation. These biological responses may underlie the observations of decreased latency and the potential for increased aggression of tumors induced by heavy ion exposure. Also, their potential contribution to the etiology of cardiovascular and CNS diseases, the other major radiation risk areas of concer n for spaceflight, make them potentially relevant targets for cross-risk biological countermeasure development."
+},
+{
+"id": "hrp_carcinogenesis_2016:x110",
+"text": "A significant challenge for studying the development of cancer due to space radiation is in observing the effect in relevant experimental models. Many studies have been performed using traditional cell culture in both two dimensional and more recently, three dimensional forms to study the effect of various doses, qualities and dose rates due to space radiation. Data from exposure to ionizing radiation from nuclear disasters or radiotherapy aids in understanding some effects however, it is not possible to recreate an exposure to the space radiation environment in humans on the ground. Therefore, it is critical to use relevant animal models to help further understand the risk of carcinogenesis and develop suitable biological countermeasures to help mitigate the initiation or promotion of carcinogenesis. A recent review by Rivina et al."
+},
+{
+"id": "hrp_carcinogenesis_2016:x111",
+"text": "(2013) discussed the value and relevance of using common laboratory mice to study cancer. They argue that due to its molecular and physiological similarities to man, small size, ease of breeding in captivity and a fully sequenced genome the Mus musculous remains one of the best animal model systems for cancer research . Studies on radiation carcinogenesis due to HZE ions have been performed with rat strains and stocks, inbred mouse strains and their F1 hybrids, genetically diverse stock, and genetically engineered mouse models (Barcellos-Hoff et al. 2015, Sridharan et al. 2015 )."
+},
+{
+"id": "hrp_carcinogenesis_2016:x112",
+"text": "2006) has suggested that cancer mortality risk should be estimated by utilizing incident cancer rates, transferring that risk to the cohort of interest, and scaling the transferred risk by the ratio of the cancer morality and incident rates of the host population. The discussion that follows is taken from Cucinotta et al. (2013). The risk of radiation exposure induced cancer (REIC) is calculated by folding the instantaneous hazard rate for cancer incidence, I , with the probability of surviving to age t free of cancer: (1) max H dt a a H S t z aad Hzll éù=- êúêúëûòò , where a is the age, aE is the age at exposure, t is the time, amax is the maximum attained age,"
+},
+{
+"id": "hrp_carcinogenesis_2016:x113",
+"text": "0()S t is the survival functio n of the background population , TH is the organ dose equivalent for each tissue, T , and λM is the cancer mortality rate . The tissue specific instantaneous cancer incidence rate is given by (2) 0( , , ) [ ERR( , ) ( (1-) ) EAR( , )] DDREF HH a a a a a a al n l n =+ , where νT is a parameter used to allow contribution for multiplicative (ERR) and additive risk models (EAR), λI0 is the cancer incidence rate of the background po pulation, and DDREF is the dose-rate and dose reduction factor. Likewise, the risk of radiation exposu re induced death ( REID) is determined by foldi ng the instantaneous cancer morta lity hazard rate, λM, with the probability of surviving to age t free of cancer (Cucinotta et al. 2013) (3) max"
+},
+{
+"id": "hrp_carcinogenesis_2016:x114",
+"text": "E T M E T M E Taa a H dt a a H S t dz z a Hll éù=- êúêúëûòò , with (4) (1-( , , ) [ ( , ) ( , ] ) ) T HH a a ER R a a EA R a a DDR EF ll n l n l=+ . In equation (4), λM0 is the cancer mortality hazard rate for the background population. Generalized ERR and EAR models were fitted to LSS cancer mortality and incidence data with Poisson likelihood methods and include latency ( UNSCEAR 2008). The ERR is linear -quadratic in dose response and is given as (5) 1 2 3 4ERR( , , ) ( ) exp[ ln( ) ln( ) ln( )] D s E Ea aE D D D e l a a a a ga b k k k k= + + - + + , where α, β, γ, κ1, κ2, κ3, κ4, and ls are cancer specific parameters (UNSCE AR 2008). A similar generalized EAR model is used with a different set of parameters. Although the above ERR and"
+},
+{
+"id": "hrp_carcinogenesis_2016:x115",
+"text": "EAR models are used for most tissues, there are some exceptions. The BEIR VII, 2006 models are used for breast and thyroid cancer risks and t he Preston et al . (2007) models are used for the prostate, uterus, ovary, oral cavity, non-melanoma skin risks, as well as for other tissues that were not included in the BEIR VII and UNSCEAR models. 1. Biological Effects Related to Track Structure The tissue dose equivalents appearing in equations (1) - (4) may be obtained by folding the physical tissue fluence with a radiation quality factor, Q, representing the increased effectiveness of HZE particles, as compared to γ-rays, for the same biological endpoint. These factors are based on subjective assessment of maximum RBE values for relevant endpoints from radiobiology experiments. In the past, NASA has utilized the LET -dependent quality factor, Q(L), recommended by the ICRP (ICRP 1991)."
+},
+{
+"id": "hrp_carcinogenesis_2016:x116",
+"text": "Animal studies generally demonstrate that HZE nuclei have higher carcinogenic effectiveness than low-LET radiation. However, the number of studies of animal carcinogenesis made with HZE nuclei is extremely limited . These studies used one or only a few ion types, providing little information on the possible radiation quality dependence of RBE. Both the ICRP and NCRP have noted limitations in radiobiology data to assess radiation quality factors (ICRP 2003; NCRP 2006). Despite the limitations in available data, an improved description of the quality factor for the particles found in space was provided by Cucinotta et al. (2013) by considering track-structure effects. Track structure descriptions are used in theoretical models of biological response to understand and extrapolate limited radiobiology data to other radiation qualities and doses. More recently, Borak et al."
+},
+{
+"id": "hrp_carcinogenesis_2016:x117",
+"text": "The number of δ-rays created by an ion with charge Z traversing a biological target is proportional to the track structure parameter XTR = (Z*/β)2, where Z* is the effective charge number that adjusts Z by atomic screening effects important at low kinetic energies and high Z, and β is the ion velocity relative to the speed of light . Figure 13 shows such a description comparing the frequency of energy deposition above 300 eV in a volume the size of the nucleosome. The comparisons illustrate that the parameter (Z*/β)2 provides an improved descriptor of energy deposition in small volumes compared to LET. Deviations from a unique (Z*/β)2 dependence occur at low energy where the curves branch for distinct charge numbers."
+},
+{
+"id": "hrp_carcinogenesis_2016:x118",
+"text": "(2014) propagated through aluminum and water for solid cancers and leukemia demonstrate good agreement (Figure 14). Research at the NSRL is making new e stimates of radiation quality effects for a variety of endpoints with the focus on approaches to mechanistic understanding of biological effectiveness. However, very few comprehensive studies have been completed at this time. Here we note that, in the past, very detailed studies of radiation quality were made for DNA breaks, as well as for cell inactivation and mutation for a large number of ion types. Such extensive studies would be difficult to repeat today because of the higher costs of many current experimental approaches, and certainly would take many years to complete. These older studies are useful to consider in terms of track - structure models."
+},
+{
+"id": "hrp_carcinogenesis_2016:x119",
+"text": "2. Risk Cross Section and NASA Quality Factor The biological action cross section, σ, is the probability for a given endpoint - such as mutation or induction of tumors - per unit fluence and is useful when exponential and linear dose response curves are suitable. The following parametric model of the risk cross section is recommended f or low doses (Wilson et al. 1993; Cucinotta and Wilson 1995; Cucinotta et al. 2013) (6) S = S + - , where (7) exp(( , ) [1 / ) ]m In equation (7), β is the ratio of the particle speed to the speed of light, XTR is the track structure parameter. The parameters Σ0, κ, and m are estimated from radiobiology experiments. Note that Σ0 is the maximum value of the risk c ross section and is related to maxRBE (Cucinotta et al. 2013)."
+},
+{
+"id": "hrp_carcinogenesis_2016:x120",
+"text": "The recommended NASA radiation quality factor is defined by using the risk cross section in equation (6), and is given by (Cucinotta et al. 2013, Cucinotta 2015) (8) ( )TH0 /6.24 / NA SA P Z E P Z E LQ ga -ìü Sïïïï= - + -íýïïïïîþ , where αγ is the low LET slope parameter, which is estimated from human epidemiology data from  radiation. The extra term in parentheses on the far right of equation (8) modifies the quality factor (or action cross section) at low energies to account for thindown. The value of ETH has been set at 0.2 based on experimental data for H and He. Thindown results when the spatial distribution of δ-rays from an ion becomes limited by kinematics to a size smaller than the biological target."
+},
+{
+"id": "hrp_carcinogenesis_2016:x121",
+"text": "The revised radiation quality factor may be used to compute tissue dose equivalents for space radiation environments, allowing the cancer incidence and mortality rates to be computed in terms of particle-specific charge and kinetic energy, instead of LET alone. (Cucinotta et al. 2013). Borak et al. (2014), however, have demonstrated good agreement between NASA’s quality factor and an LET dependent quality factor for solid cancers and leukemia suggesting this may be a revised method to consider for determining quality factor in general."
+},
+{
+"id": "hrp_carcinogenesis_2016:x122",
+"text": "There are various sources of uncertainty in assessing the risk associated with radiation exposure. In the current risk model, these are classified as uncertainties in the low-LET risk model, risk cross section (quality factor), and physics (fluence). The following section discusses various probability distribution functions that are used for prop agating uncertainty in the estimation of Uncertainties in Low-LET Epidemiology Data Low-LET risk uncertainties are incorporated into the hazard rate by sampling quantiles (random variables) from probability distribution functions (PDF) t hat represent dosimetric, statistical, bias, risk transfer, and risk coefficient uncertainties (Cucinotta et al. 2013): (9)"
+},
+{
+"id": "hrp_carcinogenesis_2016:x123",
+"text": "Dr a a x x x xE a a x ll = , where λ0 is the baseline hazard rate per Sv, and xα are the quantiles whose values are sampled from the associated PDF. Note that the DDREF applies only to the solid cancer risk and not the leukemia risk under the stated assumptions. Cucinotta et al. (2013) defines the following subjective PDFs, Pα(xα), for each factor that contributes to the acute low LET-risk projection: 1. PD represents the random and systematic errors in the estimation of the doses received by atomic-bomb blast survivors. It i s represented by a log -normal distribution with a geometric mean of 0.9 and a geometric standard deviation of 1.3;"
+},
+{
+"id": "hrp_carcinogenesis_2016:x124",
+"text": "2. Ps represents the distribution in uncertainty in the risk coefficient that is associated with the increase in ri sk with increasing radiation exposure. It is assumed as a normally distributed PDF with a mean of one and a tissue specific standard deviation; 3. PB represents any bias resulting for over- or under-reporting cancer incidents. It is assumed as a normal distribution with a mean of 1.0 and a standard deviation of 0.05; 4. PT represents the uncertainty in the transfer of cancer risk following radiation exposure from the Japanese population to the US population. Both additive and relative risk models were considered by NCRP 126 in assessing t he uncertainties in such transfer. PT is a uniform distribution about the preferred weight (Cucinotta et al. 2013)"
+},
+{
+"id": "hrp_carcinogenesis_2016:x125",
+"text": "5. PDr represents the uncertainty in the knowledge of the extrapolation of risks to low dose and dose-rates, embodied in the dose and dose -rate reduction factor (DDREF). Based on a Baysian analysis, Cucinotta et al. (2013) have recommended a t-distribution with a central estimate of 1.5 for the PDr. Uncertainties due to Dose-Rate and Protraction Effects for Ions It is not feasible to perform long duration (months) exposure to space relevant radiation doses and dose-rates. For low dose-rate and protracted proton and HZE radiation exposure of more than a few months, new biological factors may influence risk assessments, including redistribution i n the cell cycle, repopulation, or promotional effects, especially when particle fluences are large enough to lead to multiple hits of target cells or surrounding cells and tissue environments."
+},
+{
+"id": "hrp_carcinogenesis_2016:x126",
+"text": "With the increase in proton and carbon ion therapy treatment centers, there is a limited amount of human data on high-dose, high dose-rate protons and carbon ions, however, no human data exists on other HZE ions and there is very little experimental data at space relevant doses and dose-rates for these particle types. Confidence in using radio -epidemiological data for acute (A -bomb survivors) or fractionated (patient) data is decreased when applied to protracted exposure. Experimental data for protracted proton or heavy ion irradiation in experimental models of carcinogenesis is almost nonexistent. Burns et al. (1994) found split doses of argon ions separated by a few hours up to one - day increased the risk of skin cancer in rats. Alpen et al."
+},
+{
+"id": "hrp_carcinogenesis_2016:x127",
+"text": "For gamma-rays and neutrons, a good number of studies for cancer induction or life-shortening in mice exists, showing sparing effects for gamma-rays, and that neutron effects may be increased due to protraction under certain conditions in some tissues (Ullr ich 1984; NCRP 1990). Contrary to these reports, Daniels and Schubauer-Berigan (2011) performed a meta-analysis across multiple studies involving human work ers exposed to protracted low -dose gamma radiation with doses ranging between 5.6 -810mGy and found it to be significantly associated with the incidence of leukemia. Other studies did not find an increase in tumor incidence low doses and dose -rates of"
+},
+{
+"id": "hrp_carcinogenesis_2016:x128",
+"text": "0.05 mGy/d (20 mGy total dose) or 1.1 mGy/d (400 mGy total dose), but noted an increased incidence of several tumor types affecting both sexes at 21 mGy/d (8000 mGy total dose) (Tanaka et al. 2007). Important questions related to the differences in life -span, cell turn -over rates, or mechanisms of initiation or promotion in humans and mice, make estimates of the effects of protraction on risk difficult. If protraction effects do increase the risk from high LET radiation, then such effects would be more important for a Mars mission than the shorter lunar missions. In space, each cell will be traversed about every two to three days by a proton or delta-ray produced by ions in adjacent cells, with a decreasing frequency from weeks to months as the charge of the"
+},
+{
+"id": "hrp_carcinogenesis_2016:x129",
+"text": "HZE nuclei increases (Cucinotta et al. 1998). Studies of mixed-fields of protons and HZE ions are needed to understand uncertainties in dose -rate and protraction effects from space radiation. Efforts are underway to incorporate a mixed field GCR simulated environment at the NSRL in order to address these questions (Norbury et al. 2016). Uncertainties related to radiation quality, dose-rate, and protraction could lead to correlations that will be difficult to describe when based on limited experimental data. Methods to treat correlation effects will be needed when additional data on protraction effects become available."
+},
+{
+"id": "hrp_carcinogenesis_2016:x130",
+"text": "We ignore these uncertainties; however, we replace the 10 year minima latency assumption made for low LET by the step-in latency model (Pierce et al. 1996) used for the leukemia risk. The effects of these assumption s will need to be addressed when data and knowledge on underlying mechanisms become available. Uncertainties in Quality Factor (Risk Cross Section) Uncertainties in the quality factor are incorporated by Monte Carlo samples of quantiles from PDF associated with m, κ, and Σ0 / αγ from equations (7) and (8). There is an additional PDF that multiplies"
+},
+{
+"id": "hrp_carcinogenesis_2016:x131",
+"text": "NASAQ and is used as a correction to the quality factor for high energy protons. The PDF for each of the uncertainties are described below, and parameter estimates have been provided elsewhere (Cucinotta et al. 2013). 1. Slope parameter m: A discrete distribution for the slope parameter is used, with slope m = [1, 2.5, 3, 3.5, 4] and corresponding weights [0.15, 0.20, 0.40, 0.20, 0.05]. 2. Track structure parameter κ: A normal distribution with mean of 1 and standard deviation of 1/3 is used. 3. PDF for Qmax = Σ0 / αγ: A log normal distribution with geometric mean (GM) of 1 and geometric standard deviation (GSD) of 1.4 is used for solid cancer; for leukemia, a normal distribution with mean of 1 and standard deviation of 1.6 is used."
+},
+{
+"id": "hrp_carcinogenesis_2016:x132",
+"text": "3. High energy proton correction: For protons with energies greater than 150 MeV, a normal distribution with mean of 1 and standard deviation of 0.15 modifies Uncertainty in determining the radiation environment within radiosensitive tissues includes uncertainties in estimating the ambient radiation field in space (boundary condition), shielding geometry and human phantom model, nuclear and atomic physics, and particle transport. In the current NASA cancer risk projection model, these combined uncertainties have been subjectively represented with a normal distribution with mean 1.05 and standard deviation of 1/3 is used light ions (Z < 4). For heavy ions (Z > 4), a normal distribution with mean 1 and standard deviation of"
+},
+{
+"id": "hrp_carcinogenesis_2016:x133",
+"text": "1/4 is used. Ongoing verification and validation efforts are focused on more rigorously quantifying combined physics uncertainties used in risk projection models. Systems biology is a rapidly growing field due to the advances in the various -omics techniques over the last decade. Along with it, computational biology has emerged as a useful path to reconcile the various -omics relationships and draw conclusions from the vast data sets generated. This area has become a focus for radiation carcinogenesis and several groups have begun implementing systems biology to understand different biological organizations along different time -scales to uncover relationships of the key processes involved (Barcellos -Hoff et al. 2014) . Gene and molecular networks focus on mapping mechanistic and structural properties of the system (Conesa and Mortazavi 2014). Using these techniques, Del Prete et al."
+},
+{
+"id": "hrp_carcinogenesis_2016:x134",
+"text": "(2011) revealed two molecular pathways involved in cancer development due to inflammation . In a study involving low dose radiation (10cGy X -rays), researchers applied a comprehensive –omics analysis including proteomic, phosphoproteomic and metabolomic pl atforms to determine the temporal impact on human tissue using in vitro 3D full thickness human skin models ( Tilton et al. 2015 ). Their research uncovered signaling mechanisms and common molecular and pathway responses to low dose ionizing radiation. Comprehensive -omics characterization of cancers that arise due to heavy ion exposure will support systems biology risk modeling efforts, extrapolation of results to human cancers, and also help to drive biomarker identification for disease monitoring and f uture countermeasure development and testing."
+},
+{
+"id": "hrp_carcinogenesis_2016:x135",
+"text": "Multi-scale systems approaches that relate molecular damage and modifications of signal transduction pathways to cellular and tissue effects are important to achieve the required levels of accuracy in risk estimation required for long duration space flight. An integrated systems biology based risk assessment model using multiscale modeling approaches will provide the accuracy to predict individual based risk in support of long duration space travel. The integration of high throughput genomics and proteomics data sets for critical cancer development processes identified through mechanistic studies into a systems biology understanding of biomedical and fundamental biological processes is a critical aspect in achieving this overall goal."
+},
+{
+"id": "hrp_carcinogenesis_2016:x136",
+"text": "It is anticipated that this risk assessment model or computational framework will ultimately result from the assembly of distinct modular components, or building blocks, that connect across multiple levels of biological organization. The ultimate goal is to develop these models to provide information on the individual level. This will be important for future exploration missions since the size of the crew will be limited and individual response will be critical to their health and the mission. Personalized medicine is on the forefront of research. Schmidt and Goodwin (2013) describe an -omics based systems analysis to facilitate development of personalized countermeasures for astronauts . It is likely that this area will be advanced enough to be of benefit to NASA and the crew by the time a deep exploration mission occurs involving humans."
+},
+{
+"id": "hrp_carcinogenesis_2016:x137",
+"text": "VII. Risk for Exploration Mission Operational Scenarios The accuracy of GCR environmental models, transport codes, and nuclear interaction cross sections described above allow NASA to make predic tions of space environments and organ exposures to be encountered for missions to the moon or Mars. However, there are major questions that arise due to the lack of knowledge on biological effects. For cancer risk projections, propagating individual uncertainties in factors that enter risk model calculations is used to place reasonable bounds on cancer risks to be encountered."
+},
+{
+"id": "hrp_carcinogenesis_2016:x138",
+"text": "A. Risk Estimates for Space Exploration Missions In implementing a numerical procedure for propagating the uncertainties discussed i n section 3, equation (9) is inserted into the expression for REID (or REIC), and a large number of Monte Carlo trials (~10 5) are performed. In each trial, de viates are sampled from the uncertainty distributions and applied to the radiation quality factor or hazard rate. Results for the REID estimates are binned and the median values and confidence intervals found. Table 9 gives estimates for the number of safe days in space for various age groups and populations. The number of safe days is defined as the maximum number of days in space to be below 3% REID at a 95% confidence level (CL)."
+},
+{
+"id": "hrp_carcinogenesis_2016:x139",
+"text": "Table 9. Safe days in space, which is defined as the maximum number of days to be below 3% REID at a 95% CL. Calculations are for average solar minimum with 20 g/cm 2 aluminum shielding. Values in parentheses are for the case of the deep solar minimum of 2009 (Cucinotta et al. 2013). aE, y 35 106 (95) 187 (180) 209 (205) 271 (256) 45 139 (125) 227 (212) 232 (227) 308 (291) 55 161 (159) 277 (246) 274 (256) 351 (335) B. Biological and Physical Countermeasures Identifying effective countermeasures to reduce the biological damage produced by radiation remains a long -term goal of space research. As noted by Durante and Cucinotta (2008), such countermeasures may not be needed for a lunar base, but probably for the Mars mission, and definitely f or exploring Jupiter or Saturn’s moon Titan or the nearby satellites."
+},
+{
+"id": "hrp_carcinogenesis_2016:x140",
+"text": "In all basic radioprotection textbooks, it is stated that there are three means to reduce exposure to ionizing radiation: increasing the distance from the radiation source, reducing the exposure time, and by shielding. Distance plays no role in space, as space radiation is omnipresent. Time in space is likely to be increased rather than decreased given plans for exploration and colonization. Shielding remains a plausible countermeasure, a lbeit a prohibitively costly one in light of current launch mass capabilities and may actually increase exposures beyond certain thicknesses due to neutron build-up and electromagnetic cascades (Slaba et al. 2013a)."
+},
+{
+"id": "hrp_carcinogenesis_2016:x141",
+"text": "Other strategies can be effective in r educing exposure, or the effects of the irradiation, in space. These strategies include the choice of an appropriate time of flight, administration of drugs or dietary supplements to reduce the radiation effects, and crew selection. Biomarkers will aid in determining when and if a biological countermeasure is required based on individual exposures and sensitivities. This is a rapidly expanding area of research. Biomarkers have currently been developed in support of mass triage for potential nuclear disasters or radiation terrorism. The primary method to assess radiation exposure previously was by analyzing chromosome aberrations: dicentric for short-lived damage and translocations for long-lived."
+},
+{
+"id": "hrp_carcinogenesis_2016:x142",
+"text": "The ideal biological countermeasure will provide cross -risk mitigation or protection through antioxidants that provide free radical scavenging, common pathways (eg., inflammatory) or other biological pathway that intersects multiple risks. Several biological countermeasures have been developed and studied in support of acute radiation exposure. WR-2721 (amifostine or Ethyol®, MedImmune Oncology, Inc.) is a phosphorothioate that confers radioprotection and is approved by the FDA. It has been i nvestigated extensively as an antioxidant that scavenges free radicals (Xiao and Whitnall 2009; Langell et al. 2008). Although it has demonstrated positive results as a radioprotector, it has shown toxicity at the levels required to induce a radioprotectiv e effect with undesirable side effects (Bogo et al. 1985; Whitnall 2012)."
+},
+{
+"id": "hrp_carcinogenesis_2016:x143",
+"text": "An analog to WR -2721 is an aminothiol, PrC-210 (ProCertus BioPharm, Inc.), offering the same benefits of WR-2721 without the adverse side effects and toxicity (Peebles et al. 2012; Soref et al. 2011; Whitnall 2012). Natural occurring antioxidants are less effective than phosphorothioate agents in protection against high - dose acute radiation burden. However, nutritional antioxidants have a low toxicity, can be used for prolonged time, and they seem to play a key role in the prevention of cancer (Halliwell 2000; Bingham and Riboli 2004). A diet rich in fruit and vegetables significantly reduced the risk of cancer in the A -bomb survivor cohort (Sauvaget et al. 2004). Retinoids and vitamin s (A, C, and"
+},
+{
+"id": "hrp_carcinogenesis_2016:x144",
+"text": "E) are probably the most well -known and studied natural radioprotectors, but hormones (e.g. melatonin), glutat hione, superoxide dismutase, phytochemicals from plant extracts (including green tea and cruciferous vegetables), and metals (especially selenium, zinc, and copper salts) are also under study as dietary supplements for individuals overexposed to radiation (Weiss and Landauer 2000), including astronauts. In addition, there is evidence of a reduced antioxidant capacity during spaceflight, as shown by reduced superoxide dismutase (SOD) and total antioxidant activity in some astronauts returning from missions on the International Space Station (Smith et al. 2005)."
+},
+{
+"id": "hrp_carcinogenesis_2016:x145",
+"text": "Understanding the effectiveness of antioxidants in space is complicated by the presence of HZE particles. In principle, antioxidants should provide reduced or no protection against the initial damage from densely ionizing radiation, because the direct effect is more important than free radical-mediated indirect radiation damage at h igh LET. However, there is an expectation that some benefits should occur for persistent oxidative damage related to inflammation an d immune responses. Recent experiments suggest that an efficient radioprotection by dietary supplements can be achieved even in case of exposure to high LET radiation. Ascorbate reduces the frequency of mutations in human -hamster hybrid cells exposed to high LET C-ions (Waldren et al. 2004)."
+},
+{
+"id": "hrp_carcinogenesis_2016:x146",
+"text": "2 Gy protons followed by 0.5 Gy 56Fe ions or the ions delivered individually. The latest in vivo studies using space relevant radiation dose levels of 0.5 Gy, 1-GeV/n 56Fe ions, showed treatment with antioxidant combination or BBI decreased the levels of malignant lymphoma (Kennedy et al. 2008) and decreased the incidence of rare tumors (such as Harderian gland) (Kennedy et al. 2011). However, because the mechanisms of biological effects may be different for low dose -rate compared to acute irradiation, new studies for protracted exposures will be needed to understand the potential benefits of biological countermeasures."
+},
+{
+"id": "hrp_carcinogenesis_2016:x147",
+"text": "Even if antioxidants can act as radioprotectors or mitigators, this does not necessarily translate as an advantage for cancer risk. If antioxidants protect cells by rescuing them from apoptosis, then this may allow the surviv al of damaged cells, which eventually can initiate tumor progression. Concern about this possibility is sustained by a recent meta -study of the effects antioxidant supplements in the diet of normal subjects (Bjelakovic et al. 2007). The authors did not fin d statistically significant evidence that antioxidant supplements have beneficial effects on mortality."
+},
+{
+"id": "hrp_carcinogenesis_2016:x148",
+"text": "On the contrary, they concluded that -carotene, vitamin A, and vitamin E seem to increase the risk of death. Concerns not only include rescuing cells t hat still sustain DNA mutations, but also the altered methylation patterns that can result in genomic instability (Kovalchuk et al. 2004). An approach to target damaged cells for apoptosis may be advantageous for chronic exposures to galactic cosmic radiation (GCR). Radioprotectors and mitigators tested for acute exposures at high doses should be used with care – rescuing cells may make the problem worse in the long term."
+},
+{
+"id": "hrp_carcinogenesis_2016:x149",
+"text": "For terrestrial radiation workers, additional protection against radiation exposure is usually provided through increased shielding. Unfortunately, shielding in space is problematic, especially when galactic cosmic rays (GCR) are considered. High-energy radiation is very penetrating: a thin or moderate shielding is generally efficient in reducing the exposure, but as the thickness increases, shield effectiveness drops. This is the result of the production of a large number of secondary particles, including ne utrons, caused by nuclear interactions of the GCR with the shield. These particles have generally lower energy, but can have higher quality factors than incident cosmic primary particle. Radiation shielding effectiveness depends on the atomic constituents of the material used."
+},
+{
+"id": "hrp_carcinogenesis_2016:x150",
+"text": "S hielding effectiveness per unit mass is the highest for hydrogen, and decreases with increasing atomic number (Wilson et al. 1995; Wernerth et al. 2013). Liquid hydrogen would display the maximum performance as shield material but is not practical, since it is a low temperature liquid. Instead, polyethylene (CH2) could be a good compromise. Secondary neutron production increases with the mass number of the atomic constituents of the material and can grow to be large values for materia ls such as aluminum or the regolith on the Martian surface, or for heavier materials such as lead. For SPE shielding, the situation is much better and the majority of events on record can be reduced to reasonable dose levels (< 100 mSv) with localized shielding of polyethylene inside a lightly shielded vehicle or habitat (Figure 15)."
+},
+{
+"id": "hrp_carcinogenesis_2016:x151",
+"text": "Figure 15. Effective doses versus depth in several materials for GCR at solar minimum and the 1972 SPE (Slaba et al. 2013). There are 15 gaps associated with th e risk of radiation carcinogenesis and several gaps related to this risk including acute radiation exposure, degenerative tissue effects and impact on the central nervous system. Risk: Given that crewmembers are exposed to radiation from the space environment, there is the possibility for increased cancer morbidity or mortality. Cancer - 1: How can experimental models of tumor development for the major tissues (lung, colon, stomach, breast, liver, and leukemias) be developed to represent the major processes in radiation carcinogenesis and extrapolated to human risk and clinical outcome projections?"
+},
+{
+"id": "hrp_carcinogenesis_2016:x152",
+"text": "Cancer - 2: How can experimental models of tumor development for the other tissues (bladder, ovary, brain, esophagus, skin, etc) be developed to represent the major processes in radiation carcinogenesis and extrapolated to human risk and clinical outcome projections? Cancer - 3: How can experimental models of carcinogenesis be applied to reduce the uncertainties in radiation quality effects from SPE’s and GCR, including effects on tumor spectrum, burden, latency and progression (e.g., tumor aggression and metastatic potential)? Cancer - 4: How can models of cancer risk be applied to reduce the uncertainties in doserate dependence of risks from SPE's and GCR?"
+},
+{
+"id": "hrp_carcinogenesis_2016:x153",
+"text": "Cancer - 5: How can models of cancer risk be applied to reduce the uncertainties in individual radiation sensitivity including genetic and epigenetic factors from Cancer - 6: How can models of cancer risk be applied to reduce the uncertainties in the age and sex dependence of cancer risks from SPE's and GCR? Cancer - 7: How can systems biology approaches be used to integrate research on the molecular, cellular, and tissue mechanisms of radiation damage to improve the prediction of the risk of cancer and to evaluate the effectiveness of countermeasures? How can epidemiology data and scaling factors support this approach?"
+},
+{
+"id": "hrp_carcinogenesis_2016:x154",
+"text": "Cancer - 8: What are the most effective biomedical or dietary countermeasures to mitigate cancer risks from exposure to SPE and GCR? What side effects should be tolerated versus mission risks? Cancer - 9: Are there significant effects from other spaceflight factors (microgravity, stress, altered circadian rhythms, changes in immune responses, depressed nutrition, bone loss, etc.) that modify the carcinogenic risk from space radiation? Cancer -10: Are space validation experiments needed for verifying knowledge of carcinogenic or other risks prior to long-term deep space missions, and if so what experiments should be undertaken?"
+},
+{
+"id": "hrp_carcinogenesis_2016:x155",
+"text": "Cancer -11: What are the most effective shielding approaches to mitigate cancer risks? Cancer -12: What quantitative models, numerical methods, and experimental data are needed to accurately describe the primary space radiation environment and transport through spacecraft materials and tissue to evaluate dose composition in critical organs for mission relevant radiation environments (ISS, Free-space, Lunar, or Cancer - 13: What are the most effective approaches to integrate radiation shielding analysis codes with collaborative engineering design environments used by spacecraft and planetary habitat design efforts?"
+},
+{
+"id": "hrp_carcinogenesis_2016:x156",
+"text": "Cancer - 14: What biodosimetry methods are required for exploration missions and how can biomarker approaches be used for outcome prediction and surveillance? Cancer-1 5: Given that the majority of astronauts are never smokers, are there research approaches that can elucidate the potential confounding effects of tobacco use inherent in population-based epidemiology data on space radiation cancer risk estimates? The SRPE overlaps with several of the gaps within other HRP Elements as outlined in the HRP Integrated Research Plan (IRP). SRPE works with the other HRP Elements to integrate gaps as necessary in accordance with the IRP."
+},
+{
+"id": "hrp_carcinogenesis_2016:x157",
+"text": "The evidence for cancer risks from humans exposed to low LET radiation is extensive for doses above 100 mSv. There are important uncertainties for low LET radiation at lower doses (<100 mSv), for low dose -rates, and in transferring risks between populations with differen t genetic, dietary, etc, attributes. Human epidemiology can be applied to space exposures; however, there are additional uncertainties related to the quality of radiation in space that is known to produce both qualitative and quantitative differences compa red to low LET radiation in experimental models. The doses to be expected on space missions, and the nuclear type and energies are well understood. NASA has existing models that quite accurately determine radiation physics parameters in space. Reducing the uncertainties in risk assessment is required before a mission to"
+},
+{
+"id": "hrp_carcinogenesis_2016:x158",
+"text": "Mars can be undertaken and has led to a number of investigations guided by molecular and genetic research on carcinogenesis and degenerative diseases. The large uncertainties in risk projec tion models will only be reduced by improving basic understanding of the underlying biological processes and their disruption by space radiation. There are unique aspects involved in this approach due to the specific challenges to biological systems presen ted by space radiation, especially HZE ions . It is unlikely that the radiation risk problem for space exploration will be solved by a simple countermeasure, such as shielding or radioprotective drugs. The risk will be understood and controlled only with more basic research in the field of cancer induction by charged particles (Cucinotta and Durante 2006)."
+},
+{
+"id": "hrp_carcinogenesis_2016:x159",
+"text": "Azzam EI, de Toledo SM, Gooding T, Little JB (1998) Intercellular communication is involved in the bystander regulation of gene expression in human cells exposed to very low fluences of alpha particles. Radiat Res 150(5):497-504 Azzam EI, De Toledo SM, Spitz DR, Little JB (2002) Oxidative metabolism modulates signal transduction and micronucleus formation in bystander cells from alpha -particle-irradiated normal human fibroblast cultures. Cancer Res 62(19):5436-5442 Azzam EI, Jay-Gerin J-P, Pain D (2012) Ionizing radiation-induced metabolic oxidative stress and prolonged cell injury. Cancer Lett 327(1–2):48–60"
+},
+{
+"id": "hrp_carcinogenesis_2016:x160",
+"text": "Bernstein JL, Thomas DC, Shore RE, Robson M, Boice JD Jr, Stovall M, Andersson M, Bernstein L, Malone KE, Reiner AS, Lynch CF, Capanu M, Smith SA,Tellhed L, Teraoka SN, Begg CB, Olsen JH , Mellemkjaer L , Liang X , Diep AT , Borg A , Concannon P , Haile RW , WECARE Study Collaborative Group (2013) Contralateral breast cancer after radiotherapy among BRCA1 and BRCA2 mutation carriers: A WECARE Study Report . Eur J Cancer Bhattacharjee D, Ito A (2001) Deceleration of carcinogenic potential by adaptation with low dose gamma irradiation. In Vivo 15(1):87-92"
+},
+{
+"id": "hrp_carcinogenesis_2016:x161",
+"text": "Buonanno M, de Toledo SM, Pain D, Azzam EI. (2011) Long-term consequences of radiation-induced bystander effects depend on radiation quality and dose and correlate with oxidative stress. Radiat Res 175:405–415. Buonanno M, De Toledo SM, Howell RW, Azzam EI (2015) Low -dose energetic protons induce adaptive and bystander effects that protect human cells against DNA damage caused by a subsequent exposure to energetic iron ions. J Radiat Res 56(3):502–508 Toohey RE, Boice JD Jr, Beck HL, Dauer LT, Eckerman KF, Hagemeyer D, Leggett RW, Mumma MT, Napier B, Pryor KH, Rosenstein M, Schauer DA, Sherbini S, Stram"
+},
+{
+"id": "hrp_carcinogenesis_2016:x162",
+"text": "George K, Hada M, Chappell L, Cucinotta FA (2013 b) Biological effectiveness of accelerated particles for the induction of chromosome damage: track structure effects. Radiat Res George, K, Rhone, J, Beitman, A, Cucinotta, FA (2013 a) Cytogenetic damage in the blood lymphocytes of astronauts: effects of repeat long-duration space missions. Mutat Res S13835718 George K, Hada M, Cucinotta FA (2015) Biological Effectiveness of Accelerat ed Protons for Goodhead DT, Munson RJ, Thacker J, Cox R (1980) Mutation and inactivation of cultured mammalian cells exposed to beams of accelerated heavy ions. IV. Biophysical interpretation."
+},
+{
+"id": "hrp_carcinogenesis_2016:x163",
+"text": "Hada M, Cucinotta FA, Gonda SR, Wu H (2007) mBAND analysis of chromosomal aberrations in human epithelial cells exposed to low- and high-LET radiation. Radiat Res 168(1):98-105 Hada M, Wu H, Cucinotta FA. (2011) mBAND analysis for high- and low-LET radiation-induced chromosome aberrations: a review. Mutat Res 711(1-2):187-192 Hagmar L , Bonassi S , Strömberg U , Brøgger A , Knudsen LE, Norppa H , Reuterwall C (1998) Chromosomal aberrations in lymphocytes predict human cancer: a report from the European Study Group on Cytogenetic Biomarkers and Health (ESCH). Cancer Res 58(18):4117-4121"
+},
+{
+"id": "hrp_carcinogenesis_2016:x164",
+"text": "In vivo space radiation-induced non-targeted responses: late effects on molecular signaling in mitochondria Curr Mol Pharmacol 4(2):106-114 Jangiam W, Tungjai M, Rithidech KN (2015) Induction of chronic oxidative stress, chronic inflammation and aberrant patterns of DNA methylation in the liver of titanium -exposed CBA/CaJ mice. Int J Radiat Biol 91(5):389-398 Johannes C, Horstmann M, Durante M et al (2004) Chromosome intrachanges and interchanges detected by multicolor banding in lymphocytes: searching for clastogen signatures in the human genome. Radiat Res 161: 540–548"
+},
+{
+"id": "hrp_carcinogenesis_2016:x165",
+"text": "Narayanan PK, Goodwin EH, Lehnert BE (1997) Alpha particles initiate biological production of superoxide anions and hydrogen peroxide in human cells. Cancer Res 57(18):3963-3971 Narayanan PK, LaRue KE, Goodwin EH, Lehnert BE (1999) Alpha particles induce the production of interleukin-8 by human cells. Radiat Res 152(1):57-63 NAS/NRC (1967). National Academy of Sciences/National Research Council. Radiobiological Factors in Manned Spaceflight, Report of Space Radiation Study Panel of the Life Sciences Committee. National Academy Press, Washington DC"
+},
+{
+"id": "hrp_carcinogenesis_2016:x166",
+"text": "Effectiveness of Radiations of Different Quality NCRP Report 104, Bethesda, MD NCRP (1997) National Council on Radiation Protection and Measurements. Uncertainties in Fatal Cancer Risk Estimates Used in Radiation Protection. NCRP Report 126, Bethesda, MD. NCRP (2000) National Council on Radiation Protection and Measurements. Recommendations of Dose Limits for Low Earth Orbit. NCRP Report 132, Bethesda, MD NCRP (2005) National Council on Radiation Protection and Measurements. Extrapolation of Radiation-Induced Cancer Risks from Nonhuman Experimental Systems to Humans. Report"
+},
+{
+"id": "hrp_carcinogenesis_2016:x167",
+"text": "Rivina, L, Sc hiestl R (2013) Mouse models for efficacy testing of agents against radiation carcinogenesis-a literature review. Int J Environ Res Public Health 10(1):107-143 Roig AI, Hight SK, Shay JW (2009) Two- and three-dimensional models for risk assessment of radiation-enhanced colorectal tumorigenesis. Radiat Res 171(1):33-40 Rydberg B, Heilbronn L, Holley WR, Löbrich M, Zeitlin C, Chatterjee A, Cooper PK (2002) Spatial distribution and yield of DNA double-strand breaks induced by 3-7 MeV helium ions in human fibroblasts. Radiat Res 158(1):32-42"
+},
+{
+"id": "hrp_carcinogenesis_2016:x168",
+"text": "Cause of death and neoplasia in mice continuously exposed to very low dose rates of gamma rays. Radiat Res 167: 417-437 Thompson D, Duedal S, Kirner J, McGuffog L, Last J, Reiman A, Byrd P, Taylor M, Easton DF (2005) Cancer risks and mortality in heterozygous ATM mutations carriers. J Natl Cancer Threadgill DW, Miller DR, Churchill GA, de Villena FP (2011) The collaborative cross: a recombinant inbred mouse population for the systems genetic era. ILAR J 52(1):24-31 Tilton SC, Matzke MM, Sowa MB, Stenoien DL, Weber TJ, Morgan WF, Waters KM (2015) Data integration reveals key homeostatic mechanisms following low dose radiation exposure ."
+},
+{
+"id": "hrp_carcinogenesis_2016:x169",
+"text": "Wang J, Pluth JM, Cooper PK, Cowan MJ, Che n DJ, Yannone SM (2005) Artemis deficiency confers a DNA double -strand break repair defect and Artemis phosphorylation status is altered by DNA damage and cell cycle progression. DNA Repair 4(5):556-570 Wang H, Wang Y (2014) Heavier Ions with a Different Linear Energy Transfer Spectrum Kill More Cells Due to Similar Interference with the Ku-Dependent DNA Repair Pathway. Radiat Wang X, Farris Iii AB, Wang P, Zhang X, Wang H, Wang Y (2015) Relative effectiveness at 1 gy after acute and fractionated exposures of heavy ions with diff erent linear energytransfer for lung tumorigenesis Radiat Res 183(2):233-239"
+},
+{
+"id": "hrp_carcinogenesis_2016:x170",
+"text": "Werner E, Wang H, Deutsch PW (2014) Opposite Roles for p38MAPK -Driven Responses and Reactive Oxygen Species in the Persistence and Resolution of Radiation -Induced Genomic Werneth CM, Maung KM, Blattnig SR, Clowdsley MS, Townsend LW (2013) Correlated Uncertainties in Radiation Shielding Effectiveness. NASA TP-2013-217965 Whitnall M (2012) Mitigating Radiation Adverse Effects: State of the Art and Challenges. In: Proceedings of NATO RTO HFM-223 Symposium Biological Effects of Ionizing Radiation Exposure and Countermeasures: Current Status and Future Perspectives, Slovenia"
+},
+{
+"id": "hrp_carcinogenesis_2016:x171",
+"text": "Zhou H, Ivanov VN, Gillespie J et al (2005) Mechanism of radiation -induced bystander effect: Role of the cyclooxygenase-2 signaling pathway. Proc Natl Acad Sci USA 102(41):14641 - Zhou G, Bennett PV, Cutter NC, Sutherland BM (2006) Proton-HZE particle sequential dual beam exposures increase primary human cell anchorage -independent growth frequencies. Radiat Steve Blattnig, PhD, is a scientist at NASA Langley Research Center, Hampton, VA. He is the Principal Investigator for the Space Radiation Program Element Risk Assessment Project."
+},
+{
+"id": "hrp_carcinogenesis_2016:x172",
+"text": "Lisa Carnell, PhD, is a scientist at NASA Langley Research Center, Hampton, VA and is the Space Radiation Program Element Biological Countermeasures Lead Scientist across all risks. Lori Chappell is a scientist with Wyle Science, Technology and Engineering Group based in Kerry George is a senior scientist with Wyle Science, Technology and Engineering Group based in Houston, TX. Janice Huff, PhD, is a senior scientist with Universities Space Research Association, Houston, TX, and is the Human Research Program Deputy Element Scientist for the NASA Space"
+},
+{
+"id": "hrp_carcinogenesis_2016:x173",
+"text": "Radiation Program Element Deputy Element and Discipline Lead Scientist for the Risk of Sarah Lumpkins, PhD, is a senior scientist with Wyle Science, Technology and Engineering Lisa Simonsen, PhD, is a scientist at NASA Langley Research Center, Hampton, VA, and is the Human Research Program Element Scientist for the NASA Space Radiation Program Element. Tony Slaba, PhD, is a scientist at NASA Langley Research Center, Hampton, VA. Charles Werneth, PhD, is a scientist at NASA Langley Research Center, Hampton, VA. BEIR Biological Effects of Ionizing Radiation"
+},
+{
+"id": "hrp_carcinogenesis_2016:x174",
+"text": "DDREF Dose- and Dose-Rate Effectiveness Factor ICRP International Commission on Radiological Protection ISS International Space Station keV/μm kilo-electron Volt per micrometer LLE-REID Loss of Life-Expectancy amongst Exposure Induced-Death MeV Megaelectron Volt mGy milliGray mSv milliSievert NCRP National Council on Radiation Protection and Measurements QMSFRG Quantum Multiple Scattering FRaGmentation SEER Surveillance, Epidemiology and End Results Program siRNA silencing RNA TEPC Tissue Equivalent Proportional Counter UNSCEAR United National Scientific Committee on the Effects of Atomic Radiation"
+}
+]
+}

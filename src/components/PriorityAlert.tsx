@@ -1,28 +1,60 @@
-import { useRef, useState } from "react";
-import { Check, PaperPlaneTilt } from "@phosphor-icons/react";
+import { useState } from "react";
+import { Check, PaperPlaneTilt, Warning, WarningOctagon } from "@phosphor-icons/react";
 import type { LinkedSeries, PriorityRisk, Task } from "../ui/viewTypes.ts";
 import { easedToday } from "../ui/overviewData.ts";
+import { joinAnd } from "../ui/text.ts";
 import { LinkedSignalsChart } from "./LinkedSignalsChart";
-import { PageField } from "./PageField";
-import { LiquidGlassButton } from "./ui/apple-tahoe-liquid-glass-button";
 import s from "./PriorityAlert.module.css";
 
-type Props = { risk: PriorityRisk | null; series: LinkedSeries[]; today: number; delay: string | null; nextTask?: Task; flagged: string[]; done: string[]; onDone: (ids: string[]) => void };
+type Props = { risk: PriorityRisk | null; series: LinkedSeries[]; today: number; delay: string | null; nextTask?: Task; flagged: string[]; done: string[]; onDone: (ids: string[]) => void; sparse?: { measured: string[]; logged: string[]; outside: string[]; missing: number } };
 
-/** The one loud thing on the Overview: what is linked, what it shows, what to do. */
-export function PriorityAlert({ risk, series, today, delay, nextTask, flagged, done, onDone }: Props) {
+/** The one loud thing on the Overview: what is linked, what it shows, what to do.
+ *  A solid white card; at Watch or Act a solid state strip runs across its top (the alarm-panel pattern). */
+export function PriorityAlert({ risk, series, today, delay, nextTask, flagged, done, onDone, sparse }: Props) {
   const [why, setWhy] = useState(false);
-  const hero = useRef<HTMLElement>(null);
+  // Before day 21 there is no personal normal to compare with yet (it is learned from days 7 to 20): say so
+  if (!risk && today < 21) {
+    return (
+      <section className={s.hero} aria-labelledby="risk-title">
+        <p className={s.status}>Learning</p>
+        <h1 id="risk-title" className={s.title}>HALO is still learning your normal</h1>
+        <p className={s.why}>It learns each person's normal from days 7 to 20, then compares every reading with it. Until day 21 nothing is judged, so keep logging.</p>
+        {nextTask && <p className={s.next}>Next on your list: <b>{nextTask.label}</b>{nextTask.when ? `, ${nextTask.when.toLowerCase()}` : ""}</p>}
+      </section>
+    );
+  }
+  // Most signals unmeasured (the "You" profile): say what HALO can and cannot judge instead of "all normal"
+  if (!risk && sparse) {
+    return (
+      <section className={s.hero} aria-labelledby="risk-title">
+        <p className={s.status}>{sparse.outside.length ? "Outside your normal" : "Partly measured"}</p>
+        <h1 id="risk-title" className={s.title}>
+          {sparse.outside.length
+            ? `${(() => { const t = joinAnd(sparse.outside); return t[0].toUpperCase() + t.slice(1); })()} ${sparse.outside.length === 1 ? "is" : "are"} outside your normal`
+            : sparse.measured.length ? "Nothing stands out in what HALO measures" : sparse.logged.length ? "HALO is learning your normal" : "HALO has no readings for you yet"}
+        </h1>
+        <p className={s.why}>
+          {sparse.outside.length
+            ? `HALO compares you with your own recent weeks. It only names a risk when several linked signals change together, and ${sparse.missing} of the signals it watches are not measured for you, so it cannot link these. If you feel unwell, tell your crew medical officer.`
+            : sparse.measured.length
+            ? `HALO has your ${joinAnd(sparse.measured)}. ${sparse.missing} other signals, such as fluid, urine colour, sodium, bone and radiation, are not measured, so HALO cannot judge them.`
+            : sparse.logged.length
+              ? `It has your ${joinAnd(sparse.logged)}, but needs about three weeks of each to learn what is normal for you. A longer Apple Health export ("Export All Health Data") gives it that at once.`
+              : "Import your Apple Health export in Settings, connect a strap, or do today's check-in in Daily Log. HALO only judges what it has measured."}
+        </p>
+        {nextTask && <p className={s.next}>Next on your list: <b>{nextTask.label}</b>{nextTask.when ? `, ${nextTask.when.toLowerCase()}` : ""}</p>}
+      </section>
+    );
+  }
   if (!risk) {
     const one = flagged.length === 1;
     return (
-      <section ref={hero} className={s.hero} aria-labelledby="risk-title">
-        <PageField state="normal" edge={hero} />
+      <section className={s.hero} aria-labelledby="risk-title">
         <p className={s.status}>{flagged.length ? "No linked risks" : "All normal"}</p>
         <h1 id="risk-title" className={s.title}>Nothing needs you today</h1>
         <p className={s.why}>
           {flagged.length
-            ? `${flagged.join(" and ")} ${one ? "is" : "are"} outside your normal range, but nothing is linked to ${one ? "it" : "them"}. HALO keeps watching.`
+            ? `${joinAnd(flagged.map((n, i) => (i ? n.toLowerCase() : n)))} ${one ? "is" : "are"} outside your normal range, but nothing is linked to ${one ? "it" : "them"}. HALO keeps watching.`
             : "Every reading is inside your own normal range, and no linked risks are rising."}
         </p>
         {nextTask && <p className={s.next}>Next on your list: <b>{nextTask.label}</b>{nextTask.when ? `, ${nextTask.when.toLowerCase()}` : ""}</p>}
@@ -30,12 +62,14 @@ export function PriorityAlert({ risk, series, today, delay, nextTask, flagged, d
     );
   }
   // Act eases to Watch once today's drinking is done; the readings themselves update tomorrow
-  const level = risk.level === "act" && easedToday(risk, done) ? "watch" : risk.level;
+  const level = risk.level;
   return (
-    <section ref={hero} className={s.hero} aria-labelledby="risk-title">
-      <PageField state={level} edge={hero} />
-      <p className={s.status}><b className={level === "act" ? s.actWord : ""}>{level === "act" ? "Act" : "Watch"}</b>&nbsp;&nbsp;since Day {risk.sinceDay}</p>
-      <h1 id="risk-title" className={s.title}>{level === "act" ? <mark className={s.alarm}>{risk.actTitle ?? risk.title}</mark> : risk.title}</h1>
+    <section className={s.hero} aria-labelledby="risk-title">
+      <div className={`${s.strip} ${level === "act" ? s.stripAct : s.stripWatch}`}>
+        {level === "act" ? <WarningOctagon size={20} weight="fill" aria-hidden="true" /> : <Warning size={20} weight="fill" aria-hidden="true" />}
+        <b>{level === "act" ? "Act now" : "Watch"}</b><span>since Day {risk.sinceDay}</span>
+      </div>
+      <h1 id="risk-title" className={s.title}>{level === "act" ? risk.actTitle ?? risk.title : risk.title}</h1>
       <p className={s.why}>{risk.short}</p>
       <div className={s.chart}>
         <LinkedSignalsChart series={series} eventDay={risk.eventDay} eventLabel={risk.eventLabel} today={today} />
@@ -63,16 +97,14 @@ export function PriorityAlert({ risk, series, today, delay, nextTask, flagged, d
           const next = risk.plan.find((p) => !done.includes(p.id));
           return next
             ? <button className={s.cta} onClick={() => onDone([...done, next.id])}><Check size={18} weight="bold" /><span key={next.id} className={s.ctaLabel}>{next.cta}</span></button>
-            : <span className={s.allDone}><Check size={18} weight="bold" />Today's plan is done. HALO checks again tomorrow.</span>;
+            : <span className={s.allDone}><Check size={18} weight="bold" />Plan done. The water is in today's log and HALO has rechecked your readings.</span>;
         })()}
-        <LiquidGlassButton asChild interactive material="clear">
-          <button type="button" className={s.glassBtn} aria-expanded={why} aria-controls="why-more" onClick={() => setWhy(!why)}>Why these are linked</button>
-        </LiquidGlassButton>
+          <button type="button" className={s.secondary} aria-expanded={why} aria-controls="why-more" onClick={() => setWhy(!why)}>Why these are linked</button>
       </div>
       {why && (
         <div id="why-more" className={s.whyMore}>
           <p>{risk.why}</p>
-          {delay && <p className={s.queued}><PaperPlaneTilt size={16} />HALO queued a note for your flight surgeon. It reaches Houston in <span className="mono">{delay}</span></p>}
+          {delay && <p className={s.queued}><PaperPlaneTilt size={16} />Nothing goes to Houston on its own. A message takes <span className="mono">{delay}</span> one way.</p>}
         </div>
       )}
     </section>

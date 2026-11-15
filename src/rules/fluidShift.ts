@@ -6,8 +6,11 @@ import type { CouplingRule } from "./types.ts";
 export const fluidShift: CouplingRule = {
   id: "fluid_shift",
   name: "Fluid shift syndrome",
-  signals: { bp_sys: 0.6, bp_dia: 0.6, heart_rate: 0.5 },
+  // Logged symptoms and a low vision self-report count like drifting signals (DEMO weights, src/engine/risks.ts)
+  signals: { bp_sys: 0.6, bp_dia: 0.6, heart_rate: 0.5, symptom_headache: 0.6, symptom_puffy_face: 0.6, symptom_blurred_vision: 0.8, vision_selfreport: 0.8 },
   needs: ["headache log", "puffy face check", "vision check score"],
+  inputs: ["symptoms", "vision"],
+  inputNeeds: { symptoms: ["headache log", "puffy face check"], vision: ["vision check score"] },
   minLinked: 2,
   why: "One headward fluid shift drives both SANS and neck-vein stasis",
   source: "NASA NTRS SANS brief; Marshall-Goebel et al. 2019",

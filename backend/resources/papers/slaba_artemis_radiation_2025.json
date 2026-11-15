@@ -1,0 +1,195 @@
+{
+"id": "slaba_artemis_radiation_2025",
+"title": "Validated space radiation exposure predictions from earth to mars during Artemis-I",
+"authors": "Slaba TC, et al.",
+"year": 2025,
+"licence": "CC BY 4.0",
+"source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11814067/",
+"topics": [
+"radiation"
+],
+"kind": "full_text_excerpts",
+"note": "Verbatim text extracted from the source for retrieval; page furniture and the reference list removed. Not reviewed by HALO.",
+"chunks": [
+{
+"id": "slaba_artemis_radiation_2025:x1",
+"text": "Accurate characterization of space radiation exposure is critical to assess and communicate multiple health risks for crewmembers participating in future exploration missions. A combination of models and on-board instruments are utilized to meet this requirement. In this work, computational models are evaluated against spaceflight measurements taken within the International Space Station, the Orion spacecraft, the BioSentinel CubeSat, and on the Martian surface. All calculations and measurements cover the exact same time period defined by the Artemis-I mission, and all model calculations were performed blind—without prior knowledge of the measurements. The models are shown to accurately characterize the absorbed dose-rate in highly complex and diverse shielding configurations in locations from Earth to Mars."
+},
+{
+"id": "slaba_artemis_radiation_2025:x2",
+"text": "Subject terms: Techniques and instrumentation, Biophysics Artemis-I signaled the beginning of a new era in human spaceflight. The short mission, which launched on November 16, 2022 and ended on December 11, 2022, set in motion a broader vision of establishing permanent human presence on the moon under the Artemis program (https://www.nasa.gov/specials/artemis) and ultimately reaching Mars (https://www.nasa.gov/moontomarsarchitecture). Exposure to space radiation remains one of the most significant challenges limiting human exploration activities, as recognized by NASA1, international partners2, the National Academies of Science, Engineering, and Medicine3, the International Commission on Radiation Protection4, and the National Council on Radiation Protection5."
+},
+{
+"id": "slaba_artemis_radiation_2025:x3",
+"text": "Projected exposure levels for planned Artemis and Mars missions will lead to increased risks for numerous adverse health effects, including carcinogenesis, cardiovascular disease, and central nervous system decrements1–5. To quantify these risks, the space radiation environment encountered by humans within habitable volumes in space must be accurately characterized. For Artemis and Mars missions, the primary focus will be on the radiation received beyond low Earth orbit (LEO) in the form of solar particle events (solar storms) and galactic cosmic rays (GCR). Solar storms give rise to intense bursts of energetic particles from the Sun that can last several hours or days. From a human risk perspective, the primary interest lies in the medium energy protons (&lt;300 MeV) that can be accelerated in such events."
+},
+{
+"id": "slaba_artemis_radiation_2025:x4",
+"text": "If humans encounter a storm during extravehicular activities or surface operations without adequate shielding, whole body exposures can become elevated enough to initiate acute radiation syndrome responses and possibly death6. Fortunately, solar storm exposures behind shielding provided by human rated space vehicles are sufficiently mitigated through design optimization and operational countermeasures, such as storm shelter construction, to avoid these imminent health risks6. GCR, on the other hand, encompass a broad spectrum of highly penetrating particles covering elements up to Ni and beyond with energies up to 1013 MeV. The GCR environment represents a continuous low dose-rate exposure, leading to appreciable total doses and multiple highly uncertain health consequences1–5."
+},
+{
+"id": "slaba_artemis_radiation_2025:x5",
+"text": "Shielding strategies are largely ineffective at appreciably reducing GCR exposures or risk, and validated model calculations show that too much shielding or poorly chosen shield materials can increase exposures due to nuclear interactions and associated secondary radiations such as neutrons and pions7,8. Accurately characterizing the full spectrum of particles and energies comprising the GCR induced field found within radiosensitive tissue sites of humans behind shielding is required to assess health risks for Artemis missions and beyond."
+},
+{
+"id": "slaba_artemis_radiation_2025:x6",
+"text": "The Artemis-I mission marked a unique opportunity to evaluate the status of GCR modeling and measurement capabilities required to achieve broader exploration goals. During the mission (November 16, 2022–December 11, 2022), measurements of absorbed dose-rate in silicon were simultaneously being collected behind diverse and complex shield configurations at multiple destinations of interest to humans. These included measurements within the International Space Station (ISS) in LEO, the uncrewed Orion capsule in deep space, the BioSentinel CubeSat in deep space, and on the surface of Mars."
+},
+{
+"id": "slaba_artemis_radiation_2025:x7",
+"text": "The exposure variation within a spacecraft at a given destination is also of interest, as crew will move continuously throughout the habitable volume and dynamically alter their accumulated dose. To address this point, multiple radiation detectors have been deployed within the interior of the ISS, providing a means to compare instrument readings and evaluate exposure differences caused by shielding variations at locations throughout the station9,10. During Artemis-I, detectors were operating on ISS in distinct locations within the US Lab and Cupola. Three detectors were collecting data on Orion at locations referred to as HPU, HSU1, HSU2. Comparison of these intravehicular readings demonstrates the sensitivity of measurement instruments to local shielding variation and provides a more rigorous test of computational models."
+},
+{
+"id": "slaba_artemis_radiation_2025:x8",
+"text": "In this work, state-of-the-art space radiation environment, nuclear physics, and radiation transport models in use by NASA are combined and used to calculate GCR dose-rates for each of the aforementioned cases. Model calculations are compared to spaceflight measurements obtained with active charged particle detectors. Two aspects of this work are unique. First, never before have combined models been compared to spaceflight data associated with such diverse shielding configurations and in destinations covering LEO, deep space, and the surface of Mars over the exact same time period. Such a comparison provides an opportunity to validate models in multiple locations and shielding conditions under identical solar conditions. Second, all model calculations were performed blind—without having prior knowledge of the measured data values. The importance of this work is also twofold."
+},
+{
+"id": "slaba_artemis_radiation_2025:x9",
+"text": "First, the comparisons are comprehensive in nature, covering shielding masses from CubeSats (14 kg, BioSentinel) to space stations (~400,000 kg, ISS) and destinations from LEO to Mars. Second, and more importantly, this work demonstrates both measurement and modeling capabilities required for human risk quantification as we explore deep space, the lunar surface, and Mars. The space radiation environment is fundamentally different than any terrestrial source, making characterization of both the radiation field itself and subsequent health risks difficult and uncertain11. The ambient GCR environment beyond LEO includes nuclei from hydrogen to nickel that have been stripped of their electrons. Ions heavier than nickel are also present but in much lower magnitude and therefore make negligible contributions to absorbed dose and health risks for humans."
+},
+{
+"id": "slaba_artemis_radiation_2025:x10",
+"text": "The energy spectrum for each particle covers several orders of magnitude, but the peak fluence occurs near ~300 MeV/n. The overall GCR intensity is modulated by the heliospheric magnetic field (HMF) on an ~11 year cycle. During solar minimum, the HMF is at its weakest state, and GCR intensities are maximal. During solar maximum, the HMF is most intense, and GCR intensities are reduced, but the likelihood of episodic solar storms increases. In Fig. 1, selected ions from the calculated ambient GCR environment at 1 Astronomical Unit (AU) for the Artemis-I mission time period are shown. Hydrogen and helium account for 89% and 10% of the particle flux, respectively. The remaining 1% consists of the ions with charge Z &gt; 2. Although the flux intensities peak near ~300 MeV/n, as discussed, particle energies extend higher by several orders of magnitude."
+},
+{
+"id": "slaba_artemis_radiation_2025:x11",
+"text": "These more energetic ions are highly penetrating and capable of propagating through spacecraft shielding. The ISS trajectory follows a circular orbit with an average altitude of 400–450 km, inclined 51.6o from the equatorial plane. Radiation exposure on ISS is driven by geomagnetically modified GCR and repeated passes through the trapped proton belt within the South Atlantic Anomaly (SAA). The belts are populated with intense fluxes of medium energy protons able to penetrate the ISS mass shielding in certain locations and contribute roughly half of the total exposure10. Measurement and model validation of the belt exposures continues to be studied but is not the focus of this work. Emphasis is instead placed on the geomagnetically modified GCR exposure, providing contrast for GCR measurements and calculations at free space and Mars."
+},
+{
+"id": "slaba_artemis_radiation_2025:x12",
+"text": "The GCR environment in LEO experienced by the ISS is attenuated due to the magnetosphere and the terrestrial shadow cast by the Earth. Both attenuating factors can be seen in Fig. 1. Attenuation in the energy spectra below 1 GeV/n for hydrogen and 500 MeV/n for heavier ions is a consequence of geomagnetic deflection for low-to-medium energy charged particles. The amount of geomagnetic shielding depends on the location and altitude of the spacecraft. Maximal deflection occurs near the equator. Conversely, the LEO GCR environment approaches free space conditions toward polar latitudes. This location dependence will be used in the next section to establish a smooth relationship between LEO and free space dose-rates."
+},
+{
+"id": "slaba_artemis_radiation_2025:x13",
+"text": "The LEO GCR spectra shown in Fig. 1 are integrated over the ISS trajectory and therefore include geomagnetic attenuation levels from all latitudes between 0o and 51.6o. The terrestrial shadow (blockage) provided by the Earth can be seen at the highest energies in Fig. 1, where the LEO spectra are 68% that of free space. The spectra from Fig. 1 are used as input to radiation transport codes to allow exposures behind shielding to be calculated. Radiation transport and shielding geometry As the free space or LEO GCR environments encounter shielding, a multitude of atomic and nuclear interactions take place adding further complexity to the radiation environment. Atomic interactions reduce the velocity of charged particles, and nuclear interactions lead to fragmentation of incoming particles and target constituents."
+},
+{
+"id": "slaba_artemis_radiation_2025:x14",
+"text": "These fragmentation events yield secondary reaction products such as neutrons and pions capable of penetrating even farther through shielding. Radiation transport codes are combined with nuclear and atomic physics models to describe these interactions, and realistic descriptions of the spacecraft mass shielding surrounding a detector or human are required to facilitate accurate intravehicular exposure calculations. The NASA deterministic radiation transport code, referred to herein as HZETRN2020 (High charge, Z, and Energy TRaNsport)12–14, is utilized in this work and has demonstrated the ability to analyze highly detailed mass shielding geometry for space radiation environments. Separate calculations were performed in this work with native nuclear physics models developed for HZETRN2020 and with a coupled nucleon/pion cross section database generated with Geant415."
+},
+{
+"id": "slaba_artemis_radiation_2025:x15",
+"text": "Evaluating both sets of physics models in transport calculations provides additional context for comparisons to space measurements, as will be shown and discussed in the next subsection. The ISS and Orion geometries utilized in this study were developed in CAD software and contain over 11,000 and 23,000 parts, respectively. Figures 2 and 3 show the ISS and Orion geometries as interpreted by HZETRN2020 from the CAD information. The complexity, location, and shape of objects, regardless of size, is accurately retained for analysis in radiation transport calculations. For the BioSentinel CubeSat, a combinatorial geometry description (i.e. combinations of nested boxes and thin plates) was used, as demonstrated previously16."
+},
+{
+"id": "slaba_artemis_radiation_2025:x16",
+"text": "And in the case of the Mars surface, previously validated17–19 methods for representing the variable density carbon dioxide atmosphere and regolith surface were employed. Importantly, the vertical atmospheric column thickness of 21.4 g/cm2 measured by the Curiosity Rover Environmental Monitoring Station (REMS) sensor during the time period of the Artemis-I mission was retained in the geometry description. The distribution of thicknesses for locations in ISS, Orion, BioSentinel, and on Mars is shown in Fig. 4. Representative values from the distributions are provided in Table 1. The ISS detector locations are more heavily shielded than all other vehicles considered herein, as expected. Shielding distributions for the US Lab and Cupola locations are quite similar though. On Orion, it can be seen that shielding levels decrease when moving from the HPU to HSU1 and HSU2."
+},
+{
+"id": "slaba_artemis_radiation_2025:x17",
+"text": "The BioSentinel shielding is the least massive of all geometries considered. Atmospheric shielding on Mars includes a notable minimum areal density of 21.4 g/cm2 associated with the vertical column thickness (i.e. looking straight up from the surface), as can be seen in Fig. 4. A broad distribution of thicknesses is observed as the zenith angle approaches the horizon, with maximum values exceeding 1000 g/cm2. The information regarding areal density distributions for these mass shielding geometries will be helpful to interpret modeling and measurement results presented in the next subsection. Collectively, it can be seen that geometry handling capabilities developed for HZETRN2020 are highly flexible and allow analysis through a wide range of shielding geometry scenarios of interest to human spaceflight."
+},
+{
+"id": "slaba_artemis_radiation_2025:x18",
+"text": "Comparison of model calculations to measurements A visual comparison of model-calculated absorbed dose-rates to measurements is provided in Fig. 5. Tabular data and relative differences between model and measurements are given in Tables 2 and 3. In Table 2, the ISS measurement data and model calculations both show increasing dose rates with decreasing vertical cutoff rigidity. Model calculations are well correlated with the measurements (correlation coefficient &gt; 0.996) for both detector locations and both nuclear physics models, indicating that qualitative features of the LEO GCR environment as a function of vertical cutoff rigidity are being represented by the geomagnetic field model employed in this study."
+},
+{
+"id": "slaba_artemis_radiation_2025:x19",
+"text": "The magnitude of relative differences between model and measurement grows with increasing vertical cutoff rigidity, consistent with previous studies14,20,21. This systematic error originates from 3D scattering effects of low energy Compton electrons (&lt;10 MeV) that are not well described by the HZETRN2020 deterministic methods. These electrons originate mainly from the electromagnetic cascade initiated by ultra-high energy (&gt;5 GeV/n) nuclear collisions in which neutral pions are produced and rapidly decay to two photons (2γ). High energy nuclear interactions take place within shielding at all points along the ISS flightpath. However, the relative contribution of Compton electrons to total dose is enhanced at high cutoff rigidity, because the magnetosphere deflects a substantial fraction of the GCR that would otherwise contribute significantly to the dose-rate."
+},
+{
+"id": "slaba_artemis_radiation_2025:x20",
+"text": "It is important to recognize the systematic model error attributable to Compton electrons is only evident when the total absorbed dose-rate is smallest. Data in Table 2 show that relative model errors for ISS are reduced in magnitude when the nucleon/pion Geant4 cross section databases are used. This is primarily a consequence of the simplified model used within HZETRN2020 to describe the angle and energy spectra of neutral pion production and rapid 2γ decay. The effect is more pronounced at high cutoff since, again, the magnetosphere deflects lower energy GCR ions, thereby enhancing the relative contribution to dose of secondary radiation produced from ultra-high energy interactions."
+},
+{
+"id": "slaba_artemis_radiation_2025:x21",
+"text": "Relative model errors compared to measurements are larger in magnitude for the US Lab as compared to the Cupola. Although two different instruments are being considered, prior calibration and cross-validation studies have shown that total absorbed dose-rates measured by the Radiation Environment Monitor (REM) and Radiation Assessment Detector (RAD) instruments under the same radiation field conditions (i.e. co-located in the vehicle) are expected to agree within 5%, on average22. As shown in Table 3, the average dose-rate measured by RAD in the US Lab is ~15% larger than the REM measurement in the Cupola. Yet, the model results are quite similar between the two locations, as would be expected given the similarity in shielding distributions (see Fig. 4 and Table 1)."
+},
+{
+"id": "slaba_artemis_radiation_2025:x22",
+"text": "This indicates that the discrepancy between the Cupola and US Lab locations is mainly attributable to dynamic and uncertain shielding configurations within the ISS that are not accounted for in the detailed CAD geometry models. Indeed, crewmembers move throughout the habitable volume and may move components or the detectors. These activities alter the mass shielding distribution surrounding the detector and influence measured exposures non-negligibly. Unfortunately, such information is nearly impossible to incorporate into CAD geometry models on a dynamic basis."
+},
+{
+"id": "slaba_artemis_radiation_2025:x23",
+"text": "Model calculated dose-rates are in excellent agreement with measurements from the uncrewed Orion spacecraft and BioSentinel CubeSat. All model results were within 5% of the available free space measurements. In contrast to the situation on ISS where on-board mass and detectors may be moved inflight by crewmembers, the mass shielding geometry models and detector locations for Orion and BioSentinel were more precise and static throughout the Artemis-I mission timeframe. It is observed that both the measurements and model calculations are properly correlated with representative areal density values given in Table 1. For example, as the median thickness increases in moving from HSU2, to HSU1, to HPU, both the model calculations and measured dose-rates increase. Complexity and uncertainty associated with geomagnetic shielding is also avoided since the crafts were beyond the magnetosphere."
+},
+{
+"id": "slaba_artemis_radiation_2025:x24",
+"text": "The relative impact of low energy Compton electrons and neutral pion production and decay models is also significantly reduced in free space as compared to the high cutoff rigidity regions of the ISS trajectory. Correspondingly, the choice of nuclear model has negligible impact on the model results. Finally, model results are within 7%–12% of the dose-rate measured on the surface of Mars by RAD during the Artemis-I mission. The choice of nuclear model has a moderate impact on model results—primarily due to differing nucleon and pion production multiplicities and energy/angle spectral characteristics. Although backscattered, or albedo, neutrons are known to be present on the Martian surface17–19 and are important for human risk estimation, they contribute little to the measured absorbed dose-rate in silicon being reported by the RAD detector."
+},
+{
+"id": "slaba_artemis_radiation_2025:x25",
+"text": "Hence, differences in diffuse neutron production between the nuclear models are likely not contributing to this case. Additional factors influence the Martian surface radiation environment and may contribute to uncertainty in the calculations. The measured vertical atmospheric thickness of 21.4 g/cm2 was carried directly into the model evaluations, as seen in Fig. 4 and Table 1, and is not expected to be a significant source of uncertainty. The free space GCR environment used for model calculations is actually evaluated at 1 AU instead of 1.5 AU for Mars. However, data-driven heliospheric models suggest GCR intensities increase by at most a few percent in moving from 1 AU to 1.5 AU (Earth to Mars)23. Prior sensitivity tests19 have established that compositional details of the Martian atmosphere and regolith have little impact on surface dose-rates."
+},
+{
+"id": "slaba_artemis_radiation_2025:x26",
+"text": "The cylindrical geometry used to model the Martian atmosphere and surface is commonly used in such evaluations17–19, but nevertheless neglects topographical details (i.e. nearby boulders, hills, or valleys) and mass shielding that may influence measured and calculated surface dose-rates. Broad consideration of the results in Table 3 shows that model calculations are within ~10–25% of ISS measurements, 4% of free space measurements, and 10% of Mars surface measurements. This level of agreement should be considered excellent given the overall model complexity, which includes: the natural GCR environment; geomagnetic shielding (for ISS in LEO); highly detailed mass shielding geometry for ISS, Orion, and BioSentinel; Martian atmospheric shielding; nuclear physics, and radiation transport."
+},
+{
+"id": "slaba_artemis_radiation_2025:x27",
+"text": "Despite the apparently good agreement between model calculations and measurements, additional context and caution is needed for proper interpretation of the summary results. First, the exposure quantity of interest (absorbed dose-rate in silicon) and detectors considered herein are largely insensitive to neutrons. Model calculations also exhibited negligible direct contribution from neutrons. This is because all secondary charged particles produced in shielding by neutron interactions are explicitly transported in HZETRN2020. However, neutrons are particularly important from a human risk perspective24,25, given their high biological effectiveness and appreciable fluence behind thick shielding and on the lunar and Martian surfaces."
+},
+{
+"id": "slaba_artemis_radiation_2025:x28",
+"text": "Only limited spaceflight measurements of neutrons have been reported and have not covered the full energy range (1 MeV–1 GeV) of interest to human spaceflight risk25. Mass and power constraints severely limit the ability to measure neutrons &gt;100 MeV inflight, and additional technology development is needed to resolve this gap. Second, absorbed dose is an integrated quantity that can allow competing model errors to cancel, thereby obscuring potentially important uncertainties. This is particularly true in the case of space radiation, where the field contributing to absorbed dose comprises a complex mixture of particle types spanning many orders of magnitude in energy."
+},
+{
+"id": "slaba_artemis_radiation_2025:x29",
+"text": "Previous verification and validation efforts have demonstrated that while available models agree well with measurements (and each other) for absorbed dose, substantial disagreement can be found when underlying particle fluences are compared8,17,18. Such disagreements follow from gaps in ground-based experimental data for nuclear cross sections, particularly for production of pions, neutrons, and isotopes of hydrogen and helium26. Finally, it remains true that accurately characterizing the space radiation environment encountered by humans is essential to assess exposure and subsequent health risks. However, the relationship between space radiation exposure and multiple adverse health consequences is highly uncertain. In the case of space radiation induced cancer mortality, risk projection models suffer from uncertainties exceeding 250%11."
+},
+{
+"id": "slaba_artemis_radiation_2025:x30",
+"text": "Additional sources of uncertainty, such as translating animal experimental data to humans, have yet to be characterized. Risk projections for cardiovascular disease or central nervous system decrements are even more uncertain due to limited (or complete lack of) terrestrial epidemiological data needed to foundationally support such models. The collection of spaceflight radiation measurement devices and computational models appear highly capable to reliably calculate crew exposures for planned exploration missions. Continued research and development efforts are needed to address known gaps and uncertainties, particularly in the case of spaceflight neutron measurements and ground-based nuclear cross section measurements. However, the more substantial issue remains the vast uncertainties associated with relating crew exposure to subsequent health risks of interest."
+},
+{
+"id": "slaba_artemis_radiation_2025:x31",
+"text": "Clarifying dose-to-risk relationships is critical for providing accurate risk projections and communicating effectively to various stakeholders, include crewmembers, mission planners, and the public3. It is also needed to enable evaluation of various mitigation strategies, such as medical countermeasures, envisioned to play a key role in long duration exploration activities. State-of-the-art models used to characterize crew exposure The ambient GCR environment is described by the Badhwar-O’Neill model27 for the Artemis-I mission. The calculated spectra are used directly as the boundary condition for free space and Mars surface calculations. The LEO GCR environment is calculated by applying geomagnetic and terrestrial attenuation factors from the model of Badavi28 to the free space spectra."
+},
+{
+"id": "slaba_artemis_radiation_2025:x32",
+"text": "Radiation transport codes are combined with nuclear and atomic physics models to describe how the ambient environment is modified as it passes through shielding and tissue. The NASA deterministic radiation transport code, referred to herein as HZETRN202012–14, is based on perturbative solutions to the Boltzmann transport equation, resulting in highly efficient and accurate 3D numerical solutions. Verification studies have shown that HZETRN2020 in 3D mode can precisely reproduce Monte Carlo simulations provided the same nuclear interaction cross sections are used14."
+},
+{
+"id": "slaba_artemis_radiation_2025:x33",
+"text": "HZETRN2020 utilizes a mixture of nuclear models to cover all energies and particles of interest to space radiation protection. Fragmentation of ions with mass, A &gt; 4, is described by the RAADFRG model29; nucleon interactions are described by an intranuclear transport model12,30, and interactions involving pions, and isotopes of hydrogen and helium are treated within the DDFRG model31,32. Results were calculated using HZETRN2020 and this collection of nuclear physics models; additional calculations were performed with HZETRN2020 and coupled nucleon/pion cross section databases generated with Geant415, as described elsewhere14."
+},
+{
+"id": "slaba_artemis_radiation_2025:x34",
+"text": "The ISS and Orion geometries utilized in this study were developed in CAD software and contain over 11,000 and 23,000 parts, respectively. To couple such complex shielding geometries to HZETRN2020, ray-tracing methods are used to obtain material information surrounding a location of interest (i.e. detector location). Both vehicles were ray-traced at multiple detector locations with over 61,000 rays covering the unit sphere. From this ray-trace information, the shielding profile at any point within the volume can be accurately estimated33. Materials for each part were provided in the CAD models, although the overwhelming majority of parts were aluminum with unique densities. Sensitivity tests were completed to verify that redefining all parts to be made of aluminum had negligible impact on calculated exposures."
+},
+{
+"id": "slaba_artemis_radiation_2025:x35",
+"text": "Unique part densities were retained to ensure the overall geometric mass was preserved. A combinatorial geometry description was used for BioSentinel16. It has a total mass of 14 kg and is a much simpler and smaller geometry compared to ISS (~400,000 kg) and Orion (~26,000 kg). The main geometry and solar panels were represented with nested and/or connected boxes. Materials for each box were defined from available information, although most of the primary payload mass consisted of aluminum, polycarbonate, stainless steel, and water. Solar panels were composed mainly of silicon. Densities of each box were set so that the known masses of major components were preserved."
+},
+{
+"id": "slaba_artemis_radiation_2025:x36",
+"text": "Following prior verification and validation studies17–19, the geometry used to compute the Mars surface environment is defined as a series of stacked cylinders, with each cylinder having a radius of 829 km. The radius was chosen based on convergence tests aimed at retaining accuracy and minimizing computational cost. The bottom cylinder, representing the Martian surface, has a thickness of 4 m, and is composed of Martian regolith19. An additional 25 layers with equal areal densities (g/cm2) but varying volumetric density (g/cm3) and thickness (cm) are placed above the base regolith layer to represent the Martian atmosphere, which is composed of carbon dioxide and other trace elements19. The cumulative areal density of the 25 layers is set to 21.4 g/cm2—the value measured by the Curiosity REMS sensor during the time period of the Artemis-I mission."
+},
+{
+"id": "slaba_artemis_radiation_2025:x37",
+"text": "The density of each layer is modeled using the Mars Climate Database (MCD) 6.134,35 under calm dust conditions. The location of the Curiosity rover at the time of the Artemis-I flight was used as input, and the solar longitude was calibrated such that the total areal density returned by the MCD model matched the measured value of 21.4 g/cm2. State-of-the-art instruments used to monitor intravehicular exposure levels Accurate real-time measurements of the radiation field encountered by astronauts is critical for in-flight operations and post mission assessments. The real-time data may be used during solar storms to guide operational decisions and mitigation strategies6 and are also folded into acute biological response models36,37."
+},
+{
+"id": "slaba_artemis_radiation_2025:x38",
+"text": "During quiet-time (i.e. no active solar storm), the active dosimetry provides continuous monitoring of the GCR-induced radiation field at multiple intravehicular locations. Such data are combined with model assessments after the mission to ensure crew exposure and risk assessments are consistent with in-flight dosimetry38. Two types of silicon-based detectors have been used in this study to measure absorbed dose-rates—Timepix and RAD. The Timepix detectors39 are 500 μm thick and consist of 256 × 256 pixels, with each pixel having a sensitive area of 3025 μm2 (55 μm × 55 μm). The effective sensitive area for the detector is 1.9825 cm2. They have been successfully flown on ISS40 for some time and were utilized on the Exploration Flight Test 141,42 and BioSentinel missions16. They measured the absorbed dose for all particles depositing &gt;5 keV."
+},
+{
+"id": "slaba_artemis_radiation_2025:x39",
+"text": "Extensive ground-based testing has also been completed at accelerator facilities using various radiation sources and particle beams of interest to spaceflight43 and each Timepix is individually calibrated and tested over a wide variety of dose rates at various accelerator beams. The Timepix detector flying on ISS is referred to as the REM. The RAD instrument was first developed for the Mars Science Laboratory (MSL) as part of the Curiosity rover mission44–46. A modified version of MSL-RAD was developed for use on the ISS47, which provides greater power and mass allowances. Although the instruments are not identical, the feature used to measure the absorbed dose-rate in silicon on MSL-RAD and ISS-RAD are the same. RAD comprises three silicon detectors followed by CsI and plastic scintillators encapsulated by anti-coincidence shielding."
+},
+{
+"id": "slaba_artemis_radiation_2025:x40",
+"text": "For this paper, only data collected from the “B” silicon detector are used. The “B” silicon layer is a 300 μm thick planar detector with a surface area of 1.92 cm2. All particles that deposit energy above the detector threshold of ~30 keV contribute to the dose-rate measurement. It should be noted that for Mars surface measurements, Curiosity is powered by a radioisotope thermoelectric generator which makes a near-constant contribution to the dose rate in the “B” detector. This contribution has been estimated using data obtained in a test before launch, and a value corrected for the ~13% depletion of the 238Pu power source in the time since the test has been subtracted from the measured dose-rate48."
+},
+{
+"id": "slaba_artemis_radiation_2025:x41",
+"text": "Absorbed dose-rates measured inside the ISS within the Cupola, Orion, and BioSentinel were obtained with Timepix detectors. Measurements inside the ISS within the US Lab and on the surface of Mars were obtained from the “B” silicon detector of the RAD instruments. To isolate GCR contributions, the ISS measurement data were filtered14,20,21,47 to remove enhanced dose-rates caused by repeated orbital passes through the trapped proton belt within the SAA region (defined as locations where the magnetic field strength is &lt;22.5 μT and the McIlwain L-shell value is &lt;2). Both measurement data and modeling results for the ISS have been separated into vertical cutoff rigidity bins. Binning the ISS data in this way establishes the trend in dose-rates and model errors as the radiation environment in LEO approaches free space conditions14,20,21."
+},
+{
+"id": "slaba_artemis_radiation_2025:x42",
+"text": "The vertical cutoff rigidity is a model calculated value28 at any point along the ISS trajectory associated with the view direction pointing directly away from the Earth. Ions with rigidity below the vertical cutoff value are fully blocked by the magnetosphere. Vertical cutoff rigidity is loosely correlated with geographic latitude. The largest vertical cutoff rigidities are found at equatorial latitudes (i.e. strongest geomagnetic shielding), while smaller vertical cutoff rigidities are found approaching the poles (i.e. weakest geomagnetic shielding)."
+},
+{
+"id": "slaba_artemis_radiation_2025:x43",
+"text": "This work was funded by the Mars Campaign Office RadWorks activity under the Exploration Systems Development Mission Directorate at NASA (T.C.S., C.M.W., J.W.N.), by NASA contract 80LARC23DA003 (S.R.), and by NASA contract NNJ15HK11B (D.L., C.Z.). Conceptualization: T.C.S.; Data curation: S.G., D.L., C.Z.; Formal analysis: T.C.S., S.R.; Methodology: T.C.S., C.M.W., J.W.N; Software: T.C.S., C.M.W., J.W.N.; Validation: T.C.S., S.R., S.G., D.L., J.W.N., C.M.W., C.Z.; Visualization: T.C.S.; Writing—original draft: T.C.S. Writing—review and editing: T.C.S., S.R., S.G., D.L., J.W.N., C.M.W., C.Z."
+},
+{
+"id": "slaba_artemis_radiation_2025:x44",
+"text": "All software and models used to calculate exposure quantities can be evaluated through the On-Line Tool for the Assessment of Radiation in Space (OLTARIS), available at https://oltaris.nasa.gov. Source code for many of the models can be downloaded through the NASA software repository at https://software.nasa.gov. MSL-RAD data are publicly available in the NASA Planetary Data System archive at https://pds-ppi.igpp.ucla.edu/collection/MSL-M-RAD-2-EDR-V1.0. The Timepix and ISS-RAD data will be placed on the publicly available the NASA RadLab website (https://visualization.osdr.nasa.gov/radlab/gui/overview) as soon as authorization is received, and until then, is available from authors at reasonable request."
+},
+{
+"id": "slaba_artemis_radiation_2025:x45",
+"text": "The authors declare no competing interests. Publisher’s note Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations. All software and models used to calculate exposure quantities can be evaluated through the On-Line Tool for the Assessment of Radiation in Space (OLTARIS), available at https://oltaris.nasa.gov. Source code for many of the models can be downloaded through the NASA software repository at https://software.nasa.gov. MSL-RAD data are publicly available in the NASA Planetary Data System archive at https://pds-ppi.igpp.ucla.edu/collection/MSL-M-RAD-2-EDR-V1.0. The Timepix and ISS-RAD data will be placed on the publicly available the NASA RadLab website (https://visualization.osdr.nasa.gov/radlab/gui/overview) as soon as authorization is received, and until then, is available from authors at reasonable request."
+}
+]
+}

@@ -5,7 +5,7 @@
 
 /* The week as bars over the same "your normal" band the charts use */
 .bars { position: relative; display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px; align-items: end; height: 76px; margin: 18px 0 6px; }
-.band { position: absolute; left: -4px; right: -4px; border-radius: 6px; background: rgba(129, 216, 208, 0.28); }
+.band { position: absolute; left: -4px; right: -4px; border-radius: 6px; background: var(--band-card); }
 .bar { position: relative; border-radius: 5px 5px 3px 3px; background: #B9BFCA; transform-origin: bottom; animation: grow var(--enter) var(--ease-out) both; }
 .bar.last { background: var(--ink-2); }
 .bar.low { background: var(--watch-mark); }

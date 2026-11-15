@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?spacecraft=ISS&instrument_id=DosTel1&timestamp%3E=2022-04-01T23%3A00%3A00&timestamp%3C=2022-04-01T23%3A05%3A00&absorbed_dose_rate=&module=&format=json",
+  "instrument": "DosTel1",
+  "location": "ISS/Columbus",
+  "quantity": "absorbed_dose_rate",
+  "unit": "uGy/h",
+  "value": 5.26644315384615,
+  "observed_at": "2022-04-01T23:05:00Z",
+  "fetched_at": "2026-11-14T10:08:59.378050Z",
+  "provenance": "measured",
+  "quality": "valid",
+  "timestamp_basis": "upstream_naive_assumed_utc"
+}

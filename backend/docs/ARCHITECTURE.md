@@ -1,36 +1,31 @@
-# Backend responsibilities
+# Architecture and source boundaries
 
-## Browser
+React screens -> JSON/HTTP -> Fastify validation/routing -> shared TypeScript assessment
+-> SQLite demonstration records + versioned evidence + NASA snapshot.
 
-The React/TypeScript app owns check-ins, local per-crew history, body-map rendering,
-trends, timed cognition tests, baseline comparisons and coupling rules. PWA storage,
-offline guidance and the user-approved outbox also need browser-side implementation.
-Existing TypeScript scoring remains in `src/engine`; do not duplicate it in Python.
+The browser imports the same `assessment.ts`, baseline and rules for offline use.
+No Python reimplementation or custom trained medical model exists on this branch.
+Dataset values remain fictional, including radiation/day and arbitrary bone indices.
+Check-ins and tests override only their astronaut/day, and retain demo provenance.
 
-## Backend
+Data quality gates run before rule interpretation. A baseline needs seven past
+adaptation observations. For persistent rules, both raw contemporaneous linked inputs
+and consecutive rule-level changes are required. Unknown necessary inputs yield Unknown,
+not Nominal. `range:null` avoids presenting arbitrary score spread as a confidence interval.
 
-- `api/v1/endpoints`: HTTP endpoints that delegate work to services.
-- `schemas`: explicit request and response models, matching agreed frontend fields.
-- `adapters`: translate simulator records and preserve simulation labels.
-- `providers`: NASA ingestion, normalization, caching and protected model calls.
-- `services`: evidence search, data-quality review, explanation and report workflows.
-- `resources`: reviewed evidence, limitations and action-card content.
-- `core`: configuration, future authentication, logging and request controls.
+Triage and medication routing are deterministic and shared between browser and server.
+The hosted model is downstream of triage and generates a question-specific answer
+from retrieved source summaries and selected-crew data. Citation/schema checks and a
+limited output screen precede display; these do not establish clinical correctness.
+See [assistant architecture and setup](ASSISTANT.md). Report sending
+is never a side effect of asking the assistant. Draft approval and queue simulation are
+separate operations. SQLite idempotency prevents duplicate queue records on retries.
 
-All feature modules are reserved in this scaffold. Only service liveness is wired.
+External connections use a fixed NASA endpoint and fixed direct OpenAI endpoint or a server-configured, validated Azure OpenAI resource endpoint. Azure keys are not forwarded through redirects and no automatic cross-provider failover occurs. Client input
+cannot supply remote URLs. NASA requests are <=1 hour, timeout after15seconds, and bound
+response memory to1MB. Bad upstream responses preserve the earlier cache. All units and
+observation timestamps survive normalization; naive timestamps are labelled as assumed UTC.
 
-## Planned request flow
-
-Browser context -> schema validation -> provenance/freshness checks -> structured
-symptom routing -> evidence retrieval -> optional model explanation -> structured
-response with uncertainty and human-review guidance. Urgent human review must not
-depend on a successful model call. Symptom routing still needs domain review and is
-not a guarantee that every emergency will be detected.
-
-No custom ML training is planned. A future hosted language model is an explanation
-tool, not a validated clinical predictor. The hosted backend requires connectivity;
-on-device monitoring and bundled guidance must continue independently.
-
-Before storing health or mental-health records, agree on access controls, retention
-and ownership. No patient database or communications transport is chosen by this
-scaffold. A report draft is not approval to send it.
+Default API hosting is loopback. Non-loopback startup requires a bearer token. Responses
+are no-store; log retention is bounded to1000metadata rows and excludes bodies, tokens and
+free-text symptoms. No real health-data deployment is authorized or represented by this demo.

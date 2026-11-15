@@ -15,10 +15,10 @@
 //   unknown  no direct reading at all ("no direct reading")
 
 import { computeBaselines, computeDrift, type Band, type Drift } from "../engine/baseline.ts";
-import { evaluateRisks } from "../engine/risks.ts";
+import {assessCrew, type AssessedRisk} from "../engine/assessment.ts";
 import { SIGNAL_BY_KEY } from "../engine/signals.ts";
 import type { Level, MissionProfile, Reading } from "../engine/types.ts";
-import type { RiskResult } from "../rules/types.ts";
+type RiskResult=AssessedRisk;
 import { REGIONS, regionsForRisk, type RegionDef, type RegionId } from "./regions.ts";
 
 export { regionsForRisk };
@@ -78,7 +78,7 @@ export const STATUS_TEXT: Record<RegionStatus, string> = {
   stale: "Stale data",
 };
 
-const LEVEL_RANK: Record<Level, number> = { Nominal: 0, Watch: 1, Act: 2 };
+const LEVEL_RANK = { Nominal: 0, Unknown: 0, Watch: 1, Act: 2 };
 
 /** A field counts as measured only when it is a finite number (null / undefined / NaN = missing). */
 const finite = (r: Reading, key: string): number | null => {
@@ -135,7 +135,7 @@ function regionModel(def: RegionDef, upTo: Reading[], day: number, drift: Record
   ];
   const linked = risks
     .filter((r) => def.riskIds.includes(r.ruleId))
-    .sort((a, b) => LEVEL_RANK[b.level] - LEVEL_RANK[a.level] || b.score - a.score);
+    .sort((a, b) => LEVEL_RANK[b.level] - LEVEL_RANK[a.level] || (b.score??0) - (a.score??0));
 
   const direct = indicators.filter((i) => i.role === "signal");
   const scoredInd = direct.filter((i) => i.status === "inside" || i.status === "outside" || i.status === "far");
@@ -164,10 +164,10 @@ function regionModel(def: RegionDef, upTo: Reading[], day: number, drift: Record
 }
 
 /** Everything the body map shows for one astronaut (their own `history`) on one mission day. */
-export function buildBodyMapModel(history: Reading[], day: number, profile: MissionProfile = "mars_transit"): BodyMapModel {
+export function buildBodyMapModel(history: Reading[], day: number, profile: MissionProfile = "mars_transit", context:Record<string,unknown>={}): BodyMapModel {
   const upTo = history.filter((r) => r.day <= day).sort((a, b) => a.day - b.day);
-  const risks = evaluateRisks(history, day, profile);
-  const bands = computeBaselines(history);
+  const risks = assessCrew(history,day,profile,context).risks;
+  const bands = computeBaselines(upTo,day);
   const drift = computeDrift(history, bands, day);
   const regions = Object.fromEntries(
     REGIONS.map((def) => [def.id, regionModel(def, upTo, day, drift, bands, risks)]),

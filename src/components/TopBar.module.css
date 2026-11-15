@@ -1,5 +1,5 @@
-/* Three floating capsules instead of one bar, so glass never sits on glass:
-   mission info (glass), the crew water pill, and the solid Urgent help button. */
+/* Three floating capsules: mission info (solid, it is data), the crew switch (liquid glass, it is navigation)
+   and Urgent help (solid red, the one emergency control). */
 .top {
   position: fixed;
   z-index: 10;
@@ -21,13 +21,17 @@
   border-radius: 20px;
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 40px;
   padding: 0 22px;
   white-space: nowrap;
 }
-.day { font-weight: 500; }
-.dim { color: var(--ink-2); }
-.push { margin-left: auto; }
+.field { display: flex; flex-direction: column; justify-content: center; gap: 2px; min-width: 0; }
+.label { font-size: 12px; line-height: 1.2; color: var(--ink-2); }
+.value { display: flex; align-items: center; gap: 6px; font-size: 15px; line-height: 1.25; font-weight: 500; color: var(--ink); font-variant-numeric: tabular-nums; }
+.link { margin-left: auto; }
+/* Link dot: filled ink when the HALO server answered, an empty ring when offline (a device state, not a body state, so no colour) */
+.dot { width: 8px; height: 8px; flex: none; border-radius: 50%; border: 1.5px solid var(--ink-2); }
+.dot.on { background: var(--ink); border-color: var(--ink); }
 
 .help {
   display: flex;
@@ -47,9 +51,10 @@
 
 @media (max-width: 1279px) {
   .top { left: 116px; }
-  .push { display: none; }
+  .info { gap: 20px; padding: 0 16px; }
+  .link .label { display: none; }
 }
 
-/* The selected astronaut's avatar takes the Mars orange */
+/* The selected astronaut's avatar turns ink inside the glass drop */
 .top :global(.nimbus-item svg circle) { transition: fill 0.2s ease-out; }
 .top :global(.nimbus-item[aria-current="page"] svg circle) { fill: var(--accent); }

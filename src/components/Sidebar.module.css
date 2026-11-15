@@ -17,7 +17,7 @@
 /* The vertical water nav fills the sidebar; Evidence (7th item) is pushed to the bottom */
 .water { flex: 1; min-height: 0; }
 .water :global(.nimbus-item):nth-of-type(7) { margin-top: auto; }
-/* Where you are: the active icon takes the Mars orange */
+/* Where you are: the glass drop sits on it and its icon turns ink (orange is the world behind, not the controls) */
 .water :global(.nimbus-item .nv-ico) { transition: color 0.2s ease-out; }
 .water :global(.nimbus-item[aria-current="page"] .nv-ico) { color: var(--accent); }
 

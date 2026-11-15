@@ -1,0 +1,308 @@
+{
+"id": "hrp_renal_stone_2017",
+"title": "Evidence Report: Risk of Renal Stone Formation",
+"authors": "Sibonga J, Pietrzyk R (NASA JSC)",
+"year": 2017,
+"licence": "NASA NTRS: public use permitted",
+"source_url": "https://ntrs.nasa.gov/citations/20170004709",
+"topics": [
+"renal_health",
+"hydration"
+],
+"kind": "full_text_excerpts",
+"note": "Verbatim text extracted from the source for retrieval; page furniture and the reference list removed. Not reviewed by HALO.",
+"chunks": [
+{
+"id": "hrp_renal_stone_2017:x1",
+"text": "Approved for Public Release: May 15, 2017 National Aeronautics and Space Administration Jean D. Sibonga NASA Johnson Space Center, Houston, TX Jeffrey. A. Jones, M.D., M.S. Baylor College of Medicine, Houston, TX Joseph E. Zerwekh, Ph.D. University of Texas Southwestern Medical Center, Dallas, TX Clarita V. Odvina, M.D. University of Texas Southwestern Medical Center, Dallas, TX I. PRD RISK TITLE: RISK OF RENAL STONE FORMATION ................................ ..... 4 II. EXECUTIVE SUMMARY ................................ ................................ ............... 4"
+},
+{
+"id": "hrp_renal_stone_2017:x2",
+"text": "III. INTRODUCTION ................................ ................................ ................... 4 IV. EVIDENCE ................................ ................................ ............................ 7 A. Spaceflight Evidence ......................................................................................................... 7 1. Historical Data from Skylab ........................................................................................ 7 2. Short-duration spaceflight missions on the Space Shuttle ......................................... 8"
+},
+{
+"id": "hrp_renal_stone_2017:x3",
+"text": "3. Long-duration during the Shuttle-Mir Missions ....................................................... 12 4. International Space Station ....................................................................................... 12 B. Ground-Based Evidence .................................................................................................. 13 V. COMPUTER-BASED SIMULATION INFORMATION ................................ ........... 14 VI. RISK IN CONTEXT OF EXPLORATION MISSION SCENARIOS ........................... 14 VII. MINIMIZING THE RISK OF STONE FORMATION ................................ ............ 17"
+},
+{
+"id": "hrp_renal_stone_2017:x4",
+"text": "A. Countermeasures ............................................................................................................ 17 B. Renal Stone Risk Assessment ......................................................................................... 18 C. In-flight Prevention ......................................................................................................... 19 D. In-flight Diagnosis and Monitoring ................................................................................ 19 VIII. GAPS ................................ ................................ ................................ 20"
+},
+{
+"id": "hrp_renal_stone_2017:x5",
+"text": "IX. CONCLUSIONS ................................ ................................ ................... 21 X. REFERENCES ................................ ................................ .......................... 22 XI. TEAM ................................ ................................ ................................ .. 26 XII. LIST OF ACRONYMS ................................ ................................ .............. 26 I. PRD RISK TITLE: RISK OF RENAL STONE FORMATION Description: Kidney stone formation and passage has the potential to greatly impact mission success and crewmember health for long-duration missions. Alterations in hydration state (relative dehydration), spaceflight-induced changes in urine biochemistry (urine super-saturation), and bone metabolism (increased calcium excretion) during exposure to microgravity may increase the risk of kidney stone formation."
+},
+{
+"id": "hrp_renal_stone_2017:x6",
+"text": "It is unclear what mitigation strategies would be the most effective in addressing this risk. The formation of renal stones poses an in-flight health risk of high severity, not only because of the impact of renal colic on human performance but also because of complications that could potentially lead to crew evacuation, such as hematuria, infection, hydronephrosis, and sepsis. Evidence for risk factors comes from urine analyses of crewmembers , documenting changes to the urinary environment that are conducive to increased saturation of stone-forming salts, which are the driving force for nucleation and growth of a stone nidus. Further, renal stones have been documented in astronauts after return to Earth and in one cosmonaut during flight."
+},
+{
+"id": "hrp_renal_stone_2017:x7",
+"text": "Biochemical analysis of urine specimens has provided indication of hypercalciuria and hyperuricemia, reduced urine volumes, and increased urine saturation of calcium oxalate and calcium phosphate. A major contributor to the risk for renal stone formation is bone atrophy with increased turnover of the bone minerals. Dietary and fluid intakes also play major roles in the risk because of the influence on urine pH (more acidic) and on volume (decreased). Historically, specific assessments on urine samples from some Skylab crewmembers indicated that calcium excretion increased early in flight, notable by day 10 of flight, and almost exceeded the upper threshold for normal excretion (300mg/day in males). Other crewmember data documented reduced intake of fluid and reduced intake of potassium, phosphorus, magnesium, and citrate (an inhibitor of calcium stone formation) in the diet."
+},
+{
+"id": "hrp_renal_stone_2017:x8",
+"text": "Hence, data from both short-duration and long-duration missions indicate that space travel induces risk factors for renal stone formation that continue to persist after flight; this risk has been documented by reported kidney stones in crewmembers. Nephrolithiasis is the condition marked by the development of renal stones. Renal stones are aggregates of crystals that are formed in urine that is supersaturated in terms of its salt components. Hypercalciuria, a characteristic of the skeletal adaptation to space, contributes to the increased supersaturation of urine, with elevations of calcium phosphate or calcium oxalate. However, whether a renal stone forms in supersaturated urine depends upon other risk factors."
+},
+{
+"id": "hrp_renal_stone_2017:x9",
+"text": "The presence of these aggregates in the renal collection or excretion system can potentially result in stone formation, renal colic, hematuria, infection or sepsis, and can obstruct urine flow to cause hydronephrosis. A renal stone formed during a spaceflight mission could cause acute illness with crewmember functional impairment, negative mission impact, or even significant morbidity or mortality for the afflicted crewmember. To date, there has been one reported episode of nephrolithiasis during spaceflight, where a cosmonaut experienced severe lower abdominal pain that spontaneously resolved, later attributed to renal colic (Lebedev 1990)."
+},
+{
+"id": "hrp_renal_stone_2017:x10",
+"text": "A previous survey of renal stones in US astronauts has revealed a total of 14 episodes of kidney stones (Pietrzyk et al. 2007); some of these episodes occurred in the pre-flight period (n=5) with the balance (n=9) having occurred in the post-flight phase. The time period for the onset of symptomatic stone formation following return ranged from 9-120 months after landing. Six of the nine postflight episodes had occurred after 1994, corresponding with the extension of Space Shuttle mission length to 12 days duration. A total of 12 astronauts have experienced nephrolithiasis, with two astronauts reporting multiple episodes; both male (n=10) and female (n=2) astronauts have been afflicted."
+},
+{
+"id": "hrp_renal_stone_2017:x11",
+"text": "Given the severity of the risk for renal stone formation, it is important to characterize the spaceflight conditions that promote nephrolithiasis in order to take appropriate steps to mitigate this risk. The primary risk factors for renal stone formation in space are the increased excretion of calcium due to bone atrophy and lower urine output associated with the microgravity environment. Other contributing risk factors include dehydration, diet (high sodium, high animal proteins), low urinary citrate, genetics, and environmental derangements (for example, alterations in ambient temperatures). These factors can contribute to increased urinary supersaturation of salts, low urine pH, and reduced urine volumes, which are all favorable conditions for crystallization."
+},
+{
+"id": "hrp_renal_stone_2017:x12",
+"text": "Renal stones come in different types, including calcium oxalate, uric acid, struvite, cysteine, and brushite (calcium phosphate) stones. The formation of a specific stone-type depends upon the presence of particular risk factors. The most common renal stone, and a main component in stones of mixed composition, is calcium oxalate. This stone type is commonly caused by treatable metabolic disorders of hypercalciuria and is associated with multiple simultaneous stone formation or stone recurrence, inducing pain with both passage and obstruction (Figure 1). Similar to calcium oxalate stones, uric acid stones induce the same adverse effects but occur at decreased incidence, responsible for only 5% of renal stones."
+},
+{
+"id": "hrp_renal_stone_2017:x13",
+"text": "Uric acid stones are also translucent and, unlike the other stones, cannot be distinguished by radiographic imaging. Struvite stones are generated by infections of urease-containing microorganisms that are capable of hydrolyzing the urea in urine to carbon dioxide and ammonia. When urine pH exceeds 7.2, struvite stones may form, and the resulting obstruction can fill the renal collection system and erode into the renal tissue. Treatment is by surgical removal unless stone size is <2 cm where lithotripsy can be applied to fragment the stone. Unlike other renal stones, cystine stones have a single etiology, hereditary cystinuria; with this condition, stone formation begins in childhood, and stones may grow large enough to fill the renal collection system."
+},
+{
+"id": "hrp_renal_stone_2017:x14",
+"text": "Finally, brushite is the name for a calcium phosphate stone, the formation of which is promoted by high urine pH and supersaturation of urine with the calcium phosphate salt. Just as on Earth, it is more cost effective to prevent stone formation during a spaceflight mission than it is to treat a crewmember (Parks and Coe 1996). Thus, understanding the etiology for the formation of specific stone types and identifying which stones are more likely to be formed during spaceflight missions will direct the application of appropriate countermeasures for nephrolithiasis."
+},
+{
+"id": "hrp_renal_stone_2017:x15",
+"text": "Figure 1. Microphotographs of a calcium-containing renal stones Diagnosing nephrolithiasis is not as difficult as distinguishing the type of renal stone. It may be possible to delineate stones by physical features. Oxalate, cystine and struvite stones have distinctive appearances (mimicking stars, wax-like eggs, and tree roots, respectively), but final diagnosis requires recovery of the stone itself, which is not always possible. Laboratory evaluations can be used to determine risk factors for stone formation based upon saturation levels of calcium, oxalate, and uric acid measured in 24-hour urine specimens. However, assessment of pH, urine volumes, urine citrate levels (an inhibitor of stone formation), creatinine levels (a marker of optimal renal function), and serum calcium levels can provide evidence of whether conditions are conducive to stone formation."
+},
+{
+"id": "hrp_renal_stone_2017:x16",
+"text": "If hypercalcemia is detected, then assay of parathyroid hormone can be used to diagnose the existence of a metabolic disorder that may be at fault. Additionally, if conditions that favor increased urine saturation and stone formation are detected, countermeasure approaches, specific for stone type, can be implemented. For example, treating hypercalciuria (>300mg/day in males, >250mg/day in females) requires identifying and addressing the cause of increased urinary calcium. Pharmacological agents, such as thiazide diuretics, or dietary adjustments can suppress bone atrophy or promote renal calcium reabsorption. Avoiding foods high in oxalate (nuts, pepper, chocolate, rhubarb, spinach, dark green vegetables, fruits) and diets high in fat will reduce hyperoxaluria (>75-150mg/day)."
+},
+{
+"id": "hrp_renal_stone_2017:x17",
+"text": "At Johnson Space Center, <45mg/day of urine oxalate is considered in the range of decreased risk and anything over 45mg/day prompts consideration of increased risk. Reducing the ingestion of purine-containing foods, such as most meats, will suppress hyperuricosuria. Ingesting an oral alkali such as potassium citrate will suppress calcium oxalate crystallization by raising urine pH and provide an inhibitor of crystal aggregation and growth by binding the calcium ion to form the soluble calcium citrate. Increasing fluid intake to increase urine volume can dilute the urinary risk factors to bring these factors under the upper limit of metastability for solubility of the stone-forming salts (Whitson et al. 2001b)."
+},
+{
+"id": "hrp_renal_stone_2017:x18",
+"text": "Even persons homozygous for cystinuria (and therefore at high risk of cysteine-stone formation) can dilute out the concentration of cystine by high fluid intake, thereby reducing their personal risk for stone. Unfortunately, given the constraints of mission operations, the indiscriminate application of all these countermeasures would not be an effective approach to risk management. Instead, the full understanding of the risk factors incurred during missions in space and knowledge of the incidence of renal stone types is warranted in order to make judicious selection of prophylactic approaches."
+},
+{
+"id": "hrp_renal_stone_2017:x19",
+"text": "This report will highlight the risk for renal stone formation in space by outlining the characterization of risk factors as determined in crewmembers after short-duration spaceflight missions aboard the Space Shuttle. Published flight data document some of the environmental and dietary contributors to renal stone formation, including high animal protein intake and high acid load. As mentioned above, risk factors for stone formation during spaceflight include increased calcium excretion due to net bone resorption and low urine volume. Thus, the risk for renal stone formation is intimately linked to hypercalciuria induced by the unbalanced bone resorption during the uncoupled bone remodeling in space."
+},
+{
+"id": "hrp_renal_stone_2017:x20",
+"text": "The results from specimens obtained from crewmembers who have flown in space detail the biochemical and environmental risk factors associated with the risk for renal stone formation during and after spaceflight. Data sources are described below. Specific assessments in some Skylab crewmembers indicated that calcium excretion increased early in flight, notable by day 10 of flight, and almost exceeded the upper threshold for normal excretion (300mg/day in males) in some crewmembers during Skylab missions (Figure 2). Figure 2. Calcium balance during and after Skylab missions. Adapted from Rambaut and Johnston (1979)"
+},
+{
+"id": "hrp_renal_stone_2017:x21",
+"text": "2. Short-duration spaceflight missions on the Space Shuttle Retrospective analysis of urinary data from U.S. Space Shuttle crewmembers was conducted in 24-hour urine specimens collected 10 days pre-launch (~L-10 day) and immediately post-landing. Analysis consisted of urine characteristics associated with renal stone formation and relative supersaturation of stone-forming constituents. All pre- and post-flight data from Space Shuttle crewmembers are tabulated below (Tables 1-3). Table 1. Mean Values for Urinary Biochemical Parameters in Crewmembers after Short-Duration Spaceflight"
+},
+{
+"id": "hrp_renal_stone_2017:x22",
+"text": "Total Volume (L/d) 2.1 ± 0.06 2.0 ± 0.06 NS 2-2.5 Calcium (mg/d) 183 ± 5.3 234 ± 6 <0.05 <300 M <250 F pH 6.05 ± 0.02 5.79 ± 0.03 <0.05 4.5-8.0 Citrate (mg/d) 714 ± 16 629 ± 18 <0.05 > 320 Magnesium (mg/d) 116.0 ± 2.5 99.0 ± 2.2 NS 75-120 Values are Mean ± SEM; L/d – liters per day. Pre-flight urines collected 10 days before launch and post-flight urines collected on landing following missions of <16 days. *Johnson Space Center Clinical Laboratory and Johnson Space Center Cellular and Biomedical Laboratory. Table 2. Mean Values for Relative Saturation of Stone-Forming Salts in Urine from Crewmembers during"
+},
+{
+"id": "hrp_renal_stone_2017:x23",
+"text": "Calcium Oxalate 1.53 ± 0.06 2.26 ± 0.07 <0.05 < 2.0 Brushite 1.25 ± 0.06 1.00 ± 0.06 <0.05 < 2.0 Sodium urate 2.41 ± 0.11 1.42 ± 0.07 <0.05 < 2.0 Struvite 3.05 ± 0.83 3.69 ± 2.21 NS < 75.0 uric H+ 1.69 ± 0.08 2.27 ± 0.09 <0.05 < 2.0 Values are Mean ± SEM. The relative urinary supersaturations are unitless ratios determined from the activity product of the various concentrations of the urinary chemical composition and represent the saturation of the stone-forming salts and the concentration of the undissociated uric acid. The supersaturation data are expressed relative to the values from normal non-stone forming subjects and indicate the state of urinary supersaturation, a fundamental requirement for stone formation. Urinary supersaturation values <2.0 indicate a decreased risk for calcium oxalate, brushite, sodium urate and uric acid stone formation. Values"
+},
+{
+"id": "hrp_renal_stone_2017:x24",
+"text": "<75.0 reflect a decreased risk for struvite stones. Table 3. Prevalence of Biochemical Abnormalities in Urine in Astronauts Before and Following ShortDuration Spaceflight Table 4. Urinary Tract Stone Events in the Astronaut Corps (as of mid-2016) Prefight 5 Before flight, no previous flight experience Inter-flight 4 Greater than 360 days post-flight, but flew again R > 360 days (Active) 2 Greater than 360 days and never flew again All U.S. Astronauts (n=357). Total number of crewmembers reporting events = 37. *No cases in this interval reported pre-flight events. R+: number of days post-flight. Post NASA Career = event occurred following retirement from active astronaut duty."
+},
+{
+"id": "hrp_renal_stone_2017:x25",
+"text": "In a series of investigations led by Peggy Whitson, Ph.D, environmental and biochemical risk factors for renal stone formation were extensively characterized for both short- and longer-duration missions. It was first reported that an increased risk of calcium oxalate and uric acid stone formation was evident immediately after spaceflight, concurrent with the hypercalciuria and hypocitraturia quantified after return (Whitson et al. 1993). Further investigation, which included analysis of urine collected during flight, revealed that many of the contributing factors to renal stone formation associated with spaceflight were related to nutrition, urinary pH, and volume output (Whitson et al. 1997)."
+},
+{
+"id": "hrp_renal_stone_2017:x26",
+"text": "In addition, biochemical analysis of urine specimens obtained during longer Space Shuttle missions provided a temporal reflection of the risk, indicating that the increased risk for renal stone formation occurs rapidly during spaceflight, continues throughout the mission, and persists following landing (Whitson et al. 1999). In-flight evidence from Space Shuttle missions associated urinary supersaturation and decreased urine excretion with reduced fluid intake; further, increasing the volume of urine output effectively reduced the urine supersaturation risk (Whitson et al. 2001b). However, the use of this approach as an inflight countermeasure may not address all risk factors during a spaceflight mission. Figure"
+},
+{
+"id": "hrp_renal_stone_2017:x27",
+"text": "3a (pre-flight) and 3b (post-flight) displays the relative risk of stone formation in a representative crewmember of a Space Shuttle flight. Note that the increased post-flight risk for stone formation (Figure 3b) corresponded with a larger excretion of calcium and a reduction in pH (metabolic factors), with a reduction in total urine volume and increased levels of sulfate (hydration and dietary factors), and with greater urine saturation for stone-forming salts (sodium urate, calcium oxalate, brushite, and uric acid stones). Figure 3a Representative pre-flight renal stone risk profile determined in a single crewmember before a short-duration flight (i.e. Space Shuttle). Blue bars represent decreased risk, red bars represent increased risk."
+},
+{
+"id": "hrp_renal_stone_2017:x28",
+"text": "Figure 3b. Representative post-flight renal stone risk profile determined in the same crewmember immediately following a short-duration flight (i.e., Space Shuttle). Blue bars represent decreased risk, red bars represent increased risk. As presented in the 2008 Evidence Report on the Risk of Renal Stone Formation (Sibonga et al. 2008), a retrospective chart review for stone formation in U.S. astronauts identified fourteen cases of renal stone formation occurring in twelve different astronauts, with nine of those episodes occurring in the post-flight period (n=7 astronauts). In addition to one inflight stone formation in a cosmonaut, one additional cosmonaut has been identified as forming multiple urinary calculi (J.A. Jones; personal communication)."
+},
+{
+"id": "hrp_renal_stone_2017:x29",
+"text": "Of the renal stones recovered from astronauts pre- and post-flight, 4 stones were of calcium oxalate, 1 stone was of uric acid, 1 stone was of mixed components, and 9 were of unknown composition. While some of these crewmembers appeared to have a history or predisposition for stone formation prior to spaceflight, unique habitability issues common to spaceflight and mission operations may exacerbate the risk for renal stone formation. These issues include food stability, preservation of food using high sodium content, dehydration, bone atrophy, quantity of onboard water supplies, and limited nutritional choices."
+},
+{
+"id": "hrp_renal_stone_2017:x30",
+"text": "It may be possible to reduce this risk by correcting operational issues; however, depending upon the duration of a specific mission, it may also be prudent to formulate criteria for excluding persons with pre-existing risk factors to reduce the potential impact to mission objectives. 3. Long-duration during the Shuttle-Mir Missions The results from an investigation of eleven astronauts and cosmonauts who flew on the Mir space station provided evidence of the risk for stone formation during long-duration missions (Whitson et al. 2001a). Data from missions ranging from 129-208 days suggested spaceflight and the return to Earth have acute effects on the urinary biochemistry that may favor increased crystallization in the urine."
+},
+{
+"id": "hrp_renal_stone_2017:x31",
+"text": "Changes previously observed during shortduration Space Shuttle flights included a rapid increase in the supersaturation of the stoneforming salts in the urine early during the flight that continued through landing day. However, the stone-forming potential in the urine was different during and after spaceflight. During flight, an increased risk occurred for both calcium oxalate and calcium phosphate stones. Immediately after flight, however, the risk was greater for calcium oxalate and uric acid stone development, which could be attributed to low urine volumes and decreased urinary pH. In these long-duration crewmembers, there was a 47% decrease in urine volume early during the missions (before flight day 30) and a 39% lower urine output late in the mission (after mission day 60)."
+},
+{
+"id": "hrp_renal_stone_2017:x32",
+"text": "Urinary calcium levels during the preflight period ranged from 159mg/day to 316mg/day, and during flight the range was 129mg/day to 435mg/day. During flight, 7 of the 11 crewmembers demonstrated higher in-flight urinary calcium values as compared to their respective pre-flight levels, and 5 of these 11 crewmembers exhibited calcium excretion greater than 250mg/day. Data from these long-duration missions suggested a similar trend, as with short-duration missions, showing increased risk for calcium phosphate stone formation occurring early in flight."
+},
+{
+"id": "hrp_renal_stone_2017:x33",
+"text": "These data suggested that the early phase (<30 days) of spaceflight may generate conditions in which the risk of stone formation was greater than during the later phases of the mission. These data are consistent with the short-duration Space Shuttle data in which both calcium oxalate and calcium phosphate risk increased. Finally, a flight experiment (96-E057) performed during long-duration missions (“Renal stone risk during spaceflight: Assessment and Countermeasure Evaluation,” Primary Investigator P. Whitson) is collecting data from crewmembers of International Space"
+},
+{
+"id": "hrp_renal_stone_2017:x34",
+"text": "Station (ISS) missions (Whitson 2009). The aim of the experiment is to evaluate the inflight efficacy of potassium citrate as a mitigator of nephrolithiasis (particularly of stones composed of calcium salts) during long-duration spaceflight. Potassium citrate is a known therapy for the formation of calcium oxalate, calcium phosphate, and uric acid containing stones because of the formation of the soluble calcium citrate complex. Risk factors are also alleviated by the alkalization of urine and by the reduction of physiological acid/base ratio as induced by potassium and the metabolism of citrate to carbonate. In this double-blind study, crewmember subjects on Expeditions 3-6, 8, and 11-14 consumed two tablets, either placebo or 20mEq potassium citrate, with their last daily meal from L-3 to R+14 days (3 days pre-launch to 14 days after return)."
+},
+{
+"id": "hrp_renal_stone_2017:x35",
+"text": "Twenty-four hour urine specimens were collected three times during flight: early (<35 days into flight), middle (between 36-120 days of flight), and late mission (within 30 days of undocking for return). The urinary biochemistry was analysed and the urinary supersaturation levels were calculated after return. All diet, fluid, exercise and medications were logged for 48h before and during the urine collection time to assess any potential impact from environmental factors. In addition to evaluating the efficacy of potassium citrate to minimize the risk of stone formation, the results of this experiment described the renal stone forming potential in crewmembers as a function of time in space as well as the stone forming potential during the post-flight period. Results of this investigation were briefly described above and recently published (Whitson et al."
+},
+{
+"id": "hrp_renal_stone_2017:x36",
+"text": "2009). As a result of the knowledge gained in this study, potassium citrate as a prophylactic countermeasure had been approved for transition to medical operations by the Office of the Chief Health and Medical Officer. Possible side effects of potassium citrate supplementation, although uncommon, include minor gastrointestinal complaints (for example, abdominal discomfort, vomiting, diarrhea, or nausea) and hyperkalemia, which may occur in subjects with renal disease, potassiumsparing diuretic ingestion, or acute dehydration. Upper gastrointestinal mucosal lesions, including erosions and ulcerations, have been reported in association with oral potassium supplementation; however, studies including placebo controls have reported mixed results with no demonstrated correlation between such lesions and symptomatic complaints or occult bleeding."
+},
+{
+"id": "hrp_renal_stone_2017:x37",
+"text": "The risk of severe complications, such as small bowel ulceration, stenosis, or gastrointestinal perforation is estimated at less than 1 per 100,000 patient-years based on spontaneous adverse reaction reports (Gonzalez et al. 1998). These risks may be minimized by providing slow-release wax matrix tablets, ingesting the dose with meals, ingesting the tablet whole without chewing, crushing, or sucking, limiting additional salt intake, and encouraging high fluid intake. This agent has been used prophylactically during spaceflight in known stone-forming astronauts who have received a medical waiver for short-duration missions; the efficacy of potassium citrate supplementation has been demonstrated in spaceflight crews, as described above. To date, potassium citrate remains one of the only NASA-validated and approved operational countermeasures for spaceflight."
+},
+{
+"id": "hrp_renal_stone_2017:x38",
+"text": "Recent medical research has highlighted an additive effect of potassium citrate beyond the risk of stone formation, showing a positive association between the ingestion of potassium citrate and increased bone density (Pak et al. 2002). Potassium citrate may also prevent bone loss by providing an alkali load, averting the bone resorbing effect of sodium chloride excess (Sellmeyer et al. 2002; Marangella et al. 2004). Potassium citrate has also been shown to reduce bone loss in postmenopausal women, as revealed by decreases in bone resorption biomarkers, possibly by counteracting the deleterious effect of academia."
+},
+{
+"id": "hrp_renal_stone_2017:x39",
+"text": "Inhibiting bone resorption associated with microgravity should also diminish the risk of renal stone formation. In theory, this could also be accomplished by physical loading (for example, via exercise countermeasures) or by the use of other pharmaceutical agents, such as bisphosphonates. Similar to potassium citrate, potassium-magnesium citrate is also under clinical study and may soon be approved as an additional supplement for inhibition of stone formation (Pak and Fuller 1986; Pak 1994; Whalley et al. 1996). Potassium-magnesium citrate was evaluated as a countermeasure for renal stones in a flight analog experiment (Zerwekh et al. 2007). A double-blind, placebo-controlled study was conducted in normocalciuric human test subjects skeletally unloaded by five weeks of prolonged bed rest as an analog for spaceflight."
+},
+{
+"id": "hrp_renal_stone_2017:x40",
+"text": "Two 24h urine collections were obtained to evaluate renal stone risk parameters and the relative saturation of calcium oxalate, brushite, and undissociated uric acid. Circulating parathyroid hormone and vitamin D metabolites were measured in serum samples. As expected, bed rest immediately induced hypercalciuria by an increase of 50mg/day in both groups. Subjects treated with potassium-magnesium citrate displayed reductions in the relative saturation of calcium oxalate and in the concentration of undissociated uric acid compared to placebo. Parathyroid hormone and vitamin D metabolites were reduced in both groups, with no statistical difference between groups in the decrements."
+},
+{
+"id": "hrp_renal_stone_2017:x41",
+"text": "The study authors concluded that potassium magnesium citrate is an effective inhibitor of renal stone formation as indicated by the reduced urine saturation of calcium oxalate and concentration of undissociated uric acid by the citrate chelation of calcium and the alkalization of pH, respectively (Zerwekh et al. 2007). A Population Balance Equation model was developed at NASA Glenn Research Center for the Integrated Medical Model (IMM) as a tool to predict a steady state distribution of renal calculi size (calcium oxalate crystals) through stages of nucleation, growth and agglomeration as it moves in the kidney while in microgravity (Kassemi and Thompson"
+},
+{
+"id": "hrp_renal_stone_2017:x42",
+"text": "2016a). The IMM is a Monte Carlo simulation model that explores the event space for medical concerns during a given reference mission (Gilkey et al. 2012). Here, the Population Balance Equation model builds off of the IMM capabilities by inputting data from the biochemical profile of astronauts for predictions regarding the efficacy and influence of dietary countermeasures, such as pyrophosphate, citrate supplementation, and hydration, on renal stone formation (Kassemi and Thompson 2016b). The model predictions suggested that some mitigation benefit is achieved by increasing citrate levels from average Earth-based levels, but preventing declines in citrate levels (i.e., maintaining normal urine values) during spaceflight is as effective, if not more a critical, mitigation strategy."
+},
+{
+"id": "hrp_renal_stone_2017:x43",
+"text": "In addition, pyrophosphate has the potential of shifting the maximum crystal aggregate to a much smaller size stone, presumably one that is safer, and less symptomatic, to pass (Kassemi and Thompson 2016b). Finally, the risk for renal stone development increases when urinary volume drops below 1.5 liters/day; therefore, an effective hydration countermeasure should be sufficient to produce 2.5-3 liters/day of urine volume (Kassemi and Thompson 2016b). VI. RISK IN CONTEXT OF EXPLORATION MISSION SCENARIOS Because of the limitations of in-flight medical capabilities, nephrolithiasis during spaceflight could cause an acute illness with severe functional impairment, negative mission impact, or even significant morbidity or mortality for the afflicted crewmember."
+},
+{
+"id": "hrp_renal_stone_2017:x44",
+"text": "Therefore it is a critical requirement to have a validated countermeasure to prevent renal stone formation prior to exploration missions. Countermeasures related to space and planetary habitability are important; with respect to nephrolithiasis, this may include dietary restrictions to reduce risk factors, improved food science, and sufficient hydration. As previously mentioned, the primary risk factor for the formation of calcium renal stones in space is the hypercalcuria induced by bone atrophy and low urinary output. Increasing fluid intake and thereby increasing urine volume can provide favorable changes in the urinary supersaturation of the stone-forming salts. However, increased urine volume alone does not address the underlying physiological processes that may exacerbate the in-flight stone risk including hypercalciuria, hypocitraturia, and decreased urinary pH."
+},
+{
+"id": "hrp_renal_stone_2017:x45",
+"text": "Operational constraints, including supplies of onboard water and the busy crew workloads, may limit the benefits of hydration to minimize the risk of stone formation. Optimal countermeasures for the risk could mitigate multiple risk factors ranging from bone atrophy to the supersaturation of urine. Ideally, a countermeasure for bone atrophy could also mitigate the risk for renal stone formation. Research priorities related to understanding the time course of bone loss and the influence of mechanical loading, from post-landing activities as well as fractional gravity, on planetary surfaces are relevant to the risk for renal stone formation during exploration missions (Sibonga 2008)."
+},
+{
+"id": "hrp_renal_stone_2017:x46",
+"text": "Specific scenarios for exploration missions are defined according to the duration of time in space; given mission duration, location, and time in transit, each mission profile may dictate significant differences in the relative risk of renal stone formation as well as the need for varied mitigation strategies to address such risk (Table 4). Table 4. Definition of Exploration Mission Durations. Probability Estimation for Renal Stone Event In the absence of space flight incidence of renal stones in the U.S. astronaut population, the IMM database and modeling tool has been used to project an estimation of the likelihood of stone occurrence as well as the outcome of various treatment strategies. Estimate incidence rates were generated by Bayesian methods, using data from NASA’s Lifetime"
+},
+{
+"id": "hrp_renal_stone_2017:x47",
+"text": "Surveillance of Astronaut Health (LSAH) and population data from the Centers for Disease Control (CDC) (Litwin and Saigal 2012). Due to this low occurrence, Bayesian methods were deemed necessary in order to better predict probability estimates for incidence rates of this medical event. The Bayesian process allows researchers to make inferences to determine the probability that a hypothesis is true, conditional on all available evidence. Information from these sources was combined using a Bayesian update approach to estimate the average rate of stone formation. By making an average rate assumption, a"
+},
+{
+"id": "hrp_renal_stone_2017:x48",
+"text": "Poisson probability distribution was assumed to govern the probability of stone formation. This model used only data pertaining to stone occurrence, not data related to blood or urine chemistry. From the CDC, as of 2004, the incidence of renal stones in males was 1-3 events per 1000 persons per year and 0.6-1 events per 1000 persons per year in females. For this spaceflight analysis, gender differences were not considered since the vast majority of astronauts were male; the resultant average incidence rate of renal stones was 0.0018 per year. Along with tracking current and former astronauts, the LSAH maintains an astronaut control population database primarily made up of NASA Johnson Space Center personnel."
+},
+{
+"id": "hrp_renal_stone_2017:x49",
+"text": "These data are of interest as renal stone incidence is geographically dependent, due to factors including dietary habits, lifestyle, and similar; inclusion of the analog cohort allows for geographical discrepancies to be accounted for by the model. Of 927 participants, there were 74 occurrences of renal stones over 17740.8 person-years, yielding an incidence rate of 0.0042 events per person-year for this ground-based comparison population (Pietrzyk et al. 2007). There have been a number of renal stone occurrences in the astronaut population, primarily following short-duration flights as noted above. At the time that this model was developed, from a population of 332 astronauts there were 14 occurrences over 5434.5 person-years, yielding an incidence rate of 0.0026 events per person-year (Pietrzyk et al."
+},
+{
+"id": "hrp_renal_stone_2017:x50",
+"text": "2007). Of note, this rate accounts for all occurrences, including repeat occurrences (two known in the astronaut population). Approximately 40% of the incidences occurred within 30 months of return-to-Earth, and the remainder occurred after 66 months post-return. The skewed timeline for stone development may negate the assumption of an average rate for the entire period of interest, decreasing the fidelity of the model. The total number of person-years reported includes the time frame for both in-flight and post-flight data. This process returned an estimate of the rate of renal stone formation in the astronaut population (most representative of post-flight rates), allowing for comparison to the general population and the LSAH control population. This rate can be used as the input rate to a Poisson distribution probability model to estimate the probability of renal stone occurrence."
+},
+{
+"id": "hrp_renal_stone_2017:x51",
+"text": "The model predicts a mean incidence rate of renal stone formation among astronauts of 0.00365 ± 0.000375 events per person-year. Applying this probability to the various proposed NASA missions, the IMM estimated risk of renal stone formation for an individual astronaut as of 2015 is calculated and shown in Table 5. Table 5. Probability of a renal stone event during spaceflight missions. Probability per person year of one or more in one crewmember Lunar Sortie (21 day) 0.0002 (0.02%) 0.0001 (0.01%) 0.0001 (0.01%) ISS (6 month) 0.0018 (0.18%) 0.0011 (0.11%) 0.0007 (0.07%)"
+},
+{
+"id": "hrp_renal_stone_2017:x52",
+"text": "Mars (3 years) 0.019 (1.90%) 0.0066 (0.66%) 0.0043 (0.43%) Best Case Scenario – a renal stone that responds to conservative treatment (analgesics, hydration) Worst Case Scenario – a renal stone that requires advanced medical intervention These risk predictions should be considered very limited in that they assume an average occurrence rate of renal stones, irrespective of the stone type or environmental conditions. Additionally, the inclusion of repeated occurrences could influence the predicted rate of incidences, as it is known that the occurrence of one stone increases the likelihood of subsequent stones. However, it is likely a reasonable representation of the rate of stone formation given the occurrence data available and given the assumptions made during construction of the estimate."
+},
+{
+"id": "hrp_renal_stone_2017:x53",
+"text": "Future models will include these data to improve the estimate of the rate of occurrence in the astronaut corps. More accurate estimates can be made with further analysis of the periods of renal stone occurrence in post-flight nephrolithiasis cases and the urinary and serum chemistry values that pertain to stone formation. The current model data will serve as the baseline for future estimates that utilize such biochemical stone forming/inhibiting parameters. VII. MINIMIZING THE RISK OF STONE FORMATION Nephrolithiasis has been identified by the IMM as one of the leading medical conditions that would lead to evacuation of a crewmember during a space mission. However, evacuation during an exploration-class mission to the moon or Mars will be challenging, if at all possible."
+},
+{
+"id": "hrp_renal_stone_2017:x54",
+"text": "Therefore, preventive medicine approaches are necessary in order to lower the likelihood and severity of in-flight renal stone occurrence. Dietary modification and promising pharmacologic treatments may be used to reduce the potential risk of renal stone formation. Diets low in oxalate content and animal proteins may be advised. Some of the inhibitor substances are being considered for higher risk spaceflight crewmembers. Potassium citrate, as described above, is used clinically to minimize the development of crystals and the growth of renal stones. Most orally administered citrate is metabolized to produce an alkali load. Administration of oral citrate increases both the urinary citrate and pH. The citrate complexes with calcium, decreasing ion activity, and, thus, the urinary supersaturation and crystallization of calcium oxalate and brushite."
+},
+{
+"id": "hrp_renal_stone_2017:x55",
+"text": "The increase in urinary pH decreases calcium ion activity by increasing calcium complexation to dissociated anions; it simultaneously increases the ionization of uric acid to the more soluble urate ion, leading to fewer uric acid stones. Bisphosphonates are a class of drugs with demonstrated efficacy in treating elderly patients with osteoporosis by inhibiting the loss of bone. These agents could potentially prevent the bone loss observed in astronauts and thereby mitigate or avert stone formation, promoting resorptive hypercalciuria."
+},
+{
+"id": "hrp_renal_stone_2017:x56",
+"text": "One extended (90-day) terrestrial bed-rest study demonstrated decreased urinary calcium excretion, alongside decreased supersaturation of calcium oxalate and calcium phosphate, in subjects receiving pamidronate (a bisphosphonate) as compared to controls; there was a concomitant trend towards decreased stone formation in the pamidronate group (Okada et al. 2008). More recently, a joint study conducted by NASA and the Japanese Aerospace Exploration Agency evaluated the use of alendronate, in combination with resistive exercises, for its ability to decrease bone resorption and urinary calcium excretion in ISS astronauts. The alendronate group demonstrated a trend towards reduced urinary calcium excretion through flight day"
+},
+{
+"id": "hrp_renal_stone_2017:x57",
+"text": "60, and, further, maintained urinary calcium at pre-flight levels throughout the 6-month ISS mission (LeBlanc et al. 2013). In contrast to this, subjects participating in resistive exercises alone demonstrated a significant (50%) increase in urinary calcium excretion during the early phases of flight; urinary calcium levels were comparable to pre-flight levels immediately post-flight and at 1-year follow-up (LeBlanc et al. 2014). The combination of bisphosphonates and a resistive exercise regimen appears to improve bone health and decrease urinary calcium excretion, and thus may reduce the risk of stone formation during and possibly after long-duration spaceflight."
+},
+{
+"id": "hrp_renal_stone_2017:x58",
+"text": "U.S. crewmembers are assessed with the renal stone risk profile (Mission Pharmacal, University of Texas Southwest Laboratories, (Mission Pharmacal 2016)), graphically plotted for each individual. Although the urinary risk profile does not directly predict the formation of renal stones, it illustrates to the flight surgeon and crewmember the current urine chemistry environment (Ryall and Marshall 1983; Pak et al. 1985; Grases et al. 1997; Pak 1997). Figures 3a and 3b show example graphs of the urinary analysis performed. The graphic provides a convenient and easily interpretable risk profile understood by flight surgeons and crewmembers. In our retrospective review of cases and the post-flight renal stone risk index (RSRI) assessment, we found a 93% correlation between known stoneformers and a high RSRI."
+},
+{
+"id": "hrp_renal_stone_2017:x59",
+"text": "All but one case were found to have significant urinary biochemical abnormalities in the stone risk profile; the one outlying case had minor abnormalities. There were some false positives in prospective cases, confounded by urine collection biases, but there were no false negatives. The risk profile, considered in conjunction with the lifestyle and dietary habits of the individual, can be a valuable monitoring and education tool (Rivers et al. 2000). Individuals who are at an increased risk or have previously formed renal stones can be followed, patient compliance can be assessed, and the effectiveness of medical treatment can be determined with this profile."
+},
+{
+"id": "hrp_renal_stone_2017:x60",
+"text": "The renal stone risk profile has proven value in the clinical setting as a tool for classifying patients according to the etiology of the formation of their renal stones (Pak et al. 1985; Yagisawa et al. 1998; Lifshitz et al. 1999). Further, the relatively low cost of the renal stone risk profile makes this a cost-effective methodology, and may mitigate both the risk of developing a stone in-flight and the potential mission impact if nephrolithiasis occurs. Clinical and research experience has shown that monitoring the urinary environment and estimating the risk for renal stone development can lead to significantly improved control of stone disease when this information is used to guide medical therapy (Morgan and Pearle 2016), and the need for surgical intervention and stone removal can be dramatically reduced by an effective prophylactic program."
+},
+{
+"id": "hrp_renal_stone_2017:x61",
+"text": "Studies have concluded that, for terrestrial stone-formers, the reproducibility of urinary stone risk factor analyses is satisfactory in repeat urine samples and a single stone risk analysis is sufficient for a simplified medical evaluation of urolithiasis (Pak et al. 2001). The accuracy of measuring urinary stone promoter- and inhibitor-substances is improved by including matrix components, uroproteins, uromucoid, and glycosaminoglycans in the analysis (Batinić et al. 2000). Other laboratory analyses for urinary stones include blood urea nitrogen, serum electrolytes, creatinine, calcium, uric acid, and phosphorous."
+},
+{
+"id": "hrp_renal_stone_2017:x62",
+"text": "As applied to the U.S. space program, this health care monitoring program may provide several distinct advantages. Crewmembers with an increased baseline risk prior to spaceflight will further increase their risk of stone formation when exposed to the microgravity environment and the resultant bone loss, hypercalciuria, increased urinary sodium, and decreased urinary output. The RSRI evaluation may identify the risk prior to flight, help to identify appropriate medical intervention, and reduce the potential risk before, during, and after spaceflight. In implementing the schedule of RSRI measurement with 24h urine collection, it was determined that all astronauts should have an annual assessment dedicated to stone risk factor identification. Space Shuttle crewmembers with significant risk factors or history of previous calculi also had pre-flight evaluations for stones."
+},
+{
+"id": "hrp_renal_stone_2017:x63",
+"text": "Currently, this assessment is performed annually as well as post-flight, during the comprehensive medical examination, performed twice at 3 and 30 days after return in all crews. Pre-flight and post-flight renal stone risk profiles continue to be conducted as a medical requirement for all ISS crewmembers. Additional research studies are currently collecting urine samples for biochemical analyses to identify changes in the urinary biochemistry that potentially increase the risk of stone formation. Together these data will provide an indicator of the impact of dietary factors, hydration status, and microgravity exposure for stone development. The urinary biochemical data are further employed to improve the modelling of stone formation risk and the potential to enhance the predictive power of these models."
+},
+{
+"id": "hrp_renal_stone_2017:x64",
+"text": "During a mission, crewmembers follow procedures that prevent the growth of stones. In particular, taking oral fluids in amounts sufficient to maintain adequate hydration is encouraged. If an astronaut is suffering from severe space motion sickness early in flight, intravenous fluids may be considered to guard against dehydration; to date, this intervention has not been required. In addition to hydration, sodium consumption should be limited during flight. As previously noted, potassium citrate or potassium-magnesium citrate may be useful countermeasures to stone formation in certain high-risk individuals."
+},
+{
+"id": "hrp_renal_stone_2017:x65",
+"text": "Ultrasound imaging technology is available to the crews on the ISS. If symptoms suggesting nephrolithiasis occur in flight, spaceflight crews can take specific steps to respond and mitigate further risk, including the use of sonographic imaging. The onboard crew medical officer, with guidance from ground medical specialists, is able to monitor an affected crewmember’s vital signs, hydration status, and clinical appearance, and may perform an ultrasound exam with real-time guidance from ground controllers. Guided ultrasound examinations have been performed many times for investigational purposes and shown to provide adequate diagnostic imagery (Sargsyan et al. 2005; Jones et al. 2009). The anatomic content and fidelity of the images captured in these studies were excellent and sufficient for clinical decision making, comparable to imaging obtained under terrestrial conditions."
+},
+{
+"id": "hrp_renal_stone_2017:x66",
+"text": "In the case of an acute renal stone event, image characterization would allow for stone localization and estimation of size, data that could prove critical to medical decision-making. Figure 4. Ultrasound image showing capability to detect a renal stone less than 3 mm. For example, ultrasound may be used to show visible calculi in the ureteropelvic junction or renal pelvis, and can further identify unilateral distension of the collecting system from either hydronephrosis or hydroureter if adequate time has passed to allow for distention to occur. Ultrasound may also show loss of the ureteral jet in the bladder ipsilateral to the side of pain, further supporting a clinical diagnosis of nephrolithiasis."
+},
+{
+"id": "hrp_renal_stone_2017:x67",
+"text": "The following section raises relevant implementation issues and knowledge gaps associated with mitigating renal stone formation in the context of the current exploration mission scenarios and the operational constraints of power, mass, volume, time and expense. At the time of writing, 7 research knowledge gaps have been identified that are directly related to the Risk of Renal Stone Formation. These are: • B5 - What is the current state of knowledge regarding renal stone formation due to spaceflight? • N13 - Can renal stone risk be decreased using nutritional countermeasures?"
+},
+{
+"id": "hrp_renal_stone_2017:x68",
+"text": "• B6 - What are the contributing factors other than loss of bone mineral density? • B7 - Is it necessary to increase crew fluid intake and, if possible, to what extent will it mitigate stone formation? • B8 - Do pharmaceuticals work effectively in spaceflight to prevent renal stones? • B9 - What is the frequency of post-flight stone formation; the incidence and types of stones; and the time course of stone formation? How does stone formation correlate with food intake and hydration status? • B16 - Can inhibitors of stone formation be sufficiently provided through dietary sources?"
+},
+{
+"id": "hrp_renal_stone_2017:x69",
+"text": "Medical records are reviewed for individual crewmembers to identify renal stones events. The database of stone events is presented annually to the JSC Human Systems Risk Board (HSRB) characterizing the number of events and time of the event. To assess the risk of stone formation due to spaceflight, postflight ultrasound was begun in February 2016. The imaging is scheduled to occur within 30 days of the crewmember’s landing. At this time 58 ultrasound exams have been completed on 49 crewmembers including 2 preflight and 4 postflight. The review of these images is in medical review with a summary of the results to be presented to the HSRB. The postflight ultrasounds will provide initial evidence for in-flight renal stone formation."
+},
+{
+"id": "hrp_renal_stone_2017:x70",
+"text": "Preflight and postflight renal stone risk profiles continue to be conducted as a medical requirement on all ISS crewmembers. Additional research studies are collecting urine samples for biochemical analyses identifying changes in the urinary biochemistry potentially increasing the risk of stone formation. Together these data will provide an indicator of the impact of dietary factors, hydration status and microgravity exposure for stone development. The urinary biochemical data are also being employed to improve the modelling of stone formation and the potential to enhance the predictive power of these models."
+},
+{
+"id": "hrp_renal_stone_2017:x71",
+"text": "NASA’s strategic goals are for a human presence for exploration-class missions, which include the goals of returning to the moon and landing on Mars. With these objectives, exploration crewmembers will experience extended exposure to the unique environments of space and the adaptive effects of human physiology to microgravity, partial gravity, and to the operational constraints and limitations of space habitation. The adaptive effects of space travel on human physiology result in altered urinary chemical composition that occurs both during spaceflight and after return to Earth, resulting in known risk factors for the formation of renal stones. As of 2016, 37 known symptomatic medical events consistent with urinary calculi have been experienced by U.S. astronauts."
+},
+{
+"id": "hrp_renal_stone_2017:x72",
+"text": "Jean D. Sibonga, Ph.D., Bone Discipline Lead, Human Research Program, NASA Johnson Space Center. Biochemistry; Iliac crest bone histomorphometry; Preclinical Research in Bone Cell Biology and Physiology, Animal Models of Osteoporosis . Robert A. Pietrzyk, M.S., Co-Investigator: Renal Stone Risk Assessment; Project Scientist, ISS Medical Project. Human Physiology and Biochemistry; KBRWyle; Houston, TX. Jeffrey. A. Jones, M.D., M.S., FACS, FACPM- Former NASA Flight Surgeon, Lead Exploration Medical Operations, Space Medicine Division, JSC; Adjunct Professor Baylor College of"
+},
+{
+"id": "hrp_renal_stone_2017:x73",
+"text": "Medicine; Captain US Navy Reserves, Senior Medical Officer, Marine Air Group 41 Joseph E. Zerwekh, Ph.D., Professor, Department of Internal Medicine and the Center for Mineral Metabolism and Clinical Research, University of Texas Southwestern Medical Clarita V. Odvina, M.D., Associate Professor of Medicine, Division of Mineral Metabolism, UT Southwestern Medical Center Former appointment. Consultant. LSAH Lifetime Surveillance of Astronaut Health"
+}
+]
+}

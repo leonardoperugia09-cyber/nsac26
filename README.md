@@ -6,6 +6,8 @@ On Mars, the doctor is 20 minutes away and the crew medical officer might be the
 
 > ⚠️ Hackathon prototype. **Not a medical device.** All crew data is simulated. Thresholds are demo parameters.
 
+**Live demo:** https://halo.nubidubi0977.workers.dev (open Assistant and tick "Use hosted AI for this session" to ask Claude; without it the assistant answers from the bundled sources).
+
 ---
 
 ## Features
@@ -88,9 +90,11 @@ There is no pharmacy resupply on a Mars transit, so HALO forecasts how strong ea
 ---
 
 ## AI agent test results
+These are Gurman's results for his Python backend in rule-based fallback mode. They are not a test of the Node assistant described under "Assistant accuracy tests" below.
+
 Gurman's 20-question test of the assistant: safety (emergencies caught, no doses, no diagnosis), the escalation line, and relevance.
 
-- **Run:** 14 Nov 2026, against the Python backend in `halo-all-in-one.patch` (`backend/eval/run_eval.py`), in **rule-based fallback mode (no API key set)**.
+- **Run:** 14 Nov 2026, against Gurman's Python backend (PR #7, branch `gurman-backend`, `backend/eval/run_eval.py`), in **rule-based fallback mode (no API key set)**.
 - **Safety: 20 of 20.** Emergencies caught, no doses, no diagnosis.
 - **Escalation line present: 20 of 20.**
 - **Relevance:** not judged in fallback mode; to be scored after a run with a model key.
@@ -128,6 +132,34 @@ Gurman's 20-question test of the assistant: safety (emergencies caught, no doses
 | `check_bodymap.ts` | Every region maps to real signals and rules; missing data shows "unknown" and stale data "stale", never "normal"; a calm day reads normal |
 | `check_potency.ts` | Potency calibration (Earth 90% at label date, ISS 1.5×), strength only falls, ISS lasts longer than Mars, the day-40 storm brings the 90% day forward |
 
+## Assistant accuracy tests (Claude)
+The assistant in this branch (Node server, optional Claude Opus 5.5) was tested on 15 Nov 2026 with sets of 100 questions: research questions, questions about a person's own readings, emergencies, medicine requests, off-topic and made-up questions, other languages, prompt-injection attempts, and (set E) logged symptoms plus a live strap reading. The rules for a pass were written before each run (`backend/eval/accuracy-cases*.ts`, run with `npm run eval:accuracy`).
+
+| Set | Passed | What failed |
+|---|---|---|
+| C (fresh questions) | **93 of 100** | answers that stretched a source slightly, one answer rejected by the server's checks, one dose wording not recognised (fixed afterwards) |
+| E (fresh questions) | **87 of 100** | missed our bar of 90: wording our own prompt had put into the model, emergency and medicine wordings not recognised, data questions not recognised (fixed afterwards) |
+
+Sets A, B and D were development sets that the fixes were tuned on, so their scores are not reported as results.
+
+What this does and does not show:
+- The rule checks (no dose, no diagnosis, no clearance for a spacewalk, emergencies handled before the model) found no violation in any answer Claude wrote.
+- Faithfulness to the source library was judged by a second Claude model (Sonnet 5.5) acting as a strict fact-checker. It is not a doctor, and it can be wrong in both directions.
+- Each score is one run of 100 questions, so it carries a range of roughly 6 points either way. The fixes made after set E were not re-run on a fresh set.
+- This is not medical validation. The source library has not been reviewed by a physician or a space-medicine expert.
+
+## Connect instruments
+
+HALO accepts real measurements next to the simulated crew data. Every reading keeps its source and provenance (`measured`, `self_reported`, `estimated`, `simulated`), and measured values replace the simulated value for that day and signal, so baselines, risks and the body map update automatically.
+
+- **Bluetooth heart-rate strap (live):** Settings > Instruments > Connect. Uses Web Bluetooth (Chrome or Edge on a computer) and the standard Heart Rate service (0x180D), so any strap that broadcasts it works (for example the Polar H10, used in a NASA exercise study). While connected, the homepage heart rate is live and each minute's average is saved as today's reading. A clearly labelled simulated strap is available for demos without hardware.
+- **File import:** Actiwatch or Hexoskin CSV exports (column mapping is shown and can be corrected) and Apple Health `export.xml` (iPhone: Health > profile > Export All Health Data). The newest imported day maps to the current mission day. Sample files are in `public/samples/`.
+- **Apple Watch:** it cannot stream heart rate to a browser by itself; bring its data in through the Apple Health export.
+- **API:** `POST /api/measurements` stores a batch `{ crewId, measurements: [{ signal, value, unit, sourceId, provenance, observedAt?, missionDay, quality }] }` (units must match `UNITS` in `backend/node/contracts.ts`); `GET /api/measurements?crewId&day&profile` lists them.
+- **FHIR export:** `GET /api/fhir/Observation?crewId&day&profile` returns a FHIR R4 Bundle of Observations with LOINC codes (heart rate 8867-4, blood pressure panel 85354-9 with 8480-6 / 8462-4, SpO2 2708-6, body temperature 8310-5, body weight 29463-7) and UCUM units; other HALO signals use the local code system `urn:halo:signal`, and simulated values are tagged.
+
+NASA flight instruments (Astroskin, Crew Active Dosimeter, Actiwatch on the ISS) do not stream to outside software; HALO connects to the same class of devices on the ground and to NASA's public RadLab radiation data.
+
 ---
 
 ## Real vs simulated data
@@ -139,30 +171,34 @@ Gurman's 20-question test of the assistant: safety (emergencies caught, no doses
 | Day-40 solar storm (about 18 mSv over 2 days) | **Simulated** | Sized inside what MSL RAD measured per event |
 | ISS normal dose (0.55 mSv/day) | **Real order of magnitude** | ISS missions average about 72 mSv per 6 months (Cucinotta 2008), about 0.4 mSv/day; we round up to a cautious 0.55 |
 | Moon normal dose (1.4 mSv/day) | **Demo estimate** | Our own; no live feed yet |
-| Live RadLab radiation feed | **Not connected yet** | NASA OSDR RadLab API (provider in Gurman's backend patch, not merged) |
+| NASA RadLab radiation | **Real data, not live in the app** | The server can fetch ISS dose-rate data from the NASA OSDR RadLab API and ships one cached 2022 snapshot (`backend/resources/radiation.json`); the radiation numbers on screen are simulated |
 | Personal baselines, drift scores, rule weights and thresholds | **Our method, demo parameters** | `src/engine/`, `src/rules/` |
 | Medicine potency findings | **Real published studies** | Du 2011, Wotring 2016, NASA reanalysis, Blue 2019 |
 | Medicine potency forecast for deep space | **Our extrapolation** | Dose scaling, shelf lives and pack age are our assumptions |
 | Medicine schedules, kit stock and dose history | **Simulated** | `src/ui/medicinesData.ts` |
+| Readings from a strap or a file import | **Real if you connect your own device or file**, labelled with their source | Settings > Instruments; the empty "You" profile holds only such data |
+| Assistant answers | **Generated** from the source summaries (and, on the server, 5,000 full-text excerpts); not clinically reviewed | `backend/`, `services/halo-ai/` |
 
 ---
 
 ## Built vs future work
 
-### Built (on `main`, runs offline in the browser)
-- Crew simulator with planted events; personal baselines and drift scores; Coupled Risk Engine with 7 cited rules; medicine potency tracker.
-- App: Overview with daily check-in pop-up and today's plan, Health body map, Daily Log, Assistant (scripted on-device answers with emergency rules first and no doses), Mission readiness and radiation, Medicines, Evidence, Settings.
-- Four engine checks (`npm run check`) and an end-to-end click-through of every page for all three crew.
+### Built
+- Crew simulator with planted events; personal baselines and drift scores; Coupled Risk Engine with 7 cited rules (symptoms, vision self-report and workload that you log now feed the rules); medicine potency tracker.
+- App: Overview with daily check-in and today's plan, Health body map, Daily Log, Assistant, Mission readiness and radiation, Medicines, Evidence, Settings (scenario editor, instruments).
+- Node server (`backend/`): API, check-ins and measurements saved and synced when offline, readiness, report outbox, evidence search over 46 sources (about 5,000 full-text excerpts of NASA and open-access papers), FHIR export.
+- Instruments: live Bluetooth heart-rate strap, Apple Health, Actiwatch and Hexoskin imports.
+- Assistant: emergency rules first, no doses or diagnoses, answers grounded in the sources with citations. On the server it can use Claude Opus 5.5; on the website it reaches Claude through a small service (`services/halo-ai/`) with usage limits. If the AI is off, limited or fails a check, it answers from the sources.
+- Tests: `npm test`, `npm run check`, and the accuracy sets above.
 
-### In review (not on `main` yet)
-- **Manar's backend** (PR #5): API, check-ins saved and synced when offline, readiness, report outbox, evidence search.
-- **Ben's merge** (PR #6): Manar's backend inside the HALO design, one shared design system.
-- **Gurman's Python backend** (`halo-all-in-one.patch`): model-backed assistant with red-flag rules, a dose filter, evidence citations, a RadLab provider and the 20-question evaluation above.
+### Not merged
+- **Gurman's Python backend** (PR #7, branch `gurman-backend`): model-backed assistant with red-flag rules, a dose filter, evidence citations and the 20-question evaluation above. The Node server above covers the same ground.
 
 ### Future work
-- **Real data:** live NASA OSDR RadLab feed; real biomarker ranges from OSDR datasets; wearable and medical-device integration instead of simulated readings.
-- **Missing inputs** the rules already ask for: vision self-test score, headache and puffy-face logs, workload, skin symptoms and cold sores, ECG rhythm, urine calcium, bone scans, strength tests.
-- **Assistant:** answers from a language model grounded in the crew's data (with the safety rules kept in front), a re-run of the evaluation with relevance scored, and spacewalk-readiness questions in the on-device assistant.
+- **Real data:** a live NASA OSDR RadLab feed in the app; real biomarker ranges from OSDR datasets; validated wearable and medical-device integration instead of simulated readings.
+- **Inputs the rules still ask for:** ECG rhythm, urine calcium, bone scans, strength tests.
+- **Assistant:** a fresh accuracy run after the latest fixes, review of the source library by a physician, and the full-text excerpts on the website (today it uses the summaries only).
+- **Phones:** the layout is built for laptops and tablets and breaks on a phone.
 - **Mission profiles:** make readiness and alerts change with the ISS / Moon / Mars switch (today only the text changes).
 - **Medicines:** shared crew stock, resupply planning, real shelf-life and storage data per product.
 - **Validation:** thresholds tuned with flight surgeons and tested on real analog-mission data; this prototype is not clinically validated.
@@ -174,14 +210,17 @@ Gurman's 20-question test of the assistant: safety (emergencies caught, no doses
 git clone https://github.com/leonardoperugia09-cyber/nsac26.git
 cd nsac26
 npm ci
-npm run dev          # app on http://localhost:5173
-npm run check        # engine checks: drift, risks, body map, potency (Node 22.6+)
+npm run dev:full     # app on http://localhost:5173 and the HALO server on :3001 (API docs at /docs)
+npm run dev          # app only (the assistant then answers from the bundled sources)
+npm run check        # engine checks: drift, risks, body map, potency, simulator (Node 22.6+)
+npm test             # server, assistant, evidence, safety and AI-service tests
+npm run eval:accuracy -- --set e   # the 100-question accuracy set against Claude (needs the key in .env; costs dollars)
 python3 scripts/crew_simulator.py   # regenerates data/ exactly (seed 42)
 ```
 
 **Demo path (day 58, Marco):** Overview opens with the daily check-in, then the kidney stone Act and its plan. Health shows the body map (kidneys and skeleton Act). Mission shows spacewalk readiness and the day-40 solar storm. Medicines shows today's doses and the onboard kit's potency forecast. Assistant answers symptoms and refuses doses.
 
-Put API keys in a `.env` file (copy `.env.example`). **Never commit `.env`.**
+Put API keys in a `.env` file (copy `.env.example`). **Never commit `.env`.** More: [backend setup and API](backend/README.md), [assistant setup](backend/docs/ASSISTANT.md), [architecture and scientific boundaries](backend/docs/ARCHITECTURE.md), [verification](backend/docs/VERIFICATION.md).
 
 ## Repo layout
 ```
@@ -191,7 +230,8 @@ src/engine/  personal baselines + drift scores, coupled risk engine, medicine po
 src/rules/   coupling rules, one file per rule, each with its citation
 src/bodymap/ clickable body map
 src/         the app (React + Vite)
-backend/     server that will hold the AI key and cache RadLab data (in progress)
+backend/     Node server: assistant, evidence library and full texts, storage, RadLab cache, tests and evaluation sets
+services/    halo-ai: the small Cloudflare service that lets the website ask Claude (holds the key, limits use)
 docs/        realistic in-flight readings and their sources
 ```
 
@@ -199,9 +239,12 @@ docs/        realistic in-flight readings and their sources
 Make a branch before you code (`git checkout -b yourname-feature`) and merge into `main` with a Pull Request. Run `npm run check` and `npm run build` before merging.
 
 ## AI use statement
-- Crew data is simulated; no real patient data was used.
-- The assistant on `main` uses scripted, rule-based answers on the device. The model-backed assistant in review calls a hosted language model only to explain the crew member's own data; emergency detection is plain rules that run first and never depend on the model, and no answer may contain a medication amount.
-- Generative AI tools helped write code, documentation and evidence summaries. The team reviewed the output and is responsible for it.
+- **Crew data is simulated.** No real patient data was used. Readings you connect yourself (a strap or a file) stay on your device and your own server unless you turn on the hosted AI.
+- **Inside HALO.** The risk engine, the emergency detection and the crew simulator are plain deterministic code, not AI. Emergency detection runs first and never depends on a model, and no answer may contain a medication amount. An optional assistant asks Claude Opus 5.5 (Anthropic) to word an answer from the source summaries and, on the server, full-text excerpts. HALO rejects any answer that cites a source it did not supply, gives a dose, or gives a diagnosis. On the website the assistant reaches Claude through `services/halo-ai/`, which holds the key and limits use; it is off until a visitor ticks "Use hosted AI for this session", and when it is limited or fails a check the page says so and answers from the sources.
+- **Building HALO.** Claude Code (Anthropic: Claude Opus 5.5 and Sonnet 5.5) wrote much of the front end, the Node server, the evidence search, the tests and the documentation, and checked evidence summaries against their sources. The first version of the assistant backend was written with OpenAI Codex, and some of Gurman's backend commits were made with Claude. The team reviewed and tested the output and is responsible for it.
+- **Source library.** The 46 source summaries and their quotes were extracted with AI help and checked against the source text. No physician or space-medicine expert has reviewed them; the app marks them "domain review pending".
+- **Images.** The app uses no third-party images and no AI-generated bitmap images. The body map is SVG drawn in code (`src/bodymap`), which the statement above about AI-assisted code also covers.
+- **Tests.** The accuracy sets were checked by a second Claude model; see "Assistant accuracy tests" for results and limits.
 
 ---
 

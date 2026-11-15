@@ -1,0 +1,292 @@
+{
+"id": "lee_sans_2020",
+"title": "Spaceflight associated neuro-ocular syndrome (SANS) and the neuro-ophthalmologic effects of microgravity: a review and an update",
+"authors": "Lee AG, Mader TH, Gibson CR, et al.",
+"year": 2020,
+"licence": "CC BY 4.0",
+"source_url": "https://doi.org/10.1038/s41526-020-0097-9",
+"topics": [
+"vision",
+"fluid_shift"
+],
+"kind": "full_text_excerpts",
+"note": "Verbatim text extracted from the source for retrieval; page furniture and the reference list removed. Not reviewed by HALO.",
+"chunks": [
+{
+"id": "lee_sans_2020:x1",
+"text": "Spaceﬂight associated neuro-ocular syndrome (SANS) and the neuro-ophthalmologic effects of microgravity: a review and an update Andrew G. Lee 1,2,3,4,5,6*, Thomas H. Mader 7, C. Robert Gibson 8, William Tarver 9, Pejman Rabiei 10, Roy F . Riascos 10, Laura A. Galdamez 11 and Tyson Brunstetter 12 Prolonged microgravity exposure during long-duration space ﬂight (LDSF) produces unusual physiologic and pathologic neuroophthalmic ﬁndings in astronauts. These microgravity associated ﬁndings collectively de ﬁne the “Spaceﬂight Associated Neuroocular Syndrome ” (SANS). We compare and contrast prior published work on SANS by the National Aeronautics and Space"
+},
+{
+"id": "lee_sans_2020:x2",
+"text": "Administration’s (NASA) Space Medicine Operations Division with retrospective and prospective studies from other research groups. In this manuscript, we update and review the clinical manifestations of SANS including: unilateral and bilateral optic disc edema, globe ﬂattening, choroidal and retinal folds, hyperopic refractive error shifts, and focal areas of ischemic retina (i.e., cotton wool spots). We also discuss the knowledge gaps for in- ﬂight and terrestrial human research including potential countermeasures for future study. We recommend that NASA and its research partners continue to study SANS in preparation for future longer duration manned space missions. npj Microgravity (2020) 6:7 ; https://doi.org/10.1038/s41526-020-0097-9"
+},
+{
+"id": "lee_sans_2020:x3",
+"text": "Unique and distinctive clinical and imaging ﬁndings occur in astronauts both during and after short and long duration space ﬂight (LDSF). The term, “Space ﬂight Associated Neuro-ocular syndrome” (SANS) has been used to describe these interesting ﬁndings. In the United States (US), the Space Medicine Operations Division of the National Aeronautics and Space Administration (NASA) has retrospectively and prospectively documented the"
+},
+{
+"id": "lee_sans_2020:x4",
+"text": "Although a formal designation has not been validated, for the purposes of this review we consider the presence of any of the following ﬁndings post ﬂight (compared to pre ﬂight) to be the working case de ﬁnition of SANS: unilateral and bilateral optic disc edema (variable Frisén grades), globe ﬂattening (as de ﬁned qualitatively on imaging), choroidal and retinal folds, hyperopic refractive error shifts (>0.75 D), or focal areas of ischemic retina (i.e., cotton wool spots). These ﬁndings in SANS have been documented over the past decade in multiple reports. In addition, structural changes have been documented that correlate with the clinical ﬁndings of SANS on ocular (e.g., optical coherence tomography [OCT]), orbital (e.g., ultrasonography and magnetic resonance imaging [MRI]) and cranial MRI."
+},
+{
+"id": "lee_sans_2020:x5",
+"text": "Visual acuity, Amsler grid, ophthalmoscopy, tonometry, fundus photography, orbital ultrasound and OCT are available on the International Space Station (ISS) and have been essential in documenting the development of the in- ﬂight changes of SANS. 1–3 We recognize and acknowledge the limitations of the current SANS de ﬁnition and that the clinical syndrome has been re-deﬁned over time as new information has emerged over the last decade. Mader et al. in 2011 originally described the clinical ﬁndings of SANS in astronauts after LDSF. 1 In this initial cohort, seven astronauts received complete eye examinations before and after LDSF. Six astronauts received post-mission OCT and orbital/ cranial MR imaging. Four of these astronauts underwent a lumbar puncture (LP) from 12 to 66 days following return to Earth."
+},
+{
+"id": "lee_sans_2020:x6",
+"text": "The only symptom noted was decreased near vision (hyperopic refractive shift) varying from +0.50 diopters (D) to +1.75 D ( n = 6). No astronauts reported symptoms of increased intracranial pressure (ICP), including pulse synchronous tinnitus, double vision, or photopsias. The neuro-ophthalmic ﬁndings included optic disc edema of variable Frisén grade ( n = 5), globe ﬂattening ( n = 5), choroidal folds ( n = 5), cotton wool spots ( n = 3) and retinal nerve ﬁber layer thickening on OCT ( n = 6).1 Globe ﬂattening (with secondary axial hyperopic shortening) was noted on terrestrial post-ﬂight orbital MRI and orbital ultrasound ( n = 5). An LP was performed in four individuals (total n = 6 LP: one astronaut had three LPs) and documented variable ICP measurements, ranging from borderline elevated to elevated opening pressures (OP)."
+},
+{
+"id": "lee_sans_2020:x7",
+"text": "These included ICP measurements of 22 cm of water on day of return to Earth plus 66 days ( R + 66), 21 cm of water ( R + 19), 28 cm of water ( R + 12), and 28.5 cm of water ( R + 57).1 Although all affected astronauts were correctable to 20/20 visual acuity, some astronauts had persistent, residual refractive error changes for several years following LDSF. 4,5 Persistent structural changes (e.g., choroidal folds, globe ﬂattening) have also been seen on 1Department of Ophthalmology, Houston Methodist Hospital, Houston, TX, USA. 2Baylor College of Medicine and The Baylor Center for Space Medicine, Houston, TX, USA."
+},
+{
+"id": "lee_sans_2020:x8",
+"text": "3Departments of Ophthalmology, Neurology, and Neurosurgery, Weill Cornell Medical College, New York, NY, USA. 4Department of Ophthalmology, The University of Texas Medical Branch, Galveston, TX, USA. 5Department of Ophthalmology, The University of Iowa Hospitals and Clinics, Iowa City, IA, USA. 6UT MD Anderson Cancer Center, Houston, TX, USA. 7Colonel (R) US Army, Moab, UT, USA. 8Coastal Eye Associates, Webster, TX, USA. 9Space Flight Associated Neuro-ocular Syndrome (SANS) Clinical Lead, Clinical Services, NASA Johnson Space Center, Houston, TX, USA. 10Department of Diagnostic and Interventional Imaging, University of Texas Health Science Center at Houston, Houston, TX, USA."
+},
+{
+"id": "lee_sans_2020:x9",
+"text": "11U.S. Navy Detailed to NASA Johnson Space Center, Houston, TX, USA. 12Department of Emergency Medicine, Baylor College of Medicine, Houston, TX, USA. *email: aglee@houstonmethodist.org www.nature.com/npjmgrav Published in cooperation with the Biodesign Institute at Arizona State University, with the support of NASA There are amendments to this paper serial follow up MRI, ultrasound, OCT, and fundus examinations of astronauts from this initial cohort. 1,4,5 Potential etiologies and pathogenesis for SANS Although the speci ﬁc etiology of the optic disc edema, globe"
+},
+{
+"id": "lee_sans_2020:x10",
+"text": "ﬂattening, retinal and choroidal folds and hyperopic shifts described in SANS is unclear, two basic theories have been offered (although these are not mutually exclusive hypotheses). First, these changes may result from a rise in intracranial pressure (ICP) from cephalad ﬂuid shifts during LDSF. In the terrestrial environment, CSF is largely produced in the choroid plexus and drains into the lower pressure cervical venous vasculature. 1–9 Although vascular autoregulation stabilizes the cerebral and ONH arterial diameter, 10,11 jugular venous distention has been well documented during both head down and microgravity (MG) studies12 suggesting that cerebral and jugular venous congestion may be present in the MG environment."
+},
+{
+"id": "lee_sans_2020:x11",
+"text": "Jugular venous distention alone does not necessarily prove that venous pressure is increased during space ﬂight and some studies have suggested that the venous pressure may in fact be decreased. However, a space ﬂightinduced decrease in CSF drainage into the venous system and cerebral venous congestion could potentially result in a rise in ICP that may be transferred down the orbital optic nerve sheaths resulting in optic nerve sheath expansion, stasis of axoplasmic ﬂow and globe ﬂattening similar to those changes that occur in patients with terrestrial idiopathic intracranial hypertension (IIH)."
+},
+{
+"id": "lee_sans_2020:x12",
+"text": "Moderately elevated post LDSF lumbar puncture opening pressures of 28 and 28.5 cm of water measured post- ﬂight in astronauts at 12 and 57 days respectively, which may have been higher during the mission, support this hypothesis. 1 Also, MR imaging changes in astronauts following LDSF are suggestive of increased ICP, and include pituitary concavity, empty sella, and changes in pituitary stalk con ﬁguration.13 Several other factors have been hypothesized to cause or at least augment increased ICP during LDSF. These potential risk factors include high salt diets, rigorous resistive exercise, exposure to elevated ambient"
+},
+{
+"id": "lee_sans_2020:x13",
+"text": "CO2 levels and possible defects in the vitamin B12-dependent 1carbon transfer pathways. 14 Several factors may speak against the ICP hypothesis as the sole explanation for the anatomical changes documented in astronauts. First, none of these astronauts with optic disc edema, globe ﬂattening, choroidal folds, or hyperopic shifts presented with chronic severe headaches, transient visual obscurations or diplopia. Terrestrial IIH is typically associated with prominent headaches, seen in more than 90% of all IIH patients, 15 but only mild or occasional headaches are reported in astronauts on ISS."
+},
+{
+"id": "lee_sans_2020:x14",
+"text": "Likewise, transient visual obscurations lasting seconds at a time are seen in 68% of IIH patients 15 but have not been reported in astronauts. Diplopia from a non-localizing sixth nerve palsy has been documented in up to 30% of IIH patients 15 but has never been reported in SANS. Second, most cases of terrestrial IIH present with bilateral and symmetric disc edema with highly asymmetric or unilateral disc edema documented in only 3 –10% of IIH patients. 15,16 In contrast, of ﬁve astronauts with ODE following LDSF in our 2011 report, one displayed highly asymmetric ODE, two had strictly unilateral ODE and only two displayed symmetric ODE. Third, if venous stasis from microgravity induced cephalad ﬂuid shifts was solely responsible for astronaut disc edema we would expect this edema to quickly resolve following a return to the 1 G environment."
+},
+{
+"id": "lee_sans_2020:x15",
+"text": "However, we have documented persistent ODE in astronauts up to six months post mission.5 Fourth, although increased ICP may be a factor in SANS, the post LDSF values of available ICP measurements in astronauts have been just above normal to borderline high and do not seem to be in the markedly elevated range of ICP that we typically see in terrestrial IIH where ICP values can be as high as 30 –40 cm of water or more. Finally, astronaut case reports also suggest that increased ICP alone may not be responsible for SANS. Speci ﬁcally, asymmetric ODE in the setting of a normal ICP 1 week after space"
+},
+{
+"id": "lee_sans_2020:x16",
+"text": "ﬂight has been reported. 4 In addition, unilateral loss of previously visible spontaneous venous pulsations during space ﬂight has been described in an eye with ODE that continued to be absent for 21 months after return to Earth. 17 Asymmetric disc swelling was described in another astronaut over 180 days post- ﬂight and asymmetric optic disc morphologic changes persisted for 630 days post-ﬂight in the presence of ICP measurements of 22 and 16 cm H20 obtained at 7 and 365 days post- ﬂight respectively. 5 Table 1 summarizes some of the key differences between terrestrial IIH and SANS. Renewed interest in ICP in SANS has led to a reexamination of both the on ISS (e.g., ultrasound) and on earth analogs for testing potential countermeasures for SANS."
+},
+{
+"id": "lee_sans_2020:x17",
+"text": "The optic disc edema seen both in terrestrial models of increased ICP and in SANS demonstrates a pattern of nerve ﬁber layer thickening consistent with papilledema. Invasive monitoring in humans during space ﬂight have not been performed but such changes were transient and mild in a macaque monkey. 18 Terrestrial idiopathic intracranial hypertension (IIH) is an imperfect analogy for SANS (Table 1). The prelaminar NFL edema (seen in terrestrial papilledema) presents as positive anterior angulation of the Bruch membrane opening but in SANS shows negative, posterior retroorbital angulation. Although astronauts"
+},
+{
+"id": "lee_sans_2020:x18",
+"text": "Table 1. Features comparing and contrasting terrestrial idiopathic intracranial hypertension (IIH) and space ﬂight associated neuro-ocular syndrome (SANS). Intracranial pressure (ICP) Increased Some elevated intracranial pressures on post- ﬂight lumbar punctures but inconclusive evidence that increased ICP is the major etiology Female:Male ratio 9:1 No females of ﬁcially diagnosed (0:10), but ocular changes detected in both sexes Body habitus Obese (>90%) Normal to highly athletic Symptoms Chronic headaches (94%); Transient vision obscuration (68%); Pulse synchronous tinnitus"
+},
+{
+"id": "lee_sans_2020:x19",
+"text": "Typically none besides vision complaints (Near > Distance) Side bias <4% unilateral To be determined; but gross signs have been right-biased Radiographic ﬁndings Gross anterior movement of ﬂuid within the subarachnoid space, optic nerve sheath, ﬂattening of the globe, empty sella, venous sinus stenosis without thrombosis Increased ﬂuid within the orbital subarachnoid space and sheath, ﬂattening of the globe, cephalad brain shift, limited evidence for venous sinus abnormalities Retinal: Bruch ’s membrane and choroidal and retinal folds"
+},
+{
+"id": "lee_sans_2020:x20",
+"text": "Bruch’s membrane opening anterior movement. 5:1; Retinal folds occur ﬁrst Bruch’s membrane opening posterior movement and 1:5; Fold pattern Typically concentric around ONH (Paton ’s lines) Typically linear npj Microgravity (2020) 7 Published in cooperation with the Biodesign Institute at Arizona State University, with the support of NASA 1234567890():,; demonstrate indirect radiographic evidence of increased ICP with optic nerve sheath distension this does not adjudicate between the competing hypothesis of cephalad and orbital ﬂuid shifts. In addition, sustained papilledema from increased ICP typically leads to optic atrophy following the resolution of the axonal swelling which has not been demonstrated in SANS."
+},
+{
+"id": "lee_sans_2020:x21",
+"text": "Sustained ICP elevation is correlated with increased levels of HIF-1 α in the retinal ganglion cell layer, and some models have demonstrated presumed breakdown of the blood retinal and blood optic nerve barrier with vascular leakage into the interstitial space of the ONH and subretinal space in the peripapillary region. 19 In addition, increased ICP that resolves upon return to the terrestrial 1 G environment might produce other local structural changes that might induce secondary in ﬂammation or oxidative stress and the residual optic nerve sheath distension and choroidal folds after return might suggest that the elasticity of the optic nerve sheath trabecular ﬁbers or collagen structures might be permenantly altered by space ﬂight independent of ICP."
+},
+{
+"id": "lee_sans_2020:x22",
+"text": "Further studies are needed to determine the role if any of local vascular stasis, inﬂammation, or oxidative stress to the pathophysiology of SANS in relation to ICP. A second possible explanation for SANS is compartmentalization of CSF within the orbital optic nerve sheath. 1,5 In the past, it was generally assumed that there was homogeneity of ICP and chemical components of the CSF throughout the brain, spinal cord and orbital optic nerve sheath. However, the unique tightly conﬁned and cul-de-sac like anatomic connection between brain and orbit in the optic nerve sheath may create a fragile ﬂow equilibrium and a possible one-way valve like effect that may lead to pressure elevation within the orbital optic nerve sheath with or without elevated CSF pressures surrounding the brain. 1,4,5,20–23 It has also been proposed that a microgravity induced glymphatic"
+},
+{
+"id": "lee_sans_2020:x23",
+"text": "ﬂow imbalance within the orbit may play a role in this process. 24–26 The compartmentalization theory has been previously proposed to explain the existence of continued disc edema in terrestrial patients with functional lumboperitoneal shunts. 1,21,22 Shinojima recently offered an alternate compartmentalization theory which proposes that during LDSF the optic nerve and globe may be retracted posteriorly as a result of brain upward shift and resultant uplifting of the optic chiasm during and after LDSF. 27 They propose that this posterior “pull” on the optic nerve and globe compresses the CSF within the optic nerves leading to localized pressure elevation and expansion. 27 This spectrum of potential mechanisms emphasizes the possible multifaceted origin of the unusual neuro-ophthalmic ﬁndings in SANS. 1,5,20–22,27"
+},
+{
+"id": "lee_sans_2020:x24",
+"text": "Initially, due to the moderately elevated ICP measurements in some astronauts, SANS was termed the visual impairment and intracranial pressure (VIIP) syndrome. However, over time the role of elevated ICP as the sole mechanism for the ﬁndings has come into question and the name was changed from VIIP to SANS to reﬂect the uncertainty about the pathogenesis and the possible multifactorial etiology for the ﬁndings. Although the complete pathologic process may be multifaceted and somewhat variable from astronaut to astronaut, we believe that locally elevated unilateral or bilateral CSF sheath pressure within the orbit, resulting from cephalad ﬂuid shift related phenomena, is likely an important mechanism for the ocular and imaging ﬁndings of"
+},
+{
+"id": "lee_sans_2020:x25",
+"text": "SANS as opposed to elevated ICP alone. Unfortunately, pre- ﬂight LP data are not available in any astronauts including prior ISS ﬂyers. Ongoing discussions at NASA have centered on the possibility however of obtaining pre- ﬂight ICP measurements. Some head down and MG studies have documented that cerebral arterial diameter and blood ﬂow velocity are autoregulated and do not change signi ﬁcantly during space ﬂight.10,11 It is not known if the middle cerebral artery diameter changes signiﬁcantly during space ﬂight, and other studies have concluded that cerebral autoregulation may be impaired during spaceﬂight.28 However, microgravity ﬂuid shifts during space ﬂight (including cephalad ﬂuid shift to the head and orbit) have been documented to cause jugular vein distension, as well as mild OCT thickening of the retinal nerve ﬁber layer of the optic nerve. 26,29–31"
+},
+{
+"id": "lee_sans_2020:x26",
+"text": "Interestingly, these same OCT changes have been demonstrated in head down tilt (HDT), bed rest studies on earth, 32 and HDT studies are believed to be a reasonable terrestrial analog for the cephalad ﬂuid shift in microgravity in SANS. The mechanics of ICP and the possible role of glymphatics and the venous system in SANS however remains ill-de ﬁned but have sparked additional debate and hypotheses. 24,25,33 Terrestrial and in- ﬂight ISS OCT have demonstrated more widespread ocular changes than seen on clinical exams alone. As of December 2018, additional OCT capability is available on ISS, and the use of enhanced depth imaging (EDI) OCT, OCT2,"
+},
+{
+"id": "lee_sans_2020:x27",
+"text": "MultiColor Imaging, and OCT angiography (OCTA) will increase our sensitivity for detecting the spectrum of structural changes seen to date with conventional spectral domain OCT in SANS. OCT2 is the next generation of OCT and offers enhance resolution and depth imaging from vitreous to choroid. OCT2 also has additional features of improved patient reliability and is more operator friendly. The cephalad ﬂuid shift theory proposes that venous congestion in the orbit, neck, and head might lead to elevated vortex vein pressures, decreased choroidal drainage and stagnation or pooling of blood in the choroid, and secondary choroidal expansion, elevated IOP, globe ﬂattening, and choroidal folds. Documenting these potential choroidal volume changes in a more detailed and quantitative manner with newer OCT technology will be important going forward. 13,25,34–37"
+},
+{
+"id": "lee_sans_2020:x28",
+"text": "Orbital and cranial MRI and orbital ultrasound ﬁndings in SANS In the years following the discovery of SANS, astronauts began receiving high-resolution, 3-Tesla (3 T) magnetic strength MR imaging of the head and orbits, prior to and as soon as possible after space ﬂight. MR imaging is obtained 18 –21 months prior to LDSF and within three days after the crewmember ’s return. Twodimensional ocular ultrasound is obtained 6 –9 months prior to LDSF, on-orbit (typically at ﬂight days 30 and 90, and 30 days prior to return), and within 3 days post- ﬂight. There are data which overlap between MR and ultrasound imaging modalities; however each has its advantages, and of the two, only ocular ultrasound is available onboard the ISS. Table 2 provides a general overview of the detectability of SANS signs by the primary devices and tests utilized by NASA for SANS diagnostics."
+},
+{
+"id": "lee_sans_2020:x29",
+"text": "We describe the qualitative and comparative sensitivity and speci ﬁcity of the various available tests for detecting speci ﬁc signs in SANS and not the positive predictive value for any one modality for predicting SANS. Because there is no gold standard for some of the SANS ﬁndings (e.g., MRI demonstrated globe ﬂattening) we can only provide our subjective assessments of the utility of the NASA available tests for One clinical sign of SANS is globe ﬂattening, where the convexity of the posterior sclera is reduced compared with the spherical shape of the remainder of the normal globe. Posterior globe ﬂattening may persist for years post- ﬂight. Globe ﬂattening also decreases the axial length of the globe and drives an anterior displacement of the fovea, which induces a hyperopic shift in refractive error."
+},
+{
+"id": "lee_sans_2020:x30",
+"text": "Globe ﬂattening has been documented by comparison of pre and post LDSF axial length measurements as well as hyperopic shifts in refraction. In addition, qualitative globe ﬂattening is well documented by MR imaging and ocular/orbital ultrasound. Orbital ultrasound is currently used on the ISS for this purpose but at a lower resolution and sensitivity than high ﬁeld strength orbital MRI. We recognize however that the reading of both MRI and orbital ultrasound is somewhat subjective and that our interpreting clinicians are not masked as to prior ﬂight status."
+},
+{
+"id": "lee_sans_2020:x31",
+"text": "Countermeasures to reduce over-reading bias, including single or multiple and masked readings, have not been performed to date Published in cooperation with the Biodesign Institute at Arizona State University, with the support of NASA npj Microgravity (2020) 7 by NASA but could be considered in the future. We recognize the inherent bias in unmasked MRI readings for posterior globe ﬂattening even by experienced neuroradiologists. Unfortunately, the readers are not masked to ﬂight status and no formal bias mitigation strategies (e.g., multiple readers, single, or double masking, etc.) are employed by NASA when classifying an astronaut as a SANS case. Perhaps this could be considered in the future however."
+},
+{
+"id": "lee_sans_2020:x32",
+"text": "While OCT technology is vastly superior in detecting anatomical changes within the optic nerve (ON) head, optic nerve protrusion can also be visualized by both MR and ultrasound imaging. Indeed, after analyzing post- ﬂight MR images in 15 LDSF and 12 short-duration space ﬂight (SDSF) astronauts, Kramer et al. 13 conﬁrmed the presence of post- ﬂight optic nerve protrusion, with all four cases being associated with LDSF and none with SDSF. In addition, these researchers analyzed optic nerve sheath diameter (ONSD), and suggested that the average ONSD of veterans (mean"
+},
+{
+"id": "lee_sans_2020:x33",
+"text": "= 6.2 ± 1.1 mm) is near or greater than what is predictive of intracranial hypertension (>25 mm H 2O) in terrestrial patients (i.e., a 5.0 –6.0 mm cutoff). ONSD was greatest for those astronauts presenting with posterior globe ﬂattening (mean ONSD = 7.2 ± 1.5 mm; n = 7) or optic nerve kinking (mean ONSD = 7.5 ± 1.1 mm; n = 4). Sirek et al. also have used Doppler ultrasound to document ONS expansion during HDT and during space ﬂight.38 It should be noted that while intraorbital optic nerve tortuosity and kinking are potential anatomical signs of SANS, only a limited number of crew members currently possess baseline MR images that permit thorough evaluations the optic nerve (private communication"
+},
+{
+"id": "lee_sans_2020:x34",
+"text": "William Tarver, MD). Therefore, con ﬁrmation of any pre-to-postﬂight changes in optic nerve tortuosity or kinking, or any conclusive associations between these radiographic signs and SANS have yet to be established. Orbital ultrasound however can be used to demonstrate optic nerve tortuosity and there are ongoing efforts to document these ﬁndings on ISS compared to pre-ﬂight baseline. Few published studies have investigated intracranial ﬁndings associated with space ﬂight. Kramer et al. 13 noted that, in postﬂight MR images, 3-of-15 of LDSF and 0-of-12 SDSF astronauts exhibited moderate or greater pituitary dome concavity with posterior stalk deviation. The authors noted that in terrestrial patient populations, these signs can be associated with altered"
+},
+{
+"id": "lee_sans_2020:x35",
+"text": "CSF dynamics and intracranial hypertension. Roberts et al. 39 studied the pre- ﬂight and post- ﬂight MR brain images for 18 LDSF and 16 SDSF astronauts and discovered a narrowing of the central sulcus in 17 and 3 of the two cohorts, respectively. In a subgroup that underwent additional three dimensional (3-D) T 1-averaged MR imaging, 12-of-12 LDSF astronauts experienced an upward shifting of the brain and a narrowing of the vertex CSF spaces, while 0-of-6 SDSF astronauts expressed an upward brain shift, and only 1-of-6 showed a narrowing of the vertex CSF spaces. The percentage change in the total volume of the ventricular system (lateral, third, and fourth ventricles) between pre- ﬂight and postﬂight was quanti ﬁed in the 18 participants for whom high resolution, three-dimensional, T1-weighted sequences were obtained."
+},
+{
+"id": "lee_sans_2020:x36",
+"text": "This subgroup was also analyzed for pre- ﬂight to postﬂight percent changes in ventricular system total volume, and a signiﬁcant difference was found between the LDSF ( +11 ± 5.9%) and SDSF ( +0.04 ± 1.87%) groups. Koppelmans et al. 40 detected signi ﬁcant decreases in gray matter (GM) volume from pre- ﬂight to post- ﬂight in a group of 27 astronauts. These decreases were located around the frontal and temporal poles, and near the orbits. They also observed small, localized GM increases in the medial primary somatosensory and motor cortex. Overall, the authors suggest that these changes in"
+},
+{
+"id": "lee_sans_2020:x37",
+"text": "GM volume may be related to cephalad ﬂuid shifts or neuroplasticity. Van Ombergen et al. 41 summarized a prospective MR imaging study performed on ten male LDSF cosmonauts, where images were obtained pre- ﬂight, promptly upon return (mean = 9 days post- ﬂight), and multiple months after return (mean = 209 days post- ﬂight; n = 7). Like Koppelmans et al. 40 the authors described changes in pre- ﬂight to post- ﬂight GM volume, with a widespread decrease in the orbitofrontal and temporal cortexes. The greatest decrease (3.3%) occurred in the right middle temporal gyrus. Long-term images suggested a recovery of"
+},
+{
+"id": "lee_sans_2020:x38",
+"text": "GM volume towards pre- ﬂight levels, although a GM volume reduction (1.2%) persisted in the right temporal gyrus. Similar to Roberts et al. 39 short-term post- ﬂight CSF volume was reduced below the vertex, and ventricle volume was found to be increased (with a maximum increase in the third ventricle [12.9%]). By the long-term follow-up date, ventricle volumes had almost completely recovered toward pre- ﬂight values, while CSF volume increased within the entire subarachnoid space surrounding the brain. The authors suggest that these ﬁndings might relate to clinical ﬁndings associated with long-duration space ﬂight."
+},
+{
+"id": "lee_sans_2020:x39",
+"text": "With a steadily increasing number of high-resolution pre- ﬂight and post- ﬂight MRI becoming available for analysis, additional indepth investigations will be possible. At the present time, it is not known if these intracranial ﬁndings are associated with any Table 2. Detectability of SANS signs by diagnostic device/test. Optic disc edema +++ ++ Very low sensitivity – Indirect indication (if enlarged blind spot or scotoma detected) Chorioretinal folds and peripapillary wrinkles Refractive error shift –– Indirect indication OCT optical coherence tomography, MRI magnetic resonance imaging, US ultrasound, VF visual ﬁeld, NA not applicable. npj Microgravity (2020) 7 Published in cooperation with the Biodesign Institute at Arizona State University, with the support of NASA functional/performance changes, or if they even fall within the"
+},
+{
+"id": "lee_sans_2020:x40",
+"text": "SANS spectrum. Future efforts may include clinical, OCT, and MRI examinations of space naïve astronauts (i.e., crew members who have not ﬂown previously in space) in order to avoid the possible impact of previous MG exposure on ocular and cerebral anatomy. Results of pre-ﬂight testing in these astronauts could be compared with both normal controls and with terrestrial patients with IIH. Given the abundance of post- ﬂight clinical ﬁndings in NASA crew members, NASA has been considering the incorporation of more advanced MR sequences into the standard pre- ﬂight and post-ﬂight astronaut imaging protocols to discover the elements responsible for micro-gravity induced brain changes in the astronauts. Currently, only basic volumetric T1-weighted and T2weighted MRI images are performed."
+},
+{
+"id": "lee_sans_2020:x41",
+"text": "Visual impairment has been recognized as one of the most impactful astronaut health risks which needs to be addressed as we plan for very long-term spaceﬂights such as travel to the moon or Mars. Undoubtedly, comparison of the pre- ﬂight and post- ﬂight highresolution anatomical MR images of the orbits and the brains of astronauts has signi ﬁcantly helped us to better assess and understand the post- ﬂight changes. It is worth noting that in addition to all these efforts, some advanced MRI techniques such as Diffusion Tensor Imaging (DTI) have been recently utilized to identify the microstructural change in SANS in the posterior part of the visual system which may contribute to the bigger picture of"
+},
+{
+"id": "lee_sans_2020:x42",
+"text": "“post-ﬂight visual impairment ” in the crewmembers. A recent quantitative comparison of pre- ﬂight and post- ﬂight brain MR scans of 19 astronauts was performed implementing the anatomical and DTI sequences. 42 Basically, diffusion-tensor MR imaging and ﬁber tractography are MRI techniques to estimate the axonal organization of the brain. Diffusion tensor metrics provides a quantitative analysis of the magnitude and directionality of water molecules. In this regard, mean diffusivity (MD) reﬂects the average magnitude of molecular displacement by diffusion where the greater values are indicative of a more isotropic medium. Fractional anisotropy (FA) also shows the directionality of this diffusion and varies between 0 (isotropic diffusion) and 1 (in ﬁnite anisotropic diffusion). Any change in these parameters is mainly related to axonal integrity, myelination, axon diameter and density."
+},
+{
+"id": "lee_sans_2020:x43",
+"text": "Evaluation of the white matter tracts in the above study demonstrated a decrease in the FA in the right posterior thalamic radiation in the astronauts ’ brain after their space-missions (p = 0.0009, p = 0.03 after FDR correction). A trend of increase in the MD in the gray matter of the right calcarine, middle occipital, inferior occipital and fusiform gyri was also recorded by this group in the post- ﬂight scans. The identi ﬁed changes in this study were primarily attributed to cerebral edema and ﬂuid redistribution in the visual pathways secondary to the effect of intracranial hypertension induced by microgravity."
+},
+{
+"id": "lee_sans_2020:x44",
+"text": "Furthermore, brain morphometric analysis of post- ﬂight scans showed a trend of decrease in the mean of cortical thicknesses in the right occipital and bilateral fusiform gyri. Another retrospective analysis of the brain MRI scans of 15 astronauts has also shown signi ﬁcant widespread space ﬂightassociated free water increases at the base of the cerebellum and decrease along the posterior vertex which was re ﬂecting disrupted white matter structural connectivity in the cerebellum, corticospinal tract and superior longitudinal fasciculus, among other regions after adjustment. 43 Unfortunately, some of the clinical and radiographic ﬁndings in SANS may not be unique to only LDSF because many of the astronauts thus far studied had previous SDSF and thus had no true pre- ﬂight comparative data."
+},
+{
+"id": "lee_sans_2020:x45",
+"text": "In addition, some of the MRI ﬁndings (e.g., globe ﬂattening) may be subtle and could easily be over-interpreted especially if the neuroradiologist is not masked to their ﬂight status. In order to effectively link these brain microstructural changes in SANS to clinical ﬁndings, future masked imaging studies will be needed. Longitudinal analysis of the brain MR scans of the astronauts in different time-points should also help to elucidate recovery time course and reversibility of described changes. Since its deployment to the ISS in 2013, NASA researchers have been using the Heidelberg Spectralis OCT imaging platform to study the effects of microgravity on posterior ocular structures."
+},
+{
+"id": "lee_sans_2020:x46",
+"text": "OCT is a noninvasive imaging test that uses light waves to take a high resolution cross-section picture of the retina, choroid, and optic nerve head (ONH), and has become the primary diagnostic tool for the early detection and monitoring of SANS. The standard for assessing clinical optic disc edema has been the Frisén grading scale system as quanti ﬁed by a dilated eye exam or fundus photography. High resolution OCT technology has had a signiﬁcant impact on quantifying early morphological changes of the posterior ocular structures and detecting ocular pathology (e.g., IIH, glaucoma, macular degeneration)."
+},
+{
+"id": "lee_sans_2020:x47",
+"text": "Patel et al. published a retrospective study comparing OCT (Cirrus HD, Carl Zeiss Meditec) analysis of the ONH and surrounding structures in 15 long-duration ISS astronauts with 43 healthy control subjects with no history of ocular pathology or microgravity exposure. 44 Patel et al. showed an increase in retinal nerve ﬁber layer (RNFL) thickness and total retinal thickness close to the optic nerve head margin consistent with optic disc edema, and a posterior shift in Bruch ’s membrane opening (BMO) position as quanti ﬁed by BMO height in astronauts after microgravity exposure (Fig. 1).44 The study also revealed a signi ﬁcantly high proportion of eyes with choroidal folds in astronauts after LDSF (Fig. 2), while no choroidal folds were detected on healthy controls. The changes in retinal nerve ﬁber layer thickness and total retinal thickness are similar to those observed with terrestrial"
+},
+{
+"id": "lee_sans_2020:x48",
+"text": "Fig. 1 Bruch membrane opening (BMO) and height. a Marking of the BMO (orange marker) is shown on 1 radial section through the optic nerve head. The BMO center (red dashed line) was used to determine the location for a reference plane at 2 mm (white line), from which the BMO height was quanti ﬁed (blue line). b The BMO height is recessed in pre- ﬂight optical coherence tomographic (OCT) scans compared with healthy controls. This difference increases after long-duration microgravity exposure. It should be noted that most astronauts included in this study had previous space ﬂight experience. (Reprinted with permission from Patel et al. 87)."
+},
+{
+"id": "lee_sans_2020:x49",
+"text": "Published in cooperation with the Biodesign Institute at Arizona State University, with the support of NASA npj Microgravity (2020) 7 IIH. However, the posterior de ﬂection of the BMO height and the relatively high incidence of choroidal folds are not commonly seen with IIH, suggesting an alternate hypothesis for SANS. As the location of the BM may be in ﬂuenced by the underlying choroid, perhaps changes in choroidal volume during LDSF may impact the BMO angle in astronauts and be part of the multifaceted pathogenesis for SANS. The results of this study also suggest that although there may be some resolution of structural changes, there can be long-term anatomical changes after extendedduration space ﬂight."
+},
+{
+"id": "lee_sans_2020:x50",
+"text": "To date approximately 15% of astronauts had clinically signiﬁcant (Frisén grade 1 –3) ODE after LDSF (private communication William Tarver, MD). However, we would like to emphasize that OCT has revealed some level of ODE in nearly all astronauts when comparing pre- ﬂight and in- ﬂight OCT and this suggests that subclinical SANS involvement may occur in the majority of astronauts. Choroidal folds have been observed in over 20% of astronauts following LDSF and in- ﬂight OCT has documented choroidal thickening on all tested astronauts compared with pre- ﬂight baseline OCT. 5 Ongoing studies that include OCT imaging of the posterior ocular segment on the ISS will provide additional information on the etiology and time course of these structural changes that will be important not only for understanding the pathophysiology of SANS but also for developing countermeasures."
+},
+{
+"id": "lee_sans_2020:x51",
+"text": "In addition, OCT algorithms and methods used to determine ocular morphological changes in astronauts could be helpful in both future space travel studies as well as related clinical studies here on Earth. NASA current and future operations and research for SANS NASA astronauts undergo extensive medical evaluations at the time of selection and routinely thereafter. Although medical (including ophthalmic) testing related to SANS has been ongoing over the last decade, little SANS-speci ﬁc data were acquired prior to 2010. Additionally, early pre- ﬂight data were potentially skewed due to the vast majority of astronauts having had already ﬂown at least one SDSF or LDSF. For example, all seven of the astronauts reported in the 2011 Mader paper 1 had previous space ﬂight experience, and none had the SANS-speci ﬁc MR imaging performed prior to their last ﬂight."
+},
+{
+"id": "lee_sans_2020:x52",
+"text": "Thus, clinical imaging and anatomical changes due solely to LDSF could not be accurately determined. More recently, however, pre- ﬂight data have been collected on space naïve astronauts. As this unbiased dataset becomes available for analysis, the true nature of the changes seen due to LDSF alone can be evaluated. Two case reports 2,3 exemplify how such data can be useful. Astronaut medical and research data are archived in the Lifetime Surveillance of Astronaut Health (LSAH) repository and the Life Sciences Data Archive (LSDA) repository, respectively. Information about these archives is available at a website portal ( https://lsda.jsc.nasa.gov/)."
+},
+{
+"id": "lee_sans_2020:x53",
+"text": "Limitations related to space ﬂight impede medical and research data in several ways. The current astronaut return to Earth is a hard landing in the former Union of Soviet Socialist Republics (USSR) country of Kazakhstan. This creates challenging political, operational, and logistical barriers to performing a timely, accurate and safe LP on returning astronauts. Recently, more direct air transportation back to Houston, Texas, USA from Kazakhstan gives Fig. 2 Post-ﬂight imaging of the right eye. a Fundus imaging showing the “C” halo of the Frisén Grade 1 disc edema and choroidal folds inferior to the disc. b Scanning laser ophthalmoscopy (SLO) image from the SD-OCT with an overlay of the vertical raster scan placement."
+},
+{
+"id": "lee_sans_2020:x54",
+"text": "Note the choroidal folds superior and inferior to the disc visible in the SLO image. c The retinal cross-section obtained by the vertical scan just nasal to the disc showing retinal nerve ﬁber layer thickening and severe choroidal folds. (Reprinted with permission from Patel et al. 87). npj Microgravity (2020) 7 Published in cooperation with the Biodesign Institute at Arizona State University, with the support of NASA a better window of opportunity for performing post- ﬂight LPs and measuring true ICP values closer in time to the actual return."
+},
+{
+"id": "lee_sans_2020:x55",
+"text": "At present, three astronauts/cosmonauts launch about every 3 months, resulting in only 12 individuals ﬂying annually. This limits study sample sizes. Although astronaut training backgrounds are rigorous and selected participants include aviators, scientists and physicians, none are experienced eye specialists. Astronauts receive about 7.5 h of SANS-related training in the year prior to their launch. During a 6-month mission, an astronaut will perform only a few SANS-related data collections, and each one is 30–90 days apart. Due to operational requirements and other competing tasks, medical operations testing and data collections must be kept simple and focused. Finally, for Orion missions beyond low earth orbit (LEO), the Space Medicine Operations"
+},
+{
+"id": "lee_sans_2020:x56",
+"text": "Division of NASA is currently facing a weight constraint of 30 pounds for all medical equipment and supplies, and therefore, must judiciously choose the number, frequency, and extent of future medical exams. Ongoing analysis has yet to clearly de ﬁne the pathophysiology leading to SANS associated ﬁndings, and the current data do not point to a single pathologic mechanism (e.g., elevated ICP or cephalad ﬂuid shift alone). Measuring changes in ICP before, during and immediately post- ﬂight has never been performed in astronauts. In addition, unfortunately no valid and reliable measures (either direct or indirect) of in- ﬂight ICP have been available for use during space ﬂight. Post-ﬂight ICP data have been acquired only in astronauts who experienced optic disc edema clinically."
+},
+{
+"id": "lee_sans_2020:x57",
+"text": "Thus, no astronaut population-based ICP data exist although NASA is working diligently to determine a forward path toward solving this signi ﬁcant knowledge gap. OCT ﬁgures prominently in our SANS surveillance scheme. OCT has a particularly prominent role at present as a high-quality objective measure of the optic nerve head (optic nerve head), macula and choroid complex. Unlike ICP, OCT data can be gathered in a rapid, noninvasive, safe, reliable, and reproducible manner during pre-, in- and post- ﬂight testing. A Heidelberg Spectralis “OCT2” device has been recently activated on ISS and promises acquisition of denser imaging of the optic nerve head, retina, and choroid. Figure 3 demonstrates the current SANS OCT protocol (2014 –2019) compared to the proposed SANS OCT protocol in Fig. 4."
+},
+{
+"id": "lee_sans_2020:x58",
+"text": "The upgraded OCT2 on the ISS has another feature that will replace routine screening fundoscopy during missions — multicolor imaging (MCI). This false color image technique may provide more useful data and can be supplemented with fundoscopy when clinically indicated. A yet-to-be-published ground-based study conducted by the Doheny Eye Institute in 2018 compared fundoscopy to MCI, and results indicate that SANS signs that are visible by fundoscopy are equally detectable by MCI (personal communication Tyson J. Brunstetter OD). The breathing environment on ISS is 14.7 psi with normal oxygen and nitrogen levels. However, technical constraints maintain the carbon dioxide (CO 2) levels at nearly 10 times Earth normal. Since astronauts are exposed to these elevated CO 2 levels in addition to MG the possible physiologic role of CO 2 remains ill deﬁned."
+},
+{
+"id": "lee_sans_2020:x59",
+"text": "Elevated radiation levels are also of concern on ISS and the potential role for radiation during LDSF and its potential role in SANS likewise remains an area of great interest. It should be noted that CWS have been documented in several astronauts following LDSF.1,5 As these are also seen following terrestrial radiation therapy45 their presentation in astronauts following LDSF suggests46–54 the possible role of space radiation exposure. 5 NASA is attempting to tease apart the role that each of these elements may play in SANS. Law et al. have compared headaches against measured CO 2 levels.55 Also, genetic variations in the one-carbon metabolism pathway and the potential role for these genetic predispositions and their signi ﬁcance are being explored by several research groups. 14"
+},
+{
+"id": "lee_sans_2020:x60",
+"text": "Fig. 3 Prior optical coherence tomography (OCT) scanning protocol for SANS. Fig. 4 Current OCT2 scanning protocols for SANS. Published in cooperation with the Biodesign Institute at Arizona State University, with the support of NASA npj Microgravity (2020) 7 Terrestrial and in- ﬂight ISS OCT have demonstrated more widespread ocular changes than seen on clinical exams alone. We and many other authors believe that choroidal expansion from microgravity-related cephalad ﬂuid shifts might be an additional mechanism to explain the globe ﬂattening, hyperopic refractive shift, and retinal and choroidal folds seen on OCT. OCTA, which was not available previously on ISS, has demonstrated promising potential for retinal and choroidal disease on earth and may prove useful in deﬁning retinal and choroidal vessel changes in SANS."
+},
+{
+"id": "lee_sans_2020:x61",
+"text": "The role of OCTA in the future evaluation of SANS, however, remains to be de ﬁned. The cephalad ﬂuid shift theory proposes that venous congestion in the orbit, neck, and head during space ﬂight might lead to elevated vortex vein pressures, 1,35–37,39,56,57 decreased choroidal drainage and stagnation or pooling of blood in the choroid, with secondary choroidal expansion as well as globe ﬂattening, and set the stage for choroidal folds. Documenting these potential choroidal volume changes in a more detailed and quantitative manner with newer OCT technology will be important going forward."
+},
+{
+"id": "lee_sans_2020:x62",
+"text": "Revisiting ICP and potential countermeasures for the future As noted above, the neuro-ocular ﬁndings of SANS were initially termed the visual impairment, intracranial pressure (VIIP) syndrome. In response to a gradual reduction in the presumed role of ICP in the pathogenesis, SANS was chosen as a more appropriate descriptive term. Recently however the possible role of ICP and translaminar pressure differences between ICP and intraocular pressure (IOP) have been of more interest. 18,58,59 Lawley et al. documented that prolonged periods of simulated microgravity did not cause progressive elevations in ICP. He suggested that complete removal of gravity does not pathologically elevate ICP but does prevent the normal lowering of ICP when upright. His"
+},
+{
+"id": "lee_sans_2020:x63",
+"text": "ﬁndings suggested that the terrestrial human brain is protected by the daily circadian cycles in regional ICPs, without which pathology may occur. He speculated that the absence of diurnal, postural reductions in ICP relative to IOP in microgravity creates a persistently lower pressure gradient at the posterior aspect of the eye that may result in optic remodeling. 60 The ongoing debate has prompted revisiting some of the other risk factors including carbon dioxide and in particular the role of hypercapnia in increased ICP and in terrestrial analogs (e.g., head down tilt studies) that may mimic the cephalad ﬂuid shift."
+},
+{
+"id": "lee_sans_2020:x64",
+"text": "Renewed interest in the role of ICP 60–69 in SANS has led to discussion about the feasibility of performing a lumbar puncture in space despite the obvious logistical and operational challenges to an in- ﬂight invasive procedure. 70–72 Non-invasive assessment of ICP have not been reliably validated on earth but ultrasound is available on the ISS and the possibility of ultrasonographic metrics (e.g., optic nerve sheath diameter, CSF in the sheath) remain an area of continued research."
+},
+{
+"id": "lee_sans_2020:x65",
+"text": "Likewise terrestrial head down studies with and without hypercapnia have demonstrated increased retinal nerve ﬁber layer on OCT and might still prove to be a suitable terrestrial analog to test hypotheses and potential countermeasures to SANS. 73–82 These countermeasures include metabolic and pharmacologic treatments 69,83–87 in the one carbon pathways;63,69 lower body negative pressure; 74–76 and swim goggles to affect the translaminar pressure gradient. While current data does not seem to support prolonged, signi ﬁcant elevations of ICP to the levels seen in IIH, throughout LDSF, Lawley et al. proposed that even mild elevations of ICP for a prolonged duration may contribute to the structural changes seen in SANS. Table 3 outlines some of the proposed areas for continued research in"
+},
+{
+"id": "lee_sans_2020:x66",
+"text": "In summary, novel and unique neuro-ophthalmic ﬁndings have been documented in astronauts during and after LDSF and have been termed SANS. Although a single unifying and overreaching mechanism has yet to be proven, 1,2,4–9,19,40,41,44,55–57 and a multifactorial pathogenesis may be involved, it is likely that SANS may be the end result of cephalad ﬂuid shifts to the brain and orbit brought about by extended MG exposure. Mao et al. reviewed the impact of space ﬂight and artiﬁcial gravity in a mouse retinal model using biochemical and proteomic analysis. Zhang and Hargens reviewed the possible role of space ﬂight-induced intracranial hypertension and visual impairment as well as potential pathophysiology and Countermeasures. Wostyn and"
+},
+{
+"id": "lee_sans_2020:x67",
+"text": "De Deyn described intracranial pressure-induced optic nerve sheath response as a possible predictive biomarker for optic disc edema in astronauts. The interested reader is directed to both our own prior review articles but also the animal and human work performed by the many intramural and extramural NASA related partners working on SANS. 6–9 Despite the recognition and research related to SANS for many years, several unanswered questions remain: (1) What, if any, is the signiﬁcance of potential preferential laterality (i.e., right-sided bias) seen in the anatomical changes of SANS?"
+},
+{
+"id": "lee_sans_2020:x68",
+"text": "(unpublished data, personal communication WT); (2) Are there changes in the eye ’s anterior segment (in addition to the posterior segment ﬁndings) associated with SANS?; (3) What, if any, is the role of CO 2 or radiation in SANS?; (4) Are there pre- ﬂight anatomic, hormonal or physiologic characteristics of in astronauts that predispose to the development or severity of SANS?; (5) Are there more sensitive and objective measures of the ODE in SANS (as compared to the Frisén scale)?; (6) Is there a dose (i.e., duration of LDSF) response curve or dose gradient for exposure with longer missions producing a greater SANS risk?; and (7) What role, if any, does the lymphatic system play in SANS? These and many other questions remain under active investigation by NASA and its clinical and research partners."
+},
+{
+"id": "lee_sans_2020:x69",
+"text": "Understanding the possible mechanisms for SANS will undoubtedly be useful in developing preventive or counter measures Table 3. Potential mechanisms of space ﬂight associated neuro-ocular syndrome (SANS). 1. Cephalad ﬂuid shift with intraorbital and intracranial volume increase 5. Intracerebral volume and cerebral edema alterations 6. Orbital and cerebral arterial or venous drainage disturbance 7. One carbon pathway metabolism alterations 9. Hypercapnia related volume and pressure disturbances npj Microgravity (2020) 7 Published in cooperation with the Biodesign Institute at Arizona State University, with the support of NASA before or during LDSF especially as NASA prepares for the possibility of even longer duration manned missions to the ISS, the moon, the asteroid belt, or Mars."
+}
+]
+}

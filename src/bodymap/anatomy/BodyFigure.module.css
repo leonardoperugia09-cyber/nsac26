@@ -9,7 +9,7 @@
 .region { --c: var(--bm-nominal); --lo: 0.55; --sw: 0.7; pointer-events: none; transition: opacity 0.25s ease, filter 0.25s ease; }
 .nominal { --c: var(--bm-nominal); }
 .watch { --c: var(--bm-watch); --lo: 1; --sw: 1.1; filter: drop-shadow(0 0 2px var(--bm-watch-glow)); }
-.act { --c: var(--bm-act); --lo: 1; --sw: 1.3; filter: drop-shadow(0 0 2.5px var(--bm-act-glow)) drop-shadow(0 0 6px var(--bm-act-glow)); animation: pulse 2.4s ease-in-out infinite; }
+.act { --c: var(--bm-act); --lo: 1; --sw: 1.3; filter: drop-shadow(0 0 2.5px var(--bm-act-glow)) drop-shadow(0 0 6px var(--bm-act-glow)); }
 .unknown { --c: var(--bm-unknown); --lo: 0.75; }
 .stale { --c: var(--bm-unknown); --lo: 0.75; }
 

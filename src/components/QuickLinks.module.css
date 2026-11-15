@@ -1,5 +1,5 @@
-.row { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; margin-bottom: 32px; }
-@media (max-width: 1279px) { .row { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.row { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; margin: 16px 0; }
+@media (max-width: 1023px) { .row { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 
 .tile { position: relative; display: flex; align-items: center; gap: 12px; min-height: 68px; padding: 12px 14px; border: 0; border-radius: 20px;
   background: var(--card); color: var(--ink); text-align: left; cursor: pointer; transition: transform 120ms, box-shadow 120ms; }
@@ -13,7 +13,7 @@
 .text span { font-size: 13px; line-height: 1.3; color: var(--ink-2); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .arrow { flex: none; margin-left: auto; color: var(--ink-2); opacity: 0; transition: opacity 120ms, transform 120ms; }
 
-.watch .icon { background: rgba(224, 138, 30, 0.16); color: var(--watch-ink); }
+.watch .icon { background: rgba(232, 177, 10, 0.2); color: var(--watch-ink); }
 .watch .text span { color: var(--watch-ink); font-weight: 500; }
 .act .icon { background: rgba(180, 43, 35, 0.12); color: var(--act); }
 .act .text span { color: var(--act); font-weight: 500; }

@@ -1,0 +1,359 @@
+{
+"id": "chancellor_radiation_2018",
+"title": "Limitations in predicting the space radiation health risk for exploration astronauts",
+"authors": "Chancellor JC, Blue RS, Cengel KA, et al.",
+"year": 2018,
+"licence": "CC BY 4.0",
+"source_url": "https://doi.org/10.1038/s41526-018-0043-2",
+"topics": [
+"radiation"
+],
+"kind": "full_text_excerpts",
+"note": "Verbatim text extracted from the source for retrieval; page furniture and the reference list removed. Not reviewed by HALO.",
+"chunks": [
+{
+"id": "chancellor_radiation_2018:x1",
+"text": "Limitations in predicting the space radiation health risk for exploration astronauts Jeffery C. Chancellor 1, Rebecca S. Blue 2, Keith A. Cengel 3, Serena M. Auñón-Chancellor 4,5, Kathleen H. Rubins 4, Helmut G. Katzgraber 1,6,7 and Ann R. Kennedy 3 Despite years of research, understanding of the space radiation environment and the risk it poses to long-duration astronauts remains limited. There is a disparity between research results and observed empirical effects seen in human astronaut crews, likely due to the numerous factors that limit terrestrial simulation of the complex space environment and extrapolation of human clinical consequences from varied animal models."
+},
+{
+"id": "chancellor_radiation_2018:x2",
+"text": "Given the intended future of human space ﬂight, with efforts now to rapidly expand capabilities for human missions to the moon and Mars, there is a pressing need to improve upon the understanding of the space radiation risk, predict likely clinical outcomes of interplanetary radiation exposure, and develop appropriate and effective mitigation strategies for future missions. To achieve this goal, the space radiation and aerospace community must recognize the historical limitations of radiation research and how such limitations could be addressed in future research endeavors."
+},
+{
+"id": "chancellor_radiation_2018:x3",
+"text": "We have sought to highlight the numerous factors that limit understanding of the risk of space radiation for human crews and to identify ways in which these limitations could be addressed for improved understanding and appropriate risk posture regarding future human spaceﬂight. npj Microgravity (2018) 4:8 ; doi:10.1038/s41526-018-0043-2 While space radiation research has expanded rapidly in recent years, large uncertainties remain in predicting and extrapolating biological responses to radiation exposure in humans. As future missions explore outside of low-Earth orbit (LEO) and away from the protection of the Earth ’s magnetic shielding, the nature of the radiation exposures that astronauts encounter will include higher radiation exposures than any experienced in historical human spaceﬂight."
+},
+{
+"id": "chancellor_radiation_2018:x4",
+"text": "In 1988, the National Council on Radiation Protection and Measurements (NCRP) released Report No. 98: Guidance On Radiation Received in Space Activities. 1 In this report, authors recommended that NASA astronauts be limited to career lifetime radiation exposures that would induce no more than a 3% Risk of Exposure-Induced Death (REID). This was re-emphasized in the 2015 NCRP Commentary No. 23: Radiation Protection for Space Activities: Supplement to Previous Recommendations, which concluded that NASA should continue to observe the 3% REID career limit for future missions outside of LEO. 2 This limit has been accepted in NASA ’s Space ﬂight Human-System Standard document, NASA STD-3001 Volume 1 (Revision A). 3"
+},
+{
+"id": "chancellor_radiation_2018:x5",
+"text": "Despite the adoption of these guidelines and the past 30 years of research, there has been little progress on fully de ﬁning or mitigating the space radiation risk to human crew. In fact, the NCRP’s recent conclusions speci ﬁed that their 3% limit may not be conservative enough given the incomplete biological data used in existing projection models, and that such models may overestimate the number of allowable “safe days” in space for missions outside of LEO. 2 A recent report by Schwadron et al. has identi ﬁed further concerns regarding the interplanetary radiation environment. 4"
+},
+{
+"id": "chancellor_radiation_2018:x6",
+"text": "The unusually low activity between solar cycles 23 and 24 (1996present) has resulted in the longest period of minimum solar activity observed in over 80 years of solar measurements. The lack of solar activity has led to a substantial decrease in solar wind density and magnetic ﬁeld strengths that typically attenuate the ﬂuence (the ﬂux of particles crossing a given plane) of Galactic Cosmic Ray (GCR) ions during periods of solar minimum. As a result, Schwadron et al. project that GCR ﬂuences will be substantially higher during the next solar cycles (24 – 25) leading to increased background radiation exposure and, subsequently, as much as a 20% decrease in the allowable safe days in space (outside of LEO) to stay below the 3% REID limits. 4"
+},
+{
+"id": "chancellor_radiation_2018:x7",
+"text": "The study of human health risks of space ﬂight (e.g., bone health, behavior, nutrition, etc.) typically involves analogs that closely represent the space environment. In most cases, theory, models, and study outcomes can be validated with available spaceﬂight data or, at a minimum, observation of humans subjected to analog terrestrial stresses. In contrast, space radiation research is limited to the use of analogs or models that for many reasons do not accurately represent the operational space radiation environment or the complexity of human physiology."
+},
+{
+"id": "chancellor_radiation_2018:x8",
+"text": "For example, studies on the effects of space radiation generally use mono-energetic beams and acute, single-ion exposures (including protons, lithium, carbon, oxygen, silicon, iron, etc.) instead of the complex energy spectra and diverse ionic composition of the space radiation environment. In addition, a Received: 19 August 2017 Revised: 20 February 2018 Accepted: 12 March 2018 1Department of Physics and Astronomy, Texas A&M University, College Station, TX 77843-4242, USA; 2Aerospace Medicine and Vestibular Research Laboratory, The Mayo Clinic"
+},
+{
+"id": "chancellor_radiation_2018:x9",
+"text": "Arizona, Scottsdale, AZ 85054, USA; 3Department of Radiation Oncology, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA; 4National Aeronautics and Space Administration (NASA), Johnson Space Center, Houston 77058, USA; 5University of Texas Medical Branch, Galveston, TX 77555, USA; 61QB Information Technologies (1QBit), Vancouver, BC V6B 4W4, Canada and 7Santa Fe Institute, 1399 Hyde Park Road, Santa Fe, NM 87501, USA Correspondence: Jeffery C. Chancellor (jeff@chancellor.space) www.nature.com/npjmgrav"
+},
+{
+"id": "chancellor_radiation_2018:x10",
+"text": "Published in cooperation with the Biodesign Institute at Arizona State University, with the support of NASA projected, cumulative mission dose is often delivered in one-time, or rapid and sequential, doses delivered to experimental animals. In most cases, these dose-rates are several orders of magnitude higher than actual space environment exposures. Even the use of animal models introduces error, as studies make use of a variety of animal species with differing responses and sensitivity to radiation that may not represent human responses to similar exposures."
+},
+{
+"id": "chancellor_radiation_2018:x11",
+"text": "Further, studies do not challenge multiple organ systems to respond concurrently to the numerous stressors seen in an operational spaceﬂight scenario. Historical epidemiological studies of humans, which are generally used for correlation of animal and experimental models, include populations such as atomic bomb or nuclear accident survivors exposed to whole-body irradiation at high doses and high dose-rates, limited to scenarios not found in spaceﬂight. These disparities and numerous other environmental considerations contribute to the large uncertainties in the outcomes of space radiobiology studies and the applicability of such studies for extrapolation and prediction of clinical health outcomes in future space ﬂight crews."
+},
+{
+"id": "chancellor_radiation_2018:x12",
+"text": "Here we seek to highlight these factors that contribute to the challenge of radiation risk prediction and mitigation for future exploration spaceﬂight. Our intent is to provide an understanding of the current state of radiation-speci ﬁc literature, efforts towards better de ﬁning the space radiation environment, and the difﬁculties in realization of this effort that limit current knowledge. Further, we hope to identify opportunities for future research that could best elucidate a path towards successful de ﬁnition and mitigation of the space radiation risk to humans outside of LEO."
+},
+{
+"id": "chancellor_radiation_2018:x13",
+"text": "Biological stressors related to space radiation are due to the effects of energy transfer from a charged particle to the human body. The combination of a particle ’s charge, mass, and energy determines how quickly it loses energy when interacting with matter.5– 7 For example, given equal initial kinetic energies, an electron will penetrate further into aluminum than a heavy charged particle, and an X-ray will, on average, penetrate even further. In biological tissue, the absorbed dose that a particular target organ receives from heavy-charged particle radiation depends not only on the energy spectrum of the particles but also on the depth and density of the tissue mass that lie between the skin surface and the target organ (for example, see Fig. 1, which demonstrates the tissue depth ionized hydrogen (proton) penetrates as a function of energy)."
+},
+{
+"id": "chancellor_radiation_2018:x14",
+"text": "The radiation dose to an astronaut, measured in units of Gray (Gy,d e ﬁned as Joules per kilogram ( J/kg)), is deposited with a distribution in tissues that results from the speci ﬁc energy ﬂuence of the particles. The heavier the charged particle, the greater the amount of energy deposited per unit path length for that particle. This is called linear energy transfer (LET). The space weather environment is most commonly categorized into three sources of ionizing radiation, each of which is associated with different energy and prevalence and, thus, different radiation-related risk. First, the GCR spectrum consists of primarily ionized hydrogen, as well as less frequent heaviercharged particles, with relatively high LET, that contribute to the chronic, background radiation exposure for long-duration astronauts."
+},
+{
+"id": "chancellor_radiation_2018:x15",
+"text": "Solar Particle Events (SPEs) consist mostly of short-duration exposures of high-energy protons that emanate from the Sun within regions of solar magnetic instability. 8 Finally, solar wind consists of mostly low energy protons and electrons. The background dose-rate for solar wind varies with the solar cycle, but is easily shielded by modern spacecraft designs and is considered to be of negligible risk. In addition to space environment radiation, some small amounts of radioisotopes are used in manned space missions for instrument calibration and research; however, these sources are highly controlled by ﬂight rules and mission planners. The vast majority of crew radiation exposures are delivered by the complex radiation environment in which they must travel and live."
+},
+{
+"id": "chancellor_radiation_2018:x16",
+"text": "GCR ions, originating from outside our solar system, are relativistic nuclei that possess suf ﬁcient energies to penetrate any shielding technology used on current mission vehicles. 9 The GCR spectrum is a complex combination of fast-moving ions derived from most atomic species found in the periodic table. 10 The GCR spectrum, from hydrogen (Z, or atomic number, of 1) through iron ( Z = 26), is shown in Fig. 2. This spectrum consists of approximately 87% hydrogen ions (protons), 12% helium ions ( α particles), and 1 – 2% heavier nuclei with charges ranging from Z = 3 (lithium) to Z = 28 (nickel).10,11 Ions heavier than nickel are also present, but they are rare in occurrence. GCR ions with charge Z ≥ 3 are frequently referred to as HZE particles ( High nuclear charge Z and energy E)."
+},
+{
+"id": "chancellor_radiation_2018:x17",
+"text": "During transit outside of LEO, every cell nucleus within an astronaut’s body would be traversed by a hydrogen ion or delta Fig. 1 Depth dose, energy, and linear energy transfer characteristics of protons. The range of proton energies relative to the body diameter (dotted lines) and bone marrow depth (ordinate) for mice, pigs, and humans for energies up to 60 MeV. Figure reprinted by permission from Conditions for RightsLink Permissions Springer Customer Service Center GmbH:Springer-Verlag 32 Fig. 2 Relative abundance of atomic species, normalized to Z = 1 (hydrogen) and up to Z = 26 (iron), in the Galactic Cosmic Ray (GCR) spectrum. The GCR spectrum includes every atom in the periodic table, with ions up to nickel ( Z = 28) contributing to any signi ﬁcance."
+},
+{
+"id": "chancellor_radiation_2018:x18",
+"text": "Note the energy of each ion species varies widely, more prominently in the range of 400 –600 MeV. This broad disparity in ions and energies makes it extremely dif ﬁcult to accurately simulate the GCR environment during ground-based radiobiology experiments. While larger ions may provide lower relative contribution to the spectrum makeup they may have a more signi ﬁcant biological impact than smaller, abundant ions. Data adapted from Saganti et al. 2014 108 npj Microgravity (2018) 8 Published in cooperation with the Biodesign Institute at Arizona State University, with the support of NASA"
+},
+{
+"id": "chancellor_radiation_2018:x19",
+"text": "1234567890():,; ray (a recoil electron caused by fragmentation after ion interactions) every few days, and by a heavier GCR ion (e.g., O, Si, Fe) every few months. 12,13 Despite their infrequency, the heavy ions contribute a signi ﬁcant amount to the GCR dose that astronauts would incur outside of LEO. The energies of the heavier GCR ions are so penetrating that shielding can only partially reduce the intravehicular doses.13 Thicker shielding could provide protection, but is limited by mass and volume restrictions of exploration vehicles and dependent upon the capabilities of spacecraft launch systems."
+},
+{
+"id": "chancellor_radiation_2018:x20",
+"text": "The high-LET radiation found in the GCR spectrum can produce excessive free radicals that instigate oxidative damage to cell structures. Chronic exposure to such oxidative stress contributes to the radiation-induced changes associated with premature aging, cardiovascular disease, and the formation of cataracts."
+},
+{
+"id": "chancellor_radiation_2018:x21",
+"text": "The large ionization power of GCR ions makes them a potentially signiﬁcant contributor to tissue damage and carcinogenesis, central nervous system (CNS) degeneration, and deleterious health outcomes.14,15 In addition, as GCR ions pass through a space vehicle, interaction with the spacecraft hull attenuates the energy of heavy-charged particles and frequently causes their fragmentation into numerous particles of reduced atomic weight, a process referred to as spallation.16,17 Spallation occurring as GCR particles collide with shielding materials can result in ‘cascade showers’that produce progeny ions with much higher potential for biological destruction than the original particle. 9,13,18,19 This process changes the makeup of the intravehicular radiation spectrum, adding to the complexity of the radiation environment unique to spaceﬂight."
+},
+{
+"id": "chancellor_radiation_2018:x22",
+"text": "During SPEs, magnetic disturbances on the surface of the sun result in the release of intense bursts of ionizing radiation that are difﬁcult to forecast in advance. 20– 22 SPE radiation is primarily composed of protons with kinetic energies ranging from 10 MeV up to several GeV (determined by the relativistic speed of particles) and is predicted to produce a heterogeneous dose distribution within an exposed astronaut ’s body, with a relatively high super ﬁcial (skin) dose and a signi ﬁcantly lower dose to internal organs."
+},
+{
+"id": "chancellor_radiation_2018:x23",
+"text": "As extravehicular space suits provide relatively low shielding protection, SPE exposures occurring during extravehicular activities would pose signi ﬁcant risk to astronauts. 23 However, astronauts would still receive potentially signi ﬁcant elevations in radiation dose even within a shielded spacecraft and remain vulnerable, especially on long-duration missions, to both acute effects of sudden SPE radiation boluses and to the overall additive effects of GCR and repetitive SPEs over the course of a mission."
+},
+{
+"id": "chancellor_radiation_2018:x24",
+"text": "While many SPEs show modest energy distributions, there are occasional and unpredictable high ﬂuence events; for example, a particularly large SPE in October 1989 is predicted to have delivered dose-rates as high as 1454 mGy/hour to an exposed astronaut in a vehicle traveling in interplanetary space (for context, consider that the daily dose for long-duration astronauts aboard the ISS is approximately 0.282 mGy per day). 23– 25 Similarly, some SPE can deliver particularly high-energy doses: for example, 10– 15% of the total ﬂuence of an October 1989 SPE was made up of protons with energies in excess of 100 MeV. 1,23 If an astronaut were exposed to such an event during long-duration space ﬂight, there are potential risks for both acute radiation-induced illnesses and for signi ﬁcant increase in the overall mission dose accumulation."
+},
+{
+"id": "chancellor_radiation_2018:x25",
+"text": "It should be noted that these predictions made use of classic shielding values (5 g/cm 2) similar to those of the Apollo command module (average shielding of 6.15 g/cm 2).26 Energetic SPE events produce protons with energies ≥100 MeV that would penetrate classic spacecraft shielding, potentially reaching blood-forming organ depths with deleterious clinical sequelae. These highly energetic SPE exposures delivered to crews undertaking interplanetary ﬂight could result in potentially serious symptoms ranging from prodromal responses (nausea, vomiting, fatigue, weakness) to fatality."
+},
+{
+"id": "chancellor_radiation_2018:x26",
+"text": "In addition, large SPE doses can produce degenerative effects associated with cancer, ocular cataracts, respiratory and digestive diseases, and damage to the microvasculature; while these effects are mostly latent and do not necessarily pose an immediate risk to crew health, their overall impact upon long-duration crews is an important consideration. 27 The ﬂuence of GCR particles in interplanetary space ﬂuctuates inversely with the solar cycle, with dose-rates of 50 – 100 mGy/year at solar maximum to 150 – 300 mGy/year at solar minimum. 28 The"
+},
+{
+"id": "chancellor_radiation_2018:x27",
+"text": "ﬂuence and occurrence of SPEs is unpredictable, but dose-rates as high as 1400 – 2837 mGy/hour are possible. 1,8,23 As discussed above, even if shielding in spacecraft effectively reduces radiation dose to the crew from SPEs, spallation occurring as GCR particles collide with shielding materials may lead to biological damage. 9,13,18,19 Aluminum shielding greater than 20– 30 g/cm2 could only reduce the GCR effective dose by no more than 25%. 29 An equivalent mass of polyethylene would only provide about a 35% reduction in GCR dose. 30,31 While this degree of shielding has been achieved aboard the International Space"
+},
+{
+"id": "chancellor_radiation_2018:x28",
+"text": "Station (ISS), similar shielding is impractical within exploration mission design parameters due to the limited lift-mass capabilities of planned space launch systems. The Apollo crew module is the only vehicle to date that has transported humans outside of LEO; this vehicle could only effectively shield SPE protons with energies ≤75 MeV.26 To date, no studies have successfully emulated the complexity of energetic elements of the intravehicular radiation spectrum that astronauts are actually exposed to during space travel or successfully incorporated vehicular design and shielding parameters in analog testing environments, limiting the understanding of the true effects of such an environment on the human body."
+},
+{
+"id": "chancellor_radiation_2018:x29",
+"text": "CHALLENGES IN ESTIMATING RADIOBIOLOGICAL EFFECT As a charged particle traverses a material (such as spacecraft shielding, biological tissue, etc.), it continuously loses energy in particle interactions until the particle escapes the medium or has slowed enough to have strong interactions with orbiting electrons. This results in a rapid loss of particle energy over a very small distance with a corresponding rapid and sharp rise in LET. The ‘Bragg peak ’ (Fig. 3a) describes the rapid transfer of kinetic energy from a charged particle before the particle comes to rest in a medium. This peak is particularly pronounced for fastmoving, charged particles, indicating more substantial energy transfer and, as a result, the potential for greater deleterious biological effect from such particles."
+},
+{
+"id": "chancellor_radiation_2018:x30",
+"text": "However, if a particle instead passes directly through tissue without suf ﬁcient energy loss to provide effective stopping power, the sudden energy loss associated with a Bragg peak does not occur and damage is minimal. Space radiation studies to date generally presume a homogeneous distribution of energy loss inclusive of the Bragg peak for each type of radiation, likely overestimating the relative damage of some exposures. 32 Improved modeling of dose deposition and resultant biological sequelae speci ﬁc to the space environment would advance risk estimation capabilities."
+},
+{
+"id": "chancellor_radiation_2018:x31",
+"text": "The biological effects of space radiation depend on multiple particle- and energy-speci ﬁc factors, such as the LET speci ﬁct o each ion, as well as the dose-rate of exposure. The Relative Biological Effectiveness (RBE) of a particular radiation type is the numerical expression of the relative amount of damage that a ﬁxed dose of that type of radiation will have on biological tissues. Published in cooperation with the Biodesign Institute at Arizona State University, with the support of NASA npj Microgravity (2018) 8 Higher RBEs are associated with more damaging radiation for a given dose. RBE is determined using the effectiveness of cobalt (60Co) gamma rays as a standard. An RBE = 1 means that the “test” radiation type (for example, heavy ion exposure) is as effective as"
+},
+{
+"id": "chancellor_radiation_2018:x32",
+"text": "60Co radiation at producing a biological effect, and an RBE > 1 means that the test radiation is more effective than 60Co radiation at producing a biological effect. However, in some cases this comparative value does not fully represent the energy transfer curve of a speci ﬁc radiobiological insult (Fig. 3b). The effect of quantifying factors such as LET, particle identity, dose-rate, and total dose on RBE remains incompletely understood. The RBE can vary for the same particle type, depending on energy, dose-rate, target organ, and other factors. Different particle types are assigned a radiation weighting factor (formerly quality factor ), WR, that represents an average of calculated RBEs for a given particle. To identify the relative biological risk of a speciﬁc type and dose of radiation exposure, the physical dose (in"
+},
+{
+"id": "chancellor_radiation_2018:x33",
+"text": "Gy) is multiplied by WR to obtain the biologically effective dose in units of Sieverts (Sv). This method of estimating dose and relative effect introduces limitations in predicting the true biological risk of exposures, particularly exposures to complex and poorly understood radiation environments. Mechanisms of biological impact . There are numerous limitations of current terrestrial analogs used for studying and predicting space radiation effects on biological tissues. The mechanisms that cause biological damage from space radiation are uniquely different from those associated with terrestrial radiation sources that are frequently used as surrogates in space radiobiology studies. Charged particle radiation, including GCR and SPE, causes primarily direct ionization events, where biological effects are the direct result of interactions between the charged ion and impacted tissue."
+},
+{
+"id": "chancellor_radiation_2018:x34",
+"text": "As charged particles lose energy successively through material interactions, each energy loss event can result in damage to the biological tissue. In contrast, terrestrial analogs often use radiation that causes indirect ionizing events. In indirect ionization, non-charged particles, such as photons, interact with other molecules and cause the release of charged particles, such as free radicals or electrons, that ultimately cause biological damage. Thus, it is dif ﬁcult to extract a meaningful estimation of the direct ionizing space radiation impact through the use of terrestrial analogs and indirect ionizing radiation."
+},
+{
+"id": "chancellor_radiation_2018:x35",
+"text": "Cumulative dose delivery and tissue distribution . Models of the space environment outside of LEO have predicted that astronaut crews may receive a total body dose of approximately 1 – 2 mSv/ day in interplanetary space and approximately 0.5 – 1 mSv/day on the Martian surface. 13,33 These doses would increase with any SPE encountered over the course of the mission. Many recent studies have led to ominous conclusions regarding the non-acute effects of GCR radiation on CNS and cardiovascular health that are dif ﬁcult to interpret as real effects likely to occur in humans, but suggest that the protracted, low dose and dose-rate radiation exposure expected on the longer, exploration missions might lead to mission-relevant threats to astronaut health. 34,35"
+},
+{
+"id": "chancellor_radiation_2018:x36",
+"text": "These experiments were performed using rodent models exposed to single ion, mono-energetic heavy-ion beams, in some cases at total doses that are many times higher than the radiation human crews would experience during interplanetary space travel. 36– 38"
+},
+{
+"id": "chancellor_radiation_2018:x37",
+"text": "Even in studies where lower total doses are used, study methods delivered the cumulative mission doses for an entire mission over a very short period of time, typically over a few minutes. 39,40 These parameters do not allow for critical physiologic components of the radiobiological response that would be expected under chronic, low-dose and low-dose-rate radiation conditions, such as cell regrowth and up-regulation of repair mechanisms. 6 Additionally, there is substantial evidence that GCR exposure at the dose-rates expected in interplanetary space may not induce acute or subacute biological responses, while acute exposure to total/ cumulative dosage easily could. 27"
+},
+{
+"id": "chancellor_radiation_2018:x38",
+"text": "Recently, NASA has developed an updated GCR simulator capable of providing three to ﬁve consecutive mono-energetic ion beams, with rapid switching between ion species. 39 The NASA Space Radiation Laboratory (NSRL) is located at Brookhaven National Laboratory in Brookhaven, NY. Currently, NSRL is the only U.S. facility with the capapbilites to generate heavy-charged particles at energies relevent to space radiation studies. While an improvement upon previous methods, NASA ’s new GCR simulator remains limited in its ability to emulate the GCR environment of deep space. The simulator lacks the capacity to generate the pions"
+},
+{
+"id": "chancellor_radiation_2018:x39",
+"text": "Fig. 3 a The Bragg peak and depth dose characteristics of space radiation. The Bragg peak and relative dose deposition for ions at energies commonly used in space radiation studies compared to the X-ray and gamma sources used as surrogate radiations for Relative Biological Effectiveness (RBE) quanti ﬁcation. The Bragg peak refers to the point where a charged particle promptly loses kinetic energy before coming to rest in a medium. This effect is very pronounced for fast moving, charged particles. Shown are 60 MeV Protons (hydrogen, purple), 600 MeV 56Fe (iron, light blue), 290 MeV 12C (carbon, green), 1 GeV 56Fe (iron, dark blue), X-ray (orange dotted line), and 60Co (cobalt, yellow dotted line)."
+},
+{
+"id": "chancellor_radiation_2018:x40",
+"text": "The shaded gray area, representing the average diameter of a mouse, demonstrates that the Bragg peak, and thus the majority of dose deposition, is outside the mouse body for SPE protons (energies ≥50 MeV) and GCR ions. b The proton and electron range, energy and dose distributions for the October 1989 solar particle event compared to a doseequivalent 60Co exposure. Charged particles (electrons, protons, heavy-charged particles) typically deposit more energy towards the end of their range. In contrast, the current standard, 60Co radiation, loses the most energy at the tissue surface. These energy characteristics demonstrate the poor ﬁdelity of 60Co as a surrogate for studying the complex SPE and GCR spectrums. Figure 3 (b) reprinted by permission from Conditions for RightsLink Permissions"
+},
+{
+"id": "chancellor_radiation_2018:x41",
+"text": "Springer Customer Service Center GmbH:Springer-Verlag 32 npj Microgravity (2018) 8 Published in cooperation with the Biodesign Institute at Arizona State University, with the support of NASA (subatomic particles) and neutrons that would follow spallation reactions, though these would make up 15 – 20% of a true intravehicular dose. 39,41,42 Sequential beam exposures remain ineffective in modeling complex and simultaneous exposures of the actual GCR environment, and there is signi ﬁcant debate regarding the appropriate order of ion exposures delivered (as alteration of exposure sequence can affect the outcomes of an experiment).42,43 Finally, dose-rate delivered by this simulator will remain signi ﬁcantly higher than the radiation dose-rate anticipated for human crews during space ﬂight.39,41"
+},
+{
+"id": "chancellor_radiation_2018:x42",
+"text": "As an additional challenge, SPE radiation has a unique dose distribution with respect to whole body irradiation. Research has demonstrated that the biological response to space radiation is unique due to a non-homogeneous, multi-energetic dose distribution.44,45 The majority of the protons in SPEs have energies less than 100 MeV, with Bragg peaks that occur inside the body and LET of 10 – 80 keV/μm (Fig. 3b). While these energies might be mitigated with effective shielding, an exposed human would be expected to receive a much higher absorbed dose to skin and subcutaneous tissues than to internal organs. 23,32,46,47 Until recently, these SPE-speci ﬁc toxicity pro ﬁles and dose distributions were poorly understood."
+},
+{
+"id": "chancellor_radiation_2018:x43",
+"text": "As a result, the majority of prior research has been based largely on simpli ﬁed models of radiation transport, relying upon simple spherical geometry to estimate organ dose approximation at average depths. 48,49 However, with this new evidence of heterogeneous dose distribution, spherical geometry is insuf ﬁcient for the modeling of radiation delivered within the space environment. Animal model sensitivity and dose simulation . For ease of dose speciﬁcation and modeling, mono-energetic protons and GCR ions in the 100 – 1000 MeV range are often used for in vivo animal model experiments such that the entire target is contained within the plateau portion of the depth-dose distribution. 50– 54 In experimental animals that are much smaller than humans, simple scaling of particle energies to match dose distribution dramatically alters the LET spectrum for the protons (Fig. 3 and Fig. 4)."
+},
+{
+"id": "chancellor_radiation_2018:x44",
+"text": "Conversely, delivering a simulated SPE or GCR exposure to smaller animals without scaling the energies would match their respective LET spectrum but create an heterogeneous dose distribution that is higher to internal organs than to super ﬁcial tissues, the exact inverse of the human SPE dose distribution. 32 For smaller animals (such as rodents), it is not possible to match both the LET spectrum and dose distribution of an SPE using protons. 32,55,56"
+},
+{
+"id": "chancellor_radiation_2018:x45",
+"text": "Larger animal models, such as pigs or primates, allow for matching of the anticipated dose distribution for human SPE exposure using protons with a similar LET spectrum; thus, larger animal models are more likely than smaller species to provide robust estimations of human-speci ﬁc space radiation effects. 32 However, it remains unclear whether the concurrent exposure to low-dose and doserate GCR radiation can be successfully emulated in small or large animal models. 57 Modeling of GCR radiation effects may be similarly altered by variations in animal species; however, without dedicated efforts towards expanding understanding of these phenomena, prediction of the biological consequences of longterm GCR exposure will remain theoretical at best."
+},
+{
+"id": "chancellor_radiation_2018:x46",
+"text": "Animal models pose further challenges in the development of meaningful and accurate analog research. While animal models are used in radiobiology studies as surrogates to obtain data that typically cannot be gained in ethical studies of humans, there are numerous metabolic, anatomic, and cellular differences between humans and other animal species. 58 Most of the animals used in all U.S. scienti ﬁc research are mice and rats, bred speci ﬁcally for use in research endeavors. While larger species are likely to provide more meaningful correlation to human effects, 59 due to animal protection issues and relative societal value, less than one quarter of 1% of scienti ﬁc studies are performed on non-human primates and less than one half of 1% of studies use dogs and cats. Few studies utilize rabbits, guinea pigs, sheep, pigs, or other large mammals."
+},
+{
+"id": "chancellor_radiation_2018:x47",
+"text": "While rodent experiments have contributed signiﬁcantly to our understanding of mechanisms of disease, including disease caused by radiation, their value in predicting the effectiveness of treatment modalities for human application has remained controversial. 60– 62 Differences between animals and humans are clearly demonstrated by the characteristics of radiation-induced death (RID). The LD50 deﬁnes the required dose of an agent (e.g., radiation) necessary to cause fatality in 50% of those exposed. As illustrated in Table 1, remarkably different LD 50 values have been reported for radiation exposure among different species. Currently, the genetic and physiologic basis for inter-species and intra-species variation in LD 50 is not well understood. Mice have been the most extensively developed model for human diseases including radiation-induced tissue damage."
+},
+{
+"id": "chancellor_radiation_2018:x48",
+"text": "Rodent models have a high potential utility in describing the physiologic and genetic basis for many aspects of the mammalian radiation response. Even so, it should be noted that, in addition to simple physiological differences between mice and larger animals (including signi ﬁcantly higher metabolic rate, shorter lifespan, and lower body mass), the LD 50 for mice is signi ﬁcantly higher than that of most other mammalian species, including humans. Fig. 4 The intravehicular LET of the Space Shuttle. Displayed are the integrated LET/day values measured by Badhwar et al. 1998 (purple dotted line), 11 as well as the LET of ﬁve single-ion exposures (290 MeV 14C (carbon), 600 MeV 16O (oxygen), 1 GeV 47Ti (titanium),"
+},
+{
+"id": "chancellor_radiation_2018:x49",
+"text": "1G e V56Fe (iron), and 600 MeV 56Fe (iron)). As studies generally focus on a single, mono-energetic radiation exposure, this ﬁgure highlights the lack in breadth of energies or radiation ﬁeld complexity used in current radiobiological studies. Data adapted from Badhwar et al. 1998 11 Table 1. LD50 of various animal models used in space radiobiology studies compared to the human LD 50 dose following radiation exposures This broad spectrum in LD 50 values emphasizes the dif ﬁculty in interpreting results of studies using speci ﬁc radiation exposures in different animal models and translating them into clinical outcomes in humans. Note: Table is adapted from the reported results of Harding"
+},
+{
+"id": "chancellor_radiation_2018:x50",
+"text": "1988,109 Morris and Jones 1988, 110 and Hall and Glaccia 2012 6 Published in cooperation with the Biodesign Institute at Arizona State University, with the support of NASA npj Microgravity (2018) 8 It has been proposed that the differences between the LD 50 values for humans compared to small mammals, like rodents, are due to different mechanisms involved in RID at these dose levels. For mammals, death at the LD 50 dose is thought to be caused by the hematopoietic syndrome , which includes destruction of precursor cell lines within blood-forming organs."
+},
+{
+"id": "chancellor_radiation_2018:x51",
+"text": "Historically, it was thought that infection and hemorrhage are the major causes of death from hematopoietic syndrome, with one or the other of these factors predominating in different species ’ responses to lethal radiation exposure. 63 For example, bacterial infection is the predominate factor leading to RID in mice at doses near their respective LD 50 levels.63– 65 However, recent results from Krigsfeld et al. have indicated that radiation-induced coagulopathy (RIC) and clinical sequelae that mimic disseminated intravascular coagulation (DIC) can result in hemorrhage, microvascular thrombosis, organ damage, and death from multiorgan failure from exposure of large animals (including ferrets and pigs) to doses of radiation at or near the species ’ LD50.66– 70 RIC-associated hemorrhage occurs well before the expected decline in peripheral platelet counts after irradiation."
+},
+{
+"id": "chancellor_radiation_2018:x52",
+"text": "Rodents do not exhibit signs of hemorrhage or disorders of primary hemostasis at time of necropsy after lethal radiation exposure at doses near the LD 50 dose, while large animals, including humans, do exhibit hemorrhage at death following radiation exposure. These ﬁndings suggest that humans may be at risk for coagulopathy-induced complications after radiation exposure in addition to the classically anticipated (delayed) concerns of infectious sequelae or cell-count decline, effects that may not be modeled by rodent surrogates. Further, RBE values for proton irradiation vary between animal models."
+},
+{
+"id": "chancellor_radiation_2018:x53",
+"text": "In general, RBE values increase with animal size, with mini-pigs demonstrating higher RBEs than ferrets, and ferrets, in turn, exhibiting higher RBEs than mice (Table 2).44 Numerous studies have focused on RBE values for hematopoietic cells in mice at various time points after the animals have been exposed to different doses of proton or gamma radiation. 45,71 In these rodent models, RBEs do not differ signi ﬁcantly from one at any of the time points or doses of radiation evaluated. However, similar studies in ferrets and mini-pigs have demonstrated alterations of"
+},
+{
+"id": "chancellor_radiation_2018:x54",
+"text": "RBE value that are dependent upon animal model, type of radiation, time since exposure, and cell-line evaluated (for example, total white blood cell count vs. neutrophils). In one study, proton-irradiated ferrets examined 48 h after exposure demonstrated RBEs for white blood cells ranging from 1.2 – 1.6 and RBEs for neutrophils ranging from 1.9 to 2.1. 72 In Yucatan minipigs evaluated 4 days after exposure, the RBEs for white blood cells was found to be 2.4 – 4.1 and the RBEs for neutrophils was In other experiments, proton exposure in mini-pigs again resulted in signi ﬁcantly greater hematopoietic injury and white blood cell count reduction than comparable gamma exposure (Fig. 6).55,56 The results of these studies demonstrate that RBE values of different radiation types, calculated for the same endpoints, can vary greatly by animal species and cell line."
+},
+{
+"id": "chancellor_radiation_2018:x55",
+"text": "One contributing factor may be the repair capacity of the blood cell renewal systems in mice; such capabilities appear to be lacking in mini-pigs (an animal model with more human-like hematopoietic characteristics), making them more susceptible to radiationinduced declines in cell counts. Given the presumed closer approximation of radiation effects in larger animals to humanspeciﬁc consequences, this suggests that space radiation-speci ﬁc RBE values for humans may be considerably higher than those in mice. These studies demonstrated novel efforts towards an integrated, physiology-based approach for the evaluation of organ system-speciﬁc and species-speci ﬁc endpoints. Using a more comprehensive evaluation of radiation toxicity for multiple doses and dose-rates in multiple animal models, this effort advanced the understanding of the impact of genetic heterogeneity and"
+},
+{
+"id": "chancellor_radiation_2018:x56",
+"text": "Table 2. The relative biological effectiveness (RBE) for SPE-like protons compared with standard reference radiations (gamma or electron) in animal models The RBE of proton exposure varies greatly for total white blood cells (WBC) and speciﬁcally for neutrophils when comparing animal models. Note that ferret RBE values were determined 48 h after exposure; mini-pig values were determined 4 days post-irradiation Fig. 5 Comparison of lymphocyte and neutrophil counts following proton and X-ray (comparable to gamma radiation) exposures in mice, ferrets, and Yucatan mini-pigs. The relative fraction of lymphocyte (a) and neutrophil ( b) counts following a homogeneous proton or X-ray exposure to the bone marrow compartment are shown. Note: calculations indicate that animals received approximately a 2 Gy marrow dose."
+},
+{
+"id": "chancellor_radiation_2018:x57",
+"text": "In both cases, the mouse models demonstrated the ability to fully recover within 30 days following proton exposures while the ferret and pig models showed no recovery. The ferrets were euthanized at day 13. 44 The RBE values for white blood cell counts varied greatly between the mice, ferret and pig models. RBE values were greater in ferrets than mice, and considerably greater in pigs compared to either ferrets or mice. This suggests that model-speci ﬁc sensitivity to radiation exposure may lead to drastically different results in experimental outcome, leading to dif ﬁculty in extracting clinical signi ﬁcance from animal models with dissimilar radiation sensitivity compared to humans. Data from"
+},
+{
+"id": "chancellor_radiation_2018:x58",
+"text": "Kennedy44 (mouse and ferret results) and Krigsfeld et al. 66,67 (Yucatan mini-pig results) npj Microgravity (2018) 8 Published in cooperation with the Biodesign Institute at Arizona State University, with the support of NASA demonstrated that animal model, physiology, body mass, and ﬁdelity of a space radiation analog (in this case, a multi-energy proton spectrum) all contribute to radiation response. Such efforts towards the integration of the numerous factors that contribute to radiation-induced effects will be critical to translation of research results and prediction of clinical responses in humans."
+},
+{
+"id": "chancellor_radiation_2018:x59",
+"text": "Finally, studies of the synergistic effects of radiation combined with space ﬂight environment stressors (e.g., microgravity, environmental factors, isolation and emotional stress, etc.) show that such factors in combination impart an increased susceptibility to infection and delayed wound healing. 71,73,74 While space ﬂight medical capabilities have been developed for the management of some acute injuries, such as wound care and infection control, it is unclear whether standard management techniques will be effective against the synergistic variables that alter wound healing and associated risks speci ﬁc to the space environment. Historically, there has been limited testing on the ef ﬁcacy of management techniques, including pharmaceutical interventions, when radiation exposure is a factor."
+},
+{
+"id": "chancellor_radiation_2018:x60",
+"text": "Similarly, few research protocols examining operational medical care have included the additional variables of the high-stress and isolated environment, 75– 77 infections related to the altered bacterial and chemical exposures speciﬁc to space vehicles, 78– 81 or factors related to gravitational unloading,73,82– 84 and no studies have effectively examined all of these variables simultaneously. It is unclear whether these complex interactions can be fully simulated even in large animal models for appropriate extrapolation of human risk. There is a need to better understand the mechanism of the synergistic effects observed, de ﬁne appropriate animal models for analog research efforts, and determine ef ﬁcacy of standard treatments against damage resulting from radiation-combined injury."
+},
+{
+"id": "chancellor_radiation_2018:x61",
+"text": "Dedicated effort towards these goals will better allow for operationally relevant and appropriate countermeasures. 85 Translation of space radiobiology research to human health outcomes. Biological damage from radiation exposure is generally classi ﬁed as deterministic, dose threshold-based effects related to signi ﬁcant cell damage or death (for example, the spectrum of clinical manifestations that make up Acute Radiation Sickness), or stochastic, where increased exposure is associated with increased risk though no threshold dose is necessary for biological impact (for example, carcinogenesis). 86 Currently, carcinogenesis is the only long-term, stochastic effect that has a clearly deﬁned permissible exposure limit in space ﬂight."
+},
+{
+"id": "chancellor_radiation_2018:x62",
+"text": "Terrestrial radiation (e.g., occupational or clinical radiotherapy gamma or Xray exposures) is known to be associated with carcinogenic risk; 87 at this time, there is no de ﬁnitive evidence that space radiation causes human cancer, but it is reasonable to assume that it can. The dose-equivalent of radiation received by astronauts currently traveling to the ISS for 6 months is approximately 100 mSv; 88 doses of 100 mSv of terrestrial radiation sources have been associated with an elevated cancer risk in human populations. 87 NASA’s “Lifetime Surveillance of Astronaut Health ” (LSAH) program documents cancer cases in astronauts, among other health parameters. Previous review of LSAH data suggests that there may be evidence of increased cancer risk in astronauts compared to a control population, though data are inconclusive and limited by the very small sample size. 89"
+},
+{
+"id": "chancellor_radiation_2018:x63",
+"text": "Most evidence for the effects of space-like radiation exposures in humans has been derived from epidemiological studies on the atomic-bomb survivors, radiotherapy patients, and occupationally exposed workers. These studies have focused on the association between ionizing radiation exposure and the long-term development of degenerative tissue effects such as heart disease, cataracts, immunological changes, cancer, and premature aging for moderate to high doses of low-LET radiation. 1,8 The ﬁndings are further supported by results of laboratory studies using rodent animal models. 90 However, true risks for these diseases from low dose-rate exposures to GCR and intermittent SPE are much more difﬁcult to assess due to long latency periods and the numerous challenges involved in studying the radiation environment. 90"
+},
+{
+"id": "chancellor_radiation_2018:x64",
+"text": "Additionally, the types of radiation exposure produced by atomic bombs (high dose and high dose-rate gamma and neutron radiation) are dissimilar to radiation exposures for astronaut crews during space ﬂight. The theoretical, calculated RBEs for some space radiationinduced cancers are quite high, which has led to speculation that the risk of cancer development from space radiation exposure is at least as high, and perhaps higher, than the risk of cancer development from exposure to radiation on Earth. 91,92 However, there are currently no biophysical models that can accurately project all acute, subacute, degenerative, and carcinogenic risks speciﬁc to the range of particles and energies of ionizing radiation in the space environment."
+},
+{
+"id": "chancellor_radiation_2018:x65",
+"text": "There is little information available about dose response and dose-rate modi ﬁers for speciﬁc effects or about the degenerative effects associated with ionizing radiation, and very few biological models describe degenerative processes (e.g., cardiovascular degeneration) caused by ionizing radiation. 93 Exposure to the LEO radiation environment has been associated with alterations to chromatin structure. 94– 97 However, it is not well understood how such damage relates to impacts on cellular function or long-term carcinogenic risk. There is a paucity of understanding regarding the interpretation of chromosomal damage rates identi ﬁed in astronauts and the long-term effects induced by the space radiation environment, without relying on terrestrial studies of different radiation sources, doses, dose-rates, or complexity for context. For example, NASA ’s Human Research"
+},
+{
+"id": "chancellor_radiation_2018:x66",
+"text": "Program Evidence Report on the Risk of Radiation Carcinogenesis,98 published in 2016, cites numerous studies to provide an assessment of risk for chromosomal damage (and, ultimately, carcinogenesis). A review of the studies cited in this report highlights the limitations described throughout this manuscript, including reliance upon mono-energetic radiation sources,36,38,40,97,99,100 comparison to or interpretation of results in the context of gamma or X-ray exposures, 38,40,99– 101 or use of Fig. 6 Results from Yucatan mini-pigs exposed to simulated Solar"
+},
+{
+"id": "chancellor_radiation_2018:x67",
+"text": "Particle Event (SPE)-like radiation consisting of several different energies of protons. In this study, Kennedy et al. utilized an inhomogeneous distribution of protons that resembled a SPE spectrum, as demonstrated in Fig. 3. Electrons were used as the surrogate radiation for determining the RBE following exposure to a SPE-like distribution of protons. Electrons were chosen because a SPE-like distribution could not be achieved with 60Co as demonstrated in Fig. 3. Note the white blood cell counts in the mini-pig model recovered to near pre-irradiation levels following exposure to the electron radiation while the white blood cell counts for those exposed to a SPE-like proton spectrum remained suppressed for"
+},
+{
+"id": "chancellor_radiation_2018:x68",
+"text": "30 days after exposures. These results indicate that the mini-pigs were not capable of repairing the hematopoietic damage caused by the proton radiation exposure as ef ﬁciently as they could repair the electron radiation damage. Data from Kennedy 2014 44 Published in cooperation with the Biodesign Institute at Arizona State University, with the support of NASA npj Microgravity (2018) 8 dose or dose-rates far exceeding those expected during spaceﬂight.36,38,40,97 Indeed, many of these same factors are cited as limitations to NASA ’s primary radiation cancer risk prediction model.102"
+},
+{
+"id": "chancellor_radiation_2018:x69",
+"text": "In addition, few studies have assessed mutation rates due to LEO radiation at a whole genome level. Whole genome sampling techniques are being employed for other carcinogenic stressors.103 Direct observations of mutation rates, as well as an understanding of the epigenetic changes and cellular damage using in vitro cell culture models, may now be possible due to recent advances in long-term cell culture aboard the ISS (Sharma, A. & Wu, J. Personal Communication (2016)). Quanti ﬁcation of observable mutation rates from LEO exposures may better inform future modeling efforts and provide a critical understanding of the molecular mechanisms behind observed pathologies. However, even data obtained from the LEO environment is less than ideal, as the ISS is heavily shielded and the close proximity of the Earth provides signi ﬁcant protection from radiation exposure."
+},
+{
+"id": "chancellor_radiation_2018:x70",
+"text": "While improved understanding of the LEO environment may help inform risk predictions, there is signi ﬁcant work to be done in characterizing these risks in the radiation environment outside of The health risks associated with exposures to space radiation will become more onerous as future manned space ﬂight missions require extended transit outside of LEO and beyond the protection of the Earth ’s magnetosphere. The indigenous shielding provided by the Earth ’s magnetic ﬁeld attenuates the major effects of space radiation exposures for current LEO missions; in the highly mixed- ﬁeld environment of interplanetary space, radiation dose could increase dramatically. Even behind shielding, secondary particles produced by interactions of primary cosmic rays and the atomic molecules of the spacecraft structure can deliver a signiﬁcant fraction of the total dose equivalent."
+},
+{
+"id": "chancellor_radiation_2018:x71",
+"text": "Astronaut crews could be exposed to multiple SPEs of unpredictable magnitude with doses that could induce clinical illness and exacerbate biological outcomes from the chronic GCR environment. The limited accumulation of knowledge to date has yet to provide suf ﬁcient data for even an estimation of total risk, let alone predictions of human clinical outcomes or appropriate mitigation strategies before, during, or after exposure. Accurately simulating the spectrum of energies, ion species, doses, and doserates found in the space radiation environment is a non-trivial endeavor. For the numerous reasons described above, emulation of the radiation environment, choice of surrogate animal model, and delivery of appropriate complexity, rate, and magnitude of dose have all limited the knowledge available for extrapolation of radiation risk within the context of space ﬂight."
+},
+{
+"id": "chancellor_radiation_2018:x72",
+"text": "These factors have limited our ability to develop operational and useful medical countermeasures to mitigate the radiation risk of future exploration-class space ﬂight. To improve upon the limitations described, there must be a focused effort to develop novel or new methods of simulating the space radiation environment in more realistic analogs. This should include more realistic dose-rate studies that can determine if presumed or modeled outcomes are being observed at mission relevant dose-rates and dose. Additionally, heavier utilization of the animal laboratory on board the ISS with comparison of tissues, organ, and blood samples, identifying realistic dose thresholds and dose-rates, and comparing these data to ground-based studies, would greatly improve the current approach to analog construction."
+},
+{
+"id": "chancellor_radiation_2018:x73",
+"text": "The use of animal models should be strategic and consistent with species, strain, dose, and dose-rates with an effort towards the highest- ﬁdelity studies possible for human risk extrapolation.59 While rodent models may be highly useful for initial characterization studies and for statistically signi ﬁcant outcomes, true advances are more likely to come from an effort to utilize larger animals with more human-like physiology for landmark studies on how speci ﬁc outcomes may translate to humans. Finally, while there would be numerous challenges and ethical considerations involved, studies of non-human primates for ﬁnal validation of risk and mitigation strategies would likely prove highly bene ﬁcial for the protection of future human crews."
+},
+{
+"id": "chancellor_radiation_2018:x74",
+"text": "As described above, NASA ’s updated GCR simulator may be able to provide some improvements to simulation studies by use of rapid-sequential mono-electric beam exposures. 39,41 Recent developments by Chancellor et al. demonstrate the potential for more accurate analog recreation of the GCR radiation environment by allowing for continuous generation of ionizing radiation that more closely matches the ion distribution, LET spectrum, and dose-rate of GCR (Fig. 7).42 These recent ﬁndings suggest that the radiation environment inside space ﬂight vehicles can be experimentally generated by perturbing the intrinsic properties of hydrogen-rich crystalline materials in order to produce speci ﬁc nuclear spallation processes when placed in an accelerated monoenergetic heavy ion beam."
+},
+{
+"id": "chancellor_radiation_2018:x75",
+"text": "While still limited by dose-rate (as are all terrestrial beam exposures), such an approach could allow for improvements to the simulation of the complex mix of nuclei and energies found in the space radiation spectrum. 42 Potential radiation exposure to astronaut crews occurs on a timescale that is measured in days to months for SPE and GCR. Technological, practical, and ﬁnancial considerations make continuously irradiating animals for more than a few hours exceedingly dif ﬁcult. In addition, because the lifespan of most experimental animals is more than an order of magnitude shorter than the human lifespan, the interpretation of long-term, low dose-rate exposures using such models would be questionable even given the open opportunity to perform long-duration experiments."
+},
+{
+"id": "chancellor_radiation_2018:x76",
+"text": "As radiation dose-rate can have a major impact on modulating the severity of the radiation response, it is critical to obtain at least some dose-rate data for radiation experiments investigating clinical outcomes of space radiation exposures. While some radiation effects are either unchanged or mitigated by decreased dose-rates, data on non-targeted radiation effects (such as genomic instability and adaptive responses) suggest that dose response could be altered at lower dose-rates, with signi ﬁcant differences in quantitative (slope of the dose-toxicity curve) or qualitative (toxicity effects) biological responses. This is especially true for high-LET radiation exposure under conditions of increased oxidative stress promoted by space ﬂight.104– 107 In previous studies on SPE-like radiation, dose-rates from 17 cGy/hour up to"
+},
+{
+"id": "chancellor_radiation_2018:x77",
+"text": "Fig. 7 Moderator block geometry concept for the emulation of space radiation spectra. Artist conception of GCR analog detailed in Chancellor et al. 42 A primary beam of 56Fe (iron, left) is selectively degraded with a carefully designed moderator block to produce a desired distribution of energies and ions (represented by the colorful lines on the right) simulating the intravehicular space radiation environment. To preferentially enhance fragmentation and energy loss, cuts are performed in the moderator block made up of different materials (depicted by different shades of gray). Before the spallation products exit the moderator block, a high-Z material layer is added for scattering. Image courtesy of R. Blue npj Microgravity (2018) 8 Published in cooperation with the Biodesign Institute at Arizona State University, with the support of NASA"
+},
+{
+"id": "chancellor_radiation_2018:x78",
+"text": "50 cGy/minute have been modeled experimentally and statistical analysis of these data have begun to explore the potential quantitative or qualitative impact of dose-rate on the toxicity of multi-energy spectrum. 14 Use of such data to better design doserate extrapolation experiments would be highly useful for more robust, future studies. There have been other advances in ﬁelds related to space radiation effects, including whole genome sequencing, as well as transcriptional, proteomic, and epigenomic studies of cellular response. There is a growing list of genes known to affect radiation sensitivity for many different biological effects of radiation (e.g., molecular, chromosomal, signal transductionassociated growth-regulating changes, cell killing, animal tissue and tumor acute and late effects, and animal carcinogenesis)."
+},
+{
+"id": "chancellor_radiation_2018:x79",
+"text": "Even so, there is a need to correlate observed sequence changes with corresponding alterations of radiosensitivity. 86 Incorporation of these investigational directions opens new opportunities to evaluate space radiation risk on a genomic level, de ﬁning risk and allowing for improved understanding of the pathology of radiation-induced injury and the potential for intervention in such processes. Finally, there are a number of lessons that may be learned from historical space ﬂight and the health of early space pioneers, though it has been dif ﬁcult to extract meaningful conclusions from historical data. For example, some sources suggest that there is no statistically signi ﬁcant increase in carcinogenesis in Apollo,"
+},
+{
+"id": "chancellor_radiation_2018:x80",
+"text": "Space Shuttle, or ISS astronaut crews in comparison to the average U.S. population; other reviews of data suggest that risk is indeed increased for astronauts. 1,14,89,92 Given that the broad research base has utilized non-ideal and highly limited analogs for the prediction of risk, the fact that reality has deviated from theoretical, calculated risk is not entirely surprising. Medicine does not advance without clarifying treatment options using human subjects. Models and animal data are useful surrogates for space radiation studies but provide limited bene ﬁt for the interpretation to human outcomes, and studies on humans exposed to occupational radiation and clinical radiotherapy are imperfect proxies. The reliance upon these surrogates continues to limit the ability to translate radiation knowledge to space ﬂight scenarios."
+},
+{
+"id": "chancellor_radiation_2018:x81",
+"text": "We now have the bene ﬁt of a larger, cumulative astronaut population that has ﬂown in space while exposed to a variety of doses that exceed the identi ﬁed thresholds for some degenerative and carcinogenic outcomes. The health of these astronauts, including early indicators of disease, is closely monitored by NASA medical and epidemiological resources with yearly medical examinations and careful records of clinical outcomes. This provides critical, real human data that could be used to evaluate the actual long-term health risk of space radiation. Understandably, these data are limited to highly sensitive and protected internal review in order to ensure the privacy of ﬂown astronauts, given small sample sizes and the risk of inadvertent identi ﬁcation through mission-speci ﬁc or demographic-speci ﬁc details."
+},
+{
+"id": "chancellor_radiation_2018:x82",
+"text": "This should not preclude NASA from taking advantage of these data points while remaining vigilant with prioritizing the privacy and protection of astronaut medical health records. The application of this source of data will enhance our understanding of the true risk of space radiation, the characterization of human clinical outcomes, and the development of appropriate mitigation strategies. The scientiﬁc community has struggled to collect meaningful and robust data for the characterization of the space radiation environment and the risk that such an environment poses to future astronaut crews."
+},
+{
+"id": "chancellor_radiation_2018:x83",
+"text": "While many of the challenges outlined herein have plagued historical research endeavors, there are signiﬁcant improvements that could be made to research design that would improve upon our ability to better predict risk and provide realistic strategies and risk posturing for future exploration spaceﬂight. Use of improved modeling techniques to emulate the space environment, selection of appropriate biological surrogates for extrapolation of human effects, and careful use of ﬂown astronaut data could provide much-needed advances in space radiation research. As humans seek to explore space outside of the close proximity and protection of LEO, we have the responsibility to address the space radiation risk to the extent of terrestrial capabilities in order to provide the best information and protection possible for our future explorers."
+},
+{
+"id": "chancellor_radiation_2018:x84",
+"text": "H.G.K. acknowledges support from the NSF (Grant No. DMR-1151387). Part of the work of H.G.K. and J.C.C. has been based upon work supported by the Of ﬁce of the Director of National Intelligence (ODNI), Intelligence Advanced Research Projects Activity (IARPA), via Interagency Umbrella Agreement IA1-1198. The views and conclusions contained herein are those of the authors and should not be interpreted as necessarily representing the of ﬁcial policies or endorsements, either expressed or implied, of the ODNI, IARPA, or the U.S. Government. The U.S. Government is authorized to reproduce and distribute reprints for Governmental purposes notwithstanding any copyright annotation thereon."
+},
+{
+"id": "chancellor_radiation_2018:x85",
+"text": "J.C.C. developed the concept of the review. J.C.C., K.A.C., and H.G.K. contributed to the discussion on space physics. J.C.C., R.S.B., S.M.A., and K.A.C. contributed to the discussion on operational space radiation. J.C.C., K.A.C., and A.R.K. contributed to the discussion on dosimetry. J.C.C., R.S.B., S.M.A., K.H.R., and A.R.K. contributed to the discussion on countermeasures. R.S.B., S.M.A., K.A.C., K.H.R., and A.R.K. contributed to the discussion on clinical effects of space radiation on humans. J.C.C., R.S.B., S.M.A., K. A.C., K.H.R., and A.R.K. contributed to the discussion on space radiobiology. J.C.C., R.S."
+},
+{
+"id": "chancellor_radiation_2018:x86",
+"text": "B., S.M.A., K.A.C., K.H.R., and A.R.K. contributed to the discussion on animal models. R. S.B., K.H.R., and A.R.K. contributed to the discussion on genetics. J.C.C., K.A.C., and H.G. K. contributed to the discussion on computational modeling. All authors contributed equally to the review of the literature, discussion on the interpretation of research outcomes to space ﬂight operations, and drafting of the manuscript. Competing interests: The authors declare no competing interests. Publisher's note: Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional af ﬁliations."
+}
+]
+}

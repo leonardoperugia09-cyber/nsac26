@@ -1,0 +1,27 @@
+{
+"id": "ntrs_imm_overview_2015",
+"title": "Integrated Medical Model Overview",
+"authors": "Myers J, Boley L, Foy M",
+"year": 2015,
+"licence": "NASA NTRS: public use permitted",
+"source_url": "https://ntrs.nasa.gov/citations/20150002713",
+"topics": [
+"medical_operations"
+],
+"kind": "full_text_excerpts",
+"note": "Verbatim text extracted from the source for retrieval; page furniture and the reference list removed. Not reviewed by HALO.",
+"chunks": [
+{
+"id": "ntrs_imm_overview_2015:x1",
+"text": "National Aeronautics and Space Administration National Aeronautics and Space Administration J. Myers3, L. Boley1, M. Foy1, D. Goodenow3, D. Griffin3, A. Keenan1, E. Kerstman2, S. Melton1, K. McGuire4, L. Saile1, R. Shah2, Y. Garcia1, B. Sirmons1, M. Walton1, D. 1. Wyle Science, Technology & Engineering Group 2. University of Texas Medical Branch, Galveston, TX •Verification, Validation & Certification (V,V&C) •Simulation for medical resource planning •Utilizes space flight community knowledge Probabilistic Risk Analysis / Monte Carlo Simulation"
+},
+{
+"id": "ntrs_imm_overview_2015:x2",
+"text": "•What medical conditions will occur most? •What is the probability of loss of crew life? 26. Cardiogenic Shock secondary to Infarction SD2 Is 4-orbit Soyuz docking to ISS safe? SK Which medications should be tested for stability? Most frequently used medications for Mars DRM ISS Program Medical Inputs to ISS PRA Probability of medical EVAC and LOCL for ISS DRM S-20130607-100. Ventilator and Oxygen Quantitative Risk Analysis What is the requirement for O2/Ventilator Capability for Commercial Vehicles? 1. Meet with customer to review goals, methods, & limitations"
+},
+{
+"id": "ntrs_imm_overview_2015:x3",
+"text": "2. Run IMM to Compare outputs under different scenarios Outcome Ventilator and Oxygen Oxygen No Oxygen •Version 4.0 FY2015 (Foy et al – IMM Enhanced Functionalities) • Environmental and mission specific influences (countermeasures) • Enhanced \"what if-able” scenario capability – Crew Medical Officer contribution to risk reduction National Aeronautics and Space Administration National Aeronautics and Space Administration"
+}
+]
+}

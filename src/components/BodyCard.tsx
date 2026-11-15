@@ -1,8 +1,10 @@
+import { contextOf } from "../data/crew";
 import { useMemo, useState } from "react";
 import { BodyFigure } from "../bodymap/anatomy/BodyFigure";
 import { buildBodyMapModel, type RegionModel, type RegionStatus } from "../bodymap/model.ts";
 import { REGIONS, REGION_BY_ID, type RegionId, type View } from "../bodymap/regions.ts";
 import { MISSION_PROFILE, historyOf } from "../data/crew";
+import { useDataRevision } from "../shared/useDataRevision.ts";
 import card from "./Card.module.css";
 import { More } from "./More";
 import { Segmented } from "./Segmented";
@@ -22,7 +24,8 @@ type Props = {
 
 /** Leo's front/back anatomy (src/bodymap) on a light card. Region status comes from the coupled risk engine. */
 export function BodyCard({ crewId, day, size = "compact", selected, onSelect, onOpen }: Props) {
-  const model = useMemo(() => buildBodyMapModel(historyOf(crewId), day, MISSION_PROFILE), [crewId, day]);
+  const revision = useDataRevision();
+  const model = useMemo(() => buildBodyMapModel(historyOf(crewId), day, MISSION_PROFILE, contextOf(crewId, day)), [crewId, day, revision]);
   const regions = REGIONS.map((d) => model.regions[d.id]);
   const flagged = regions.filter(isFlagged);
   const [view, setView] = useState<View>(() => (selected ? REGION_BY_ID[selected].views[0] : "anterior"));
@@ -59,7 +62,7 @@ export function BodyCard({ crewId, day, size = "compact", selected, onSelect, on
         <div className={s.side}>
           {size === "full" ? rows(regions) : (
             <>
-              {flagged.length ? rows(flagged) : <p className={s.hint}>Everything is inside your normal.</p>}
+              {flagged.length ? rows(flagged) : <p className={s.hint}>No measured region flagged. Review unavailable readings.</p>}
               <More label={`All ${regions.length} regions`}>{rows(regions.filter((r) => !isFlagged(r)))}</More>
             </>
           )}

@@ -1,4 +1,4 @@
-.card { background: var(--card); border-radius: var(--radius-card); padding: 24px 26px; }
+.card { background: var(--card); border-radius: var(--radius-card); padding: 24px; }
 .head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 14px; }
 .head h2 { margin: 0; font-size: 15px; font-weight: 500; }
 .head span, .head a, .head button { font-size: 14px; color: var(--ink-2); }

@@ -7,27 +7,53 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "check:drift": "node --experimental-strip-types scripts/check_drift.ts",
-    "check:risks": "node --experimental-strip-types scripts/check_risks.ts",
-    "check:bodymap": "node --experimental-strip-types scripts/check_bodymap.ts",
-    "check:potency": "node --experimental-strip-types scripts/check_potency.ts",
-    "check": "npm run -s check:drift && npm run -s check:risks && npm run -s check:bodymap && npm run -s check:potency",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "server": "node --env-file-if-exists=.env --import=tsx backend/server.ts",
+    "test": "tsx --test backend/tests/*.test.ts",
+    "typecheck:backend": "tsc --noEmit -p backend/tsconfig.json",
+    "check:drift": "tsx scripts/check_drift.ts",
+    "check:risks": "tsx scripts/check_risks.ts",
+    "demo": "tsx backend/demo.ts",
+    "dev:full": "node scripts/dev-full.mjs",
+    "test:browser": "playwright test",
+    "format:check": "prettier --check backend/node backend/tests backend/*.ts src/engine/assessment.ts src/shared",
+    "check:bodymap": "tsx scripts/check_bodymap.ts",
+    "check:sim": "tsx scripts/check_sim.ts",
+    "check:ai": "node --env-file-if-exists=.env --import=tsx backend/check-ai.ts",
+    "eval:safety": "node --env-file-if-exists=.env --import=tsx scripts/safety_eval_live.ts",
+    "eval:accuracy": "node --env-file-if-exists=.env --import=tsx scripts/accuracy_eval_live.ts",
+    "check:potency": "tsx scripts/check_potency.ts",
+    "check": "npm run -s check:drift && npm run -s check:risks && npm run -s check:bodymap && npm run -s check:potency && npm run -s check:sim"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^1.8.0",
+    "@fastify/cors": "^11.4.3",
+    "@fastify/rate-limit": "^11.2.2",
+    "@fastify/swagger": "^9.9.4",
+    "@fastify/swagger-ui": "^6.1.4",
     "@fontsource/geist-mono": "^5.3.0",
     "@fontsource/geist-sans": "^5.3.0",
     "@phosphor-icons/react": "^2.1.10",
     "class-variance-authority": "^0.7.1",
+    "fastify": "^5.12.8",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "recharts": "^2.15.0"
+    "recharts": "^2.15.0",
+    "tsx": "^4.23.15",
+    "zod": "^4.6.7"
   },
   "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "@types/node": "^26.6.6",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.4.1",
+    "prettier": "^3.10.1",
     "typescript": "~5.6.3",
-    "vite": "^6.3.5"
+    "vite": "^6.3.5",
+    "vite-plugin-pwa": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=22.13"
   }
 }
