@@ -1,0 +1,17 @@
+.intro { margin: 0 0 16px; max-width: 80ch; font-size: 14px; color: var(--ink-2); }
+.tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.tab { font: inherit; font-size: 13px; padding: 6px 12px; border-radius: 999px; border: 1px solid rgba(16,19,26,0.14); background: transparent; color: var(--ink-2); cursor: pointer; }
+.tab[aria-pressed="true"] { color: var(--ink); border-color: currentColor; font-weight: 500; }
+.tab:focus-visible, .item a:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+.list { margin: 0; padding-left: 28px; display: flex; flex-direction: column; gap: 14px; font-size: 14px; max-width: 90ch; }
+.item { padding-left: 4px; scroll-margin-top: 80px; }
+.item:target { background: rgba(193, 68, 14, 0.1); border-radius: 6px; }
+.item::marker { color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.cite { display: block; font-weight: 500; }
+.supports { display: block; color: var(--ink-2); margin-top: 2px; }
+.meta { display: flex; align-items: center; gap: 12px; margin-top: 4px; font-size: 13px; }
+.meta a { display: inline-flex; align-items: center; gap: 4px; color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.nolink { color: var(--ink-2); }
+.verify { font-size: 12px; padding: 1px 8px; border-radius: 999px; border: 1px solid rgba(16,19,26,0.2); color: var(--ink-2); }
+.sub { margin: 28px 0 6px; font-size: 16px; font-weight: 500; }
+.ai { margin: 0; max-width: 80ch; font-size: 14px; color: var(--ink-2); }

@@ -3,6 +3,7 @@ import { BookOpen, MagnifyingGlass } from "@phosphor-icons/react";
 import { api } from "../shared/api.ts";
 import bundled from "../../backend/resources/evidence.json";
 import { More } from "../components/More.tsx";
+import { References } from "../components/References";
 import card from "../components/Card.module.css";
 import { DATA_ROWS, NASA_DATA, RULES, TESTS_TEXT, IMAGE_CREDITS } from "../ui/evidenceData.ts";
 import s from "./Evidence.module.css";
@@ -151,6 +152,8 @@ export function Evidence(_props: Props) {
             </section>
           </div>
         </div>
+        {/* Gurman: every reference and credit in one numbered list, unchecked ones tagged "To verify" */}
+        <References />
       </div>
     </div>
   );

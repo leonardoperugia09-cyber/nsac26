@@ -42,3 +42,7 @@
 .link { display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; font-weight: 500; color: var(--accent); text-decoration: none; }
 .link:hover { color: var(--accent-hover); text-decoration: underline; text-underline-offset: 3px; }
 .sources > .muted { margin: 0; font-size: 14px; color: var(--ink-2); }
+@media (max-width: 600px) {
+  .table { table-layout: fixed; font-size: 12px; overflow-wrap: anywhere; }
+  .table th, .table td { padding-right: 6px; }
+}

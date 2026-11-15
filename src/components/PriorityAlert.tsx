@@ -28,7 +28,7 @@ export function PriorityAlert({ risk, series, today, delay, nextTask, flagged, d
     );
   }
   // Act eases to Watch once today's drinking is done; the readings themselves update tomorrow
-  const level = risk.level === "act" && easedToday(risk, done) ? "watch" : risk.level;
+  const level = risk.level;
   return (
     <section className={s.hero} aria-labelledby="risk-title">
       <div className={`${s.strip} ${level === "act" ? s.stripAct : s.stripWatch}`}>
@@ -63,14 +63,14 @@ export function PriorityAlert({ risk, series, today, delay, nextTask, flagged, d
           const next = risk.plan.find((p) => !done.includes(p.id));
           return next
             ? <button className={s.cta} onClick={() => onDone([...done, next.id])}><Check size={18} weight="bold" /><span key={next.id} className={s.ctaLabel}>{next.cta}</span></button>
-            : <span className={s.allDone}><Check size={18} weight="bold" />Today's plan is done. HALO checks again tomorrow.</span>;
+            : <span className={s.allDone}><Check size={18} weight="bold" />Plan done. The water is in today's log and HALO has rechecked your readings.</span>;
         })()}
           <button type="button" className={s.secondary} aria-expanded={why} aria-controls="why-more" onClick={() => setWhy(!why)}>Why these are linked</button>
       </div>
       {why && (
         <div id="why-more" className={s.whyMore}>
           <p>{risk.why}</p>
-          {delay && <p className={s.queued}><PaperPlaneTilt size={16} />HALO queued a note for your flight surgeon. It reaches Houston in <span className="mono">{delay}</span></p>}
+          {delay && <p className={s.queued}><PaperPlaneTilt size={16} />Nothing goes to Houston on its own. A message takes <span className="mono">{delay}</span> one way.</p>}
         </div>
       )}
     </section>

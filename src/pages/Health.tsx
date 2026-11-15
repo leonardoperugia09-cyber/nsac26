@@ -1,3 +1,4 @@
+import { contextOf } from "../data/crew";
 import { useMemo } from "react";
 import { BookOpen } from "@phosphor-icons/react";
 import { BodyCard, REGION_STATUS_TEXT } from "../components/BodyCard";
@@ -17,7 +18,7 @@ type Props = { crewId: string; day: number; selected: RegionId | null; onSelect:
 /** Each body region in detail: Leo's map on the left, the selected region's linked risks and signals on the right. */
 export function Health({ crewId, day, selected, onSelect }: Props) {
   const revision = useDataRevision();
-  const model = useMemo(() => buildBodyMapModel(historyOf(crewId), day, MISSION_PROFILE), [crewId, day, revision]);
+  const model = useMemo(() => buildBodyMapModel(historyOf(crewId), day, MISSION_PROFILE, contextOf(crewId, day)), [crewId, day, revision]);
   const worst = (st: string) => REGIONS.find((d) => model.regions[d.id].status === st)?.id;
   const sel: RegionId = selected ?? worst("act") ?? worst("watch") ?? "heart";
   const r = model.regions[sel];
@@ -26,7 +27,7 @@ export function Health({ crewId, day, selected, onSelect }: Props) {
   const flagged = REGIONS.filter((d) => ["watch", "act"].includes(model.regions[d.id].status)).map((d) => d.name.toLowerCase());
   const title = flagged.length
     ? `${joinAnd(flagged).replace(/^./, (c) => c.toUpperCase())} need${flagged.length === 1 ? "s" : ""} attention`
-    : "Every part of your body is inside your normal";
+    : "No measured region is flagged; review missing inputs";
   const linked = model.risks.filter((x) => x.level !== "Nominal");
 
   return (

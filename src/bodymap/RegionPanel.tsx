@@ -1,7 +1,7 @@
 import { forwardRef } from "react";
 import { BookOpen, Clock, Crosshair, Question, Warning, WarningOctagon, CheckCircle, X } from "@phosphor-icons/react";
 import type { MissionProfile } from "../engine/types.ts";
-import type { RiskResult } from "../rules/types.ts";
+import type {AssessedRisk as RiskResult} from "../engine/assessment.ts";
 import { PROFILES } from "../ui/missionData.ts";
 import { STALE_AFTER_DAYS, STATUS_TEXT, type Indicator, type RegionModel, type RegionStatus } from "./model.ts";
 import { REGION_BY_ID, regionsForRisk } from "./regions.ts";
@@ -90,7 +90,7 @@ function RiskCard({ risk, highlight, onHighlight }: { risk: RiskResult; highligh
   const regions = regionsForRisk(risk.ruleId);
   const on = highlight === risk.ruleId;
   return (
-    <li className={`${s.risk} ${LEVEL_CLASS[risk.level]}`}>
+    <li className={`${s.risk} ${risk.level==="Unknown"?s.unknown:LEVEL_CLASS[risk.level]}`}>
       <button type="button" className={s.riskBtn} aria-pressed={on} onClick={() => onHighlight(on ? null : risk.ruleId)}>
         <span className={s.riskHead}>
           <span className={s.riskName}>{risk.name}</span>
@@ -103,7 +103,7 @@ function RiskCard({ risk, highlight, onHighlight }: { risk: RiskResult; highligh
         </span>
       </button>
       <dl className={s.riskMeta}>
-        <div><dt>Score</dt><dd className="mono">{risk.score} <span className={s.sub}>range {risk.range[0]}–{risk.range[1]}</span></dd></div>
+        <div><dt>Score</dt><dd className="mono">{risk.score??"unavailable"} <span className={s.sub}>demo index; not a probability</span></dd></div>
         <div>
           <dt>Contributors</dt>
           <dd>{risk.contributors.length ? risk.contributors.map((c) => `${c.label} (${c.score})`).join(", ") : "None drifting"}</dd>
@@ -198,7 +198,7 @@ export const RegionPanel = forwardRef<HTMLDivElement, Props>(function RegionPane
           </div>
         ) : (
           active.map((r) => (
-            <div key={r.ruleId} className={`${s.action} ${LEVEL_CLASS[r.level]}`}>
+            <div key={r.ruleId} className={`${s.action} ${(r.level === "Unknown" ? "" : LEVEL_CLASS[r.level])}`}>
               <p className={s.actionFor}>{r.name} · {r.level}</p>
               <dl className={s.actionList}>
                 <div><dt>What</dt><dd className={s.what}>{r.action}</dd></div>

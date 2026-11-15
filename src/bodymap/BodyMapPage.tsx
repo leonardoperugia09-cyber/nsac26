@@ -1,3 +1,4 @@
+import { contextOf } from "../data/crew";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { Minus, Plus } from "@phosphor-icons/react";
@@ -46,7 +47,7 @@ export function BodyMapPage({ crewId, day: today }: Props) {
   useEffect(() => setDay(today), [today]);
 
   const crew = crewById(crewId);
-  const model = useMemo(() => buildBodyMapModel(historyOf(crewId), day, MISSION_PROFILE), [crewId, day]);
+  const model = useMemo(() => buildBodyMapModel(historyOf(crewId), day, MISSION_PROFILE, contextOf(crewId,day)), [crewId, day]);
 
   // Panel shows the selected region; on desktop default to the most urgent one
   const worst = useMemo(

@@ -95,3 +95,4 @@ input[type="file"]:focus-visible + .attach { outline: 2px solid var(--accent); o
 /* Optional hosted AI: a quiet setting, off by default */
 .aiToggle { display: flex; align-items: center; gap: 10px; min-height: 44px; margin-top: 8px; font-size: 14px; color: var(--ink-2); cursor: pointer; }
 .aiToggle input { flex: none; width: 16px; height: 16px; margin: 0; accent-color: var(--accent); cursor: pointer; }
+.aiNote { margin: 4px 0 0; font-size: 13px; line-height: 1.5; color: var(--ink-2); }

@@ -16,6 +16,7 @@ import {
   ReportDraft,
   QueueReport,
   Medication,
+  MedicationDay,
   Adherence,
   TestResult,
   WhatIf,
@@ -24,17 +25,16 @@ import {
   MeasurementBatch,
 } from "./contracts.ts";
 import { assessCrew, readiness } from "../../src/engine/assessment.ts";
-import { answer } from "./assistant.ts";
+import { answer, assistantStatus } from "./assistant.ts";
 import { evidence, evidenceBundle, protocols } from "./evidence.ts";
 import { radiationCache, fetchRadiation } from "./radiation.ts";
 import { fhirBundle } from "../../src/shared/fhir.ts";
 import type { MissionProfile, Reading } from "../../src/engine/types.ts";
-export type Options = {
+import type { ModelOptions } from "./model-config.ts";
+export type Options = ModelOptions & {
   dbPath?: string;
   apiToken?: string;
   now?: () => number;
-  model?: string;
-  apiKey?: string;
   datasetPath?: string;
 };
 const PROFILES = {
@@ -136,6 +136,9 @@ export async function makeServer(options: Options = {}) {
     app.route({
       method,
       url,
+      ...(url === "/api/assistant"
+        ? { config: { rateLimit: { max: 12, timeWindow: "1 minute" } } }
+        : {}),
       schema: {
         description:
           "Research prototype. Demo parameters; no clinical validation.",
@@ -173,7 +176,11 @@ export async function makeServer(options: Options = {}) {
         vision_score: store.get("test", `${s.crewId}:${s.day}:vision`)?.average,
         sourceProfile: data.meta.mission_profile,
       }),
-      readiness: readiness(history, s.day, s.profile),
+      readiness: readiness(history, s.day, s.profile, {
+        ...store.get("checkin", `${s.crewId}:${s.day}`),
+        vision_score: store.get("test", `${s.crewId}:${s.day}:vision`)?.average,
+        sourceProfile: data.meta.mission_profile,
+      }),
       checkin: store.get("checkin", `${s.crewId}:${s.day}`),
       provenance: {
         kind: "simulated",
@@ -302,6 +309,9 @@ export async function makeServer(options: Options = {}) {
   }));
   route("GET", "/api/protocols", undefined, () => protocols);
   route("GET", "/api/audit", undefined, () => store.list("audit").slice(-100));
+  route("GET", "/api/assistant/status", undefined, () =>
+    assistantStatus(options),
+  );
   route("POST", "/api/assistant", Ask, async (s) => {
     const c = context(s);
     return answer(
@@ -313,6 +323,7 @@ export async function makeServer(options: Options = {}) {
       },
       c.assessment,
       options,
+      c.reading,
     );
   });
   route("POST", "/api/reports/draft", ReportDraft, (s) => {
@@ -384,6 +395,26 @@ export async function makeServer(options: Options = {}) {
   );
   route("POST", "/api/medications", Medication, (s) =>
     store.put("medication", `${s.crewId}:${s.id}`, s.crewId, s),
+  );
+
+  route("POST", "/api/medication-day", MedicationDay, (s) =>
+    store.put("medication_day", `${s.crewId}:${s.day}`, s.crewId, {
+      ...s,
+      provenance: "user_entered_demo",
+      transmitted: false,
+    }),
+  );
+  route(
+    "GET",
+    "/api/medication-day",
+    Selection,
+    (s) =>
+      store.get("medication_day", `${s.crewId}:${s.day}`) ?? {
+        crewId: s.crewId,
+        day: s.day,
+        state: { taken: {}, skipped: {}, extra: [], notes: [] },
+        transmitted: false,
+      },
   );
   route("POST", "/api/adherence", Adherence, (s, req, reply) => {
     if (!store.get("medication", `${s.crewId}:${s.medicationId}`))

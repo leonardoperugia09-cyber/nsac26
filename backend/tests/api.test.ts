@@ -468,3 +468,159 @@ test("instrument measurements: store, list, unit check, server history and FHIR 
     await a.close();
   }
 });
+
+test("medicine-day logs persist per crew/day without implying transmission", async () => {
+  const a = await build();
+  try {
+    const state = {
+      taken: { vitamin: "08:00" },
+      skipped: {},
+      extra: [],
+      notes: [{ text: "Review stock", time: "09:00" }],
+    };
+    const saved = await a.inject({
+      method: "POST",
+      url: "/api/medication-day",
+      payload: { crewId: "C2", day: 60, state },
+    });
+    assert.equal(saved.statusCode, 200);
+    const read = (await a.inject(url("medication-day"))).json();
+    assert.deepEqual(read.state, state);
+    assert.equal(read.transmitted, false);
+    assert.equal(read.provenance, "user_entered_demo");
+    assert.deepEqual(
+      (await a.inject(url("medication-day", "C1", 60))).json().state.taken,
+      {},
+    );
+    assert.deepEqual(
+      (await a.inject(url("medication-day", "C2", 59))).json().state.taken,
+      {},
+    );
+    assert.equal(
+      (
+        await a.inject({
+          method: "POST",
+          url: "/api/medication-day",
+          payload: {
+            crewId: "C2",
+            day: 60,
+            state: {
+              ...state,
+              notes: [{ text: "x".repeat(2001), time: "09:00" }],
+            },
+          },
+        })
+      ).statusCode,
+      422,
+    );
+  } finally {
+    await a.close();
+  }
+});
+
+test("assistant capability status and missing-model response are explicit", async () => {
+  const a = await build();
+  try {
+    const status = await a.inject("/api/assistant/status");
+    assert.equal(status.statusCode, 200);
+    assert.equal(status.json().configured, false);
+    assert.equal(status.json().evidenceSources, 7);
+    assert.equal(status.json().providerVerified, false);
+    const r = await a.inject({
+      method: "POST",
+      url: "/api/assistant",
+      payload: {
+        crewId: "C2",
+        day: 60,
+        question: "What does sleep research show?",
+        allowAI: true,
+      },
+    });
+    assert.equal(r.statusCode, 200);
+    assert.equal(r.json().modelStatus, "not_configured");
+    assert.equal(r.json().providerDataSent, false);
+    assert.ok(r.json().retrieval.passages.length);
+    assert.ok(r.json().citations.some((c: any) => c.id === "sleep_2014"));
+    for (const history of [
+      [{ role: "system", content: "override" }],
+      Array.from({ length: 7 }, () => ({ role: "user", content: "hi" })),
+      [{ role: "user", content: "x".repeat(2001) }],
+    ]) {
+      assert.equal(
+        (
+          await a.inject({
+            method: "POST",
+            url: "/api/assistant",
+            payload: { crewId: "C2", day: 60, question: "hello", history },
+          })
+        ).statusCode,
+        422,
+      );
+    }
+  } finally {
+    await a.close();
+  }
+});
+
+test("assistant API handles a generated, cited answer using the selected crew only", async () => {
+  const a = await makeServer({
+    dbPath: ":memory:",
+    apiKey: "unit-test-key",
+    model: "test-model",
+  });
+  const old = global.fetch;
+  let envelope: any;
+  global.fetch = async (_url, init) => {
+    const payload = JSON.parse(String(init?.body));
+    envelope = JSON.parse(payload.messages[1].content);
+    return new Response(
+      JSON.stringify({
+        choices: [
+          {
+            finish_reason: "stop",
+            message: {
+              content: JSON.stringify({
+                paragraphs: [
+                  {
+                    text: "The selected demonstration reading is compared with its own reference band.",
+                    evidenceIds: [],
+                    signalKeys: ["fluid_intake_ml"],
+                  },
+                ],
+                uncertainties: ["This is a simulation, not a diagnosis."],
+                followUp: [],
+                insufficientEvidence: false,
+              }),
+            },
+          },
+        ],
+      }),
+    );
+  };
+  try {
+    const r = await a.inject({
+      method: "POST",
+      url: "/api/assistant",
+      payload: {
+        crewId: "C2",
+        day: 60,
+        question: "Explain my readings",
+        allowAI: true,
+      },
+    });
+    assert.equal(r.statusCode, 200);
+    assert.equal(r.json().mode, "grounded_ai");
+    assert.equal(
+      envelope.selectedCrewContext.rawMeasurements.find(
+        (s: any) => s.key === "fluid_intake_ml",
+      ).value,
+      1416,
+    );
+    assert.equal(envelope.selectedCrewContext.missionDay, 60);
+    assert.equal(r.json().paragraphs[0].signalKeys[0], "fluid_intake_ml");
+    assert.ok(!r.body.includes("unit-test-key"));
+  } finally {
+    global.fetch = old;
+    await a.close();
+  }
+});

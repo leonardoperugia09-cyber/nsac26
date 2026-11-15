@@ -19,8 +19,8 @@ http://127.0.0.1:3001/docs. `GET /openapi.json` exports the API specification.
 `npm run server` and `npm run dev` also run separately. The SQLite database is created
 under `backend/var/`, ignored by Git. No external credential is needed for the demo.
 
-Configuration comes from exported environment variables in `backend/.env.example`;
-`.env` is not automatically loaded. Node24 environments with an HTTPS proxy may need
+Configuration comes from exported variables or a root `.env` copied from `.env.example`.
+`npm run server` loads that file if present. Node24 environments with an HTTPS proxy may need
 `NODE_USE_ENV_PROXY=1` when starting the service. Non-loopback binding requires a service token.
 When configured, enter that token in browser Settings. This local prototype does not
 provide per-user authorization or isolation between real patients. Only fictional
@@ -52,7 +52,7 @@ Mars simulator's radiation as measured ISS exposure.
 - Overview risk severity, contributing measurements, generated review tasks and body-map flags.
 - Saved daily check-ins, additional vital/exercise/nutrition inputs, symptom checks and local fallback.
 - Reaction/memory educational tasks and vision self-report; recorded results, not clinical tests.
-- Deterministic assistant/triage, offline fallback and optional constrained hosted-AI wording selection.
+- Triage-first conversational assistant, retrieved evidence, linked citations and explicit offline fallback.
 - Transparent mission readiness, crew overview and isolated what-if exploration.
 - Durable report drafts, explicit approval, idempotent simulated outbox and delay calculations.
 - Medication schedule references, expiry/storage checks and adherence history, without prescriptions.
@@ -74,6 +74,7 @@ All product routes use `/api`. Unless indicated, selection uses query fields
 | POST/GET | `/api/checkins`                                          | Upsert/list fictional crew logs                                 |
 | POST     | `/api/measurements/review`                               | Unit/provenance/time-quality review, not medical interpretation |
 | GET      | `/api/readiness`, `/api/crew-overview`                   | Demo readiness and crew ordering                                |
+| GET      | `/api/assistant/status`                                  | Configuration only; provider access verified by an actual answer |
 | POST     | `/api/assistant`                                         | Triage first, explanation second; no automatic report sending   |
 | GET      | `/api/evidence`, `/api/protocols`, `/api/offline-bundle` | Evidence and educational review cards                           |
 | POST     | `/api/reports/draft`, `/api/reports/queue`               | Draft and explicitly approved simulated queue                   |
@@ -105,10 +106,14 @@ fabricated confidence interval is emitted (`range` is null).
   No Gy-to-Sv conversion or assignment of instrument exposure to a person is inferred.
 - Medication strength is **unknown**. Product-specific potency forecasting is unavailable;
   invented general degradation coefficients and use-first recommendations were removed from the active UI.
-- Optional AI needs `AI_API_KEY`, `HALO_MODEL`, and explicit user opt-in. It generates an
-  ordering of reviewed explanation sentences; arbitrary generated clinical prose is not
-  shown. Unavailable/invalid output falls back to deterministic wording. No live hosted
-  model call was made during verification; success/failure paths are mocked.
+- Hosted AI supports Azure OpenAI (`AI_PROVIDER=azure`, `AZURE_OPENAI_ENDPOINT`,
+  `AZURE_OPENAI_DEPLOYMENT`, `AZURE_OPENAI_API_KEY`) and direct OpenAI (`AI_PROVIDER=openai`,
+  `AI_API_KEY`, `HALO_MODEL`), with explicit session consent. See [Azure setup](docs/AZURE.md). It generates
+  question-specific answers from retrieved authored evidence summaries and the selected
+  crew assessment, with linked citations and explicit fallback modes. Generated text can
+  be wrong; citation checks do not prove support or clinical correctness. Automated tests
+  use simulated provider responses. Use `npm run check:ai` for a real, billable connection
+  check. See [Assistant setup and limitations](docs/ASSISTANT.md).
 - A report's delivered state always says **simulated**. No email, Slack or real medical
   transport is implemented or contacted. Earliest reply time assumes immediate response.
 - Browser offline persistence uses localStorage, not an encrypted medical record. Server
@@ -137,5 +142,6 @@ assistant and NASA adapter. `src/engine/`: shared computation; `src/shared/`: sh
 triage and browser integration. `backend/resources/`: evidence and historical NASA
 snapshot. `backend/tests/`: engine/API/safety/persistence/browser tests.
 
-Earlier Python work is preserved separately in the workspace/previous branch. This
-branch has one server implementation so scoring stays in the existing TypeScript engine.
+The earlier Python health-only scaffold under `backend/src/halo_backend/` is retained
+from team main for history. It is not used by `npm run server`. The canonical backend
+is Node/Fastify; all scoring stays in the shared TypeScript engine.

@@ -10,7 +10,7 @@ import { More } from "../components/More";
 import { PageHero } from "../components/PageHero";
 import s from "./DailyLog.module.css";
 
-type Props = { crewId: string; day: number };
+type Props = { crewId: string; day: number; quickMood?: number | null; onSaved?: () => void };
 type TestType = "reaction" | "memory" | "vision";
 type SaveTest = (type: TestType, values: number[]) => Promise<boolean>;
 type Status = "saving" | "sent" | "device" | null;
@@ -162,7 +162,7 @@ function VisionTask({ save, initial }: { save: SaveTest; initial: number }) {
   );
 }
 
-export function DailyLog({ crewId, day }: Props) {
+export function DailyLog({ crewId, day, quickMood, onSaved }: Props) {
   // Saved check-ins and tests change what readingOn returns, so re-read when they do.
   const [rev, setRev] = useState(0);
   useEffect(() => {
@@ -176,7 +176,7 @@ export function DailyLog({ crewId, day }: Props) {
 
   const [fluid, setFluid] = useState<number[]>(() => [today?.fluid_intake_ml ?? 0]);
   const [urine, setUrine] = useState(() => clamp(today?.urine_color_1to8 ?? 3, 1, 8));
-  const [mood, setMood] = useState(() => clamp(today?.mood_1to5 ?? 3, 1, 5));
+  const [mood, setMood] = useState(() => quickMood ?? clamp(today?.mood_1to5 ?? 3, 1, 5)); // Leo: the homepage check-in fills in mood
   const [stress, setStress] = useState(() => clamp(today?.stress_1to5 ?? 3, 1, 5));
   const [sleep, setSleep] = useState(() => (today?.sleep_hours ?? 7).toFixed(2).replace(/0$/, ""));
   const [extras, setExtras] = useState<Record<string, string>>(() => Object.fromEntries(EXTRAS.flatMap(([, fields]) => fields).map(([k]) => {
@@ -214,6 +214,7 @@ export function DailyLog({ crewId, day }: Props) {
       rememberCheckin({ ...log, pending: true });
       setSaved("device");
     }
+    onSaved?.();
   }
 
   const saveTest: SaveTest = async (type, values) => {

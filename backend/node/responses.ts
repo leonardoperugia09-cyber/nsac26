@@ -69,8 +69,25 @@ export const EvidenceOutput = object({
   clinically_approved: z.literal(false),
 });
 export const AssistantOutput = object({
-  mode: z.enum(["offline_rules", "ai_selected_reviewed_explanation"]),
+  mode: z.enum(["offline_rules", "grounded_ai"]),
   modelStatus: z.string(),
+  providerDataSent: z.boolean(),
+  failureReason: z.string().nullable(),
+  paragraphs: z.array(
+    z.object({
+      text: z.string(),
+      evidenceIds: z.array(z.string()),
+      signalKeys: z.array(z.string()),
+    }),
+  ),
+  uncertainties: z.array(z.string()),
+  insufficientEvidence: z.boolean(),
+  retrieval: object({
+    method: z.string(),
+    passages: z.array(
+      object({ id: z.string(), sourceId: z.string(), text: z.string() }),
+    ),
+  }),
   triage: object({
     urgent: z.boolean(),
     flags: z.array(z.string()),
@@ -88,6 +105,15 @@ export const responseContracts: Record<string, z.ZodType> = {
   "/api/risks": AssessmentOutput,
   "/api/readiness": ReadinessOutput,
   "/api/assistant": AssistantOutput,
+  "/api/assistant/status": object({
+    configured: z.boolean(),
+    model: z.string().nullable(),
+    providerVerified: z.literal(false),
+    status: z.string(),
+    message: z.string(),
+    evidenceSources: z.number().int(),
+    requiresConsent: z.literal(true),
+  }),
   "/api/evidence": z.array(EvidenceOutput),
   "/api/checkins": z.unknown(),
   "/api/measurements": z.unknown(),

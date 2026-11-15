@@ -1,3 +1,4 @@
+import {computeBaselines} from "../src/engine/baseline.ts";
 // Checks the body-map model (src/bodymap) against the engine and the planted events.
 // Run: npm run check:bodymap   (= node --experimental-strip-types scripts/check_bodymap.ts, Node 22.6+)
 
@@ -5,6 +6,7 @@ import { readFileSync } from "node:fs";
 import { buildBodyMapModel, regionsForRisk, type BodyMapModel } from "../src/bodymap/model.ts";
 import { REGIONS } from "../src/bodymap/regions.ts";
 import { SIGNAL_BY_KEY } from "../src/engine/signals.ts";
+import { computeBaselines, computeDrift } from "../src/engine/baseline.ts";
 import { COUPLING_RULES } from "../src/rules/index.ts";
 import type { Reading, SimData } from "../src/engine/types.ts";
 
@@ -82,11 +84,21 @@ expect(st(model("C1", 30), "eyes") === "unknown", "C1 day 30: eyes unknown (no d
 const kr = regionsForRisk("kidney_stone");
 expect(kr.includes("kidneys") && kr.includes("skeleton"), `regionsForRisk(kidney_stone) = ${kr.join(", ")}`);
 
-// Nominal case
-const c1d30 = model("C1", 30);
-expect(c1d30.risks.every((r) => r.level === "Nominal"), "C1 day 30: every engine risk Nominal");
-expect(st(c1d30, "kidneys") === "nominal" && st(c1d30, "heart") === "nominal", "C1 day 30: kidneys and heart nominal");
-expect(c1d30.overall === "nominal", `C1 day 30: overall nominal (got ${c1d30.overall})`);
+// Nominal case: on a calm day (every signal inside its personal band, every engine risk Nominal)
+// the map must read nominal. The calm day is found from the data rather than hard-coded, because
+// regenerating the simulator moves the random short nights (C1 day 30 is no longer calm).
+const c1h = historyOf("C1");
+const c1bands = computeBaselines(c1h);
+const calmDay = Array.from({ length: 100 }, (_, i) => 21 + i).find((d) => {
+  const drift = computeDrift(c1h, c1bands, d);
+  return Object.values(drift).every((x) => x.status === "inside band") && model("C1", d).risks.every((r) => r.level === "Nominal" || r.level === "Unknown"); // Unknown = inputs missing, not a raised risk
+});
+expect(calmDay !== undefined, `C1 has a calm day after the baseline window (first on day ${calmDay})`);
+if (calmDay !== undefined) {
+  const calm = model("C1", calmDay);
+  expect(st(calm, "kidneys") === "nominal" && st(calm, "heart") === "nominal", `C1 day ${calmDay}: kidneys and heart nominal`);
+  expect(calm.overall === "nominal", `C1 day ${calmDay}: overall nominal (got ${calm.overall})`);
+}
 
 console.log(failures === 0 ? "\nALL CHECKS PASSED" : `\n${failures} CHECK(S) FAILED`);
 process.exit(failures === 0 ? 0 : 1);

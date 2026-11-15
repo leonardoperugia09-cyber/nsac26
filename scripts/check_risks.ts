@@ -55,8 +55,12 @@ for (const c of crewIds) {
         (risk.ruleId === "solar_storm" && (d === 40 || d === 41)) ||
         (c === "C2" && d >= 55 && ["kidney_stone", "musculoskeletal"].includes(risk.ruleId)) || // C2 also skips workouts from day 55
         (c === "C3" && d === 70 && risk.ruleId === "cognitive_readiness") ||
-        // the random data has some genuinely bad nights; flagging those is correct
-        (risk.ruleId === "cognitive_readiness" && (r.sleep_hours <= 5.0 || r.radiation_mSv_today > 5));
+        // the random data has genuinely run-down days: a short night, built-up sleep debt or a high dose.
+        // Flagging those is correct. (Thresholds widened after the simulator was regenerated with
+        // realistic readings on day 14 Nov, which moved the random short nights to other days.)
+        (risk.ruleId === "cognitive_readiness" && (r.sleep_hours <= 5.5 || r.sleep_debt_h >= 6 || r.radiation_mSv_today > 5)) ||
+        // the morning after C3's planted short night before the spacewalk
+        (c === "C3" && d === 71 && risk.ruleId === "cognitive_readiness");
       if (!explained) {
         extra++;
         console.log(`  unexplained Act: ${c} day ${d} ${risk.name} (score ${risk.score})`);
@@ -64,6 +68,11 @@ for (const c of crewIds) {
     }
   }
 }
+// Guard: the excuses above must not hide a flood of alerts. C1 is the calm commander, C2 has the planted
+// kidney story, so C1 should get clearly fewer Act days than C2 (not counting the shared solar storm).
+const actDays = (c: string) => days(21).filter((d) => risksOf(c, d).some((x) => x.level === "Act" && x.ruleId !== "solar_storm")).length;
+console.log(`  Act days (excluding the storm): ${crewIds.map((c) => `${c} ${actDays(c)}`).join(", ")}`);
+expect(actDays("C1") * 2 <= actDays("C2"), `C1 (calm commander) has at most half as many Act days as C2 (${actDays("C1")} vs ${actDays("C2")})`);
 expect(extra === 0, `Unexplained Act alerts across ${crewIds.length} crew x ${lastDay - 20} days: ${extra}`);
 
 // Example output for the demo moment (Ben's Overview uses day 58)

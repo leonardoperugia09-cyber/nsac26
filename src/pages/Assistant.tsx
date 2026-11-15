@@ -10,6 +10,7 @@ import { MISSION_PROFILE, contextOf, crewById, historyOf, readingOn } from "../d
 import type { MissionProfile } from "../engine/types.ts";
 import { assessCrew } from "../engine/assessment.ts";
 import { api } from "../shared/api.ts";
+import type { AssistantReply, AssistantStatus, ConversationTurn } from "../shared/assistantTypes.ts";
 import { answer } from "../shared/offlineAssistant.ts";
 import { buildOverview } from "../ui/overviewData.ts";
 import { GATE_OF, worstGate } from "../ui/missionData.ts";
@@ -19,26 +20,40 @@ import s from "./Assistant.module.css";
 
 type Props = { crewId: string; day: number; profile?: MissionProfile; delay: string | null; urgent: boolean };
 
-// What POST /api/assistant returns (and shared/offlineAssistant.ts mirrors when the server is unreachable)
-type Reply = { mode: string; modelStatus?: string; triage: { urgent: boolean }; explanation: string; escalation: string; citations: { title: string }[] };
+// POST /api/assistant returns an AssistantReply; shared/offlineAssistant.ts mirrors it when the server is unreachable
+type Reply = AssistantReply;
 
 const ON_BOARD: Block = { kind: "via", text: "Answered on board" };
 const replyBlocks = (r: Reply): Block[] => r.triage.urgent
   ? [{ kind: "emergency", title: "This could be an emergency", text: EMERGENCY_TEXT }]
   : [
-      ...splitAction(r.explanation),
+      ...r.explanation.split(/\n{2,}/).flatMap(splitAction),
       ...(r.citations.length ? [{ kind: "sources", titles: r.citations.map((c) => c.title) } as const] : []),
+      // A generated answer says what it is unsure about
+      ...(r.mode === "grounded_ai" && r.uncertainties?.length ? [{ kind: "via", text: `Limits: ${r.uncertainties.join(" ")}` } as const] : []),
       { kind: "escalation", text: r.escalation },
+      ...(r.followUp?.length ? [{ kind: "quick", options: r.followUp.slice(0, 3) } as const] : []),
     ];
 /** "… What to do now: X" becomes the explanation plus a highlighted action line */
 const splitAction = (text: string): Block[] => {
   const [said, todo] = text.split(ACTION_MARK);
   return todo ? [{ kind: "text", text: said.trim() }, { kind: "action", text: `${ACTION_MARK} ${todo.trim()}` }] : [{ kind: "text", text }];
 };
+// Which path answered, in plain words (Manar's statuses from backend/node/assistant.ts)
 const serverLine = (r: Reply) =>
-  r.mode === "ai_selected_reviewed_explanation" ? "Answered by the HALO server, worded by hosted AI from reviewed sentences"
-  : r.modelStatus === "not_configured" || r.modelStatus === "failed_using_offline_fallback" ? "Answered by the HALO server. Hosted AI was not available"
-  : "Answered by the HALO server";
+  r.mode === "grounded_ai" ? "Written by hosted AI from HALO's sources. Check the sources listed"
+  : r.modelStatus === "not_configured" ? "Answered by the HALO server from its sources. Hosted AI is not set up"
+  : r.modelStatus === "invalid_configuration" ? "Answered by the HALO server from its sources. Hosted AI is set up wrong"
+  : r.modelStatus === "failed_using_offline_fallback" ? "Answered by the HALO server from its sources. The hosted AI request failed"
+  : r.modelStatus === "insufficient_evidence" ? "HALO's sources don't cover this, so the AI was not asked"
+  : r.modelStatus === "safety_bypass" ? "Safety answer, the AI was not asked"
+  : "Answered by the HALO server from its sources";
+/** The last six turns go with each question so follow-ups make sense */
+const turnsOf = (messages: Message[]): ConversationTurn[] =>
+  messages.slice(-6).map((m) => ({
+    role: m.from === "user" ? "user" : "assistant",
+    content: (m.from === "user" ? m.text : m.blocks.map((b) => ("text" in b && typeof b.text === "string" ? b.text : "")).filter(Boolean).join(" ")).slice(0, 2000),
+  }));
 
 const mono = (t: string) => <span className="mono">{t}</span>;
 
@@ -81,7 +96,13 @@ export function Assistant({ crewId, day, profile = MISSION_PROFILE, delay, urgen
   const area = useRef<HTMLDivElement>(null);
   const input = useRef<HTMLTextAreaElement>(null);
   const [file, setFile] = useState<File | null>(null);
-  const [allowAI, setAllowAI] = useState(false);
+  const [allowAI, setAllowAI] = useState(() => sessionStorage.getItem("halo-allow-ai") === "true");
+  const [aiStatus, setAiStatus] = useState<AssistantStatus | null>(null);
+  useEffect(() => {
+    let cancelled = false;
+    api<AssistantStatus>("/assistant/status").then((r) => { if (!cancelled) setAiStatus(r); }).catch(() => { if (!cancelled) setAiStatus(null); });
+    return () => { cancelled = true; };
+  }, [allowAI]);
   // The conversation card runs to the bottom of the screen: tiles at the top, the typing bar at the bottom
   const convo = useRef<HTMLElement>(null);
   const [convoH, setConvoH] = useState<number>();
@@ -101,12 +122,13 @@ export function Assistant({ crewId, day, profile = MISSION_PROFILE, delay, urgen
   useEffect(() => { const el = area.current; if (el) el.scrollTop = el.scrollHeight; }, [messages]);
 
   // The HALO server answers first; if it is down, the on-board copy gives the same answers (src/shared/assistantTopics.ts)
-  const ask = async (q: string): Promise<Block[]> => {
+  const ask = async (q: string, history: ConversationTurn[]): Promise<Block[]> => {
+    const context = contextOf(crewId, day);
     try {
-      const r = await api<Reply>("/assistant", { crewId, day, profile, question: q, symptoms: [], allowAI });
+      const r = await api<Reply>("/assistant", { crewId, day, profile, question: q, symptoms: context.symptoms ?? [], history, allowAI });
       return [...replyBlocks(r), { kind: "via", text: serverLine(r) }];
     } catch {
-      const local = replyBlocks(answer(q, assessCrew(historyOf(crewId), day, profile, contextOf(crewId, day))));
+      const local = replyBlocks(answer(q, assessCrew(historyOf(crewId), day, profile, context), context.symptoms ?? []));
       return [...local, ON_BOARD];
     }
   };
@@ -119,8 +141,9 @@ export function Assistant({ crewId, day, profile = MISSION_PROFILE, delay, urgen
     // Red flags and medicine questions are answered on board at once, before any server or AI call
     const safety = safetyReply(t);
     const reply = haloMsg(safety ? [...safety, ON_BOARD] : [{ kind: "pending" }]);
+    const history = turnsOf(messages);
     setMessages((m) => [...m, userMsg(t), reply]);
-    if (!safety) void ask(t).then((blocks) => setMessages((m) => m.map((x) => (x.id === reply.id ? { ...reply, blocks } : x))));
+    if (!safety) void ask(t, history).then((blocks) => setMessages((m) => m.map((x) => (x.id === reply.id ? { ...reply, blocks } : x))));
   };
   const onKey = (e: KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); send(text); }
@@ -272,10 +295,15 @@ export function Assistant({ crewId, day, profile = MISSION_PROFILE, delay, urgen
               ))}
             </ul>
             </More>
+            {/* Manar: hosted AI is opt-in per session, and the page says exactly what leaves the device */}
             <label className={s.aiToggle}>
-              <input type="checkbox" checked={allowAI} onChange={(e) => setAllowAI(e.target.checked)} />
-              Let hosted AI reorder reviewed sentences (needs the HALO server)
+              <input type="checkbox" checked={allowAI} onChange={(e) => { setAllowAI(e.target.checked); sessionStorage.setItem("halo-allow-ai", String(e.target.checked)); }} />
+              Use hosted AI for this session
             </label>
+            <p className={s.aiNote} role="status">
+              {aiStatus ? aiStatus.message : "The HALO server isn't reachable, so answers come from the on-board rules."}{" "}
+              When on, your question, the last six messages and this astronaut's simulated readings go to {aiStatus?.provider === "azure" ? "Azure OpenAI" : aiStatus?.provider === "openai" ? "OpenAI" : "the configured AI provider"}. Names are left out.
+            </p>
           </section>
         </div>
       </div>

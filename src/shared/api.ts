@@ -18,9 +18,10 @@ export const pendingCheckins = () =>
   localCheckins().filter((l) => l.pending).length;
 export async function api<T = any>(path: string, body?: unknown): Promise<T> {
   const token = sessionStorage.getItem("halo-api-token");
+  const base = (import.meta.env.VITE_API_BASE_URL || "/api").replace(/\/$/, "");
   let response: Response;
   try {
-    response = await fetch("/api" + path, {
+    response = await fetch(base + path, {
       method: body === undefined ? "GET" : "POST",
       headers: {
         ...(body === undefined ? {} : { "Content-Type": "application/json" }),
@@ -33,13 +34,20 @@ export async function api<T = any>(path: string, body?: unknown): Promise<T> {
     markLink(false);
     throw e;
   }
-  // Any reply from the server (even a validation error) means the link works; 404/5xx means no HALO server here
-  markLink(response.status < 500 && response.status !== 404);
+  // Any JSON reply from the server (even a validation error) means the link works; 404/5xx or an HTML page means no HALO server here
+  const json = !!response.headers
+    .get("content-type")
+    ?.includes("application/json");
+  markLink(json && response.status < 500 && response.status !== 404);
   if (!response.ok)
     throw Error(
       response.status === 401
         ? "Backend token required: enter it in Settings."
         : `Backend request failed (${response.status})`,
+    );
+  if (!json)
+    throw Error(
+      "Backend route did not return JSON. Check the API deployment and VITE_API_BASE_URL.",
     );
   return response.json();
 }
@@ -63,6 +71,28 @@ export function rememberCheckin(log: any) {
   logs.push(log);
   localStorage.setItem("halo-checkins-v1", JSON.stringify(logs));
   window.dispatchEvent(new Event("halo-data-change"));
+}
+/** Plan steps like "I drank 250 ml" change today's logged fluid; the engine then decides whether the risk eases. */
+export function addFluid(
+  crewId: string,
+  day: number,
+  ml: number,
+  current: number,
+) {
+  const prev = localCheckins().find(
+    (l) => l.crewId === crewId && l.day === day,
+  );
+  rememberCheckin({
+    ...prev,
+    crewId,
+    day,
+    measurements: {
+      ...(prev?.measurements ?? {}),
+      fluid_intake_ml: Math.max(0, current + ml),
+    },
+    pending: true,
+  });
+  void syncCheckins();
 }
 export async function syncCheckins() {
   const saved = new Map<string, string>();

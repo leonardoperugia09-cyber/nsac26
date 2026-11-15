@@ -161,17 +161,21 @@ export function readiness(
   history: Reading[],
   day: number,
   profile: MissionProfile = "mars_transit",
+  context: Record<string, any> = {},
 ) {
-  const a = assessCrew(history, day, profile);
+  const a = assessCrew(history, day, profile, context);
   const keys = ["sleep_hours", "reaction_time_ms", "radiation_mSv_today"];
   const missing = keys.filter((k) => !a.drift[k]);
   const storm = a.risks.find((r) => r.ruleId === "solar_storm");
   const bad = keys.filter((k) => a.drift[k]?.score >= 2);
   const status = missing.length
     ? "Insufficient data"
-    : storm?.level === "Act" || bad.some((k) => a.drift[k].score >= 3)
+    : a.risks.some((r) => r.level === "Act") ||
+        bad.some((k) => a.drift[k].score >= 3)
       ? "No-go"
-      : bad.length
+      : bad.length ||
+          a.risks.some((r) => r.level === "Watch") ||
+          a.unknown.length
         ? "Caution"
         : "Go";
   return {
@@ -182,7 +186,13 @@ export function readiness(
       ? ["Fresh inputs and sufficient baseline are required."]
       : bad.length
         ? bad.map((k) => `${k} exceeded the demonstration drift threshold.`)
-        : ["No configured demo threshold was crossed."],
+        : a.risks.some((r) => r.level === "Act")
+          ? ["An active Act pattern requires review before the task."]
+          : a.unknown.length
+            ? ["Unassessed hypotheses require human review before the task."]
+            : a.risks.some((r) => r.level === "Watch")
+              ? ["A Watch pattern requires human review before the task."]
+              : ["No configured demo threshold was crossed."],
     ruleVersion: RULE_VERSION,
     thresholds: { cautionDrift: 2, noGoDrift: 3 },
     advisoryOnly: true,

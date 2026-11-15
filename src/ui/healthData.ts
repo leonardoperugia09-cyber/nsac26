@@ -5,10 +5,7 @@ import { SIGNAL_BY_KEY } from "../engine/signals.ts";
 import { historyOf } from "../data/crew.ts";
 
 const DIGITS: Record<string, number> = {
-  body_mass_kg: 1,
-  vitamin_d_ng_ml: 1,
-  sleep_hours: 1,
-  sleep_debt_h: 1,
+  body_mass_kg: 1, vitamin_d_ng_ml: 1, sleep_hours: 1, sleep_debt_h: 1,
 };
 
 /** The number only, formatted for one signal. */
@@ -36,62 +33,26 @@ export function fmtRange(key: string, lo: number, hi: number): string {
   return `${fmtNum(key, lo)}-${fmtNum(key, hi)}${unit ? ` ${unit}` : ""}`;
 }
 
-export type TrendPoint = {
-  day: number;
-  value: number;
-  band: [number, number];
-  out: number | null;
-};
-export type Trend = {
-  points: TrendPoint[];
-  now: number;
-  lo: number;
-  hi: number;
-  outNow: boolean;
-};
+export type TrendPoint = { day: number; value: number; band: [number, number]; out: number | null };
+export type Trend = { points: TrendPoint[]; now: number; lo: number; hi: number; outNow: boolean };
 
 /** Last 30 days of one signal with its personal band. An amber segment ends outside the band in the harmful direction. */
 export function buildTrend(crewId: string, day: number, key: string): Trend {
   const history = historyOf(crewId);
-  const b = computeBaselines(
-    history.filter((r) => r.day <= day),
-    day,
-  )[key];
-  if (!b) return { points: [], now: NaN, lo: NaN, hi: NaN, outNow: false };
+  const b = computeBaselines(history)[key];
   const bad = SIGNAL_BY_KEY[key]?.badDirection ?? 0;
-  const rows = history.filter(
-    (r) =>
-      r.day >= day - 29 &&
-      r.day <= day &&
-      typeof (r as any)[key] === "number" &&
-      Number.isFinite((r as any)[key]),
-  );
-  if (!rows.length)
-    return { points: [], now: NaN, lo: NaN, hi: NaN, outNow: false };
+  const rows = history.filter((r) => r.day >= day - 29 && r.day <= day);
   const pts = rows.map((r) => {
     const value = r[key as keyof typeof r] as number;
     const c = bandCentreAt(b, r.day);
     const band: [number, number] = [c - 2 * b.sd, c + 2 * b.sd];
-    const isOut =
-      bad < 0
-        ? value < band[0]
-        : bad > 0
-          ? value > band[1]
-          : value < band[0] || value > band[1];
+    const isOut = bad < 0 ? value < band[0] : bad > 0 ? value > band[1] : value < band[0] || value > band[1];
     return { day: r.day, value, band, isOut };
   });
   const points = pts.map((p, i) => ({
-    day: p.day,
-    value: p.value,
-    band: p.band,
+    day: p.day, value: p.value, band: p.band,
     out: p.isOut || pts[i + 1]?.isOut ? p.value : null,
   }));
   const last = pts[pts.length - 1];
-  return {
-    points,
-    now: last.value,
-    lo: last.band[0],
-    hi: last.band[1],
-    outNow: last.isOut,
-  };
+  return { points, now: last.value, lo: last.band[0], hi: last.band[1], outNow: last.isOut };
 }

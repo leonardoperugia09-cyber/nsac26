@@ -104,6 +104,17 @@ export const Ask = Selection.extend({
   question: z.string().trim().min(1).max(2000),
   symptoms: Symptoms.default([]),
   allowAI: z.boolean().default(false),
+  history: z
+    .array(
+      z
+        .object({
+          role: z.enum(["user", "assistant"]),
+          content: z.string().trim().min(1).max(2000),
+        })
+        .strict(),
+    )
+    .max(6)
+    .default([]),
 }).strict();
 export const ReportDraft = Selection.extend({
   purpose: z
@@ -176,5 +187,28 @@ export const MeasurementBatch = z
   .object({
     crewId: Selection.shape.crewId,
     measurements: z.array(Measurement).max(500),
+  })
+  .strict();
+
+export const MedicationDay = z
+  .object({
+    crewId: Selection.shape.crewId,
+    day: Selection.shape.day,
+    state: z
+      .object({
+        taken: z.record(z.string().max(100), z.string().max(20)),
+        skipped: z.record(z.string().max(100), z.string().max(200)),
+        extra: z
+          .array(
+            z.object({ medId: z.string().max(100), time: z.string().max(20) }),
+          )
+          .max(100),
+        notes: z
+          .array(
+            z.object({ text: z.string().max(2000), time: z.string().max(20) }),
+          )
+          .max(100),
+      })
+      .strict(),
   })
   .strict();

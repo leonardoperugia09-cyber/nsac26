@@ -17,16 +17,26 @@ const LOOKS: { id: Look; label: string; note: string }[] = [
   },
 ];
 
+const SCENARIOS = [
+  { label: "Today", note: "Marco, day 58", crewId: "C2", day: 58 },
+  { label: "Before the hydration drop", note: "Marco, day 50", crewId: "C2", day: 50 },
+  { label: "Hydration pattern", note: "Marco, day 60", crewId: "C2", day: 60 },
+  { label: "Radiation event", note: "Aiko, day 40", crewId: "C1", day: 40 },
+  { label: "Readiness event", note: "Lena, day 70", crewId: "C3", day: 70 },
+];
+
 export function Settings({
   look,
   onLook,
   crewId,
   day,
+  onScenario,
 }: {
   look: Look;
   onLook: (l: Look) => void;
   crewId: string;
   day: number;
+  onScenario: (crewId: string, day: number) => void;
 }) {
   return (
     <>
@@ -61,6 +71,19 @@ export function Settings({
         </div>
       </section>
       <InstrumentsCard crewId={crewId} day={day} />
+      {/* Manar's scenarios: jump to a day in the simulated data and watch the engine react */}
+      <section className={`${card.card} ${s.group} ${s.server}`} aria-labelledby="scenario-title">
+        <div className={card.head}><h2 id="scenario-title">Demo scenarios</h2><span>Day {day}</span></div>
+        <div className={s.scenarios}>
+          {SCENARIOS.map((x) => (
+            <button key={x.label} className={`${s.scenario} ${x.crewId === crewId && x.day === day ? s.current : ""}`}
+              aria-pressed={x.crewId === crewId && x.day === day} onClick={() => onScenario(x.crewId, x.day)}>
+              <b>{x.label}</b><small>{x.note}</small>
+            </button>
+          ))}
+        </div>
+        <p className={s.note}>Fictional crew data. Every screen recomputes from the readings up to the chosen day.</p>
+      </section>
       {/* Manar's backend: only needed when the HALO server runs with HALO_API_TOKEN set */}
       <section className={`${card.card} ${s.group} ${s.server}`} aria-labelledby="server-title">
         <div className={card.head}><h2 id="server-title">HALO server</h2></div>

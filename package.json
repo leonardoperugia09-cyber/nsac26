@@ -7,9 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "check:bodymap": "node --experimental-strip-types scripts/check_bodymap.ts",
     "typecheck": "tsc --noEmit",
-    "server": "tsx backend/server.ts",
+    "server": "node --env-file-if-exists=.env --import=tsx backend/server.ts",
     "test": "tsx --test backend/tests/*.test.ts",
     "typecheck:backend": "tsc --noEmit -p backend/tsconfig.json",
     "check:drift": "tsx scripts/check_drift.ts",
@@ -17,7 +16,9 @@
     "demo": "tsx backend/demo.ts",
     "dev:full": "node scripts/dev-full.mjs",
     "test:browser": "playwright test",
-    "format:check": "prettier --check backend/node backend/tests backend/*.ts src/engine/assessment.ts src/shared"
+    "format:check": "prettier --check backend/node backend/tests backend/*.ts src/engine/assessment.ts src/shared",
+    "check:bodymap": "tsx scripts/check_bodymap.ts",
+    "check:ai": "node --env-file-if-exists=.env --import=tsx backend/check-ai.ts"
   },
   "dependencies": {
     "@fastify/cors": "^11.4.3",

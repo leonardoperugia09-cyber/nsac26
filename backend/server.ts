@@ -1,4 +1,5 @@
 import { makeServer } from "./node/app.ts";
+import { modelOptionsFromEnv } from "./node/model-config.ts";
 const host = process.env.HALO_HOST ?? "127.0.0.1";
 if (
   !["127.0.0.1", "localhost", "::1"].includes(host) &&
@@ -8,8 +9,7 @@ if (
 const app = await makeServer({
   dbPath: process.env.HALO_DB_PATH,
   apiToken: process.env.HALO_API_TOKEN,
-  apiKey: process.env.AI_API_KEY,
-  model: process.env.HALO_MODEL,
+  ...modelOptionsFromEnv(),
 });
 await app.listen({ port: Number(process.env.HALO_PORT ?? 3001), host });
 process.stdout.write(
