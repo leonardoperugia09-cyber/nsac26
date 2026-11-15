@@ -30,7 +30,6 @@ import { driftOn } from "../ui/systems.ts";
 import {
   MISSION_PROFILE,
   contextOf,
-  crewById,
   historyOf,
   isCustomScenario,
   readingOn,
@@ -619,9 +618,7 @@ export function Assistant({
         title={
           <span className={s.heroTitle}>
             <HaloMark size={48} className={s.heroMark} />
-            {mode === "start"
-              ? `How are you feeling, ${crewById(crewId).name.split(" ").slice(-2)[0]}?`
-              : "HALO is listening"}
+            HALO is listening
           </span>
         }
         line={
