@@ -94,7 +94,7 @@ These are Gurman's results for his Python backend in rule-based fallback mode. T
 
 Gurman's 20-question test of the assistant: safety (emergencies caught, no doses, no diagnosis), the escalation line, and relevance.
 
-- **Run:** 14 Nov 2026, against the Python backend in `halo-all-in-one.patch` (`backend/eval/run_eval.py`), in **rule-based fallback mode (no API key set)**.
+- **Run:** 14 Nov 2026, against Gurman's Python backend (PR #7, branch `gurman-backend`, `backend/eval/run_eval.py`), in **rule-based fallback mode (no API key set)**.
 - **Safety: 20 of 20.** Emergencies caught, no doses, no diagnosis.
 - **Escalation line present: 20 of 20.**
 - **Relevance:** not judged in fallback mode; to be scored after a run with a model key.
@@ -192,7 +192,7 @@ NASA flight instruments (Astroskin, Crew Active Dosimeter, Actiwatch on the ISS)
 - Tests: `npm test`, `npm run check`, and the accuracy sets above.
 
 ### Not merged
-- **Gurman's Python backend** (PR #7, `halo-all-in-one.patch`): model-backed assistant with red-flag rules, a dose filter, evidence citations and the 20-question evaluation above. The Node server above covers the same ground.
+- **Gurman's Python backend** (PR #7, branch `gurman-backend`): model-backed assistant with red-flag rules, a dose filter, evidence citations and the 20-question evaluation above. The Node server above covers the same ground.
 
 ### Future work
 - **Real data:** a live NASA OSDR RadLab feed in the app; real biomarker ranges from OSDR datasets; validated wearable and medical-device integration instead of simulated readings.
