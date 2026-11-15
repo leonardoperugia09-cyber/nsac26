@@ -32,6 +32,10 @@ test("research and everyday wording is not an emergency or a medicine request", 
 test("asking for medicine advice without naming a medicine is still refused", () => {
   assert.equal(medicationAdvice("What should I take for nausea?"), true);
   assert.equal(medicationAdvice("How much diphenhydramine for sleep?"), true);
+  assert.equal(
+    medicationAdvice("What is the right amount of ibuprofen for a headache?"),
+    true,
+  );
 });
 
 test("questions about my own readings are data questions", () => {
@@ -42,4 +46,25 @@ test("questions about my own readings are data questions", () => {
   ])
     assert.equal(asksAboutData(q), true, q);
   assert.equal(asksAboutData("How does space radiation affect bone?"), false);
+});
+
+test("bleeding and self-harm in more wordings, medicine advice without a name, and data questions about logged or strap data", () => {
+  for (const q of [
+    "I can't stop bleeding from a deep cut",
+    "I keep having thoughts of ending it all",
+  ])
+    assert.equal(triage(q).urgent, true, q);
+  for (const q of [
+    "Tell me what to take for a headache",
+    "Recommend a painkiller for my back",
+  ])
+    assert.equal(medicationAdvice(q), true, q);
+  for (const q of [
+    "Give me an overview of where I stand.",
+    "How have I been doing this week?",
+    "My strap says 96, is that normal for me?",
+    "Does my logged skin problem matter?",
+    "How do my symptoms and heart rate look?",
+  ])
+    assert.equal(asksAboutData(q), true, q);
 });

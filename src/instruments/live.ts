@@ -67,6 +67,12 @@ export function stopLive() {
   emit({ name: null, simulated: false, bpm: null, at: null });
 }
 
+/** The attached strap's current reading for the assistant, or null when nothing is attached. */
+export const liveNow = () =>
+  state.name !== null && state.bpm !== null && state.at !== null
+    ? { name: state.name, simulated: state.simulated, bpm: state.bpm, secondsAgo: Math.max(0, Math.round((Date.now() - state.at) / 1000)) }
+    : null;
+
 /** Live strap state for any screen (homepage reading, Settings card). */
 export function useLive() {
   const [s, set] = useState(state);

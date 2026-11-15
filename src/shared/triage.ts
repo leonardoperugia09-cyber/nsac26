@@ -18,6 +18,7 @@ export const RED_FLAG_MORE = new RegExp(
     String.raw`sudden(?:ly)?\W+(?:\w+\W+){0,6}?(?:numb\w*|weak\w*|(?:can'?t|cannot|unable to) (?:speak|talk|see|move|walk)|trouble (?:speaking|seeing|walking)|confus\w*)`,
     String.raw`(?:can'?t|cannot|unable to) (?:speak|talk) (?:properly|clearly|right|normally)|trouble speaking|slurring|my (?:arm|leg|face) (?:is |feels |has gone )?(?:weak|numb|limp)|one side of (?:my|the) (?:body|face)`,
     String.raw`blacked out|black(?:ing)? out|woke up on the floor|knocked out|won'?t wake up|not waking|lost consciousness|loss of consciousness`,
+    String.raw`(?:can'?t|cannot|won'?t|unable to) stop (?:the |my )?bleeding|bleeding (?:won'?t|will not|doesn'?t) stop|(?:ending|end(?:ed)?) (?:my life|it all)|thoughts? of (?:ending|hurting|killing)|wish i (?:was|were) dead|want to disappear`,
     String.raw`killing myself|take my own life|taking my own life|better off dead|end my own life|don'?t want to be here anymore`,
     String.raw`overdos\w*|poison\w*|swallowed (?:too many|something|bleach)|took too many`,
     String.raw`can'?t swallow|(?:severe|serious|bad) allergic reaction|allergic reaction.{0,40}(?:breath|swell|swollen|throat|tongue|lips)`,
@@ -78,7 +79,7 @@ export function medicationAdvice(question: string) {
     );
   // "What should I take for nausea" asks for medicine advice without naming a medicine
   const takeFor =
-    /what (?:should|can|could|do|may) i (?:take|use|swallow|drink|give)\b|\b(?:take|swallow) (?:something|anything) for\b/iu.test(
+    /what (?:should|can|could|do|may) i (?:take|use|swallow|drink|give)\b|\b(?:take|swallow) (?:something|anything) for\b|\bwhat to (?:take|use|swallow)\b|\brecommend (?:me )?(?:a |an |some |something )?(?:painkillers?|medicines?|medications?|drugs?|pills?|tablets?|antibiotics?)\b/iu.test(
       question,
     );
   const personalChange =
@@ -86,7 +87,7 @@ export function medicationAdvice(question: string) {
     ((quantity &&
       /(?:should|can|may|could|do) i\b|\btake\b|\btaking\b/iu.test(question)) ||
       medicine) &&
-    /how (?:much|many)|(?:should|can|may|could) i|(?:stop|start|change|increase|decrease|double|skip|take|use)\b|تناول|أتوقف|اوقف/iu.test(
+    /how (?:much|many)|(?:right|correct|safe|proper|appropriate|recommended|maximum|usual|typical|normal) (?:amount|quantity)|what amount|(?:should|can|may|could) i|(?:stop|start|change|increase|decrease|double|skip|take|use)\b|تناول|أتوقف|اوقف/iu.test(
       question,
     );
   return doseRequest || personalChange || takeFor;

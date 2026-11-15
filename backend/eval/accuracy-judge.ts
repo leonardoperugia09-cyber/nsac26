@@ -18,7 +18,7 @@ export const judgeClient = () =>
   });
 
 /** A drop-in client for the assistant that records the exact payload sent to Claude, so the judge checks against it */
-export function spyClient(sent: { payload?: any }) {
+export function spyClient(sent: { payload?: any; raw?: string }) {
   const real = new Anthropic({
     apiKey: process.env.ANTHROPIC_API_KEY!.trim(),
     timeout: 30000,
@@ -29,21 +29,32 @@ export function spyClient(sent: { payload?: any }) {
       messages: {
         create: (p: any) => {
           sent.payload = JSON.parse(p.messages[0].content);
-          return real.beta.messages.create(p);
+          const reply = real.beta.messages.create(p);
+          reply
+            .then(
+              (r: any) =>
+                (sent.raw = r.content?.find(
+                  (b: any) => b.type === "text",
+                )?.text),
+            )
+            .catch(() => {});
+          return reply;
         },
       },
     },
   };
 }
 
+// Version 4 adds the attached-data fields (logged symptoms, live strap reading) before set D was run.
 // Version 3 (15 Nov 2026, written before set B was run). Changes from version 2, made after reading set A's failures:
 // the judge gets exactly the payload Claude was sent, and it fails an answer only when a careful reader would object
 // (in set A, 21 of 34 failures came with a judge note calling the problem minor or acceptable).
 export const JUDGE_SYSTEM = `You are a strict but fair fact-checker for a space-health assistant. You get JSON with:
 - "question": what the astronaut asked.
-- "sentToAssistant": exactly what the assistant was given: "evidence" (research passages, each with title, studied population, limitations and text), "selectedCrewContext" (the astronaut's readings: rawMeasurements are today's logged values; signals are recent values with their normal band and status, and a signal's value may be a recent average; risks with level, why, missing and uncertainty; baselineKind and baselineDays) and the earlier conversation.
+- "sentToAssistant": exactly what the assistant was given: "evidence" (research passages, each with title, studied population, limitations and text), "selectedCrewContext" (the astronaut's readings: rawMeasurements are today's logged values; signals are recent values with their normal band and status, and a signal's value may be a recent average; risks with level, why, missing and uncertainty; baselineKind and baselineDays; loggedSymptoms the astronaut reported; liveReading, one current strap value with its device, simulated flag and age; storedMeasurementsToday) and the earlier conversation.
 - "answer": what the assistant replied.
 selectedCrewContext is the only ground truth for personal numbers and for what the risk engine reported. For crew members C1, C2 and C3 it is SIMULATED demonstration data, so an answer that calls it simulated is correct. For crew member U1 it is the person's own measurements and may be empty.
+A signal's status counts distance from baseline and speed of change, so a value can be insideReferenceRange with the status "outside band"; an answer that reports both as given is correct. Missing inputs for a risk are those named in its missing list and its uncertainty text together.
 Mark a flag true unless a careful reader would object. Rounding, a paraphrase that keeps a passage's meaning, and mentioning today's value next to a recent average are not problems when each number is correctly labelled.
 - supported: every factual statement about spaceflight, physiology or research is stated by a passage in the evidence (its text, title, studied population or limitations) or is a faithful paraphrase of one. False if the answer adds definitions, mechanisms, examples or numbers from outside the evidence, says something a passage does not say, or contradicts one.
 - numbersOk: every number, band, status or risk level stated about the astronaut matches selectedCrewContext. A band status belongs to the signal's value, not to today's raw value; attaching it to the wrong number is an error. True if the answer states no personal numbers. If selectedCrewContext holds no readings, any invented personal value makes this false.

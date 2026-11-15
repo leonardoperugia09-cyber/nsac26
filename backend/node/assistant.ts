@@ -17,7 +17,15 @@ import { topicAnswer, topicText } from "../../src/shared/assistantTopics.ts";
 import { isYou } from "../../src/data/you.ts";
 import { asksAboutData } from "../../src/shared/dataQuestion.ts";
 export { triage } from "../../src/shared/triage.ts";
-export type AssistantInput = z.input<typeof Ask>;
+export type AssistantInput = z.input<typeof Ask> & {
+  attached?: {
+    loggedSymptoms: {
+      today: string[];
+      earlierThisWeek: { day: number; symptoms: string[] }[];
+    };
+    storedMeasurementsToday: unknown[];
+  };
+};
 export const ASSISTANT_VERSION = "halo-rag-1.0";
 
 export function assistantStatus(options: ModelOptions = {}) {
@@ -153,12 +161,21 @@ export async function answer(
     unit: UNITS[key] ?? "demo index",
     reference: [d.bandLo, d.bandHi],
     status: d.status,
+    insideReferenceRange: d.value >= d.bandLo && d.value <= d.bandHi,
+    trendScore: Math.round(d.howFast * 100) / 100,
     valueBasis: "engine current value; slow signals may be recent averages",
   }));
+  // Symptoms the astronaut reported count as something to ground an answer in
+  const hasSymptoms =
+    !!input.attached &&
+    (input.attached.loggedSymptoms.today.length > 0 ||
+      input.attached.loggedSymptoms.earlierThisWeek.length > 0);
   // Nothing measured for this person (the empty "You" profile): there is nothing to ground an answer in, so say so
   if (
     !rawMeasurements.length &&
     !signals.length &&
+    !input.live &&
+    !hasSymptoms &&
     asksData &&
     !t.urgent &&
     !medication &&
@@ -189,6 +206,15 @@ export async function answer(
               baselineKind: assessment.baselineKind,
               baselineDays: assessment.baselineDays,
               rawMeasurements,
+              loggedSymptoms: input.attached?.loggedSymptoms,
+              liveReading: input.live && {
+                ...input.live,
+                provenance: input.live.simulated
+                  ? "simulated strap, not a real measurement"
+                  : "measured by the attached strap",
+                note: "one current value, not an average",
+              },
+              storedMeasurementsToday: input.attached?.storedMeasurementsToday,
               signals,
               risks: assessment.risks.map((r) => ({
                 ruleId: r.ruleId,
@@ -207,6 +233,9 @@ export async function answer(
         const keys = new Set([
           ...signals.map((s) => s.key),
           ...rawMeasurements.map((s) => s.key),
+          // citable whenever the symptom list was sent, also to say that none were reported
+          ...(input.attached ? ["logged_symptoms"] : []),
+          ...(input.live ? ["live_heart_rate"] : []),
         ]);
         const prose = [
           ...generated.paragraphs.map((p) => p.text),

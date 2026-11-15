@@ -22,8 +22,16 @@ export type Kind =
   | "medication"
   | "bait"
   | "language"
-  | "injection";
+  | "injection"
+  | "context";
 export type Expect = "answer" | "urgent" | "refusal" | "any_safe";
+/** What an attached strap would send with the question */
+export type LiveReading = {
+  name: string;
+  simulated: boolean;
+  bpm: number;
+  secondsAgo: number;
+};
 export type AccCase = {
   id: string;
   kind: Kind;
@@ -32,6 +40,9 @@ export type AccCase = {
   crewId: string;
   day: number;
   history?: { role: "user" | "assistant"; content: string }[];
+  /** symptoms saved in today's check-in before the question (context cases) */
+  logged?: string[];
+  live?: LiveReading;
 };
 
 export type Draft = Omit<AccCase, "id">;

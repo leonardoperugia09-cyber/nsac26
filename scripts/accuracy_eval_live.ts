@@ -9,6 +9,8 @@ import { grade } from "../backend/eval/safety-cases.ts";
 import { ACC_CASES, type AccCase } from "../backend/eval/accuracy-cases.ts";
 import { ACC_CASES_B } from "../backend/eval/accuracy-cases-b.ts";
 import { ACC_CASES_C } from "../backend/eval/accuracy-cases-c.ts";
+import { ACC_CASES_D } from "../backend/eval/accuracy-cases-d.ts";
+import { ACC_CASES_E } from "../backend/eval/accuracy-cases-e.ts";
 import {
   FLAGS,
   judge,
@@ -22,7 +24,13 @@ const arg = (name: string) => {
 };
 const live = !process.argv.includes("--offline");
 const setName = (arg("--set") ?? "a").toUpperCase();
-const allCases = { A: ACC_CASES, B: ACC_CASES_B, C: ACC_CASES_C }[setName]!;
+const allCases = {
+  A: ACC_CASES,
+  B: ACC_CASES_B,
+  C: ACC_CASES_C,
+  D: ACC_CASES_D,
+  E: ACC_CASES_E,
+}[setName]!;
 const every = Number(arg("--every") ?? 1);
 const ids = arg("--ids")?.split(",");
 const cases = allCases.filter((c, i) =>
@@ -57,7 +65,7 @@ async function pool<T, R>(
 }
 
 async function run(c: AccCase) {
-  const sent: { payload?: any } = {};
+  const sent: { payload?: any; raw?: string } = {};
   const app = await makeServer({
     dbPath: ":memory:",
     ...(live
@@ -65,6 +73,18 @@ async function run(c: AccCase) {
       : {}),
   });
   try {
+    // Context cases: the symptoms were saved in today's check-in, and the strap reading arrives with the question
+    if (c.logged)
+      await app.inject({
+        method: "POST",
+        url: "/api/checkins",
+        payload: {
+          crewId: c.crewId,
+          day: c.day,
+          measurements: {},
+          symptoms: c.logged,
+        },
+      });
     const res = await app.inject({
       method: "POST",
       url: "/api/assistant",
@@ -74,6 +94,7 @@ async function run(c: AccCase) {
         profile: "mars_transit",
         question: c.question,
         symptoms: [],
+        live: c.live,
         history: c.history ?? [],
         allowAI: live,
       },
@@ -89,6 +110,7 @@ async function run(c: AccCase) {
         r,
         verdict,
         sent: sent.payload,
+        raw: sent.raw,
       };
     const checks = [
       ...ALWAYS,
@@ -101,7 +123,11 @@ async function run(c: AccCase) {
     reasons.push(...grade({ checks } as any, r));
     // The empty "You" profile has no readings, so a question about it cannot be answered from the library either
     const covered =
-      c.kind === "data" ? c.crewId !== "U1" : retrieve(c.question).length > 0;
+      c.kind === "context"
+        ? true
+        : c.kind === "data"
+          ? c.crewId !== "U1"
+          : retrieve(c.question).length > 0;
     if (c.expect === "answer") {
       if (r.modelStatus === "safety_bypass") reasons.push("false_alarm");
       else if (r.modelStatus === "insufficient_evidence") {
@@ -146,6 +172,7 @@ async function run(c: AccCase) {
       r,
       verdict,
       sent: sent.payload,
+      raw: sent.raw,
     };
   } finally {
     await app.close();
@@ -208,6 +235,9 @@ writeFileSync(
         uncertainties: x.r?.uncertainties,
         verdict: x.verdict,
         sent: x.sent,
+        raw: x.reasons.some((q: string) => q.startsWith("ai_did_not_answer"))
+          ? (x as any).raw
+          : undefined,
       })),
     },
     null,

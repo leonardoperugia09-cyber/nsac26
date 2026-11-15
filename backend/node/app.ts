@@ -387,12 +387,34 @@ export async function makeServer(options: Options = {}) {
   );
   route("POST", "/api/assistant", Ask, async (s) => {
     const c = context(s);
+    const symptoms = Array.from(
+      new Set([...(c.checkin?.symptoms ?? []), ...s.symptoms]),
+    );
+    // Everything the astronaut has reported this week and every reading saved today, so the answer can use it
+    const earlierThisWeek = store
+      .list("checkin", s.crewId)
+      .filter((l) => l.day < s.day && l.day > s.day - 7 && l.symptoms?.length)
+      .map((l) => ({ day: l.day, symptoms: l.symptoms }));
+    const storedMeasurementsToday = store
+      .list("measurement", s.crewId)
+      .filter((m) => m.missionDay === s.day)
+      .slice(-20)
+      .map((m) => ({
+        signal: m.signal,
+        value: m.value,
+        unit: m.unit,
+        source: m.sourceId,
+        provenance: m.provenance,
+        observedAt: m.observedAt,
+      }));
     return answer(
       {
         ...s,
-        symptoms: Array.from(
-          new Set([...(c.checkin?.symptoms ?? []), ...s.symptoms]),
-        ),
+        symptoms,
+        attached: {
+          loggedSymptoms: { today: symptoms, earlierThisWeek },
+          storedMeasurementsToday,
+        },
       },
       c.assessment,
       options,

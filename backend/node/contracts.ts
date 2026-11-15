@@ -106,6 +106,16 @@ export const Ask = Selection.extend({
   question: z.string().trim().min(1).max(2000),
   symptoms: Symptoms.default([]),
   allowAI: z.boolean().default(false),
+  // One current heart-rate value from an attached strap, read in the browser
+  live: z
+    .object({
+      name: z.string().trim().min(1).max(80),
+      simulated: z.boolean(),
+      bpm: z.number().min(20).max(250),
+      secondsAgo: z.number().int().min(0).max(3600),
+    })
+    .strict()
+    .optional(),
   history: z
     .array(
       z

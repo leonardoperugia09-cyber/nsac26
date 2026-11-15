@@ -43,6 +43,7 @@ import type {
   AssistantStatus,
   ConversationTurn,
 } from "../shared/assistantTypes.ts";
+import { liveNow } from "../instruments/live.ts";
 import { answer } from "../shared/offlineAssistant.ts";
 import { buildOverview } from "../ui/overviewData.ts";
 import { GATE_OF, worstGate } from "../ui/missionData.ts";
@@ -278,6 +279,7 @@ export function Assistant({
         profile,
         question: q,
         symptoms: context.symptoms ?? [],
+        live: liveNow() ?? undefined,
         history,
         allowAI,
       });
